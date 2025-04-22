@@ -1,0 +1,249 @@
+
+// Sidebar y layout responsivo
+.header-flex-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .menu-toggle-container {
+    margin-right: 15px;
+    position: relative;
+    z-index: 1100; // Mayor z-index para estar por encima de la sidebar
+  }
+  
+  .menu-icon-label {
+    cursor: pointer;
+    display: block;
+  }
+  
+  .sidebar-trigger {
+    display: none; // Ocultar el checkbox pero mantener su funcionalidad
+  }
+  
+  // Estilos para el título en diferentes tamaños de pantalla
+  .mobile-title {
+    display: block;
+  }
+  
+  .desktop-title {
+    display: none;
+    font-size: 1.8rem;
+    margin-bottom: $spacing-unit;
+    padding-bottom: $spacing-unit / 2;
+    border-bottom: 1px solid $grey-color-light;
+    text-align: center;
+    
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  
+  .site-container {
+    display: flex;
+    min-height: 100vh; // Changed from calc(100vh - 100px) to cover full viewport height
+    position: relative; // Para el posicionamiento de la sidebar
+  }
+  
+  .site-sidebar {
+    width: 250px;
+    background-color: lighten($grey-color-light, 5%);
+    padding: $spacing-unit;
+    transition: all 0.3s ease;
+    border-right: 1px solid $grey-color-light;
+    height: 100vh; // Ensure sidebar covers full height
+    position: sticky; // Make it sticky
+    top: 0; // Stick to the top
+  }
+  
+  .sidebar-content {
+    position: sticky;
+    top: $spacing-unit;
+    max-height: calc(100vh - #{$spacing-unit} * 2); // Limit height to ensure content is visible
+    overflow-y: auto; // Add scrolling for overflow content
+  }
+  
+  .sidebar-heading {
+    @include relative-font-size(1.2);
+    margin-top: $spacing-unit;
+    margin-bottom: $spacing-unit / 2;
+    color: $grey-color-dark;
+    
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  
+  .sidebar-nav, .sidebar-categories {
+    list-style: none;
+    margin-left: 0;
+    
+    li {
+      margin-bottom: $spacing-unit / 3;
+    }
+    
+    a {
+      display: block;
+      padding: 5px 0;
+      border-bottom: 1px solid transparent;
+      
+      &:hover {
+        text-decoration: none;
+        border-bottom-color: $brand-color;
+      }
+    }
+  }
+  
+  .site-content {
+    flex: 1;
+    padding: $spacing-unit;
+  }
+  
+// Comportamiento responsivo
+@media screen and (min-width: ($on-laptop + 1px)) {
+    .menu-icon {
+      display: none;
+    }
+    
+    .site-header {
+      display: none; // Ocultar la navbar en pantallas grandes
+    }
+    
+    .mobile-title {
+      display: none; // Ocultar el título móvil
+    }
+    
+    .desktop-title {
+      display: block; // Mostrar el título en la sidebar
+    }
+    
+    .site-sidebar {
+      // Sidebar visible por defecto en desktop
+      transform: translateX(0);
+    }
+    
+    .site-container {
+      padding-top: 0; // Eliminar el padding superior ya que no hay navbar
+    }
+  }
+  
+  @media screen and (max-width: $on-laptop) {
+    // Añadir padding al contenedor principal para compensar el header fijo
+    .page-content {
+      padding-top: calc(#{$spacing-unit} * 1.865 + 5px + 1px); // Altura del header + border-top + border-bottom
+    }
+    
+    .site-container {
+      padding-top: 0; // El padding ahora se aplica a page-content
+    }
+    
+    .site-sidebar {
+      position: fixed;
+      left: 0;
+      top: 0;
+      height: 100vh;
+      width: 100%; // Ocupar todo el ancho en pantallas pequeñas
+      max-width: 100%;
+      z-index: 1000;
+      transform: translateX(-100%);
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+      overflow-y: auto;
+      padding-top: calc(#{$spacing-unit} * 1.865 + 5px + 1px + 10px); // Ajustar el padding-top para que comience debajo del header fijo
+    }
+    
+    .menu-icon {
+      display: block;
+    }
+    
+    // Cuando el checkbox está marcado, mostrar la sidebar
+    #sidebar-trigger:checked ~ .site-container .site-sidebar {
+        transform: translateX(0) !important;
+    }
+  
+    body:has(#sidebar-trigger:checked) .site-sidebar {
+        transform: translateX(0) !important;
+    }
+    
+    // Overlay para cerrar la sidebar al hacer clic fuera
+    #sidebar-trigger:checked ~ .site-container::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+    }
+  }
+  
+   // Estilos para categorías colapsables
+.category-item {
+    margin-bottom: $spacing-unit / 2;
+  }
+  
+  .category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px 0;
+    border-bottom: 1px solid $grey-color-light;
+    
+    &:hover {
+      color: $brand-color;
+    }
+  }
+  
+  .category-name {
+    font-weight: 500;
+  }
+  
+  .category-toggle {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+  }
+  
+  .category-posts {
+    display: none;
+    list-style: none;
+    margin-left: $spacing-unit / 2;
+    margin-top: $spacing-unit / 4;
+    
+    li {
+      margin-bottom: $spacing-unit / 4;
+      
+      a {
+        font-size: 14px;
+        color: $grey-color-dark;
+        
+        &:hover {
+          color: $brand-color;
+        }
+        
+        // Estilo para el post activo
+        &.active-post {
+          color: $brand-color;
+          font-weight: bold;
+          position: relative;
+          
+          &::before {
+            content: "•";
+            position: absolute;
+            left: -12px;
+            color: $brand-color;
+          }
+        }
+      }
+    }
+  }
+  
+  // Clase para cuando la categoría está expandida
+  .category-expanded {
+    .category-toggle {
+      transform: rotate(45deg);
+    }
+    
+    .category-posts {
+      display: block;
+    }
+  }

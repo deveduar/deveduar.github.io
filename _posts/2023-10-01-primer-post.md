@@ -1,6 +1,8 @@
 ---
 title: Mi primer post
 date: 2023-10-01
+categories: 
+  - Projects
 tags:
   - jekyll
   - blog

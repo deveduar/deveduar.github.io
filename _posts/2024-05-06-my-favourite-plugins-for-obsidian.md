@@ -1,6 +1,8 @@
 ---
 title: ⭐ My favourite plugins for obsidian
 date: 2024-05-06
+categories: 
+  - productivity
 tags:
   - obsidian
   - productivity
