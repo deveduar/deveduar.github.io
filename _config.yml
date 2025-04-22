@@ -32,15 +32,14 @@ theme: minima
 
 plugins:
   - jekyll-feed
-
+  - jekyll-paginate
 # RSS feed settings
 feed:
   excerpt_only: true
   
-collections:
-  posts:
-    output: true
-    permalink: /blog/:year/:month/:day/:title/
+paginate: 5
+paginate_path: "/page:num/"
+permalink: /blog/:year/:month/:day/:title/
 
 
 # Exclude from processing.
