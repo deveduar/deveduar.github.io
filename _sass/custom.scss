@@ -21,15 +21,19 @@
   
   .site-title {
     @include relative-font-size(1.625);
-    font-weight: 300;
+    font-weight: 600; // Changed from 300 to 600 for bolder text
     line-height: $base-line-height * $base-font-size * 2.25;
-    letter-spacing: -1px;
+    letter-spacing: -0.5px; // Reduced negative letter-spacing
     margin-bottom: 0;
     color: $brand-color;
-  
+    
     &,
     &:visited {
-      color: darken($brand-color, 10%) ;
+      color: darken($brand-color, 10%);
+    }
+    
+    &:hover {
+      text-decoration: none; // Prevent underline on hover
     }
   }
 
@@ -60,18 +64,29 @@
 // Header y layout responsivo
 .header-flex-container {
   @include flex-center;
+  justify-content: flex-start;
 }
 
 .menu-toggle-container {
   margin-right: 15px;
   position: relative;
   z-index: 1100;
+  display: flex;
+  align-items: center;
 }
 
 .menu-icon-label {
   cursor: pointer;
-  display: block;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  
+  svg {
+    fill: currentColor;
+    vertical-align: middle;
+  }
 }
+
 
 .sidebar-trigger {
   display: none; // Ocultar el checkbox pero mantener su funcionalidad
@@ -84,9 +99,9 @@
 .desktop-title {
   display: none;
   font-size: 1.8rem;
-  margin-bottom: $spacing-unit;
+  // margin-bottom: $spacing-unit;
   padding-bottom: $spacing-unit / 2;
-  border-bottom: 1px solid $grey-color-dark;
+  // border-bottom: 1px solid $grey-color-dark;
   text-align: center;
 
   &:hover {
@@ -103,9 +118,9 @@
 .site-sidebar {
     width: 250px;
     background-color:  $background-color;
-    padding: 5px;
+    // padding: 5px;
     transition: all 0.3s ease;
-    border-right: 1px solid $grey-color-light;
+    border-right: 1px solid $grey-color-dark;
     height: 100vh;
     position: sticky;
     top: 0;
@@ -121,7 +136,7 @@
       box-sizing: border-box;
       overflow-y: auto; // Habilita el desplazamiento vertical
       max-height: calc(100vh - #{$spacing-unit} * 2); // Limita la altura para evitar desbordamientos
-      padding: $spacing-unit;
+      padding: $spacing-unit / 2;
     }
   }
 
@@ -281,17 +296,35 @@
 
   li {
     margin-bottom: $spacing-unit / 4;
+    position: relative;
+    overflow: hidden;
 
     a {
       font-size: 14px;
       color: $grey-color-light;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      max-height: 2.8em;
-      line-height: 1.4;
+      display: -webkit-box; // Necesario para -webkit-line-clamp
+      display: box; // Propiedad estándar (no soportada en muchos navegadores)
+      -webkit-line-clamp: 2; // Limita el texto a 2 líneas (versión con prefijo)
+      line-clamp: 2; // Propiedad estándar
+      -webkit-box-orient: vertical; // Orientación vertical para -webkit-line-clamp
+      box-orient: vertical; // Propiedad estándar (no soportada en muchos navegadores)
+      overflow: hidden; // Oculta el contenido que excede el límite
+      text-overflow: ellipsis; // Agrega puntos suspensivos al final del texto truncado
+      max-height: 2.8em; // Altura máxima basada en el número de líneas y el line-height
+      line-height: 1.4; // Altura de línea para controlar el espacio entre líneas
+      position: relative;
+      word-break: break-word; // Asegura que las palabras largas se rompan correctamente
+
+      
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 0.7em;
+        background: linear-gradient(to bottom, rgba($background-color, 0), $background-color);
+      }
 
       &:hover {
         color: $brand-color;

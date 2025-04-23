@@ -1,0 +1,14 @@
+<aside class="table-of-contents">
+    <h3>Tabla de Contenidos</h3>
+    <ul>
+      {% assign headings = content | split: '<h2' %}
+      {% for heading in headings offset:1 %}
+        {% assign heading_parts = heading | split: '</h2>' %}
+        {% assign heading_text = heading_parts[0] | strip_html | strip_newlines | escape %}
+        {% assign heading_id = heading_text | slugify %}
+        <li>
+          <a href="#{{ heading_id }}">{{ heading_text }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </aside>

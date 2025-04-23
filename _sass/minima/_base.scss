@@ -145,9 +145,9 @@ blockquote {
 /**
  * Wrapper
  */
-.wrapper {
-  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-  max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+ .wrapper {
+  max-width: -webkit-calc(#{$content-width + 300px} - (#{$spacing-unit} * 2));
+  max-width:         calc(#{$content-width + 300px} - (#{$spacing-unit} * 2));
   margin-right: auto;
   margin-left: auto;
   padding-right: $spacing-unit;

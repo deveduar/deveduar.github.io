@@ -23,8 +23,16 @@ layout: default
     </p>
   </header>
 
-  <div class="post-content e-content" itemprop="articleBody">
-    {{ content }}
+  <div class="post-container">
+    <!-- Contenido principal -->
+    <div class="post-content e-content" itemprop="articleBody">
+      {{ content }}
+    </div>
+
+    <!-- Tabla de contenidos -->
+    <aside class="toc-container">
+      {%- include toc.html -%}
+    </aside>
   </div>
 
   {%- if site.disqus.shortname -%}
