@@ -1,9 +1,41 @@
 /**
+ * Code formatting
+ */
+ pre,
+ code {
+   @include relative-font-size(0.9375);
+   border: 1px solid $grey-color-dark; // Borde oscuro
+   border-radius: 3px;
+   background-color: #2d2d30; // Fondo oscuro para bloques de código
+   color: $text-color; // Texto claro
+   font-family: 'Courier New', Courier, monospace;
+   padding: $spacing-unit / 2 $spacing-unit;
+ }
+ 
+ code {
+   padding: 1px 5px;
+   
+ }
+ 
+ pre {
+
+   overflow-x: auto; // Habilitar desplazamiento horizontal
+   white-space: pre-wrap; // Permitir saltos de línea automáticos
+   word-wrap: break-word; // Romper palabras largas si es necesario
+ 
+   > code {
+     border: 0; // Eliminar bordes internos
+     padding-right: 0;
+     padding-left: 0;
+   }
+ }
+
+/**
  * Syntax highlighting styles
  */
  .highlight {
 
-  padding: $spacing-unit / 2 $spacing-unit;
+  
   border-radius: 4px;
   overflow-x: auto;
   font-family: $base-font-family;

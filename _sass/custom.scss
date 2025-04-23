@@ -73,7 +73,7 @@
 
 .site-sidebar {
     width: 250px;
-    background-color: darken($grey-color-dark, 25%);
+    background-color:  $background-color;
     padding: 5px;
     transition: all 0.3s ease;
     border-right: 1px solid $grey-color-light;
@@ -100,7 +100,7 @@
   @include relative-font-size(1.2);
   margin-top: $spacing-unit;
   margin-bottom: $spacing-unit / 2;
-  color: $grey-color-dark;
+  color: $grey-color-light;
 
   &:first-child {
     margin-top: 0;
@@ -227,7 +227,7 @@
   @include flex-center;
   justify-content: space-between;
   padding: 5px 0;
-  border-bottom: 1px solid $grey-color-light;
+  border-bottom: 1px solid $grey-color-dark;
   cursor: pointer;
 
   &:hover {
@@ -255,7 +255,7 @@
 
     a {
       font-size: 14px;
-      color: $grey-color-dark;
+      color: $grey-color-light;
       display: -webkit-box;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
