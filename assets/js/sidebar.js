@@ -1,6 +1,6 @@
 // Encapsulamiento con IIFE (Immediately Invoked Function Expression)
 (function () {
-  // Verificar si las funciones ya están definidas en window
+  // Definir las funciones solo si no existen ya
   if (!window.handleCategories || !window.handleScroll) {
     // Función para manejar el estado de las categorías colapsables
     const handleCategories = () => {
@@ -24,54 +24,80 @@
         } catch {}
       };
 
-      // Obtener categorías expandidas desde localStorage
-      let expandedCategories = loadExpandedCategories();
+      // Limpiar listeners previos para evitar duplicados
+      const clearListeners = () => {
+        categoryHeaders.forEach((header) => {
+          const clone = header.cloneNode(true);
+          if (header.parentNode) {
+            header.parentNode.replaceChild(clone, header);
+          }
+        });
+      };
 
-      // Aplicar el estado expandido a las categorías
-      categoryHeaders.forEach((header) => {
-        const categoryItem = header.parentElement;
-        const categoryName = header.querySelector('.category-name').textContent.trim();
+      // Manejar el toggle de la categoría
+      const toggleCategory = function () {
+        const categoryItem = this.parentElement;
+        const categoryName = this.querySelector('.category-name').textContent.trim();
+        categoryItem.classList.toggle('category-expanded');
 
-        // Expandir categorías que estaban previamente expandidas
-        if (expandedCategories.includes(categoryName)) {
-          categoryItem.classList.add('category-expanded');
+        let expandedCategories = loadExpandedCategories();
+
+        // Actualizar localStorage
+        if (categoryItem.classList.contains('category-expanded')) {
+          if (!expandedCategories.includes(categoryName)) {
+            expandedCategories.push(categoryName);
+          }
+        } else {
+          expandedCategories = expandedCategories.filter((name) => name !== categoryName);
         }
 
-        // Manejar el toggle de la categoría
-        header.addEventListener('click', function () {
-          const categoryName = this.querySelector('.category-name').textContent.trim();
-          categoryItem.classList.toggle('category-expanded');
+        saveExpandedCategories(expandedCategories);
+      };
 
-          // Actualizar localStorage
-          if (categoryItem.classList.contains('category-expanded')) {
-            if (!expandedCategories.includes(categoryName)) {
-              expandedCategories.push(categoryName);
-            }
-          } else {
-            expandedCategories = expandedCategories.filter((name) => name !== categoryName);
-          }
-
-          saveExpandedCategories(expandedCategories);
+      // Adjuntar listeners
+      const attachListeners = () => {
+        // Usar los elementos actuales en el DOM
+        document.querySelectorAll('.category-header').forEach((header) => {
+          header.addEventListener('click', toggleCategory);
         });
-      });
+      };
+
+      // Aplicar el estado expandido a las categorías
+      const applyExpandedState = () => {
+        const expandedCategories = loadExpandedCategories();
+        document.querySelectorAll('.category-header').forEach((header) => {
+          const categoryItem = header.parentElement;
+          const categoryName = header.querySelector('.category-name').textContent.trim();
+
+          if (expandedCategories.includes(categoryName)) {
+            categoryItem.classList.add('category-expanded');
+          } else {
+            categoryItem.classList.remove('category-expanded');
+          }
+        });
+      };
 
       // Evitar el colapso de la categoría al hacer clic en los enlaces
-      const categoryLinks = document.querySelectorAll('.category-posts a');
-      categoryLinks.forEach((link) => {
+      document.querySelectorAll('.category-posts a').forEach((link) => {
         link.addEventListener('click', function (e) {
           e.stopPropagation();
+
+          // Guardar posición de scroll al hacer clic en un enlace
+          const sidebarContent = document.querySelector('.sidebar-content');
+          if (sidebarContent) {
+            sessionStorage.setItem('sidebarScrollPos', sidebarContent.scrollTop);
+          }
         });
 
         // Resaltar el post activo
         if (link.getAttribute('href') === currentPath) {
           link.classList.add('active-post');
-          // Expandir la categoría padre si no está ya expandida
           const categoryItem = link.closest('.category-item');
           if (categoryItem) {
             const categoryName = categoryItem.querySelector('.category-name').textContent.trim();
             categoryItem.classList.add('category-expanded');
 
-            // Agregar a las categorías expandidas si no está ya incluida
+            let expandedCategories = loadExpandedCategories();
             if (!expandedCategories.includes(categoryName)) {
               expandedCategories.push(categoryName);
               saveExpandedCategories(expandedCategories);
@@ -79,25 +105,32 @@
           }
         }
       });
+
+      // Inicializar todo
+      applyExpandedState();
+      clearListeners(); // Limpiar antes de adjuntar
+      attachListeners();
     };
 
     // Función para manejar el scroll de .site-sidebar
     const handleScroll = () => {
-      const sidebarContent = document.querySelector('.sidebar-content'); // Capturar el scroll desde .sidebar-content
+      const sidebarContent = document.querySelector('.sidebar-content');
       if (!sidebarContent) return;
 
       // Restaurar el scroll cuando la página se carga
       const restoreScroll = () => {
         const savedScrollPos = sessionStorage.getItem('sidebarScrollPos');
         if (savedScrollPos) {
-          sidebarContent.scrollTop = parseInt(savedScrollPos, 10); // Restaurar inmediatamente
+          setTimeout(() => {
+            sidebarContent.scrollTop = parseInt(savedScrollPos, 10);
+          }, 10);
         }
       };
 
       // Guardar el scroll cuando el usuario se desplaza
       const saveScroll = () => {
-        sidebarContent.addEventListener('scroll', () => {
-          sessionStorage.setItem('sidebarScrollPos', sidebarContent.scrollTop);
+        sidebarContent.addEventListener('scroll', function () {
+          sessionStorage.setItem('sidebarScrollPos', this.scrollTop);
         });
       };
 
@@ -106,8 +139,31 @@
       saveScroll();
     };
 
+    // Función de inicialización que se puede llamar desde cualquier lugar
+    const initSidebar = () => {
+      handleCategories();
+      handleScroll();
+    };
+
     // Asignar funciones al objeto global window
     window.handleCategories = handleCategories;
     window.handleScroll = handleScroll;
+    window.initSidebar = initSidebar;
+
+    // Configurar InstantClick dentro de sidebar.js
+    if (typeof InstantClick !== 'undefined') {
+      InstantClick.on('fetch', () => {
+        const sidebarContent = document.querySelector('.sidebar-content');
+        if (sidebarContent) {
+          sessionStorage.setItem('sidebarScrollPos', sidebarContent.scrollTop);
+        }
+      });
+
+      InstantClick.on('change', () => {
+        initSidebar();
+      });
+
+      InstantClick.init();
+    }
   }
 })();
