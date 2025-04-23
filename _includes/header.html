@@ -18,9 +18,10 @@
 
 <div class="site-container">
   <aside class="site-sidebar">
+    <div class="sidebar-inner">
     <div class="sidebar-content">
       <a class="site-title desktop-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
-      <h2 class="sidebar-heading">Navegación</h2>
+      <!-- <h2 class="sidebar-heading">Navegación</h2>
       <ul class="sidebar-nav">
         {%- assign default_paths = site.pages | map: "path" -%}
         {%- assign page_paths = site.header_pages | default: default_paths -%}
@@ -32,7 +33,7 @@
         {%- endfor -%}
       </ul>
       
-      <h2 class="sidebar-heading">Categorías</h2>
+      <h2 class="sidebar-heading">Categorías</h2> -->
       <ul class="sidebar-categories">
         {% for category in site.categories %}
           <li class="category-item">
@@ -49,6 +50,8 @@
         {% endfor %}
       </ul>
     </div>
+    </div>
+
   </aside>
   
   <div class="site-content">

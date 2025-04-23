@@ -10,13 +10,19 @@ $base-line-height: 1.5 !default;
 
 $spacing-unit:     30px !default;
 
-$text-color:       #111 !default;
-$background-color: #fdfdfd !default;
-$brand-color:      #2a7ae2 !default;
+$text-color:       #e5e5e5 !default; // Texto claro
+$background-color: #1b1b1d !default; // Fondo oscuro profundo
+$brand-color:      #dcbcf3 !default; // Azul brillante para resaltar elementos clave
 
-$grey-color:       #828282 !default;
-$grey-color-light: lighten($grey-color, 40%) !default;
-$grey-color-dark:  darken($grey-color, 25%) !default;
+// Escala de grises
+$grey-color:       #8b949e !default; // Gris medio
+$grey-color-light: lighten($grey-color, 20%) !default; // Gris claro
+$grey-color-dark:  darken($grey-color, 20%) !default;
+
+$accent-color:     #c678dd !default; // Morado
+$success-color:    #98c379 !default; // Verde
+$warning-color:    #e5c07b !default; // Amarillo
+$error-color:      #e06c75 !default; // Rojo
 
 $table-text-align: left !default;
 
