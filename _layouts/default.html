@@ -18,6 +18,10 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/instantclick/3.1.0/instantclick.min.js" data-no-instant></script>
   <script src="{{ '/assets/js/sidebar.js' | relative_url }}"></script>
+  <!-- Add this before the closing </body> tag -->
+  {% if site.github %}
+  <script src="{{ "/assets/js/github-calendar.js" | relative_url }}"></script>
+  {% endif %}
 
 </body>
 

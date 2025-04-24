@@ -1,18 +1,23 @@
 ---
 layout: home
-
 ---
 
-<!-- <div class="hero-section">
+<div class="hero-section">
   <div class="hero-content">
-    <h1>Bienvenido a mi blog</h1>
-    <p class="hero-description">Este es un espacio donde comparto mis ideas y experiencias sobre desarrollo web, tecnología y programación.</p>
-    <p>Espero que encuentres contenido interesante y útil para tu propio camino de aprendizaje.</p>
+    <h1>Welcome to {{ site.title }}</h1>
+    <p class="hero-description">{{ site.description }}</p>
+    
+    {% if site.github %}
+    <p>Check out my projects on <a href="https://github.com/{{ site.github.owner_name }}">GitHub</a> and follow along with my latest blog posts below.</p>
+    {% endif %}
+    
     <div class="hero-buttons">
-      <a href="/about" class="btn btn-primary">Sobre mí</a>
-      <a href="#recent-posts" class="btn btn-secondary">Ver artículos</a>
+      <a href="/about" class="btn btn-primary">About Me</a>
+      <a href="#recent-posts" class="btn btn-secondary">View Articles</a>
     </div>
   </div>
 </div>
 
-<div id="recent-posts"></div> -->
+
+
+<div id="recent-posts"></div>

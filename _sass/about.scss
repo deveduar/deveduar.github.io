@@ -1,0 +1,364 @@
+  // GitHub Profile Section
+  .github-profile-section {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background-color: lighten($background-color, 5%);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden; // Prevent content from spilling out
+  }
+  
+  .github-profile-header {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    align-items: center; // Center all children
+  }
+  
+  .github-profile-info {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 800px; // Maximum width for better readability
+    
+    @media (max-width: $on-palm) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  
+  .github-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid $brand-color;
+    flex-shrink: 0;
+    object-fit: cover; // Ensure image fills the container properly
+  }
+  
+  .github-profile-details {
+    flex: 1;
+    
+    h2 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      color: $brand-color;
+    }
+    
+    p {
+      color: $grey-color-light;
+      margin-bottom: 1rem;
+    }
+    
+    @media (max-width: $on-palm) {
+      width: 100%;
+      
+      .github-stats {
+        justify-content: center;
+      }
+    }
+  }
+  
+  // GitHub Contribution Graph
+  .github-contribution-graph {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    overflow: visible; // Changed from hidden to visible
+    background-color: transparent;
+  }
+  
+  .contribution-note {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: $grey-color-light; // Match other text colors
+    text-align: center;
+    
+    a {
+      color: $brand-color; // Match other links
+      font-weight: 500;
+      transition: color 0.2s ease;
+      
+      &:hover {
+        color: darken($brand-color, 10%); // Match other hover states
+        text-decoration: none;
+      }
+    }
+  }
+
+// GitHub Calendar Custom Styling
+#github-calendar {
+    width: 100%;
+    max-width: 80%;
+    min-width: auto;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: #242526;
+    border-radius: 4px;
+    border: 1px solid #34353B;
+    overflow-x: auto;
+    
+    // Panda theme color variables
+    $panda-background: #2B2C2F;
+    $panda-text: #E6E6E6;
+    $panda-meta: #676B79;
+    $panda-grade4: #FF4B82;
+    $panda-grade3: #19f9d8;
+    $panda-grade2: #6FC1FF;
+    $panda-grade1: #34353B;
+    $panda-grade0: #242526;
+    
+    .gh-calendar-header {
+        margin-bottom: 0.5rem;
+        color: $panda-text;
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    .gh-calendar-grid {
+        position: relative;
+        padding-top: 1.2rem;
+        width: 100%;
+        transform-origin: left top;
+        
+        .gh-calendar-months {
+            position: absolute;
+            top: 0;
+            left: 1rem;
+            right: 0;
+            height: 1.2rem;
+            
+            span {
+                position: absolute;
+                font-size: 0.55rem;
+                color: $panda-meta;
+            }
+        }
+        
+        .gh-calendar-weekdays {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            left: 0;
+            top: 1.2rem;
+            bottom: 0;
+            width: 1rem;
+            
+            span {
+                flex: 1;
+                font-size: 0.5rem;
+                color: $panda-meta;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        
+        .gh-calendar-cells {
+            margin-left: 1rem;
+            display: grid;
+            grid-template-columns: repeat(26, minmax(0, 1fr));
+            grid-template-rows: repeat(7, 1fr);
+            grid-auto-flow: column;
+            gap: 2px; // Aumentado de 1px a 2px para mejor separación
+            height: 120px; // Aumentado de 90px a 120px para móviles
+            width: calc(100% - 1rem);
+            aspect-ratio: 3 / 1; // Añadido para mantener proporción
+            
+            // Altura adaptativa según el tamaño de pantalla
+            @media (min-width: 768px) {
+                height: 140px; // Aumentado de 110px a 140px
+                aspect-ratio: 3.5 / 1;
+            }
+            
+            @media (min-width: 992px) {
+                height: 160px; // Aumentado de 130px a 160px
+                aspect-ratio: 4 / 1;
+            }
+            
+            @media (min-width: 1200px) {
+                height: 180px; // Aumentado de 150px a 180px
+                aspect-ratio: 4.5 / 1;
+            }
+            
+            .gh-calendar-cell {
+                width: 100%;
+                height: 100%;
+                border-radius: 3px; // Aumentado de 2px a 3px
+                transition: transform 0.2s ease;
+                
+                &:hover {
+                    transform: scale(1.1); // Aumentado de 1.05 a 1.1
+                }
+                
+                // Contribution level colors
+                &.level-0 { background-color: $panda-grade0; }
+                &.level-1 { background-color: $panda-grade1; }
+                &.level-2 { background-color: $panda-meta; }
+                &.level-3 { background-color: $panda-grade2; }
+                &.level-4 { background-color: $panda-grade3; }
+                &.level-5 { background-color: $panda-grade4; }
+            }
+        }
+    }
+}
+
+  // GitHub Repository Section
+  .repo-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.8rem;
+    flex-wrap: wrap;
+  }
+  
+  .repo-language {
+    display: flex;
+    align-items: center;
+    font-size: 0.85rem;
+    color: $grey-color-light;
+    
+// Language dots
+.language-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 5px;
+    display: inline-block;
+    background-color: #8E8E8E; // Default color
+  }
+  
+  // Common programming language colors
+  .language-javascript { background-color: #f1e05a; }
+  .language-typescript { background-color: #2b7489; }
+  .language-html { background-color: #e34c26; }
+  .language-css { background-color: #563d7c; }
+  .language-python { background-color: #3572A5; }
+  .language-java { background-color: #b07219; }
+  .language-ruby { background-color: #701516; }
+  .language-php { background-color: #4F5D95; }
+  .language-c-sharp, .language-csharp { background-color: #178600; }
+  .language-c\+\+ { background-color: #f34b7d; }
+  .language-c { background-color: #555555; }
+  .language-go { background-color: #00ADD8; }
+  .language-swift { background-color: #ffac45; }
+  .language-kotlin { background-color: #F18E33; }
+  .language-rust { background-color: #dea584; }
+  .language-shell { background-color: #89e051; }
+  .language-dart { background-color: #00B4AB; }
+  .language-scala { background-color: #c22d40; }
+  .language-elixir { background-color: #6e4a7e; }
+  .language-haskell { background-color: #5e5086; }
+  .language-lua { background-color: #000080; }
+  .language-clojure { background-color: #db5855; }
+  .language-perl { background-color: #0298c3; }
+  .language-r { background-color: #198CE7; }
+  .language-objective-c { background-color: #438eff; }
+  .language-jupyter-notebook { background-color: #DA5B0B; }
+  }
+  
+  .repo-license {
+    font-size: 0.85rem;
+    color: $grey-color-light;
+    display: flex;
+    align-items: center;
+    
+    i {
+      margin-right: 5px;
+    }
+  }
+  
+  .repo-updated {
+    margin-top: 0.8rem;
+    font-size: 0.8rem;
+    color: $grey-color;
+    font-style: italic;
+  }
+
+.github-info {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background-color: lighten($background-color, 5%);
+    border-radius: 8px;
+    
+    h2 {
+      margin-bottom: 1.5rem;
+      color: $brand-color;
+    }
+  }
+  
+  .repo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .repo-card {
+    background-color: $background-color;
+    border: 1px solid $grey-color-dark;
+    border-radius: 6px;
+    padding: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    h3 {
+      margin-top: 0;
+      font-size: 1.2rem;
+      
+      a {
+        color: $brand-color;
+        
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+    
+    p {
+      color: $grey-color-light;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      height: 3em;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+  }
+  
+  .repo-stats {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: $grey-color;
+    
+    span {
+      display: flex;
+      align-items: center;
+      
+      i {
+        margin-right: 0.3rem;
+      }
+    }
+  }
+  
+  .view-all-btn {
+    display: inline-block;
+    background-color: $brand-color;
+    color: $background-color;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+    
+    &:hover {
+      background-color: darken($brand-color, 10%);
+      text-decoration: none;
+    }
+  }

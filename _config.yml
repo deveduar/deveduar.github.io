@@ -33,6 +33,7 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-paginate
+  - jekyll-github-metadata
 # RSS feed settings
 feed:
   excerpt_only: true
