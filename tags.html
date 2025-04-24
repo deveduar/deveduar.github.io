@@ -9,38 +9,45 @@ permalink: /tags/
   
   <div class="tags-cloud">
     {% assign tags = site.tags | sort %}
+    <a href="#all" class="tag-cloud-item tag-filter active" data-tag="all">
+      All <span class="tag-count">({{ site.posts.size }})</span>
+    </a>
     {% for tag in tags %}
       {% assign tag_size_class = tag[1].size | divided_by: 5 | plus: 1 %}
       {% if tag_size_class > 5 %}{% assign tag_size_class = 5 %}{% endif %}
-      <a href="#{{ tag[0] | slugify }}" class="tag-cloud-item tag-size-{{ tag_size_class }}">
+      <a href="#{{ tag[0] | slugify }}" class="tag-cloud-item tag-filter tag-size-{{ tag_size_class }}" data-tag="{{ tag[0] | slugify }}">
         #{{ tag[0] }} <span class="tag-count">({{ tag[1].size }})</span>
       </a>
     {% endfor %}
   </div>
   
-  <div class="tags-list">
-    {% assign all_posts = site.posts | sort: 'date' | reverse %}
-    {% for tag in tags %}
-      <div class="tag-section" id="{{ tag[0] | slugify }}">
-        <h2 class="tag-title">#{{ tag[0] }}</h2>
-        <ul class="tag-posts">
-          {% for post in tag[1] %}
-            <li class="tag-post-item">
-              <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-              <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
-              {% if post.tags.size > 1 %}
-                <div class="related-tags">
-                  {% for post_tag in post.tags %}
-                    {% if post_tag != tag[0] %}
-                      <a href="#{{ post_tag | slugify }}" class="related-tag">#{{ post_tag }}</a>
-                    {% endif %}
-                  {% endfor %}
-                </div>
-              {% endif %}
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
-    {% endfor %}
+  <div class="tag-filter-container">
+    <div class="tags-list">
+      {% assign all_posts = site.posts | sort: 'date' | reverse %}
+      {% for tag in tags %}
+        <div class="tag-section" id="{{ tag[0] | slugify }}" data-tag-section="{{ tag[0] | slugify }}">
+          <h2 class="tag-title">#{{ tag[0] }}</h2>
+          <ul class="tag-posts">
+            {% for post in tag[1] %}
+              <li class="tag-post-item">
+                <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+                <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                {% if post.tags.size > 1 %}
+                  <div class="related-tags">
+                    {% for post_tag in post.tags %}
+                      {% if post_tag != tag[0] %}
+                        <a href="#{{ post_tag | slugify }}" class="related-tag tag-filter-link" data-filter="{{ post_tag | slugify }}">#{{ post_tag }}</a>
+                      {% endif %}
+                    {% endfor %}
+                  </div>
+                {% endif %}
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endfor %}
+    </div>
   </div>
 </div>
+
+<script src="{{ '/assets/js/taxonomy-filter.js' | relative_url }}"></script>

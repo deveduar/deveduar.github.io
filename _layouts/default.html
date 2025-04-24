@@ -20,8 +20,12 @@
   <script src="{{ '/assets/js/sidebar.js' | relative_url }}"></script>
   <!-- Add this before the closing </body> tag -->
   {% if site.github %}
-  <script src="{{ "/assets/js/github-calendar.js" | relative_url }}"></script>
+  <script data-no-instant src="{{ "/assets/js/github-calendar.js" | relative_url }}"></script>
   {% endif %}
+  <!-- Script para manejar el scroll de paginación -->
+  <script src="{{ '/assets/js/pagination-scroll.js' | relative_url }}" data-no-instant></script>
+  <!-- Inicialización de InstantClick debe ser lo último -->
+  <script src="{{ '/assets/js/instant-click-init.js' | relative_url }}" data-no-instant></script>
 
 </body>
 

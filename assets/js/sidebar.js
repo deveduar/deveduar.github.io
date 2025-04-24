@@ -150,20 +150,19 @@
     window.handleScroll = handleScroll;
     window.initSidebar = initSidebar;
 
-    // Configurar InstantClick dentro de sidebar.js
-    if (typeof InstantClick !== 'undefined') {
-      InstantClick.on('fetch', () => {
-        const sidebarContent = document.querySelector('.sidebar-content');
-        if (sidebarContent) {
-          sessionStorage.setItem('sidebarScrollPos', sidebarContent.scrollTop);
-        }
-      });
-
-      InstantClick.on('change', () => {
-        initSidebar();
-      });
-
-      InstantClick.init();
+ // Configurar eventos de InstantClick si está disponible
+ if (typeof InstantClick !== 'undefined') {
+  InstantClick.on('fetch', () => {
+    const sidebarContent = document.querySelector('.sidebar-content');
+    if (sidebarContent) {
+      sessionStorage.setItem('sidebarScrollPos', sidebarContent.scrollTop);
     }
+  });
+
+  InstantClick.on('change', () => {
+    initSidebar();
+  });
+  
   }
+}
 })();

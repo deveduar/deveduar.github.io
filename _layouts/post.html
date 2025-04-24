@@ -16,7 +16,7 @@ layout: default
       {% if page.tags %}
         <span class="tags">
           {% for tag in page.tags %}
-            <a class="tag" href="/tags#{{ tag | slugify }}">#{{ tag }}</a>
+          <a class="home-tag-badge" href="/tags#{{ tag | slugify }}" data-no-instant>#{{ tag }}</a>
           {% endfor %}
         </span>
       {% endif %}

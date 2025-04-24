@@ -198,8 +198,8 @@
   border-radius: 8px;
   text-align: center;
   
-// Tag cloud size classes
-.tag-cloud-item {
+  // Tag cloud size classes
+  .tag-cloud-item {
     display: inline-block;
     margin: 0.5rem;
     color: $grey-color-light;
@@ -221,9 +221,41 @@
     &.tag-size-3 { font-size: 1.2rem; }
     &.tag-size-4 { font-size: 1.4rem; }
     &.tag-size-5 { font-size: 1.6rem; }
+    
+    // Estilos para el filtro activo
+    &.active {
+      color: $brand-color;
+      font-weight: bold;
+      
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $brand-color;
+      }
+    }
   }
 }
 
+// Estilos para el contenedor de filtrado
+.tag-filter-container {
+  min-height: 300px; // Asegura que el contenedor no colapse al filtrar
+  transition: opacity 0.3s ease;
+  
+  &.loading {
+    opacity: 0.6; // Efecto visual durante la carga/filtrado
+  }
+}
+
+.tag-filter {
+  cursor: pointer;
+  position: relative;
+}
+
+// Resto de los estilos existentes para tags
 .tags-list {
   .tag-section {
     margin-bottom: 2.5rem;
@@ -275,30 +307,22 @@
 }
 
 .related-tags {
-    display: inline-flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-left: 1rem;
-    
-    .related-tag {
-      font-size: 0.75rem;
-      color: $grey-color;
-      transition: color 0.2s ease;
-      
-      &:hover {
-        color: $brand-color;
-        text-decoration: none;
-      }
-    }
-  }
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-left: 1rem;
   
-  @media screen and (max-width: $on-palm) {
-    .related-tags {
-      display: flex;
-      margin-left: 0;
-      margin-top: 0.5rem;
+  .related-tag {
+    font-size: 0.75rem;
+    color: $grey-color;
+    transition: color 0.2s ease;
+    
+    &:hover {
+      color: $brand-color;
+      text-decoration: none;
     }
   }
+}
 
 // Responsive adjustments
 @media screen and (max-width: $on-palm) {

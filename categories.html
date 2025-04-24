@@ -49,7 +49,7 @@ permalink: /categories/
           {% if post.tags.size > 0 %}
           <div class="post-tags">
             {% for tag in post.tags %}
-              <a class="tag-badge" href="/tags#{{ tag | slugify }}">#{{ tag }}</a>
+            <a class="home-tag-badge" href="/tags#{{ tag | slugify }}" data-no-instant>#{{ tag }}</a>
             {% endfor %}
           </div>
           {% endif %}
@@ -61,115 +61,4 @@ permalink: /categories/
   </div>
 </div>
 
-<script>
-    // Function to handle category filtering
-    function initCategoryFiltering() {
-      const filterLinks = document.querySelectorAll('.category-filter');
-      const postCards = document.querySelectorAll('.category-post-card');
-      const categoryBadges = document.querySelectorAll('.category-badge');
-      const filterContainer = document.querySelector('.category-filter-container');
-      
-      // Function to filter posts
-      function filterPosts(category) {
-        if (filterContainer) filterContainer.classList.add('loading');
-        
-        // Force browser to recognize style changes
-        void filterContainer.offsetWidth;
-        
-        if (category === 'all') {
-          postCards.forEach(card => {
-            card.style.display = 'flex';
-          });
-        } else {
-          postCards.forEach(card => {
-            if (card.dataset.categories.includes(category)) {
-              card.style.display = 'flex';
-            } else {
-              card.style.display = 'none';
-            }
-          });
-        }
-        
-        if (filterContainer) filterContainer.classList.remove('loading');
-      }
-      
-      // Function to apply filter from hash
-      function applyFilterFromHash() {
-        // Get category from hash (remove the # symbol)
-        let category = window.location.hash.substring(1);
-        
-        // If no category or empty hash, use 'all'
-        if (!category) {
-          category = 'all';
-        }
-        
-        console.log("Applying filter for category:", category);
-        
-        // Find the corresponding filter link
-        const filterLink = document.querySelector(`.category-filter[data-category="${category}"]`);
-        
-        if (filterLink) {
-          // Remove active class from all links
-          filterLinks.forEach(l => l.classList.remove('active'));
-          
-          // Add active class to the target link
-          filterLink.classList.add('active');
-          
-          // Filter posts
-          filterPosts(category);
-        } else {
-          console.log("Filter link not found for category:", category);
-        }
-      }
-      
-      // Set active class and filter posts when clicking on category in cloud
-      filterLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-          e.preventDefault();
-          
-          // Get category from data attribute
-          const category = this.dataset.category;
-          
-          // Update URL hash without scrolling
-          history.pushState(null, null, category === 'all' ? '#' : '#' + category);
-          
-          // Apply the filter
-          applyFilterFromHash();
-        });
-      });
-      
-      // Filter by category badge clicks
-      categoryBadges.forEach(badge => {
-        badge.addEventListener('click', function(e) {
-          e.preventDefault();
-          
-          // Get category from data attribute
-          const category = this.dataset.filter;
-          
-          // Update URL hash without page jump
-          history.pushState(null, null, '#' + category);
-          
-          // Apply filter manually instead of relying on hashchange
-          applyFilterFromHash();
-        });
-      });
-      
-      // Apply filter when hash changes (works with browser back/forward buttons too)
-      window.addEventListener('hashchange', applyFilterFromHash);
-      
-      // Apply filter on initial page load
-      applyFilterFromHash();
-    }
-  
-    // Initialize on DOMContentLoaded for regular page loads
-    document.addEventListener('DOMContentLoaded', initCategoryFiltering);
-    
-    // Initialize with InstantClick if available
-    if (typeof InstantClick !== 'undefined') {
-      InstantClick.on('change', function() {
-        console.log("InstantClick change event triggered");
-        // Short delay to ensure DOM is updated
-        setTimeout(initCategoryFiltering, 50);
-      });
-    }
-  </script>
+<script src="{{ '/assets/js/taxonomy-filter.js' | relative_url }}"></script>
