@@ -3,12 +3,12 @@
     text-align: left;
     margin-bottom: 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    // box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden; // Prevent content from spilling out
   }
   
   .github-profile-header {
-    max-width: 800px;
+    // max-width: 800px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -43,11 +43,11 @@
   .github-profile-details {
     flex: 1;
     
-    h2 {
-      margin-top: 0;
-      margin-bottom: 0.5rem;
-      color: $brand-color;
-    }
+    // h2 {
+    //   margin-top: 0;
+    //   margin-bottom: 0.5rem;
+    //   color: $brand-color;
+    // }
     
     p {
       color: $grey-color-light;
@@ -71,7 +71,7 @@
   .github-contribution-graph {
     width: 100%;
     max-width: 95%;
-    margin-bottom: 1.5rem;
+    // margin-bottom: 1.5rem;
     overflow: visible; // Changed from hidden to visible
     background-color: transparent;
   }
@@ -259,23 +259,34 @@
     background-color: transparent;
     border-radius: 8px;
     
-    h2 {
-      color: $brand-color;
-      margin-bottom: 1.5rem;
-      font-size: 1.6rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 1px solid rgba($grey-color, 0.2);
-    }
+    // h2 {
+    //   color: $brand-color;
+    //   margin-bottom: 1.5rem;
+    //   font-size: 1.6rem;
+    //   padding-bottom: 0.5rem;
+    //   border-bottom: 1px solid rgba($grey-color, 0.2);
+    // }
     
     .github-info-content {
-      max-width: 800px;
+      // max-width: 800px;
       margin: 0 auto;
+      
+      // Center the view-all-btn
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      // Keep the projects list left-aligned
+      .projects-list, h3 {
+        width: 100%;
+        align-self: flex-start;
+      }
     }
   }
   
   // New styles to match home posts list
   .projects-list {
-    margin-bottom: 2rem;
+    // margin-bottom: 2rem;
     
     .project-item {
       padding: 0.2rem 0.8rem;
@@ -430,17 +441,19 @@
   
   .view-all-btn {
     display: inline-block;
-    background-color: $brand-color;
-    color: $background-color;
+    background-color: rgba($brand-color, 0.1);
+    color: $grey-color-light;
     padding: 0.5rem 1.2rem;
     border-radius: 4px;
     font-weight: 500;
     transition: all 0.2s ease;
     font-size: 0.9rem;
+    margin-top: 1rem;
     
     &:hover {
-      background-color: darken($brand-color, 10%);
+      background-color: rgba($brand-color, 0.1);
       text-decoration: none;
       transform: translateY(-2px);
     }
   }
+  

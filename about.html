@@ -1,15 +1,17 @@
 ---
 layout: default
-title: About
+title: About me
 permalink: /about/
 ---
 {% if site.github %}
 <div class="github-profile-section">
+  <h1>{{page.title}}</h1>
+
   <div class="github-profile-header">
     <div class="github-profile-info">
       <div class="github-profile-details">
-        <h2>{{ site.github.owner_name }}</h2>
-        <p class="hero-description">I'm a passionate developer focused on creating elegant solutions to complex problems. With expertise in web development and software engineering, I enjoy building applications that make a difference.</p>
+        <h2>Hey I'm @{{ site.github.owner_name }}</h2>
+        <p class="hero-description">A full stack developer with over 5 years of experience in technologies like React, Angular, Node.js, Python, and Docker. In addition to developing my own projects, I share content on development, productivity, and problem-solving.</p>
         
         <div class="social-links">
           {% if site.github_username %}
@@ -34,10 +36,7 @@ permalink: /about/
     </div>
     
     <!-- Moved contribution graph into the profile section -->
-    <div class="github-contribution-graph">
-      <div id="github-calendar" data-username="{{ site.github.owner_name }}"></div>
-      <p class="contribution-note">See my complete <a href="https://github.com/{{ site.github.owner_name }}">contribution history</a> on GitHub</p>
-    </div>
+
   </div>
 </div>
 
@@ -45,7 +44,7 @@ permalink: /about/
 <!-- Projects Section (usando posts con categoría projects) -->
 <div class="github-info">
   <div class="github-info-content">
-    <h2>My Projects</h2>
+    <h3>Latest Projects</h3>
     <div class="projects-list">
       {% assign project_posts = site.posts | where_exp: "post", "post.categories contains 'Projects'" | sort: 'date' | reverse %}
       {% for post in project_posts limit:6 %}
@@ -73,11 +72,11 @@ permalink: /about/
             {% if post.links %}
               {% for link in post.links %}
                 {% if link.label == "GitHub" %}
-                <a class="project-link-item" href="{{ link.href }}" target="_blank"><i class="fa fa-github"></i> GitHub</a>
+                <a class="project-link-item" href="{{ link.href }}" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
                 {% elsif link.label == "Demo" %}
-                <a class="project-link-item" href="{{ link.href }}" target="_blank"><i class="fa fa-desktop"></i> Demo</a>
+                <a class="project-link-item" href="{{ link.href }}" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
                 {% else %}
-                <a class="project-link-item" href="{{ link.href }}" target="_blank"><i class="fa fa-link"></i> {{ link.label }}</a>
+                <a class="project-link-item" href="{{ link.href }}" target="_blank"><i class="fa-solid fa-link"></i> {{ link.label }}</a>
                 {% endif %}
               {% endfor %}
             {% endif %}
@@ -89,6 +88,11 @@ permalink: /about/
     </div>
     <a href="/categories#projects" class="view-all-btn" data-no-instant>View All Projects</a>
   </div>
+</div>
+<div class="github-contribution-graph">
+  <h3>Github Activity</h3>
+  <div id="github-calendar" data-username="{{ site.github.owner_name }}"></div>
+  <p class="contribution-note">See my complete <a href="https://github.com/{{ site.github.owner_name }}">contribution history</a> on GitHub</p>
 </div>
 
 {% endif %}

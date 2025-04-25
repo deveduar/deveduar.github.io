@@ -116,18 +116,19 @@
   }
   
   .category-badge {
-    background-color: $accent-color;
+    background-color: $brand-color;
     color: $background-color !important;
     font-size: 0.7rem;
-    padding: 0.2rem 0.5rem;
+    padding: 0.1rem 0.3rem;
     border-radius: 3px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     font-weight: 600;
     text-decoration: none !important;
+    transition: background-color 0.2s ease;
     
     &:hover {
-      background-color: darken($accent-color, 10%);
+      background-color: darken($brand-color, 10%);
       text-decoration: none;
       color: $background-color !important;
     }

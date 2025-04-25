@@ -1,5 +1,6 @@
 .home-posts-list {
   margin-bottom: 2rem;
+  min-height: 22rem;
   
   .home-post-item {
     
@@ -170,29 +171,29 @@
 // Hero Section
 .hero-section {
   text-align: left;
-  padding: 1.5rem 2rem;
+  // padding: 1.5rem 2rem;
   margin-bottom: 1.5rem;
   // background-color: lighten($background-color, 5%);
   // border-radius: 8px;
   // box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.hero-content, .content-container {
-  max-width: 800px;
-  margin: 0 auto;
-}
+// .hero-content {
+//   max-width: 800px;
+//   margin: 0 auto;
+// }
 
 .hero-content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   
-  h1 {
-    color: $brand-color;
-    margin-bottom: 0.5rem;
-    font-size: 2rem;
-    line-height: 1.2;
-  }
+  // h1 {
+  //   color: $brand-color;
+  //   margin-bottom: 0.5rem;
+  //   font-size: 2rem;
+  //   line-height: 1.2;
+  // }
   
   .hero-description {
     font-size: 1rem;
@@ -207,14 +208,12 @@
 }
 
 // Content container for consistent alignment
-.content-container {
-  padding: 0 2rem;
-}
+// .content-container {
+//   padding: 0 2rem;
+// }
 
 // Post list heading
 .post-list-heading {
-  color: $brand-color;
-  font-size: 1.6rem;
   margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid rgba($grey-color, 0.2);
@@ -296,7 +295,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 3rem 0 2rem;
+  // margin: 3rem 0 2rem;
   gap: 1rem;
   
   a, span.previous, span.next {
