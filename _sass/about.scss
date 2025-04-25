@@ -1,19 +1,21 @@
   // GitHub Profile Section
   .github-profile-section {
-    margin: 2rem 0;
-    padding: 1.5rem;
-    background-color: lighten($background-color, 5%);
+    text-align: left;
+    margin-bottom: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden; // Prevent content from spilling out
   }
   
   .github-profile-header {
+    max-width: 800px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 2rem;
     width: 100%;
-    align-items: center; // Center all children
+    align-items: flex-start; // Align to left like hero
+    text-align: left;
   }
   
   .github-profile-info {
@@ -21,12 +23,11 @@
     align-items: center;
     gap: 1.5rem;
     width: 100%;
-    max-width: 800px; // Maximum width for better readability
     
     @media (max-width: $on-palm) {
       flex-direction: column;
-      align-items: center;
-      text-align: center;
+      align-items: flex-start; // Changed from center to flex-start
+      text-align: left; // Changed from center to left
     }
   }
   
@@ -57,7 +58,11 @@
       width: 100%;
       
       .github-stats {
-        justify-content: center;
+        justify-content: flex-start; // Changed from center to flex-start
+      }
+      
+      .social-links {
+        justify-content: flex-start; // Ensure social links are left-aligned
       }
     }
   }
@@ -65,6 +70,7 @@
   // GitHub Contribution Graph
   .github-contribution-graph {
     width: 100%;
+    max-width: 95%;
     margin-bottom: 1.5rem;
     overflow: visible; // Changed from hidden to visible
     background-color: transparent;
@@ -91,14 +97,16 @@
 // GitHub Calendar Custom Styling
 #github-calendar {
     width: 100%;
-    max-width: 80%;
+    // max-width: 80%;
+    max-width: 100%;
     min-width: auto;
     margin: 0 auto;
-    padding: 1rem;
+    // padding: 1rem;
     background-color: #242526;
     border-radius: 4px;
     border: 1px solid #34353B;
-    overflow-x: auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
     
     // Panda theme color variables
     $panda-background: #2B2C2F;
@@ -185,6 +193,8 @@
             
             .gh-calendar-cell {
                 width: 100%;
+                max-width: 25px;
+
                 height: 100%;
                 border-radius: 3px; // Aumentado de 2px a 3px
                 transition: transform 0.2s ease;
@@ -192,6 +202,8 @@
                 &:hover {
                     transform: scale(1.1); // Aumentado de 1.05 a 1.1
                 }
+
+                
                 
                 // Contribution level colors
                 &.level-0 { background-color: $panda-grade0; }
@@ -219,43 +231,7 @@
     font-size: 0.85rem;
     color: $grey-color-light;
     
-// Language dots
-.language-dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    margin-right: 5px;
-    display: inline-block;
-    background-color: #8E8E8E; // Default color
-  }
-  
-  // Common programming language colors
-  .language-javascript { background-color: #f1e05a; }
-  .language-typescript { background-color: #2b7489; }
-  .language-html { background-color: #e34c26; }
-  .language-css { background-color: #563d7c; }
-  .language-python { background-color: #3572A5; }
-  .language-java { background-color: #b07219; }
-  .language-ruby { background-color: #701516; }
-  .language-php { background-color: #4F5D95; }
-  .language-c-sharp, .language-csharp { background-color: #178600; }
-  .language-c\+\+ { background-color: #f34b7d; }
-  .language-c { background-color: #555555; }
-  .language-go { background-color: #00ADD8; }
-  .language-swift { background-color: #ffac45; }
-  .language-kotlin { background-color: #F18E33; }
-  .language-rust { background-color: #dea584; }
-  .language-shell { background-color: #89e051; }
-  .language-dart { background-color: #00B4AB; }
-  .language-scala { background-color: #c22d40; }
-  .language-elixir { background-color: #6e4a7e; }
-  .language-haskell { background-color: #5e5086; }
-  .language-lua { background-color: #000080; }
-  .language-clojure { background-color: #db5855; }
-  .language-perl { background-color: #0298c3; }
-  .language-r { background-color: #198CE7; }
-  .language-objective-c { background-color: #438eff; }
-  .language-jupyter-notebook { background-color: #DA5B0B; }
+    // Language dots styling remains the same
   }
   
   .repo-license {
@@ -276,74 +252,178 @@
     font-style: italic;
   }
 
-.github-info {
-    margin: 2rem 0;
-    padding: 1.5rem;
-    background-color: lighten($background-color, 5%);
+  .github-info {
+    text-align: left;
+    // padding: 1.5rem 2rem;
+    margin-bottom: 1.5rem;
+    background-color: transparent;
     border-radius: 8px;
     
     h2 {
-      margin-bottom: 1.5rem;
       color: $brand-color;
+      margin-bottom: 1.5rem;
+      font-size: 1.6rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid rgba($grey-color, 0.2);
+    }
+    
+    .github-info-content {
+      max-width: 800px;
+      margin: 0 auto;
     }
   }
   
-  .repo-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .repo-card {
-    background-color: $background-color;
-    border: 1px solid $grey-color-dark;
-    border-radius: 6px;
-    padding: 1rem;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  // New styles to match home posts list
+  .projects-list {
+    margin-bottom: 2rem;
     
-    &:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    }
-    
-    h3 {
-      margin-top: 0;
-      font-size: 1.2rem;
+    .project-item {
+      padding: 0.2rem 0.8rem;
+      display: flex;
+      align-items: flex-start;
+      min-height: 1.2rem;
       
-      a {
-        color: $brand-color;
+      &:hover {
+        background-color: rgba($brand-color, 0.05);
+      }
+    }
+    
+    .project-meta {
+      min-width: 140px;
+      margin-right: 0.8rem;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .project-date {
+      color: $grey-color;
+      font-size: 0.9rem;
+      margin-bottom: 0.2rem;
+    }
+    
+    .project-technologies {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+      
+      .tech-badge {
+        font-size: 0.7rem;
+        color: $background-color;
+        background-color: $brand-color;
+        padding: 0.1rem 0.3rem;
+        border-radius: 3px;
+        text-decoration: none;
+        transition: background-color 0.2s ease;
         
         &:hover {
-          text-decoration: none;
+          background-color: darken($brand-color, 10%);
         }
       }
     }
     
-    p {
-      color: $grey-color-light;
-      font-size: 0.9rem;
-      margin-bottom: 1rem;
-      height: 3em;
+    .project-content-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      flex: 1;
+      min-width: 0;
+      align-items: baseline;
+      gap: 0.3rem 0.8rem;
+    }
+    
+    .project-link {
+      color: $text-color;
+      font-size: 1.1rem;
+      white-space: nowrap;
       overflow: hidden;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+      max-width: 100%;
+      flex-basis: 100%;
+      
+      &:hover {
+        color: $brand-color;
+        text-decoration: none;
+      }
+    }
+    
+    .project-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-left: 0;
+      flex-basis: 100%;
+      
+      .project-link-item {
+        font-size: 0.75rem;
+        color: $grey-color;
+        transition: color 0.2s ease;
+        white-space: nowrap;
+        
+        &:hover {
+          color: $brand-color;
+          text-decoration: none;
+        }
+      }
     }
   }
   
-  .repo-stats {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.8rem;
-    color: $grey-color;
-    
-    span {
-      display: flex;
-      align-items: center;
+  // Media queries for responsive design
+  @media screen and (max-width: 768px) {
+    .projects-list {
+      .project-link {
+        max-width: 100%;
+        font-size: 1rem;
+      }
       
-      i {
-        margin-right: 0.3rem;
+      .project-links {
+        margin-left: 0;
+        padding-left: 0;
+      }
+    }
+  }
+
+  @media screen and (max-width: $on-palm) {
+    .projects-list {
+      .project-item {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 0.5rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid rgba($grey-color, 0.1);
+      }
+      
+      .project-meta {
+        width: 100%;
+        margin-bottom: 0.2rem;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+      
+      .project-date {
+        margin-bottom: 0;
+        font-size: 0.85rem;
+      }
+      
+      .project-technologies {
+        margin-left: auto;
+      }
+      
+      .project-content-wrapper {
+        width: 100%;
+        gap: 0.2rem;
+      }
+      
+      .project-link {
+        font-size: 1rem;
+        white-space: normal;
+        line-height: 1.2;
+        margin-bottom: 0.1rem;
+      }
+      
+      .project-links {
+        width: 100%;
+        margin-top: 0.1rem;
       }
     }
   }
@@ -352,13 +432,15 @@
     display: inline-block;
     background-color: $brand-color;
     color: $background-color;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1.2rem;
     border-radius: 4px;
     font-weight: 500;
-    transition: background-color 0.2s ease;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
     
     &:hover {
       background-color: darken($brand-color, 10%);
       text-decoration: none;
+      transform: translateY(-2px);
     }
   }

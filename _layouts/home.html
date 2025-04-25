@@ -10,67 +10,58 @@ layout: default
   {{ content }}
 
   {%- if site.posts.size > 0 -%}
-  <div id="pagination-section">
+  <div id="pagination-section" class="content-container">
 
-    <h2 class="post-list-heading" id="recent-posts">{{ page.list_title | default: "Posts" }}</h2>
-    <div class="home-post-grid" >
+    <h2 class="post-list-heading" id="recent-posts">{{ page.list_title | default: "Latests Posts" }}</h2>
+    
+    <div class="home-posts-list">
       {%- for post in paginator.posts -%}
-      <div class="home-post-card">
+      <div class="home-post-item">
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <div class="home-post-meta">
-          <span class="home-post-date">{{ post.date | date: date_format }}</span>
-          
+        <div class="post-meta">
+          <span class="post-date">{{ post.date | date: date_format }}</span>
           {% if post.categories.size > 0 %}
-          <div class="home-post-categories">
+          <div class="post-categories">
             {% for category in post.categories %}
             <a class="category-badge" href="/categories#{{ category | slugify }}" data-no-instant>{{ category }}</a>
-          {% endfor %}
+            {% endfor %}
           </div>
           {% endif %}
         </div>
-        
-        <h3 class="home-post-heading">
-          <a href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        
-        {%- if site.show_excerpts -%}
-          <div class="home-post-excerpt">{{ post.excerpt }}</div>
-        {%- endif -%}
-        
-        {% if post.tags.size > 0 %}
-        <div class="home-post-tags">
-          {% for tag in post.tags %}
-            <a class="home-tag-badge" href="/tags#{{ tag | slugify }}" data-no-instant>#{{ tag }}</a>
-          {% endfor %}
+        <div class="post-content-wrapper">
+          <a class="post-link" href="{{ post.url | relative_url }}" data-description="{{ post.excerpt | strip_html | truncate: 150 }}">{{ post.title | escape }}</a>
+          
+          {% if post.tags.size > 0 %}
+          <div class="post-tags">
+            {% for tag in post.tags %}
+            <a class="related-tag" href="/tags#{{ tag | slugify }}" data-no-instant>#{{ tag }}</a>
+            {% endfor %}
+          </div>
+          {% endif %}
         </div>
-        {% endif %}
-        
-        <a href="{{ post.url | relative_url }}" class="home-read-more-link">Leer más →</a>
       </div>
       {%- endfor -%}
     </div>
 
-<!-- Pagination links -->
-<div class="pagination" >
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | relative_url }}#pagination-section" class="previous pagination-link">
-      &laquo; Anterior
-    </a>
-  {% else %}
-    <span class="previous">&laquo; Anterior</span>
-  {% endif %}
-  <span class="page_number">
-    Página {{ paginator.page }} de {{ paginator.total_pages }}
-  </span>
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | relative_url }}#pagination-section" class="next pagination-link">Siguiente &raquo;</a>
-  {% else %}
-    <span class="next">Siguiente &raquo;</span>
-  {% endif %}
-</div>
-</div>
+    <!-- Pagination links -->
+    <div class="pagination">
+      {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path | relative_url }}#pagination-section" class="previous pagination-link">
+          &laquo; Anterior
+        </a>
+      {% else %}
+        <span class="previous">&laquo; Anterior</span>
+      {% endif %}
+      <span class="page_number">
+        Página {{ paginator.page }} de {{ paginator.total_pages }}
+      </span>
+      {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path | relative_url }}#pagination-section" class="next pagination-link">Siguiente &raquo;</a>
+      {% else %}
+        <span class="next">Siguiente &raquo;</span>
+      {% endif %}
+    </div>
+  </div>
     <p class="rss-subscribe">¿Te gusta este contenido? <a href="{{ "/feed.xml" | relative_url }}">Suscríbete vía RSS</a></p>
   {%- endif -%}
 

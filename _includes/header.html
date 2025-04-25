@@ -19,39 +19,27 @@
 <div class="site-container">
   <aside class="site-sidebar">
     <div class="sidebar-inner">
-    <div class="sidebar-content">
-      <a class="site-title desktop-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
-      <!-- <h2 class="sidebar-heading">Navegación</h2>
-      <ul class="sidebar-nav">
-        {%- assign default_paths = site.pages | map: "path" -%}
-        {%- assign page_paths = site.header_pages | default: default_paths -%}
-        {%- for path in page_paths -%}
-          {%- assign my_page = site.pages | where: "path", path | first -%}
-          {%- if my_page.title -%}
-          <li><a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a></li>
-          {%- endif -%}
-        {%- endfor -%}
-      </ul>
-      
-      <h2 class="sidebar-heading">Categorías</h2> -->
-      <ul class="sidebar-categories">
-        {% for category in site.categories %}
-          <li class="category-item">
-            <div class="category-header">
-              <span class="category-name">{{ category[0] }}</span>
-              <span class="category-toggle">+</span>
-            </div>
-            <ul class="category-posts">
-              {% for post in category[1] %}
-                <li><a href="{{ post.url | relative_url }}" {% if page.url == post.url %}class="active-post"{% endif %}>{{ post.title }}</a></li>
-              {% endfor %}
-            </ul>
-          </li>
-        {% endfor %}
-      </ul>
+      <div class="sidebar-header">
+        <a class="site-title desktop-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+      </div>
+      <div class="sidebar-content">
+        <ul class="sidebar-categories">
+          {% for category in site.categories %}
+            <li class="category-item">
+              <div class="category-header">
+                <span class="category-name">{{ category[0] }}</span>
+                <span class="category-toggle">+</span>
+              </div>
+              <ul class="category-posts">
+                {% for post in category[1] %}
+                  <li><a href="{{ post.url | relative_url }}" {% if page.url == post.url %}class="active-post"{% endif %}>{{ post.title }}</a></li>
+                {% endfor %}
+              </ul>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
     </div>
-    </div>
-
   </aside>
   
   <div class="site-content">

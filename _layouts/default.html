@@ -24,6 +24,10 @@
   {% endif %}
   <!-- Script para manejar el scroll de paginación -->
   <script src="{{ '/assets/js/pagination-scroll.js' | relative_url }}" data-no-instant></script>
+
+  <!-- Add this before the closing body tag -->
+<script src="{{ '/assets/js/post-preview.js' | relative_url }}"></script>
+
   <!-- Inicialización de InstantClick debe ser lo último -->
   <script src="{{ '/assets/js/instant-click-init.js' | relative_url }}" data-no-instant></script>
 

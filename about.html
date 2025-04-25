@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: About
 permalink: /about/
 ---
@@ -7,76 +7,88 @@ permalink: /about/
 <div class="github-profile-section">
   <div class="github-profile-header">
     <div class="github-profile-info">
-      <img src="{{ site.github.owner_gravatar_url }}" alt="{{ site.github.owner_name }}" class="github-avatar">
       <div class="github-profile-details">
         <h2>{{ site.github.owner_name }}</h2>
-        {% if site.github.project_tagline %}
-        <p>{{ site.github.project_tagline }}</p>
-        {% endif %}
-        <div class="github-stats">
-          <span><i class="fa fa-users"></i> Followers: {{ site.github.followers_count | default: '0' }}</span>
-          <span><i class="fa fa-code"></i> Public Repos: {{ site.github.public_repositories.size }}</span>
+        <p class="hero-description">I'm a passionate developer focused on creating elegant solutions to complex problems. With expertise in web development and software engineering, I enjoy building applications that make a difference.</p>
+        
+        <div class="social-links">
+          {% if site.github_username %}
+          <a href="https://github.com/{{ site.github_username }}" target="_blank" class="social-link">
+            <i class="fab fa-github"></i>
+          </a>
+          {% endif %}
+          
+          {% if site.twitter_username %}
+          <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" class="social-link">
+            <i class="fab fa-twitter"></i>
+          </a>
+          {% endif %}
+          
+          {% if site.linkedin_username %}
+          <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" class="social-link">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          {% endif %}
         </div>
       </div>
     </div>
-  </div>
-</div>
-
-<!-- Keep the contribution graph as a separate section but with matching styling -->
-<!-- GitHub Contribution Graph Section -->
-<div class="github-info">
-  <!-- <h2>GitHub Contributions</h2> -->
-  <div class="github-contribution-graph">
-    <div id="github-calendar" data-username="{{ site.github.owner_name }}"></div>
-    <p class="contribution-note">See my complete <a href="https://github.com/{{ site.github.owner_name }}">contribution history</a> on GitHub</p>
+    
+    <!-- Moved contribution graph into the profile section -->
+    <div class="github-contribution-graph">
+      <div id="github-calendar" data-username="{{ site.github.owner_name }}"></div>
+      <p class="contribution-note">See my complete <a href="https://github.com/{{ site.github.owner_name }}">contribution history</a> on GitHub</p>
+    </div>
   </div>
 </div>
 
 <!-- GitHub Repository Information -->
 <!-- Projects Section (usando posts con categoría projects) -->
 <div class="github-info">
-  <h2>My Projects</h2>
-  <div class="repo-grid">
-    {% assign project_posts = site.posts | where_exp: "post", "post.categories contains 'Projects'" | sort: 'date' | reverse %}
-    {% for post in project_posts limit:4 %}
-      <div class="repo-card">
-        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-        <p>{{ post.description | default: post.excerpt | strip_html | truncate: 120 }}</p>
-        <div class="repo-meta">
-          {% if post.technologies.size > 0 %}
-          <span class="repo-language">
-            <span class="language-dot language-{{ post.technologies[0] | downcase | replace: ' ', '-' | replace: '.', '' | replace: '#', 'sharp' }}"></span>
-            {{ post.technologies[0] }}
-          </span>
-          {% endif %}
-          {% if post.technologies.size > 1 %}
-          <span class="repo-license"><i class="fa fa-code"></i> +{{ post.technologies.size | minus: 1 }} more</span>
-          {% endif %}
-        </div>
-        <div class="repo-stats">
-          {% if post.links %}
-            {% for link in post.links %}
-              {% if link.label == "GitHub" %}
-              <span><i class="fa fa-github"></i> <a href="{{ link.href }}" target="_blank">GitHub</a></span>
-              {% elsif link.label == "Demo" %}
-              <span><i class="fa fa-desktop"></i> <a href="{{ link.href }}" target="_blank">Demo</a></span>
-              {% else %}
-              <span><i class="fa fa-link"></i> <a href="{{ link.href }}" target="_blank">{{ link.label }}</a></span>
-              {% endif %}
+  <div class="github-info-content">
+    <h2>My Projects</h2>
+    <div class="projects-list">
+      {% assign project_posts = site.posts | where_exp: "post", "post.categories contains 'Projects'" | sort: 'date' | reverse %}
+      {% for post in project_posts limit:6 %}
+      <div class="project-item">
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <div class="project-meta">
+          <span class="project-date">{{ post.date | date: date_format }}</span>
+          {% if post.categories.size > 0 %}
+          <div class="project-technologies">
+            {% for category in post.categories limit:1 %}
+            <span class="tech-badge">{{ category }}</span>
             {% endfor %}
+          </div>
           {% endif %}
         </div>
-        <div class="repo-updated">
-          {% if post.last_modified_at %}
-          Updated: {{ post.last_modified_at | date: "%b %d, %Y" }}
-          {% else %}
-          Published: {{ post.date | date: "%b %d, %Y" }}
+        <div class="project-content-wrapper">
+          <a class="project-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+          
+          {% if post.tags.size > 0 %}
+          <div class="project-links">
+            {% for tag in post.tags %}
+            <a class="project-link-item" href="/tags#{{ tag | slugify }}" data-no-instant>#{{ tag }}</a>
+            {% endfor %}
+            
+            {% if post.links %}
+              {% for link in post.links %}
+                {% if link.label == "GitHub" %}
+                <a class="project-link-item" href="{{ link.href }}" target="_blank"><i class="fa fa-github"></i> GitHub</a>
+                {% elsif link.label == "Demo" %}
+                <a class="project-link-item" href="{{ link.href }}" target="_blank"><i class="fa fa-desktop"></i> Demo</a>
+                {% else %}
+                <a class="project-link-item" href="{{ link.href }}" target="_blank"><i class="fa fa-link"></i> {{ link.label }}</a>
+                {% endif %}
+              {% endfor %}
+            {% endif %}
+          </div>
           {% endif %}
         </div>
       </div>
-    {% endfor %}
+      {% endfor %}
+    </div>
+    <a href="/categories#projects" class="view-all-btn" data-no-instant>View All Projects</a>
   </div>
-  <a href="/categories#projects" class="view-all-btn" data-no-instant>View All Projects</a>
 </div>
 
 {% endif %}
