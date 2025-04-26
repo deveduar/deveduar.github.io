@@ -2,38 +2,53 @@
 layout: default
 ---
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="post-wrapper">
+    <!-- Metadata container -->
+    <div id="page-title" style="display: none;">{{ page.title }}</div>
+    <div class="post-meta-container">
+      <div class="post-meta">
+        <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+          {{ page.date | date: date_format }}
+        </time>
+        {%- if page.author -%}
+          • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
+        {%- endif -%}
+        {% if page.categories.size > 0 %}
+          <span class="post-categories">
+            {% for category in page.categories %}
+            <a class="category-badge" href="/categories#{{ category | slugify }}" data-no-instant>{{ category }}</a>
+            {% endfor %}
+          </span>
+        {% endif %}
+        {% if page.tags %}
+          <span class="post-tags">
+            {% for tag in page.tags %}
+            <a class="related-tag" href="/tags#{{ tag | slugify }}" data-no-instant>#{{ tag }}</a>
+            {% endfor %}
+          </span>
+        {% endif %}
+      </div>
+      
+      <!-- Mobile TOC button -->
+      <div class="mobile-toc-container">
+        <button id="toggle-toc" class="toc-toggle">Mostrar Tabla de Contenidos</button>
+        <div class="mobile-toc" style="display: none;">
+          {%- include toc.html -%}
+        </div>
+      </div>
+    </div>
 
-  <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta">
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        {{ page.date | date: date_format }}
-      </time>
-      {%- if page.author -%}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
-      {%- endif -%}
-      {% if page.tags %}
-        <span class="tags">
-          {% for tag in page.tags %}
-          <a class="home-tag-badge" href="/tags#{{ tag | slugify }}" data-no-instant>#{{ tag }}</a>
-          {% endfor %}
-        </span>
-      {% endif %}
-    </p>
-  </header>
-
-  <div class="post-container">
-    <!-- Contenido principal -->
+    <!-- Main content -->
     <div class="post-content e-content" itemprop="articleBody">
       {{ content }}
     </div>
-
-    <!-- Tabla de contenidos -->
-    <aside class="toc-container">
-      {%- include toc.html -%}
-    </aside>
   </div>
+
+  <!-- Table of contents (desktop) -->
+  <aside class="toc-container desktop-only">
+    {%- include toc.html -%}
+  </aside>
 
   {%- if site.disqus.shortname -%}
     {%- include disqus_comments.html -%}

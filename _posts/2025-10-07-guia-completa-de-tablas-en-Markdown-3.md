@@ -1,15 +1,15 @@
 ---
 title: markdown Frontend Performance Optimization & Kubernetes markdown
-date: 2023-11-06
+date: 2025-04-15
 categories: 
   - Technology
 tags:
   - Markdown
 ---
 
-# Markdown Frontend Performance Optimization & Kubernetes
 
-![Banner de portada](/api/placeholder/1200/300 "Banner sobre Kubernetes y Frontend")
+
+![Banner de portada](https://placehold.co/600x400)
 
 > *"La optimización sin medición es solo una suposición."* - Donald Knuth
 
@@ -284,8 +284,6 @@ Tabla con formato:
 
 ### Detalles expandibles
 
-<details>
-<summary>Cómo configurar un ingress en Kubernetes</summary>
 
 ```yaml
 apiVersion: networking.k8s.io/v1
@@ -307,10 +305,7 @@ spec:
             port:
               number: 80
 ```
-</details>
 
-<details>
-<summary>Ver el código del componente de optimización</summary>
 
 ```jsx
 import React, { useEffect, useState } from 'react';
@@ -339,19 +334,6 @@ export const LazyImage = ({ src, alt, threshold = 0.1 }) => {
     };
   }, [imgRef, threshold]);
 
-  return (
-    <div ref={setImgRef}>
-      {inView ? (
-        <img src={src} alt={alt} />
-      ) : (
-        <div style={{ 
-          height: '300px', 
-          width: '100%', 
-          backgroundColor: '#f0f0f0' 
-        }} />
-      )}
-    </div>
-  );
 };
 ```
 </details>
@@ -439,7 +421,7 @@ Dominar Kubernetes puede **revolucionar** tu enfoque de desarrollo Frontend, per
 
 *¿Te ha resultado útil este artículo? ¡No dudes en dejar tus comentarios y preguntas abajo!*
 
-[![Licencia Creative Commons](/api/placeholder/120/45 "Licencia CC BY-NC-SA 4.0")](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+[icencia Creative Commons](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 Este post explora todo lo relacionado con kubernetes y cómo puede mejorar tus habilidades de desarrollo.
 

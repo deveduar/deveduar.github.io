@@ -1,6 +1,6 @@
 ---
 title: Guía completa de tablas en Markdown
-date: 2023-10-07
+date: 2025-04-15
 categories: 
   - Technology
 tags:
@@ -220,6 +220,7 @@ Las celdas pueden contener texto con formato:
 
 ## Tabla con bordes redondeados
 
+```html
 <table style="border-collapse: separate; border-spacing: 0; width: 100%; border: 1px solid #ddd; border-radius: 8px; overflow: hidden;">
   <thead>
     <tr style="background-color: #f5f5f5;">
@@ -246,6 +247,7 @@ Las celdas pueden contener texto con formato:
     </tr>
   </tbody>
 </table>
+```
 
 ## Tabla con indicadores visuales
 
@@ -302,7 +304,7 @@ Las celdas pueden contener texto con formato:
 
 <table style="width: 100%; border-collapse: collapse;">
   <thead>
-    <tr style="background-color: #f8f8f8;">
+    <tr >
       <th style="padding: 12px; text-align: left; border-bottom: 2px solid #ddd;">Característica</th>
       <th style="padding: 12px; text-align: center; border-bottom: 2px solid #ddd;">Descripción</th>
       <th style="padding: 12px; text-align: center; border-bottom: 2px solid #ddd;">Disponibilidad</th>

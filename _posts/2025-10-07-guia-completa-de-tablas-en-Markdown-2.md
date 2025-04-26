@@ -1,6 +1,6 @@
 ---
 title: Guía completa de encabezados y listas en Markdown
-date: 2023-10-13
+date: 2025-04-15
 categories: 
   - Technology
 tags:
@@ -24,11 +24,7 @@ En Markdown, los encabezados se definen con el símbolo `#`. Los niveles depende
 
 También existe una sintaxis alternativa para los encabezados principales:
 
-Encabezado nivel 1 alternativo
-===========================
 
-Encabezado nivel 2 alternativo
----------------------------
 
 ## Estilos de encabezados con elementos adicionales
 

@@ -77,15 +77,76 @@ figcaption {
 /**
  * Lists
  */
-ul, ol {
+ ul, ol {
   margin-left: $spacing-unit;
+  margin-bottom: $spacing-unit / 2;
 }
 
 li {
+  margin-bottom: 0.3rem;
+  
   > ul,
   > ol {
     margin-bottom: 0;
+    margin-top: 0.3rem;
   }
+}
+
+// Task lists
+.task-list {
+  list-style-type: none;
+  margin-left: 0.5rem;
+  
+  .task-list-item {
+    position: relative;
+    padding-left: 1.8rem;
+    margin-bottom: 0.5rem;
+    
+    input[type="checkbox"] {
+      position: absolute;
+      left: 0;
+      top: 0.25rem;
+      margin: 0;
+      appearance: none;
+      -webkit-appearance: none;
+      width: 1.2rem;
+      height: 1.2rem;
+      border: 1px solid $grey-color;
+      border-radius: 3px;
+      background-color: rgba($background-color, 0.8);
+      // cursor: pointer;
+      vertical-align: middle;
+      
+      &:checked {
+        background-color: rgba($brand-color, 0.2);
+        border-color: $brand-color;
+        
+        &::after {
+          content: '✓';
+          position: absolute;
+          color: $brand-color;
+          font-size: 0.9rem;
+          left: 0.15rem;
+          top: -0.15rem;
+        }
+      }
+      
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px rgba($brand-color, 0.3);
+      }
+    }
+    
+    &.checked {
+      color: $grey-color;
+      text-decoration: line-through;
+    }
+  }
+}
+
+// Nested task lists
+.task-list .task-list {
+  margin-top: 0.5rem;
 }
 
 
@@ -93,8 +154,46 @@ li {
 /**
  * Headings
  */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: $base-font-weight;
+ h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.3;
+  margin-top: $spacing-unit;
+  margin-bottom: $spacing-unit / 2;
+  color: lighten($text-color, 5%);
+}
+
+h1 {
+  @include relative-font-size(2.2);
+  letter-spacing: -0.5px;
+}
+
+h2 {
+  @include relative-font-size(1.8);
+  border-bottom: 1px solid rgba($grey-color, 0.2);
+  padding-bottom: 0.3rem;
+}
+
+h3 {
+  @include relative-font-size(1.4);
+}
+
+h4 {
+  @include relative-font-size(1.2);
+}
+
+h5, h6 {
+  @include relative-font-size(1.1);
+  font-weight: 500;
+}
+
+// First heading in content shouldn't have top margin
+.post-content > h1:first-child,
+.post-content > h2:first-child,
+.post-content > h3:first-child,
+.post-content > h4:first-child,
+.post-content > h5:first-child,
+.post-content > h6:first-child {
+  margin-top: 0;
 }
 
 
@@ -199,27 +298,113 @@ blockquote {
 /**
  * Tables
  */
-table {
+ table {
   margin-bottom: $spacing-unit;
   width: 100%;
   text-align: $table-text-align;
-  color: lighten($text-color, 18%);
+  color: lighten($text-color, 10%);
   border-collapse: collapse;
-  border: 1px solid $grey-color-light;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  
   tr {
+    background-color: rgba($grey-color-dark, 0.2);
+    
     &:nth-child(even) {
-      background-color: lighten($grey-color-light, 6%);
+      background-color: rgba($grey-color-dark, 0.2);
+    }
+    
+    &:hover {
+      background-color: rgba($brand-color, 0.1);
     }
   }
+  
   th, td {
-    padding: ($spacing-unit / 3) ($spacing-unit / 2);
+    padding: ($spacing-unit / 2.5) ($spacing-unit / 2);
+    border: 1px solid rgba($grey-color-dark, 0.5);
   }
+  
   th {
-    background-color: lighten($grey-color-light, 3%);
-    border: 1px solid darken($grey-color-light, 4%);
-    border-bottom-color: darken($grey-color-light, 12%);
+    color: lighten($text-color, 10%);
+    font-weight: 600;
+    border-bottom: 2px solid rgba($grey-color-dark, 0.5);
+    position: relative;
+    
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba($brand-color, 0.3), transparent);
+    }
   }
-  td {
-    border: 1px solid $grey-color-light;
+  
+  // Make tables responsive on smaller screens
+  @include media-query($on-palm) {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
+}
+
+/**
+ * Details and Summary elements
+ */
+ details {
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  background-color: rgba($grey-color, 0.1);
+  border-radius: 4px;
+  border-left: 3px solid $brand-color;
+  
+  summary {
+    cursor: pointer;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    position: relative;
+    
+    &:hover {
+      color: $brand-color;
+    }
+    
+    &::marker,
+    &::-webkit-details-marker {
+      color: $brand-color;
+    }
+    
+    &:focus {
+      outline: none;
+    }
+  }
+  
+  &[open] {
+    padding-bottom: 0.8rem;
+    
+    summary {
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid rgba($grey-color, 0.2);
+      padding-bottom: 0.5rem;
+    }
+  }
+  
+  // Style for nested content
+  p, pre, ul, ol {
+    margin-left: 0.5rem;
+  }
+  
+  // Nested details
+  details {
+    margin: 0.5rem 0;
+    background-color: rgba($grey-color, 0.05);
+  }
+}
+
+// Special styling for code blocks inside details
+details pre {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
