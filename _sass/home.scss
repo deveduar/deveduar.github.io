@@ -184,16 +184,13 @@
 // }
 
 .hero-content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: flex-start;
   
-  // h1 {
-  //   color: $brand-color;
-  //   margin-bottom: 0.5rem;
-  //   font-size: 2rem;
-  //   line-height: 1.2;
-  // }
+  h1 {
+    margin-top: 0;
+  }
   
   .hero-description {
     font-size: 1rem;

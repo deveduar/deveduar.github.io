@@ -111,18 +111,25 @@
   display: block;
 }
 
+.sidebar-header {
+  background-color: lighten($background-color, 3%);
+  padding: $spacing-unit / 3;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: $spacing-unit / 4;
+}
+
 .desktop-title {
   display: none;
-  font-size: 1.8rem;
-  // margin-bottom: $spacing-unit;
-  padding-bottom: $spacing-unit / 2;
-  padding-top: $spacing-unit / 2;
-
-  // border-bottom: 1px solid $grey-color-dark;
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding-bottom: $spacing-unit / 4;
   text-align: center;
-
+  width: 100%;
+  margin-bottom: 0.2rem;
+  
   &:hover {
     text-decoration: none;
+    color: $brand-color;
   }
 }
 
@@ -134,10 +141,12 @@
 
 .site-sidebar {
     width: 250px;
+    min-width: 250px;
     background-color:  $background-color;
     // padding: 5px;
     transition: all 0.3s ease;
-    border-right: 0.5px solid $grey-color-dark;
+    border-right: 1px solid rgba($grey-color-dark, 0.2);
+
     height: 100vh;
     position: sticky;
     top: 0;
@@ -168,32 +177,43 @@
   }
 }
 
-.sidebar-nav {
-  list-style: none;
-  border-bottom: 1px solid rgba($grey-color-dark, 0.3);
-
-  li {
-    margin-bottom: $spacing-unit / 4;
-    position: relative;
-  }
-
-  a {
-    display: block;
-    padding: 8px 10px;
-    font-size: 15px;
-    font-weight: 500;
-    color: $grey-color-light;
-    border-radius: 4px;
-    transition: all 0.2s ease;
+.nav-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  padding: 0.3rem 0;
+  border-bottom: 1px solid rgba($grey-color-dark, 0.2);
+  border-radius: 4px;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  
+  .nav-icon-link {
+    text-align: center;
+    
+    i {
+      font-size: 0.9rem;
+      color: $grey-color;
+      transition: color 0.2s ease;
+    }
+    
+    &:hover {
+      text-decoration: none;
+      
+      i {
+        color: $brand-color;
+      }
+    }
     
     &.active-link {
-      color: $brand-color;
-      font-weight: bold;
-      position: relative;
+      i {
+        color: $brand-color !important;
+      }
     }
   }
 }
-
 
 .sidebar-nav,
 .sidebar-categories {

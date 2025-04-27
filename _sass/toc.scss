@@ -51,8 +51,10 @@
     summary::before {
       content: '';
       display: inline-block;
+      min-width: 14px;
       width: 14px;
       height: 14px;
+      flex-shrink: 0;
       margin-right: 0.5rem;
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23828282' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18l6-6-6-6'%3E%3C/path%3E%3C/svg%3E");
       background-repeat: no-repeat;
@@ -86,12 +88,20 @@
     }
     
     .collapse-icon {
-      @include chevron-icon($brand-color, 'down');
+      width: 14px;
+      height: 14px;
+      display: inline-block;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23c5c5c5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18l6-6-6-6'%3E%3C/path%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      transition: transform 0.3s ease;
+      transform: rotate(90deg);
       margin-left: 0.3rem;
     }
     
     &.expanded .collapse-icon {
-      transform: rotate(180deg);
+      transform: rotate(0deg);
     }
   }
   
@@ -99,7 +109,7 @@
     cursor: pointer;
     list-style: none;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     padding: 0.2rem 0;
     color: $text-color;
     outline: none;
@@ -116,6 +126,7 @@
     .toc-link {
       padding: 0;
       margin: 0;
+      flex: 1;
     }
   }
   
