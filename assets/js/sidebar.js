@@ -38,6 +38,9 @@
       const toggleCategory = function () {
         const categoryItem = this.parentElement;
         const categoryName = this.querySelector('.category-name').textContent.trim();
+        const toggleIcon = this.querySelector('.category-toggle');
+        
+        // Toggle the expanded class
         categoryItem.classList.toggle('category-expanded');
 
         let expandedCategories = loadExpandedCategories();

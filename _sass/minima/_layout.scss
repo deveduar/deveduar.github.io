@@ -123,9 +123,50 @@
   }
 }
 
-/* Styling for the post metadata that will be inserted after the first H1 */
 .post-meta-container {
   margin-bottom: $spacing-unit;
   padding-bottom: $spacing-unit / 2;
   border-bottom: 1px solid $grey-color-dark;
+}
+
+/* Post categories styling */
+.post-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-bottom: 1rem;
+  
+  .category-badge {
+    font-size: 0.7rem;
+    color: $background-color;
+    background-color: $brand-color;
+    padding: 0.1rem 0.3rem;
+    border-radius: 3px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+    
+    &:hover {
+      background-color: darken($brand-color, 10%);
+    }
+  }
+}
+
+/* Post tags styling to match home page */
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-left: 0;
+  
+  .related-tag {
+    font-size: 0.75rem;
+    color: $grey-color;
+    transition: color 0.2s ease;
+    white-space: nowrap;
+    
+    &:hover {
+      color: $brand-color;
+      text-decoration: none;
+    }
+  }
 }

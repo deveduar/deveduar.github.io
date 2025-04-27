@@ -2,10 +2,12 @@
 .table-of-contents {
     // background-color: rgba($grey-color, 0.1);
     // border-radius: 4px;
-    padding: 1rem;
+    // padding: 1rem;
     margin-bottom: 1.5rem;
     // border-left: 3px solid $brand-color;
   }
+
+
   
   .toc-header {
     display: flex;
@@ -84,14 +86,7 @@
     }
     
     .collapse-icon {
-      display: inline-block;
-      width: 14px;
-      height: 14px;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='#{$brand-color}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'%3E%3C/path%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
-      transition: transform 0.2s ease;
+      @include chevron-icon($brand-color, 'down');
       margin-left: 0.3rem;
     }
     
@@ -178,6 +173,7 @@
     display: none;
     margin-top: 1rem;
     margin-bottom: 1.5rem;
+  
   }
   
   .toc-toggle {
@@ -193,9 +189,9 @@
   }
   
   .mobile-toc {
-    // margin-top: 1rem;
+    margin-top: 1rem;
     // border-top: 1px solid $grey-color-light;
-    // padding-top: 1rem;
+    padding-top: 1rem;
   }
   
   .toc-container.desktop-only {
@@ -233,7 +229,37 @@
       position: sticky;
       top: 2rem;
       max-height: calc(100vh - 4rem);
-      overflow-y: auto;
+      margin-right: -$spacing-unit;
+      padding-right: 0;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      
+      .table-of-contents {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+      
+      .toc-header {
+        position: sticky;
+        top: 0;
+        background-color: $background-color;
+        z-index: 10;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+      }
+      
+      .toc-content {
+        overflow-y: auto;
+        padding-right: 15px; /* Add spacing for scrollbar */
+        
+        @include scrollbar(transparent);
+        
+        &:hover {
+          @include scrollbar($grey-color-dark);
+        }
+      }
     }
     
     .mobile-toc-container {

@@ -243,6 +243,11 @@
     transform: translateX(0);
   }
 
+  .category-header, .sidebar-nav {
+    max-width: 200px;
+    overflow: hidden;
+  }
+
   .site-container {
     padding-top: 0;
   }
@@ -317,7 +322,7 @@
   @include flex-center;
   justify-content: space-between;
   padding: 5px 0;
-  border-bottom: 1px solid $grey-color-dark;
+  border-bottom: 1px solid rgba($grey-color-dark, 0.3);
   cursor: pointer;
 
   &:hover {
@@ -327,12 +332,21 @@
 
 .category-name {
   font-weight: 500;
+  font-size: 14px;
 }
 
 .category-toggle {
-  font-size: 18px;
+  font-size: 14px;
   transition: transform 0.3s ease;
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23c5c5c5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18l6-6-6-6'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
+
 
 .category-posts {
   display: none;
@@ -394,7 +408,7 @@
 
 .category-expanded {
   .category-toggle {
-    transform: rotate(45deg);
+    transform: rotate(90deg); // Change from 45deg to 90deg for proper rotation
   }
 
   .category-posts {
