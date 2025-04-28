@@ -23,7 +23,7 @@ layout: default
           {% if post.categories.size > 0 %}
           <div class="post-categories">
             {% for category in post.categories %}
-            <a class="category-badge" href="/categories#{{ category | slugify }}" data-no-instant>{{ category }}</a>
+            <a class="category-badge" href="/archive?category={{ category | slugify }}" data-no-instant>{{ category }}</a>
             {% endfor %}
           </div>
           {% endif %}
@@ -34,7 +34,7 @@ layout: default
           {% if post.tags.size > 0 %}
           <div class="post-tags">
             {% for tag in post.tags %}
-            <a class="related-tag" href="/tags#{{ tag | slugify }}" data-no-instant>#{{ tag }}</a>
+            <a class="related-tag" href="/archive?tag={{ tag | slugify }}" data-no-instant>#{{ tag }}</a>
             {% endfor %}
           </div>
           {% endif %}
