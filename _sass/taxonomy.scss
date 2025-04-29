@@ -14,17 +14,17 @@
 // Filter container
 .filter-container {
   margin-bottom: 2rem;
-  background-color: lighten($background-color, 2%);
+  // background-color: lighten($background-color, 2%);
   border-radius: 8px;
   padding: 1rem;
 }
 
+// Archive filters
 .archive-filters {
   display: flex;
-  justify-content: center; // Center items in desktop view
-  align-items: center;
+  flex-direction: column;
+  align-items: stretch;
   gap: 1rem;
-  flex-wrap: wrap;
   width: 100%;
 }
 
@@ -136,15 +136,23 @@
 }
 
 // Active filters display
-.active-filters {
+// .active-filters {
+//   display: flex;
+//   justify-content: center; // Center in desktop view
+//   gap: 1rem;
+//   margin-bottom: 0;
+//   flex-wrap: wrap;
+//   align-items: center;
+//   width: 100%;
+//   margin-top: 0.75rem;
+// }
+
+// Filters display
+.filters-display {
   display: flex;
-  justify-content: center; // Center in desktop view
-  gap: 1rem;
-  margin-bottom: 0;
-  flex-wrap: wrap;
+  gap: 0.75rem;
   align-items: center;
-  width: 100%;
-  margin-top: 0.75rem;
+  flex-wrap: wrap;
 }
 
 .active-category-filter,
@@ -154,14 +162,14 @@
   padding: 0.3rem 0.8rem;
   background-color: lighten($background-color, 5%);
   border-radius: 6px;
-  white-space: nowrap; // Prevent wrapping within the filter
-  overflow: hidden; // Hide overflow
+  white-space: nowrap;
+  overflow: hidden;
   
   .filter-label {
     color: $grey-color;
     margin-right: 0.5rem;
     font-size: 0.85rem;
-    flex-shrink: 0; // Prevent label from shrinking
+    flex-shrink: 0;
   }
   
   .filter-value {
@@ -169,8 +177,8 @@
     font-weight: 500;
     font-size: 0.9rem;
     overflow: hidden;
-    text-overflow: ellipsis; // Add ellipsis for truncated text
-    max-width: 120px; // Limit width to prevent overflow
+    text-overflow: ellipsis;
+    max-width: 120px;
   }
   
   .clear-filter {
@@ -182,7 +190,7 @@
     margin-left: 0.5rem;
     padding: 0 0.3rem;
     line-height: 1;
-    flex-shrink: 0; // Prevent button from shrinking
+    flex-shrink: 0;
     
     &:hover {
       color: $brand-color;
@@ -328,8 +336,99 @@
   }
 }
 
+// Dropdowns wrapper
+.dropdowns-wrapper {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  justify-content: flex-end; // Align dropdowns to the right
+}
+
+// Filters controls wrapper (sorting and active filters)
+.filters-controls-wrapper {
+  display: flex;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.filters-row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+// Sorting options
+.sorting-options {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  
+  .sort-label {
+    color: $grey-color;
+    font-size: 0.85rem;
+    margin-right: 0.5rem;
+    white-space: nowrap;
+  }
+  
+  .sort-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    
+    .sort-button {
+      background-color: lighten($background-color, 5%);
+      color: $text-color;
+      border: 1px solid $grey-color-dark;
+      border-radius: 4px;
+      padding: 0.3rem 0.6rem;
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      
+      i {
+        font-size: 0.7rem;
+        transition: transform 0.2s ease;
+      }
+      
+      &:hover {
+        background-color: lighten($background-color, 8%);
+      }
+      
+      &.active {
+        background-color: rgba($brand-color, 0.1);
+        color: $brand-color;
+        border-color: $brand-color;
+        font-weight: 600;
+        
+        i {
+          color: $brand-color;
+        }
+      }
+    }
+  }
+}
+
+// Active filters display
+// .active-filters {
+//   display: flex;
+//   gap: 1rem;
+//   margin-bottom: 0;
+//   flex-wrap: wrap;
+//   align-items: center;
+//   flex: 1;
+//   margin-top: 0.75rem;
+//   justify-content: flex-end; // Align to the right
+// }
+
 // Responsive adjustments
-@media screen and (max-width: $on-palm) {
+@media screen and (max-width: $on-laptop) {
   .filter-container {
     padding: 0.75rem;
   }
@@ -338,14 +437,24 @@
     flex-direction: column;
     align-items: stretch;
     gap: 0.75rem;
-    
-    .categories-dropdown-container,
-    .tags-dropdown-container {
-      width: 100%;
-      min-width: unset;
-      max-width: 100%;
-      margin-bottom: 0;
-    }
+  }
+  
+  .dropdowns-wrapper {
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .filters-controls-wrapper {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .categories-dropdown-container,
+  .tags-dropdown-container {
+    width: 100%;
+    min-width: unset;
+    max-width: 100%;
+    margin-bottom: 0;
   }
   
   // Add specific z-index handling for mobile
@@ -372,22 +481,21 @@
   }
   
   // Improved active filters layout for mobile
-  .active-filters {
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 0.5rem;
-    margin-top: 0.75rem;
+  // .active-filters {
+  //   flex-direction: row;
+  //   justify-content: space-between;
+  //   gap: 0.5rem;
     
-    .active-category-filter,
-    .active-tag-filter {
-      flex: 1;
-      min-width: unset;
+  //   .active-category-filter,
+  //   .active-tag-filter {
+  //     flex: 1;
+  //     min-width: unset;
       
-      .filter-value {
-        max-width: 80px; // Smaller on mobile
-      }
-    }
-  }
+  //     .filter-value {
+  //       max-width: 80px; // Smaller on mobile
+  //     }
+  //   }
+  // }
   
   .archive-post-item {
     .post-meta {
@@ -413,5 +521,46 @@
   
   .taxonomy-dropdown {
     max-width: 100%;
+  }
+
+  .filters-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .sorting-options {
+    width: 100%;
+    
+    .sort-buttons {
+      width: 100%;
+      justify-content: flex-start;
+      
+      .sort-button {
+        flex: 1;
+        text-align: center;
+        padding: 0.4rem 0.3rem;
+        font-size: 0.75rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: calc(30% - 0.4rem); // 5 buttons per row
+      }
+    }
+  }
+  
+  .filters-display {
+    width: 100%;
+    justify-content: space-between;
+    
+    .active-category-filter,
+    .active-tag-filter {
+      flex: 1;
+      min-width: unset;
+      
+      .filter-value {
+        max-width: 180px; 
+      }
+    }
   }
 }

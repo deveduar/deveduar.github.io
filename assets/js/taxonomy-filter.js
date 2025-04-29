@@ -3,21 +3,25 @@
   // State variables
   let currentCategoryFilter = 'all';
   let currentTagFilter = 'all';
+  let currentSortMethod = 'date';
+  let currentSortDirection = 'desc';
   let isProcessing = false; // Add a flag to prevent multiple simultaneous filter operations
   
   function initArchiveFilters() {
     const archivePage = document.querySelector('.archive-page');
     if (!archivePage) return;
     
-    // Elements
-    const postItems = document.querySelectorAll('.archive-post-item');
-    const categoryFilters = document.querySelectorAll('.category-filter');
-    const tagFilters = document.querySelectorAll('.tag-filter');
-    const categoryFilterLinks = document.querySelectorAll('.category-filter-link');
-    const tagFilterLinks = document.querySelectorAll('.tag-filter-link');
-    const filterContainer = document.querySelector('.archive-filter-container');
-    const noResultsMessage = document.querySelector('.no-results-message');
-    const resetFiltersBtn = document.querySelector('.reset-filters-btn');
+  // Elements
+  const postItems = document.querySelectorAll('.archive-post-item');
+  const categoryFilters = document.querySelectorAll('.category-filter');
+  const tagFilters = document.querySelectorAll('.tag-filter');
+  const categoryFilterLinks = document.querySelectorAll('.category-filter-link');
+  const tagFilterLinks = document.querySelectorAll('.tag-filter-link');
+  const filterContainer = document.querySelector('.archive-filter-container');
+  const noResultsMessage = document.querySelector('.no-results-message');
+  const resetFiltersBtn = document.querySelector('.reset-filters-btn');
+  const sortButtons = document.querySelectorAll('.sort-button');
+  const postsListContainer = document.querySelector('.archive-posts-list');
     
     // Dropdown elements
     const categoryDropdownButton = document.querySelector('.categories-dropdown-container .dropdown-button');
@@ -39,20 +43,31 @@
     initDropdown(categoryDropdownButton, categoryDropdownContent);
     initDropdown(tagDropdownButton, tagDropdownContent);
     
-    // Check URL parameters for initial filters
-    function getURLParameters() {
-      const urlParams = new URLSearchParams(window.location.search);
-      const categoryParam = urlParams.get('category');
-      const tagParam = urlParams.get('tag');
-      
-      if (categoryParam) {
-        currentCategoryFilter = categoryParam;
-      }
-      
-      if (tagParam) {
-        currentTagFilter = tagParam;
-      }
+    // Check URL parameters for initial filters and sort method
+  // Check URL parameters for initial filters and sort method
+  function getURLParameters() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const categoryParam = urlParams.get('category');
+    const tagParam = urlParams.get('tag');
+    const sortParam = urlParams.get('sort');
+    const directionParam = urlParams.get('direction');
+    
+    if (categoryParam) {
+      currentCategoryFilter = categoryParam;
     }
+    
+    if (tagParam) {
+      currentTagFilter = tagParam;
+    }
+    
+    if (sortParam && ['date', 'title', 'category', 'tag'].includes(sortParam)) {
+      currentSortMethod = sortParam;
+    }
+    
+    if (directionParam && ['asc', 'desc'].includes(directionParam)) {
+      currentSortDirection = directionParam;
+    }
+  }
     
     // Function to initialize dropdown behavior
     function initDropdown(button, content) {
@@ -74,7 +89,6 @@
       });
     }
     
-    // Function to apply filters and update UI
     function applyFilters() {
       // Prevent multiple simultaneous filter operations
       if (isProcessing) return;
@@ -84,8 +98,9 @@
       
       // Use setTimeout to allow the UI to update before processing
       setTimeout(() => {
-        let visibleCount = 0;
+        let visiblePosts = [];
         
+        // First filter the posts
         postItems.forEach(item => {
           const postCategories = item.dataset.categories || '';
           const postTags = item.dataset.tags || '';
@@ -97,14 +112,19 @@
           
           if (matchesCategory && matchesTag) {
             item.style.display = 'block';
-            visibleCount++;
+            visiblePosts.push(item);
           } else {
             item.style.display = 'none';
           }
         });
         
+        // Then sort the visible posts
+        if (visiblePosts.length > 0) {
+          sortPosts(visiblePosts);
+        }
+        
         // Show/hide no results message
-        if (visibleCount === 0) {
+        if (visiblePosts.length === 0) {
           noResultsMessage.style.display = 'block';
         } else {
           noResultsMessage.style.display = 'none';
@@ -113,7 +133,10 @@
         // Update active filters display
         updateActiveFilters();
         
-        // Update URL with current filters
+        // Update active sort button
+        updateActiveSortButton();
+        
+        // Update URL with current filters and sort method
         updateURL();
         
         if (filterContainer) filterContainer.classList.remove('loading');
@@ -123,30 +146,89 @@
       }, 10);
     }
     
-    // Update URL with current filters
-    function updateURL() {
-      try {
-        const url = new URL(window.location);
-        
-        // Clear existing parameters
-        url.searchParams.delete('category');
-        url.searchParams.delete('tag');
-        
-        // Add current filters if not 'all'
-        if (currentCategoryFilter !== 'all') {
-          url.searchParams.set('category', currentCategoryFilter);
-        }
-        
-        if (currentTagFilter !== 'all') {
-          url.searchParams.set('tag', currentTagFilter);
-        }
-        
-        // Update URL without reloading the page
-        window.history.pushState({}, '', url);
-      } catch (e) {
-        console.error('Error updating URL:', e);
+    function sortPosts(posts) {
+      // Create an array of posts for sorting
+      const postsArray = Array.from(posts);
+      
+      // Sort based on current sort method and direction
+      switch (currentSortMethod) {
+        case 'date':
+          postsArray.sort((a, b) => {
+            const dateA = new Date(a.querySelector('.post-date').getAttribute('data-date') || a.querySelector('.post-date').textContent);
+            const dateB = new Date(b.querySelector('.post-date').getAttribute('data-date') || b.querySelector('.post-date').textContent);
+            return currentSortDirection === 'desc' ? dateB - dateA : dateA - dateB;
+          });
+          break;
+          
+        case 'title':
+          postsArray.sort((a, b) => {
+            const titleA = a.querySelector('.post-link').textContent.trim().toLowerCase();
+            const titleB = b.querySelector('.post-link').textContent.trim().toLowerCase();
+            return currentSortDirection === 'desc' ? 
+              titleB.localeCompare(titleA) : titleA.localeCompare(titleB);
+          });
+          break;
+          
+        case 'category':
+          postsArray.sort((a, b) => {
+            const categoryA = a.querySelector('.category-badge')?.textContent.trim().toLowerCase() || '';
+            const categoryB = b.querySelector('.category-badge')?.textContent.trim().toLowerCase() || '';
+            return currentSortDirection === 'desc' ? 
+              categoryB.localeCompare(categoryA) : categoryA.localeCompare(categoryB);
+          });
+          break;
+          
+        case 'tag':
+          postsArray.sort((a, b) => {
+            const tagA = a.querySelector('.tag-badge')?.textContent.trim().toLowerCase() || '';
+            const tagB = b.querySelector('.tag-badge')?.textContent.trim().toLowerCase() || '';
+            return currentSortDirection === 'desc' ? 
+              tagB.localeCompare(tagA) : tagA.localeCompare(tagB);
+          });
+          break;
+      }
+      
+      // Reorder the posts in the DOM
+      const postsContainer = document.querySelector('.archive-posts-list');
+      if (postsContainer) {
+        postsArray.forEach(post => {
+          postsContainer.appendChild(post);
+        });
       }
     }
+    
+  // Update URL with current filters and sort method
+  function updateURL() {
+    try {
+      const url = new URL(window.location);
+      
+      // Clear existing parameters
+      url.searchParams.delete('category');
+      url.searchParams.delete('tag');
+      url.searchParams.delete('sort');
+      url.searchParams.delete('direction');
+      
+      // Add current filters if not 'all'
+      if (currentCategoryFilter !== 'all') {
+        url.searchParams.set('category', currentCategoryFilter);
+      }
+      
+      if (currentTagFilter !== 'all') {
+        url.searchParams.set('tag', currentTagFilter);
+      }
+      
+      // Add current sort method if not default
+      if (currentSortMethod !== 'date' || currentSortDirection !== 'desc') {
+        url.searchParams.set('sort', currentSortMethod);
+        url.searchParams.set('direction', currentSortDirection);
+      }
+      
+      // Update URL without reloading the page
+      window.history.pushState({}, '', url);
+    } catch (e) {
+      console.error('Error updating URL:', e);
+    }
+  }
     
     // Update active filters display
     function updateActiveFilters() {
@@ -214,7 +296,57 @@
         }
       });
     }
+
+  // Update active sort button
+  function updateActiveSortButton() {
+    if (!sortButtons) return;
     
+    sortButtons.forEach(button => {
+      const buttonSort = button.dataset.sort;
+      const buttonDirection = button.dataset.direction;
+      const isActive = buttonSort === currentSortMethod;
+      
+      // Update active state
+      if (isActive) {
+        button.classList.add('active');
+        
+        // Update direction attribute and icon
+        button.dataset.direction = currentSortDirection;
+        const icon = button.querySelector('i');
+        if (icon) {
+          icon.className = currentSortDirection === 'desc' ? 
+            'fas fa-arrow-down' : 'fas fa-arrow-up';
+        }
+      } else {
+        button.classList.remove('active');
+      }
+    });
+  }
+    
+  // Sort button click handlers
+  if (sortButtons) {
+    sortButtons.forEach(button => {
+      button.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Get sort method from data attribute
+        const sortMethod = this.dataset.sort;
+        
+        // If clicking the same sort method, toggle direction
+        if (sortMethod === currentSortMethod) {
+          currentSortDirection = currentSortDirection === 'desc' ? 'asc' : 'desc';
+        } else {
+          // New sort method, use the button's default direction
+          currentSortMethod = sortMethod;
+          currentSortDirection = this.dataset.direction;
+        }
+        
+        // Apply filters and sorting
+        applyFilters();
+      });
+    });
+  }
+
     // Category filter click handlers
     categoryFilters.forEach(filter => {
       filter.addEventListener('click', function(e) {
@@ -336,20 +468,25 @@
       });
     }
     
-    // Reset all filters button
-    if (resetFiltersBtn) {
-      resetFiltersBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        // Don't reapply if already all filters are 'all'
-        if (currentCategoryFilter === 'all' && currentTagFilter === 'all') return;
-        
-        currentCategoryFilter = 'all';
-        currentTagFilter = 'all';
-        applyFilters();
-      });
-    }
+  // Reset all filters button
+  if (resetFiltersBtn) {
+    resetFiltersBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      // Don't reapply if already all filters are 'all' and sort is default
+      if (currentCategoryFilter === 'all' && currentTagFilter === 'all' && 
+          currentSortMethod === 'date' && currentSortDirection === 'desc') return;
+      
+      currentCategoryFilter = 'all';
+      currentTagFilter = 'all';
+      currentSortMethod = 'date';
+      currentSortDirection = 'desc';
+      applyFilters();
+    });
+  }
     
+    
+
     // Check URL parameters and apply initial filters
     getURLParameters();
     
@@ -368,7 +505,9 @@
       // Reset state variables for new page
       currentCategoryFilter = 'all';
       currentTagFilter = 'all';
+      currentSortMethod = 'date';
       isProcessing = false;
+      currentSortDirection = 'desc';
       
       // Small delay to ensure DOM is updated
       setTimeout(initArchiveFilters, 100);
