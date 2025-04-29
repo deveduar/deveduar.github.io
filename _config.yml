@@ -23,7 +23,9 @@ email: deveduar@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Un blog sobre desarrollo web y tecnología.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://deveduar.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+domain: deveduar.github.io 
+
 twitter_username: deveduar
 github_username:  deveduar
 linkedin_username: deveduar
