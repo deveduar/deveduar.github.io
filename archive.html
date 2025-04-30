@@ -5,29 +5,40 @@ permalink: /archive/
 ---
 
 <div class="archive-page">
-    <p class="archive-intro">Browse all posts by category and tag:</p>
-    
-    <div class="filter-container">
-        <div class="archive-filters">
-          <!-- Dropdowns Container -->
-          <div class="dropdowns-wrapper">
-            <!-- Categories Dropdown -->
-            <div class="categories-dropdown-container">
-              <div class="taxonomy-dropdown">
-                <button class="dropdown-button">
-                  <span class="selected-category">All Categories</span>
-                  <i class="fas fa-chevron-down"></i>
-                </button>
-                <!-- Dropdown content -->
-                <div class="dropdown-content">
-                    <a href="javascript:void(0);" class="dropdown-item category-filter" data-category="all">All Categories</a>
-                    {% assign categories = site.categories | sort %}
-                    {% for category in categories %}
-                    <a href="javascript:void(0);" class="dropdown-item category-filter" data-category="{{ category[0] | slugify }}">{{ category[0] }} ({{ category[1].size }})</a>
-                    {% endfor %}
-                </div>
+  <!-- <p class="archive-intro">Browse all posts by category and tag:</p> -->
+  
+  <div class="filter-container">
+      <div class="archive-filters">
+        <!-- Search Input -->
+        <div class="search-container">
+          <div class="search-input-wrapper">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" id="archive-search" class="search-input" placeholder="Search posts...">
+            <button id="clear-search" class="clear-search-btn" style="display: none;">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+        </div>
+        
+        <!-- Dropdowns Container -->
+        <div class="dropdowns-wrapper">
+          <!-- Categories Dropdown -->
+          <div class="categories-dropdown-container">
+            <div class="taxonomy-dropdown">
+              <button class="dropdown-button">
+                <span class="selected-category">All Categories</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <!-- Dropdown content -->
+              <div class="dropdown-content">
+                  <a href="javascript:void(0);" class="dropdown-item category-filter" data-category="all">All Categories</a>
+                  {% assign categories = site.categories | sort %}
+                  {% for category in categories %}
+                  <a href="javascript:void(0);" class="dropdown-item category-filter" data-category="{{ category[0] | slugify }}">{{ category[0] }} ({{ category[1].size }})</a>
+                  {% endfor %}
               </div>
             </div>
+          </div>
             
             <!-- Tags Dropdown -->
             <div class="tags-dropdown-container">
@@ -121,6 +132,9 @@ permalink: /archive/
                   <span class="filter-value">All Tags</span>
                   <button class="clear-filter" data-filter-type="tag">×</button>
                 </div>
+                <div class="reset-filters-container">
+                  <button class="reset-filters-btn">Reset All</button>
+                </div>
               </div>
             </div>
           </div>
@@ -159,10 +173,10 @@ permalink: /archive/
       {% endfor %}
     </div>
     
-    <!-- No Results Message -->
-    <div class="no-results-message" style="display: none;">
-      <p>No posts match the selected filters. Try changing your selection.</p>
-      <button class="reset-filters-btn">Reset All Filters</button>
-    </div>
+<!-- No Results Message -->
+<div class="no-results-message" style="display: none;">
+  <p>No posts match the selected filters. Try changing your selection.</p>
+  <button class="reset-filters-btn">Reset All Filters</button>
+</div>
   </div>
 </div>

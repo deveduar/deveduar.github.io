@@ -66,7 +66,7 @@ permalink: /about/
           {% if post.tags.size > 0 %}
           <div class="project-links">
             {% for tag in post.tags %}
-            <a class="project-link-item" href="/tags#{{ tag | slugify }}" data-no-instant>#{{ tag }}</a>
+            <a class="project-link-item" href="/archive?tag={{ tag | slugify }}" data-no-instant>#{{ tag }}</a>
             {% endfor %}
             
             {% if post.links %}

@@ -3,6 +3,7 @@ import { Sorting } from './modules/sorting.js';
 import { Rendering } from './modules/rendering.js';
 import { Dropdowns } from './modules/dropdowns.js';
 import { URLManager } from './modules/urlManager.js';
+import { Search } from './modules/search.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const archivePage = document.querySelector('.archive-page');
@@ -28,18 +29,35 @@ document.addEventListener('DOMContentLoaded', () => {
   const resetFiltersBtn = document.querySelector('.reset-filters-btn');
   const sortButtons = document.querySelectorAll('.sort-button');
   const filterContainer = document.querySelector('.archive-filter-container');
-  
+    // Search elements
+  const searchInput = document.getElementById('archive-search');
+  const clearSearchBtn = document.getElementById('clear-search');
+
   let isProcessing = false; // Add processing flag
 
   // Initialize dropdowns
   Dropdowns.initDropdown(categoryDropdownButton, categoryDropdownContent);
   Dropdowns.initDropdown(tagDropdownButton, tagDropdownContent);
 
+  // Initialize search
+  Search.initSearchInput(searchInput, clearSearchBtn);
+
   // Check URL parameters for initial filters and sort method
   const params = new URLSearchParams(window.location.search);
   Filters.setCategoryFilter(params.get('category') || 'all');
   Filters.setTagFilter(params.get('tag') || 'all');
   Sorting.setSortMethod(params.get('sort') || 'date', params.get('direction') || 'desc');
+
+  // Set initial search query from URL if present
+  if (params.has('search')) {
+    const searchQuery = params.get('search');
+    Search.setSearchQuery(searchQuery);
+    if (searchInput) {
+      searchInput.value = searchQuery;
+      clearSearchBtn.style.display = searchQuery ? 'block' : 'none';
+    }
+  }
+  
 
   // Apply filters on page load
   setTimeout(() => applyFilters(), 50);
@@ -55,9 +73,10 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
       const { currentCategoryFilter, currentTagFilter } = Filters.getCurrentFilters();
       const { currentSortMethod, currentSortDirection } = Sorting.getCurrentSort();
+      const currentSearchQuery = Search.getCurrentSearchQuery();
 
-      // Filter posts
-      const filteredPosts = Array.from(postItems).filter(item => {
+      // Filter posts by category and tag
+      const filteredByTaxonomy = Array.from(postItems).filter(item => {
         const postCategories = item.dataset.categories || '';
         const postTags = item.dataset.tags || '';
         
@@ -69,10 +88,14 @@ document.addEventListener('DOMContentLoaded', () => {
         return matchesCategory && matchesTag;
       });
 
+
+      const filteredPosts = Search.filterPostsBySearch(filteredByTaxonomy, currentSearchQuery);
+
+
       // Sort posts
       const sortedPosts = Sorting.sortPosts(filteredPosts, currentSortMethod, currentSortDirection);
 
-      // Render posts - this now includes reordering in the DOM
+      // Render posts
       Rendering.renderPosts(sortedPosts);
 
       // Update active filters display
@@ -86,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
       Sorting.updateActiveSortButton(sortButtons, currentSortMethod, currentSortDirection);
 
       // Update URL
-      URLManager.updateURL(currentCategoryFilter, currentTagFilter, currentSortMethod, currentSortDirection);
+      URLManager.updateURL(currentCategoryFilter, currentTagFilter, currentSortMethod, currentSortDirection, currentSearchQuery);
       
       if (filterContainer) filterContainer.classList.remove('loading');
       
@@ -94,6 +117,30 @@ document.addEventListener('DOMContentLoaded', () => {
       isProcessing = false;
     }, 10);
   }
+
+    // Add search input event listener
+    if (searchInput) {
+      searchInput.addEventListener('input', () => {
+        // Debounce search to avoid too many updates
+        clearTimeout(searchInput.debounceTimer);
+        searchInput.debounceTimer = setTimeout(() => {
+          applyFilters();
+        }, 300);
+      });
+      
+      searchInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          applyFilters();
+        }
+      });
+    }
+    
+    if (clearSearchBtn) {
+      clearSearchBtn.addEventListener('click', () => {
+        applyFilters();
+      });
+    }
 
   // Add event listeners for filters, sorting, and reset
   categoryFilters.forEach(filter => {
@@ -233,11 +280,30 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const { currentCategoryFilter, currentTagFilter } = Filters.getCurrentFilters();
     const { currentSortMethod, currentSortDirection } = Sorting.getCurrentSort();
+    const currentSearchQuery = Search.getCurrentSearchQuery();
     
-    // Don't reapply if already all filters are 'all' and sort is default
+    // Don't reapply if already all filters are 'all' and sort is default and no search query
     if (currentCategoryFilter === 'all' && currentTagFilter === 'all' && 
-        currentSortMethod === 'date' && currentSortDirection === 'desc') return;
+        currentSortMethod === 'date' && currentSortDirection === 'desc' && 
+        !currentSearchQuery) return;
     
+    // Reset search input
+    Search.resetSearch(searchInput, clearSearchBtn);
+    
+    // Reset filters and sorting
+    Filters.resetFilters();
+    Sorting.setSortMethod('date', 'desc');
+    applyFilters();
+  });
+
+  const noResultsResetBtn = document.querySelector('.no-results-message .reset-filters-btn');
+  noResultsResetBtn?.addEventListener('click', (e) => {
+    e.preventDefault();
+    
+    // Reset search input
+    Search.resetSearch(searchInput, clearSearchBtn);
+    
+    // Reset filters and sorting
     Filters.resetFilters();
     Sorting.setSortMethod('date', 'desc');
     applyFilters();

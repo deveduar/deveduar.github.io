@@ -28,6 +28,72 @@
   width: 100%;
 }
 
+// Search container
+.search-container {
+  // margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.search-input-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  
+  .search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $grey-color;
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 8px 40px 8px 36px; // Adjusted padding for left icon and right clear button
+    border: 1px solid $grey-color-dark;
+    border-radius: 6px;
+    background-color: lighten($background-color, 5%);
+    color: $text-color;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    // height: 38px;
+    box-sizing: border-box; // Ensure padding doesn't affect overall size
+    max-width: 100%; // Prevent overflow on small screens
+    
+    &:focus {
+      outline: none;
+      border-color: $brand-color;
+      background-color: lighten($background-color, 8%);
+    }
+    
+    &::placeholder {
+      color: $grey-color;
+    }
+  }
+  
+  .clear-search-btn {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: $grey-color;
+    cursor: pointer;
+    padding: 0;
+    font-size: 0.9rem;
+    z-index: 2; // Ensure it's above the search icon
+    
+    &:hover {
+      color: $brand-color;
+    }
+  }
+}
+
+
 // Dropdown styles
 .categories-dropdown-container,
 .tags-dropdown-container {
@@ -155,6 +221,31 @@
   flex-wrap: wrap;
 }
 
+// Add this new class for the reset button container
+.reset-filters-container {
+  margin-left: auto; // Push to the right
+  display: flex;
+  align-items: center;
+}
+
+.reset-filters-btn {
+  background-color: lighten($background-color, 5%);
+  color: $grey-color-light;
+  border: 1px solid $grey-color-dark;
+  border-radius: 4px;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  
+  &:hover {
+    background-color: rgba($brand-color, 0.1);
+    color: $brand-color;
+    border-color: $brand-color;
+  }
+}
+
 .active-category-filter,
 .active-tag-filter {
   display: flex;
@@ -210,6 +301,8 @@
 // Archive posts list - Compact style
 .archive-filter-container {
   min-height: 300px;
+  width: 100%;
+  margin-top: $spacing-unit / 2;
   transition: opacity 0.3s ease;
   
   &.loading {
@@ -438,6 +531,27 @@
     align-items: stretch;
     gap: 0.75rem;
   }
+
+  .search-container {
+    order: -1; // Make search appear at the top on mobile
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .search-input-wrapper {
+    width: 100%;
+    
+    .search-input {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  .reset-filters-container {
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 0.5rem;
+  }
   
   .dropdowns-wrapper {
     flex-direction: column;
@@ -562,5 +676,23 @@
         max-width: 180px; 
       }
     }
+  }
+}
+
+@media screen and (min-width: $on-laptop) {
+  .archive-filters {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .search-container {
+    flex: 1;
+    max-width: 300px;
+    margin-right: 1rem;
+  }
+  
+  .dropdowns-wrapper {
+    flex: 1;
+    justify-content: flex-end;
   }
 }

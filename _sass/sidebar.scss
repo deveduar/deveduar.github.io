@@ -78,8 +78,47 @@
 
 // Header y layout responsivo
 .header-flex-container {
-  @include flex-center;
-  justify-content: flex-start;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; // Space between left section and nav icons
+  width: 100%;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+}
+
+// Add styles for mobile nav icons
+.mobile-nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: auto; // Push to the right
+  
+  .nav-icon-link {
+    text-align: center;
+    
+    i {
+      font-size: 0.9rem;
+      color: $grey-color;
+      transition: color 0.2s ease;
+    }
+    
+    &:hover {
+      text-decoration: none;
+      
+      i {
+        color: $brand-color;
+      }
+    }
+    
+    &.active-link {
+      i {
+        color: $brand-color !important;
+      }
+    }
+  }
 }
 
 .menu-toggle-container {
@@ -88,6 +127,12 @@
   z-index: 1100;
   display: flex;
   align-items: center;
+}
+
+// Add desktop-only class
+
+.desktop-only {
+  display: block;
 }
 
 .menu-icon-label {
@@ -109,6 +154,14 @@
 
 .mobile-title {
   display: block;
+  font-size: 1.3rem; // Match desktop title size
+  font-weight: 700; // Match desktop title weight
+  margin-bottom: 0;
+  
+  &:hover {
+    text-decoration: none;
+    color: $brand-color;
+  }
 }
 
 .sidebar-header {
@@ -255,6 +308,11 @@
     display: none;
   }
 
+  .mobile-nav-icons {
+    display: none;
+  }
+
+
   .desktop-title {
     display: block;
   }
@@ -271,6 +329,10 @@
   .site-container {
     padding-top: 0;
   }
+
+  .desktop-only {
+    display: block;
+  }
 }
 
 @media screen and (max-width: $on-laptop) {
@@ -280,6 +342,10 @@
 
   .site-container {
     padding-top: 0;
+  }
+
+  .desktop-only {
+    display: none;
   }
 
   .site-sidebar {
