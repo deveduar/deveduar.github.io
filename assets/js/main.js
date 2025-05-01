@@ -327,3 +327,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+
+// assets/js/archive-filters.js
+import './archive-filters.js';

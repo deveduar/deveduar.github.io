@@ -16,14 +16,90 @@
   </div> <!-- Cierre de .site-content -->
   </div> <!-- Cierre de .site-container -->
 
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/instantclick/3.1.0/instantclick.min.js" data-no-instant></script>
-  <script src="{{ '/assets/js/sidebar.js' | relative_url }}"></script>
+  <!-- <script src="{{ '/assets/js/sidebar-init.js' | relative_url }}"></script> -->
 
-<!-- <script src="{{ '/assets/js/taxonomy-filter.js' | relative_url }}"></script> -->
+  <!-- Module loader script -->
+  <script src="{{ '/assets/js/module-loader.js' | relative_url }}" data-no-instant></script>
 
-<script type="module" src="{{ '/assets/js/archive-filters.js' | relative_url }}"></script>
+  <!-- Load sidebar modules -->
+  <script data-no-instant>
+    // Define modules for sidebar
+    const sidebarModules = [
+      "{{ '/assets/js/modules/categories.js' | relative_url }}",
+      "{{ '/assets/js/modules/scroll.js' | relative_url }}"
+    ];
 
-  <!-- Add this before the closing </body> tag -->
+    // Variable to track initialization
+    let sidebarInitialized = false;
+
+    // Function to initialize sidebar
+    function initSidebar() {
+      console.log('Inicializando sidebar...');
+      window.loadModules(
+        sidebarModules,
+        "{{ '/assets/js/sidebar.js' | relative_url }}",
+        'initSidebar'
+      );
+      sidebarInitialized = true;
+    }
+
+    // Load on initial page load
+    document.addEventListener('DOMContentLoaded', function () {
+      if (!sidebarInitialized) {
+        initSidebar();
+      }
+    });
+
+    // Handle InstantClick events
+    if (typeof InstantClick !== 'undefined') {
+      InstantClick.on('change', function () {
+        console.log('Cambio de página detectado con InstantClick, actualizando sidebar');
+        setTimeout(function () {
+          if (typeof window.handleCategories === 'function') {
+            window.handleCategories();
+          }
+          if (typeof window.handleScroll === 'function') {
+            window.handleScroll();
+          }
+        }, 100);
+      });
+    }
+  </script>
+  <!-- Script para detectar y cargar archive-filters.js -->
+  <script data-no-instant>
+    // Define modules for archive page
+    const archiveModules = [
+      "{{ '/assets/js/modules/filters.js' | relative_url }}",
+      "{{ '/assets/js/modules/sorting.js' | relative_url }}",
+      "{{ '/assets/js/modules/rendering.js' | relative_url }}",
+      "{{ '/assets/js/modules/dropdowns.js' | relative_url }}",
+      "{{ '/assets/js/modules/urlManager.js' | relative_url }}",
+      "{{ '/assets/js/modules/search.js' | relative_url }}"
+    ];
+    
+    // Function to load archive modules
+    function loadArchiveScripts() {
+      window.loadModulesForPage(
+        '.archive-page', 
+        archiveModules,
+        "{{ '/assets/js/archive-filters.js' | relative_url }}",
+        'initArchiveFilters'
+      );
+    }
+    
+    // Load on initial page load
+    document.addEventListener('DOMContentLoaded', loadArchiveScripts);
+    
+    // Load after InstantClick page changes
+    if (typeof InstantClick !== 'undefined') {
+      InstantClick.on('change', function() {
+        setTimeout(loadArchiveScripts, 100);
+      });
+    }
+  </script>
+
   {% if site.github %}
   <script data-no-instant src="{{ "/assets/js/github-calendar.js" | relative_url }}"></script>
   {% endif %}
@@ -31,12 +107,12 @@
   <script src="{{ '/assets/js/pagination-scroll.js' | relative_url }}" data-no-instant></script>
 
   <!-- Add this before the closing body tag -->
-<script src="{{ '/assets/js/post-preview.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/post-preview.js' | relative_url }}"></script>
 
- <!-- Include the post layout script -->
- <script src="{{ '/assets/js/post-layout.js' | relative_url }}"></script>
- <!-- TOC script -->
- <script src="{{ '/assets/js/toc.js' | relative_url }}"></script>
+  <!-- Include the post layout script -->
+  <script src="{{ '/assets/js/post-layout.js' | relative_url }}"></script>
+  <!-- TOC script -->
+  <script src="{{ '/assets/js/toc.js' | relative_url }}"></script>
 
   <!-- Inicialización de InstantClick debe ser lo último -->
   <script src="{{ '/assets/js/instant-click-init.js' | relative_url }}" data-no-instant></script>
