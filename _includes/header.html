@@ -32,7 +32,7 @@
 </header>
 
 <div class="site-container">
-  <aside class="site-sidebar" data-no-instant>
+  <aside class="site-sidebar" id="site-sidebar" >
     <div class="sidebar-inner">
       <div class="sidebar-header desktop-only">
         <a class="site-title desktop-title" rel="author" href="{{ "/" | relative_url }}">
@@ -52,20 +52,15 @@
       </div>
 
       <div class="sidebar-content">
-        <ul class="sidebar-categories">
-          {% for category in site.categories %}
-            <li class="category-item">
-              <div class="category-header">
-                <span class="category-name">{{ category[0] }}</span>
-                <span class="category-toggle"></span>
-              </div>
-              <ul class="category-posts">
-                {% for post in category[1] %}
-                  <li><a href="{{ post.url | relative_url }}" class="sidebar-post-link {% if page.url == post.url %}active-post{% endif %}">{{ post.title }}</a></li>
-                {% endfor %}
-              </ul>
-            </li>
-          {% endfor %}
+        <!-- Loading indicator outside of the dynamic content container -->
+        <div class="sidebar-loading" id="sidebar-loading-indicator">
+          <div class="loading-spinner"></div>
+          <span>Loading categories...</span>
+        </div>
+        
+        <!-- Dynamic sidebar content will be loaded here via JavaScript -->
+        <ul class="sidebar-categories" id="dynamic-sidebar-categories" data-turbolinks-permanent>
+          <!-- Categories will be loaded here -->
         </ul>
       </div>
     </div>

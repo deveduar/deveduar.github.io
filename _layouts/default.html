@@ -16,107 +16,170 @@
   </div> <!-- Cierre de .site-content -->
   </div> <!-- Cierre de .site-container -->
 
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/instantclick/3.1.0/instantclick.min.js" data-no-instant></script>
-  <!-- <script src="{{ '/assets/js/sidebar-init.js' | relative_url }}"></script> -->
-
   <!-- Module loader script -->
-  <script src="{{ '/assets/js/module-loader.js' | relative_url }}" data-no-instant></script>
-
+  <script src="{{ '/assets/js/module-loader.js' | relative_url }}"></script>
+  
   <!-- Load sidebar modules -->
-  <script data-no-instant>
-    // Define modules for sidebar
-    const sidebarModules = [
-      "{{ '/assets/js/modules/categories.js' | relative_url }}",
-      "{{ '/assets/js/modules/scroll.js' | relative_url }}"
-    ];
-
-    // Variable to track initialization
-    let sidebarInitialized = false;
-
-    // Function to initialize sidebar
-    function initSidebar() {
-      console.log('Inicializando sidebar...');
-      window.loadModules(
-        sidebarModules,
-        "{{ '/assets/js/sidebar.js' | relative_url }}",
-        'initSidebar'
-      );
-      sidebarInitialized = true;
-    }
-
-    // Load on initial page load
-    document.addEventListener('DOMContentLoaded', function () {
-      if (!sidebarInitialized) {
-        initSidebar();
-      }
-    });
-
-    // Handle InstantClick events
-    if (typeof InstantClick !== 'undefined') {
-      InstantClick.on('change', function () {
-        console.log('Cambio de página detectado con InstantClick, actualizando sidebar');
-        setTimeout(function () {
-          if (typeof window.handleCategories === 'function') {
-            window.handleCategories();
-          }
-          if (typeof window.handleScroll === 'function') {
-            window.handleScroll();
-          }
-        }, 100);
-      });
-    }
-  </script>
+  <script src="{{ '/assets/js/dynamic-sidebar.js' | relative_url }}"></script>
+  
   <!-- Script para detectar y cargar archive-filters.js -->
-  <script data-no-instant>
+  <!-- Script para detectar y cargar archive-filters.js -->
+<!-- Script para detectar y cargar archive-filters.js -->
+<script>
+  // Función para inicializar los módulos de archivo
+  function initializeArchiveModules() {
     // Define modules for archive page
-    const archiveModules = [
-      "{{ '/assets/js/modules/filters.js' | relative_url }}",
-      "{{ '/assets/js/modules/sorting.js' | relative_url }}",
-      "{{ '/assets/js/modules/rendering.js' | relative_url }}",
-      "{{ '/assets/js/modules/dropdowns.js' | relative_url }}",
-      "{{ '/assets/js/modules/urlManager.js' | relative_url }}",
-      "{{ '/assets/js/modules/search.js' | relative_url }}"
-    ];
+    if (typeof window.archiveModules === 'undefined') {
+      window.archiveModules = [
+        "{{ '/assets/js/modules/filters.js' | relative_url }}",
+        "{{ '/assets/js/modules/sorting.js' | relative_url }}",
+        "{{ '/assets/js/modules/rendering.js' | relative_url }}",
+        "{{ '/assets/js/modules/dropdowns.js' | relative_url }}",
+        "{{ '/assets/js/modules/urlManager.js' | relative_url }}",
+        "{{ '/assets/js/modules/search.js' | relative_url }}"
+      ];
+    }
     
     // Function to load archive modules
-    function loadArchiveScripts() {
-      window.loadModulesForPage(
-        '.archive-page', 
-        archiveModules,
-        "{{ '/assets/js/archive-filters.js' | relative_url }}",
-        'initArchiveFilters'
-      );
+    if (typeof window.loadArchiveScripts === 'function') {
+      window.loadArchiveScripts();
+    } else {
+      window.loadArchiveScripts = function() {
+        window.loadModulesForPage(
+          '.archive-page', 
+          window.archiveModules,
+          "{{ '/assets/js/archive-filters.js' | relative_url }}",
+          'initArchiveFilters',
+          function() {
+            // Callback después de cargar los módulos
+            if (typeof Dropdowns !== 'undefined' && Dropdowns.reinitializeAllDropdowns) {
+              console.log('Reinicializando dropdowns después de cargar módulos');
+              Dropdowns.reinitializeAllDropdowns();
+            }
+          }
+        );
+      };
+      window.loadArchiveScripts();
     }
-    
-    // Load on initial page load
-    document.addEventListener('DOMContentLoaded', loadArchiveScripts);
-    
-    // Load after InstantClick page changes
-    if (typeof InstantClick !== 'undefined') {
-      InstantClick.on('change', function() {
-        setTimeout(loadArchiveScripts, 100);
-      });
-    }
-  </script>
+  }
 
+  // Track if we've already initialized on this page load
+  window.archiveInitialized = false;
+  
+  // Función para limpiar los filtros cuando se sale de la página de archivo
+  function resetArchiveFilters() {
+    // Limpiar los parámetros de URL relacionados con filtros
+    if (window.history && window.history.replaceState) {
+      const url = new URL(window.location.href);
+      url.searchParams.delete('category');
+      url.searchParams.delete('tag');
+      url.searchParams.delete('sort');
+      url.searchParams.delete('direction');
+      url.searchParams.delete('search');
+      window.history.replaceState({}, '', url.toString());
+    }
+    
+    // Reiniciar variables globales de filtros si existen
+    if (typeof Filters !== 'undefined') {
+      Filters.resetFilters();
+    }
+    
+    if (typeof Search !== 'undefined') {
+      Search.setSearchQuery('');
+    }
+    
+    if (typeof Sorting !== 'undefined') {
+      Sorting.setSortMethod('date', 'desc');
+    }
+    
+    console.log('Filtros de archivo reiniciados');
+  }
+
+  // Soporte para Turbo (prioridad)
+  if (typeof Turbo !== 'undefined' || 'Turbo' in window) {
+    // Cuando se carga una nueva página
+    document.addEventListener('turbo:load', function() {
+      console.log('Turbo load en default.html');
+      window.archiveInitialized = false; // Reset on each page load
+      initializeArchiveModules();
+    });
+    
+    // Antes de visitar una nueva página, limpiar filtros si estamos saliendo de archive
+    document.addEventListener('turbo:before-visit', function() {
+      if (document.querySelector('.archive-page')) {
+        console.log('Saliendo de la página de archivo, reiniciando filtros');
+        resetArchiveFilters();
+      }
+    });
+    
+    // También reinicializar en turbo:render para asegurar que los eventos funcionan
+    document.addEventListener('turbo:render', function() {
+      // Verificar si estamos en la página de archivo
+      if (document.querySelector('.archive-page')) {
+        console.log('Turbo render en default.html - página de archivo');
+        
+        // Pequeño retraso para asegurar que el DOM está listo
+        setTimeout(function() {
+          if (!window.archiveInitialized) {
+            window.archiveInitialized = true;
+            console.log('Primera inicialización después de turbo:render');
+            
+            if (typeof Dropdowns !== 'undefined' && Dropdowns.reinitializeAllDropdowns) {
+              Dropdowns.reinitializeAllDropdowns();
+            }
+            
+            // Ensure filters are initialized
+            if (typeof window.initArchiveFilters === 'function') {
+              window.initArchiveFilters();
+            }
+          }
+        }, 200);
+      }
+    });
+  } 
+  // Compatibilidad con Turbolinks
+  else if (typeof Turbolinks !== 'undefined') {
+    document.addEventListener('turbolinks:load', initializeArchiveModules);
+    
+    // Antes de visitar una nueva página, limpiar filtros si estamos saliendo de archive
+    document.addEventListener('turbolinks:before-visit', function() {
+      if (document.querySelector('.archive-page')) {
+        console.log('Saliendo de la página de archivo, reiniciando filtros');
+        resetArchiveFilters();
+      }
+    });
+  }
+  // Fallback para navegación normal
+  else {
+    document.addEventListener('DOMContentLoaded', initializeArchiveModules);
+    
+    // Para navegación normal, usar beforeunload
+    window.addEventListener('beforeunload', function() {
+      if (document.querySelector('.archive-page')) {
+        console.log('Saliendo de la página de archivo, reiniciando filtros');
+        resetArchiveFilters();
+      }
+    });
+  }
+</script>
+  
   {% if site.github %}
-  <script data-no-instant src="{{ "/assets/js/github-calendar.js" | relative_url }}"></script>
+  <!-- <script src="{{ "/assets/js/github-calendar.js" | relative_url }}"></script> -->
   {% endif %}
+  
   <!-- Script para manejar el scroll de paginación -->
-  <script src="{{ '/assets/js/pagination-scroll.js' | relative_url }}" data-no-instant></script>
-
+  <!-- <script src="{{ '/assets/js/pagination-scroll.js' | relative_url }}"></script> -->
+  
   <!-- Add this before the closing body tag -->
-  <script src="{{ '/assets/js/post-preview.js' | relative_url }}"></script>
-
+  <!-- <script src="{{ '/assets/js/post-preview.js' | relative_url }}"></script> -->
+  
   <!-- Include the post layout script -->
-  <script src="{{ '/assets/js/post-layout.js' | relative_url }}"></script>
+  <!-- <script src="{{ '/assets/js/post-layout.js' | relative_url }}"></script> -->
+  
   <!-- TOC script -->
-  <script src="{{ '/assets/js/toc.js' | relative_url }}"></script>
-
-  <!-- Inicialización de InstantClick debe ser lo último -->
-  <script src="{{ '/assets/js/instant-click-init.js' | relative_url }}" data-no-instant></script>
-
+  <!-- <script src="{{ '/assets/js/toc.js' | relative_url }}"></script> -->
+  
+  <!-- Turbolinks initialization - must be the last script -->
+  <!-- <script src="{{ '/assets/js/turbolinks-init.js' | relative_url }}"></script> -->
 </body>
-
 </html>

@@ -83,25 +83,50 @@ const initArchiveFilters = () => {
     console.log('No se encontraron elementos para la búsqueda');
   }
 
-  // Check URL parameters for initial filters and sort method
   const params = new URLSearchParams(window.location.search);
-  Filters.setCategoryFilter(params.get('category') || 'all');
-  Filters.setTagFilter(params.get('tag') || 'all');
-  Sorting.setSortMethod(params.get('sort') || 'date', params.get('direction') || 'desc');
-
-  // Set initial search query from URL if present
-  if (params.has('search')) {
-    const searchQuery = params.get('search');
-    Search.setSearchQuery(searchQuery);
+  
+  // Si no hay parámetros en la URL, asegurarse de que los filtros estén en su estado inicial
+  if (!params.has('category') && !params.has('tag') && !params.has('sort') && !params.has('search')) {
+    console.log('No hay parámetros de filtro en la URL, reiniciando filtros');
+    Filters.resetFilters();
+    Sorting.setSortMethod('date', 'desc');
+    Search.setSearchQuery('');
+    
+    // Limpiar el campo de búsqueda si existe
     if (searchInput) {
-      searchInput.value = searchQuery;
-      clearSearchBtn.style.display = searchQuery ? 'block' : 'none';
+      searchInput.value = '';
+      if (clearSearchBtn) clearSearchBtn.style.display = 'none';
+    }
+  } else {
+    // Si hay parámetros, aplicarlos
+    Filters.setCategoryFilter(params.get('category') || 'all');
+    Filters.setTagFilter(params.get('tag') || 'all');
+    Sorting.setSortMethod(params.get('sort') || 'date', params.get('direction') || 'desc');
+    
+    // Set initial search query from URL if present
+    if (params.has('search')) {
+      const searchQuery = params.get('search');
+      Search.setSearchQuery(searchQuery);
+      if (searchInput) {
+        searchInput.value = searchQuery;
+        if (clearSearchBtn) clearSearchBtn.style.display = searchQuery ? 'block' : 'none';
+      }
+    } else {
+      // Si no hay parámetro de búsqueda, limpiar
+      Search.setSearchQuery('');
+      if (searchInput) {
+        searchInput.value = '';
+        if (clearSearchBtn) clearSearchBtn.style.display = 'none';
+      }
     }
   }
+
   
 
   // Apply filters on page load
   setTimeout(() => applyFilters(), 50);
+
+
 
   function applyFilters() {
     console.log('Aplicando filtros...');
@@ -351,13 +376,45 @@ const initArchiveFilters = () => {
     applyFilters();
   });
 
-  // Soporte para InstantClick
-  if (typeof InstantClick !== 'undefined') {
-    InstantClick.on('change', () => {
-      console.log('Cambio de página detectado en archive-filters.js');
-      // No hacer nada más aquí, la reinicialización se manejará en default.html
+  
+
+  if (typeof Turbo !== 'undefined') {
+
+    // document.addEventListener('turbo:load', () => {
+    //   console.log('Cambio de página detectado en archive-filters.js (Turbo)');
+      
+    //   // Verificar si estamos en la página de archivo
+    //   const archivePage = document.querySelector('.archive-page');
+    //   if (archivePage) {
+    //     console.log('Reinicializando filtros de archivo después de navegación Turbo');
+        
+    //     // Reinicializar dropdowns explícitamente
+    //     Dropdowns.reinitializeAllDropdowns();
+        
+    //     // Pequeño retraso para asegurar que todo está listo
+    //     setTimeout(() => {
+    //       initArchiveFilters();
+    //     }, 50);
+    //   }
+    // });
+    
+    // También manejar el evento render para asegurar que los dropdowns funcionan
+    document.addEventListener('turbo:render', () => {
+      console.log('Turbo render en archive-filters.js');
+      
+      // Verificar si estamos en la página de archivo
+      const archivePage = document.querySelector('.archive-page');
+      if (archivePage) {
+        // Reinicializar dropdowns explícitamente con un retraso mayor
+        setTimeout(() => {
+          console.log('Reinicializando dropdowns después de turbo:render');
+          if (typeof Dropdowns !== 'undefined' && Dropdowns.reinitializeAllDropdowns) {
+            Dropdowns.reinitializeAllDropdowns();
+          }
+        }, 150); // Increased delay for better reliability
+      }
     });
-  }
+  } 
 };
 
 // Inicializar cuando el DOM esté listo
