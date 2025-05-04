@@ -1,0 +1,26 @@
+---
+title: Qué debes saber sobre bitbucket en equipos ágiles
+date: 2033-11-05
+categories:
+  - React
+tags:
+  - android
+  - php
+---
+
+# Qué debes saber sobre bitbucket en equipos ágiles
+
+## Introducción
+
+Con android, puedes resolver problemas complejos y crear soluciones escalables.
+
+## Código de ejemplo
+
+```python
+def factorial(n): return 1 if n == 0 else n * factorial(n-1)
+print(factorial(5))
+```
+
+## Conclusión
+
+Aprender android es una inversión útil para tu carrera como desarrollador.

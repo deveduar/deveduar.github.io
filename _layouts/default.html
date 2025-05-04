@@ -95,60 +95,83 @@
     console.log('Filtros de archivo reiniciados');
   }
 
-  // Soporte para Turbo (prioridad)
-  if (typeof Turbo !== 'undefined' || 'Turbo' in window) {
-    // Cuando se carga una nueva página
-    document.addEventListener('turbo:load', function() {
-      console.log('Turbo load en default.html');
-      window.archiveInitialized = false; // Reset on each page load
+// Soporte para Turbo (prioridad)
+if (typeof Turbo !== 'undefined' || 'Turbo' in window) {
+  // Cuando se carga una nueva página
+  document.addEventListener('turbo:load', function() {
+    console.log('Turbo load en default.html');
+    window.archiveInitialized = false; // Reset on each page load
+    
+    // Forzar una reinicialización completa
+    window.archiveModules = undefined;
+    
+    // Pequeño retraso para asegurar que el DOM está listo
+    setTimeout(function() {
       initializeArchiveModules();
-    });
+    }, 100);
+  });
+  
+  // Antes de visitar una nueva página, limpiar filtros si estamos saliendo de archive
+  document.addEventListener('turbo:before-visit', function() {
+    if (document.querySelector('.archive-page')) {
+      console.log('Saliendo de la página de archivo, reiniciando filtros');
+      resetArchiveFilters();
+    }
+  });
+  
+// También reinicializar en turbo:render para asegurar que los eventos funcionan
+document.addEventListener('turbo:render', function() {
+  // Verificar si estamos en la página de archivo
+  if (document.querySelector('.archive-page')) {
+    console.log('Turbo render en default.html - página de archivo');
     
-    // Antes de visitar una nueva página, limpiar filtros si estamos saliendo de archive
-    document.addEventListener('turbo:before-visit', function() {
-      if (document.querySelector('.archive-page')) {
-        console.log('Saliendo de la página de archivo, reiniciando filtros');
-        resetArchiveFilters();
-      }
-    });
-    
-    // También reinicializar en turbo:render para asegurar que los eventos funcionan
-    document.addEventListener('turbo:render', function() {
-      // Verificar si estamos en la página de archivo
-      if (document.querySelector('.archive-page')) {
-        console.log('Turbo render en default.html - página de archivo');
+    // Pequeño retraso para asegurar que el DOM está listo
+    setTimeout(function() {
+      if (!window.archiveInitialized) {
+        window.archiveInitialized = true;
+        console.log('Primera inicialización después de turbo:render');
         
-        // Pequeño retraso para asegurar que el DOM está listo
-        setTimeout(function() {
-          if (!window.archiveInitialized) {
-            window.archiveInitialized = true;
-            console.log('Primera inicialización después de turbo:render');
-            
-            if (typeof Dropdowns !== 'undefined' && Dropdowns.reinitializeAllDropdowns) {
-              Dropdowns.reinitializeAllDropdowns();
-            }
-            
-            // Ensure filters are initialized
-            if (typeof window.initArchiveFilters === 'function') {
-              window.initArchiveFilters();
-            }
-          }
-        }, 200);
+        // Reinicializar los botones de ordenación
+        if (typeof window.initArchiveFilters === 'function') {
+          window.initArchiveFilters();
+        }
+        
+        // Reinicializar dropdowns explícitamente
+        if (typeof Dropdowns !== 'undefined' && Dropdowns.reinitializeAllDropdowns) {
+          Dropdowns.reinitializeAllDropdowns();
+        }
+        
+// Aplicar filtros iniciales y actualizar botones activos
+setTimeout(function() {
+  const archiveFilters = document.querySelector('.archive-filter-container');
+  if (archiveFilters) {
+    // Obtener el estado actual
+    if (typeof Sorting !== 'undefined') {
+      const { currentSortMethod, currentSortDirection } = Sorting.getCurrentSort();
+      const sortButtons = document.querySelectorAll('.sort-button');
+      
+      // Primero, quitar la clase active de todos los botones
+      sortButtons.forEach(btn => {
+        btn.classList.remove('active');
+      });
+      
+      // Luego, actualizar solo el botón activo
+      if (sortButtons.length > 0) {
+        Sorting.updateActiveSortButton(sortButtons, currentSortMethod, currentSortDirection);
       }
-    });
-  } 
-  // Compatibilidad con Turbolinks
-  else if (typeof Turbolinks !== 'undefined') {
-    document.addEventListener('turbolinks:load', initializeArchiveModules);
+    }
     
-    // Antes de visitar una nueva página, limpiar filtros si estamos saliendo de archive
-    document.addEventListener('turbolinks:before-visit', function() {
-      if (document.querySelector('.archive-page')) {
-        console.log('Saliendo de la página de archivo, reiniciando filtros');
-        resetArchiveFilters();
-      }
-    });
+    // Aplicar filtros
+    if (typeof window.applyFilters === 'function') {
+      window.applyFilters();
+    }
   }
+}, 150);
+      }
+    }, 200);
+  }
+});
+}
   // Fallback para navegación normal
   else {
     document.addEventListener('DOMContentLoaded', initializeArchiveModules);

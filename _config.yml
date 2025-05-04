@@ -41,7 +41,7 @@ plugins:
 feed:
   excerpt_only: true
   
-paginate: 5
+paginate: 10
 paginate_path: "/page:num/"
 permalink: /blog/:year/:month/:day/:title/
 

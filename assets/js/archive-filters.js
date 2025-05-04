@@ -298,26 +298,58 @@ const initArchiveFilters = () => {
     });
   });
 
-  sortButtons.forEach(button => {
-    button.addEventListener('click', (e) => {
-      e.preventDefault();
+// Modificar la sección de los botones de ordenación
+sortButtons.forEach(button => {
+  // Eliminar eventos anteriores para evitar duplicados
+  const newButton = button.cloneNode(true);
+  
+  if (button.parentNode) {
+    button.parentNode.replaceChild(newButton, button);
+  }
+  
+  newButton.addEventListener('click', function(e) {
+    e.preventDefault();
+    console.log('Click en botón de ordenación');
+    
+    // Get sort method from data attribute
+    const sortMethod = this.dataset.sort;
+    const { currentSortMethod, currentSortDirection } = Sorting.getCurrentSort();
+    
+    console.log(`Botón clickeado: ${sortMethod}, Estado actual: ${currentSortMethod}, ${currentSortDirection}`);
+    
+    // Remover clase active de TODOS los botones de ordenación
+    document.querySelectorAll('.sort-button').forEach(btn => {
+      btn.classList.remove('active');
+    });
+    
+    // Añadir clase active SOLO al botón actual
+    this.classList.add('active');
+    
+    // Si clickeamos el mismo método de ordenación, invertir la dirección
+    if (sortMethod === currentSortMethod) {
+      const newDirection = currentSortDirection === 'desc' ? 'asc' : 'desc';
+      console.log(`Cambiando dirección a: ${newDirection}`);
       
-      // Get sort method from data attribute
-      const sortMethod = button.dataset.sort;
-      const { currentSortMethod, currentSortDirection } = Sorting.getCurrentSort();
+      // Actualizar el atributo data-direction del botón
+      this.dataset.direction = newDirection;
       
-      // If clicking the same sort method, toggle direction
-      if (sortMethod === currentSortMethod) {
-        const newDirection = currentSortDirection === 'desc' ? 'asc' : 'desc';
-        Sorting.setSortMethod(sortMethod, newDirection);
-      } else {
-        // New sort method, use the button's default direction
-        Sorting.setSortMethod(sortMethod, button.dataset.direction);
+      // Actualizar el ícono si existe
+      const icon = this.querySelector('i');
+      if (icon) {
+        icon.className = newDirection === 'asc' ? 'fas fa-arrow-up' : 'fas fa-arrow-down';
       }
       
-      applyFilters();
-    });
+      Sorting.setSortMethod(sortMethod, newDirection);
+    } else {
+      // Nuevo método de ordenación, usar la dirección predeterminada del botón
+      const direction = this.dataset.direction || 'desc';
+      console.log(`Cambiando método a: ${sortMethod}, dirección: ${direction}`);
+      Sorting.setSortMethod(sortMethod, direction);
+    }
+    
+    applyFilters();
   });
+});
 
   // Clear filter buttons
   clearCategoryFilter?.addEventListener('click', (e) => {
