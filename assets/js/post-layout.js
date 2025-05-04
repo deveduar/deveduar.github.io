@@ -71,27 +71,51 @@ function setupPostTitleAndMetadata() {
   
 // Run on initial load
 document.addEventListener('DOMContentLoaded', function() {
-  setupPostTitleAndMetadata();
-});
+    console.log('DOM loaded - initializing post layout');
+    setupPostTitleAndMetadata();
+  });
 
-// Make compatible with InstantClick
-if (typeof InstantClick !== 'undefined') {
-    InstantClick.on('change', function () {
+// Make compatible with Turbo
+if (typeof Turbo !== 'undefined' || 'Turbo' in window) {
+    document.addEventListener('turbo:load', function() {
+        console.log('Turbo load - initializing post layout');
         // Hide page-title div immediately to prevent flicker
         const pageTitleElement = document.getElementById('page-title');
         if (pageTitleElement) {
             pageTitleElement.style.display = 'none';
         }
         
-        // Use requestAnimationFrame to ensure the DOM is ready
-        requestAnimationFrame(function() {
-            setupPostTitleAndMetadata();
-            // Initialize TOC after title is setup
-            if (typeof initTableOfContents === 'function') {
-                initTableOfContents();
-            }
-        });
+        setupPostTitleAndMetadata();
     });
     
-    // No need for duplicate handlers in 'receive' if 'change' is handling it
+    document.addEventListener('turbo:render', function() {
+        console.log('Turbo render - initializing post layout');
+        // Hide page-title div immediately to prevent flicker
+        const pageTitleElement = document.getElementById('page-title');
+        if (pageTitleElement) {
+            pageTitleElement.style.display = 'none';
+        }
+        
+        // Use setTimeout to ensure the DOM is fully updated
+        setTimeout(function() {
+            setupPostTitleAndMetadata();
+            // Initialize TOC after title is setup
+            if (typeof initTableOfContents === 'function' || 
+                (typeof window !== 'undefined' && window.TableOfContents && typeof window.TableOfContents.init === 'function')) {
+                console.log('Initializing TOC after post layout setup');
+                if (typeof initTableOfContents === 'function') {
+                    initTableOfContents();
+                } else if (window.TableOfContents && typeof window.TableOfContents.init === 'function') {
+                    window.TableOfContents.init();
+                }
+            }
+        }, 100); // Small delay to ensure DOM is fully updated
+    });
+}
+
+// Export for module usage
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = { setupPostTitleAndMetadata };
+} else if (typeof window !== 'undefined') {
+    window.PostLayout = { setup: setupPostTitleAndMetadata };
 }

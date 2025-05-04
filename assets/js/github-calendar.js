@@ -172,11 +172,21 @@ function initGitHubCalendar() {
 // Inicializar en DOMContentLoaded para cargas normales de página
 document.addEventListener('DOMContentLoaded', initGitHubCalendar);
 
-// Registrar con InstantClick para inicializar cuando cambie el contenido
-if (typeof InstantClick !== 'undefined') {
-  InstantClick.on('change', function() {
-    console.log('InstantClick change detected - initializing GitHub calendar');
-    // Pequeño retraso para asegurar que el DOM esté actualizado
-    setTimeout(initGitHubCalendar, 50);
+// Soporte para Turbo
+if (typeof Turbo !== 'undefined' || 'Turbo' in window) {
+  document.addEventListener('turbo:load', function() {
+    console.log('Turbo load - initializing GitHub calendar');
+    initGitHubCalendar();
   });
+  
+  document.addEventListener('turbo:render', function() {
+    console.log('Turbo render - initializing GitHub calendar');
+    // Pequeño retraso para asegurar que el DOM esté actualizado
+    setTimeout(initGitHubCalendar, 100);
+  });
+}
+
+// Exportar para uso como módulo
+if (typeof window !== 'undefined') {
+  window.GitHubCalendar = { init: initGitHubCalendar };
 }

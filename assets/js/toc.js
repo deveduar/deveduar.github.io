@@ -261,6 +261,7 @@ function initTableOfContents() {
   
   // Run on initial page load
   document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM loaded - initializing TOC');
     initTableOfContents();
   });
   
@@ -269,4 +270,34 @@ function initTableOfContents() {
     InstantClick.on('change', function() {
       initTableOfContents();
     });
+  }
+  
+  // Make compatible with Turbo
+  if (typeof Turbo !== 'undefined' || 'Turbo' in window) {
+    document.addEventListener('turbo:load', function() {
+      console.log('Turbo load - initializing TOC');
+      initTableOfContents();
+    });
+    
+    document.addEventListener('turbo:render', function() {
+      console.log('Turbo render - initializing TOC');
+      setTimeout(function() {
+        initTableOfContents();
+      }, 100); // Small delay to ensure DOM is fully updated
+    });
+  }
+  
+  // Make compatible with Turbolinks
+  if (typeof Turbolinks !== 'undefined') {
+    document.addEventListener('turbolinks:load', function() {
+      console.log('Turbolinks load - initializing TOC');
+      initTableOfContents();
+    });
+  }
+  
+  // Export for module usage
+  if (typeof module !== 'undefined' && module.exports) {
+    module.exports = { initTableOfContents };
+  } else if (typeof window !== 'undefined') {
+    window.TableOfContents = { init: initTableOfContents };
   }
