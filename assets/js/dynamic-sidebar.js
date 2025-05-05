@@ -280,29 +280,51 @@ function initSidebarComponents() {
 }
 
 // Función para generar HTML de la sidebar a partir de datos JSON
-// Función para generar HTML de la sidebar a partir de datos JSON
 function generateSidebarHTML(data) {
   let html = '';
   
-  // Iterar sobre categorías
+  // Crear un mapa para organizar los posts por categoría
+  const categoriesMap = {};
+  
+  // Inicializar categorías vacías
   data.categories.forEach(category => {
-    html += `
-      <div class="category-item" data-category="${category.name}">
-        <div class="category-header">
-          <span class="category-icon">${category.icon || '📁'}</span>
-          <span class="category-title category-name">${category.name}</span>
-          <span class="category-toggle"></span>
-        </div>
-        <div class="category-posts" data-turbo-permanent>`;
-    
-    // Iterar sobre posts en cada categoría
-    category.posts.forEach(post => {
-      html += `<li><a href="${post.url}" class="sidebar-post-link" data-turbo-action="replace" data-turbo-preserve-scroll="true">${post.title}</a></li>`;
+    categoriesMap[category.name] = {
+      name: category.name,
+      posts: []
+    };
+  });
+  
+  // Asignar posts a sus categorías
+  data.posts.forEach(post => {
+    post.categories.forEach(categoryName => {
+      if (categoriesMap[categoryName]) {
+        categoriesMap[categoryName].posts.push(post);
+      }
     });
-    
-    html += `
-        </div>
-      </div>`;
+  });
+  
+  // Generar HTML para cada categoría
+  Object.values(categoriesMap).forEach(category => {
+    // Solo mostrar categorías que tengan posts
+    if (category.posts.length > 0) {
+      html += `
+        <div class="category-item" data-category="${category.name}">
+          <div class="category-header">
+            
+            <span class="category-title category-name">${category.name}</span>
+            <span class="category-toggle"></span>
+          </div>
+          <div class="category-posts" data-turbo-permanent>`;
+      
+      // Iterar sobre posts en cada categoría
+      category.posts.forEach(post => {
+        html += `<li><a href="${post.url}" class="sidebar-post-link" data-turbo-action="replace" data-turbo-preserve-scroll="true">${post.title}</a></li>`;
+      });
+      
+      html += `
+          </div>
+        </div>`;
+    }
   });
   
   return html;

@@ -22,8 +22,7 @@
   <!-- Load sidebar modules -->
   <script src="{{ '/assets/js/dynamic-sidebar.js' | relative_url }}"></script>
   
-  <!-- Script para detectar y cargar archive-filters.js -->
-  <!-- Script para detectar y cargar archive-filters.js -->
+
 <!-- Script para detectar y cargar archive-filters.js -->
 <script>
   // Función para inicializar los módulos de archivo
@@ -141,32 +140,32 @@ document.addEventListener('turbo:render', function() {
           Dropdowns.reinitializeAllDropdowns();
         }
         
-// Aplicar filtros iniciales y actualizar botones activos
-setTimeout(function() {
-  const archiveFilters = document.querySelector('.archive-filter-container');
-  if (archiveFilters) {
-    // Obtener el estado actual
-    if (typeof Sorting !== 'undefined') {
-      const { currentSortMethod, currentSortDirection } = Sorting.getCurrentSort();
-      const sortButtons = document.querySelectorAll('.sort-button');
-      
-      // Primero, quitar la clase active de todos los botones
-      sortButtons.forEach(btn => {
-        btn.classList.remove('active');
-      });
-      
-      // Luego, actualizar solo el botón activo
-      if (sortButtons.length > 0) {
-        Sorting.updateActiveSortButton(sortButtons, currentSortMethod, currentSortDirection);
-      }
-    }
-    
-    // Aplicar filtros
-    if (typeof window.applyFilters === 'function') {
-      window.applyFilters();
-    }
-  }
-}, 150);
+        // Aplicar filtros iniciales y actualizar botones activos
+        setTimeout(function() {
+          const archiveFilters = document.querySelector('.archive-filter-container');
+          if (archiveFilters) {
+            // Obtener el estado actual
+            if (typeof Sorting !== 'undefined') {
+              const { currentSortMethod, currentSortDirection } = Sorting.getCurrentSort();
+              const sortButtons = document.querySelectorAll('.sort-button');
+              
+              // Primero, quitar la clase active de todos los botones
+              sortButtons.forEach(btn => {
+                btn.classList.remove('active');
+              });
+              
+              // Luego, actualizar solo el botón activo
+              if (sortButtons.length > 0) {
+                Sorting.updateActiveSortButton(sortButtons, currentSortMethod, currentSortDirection);
+              }
+            }
+            
+            // Aplicar filtros
+            if (typeof window.applyFilters === 'function') {
+              window.applyFilters();
+            }
+          }
+        }, 150);
       }
     }, 200);
   }

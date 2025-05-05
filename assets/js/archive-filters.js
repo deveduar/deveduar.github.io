@@ -408,45 +408,6 @@ sortButtons.forEach(button => {
     applyFilters();
   });
 
-  
-
-  if (typeof Turbo !== 'undefined') {
-
-    // document.addEventListener('turbo:load', () => {
-    //   console.log('Cambio de página detectado en archive-filters.js (Turbo)');
-      
-    //   // Verificar si estamos en la página de archivo
-    //   const archivePage = document.querySelector('.archive-page');
-    //   if (archivePage) {
-    //     console.log('Reinicializando filtros de archivo después de navegación Turbo');
-        
-    //     // Reinicializar dropdowns explícitamente
-    //     Dropdowns.reinitializeAllDropdowns();
-        
-    //     // Pequeño retraso para asegurar que todo está listo
-    //     setTimeout(() => {
-    //       initArchiveFilters();
-    //     }, 50);
-    //   }
-    // });
-    
-    // También manejar el evento render para asegurar que los dropdowns funcionan
-    document.addEventListener('turbo:render', () => {
-      console.log('Turbo render en archive-filters.js');
-      
-      // Verificar si estamos en la página de archivo
-      const archivePage = document.querySelector('.archive-page');
-      if (archivePage) {
-        // Reinicializar dropdowns explícitamente con un retraso mayor
-        setTimeout(() => {
-          console.log('Reinicializando dropdowns después de turbo:render');
-          if (typeof Dropdowns !== 'undefined' && Dropdowns.reinitializeAllDropdowns) {
-            Dropdowns.reinitializeAllDropdowns();
-          }
-        }, 150); // Increased delay for better reliability
-      }
-    });
-  } 
 };
 
 // Inicializar cuando el DOM esté listo
