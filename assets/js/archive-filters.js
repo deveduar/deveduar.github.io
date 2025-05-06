@@ -6,6 +6,7 @@ import { URLManager } from './modules/urlManager.js';
 import { Search } from './modules/search.js';
 
 // Función para inicializar los filtros
+// Función para inicializar los filtros
 const initArchiveFilters = () => {
   console.log('Inicializando filtros de archivo');
   const archivePage = document.querySelector('.archive-page');
@@ -21,8 +22,8 @@ const initArchiveFilters = () => {
   if (isFirstVisit) resetAllFilters(DOM);
   else applyURLFilters(DOM);
 
-  // Aplicar filtros iniciales
-  setTimeout(() => applyFilters(DOM), 50);
+  // Aplicar filtros iniciales - aumentamos el tiempo para asegurar que todo esté listo
+  setTimeout(() => applyFilters(DOM), 100);
 };
 
 function getDOMElements() {
@@ -58,7 +59,22 @@ function getDOMElements() {
 
 function isFirstLoad() {
   const params = new URLSearchParams(window.location.search);
-  return !params.has('category') && !params.has('tag') && !params.has('sort') && !params.has('search');
+  
+  // Si hay parámetros en la URL, no es primera carga
+  if (params.has('category') || params.has('tag') || params.has('sort') || params.has('search') || params.has('direction')) {
+    return false;
+  }
+  
+  // Si es una recarga de página, tampoco es primera carga
+  if (window.performance) {
+    const navEntries = window.performance.getEntriesByType('navigation');
+    if (navEntries.length > 0 && navEntries[0].type === 'reload') {
+      console.log('Recarga detectada en isFirstLoad, aplicando filtros de URL');
+      return false;
+    }
+  }
+  
+  return true;
 }
 
 function initializeDropdowns({ categoryDropdownButton, categoryDropdownContent, selectedCategorySpan, tagDropdownButton, tagDropdownContent, selectedTagSpan }) {
@@ -117,13 +133,22 @@ function resetAllFilters({ searchInput, clearSearchBtn }) {
   }
 }
 
-function applyURLFilters({ searchInput, clearSearchBtn }) {
+function applyURLFilters({ searchInput, clearSearchBtn, sortButtons }) {
   const params = new URLSearchParams(window.location.search);
   
   // Si hay parámetros, aplicarlos
   Filters.setCategoryFilter(params.get('category') || 'all');
   Filters.setTagFilter(params.get('tag') || 'all');
-  Sorting.setSortMethod(params.get('sort') || 'date', params.get('direction') || 'desc');
+  
+  // Mejorar la aplicación de parámetros de ordenación
+  const sortMethod = params.get('sort') || 'date';
+  const sortDirection = params.get('direction') || 'desc';
+  
+  console.log(`Aplicando ordenación desde URL: método=${sortMethod}, dirección=${sortDirection}`);
+  Sorting.setSortMethod(sortMethod, sortDirection);
+  
+  // Actualizar visualmente los botones de ordenación - FORZAR ACTUALIZACIÓN
+  updateSortButtons(sortButtons, sortMethod, sortDirection);
   
   // Set initial search query from URL if present
   if (params.has('search')) {
@@ -140,6 +165,38 @@ function applyURLFilters({ searchInput, clearSearchBtn }) {
       searchInput.value = '';
       if (clearSearchBtn) clearSearchBtn.style.display = 'none';
     }
+  }
+}
+
+// Nueva función para actualizar los botones de ordenación
+function updateSortButtons(sortButtons, sortMethod, sortDirection) {
+  if (!sortButtons || sortButtons.length === 0) {
+    console.log('No hay botones de ordenación para actualizar');
+    return;
+  }
+  
+  console.log(`Actualizando ${sortButtons.length} botones de ordenación: método=${sortMethod}, dirección=${sortDirection}`);
+  
+  // Primero, quitar la clase active de todos los botones
+  sortButtons.forEach(btn => {
+    btn.classList.remove('active');
+  });
+  
+  // Luego, encontrar y activar el botón correspondiente al método actual
+  const activeButton = Array.from(sortButtons).find(btn => btn.dataset.sort === sortMethod);
+  if (activeButton) {
+    activeButton.classList.add('active');
+    activeButton.dataset.direction = sortDirection;
+    
+    // Actualizar el ícono si existe
+    const icon = activeButton.querySelector('i');
+    if (icon) {
+      icon.className = sortDirection === 'asc' ? 'fas fa-arrow-up' : 'fas fa-arrow-down';
+    }
+    
+    console.log(`Botón de ordenación activado: ${sortMethod}, dirección: ${sortDirection}`);
+  } else {
+    console.log(`No se encontró botón para el método de ordenación: ${sortMethod}`);
   }
 }
 
@@ -308,6 +365,9 @@ function applyFilters(DOM) {
     const { currentSortMethod, currentSortDirection } = Sorting.getCurrentSort();
     const currentSearchQuery = Search.getCurrentSearchQuery();
 
+    // Forzar actualización de los botones de ordenación en cada aplicación de filtros
+    updateSortButtons(DOM.sortButtons, currentSortMethod, currentSortDirection);
+
     // Guardar el contenido de los posts adicionales antes de aplicar filtros
     const additionalPostsContainer = DOM.additionalPostsContainer;
     let additionalPostsBackup = null;
@@ -380,6 +440,7 @@ function applyFilters(DOM) {
     }, 100);
   }, 10);
 }
+
 
 // Función para cargar posts adicionales
 window.loadAdditionalPosts = function() {

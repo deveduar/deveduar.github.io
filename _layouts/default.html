@@ -40,6 +40,10 @@
   <script src="{{ '/assets/js/archive-module-loader.js' | relative_url }}"></script>
   <script src="{{ '/assets/js/turbo-handlers.js' | relative_url }}"></script>
   
+
+  {% if site.github %}
+  <script src="{{ "/assets/js/github-calendar.js" | relative_url }}"></script>
+  {% endif %}
   <!-- Script para manejar el scroll de paginación -->
   <!-- <script src="{{ '/assets/js/pagination-scroll.js' | relative_url }}"></script> -->
   
