@@ -148,7 +148,7 @@ function applyURLFilters({ searchInput, clearSearchBtn, sortButtons }) {
   Sorting.setSortMethod(sortMethod, sortDirection);
   
   // Actualizar visualmente los botones de ordenación - FORZAR ACTUALIZACIÓN
-  updateSortButtons(sortButtons, sortMethod, sortDirection);
+  Sorting.updateActiveSortButton(sortButtons, sortMethod, sortDirection);
   
   // Set initial search query from URL if present
   if (params.has('search')) {
@@ -168,37 +168,6 @@ function applyURLFilters({ searchInput, clearSearchBtn, sortButtons }) {
   }
 }
 
-// Nueva función para actualizar los botones de ordenación
-function updateSortButtons(sortButtons, sortMethod, sortDirection) {
-  if (!sortButtons || sortButtons.length === 0) {
-    console.log('No hay botones de ordenación para actualizar');
-    return;
-  }
-  
-  console.log(`Actualizando ${sortButtons.length} botones de ordenación: método=${sortMethod}, dirección=${sortDirection}`);
-  
-  // Primero, quitar la clase active de todos los botones
-  sortButtons.forEach(btn => {
-    btn.classList.remove('active');
-  });
-  
-  // Luego, encontrar y activar el botón correspondiente al método actual
-  const activeButton = Array.from(sortButtons).find(btn => btn.dataset.sort === sortMethod);
-  if (activeButton) {
-    activeButton.classList.add('active');
-    activeButton.dataset.direction = sortDirection;
-    
-    // Actualizar el ícono si existe
-    const icon = activeButton.querySelector('i');
-    if (icon) {
-      icon.className = sortDirection === 'asc' ? 'fas fa-arrow-up' : 'fas fa-arrow-down';
-    }
-    
-    console.log(`Botón de ordenación activado: ${sortMethod}, dirección: ${sortDirection}`);
-  } else {
-    console.log(`No se encontró botón para el método de ordenación: ${sortMethod}`);
-  }
-}
 
 function initializeEventListeners(DOM) {
   initFilterListeners(DOM.categoryFilters, 'category', DOM.categoryDropdownContent);
@@ -265,28 +234,10 @@ function initSortButtons(buttons) {
       
       console.log(`Botón clickeado: ${sortMethod}, Estado actual: ${currentSortMethod}, ${currentSortDirection}`);
       
-      // Remover clase active de TODOS los botones de ordenación
-      document.querySelectorAll('.sort-button').forEach(btn => {
-        btn.classList.remove('active');
-      });
-      
-      // Añadir clase active SOLO al botón actual
-      newButton.classList.add('active');
-      
       // Si clickeamos el mismo método de ordenación, invertir la dirección
       if (sortMethod === currentSortMethod) {
         const newDirection = currentSortDirection === 'desc' ? 'asc' : 'desc';
         console.log(`Cambiando dirección a: ${newDirection}`);
-        
-        // Actualizar el atributo data-direction del botón
-        newButton.dataset.direction = newDirection;
-        
-        // Actualizar el ícono si existe
-        const icon = newButton.querySelector('i');
-        if (icon) {
-          icon.className = newDirection === 'asc' ? 'fas fa-arrow-up' : 'fas fa-arrow-down';
-        }
-        
         Sorting.setSortMethod(sortMethod, newDirection);
       } else {
         // Nuevo método de ordenación, usar la dirección predeterminada del botón
@@ -294,6 +245,13 @@ function initSortButtons(buttons) {
         console.log(`Cambiando método a: ${sortMethod}, dirección: ${direction}`);
         Sorting.setSortMethod(sortMethod, direction);
       }
+      
+      // Usar la función del módulo Sorting para actualizar los botones
+      Sorting.updateActiveSortButton(document.querySelectorAll('.sort-button'), sortMethod, 
+        sortMethod === currentSortMethod ? 
+          (currentSortDirection === 'desc' ? 'asc' : 'desc') : 
+          (newButton.dataset.direction || 'desc')
+      );
       
       applyFilters(getDOMElements());
     });
@@ -352,51 +310,34 @@ function initNoResultsReset({ noResultsResetBtn, searchInput, clearSearchBtn }) 
 
 function applyFilters(DOM) {
   console.log('Aplicando filtros...');
-  
-  // Prevent multiple simultaneous filter operations
   if (window.isProcessing) return;
   window.isProcessing = true;
-  
+
   if (DOM.filterContainer) DOM.filterContainer.classList.add('loading');
-  
-  // Use setTimeout to allow the UI to update before processing
+
   setTimeout(() => {
     const { currentCategoryFilter, currentTagFilter } = Filters.getCurrentFilters();
     const { currentSortMethod, currentSortDirection } = Sorting.getCurrentSort();
     const currentSearchQuery = Search.getCurrentSearchQuery();
 
-    // Forzar actualización de los botones de ordenación en cada aplicación de filtros
-    updateSortButtons(DOM.sortButtons, currentSortMethod, currentSortDirection);
-
-    // Guardar el contenido de los posts adicionales antes de aplicar filtros
     const additionalPostsContainer = DOM.additionalPostsContainer;
-    let additionalPostsBackup = null;
-    if (additionalPostsContainer && additionalPostsContainer.children.length > 0) {
-      additionalPostsBackup = additionalPostsContainer.innerHTML;
-    }
+    let additionalPostsBackup = (additionalPostsContainer && additionalPostsContainer.children.length > 0)
+      ? additionalPostsContainer.innerHTML
+      : null;
 
-    // Filter posts by category and tag
+    // Filtrar y ordenar posts
     const filteredByTaxonomy = Array.from(DOM.postItems).filter(item => {
-      const postCategories = item.dataset.categories || '';
-      const postTags = item.dataset.tags || '';
-      
-      const matchesCategory = currentCategoryFilter === 'all' || 
-                            postCategories.includes(currentCategoryFilter);
-      const matchesTag = currentTagFilter === 'all' || 
-                        postTags.includes(currentTagFilter);
-      
+      const matchesCategory = currentCategoryFilter === 'all' || item.dataset.categories?.includes(currentCategoryFilter);
+      const matchesTag = currentTagFilter === 'all' || item.dataset.tags?.includes(currentTagFilter);
       return matchesCategory && matchesTag;
     });
 
     const filteredPosts = Search.filterPostsBySearch(filteredByTaxonomy, currentSearchQuery);
-
-    // Sort posts
     const sortedPosts = Sorting.sortPosts(filteredPosts, currentSortMethod, currentSortDirection);
 
-    // Render posts
     Rendering.renderPosts(sortedPosts);
 
-    // Update active filters display
+    // Actualizaciones visuales
     Filters.updateActiveFiltersDisplay(
       DOM.activeCategoryFilter, 
       DOM.activeTagFilter, 
@@ -406,40 +347,30 @@ function applyFilters(DOM) {
       currentTagFilter
     );
 
-    // Update dropdown text
     Dropdowns.updateDropdownText(DOM.selectedCategorySpan, 'category', currentCategoryFilter);
     Dropdowns.updateDropdownText(DOM.selectedTagSpan, 'tag', currentTagFilter);
 
-    // Update active sort button
     Sorting.updateActiveSortButton(DOM.sortButtons, currentSortMethod, currentSortDirection);
 
-    // Update URL
     URLManager.updateURL(currentCategoryFilter, currentTagFilter, currentSortMethod, currentSortDirection, currentSearchQuery);
-    
+
     if (DOM.filterContainer) DOM.filterContainer.classList.remove('loading');
-    
-    // Verificar si los posts adicionales desaparecieron y restaurarlos si es necesario
+
+    // Restaurar posts adicionales si desaparecieron
     setTimeout(() => {
       if (additionalPostsContainer && additionalPostsBackup && additionalPostsContainer.children.length === 0) {
         console.log('Los posts adicionales desaparecieron después de aplicar filtros, restaurando...');
         additionalPostsContainer.innerHTML = additionalPostsBackup;
-        
-        // Notificar al módulo de renderizado
-        if (typeof Rendering !== 'undefined' && Rendering.setAdditionalPostsLoaded) {
-          Rendering.setAdditionalPostsLoaded();
-        }
-        
-        // Volver a aplicar los filtros solo a la visualización, sin modificar el DOM
-        if (typeof Rendering !== 'undefined' && Rendering.applyVisualFilters) {
-          Rendering.applyVisualFilters(currentCategoryFilter, currentTagFilter, currentSearchQuery, currentSortMethod, currentSortDirection);
-        }
+
+        Rendering.setAdditionalPostsLoaded?.();
+        Rendering.applyVisualFilters?.(currentCategoryFilter, currentTagFilter, currentSearchQuery, currentSortMethod, currentSortDirection);
       }
-      
-      // Reset processing flag
+
       window.isProcessing = false;
     }, 100);
   }, 10);
 }
+
 
 
 // Función para cargar posts adicionales
@@ -565,19 +496,6 @@ window.loadAdditionalPosts = function() {
       }
     });
 };
-
-// Inicializar cuando el DOM esté listo
-document.addEventListener('DOMContentLoaded', () => {
-  console.log('DOM cargado en archive-filters.js');
-  setTimeout(initArchiveFilters, 100); // Pequeño retraso para asegurar que el DOM está completamente cargado
-  
-  // Cargar posts adicionales después de inicializar los filtros
-  setTimeout(() => {
-    if (document.querySelector('.archive-page')) {
-      window.loadAdditionalPosts();
-    }
-  }, 300);
-});
 
 // Exportar la función para que pueda ser llamada desde fuera
 window.initArchiveFilters = initArchiveFilters;

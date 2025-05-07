@@ -116,45 +116,56 @@ export const Sorting = (() => {
     return sortedPosts;
   };
 
-const updateActiveSortButton = (sortButtons, method, direction) => {
-  // Verificar si estamos en la página de archivo antes de actualizar botones
-  if (!document.querySelector('.archive-page')) {
-    console.log('Sorting: No estamos en la página de archivo, no se actualizarán los botones');
-    return;
-  }
-  
-  if (!sortButtons || sortButtons.length === 0) {
-    console.log('Sorting: No hay botones de ordenación para actualizar');
-    return;
-  }
-  
-  console.log(`Sorting: Actualizando botones de ordenación para método: ${method}, dirección: ${direction}`);
-  
-  // Primero, quitar la clase active de TODOS los botones
-  Array.from(sortButtons).forEach(button => {
-    button.classList.remove('active');
-  });
-  
-  // Luego, encontrar el botón que coincide con el método actual y activarlo
-  const activeButton = Array.from(sortButtons).find(button => button.dataset.sort === method);
-  
-  if (activeButton) {
-    // Añadir clase active SOLO al botón correspondiente
-    activeButton.classList.add('active');
-    
-    // Update direction attribute and icon
-    activeButton.dataset.direction = direction;
-    const icon = activeButton.querySelector('i');
-    if (icon) {
-      icon.className = direction === 'desc' ? 
-        'fas fa-arrow-down' : 'fas fa-arrow-up';
+  const updateActiveSortButton = (sortButtons, method, direction) => {
+    // If sortButtons is not provided, try to get them from the DOM
+    if (!sortButtons) {
+      sortButtons = document.querySelectorAll('.sort-button');
     }
     
-    console.log(`Sorting: Botón ${method} activado con dirección ${direction}`);
-  } else {
-    console.log(`Sorting: No se encontró botón para el método ${method}`);
-  }
-};
+    // Verificar si estamos en la página de archivo antes de actualizar botones
+    // if (!document.querySelector('.archive-page')) {
+    //   console.log('Sorting: No estamos en la página de archivo, no se actualizarán los botones');
+    //   return false;
+    // }
+    
+    if (!sortButtons || sortButtons.length === 0) {
+      console.log('Sorting: No hay botones de ordenación para actualizar');
+      return false;
+    }
+    
+    // Use current values if not provided
+    method = method || currentSortMethod;
+    direction = direction || currentSortDirection;
+    
+    console.log(`Sorting: Actualizando ${sortButtons.length} botones de ordenación para método: ${method}, dirección: ${direction}`);
+    
+    // Primero, quitar la clase active de TODOS los botones
+    Array.from(sortButtons).forEach(button => {
+      button.classList.remove('active');
+    });
+    
+    // Luego, encontrar el botón que coincide con el método actual y activarlo
+    const activeButton = Array.from(sortButtons).find(button => button.dataset.sort === method);
+    
+    if (activeButton) {
+      // Añadir clase active SOLO al botón correspondiente
+      activeButton.classList.add('active');
+      
+      // Update direction attribute and icon
+      activeButton.dataset.direction = direction;
+      const icon = activeButton.querySelector('i');
+      if (icon) {
+        icon.className = direction === 'desc' ? 
+          'fas fa-arrow-down' : 'fas fa-arrow-up';
+      }
+      
+      console.log(`Sorting: Botón ${method} activado con dirección ${direction}`);
+      return true;
+    } else {
+      console.log(`Sorting: No se encontró botón para el método ${method}`);
+      return false;
+    }
+  };
 
   return {
     sortPosts,
