@@ -1,75 +1,74 @@
 if (typeof Turbo !== 'undefined' || 'Turbo' in window) {
 
-  window.addEventListener('load', function () {
+
+  // Función centralizada para verificar y cargar posts adicionales
+  window.checkAndLoadAdditionalPosts = function() {
     if (document.querySelector('.archive-page')) {
-      console.log('Verificando posts adicionales en evento load...');
-      // Check if additional posts are already loaded by looking for posts with data-additional-post="true"
+      // Verificar si ya hay posts adicionales cargados
       const additionalPosts = document.querySelectorAll('.archive-post-item[data-additional-post="true"]');
-      if (additionalPosts.length === 0) {
-        console.log('No hay posts adicionales cargados en load, intentando cargar...');
-        window.tryLoadAdditionalPosts();
-      }
-    }
-  });
-  // Cuando se carga una nueva página
-  document.addEventListener('turbo:load', function () {
-    console.log('Turbo load en default.html');
-    window.archiveInitialized = false;
-    window.archiveModules = undefined;
-
-    setTimeout(function () {
-      if (typeof window.ARCHIVE_PATHS === 'undefined') {
-        console.warn('ARCHIVE_PATHS no está definido todavía, esperando...');
-        setTimeout(function () {
-          if (typeof window.initializeArchiveModules === 'function' && typeof window.ARCHIVE_PATHS !== 'undefined') {
-            window.initializeArchiveModules();
-
-            if (document.querySelector('.archive-page')) {
-              console.log('Cargando posts adicionales después de inicializar módulos...');
-              
-              // Asegurarse de que la ordenación se aplica correctamente
-              const { method, direction } = window.getSortParameters();
-              console.log(`Método de ordenación en turbo:load: ${method}, ${direction}`);
-              
-              // Primero cargar posts adicionales
-              window.tryLoadAdditionalPosts(300, 500);
-              
-              // Luego aplicar ordenación después de un tiempo
-              setTimeout(() => {
-                window.updateSortButtonsDirectly(method, direction);
-                if (typeof window.applyFilters === 'function') {
-                  window.applyFilters();
-                }
-              }, 1000);
-            }
-          } else {
-            console.error('No se pudo inicializar los módulos de archivo después de esperar.');
-          }
-        }, 300);
-      } else if (typeof window.initializeArchiveModules === 'function') {
-        window.initializeArchiveModules();
-
-        if (document.querySelector('.archive-page')) {
-          console.log('Cargando posts adicionales después de inicializar módulos...');
-          
-          // Asegurarse de que la ordenación se aplica correctamente
-          const { method, direction } = window.getSortParameters();
-          console.log(`Método de ordenación en turbo:load: ${method}, ${direction}`);
-          
-          // Primero cargar posts adicionales
-          window.tryLoadAdditionalPosts(300, 500);
-          
-          // Luego aplicar ordenación después de un tiempo
-          setTimeout(() => {
-            window.updateSortButtonsDirectly(method, direction);
-            if (typeof window.applyFilters === 'function') {
-              window.applyFilters();
-            }
-          }, 1000);
+      const additionalPostsMarker = document.getElementById('additional-posts-marker');
+      
+      if (additionalPosts.length === 0 && additionalPostsMarker && !window.isLoadingAdditionalPosts) {
+        console.log('No hay posts adicionales cargados, intentando cargar...');
+        window.tryLoadAdditionalPosts(300, 500);
+      } else if (additionalPosts.length > 0) {
+        console.log(`Ya hay ${additionalPosts.length} posts adicionales cargados`);
+        // Asegurar que los filtros se aplican correctamente
+        if (typeof window.ensureFiltersApplied === 'function') {
+          window.ensureFiltersApplied();
         }
       }
-    }, 100);
+    }
+  };
+
+  window.addEventListener('load', function () {
+    // Usar la función centralizada
+    window.checkAndLoadAdditionalPosts();
   });
+  // Cuando se carga una nueva página
+ // Cuando se carga una nueva página
+ document.addEventListener('turbo:load', function () {
+  console.log('Turbo load en default.html');
+  window.archiveInitialized = false;
+  window.archiveModules = undefined;
+
+  setTimeout(function () {
+    if (typeof window.ARCHIVE_PATHS === 'undefined') {
+      console.warn('ARCHIVE_PATHS no está definido todavía, esperando...');
+      setTimeout(function () {
+        if (typeof window.initializeArchiveModules === 'function' && typeof window.ARCHIVE_PATHS !== 'undefined') {
+          window.initializeArchiveModules();
+
+          if (document.querySelector('.archive-page')) {
+            console.log('Inicializando módulos de archivo...');
+            
+            // Asegurarse de que la ordenación se aplica correctamente
+            const { method, direction } = window.getSortParameters();
+            console.log(`Método de ordenación en turbo:load: ${method}, ${direction}`);
+            
+            // Usar la función centralizada
+            window.checkAndLoadAdditionalPosts();
+          }
+        } else {
+          console.error('No se pudo inicializar los módulos de archivo después de esperar.');
+        }
+      }, 300);
+    } else if (typeof window.initializeArchiveModules === 'function') {
+      window.initializeArchiveModules();
+
+      if (document.querySelector('.archive-page')) {
+        console.log('Inicializando módulos de archivo...');
+        
+        // Asegurarse de que la ordenación se aplica correctamente
+        const { method, direction } = window.getSortParameters();
+        console.log(`Método de ordenación en turbo:load: ${method}, ${direction}`);
+        
+        // Usar la función centralizada
+        window.checkAndLoadAdditionalPosts();
+      }
+    }
+  }, 100);
+});
 
   // Añadir un evento específico para turbo:visit para manejar la navegación entre páginas
   document.addEventListener('turbo:visit', function() {
@@ -97,14 +96,10 @@ if (typeof Turbo !== 'undefined' || 'Turbo' in window) {
         window.initializeArchiveOnTurboRender();
       }
 
-      // Check if additional posts are already loaded
-      const additionalPosts = document.querySelectorAll('.archive-post-item[data-additional-post="true"]');
-      const additionalPostsMarker = document.getElementById('additional-posts-marker');
-      
-      if (additionalPosts.length === 0 && additionalPostsMarker) {
-        console.log('No hay posts adicionales cargados, intentando cargar...');
-        window.tryLoadAdditionalPosts(600);
-      }
+      // Usar la función centralizada con un pequeño retraso
+      setTimeout(() => {
+        window.checkAndLoadAdditionalPosts();
+      }, 300);
     } else {
       console.log('Turbo render en página que no es de archivo');
       const sortButtons = document.querySelectorAll('.sort-button');
@@ -124,40 +119,10 @@ if (typeof Turbo !== 'undefined' || 'Turbo' in window) {
     const frame = event.target;
     if (frame.closest('.archive-page') || document.querySelector('.archive-page')) {
       console.log('Frame renderizado en página de archivo');
+      
+      // Usar la función centralizada con un retraso para evitar conflictos
       setTimeout(() => {
-        // Check if additional posts are already loaded
-        const additionalPosts = document.querySelectorAll('.archive-post-item[data-additional-post="true"]');
-        const additionalPostsMarker = document.getElementById('additional-posts-marker');
-        
-        if (additionalPosts.length === 0 && additionalPostsMarker) {
-          console.log('No hay posts adicionales cargados después de frame-render');
-          if (typeof window.loadAdditionalPosts === 'function') {
-            window.loadAdditionalPosts();
-            
-            // Aplicar ordenación después de cargar posts adicionales
-            setTimeout(() => {
-              console.log('Aplicando ordenación después de cargar posts adicionales (frame-render)');
-              const { method, direction } = window.getSortParameters();
-              
-              // Actualizar botones de ordenación
-              window.updateSortButtonsDirectly(method, direction);
-              
-              // Aplicar filtros para ordenar todos los posts
-              if (typeof window.applyFilters === 'function') {
-                window.applyFilters();
-              }
-            }, 500);
-          }
-        } else {
-          // Incluso si ya hay posts adicionales, asegurarse de que la ordenación es correcta
-          setTimeout(() => {
-            const { method, direction } = window.getSortParameters();
-            window.updateSortButtonsDirectly(method, direction);
-            if (typeof window.applyFilters === 'function') {
-              window.applyFilters();
-            }
-          }, 300);
-        }
+        window.checkAndLoadAdditionalPosts();
       }, 500);
     }
   });

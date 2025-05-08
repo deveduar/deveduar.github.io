@@ -13,6 +13,10 @@ function escapeRegExp(string) {
 }
 
 // Función para asegurar que los filtros se aplican correctamente después de cargar posts adicionales
+// Añadir un flag para controlar si estamos en proceso de cargar posts adicionales
+window.isLoadingAdditionalPosts = false;
+
+// Función para asegurar que los filtros se aplican correctamente después de cargar posts adicionales
 window.ensureFiltersApplied = function() {
   setTimeout(() => {
     if (typeof window.applyFilters === 'function') {
@@ -22,10 +26,28 @@ window.ensureFiltersApplied = function() {
   }, 300);
 };
 
-// Modificar la función tryLoadAdditionalPosts para llamar a ensureFiltersApplied
+// Refactorizar tryLoadAdditionalPosts para evitar cargas múltiples
 window.tryLoadAdditionalPosts = function (delay = 800, retryDelay = 500) {
+  // Si ya estamos cargando posts o ya hay posts adicionales, no hacer nada
+  if (window.isLoadingAdditionalPosts) {
+    console.log('Ya se están cargando posts adicionales, ignorando solicitud');
+    return;
+  }
+  
+  // Verificar si ya hay posts adicionales cargados
+  const additionalPosts = document.querySelectorAll('.archive-post-item[data-additional-post="true"]');
+  if (additionalPosts.length > 0) {
+    console.log(`Ya hay ${additionalPosts.length} posts adicionales cargados, aplicando filtros`);
+    window.ensureFiltersApplied();
+    return;
+  }
+  
+  // Marcar que estamos cargando
+  window.isLoadingAdditionalPosts = true;
+  
   setTimeout(() => {
     if (typeof window.loadAdditionalPosts === 'function') {
+      console.log('Cargando posts adicionales (primera vez)');
       window.loadAdditionalPosts();
       
       // Aplicar ordenación después de cargar posts adicionales
@@ -38,11 +60,15 @@ window.tryLoadAdditionalPosts = function (delay = 800, retryDelay = 500) {
         
         // Aplicar filtros para ordenar todos los posts
         window.ensureFiltersApplied();
+        
+        // Resetear el flag
+        window.isLoadingAdditionalPosts = false;
       }, 500);
     } else {
       console.warn('loadAdditionalPosts no está disponible, intentando de nuevo...');
       setTimeout(() => {
         if (typeof window.loadAdditionalPosts === 'function') {
+          console.log('Cargando posts adicionales (reintento)');
           window.loadAdditionalPosts();
           
           // Aplicar ordenación después de cargar posts adicionales
@@ -55,7 +81,13 @@ window.tryLoadAdditionalPosts = function (delay = 800, retryDelay = 500) {
             
             // Aplicar filtros para ordenar todos los posts
             window.ensureFiltersApplied();
+            
+            // Resetear el flag
+            window.isLoadingAdditionalPosts = false;
           }, 500);
+        } else {
+          // Si después del reintento sigue sin estar disponible, resetear el flag
+          window.isLoadingAdditionalPosts = false;
         }
       }, retryDelay);
     }

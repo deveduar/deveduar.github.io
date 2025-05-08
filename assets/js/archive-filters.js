@@ -137,65 +137,52 @@ function resetAllFilters({ searchInput, clearSearchBtn }) {
   }
 }
 
+// Create a utility function for URL parameter handling
+function decodeURLParameter(param) {
+  if (!param || param === 'all') return 'all';
+  
+  try {
+    // First decode with decodeURIComponent to handle %20
+    const decoded = decodeURIComponent(param);
+    // Then replace any + that might remain
+    return decoded.replace(/\+/g, ' ');
+  } catch (e) {
+    console.warn('Error decoding parameter:', e);
+    // If it fails, just replace +
+    return param.replace(/\+/g, ' ');
+  }
+}
+
+// Refactor applyURLFilters to use the utility function
 function applyURLFilters({ searchInput, clearSearchBtn, sortButtons }) {
   const params = new URLSearchParams(window.location.search);
   
-  // Si hay parámetros, aplicarlos - Asegurarse de decodificar correctamente los parámetros
-  let categoryParam = params.get('category') || 'all';
-  let tagParam = params.get('tag') || 'all';
+  // Get and decode parameters
+  const categoryParam = decodeURLParameter(params.get('category') || 'all');
+  const tagParam = decodeURLParameter(params.get('tag') || 'all');
   
-  // Decodificar correctamente los parámetros para manejar espacios y caracteres especiales
   if (categoryParam !== 'all') {
-    try {
-      // Primero decodificar con decodeURIComponent para manejar %20
-      categoryParam = decodeURIComponent(categoryParam);
-      // Luego reemplazar cualquier + que pueda quedar
-      categoryParam = categoryParam.replace(/\+/g, ' ');
-      console.log(`Categoría decodificada de URL: "${categoryParam}"`);
-    } catch (e) {
-      console.warn('Error al decodificar categoría:', e);
-      // Si falla, intentar solo reemplazar +
-      categoryParam = categoryParam.replace(/\+/g, ' ');
-    }
+    console.log(`Categoría decodificada de URL: "${categoryParam}"`);
   }
   
   if (tagParam !== 'all') {
-    try {
-      // Primero decodificar con decodeURIComponent para manejar %20
-      tagParam = decodeURIComponent(tagParam);
-      // Luego reemplazar cualquier + que pueda quedar
-      tagParam = tagParam.replace(/\+/g, ' ');
-      console.log(`Tag decodificado de URL: "${tagParam}"`);
-    } catch (e) {
-      console.warn('Error al decodificar tag:', e);
-      // Si falla, intentar solo reemplazar +
-      tagParam = tagParam.replace(/\+/g, ' ');
-    }
+    console.log(`Tag decodificado de URL: "${tagParam}"`);
   }
   
   Filters.setCategoryFilter(categoryParam);
   Filters.setTagFilter(tagParam);
   
-  // Mejorar la aplicación de parámetros de ordenación
+  // Apply sorting parameters
   const sortMethod = params.get('sort') || 'date';
   const sortDirection = params.get('direction') || 'desc';
   
   console.log(`Aplicando ordenación desde URL: método=${sortMethod}, dirección=${sortDirection}`);
   Sorting.setSortMethod(sortMethod, sortDirection);
-  
-  // Actualizar visualmente los botones de ordenación - FORZAR ACTUALIZACIÓN
   Sorting.updateActiveSortButton(sortButtons, sortMethod, sortDirection);
   
-  // Set initial search query from URL if present
+  // Set search query from URL if present
   if (params.has('search')) {
-    let searchQuery = params.get('search');
-    try {
-      searchQuery = decodeURIComponent(searchQuery);
-      searchQuery = searchQuery.replace(/\+/g, ' ');
-    } catch (e) {
-      console.warn('Error al decodificar búsqueda:', e);
-      searchQuery = searchQuery.replace(/\+/g, ' ');
-    }
+    const searchQuery = decodeURLParameter(params.get('search'));
     
     Search.setSearchQuery(searchQuery);
     if (searchInput) {
@@ -203,7 +190,7 @@ function applyURLFilters({ searchInput, clearSearchBtn, sortButtons }) {
       if (clearSearchBtn) clearSearchBtn.style.display = searchQuery ? 'block' : 'none';
     }
   } else {
-    // Si no hay parámetro de búsqueda, limpiar
+    // Clear search if no parameter
     Search.setSearchQuery('');
     if (searchInput) {
       searchInput.value = '';
@@ -354,6 +341,37 @@ function initNoResultsReset({ noResultsResetBtn, searchInput, clearSearchBtn }) 
   });
 }
 
+// Función auxiliar para escapar caracteres especiales en expresiones regulares
+function escapeRegExp(string) {
+  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+// Create a utility function for taxonomy matching
+function matchesTaxonomy(postTaxonomies, filterValue) {
+  if (filterValue === 'all') return true;
+  
+  // Convert to lowercase for case-insensitive comparison
+  const filterLower = filterValue.toLowerCase();
+  const taxonomiesLower = postTaxonomies.toLowerCase();
+  
+  // For taxonomies with spaces or special characters
+  if (filterLower.includes(' ') || filterLower.includes('/')) {
+    // Method 1: Look for exact match in the complete string
+    const regex = new RegExp(`\\b${escapeRegExp(filterLower)}\\b`, 'i');
+    const matchRegex = regex.test(taxonomiesLower);
+    
+    // Method 2: Split by spaces and look for exact match
+    const taxonomiesArray = taxonomiesLower.split(' ').filter(Boolean);
+    const matchSplit = taxonomiesArray.some(tax => tax === filterLower);
+    
+    return matchRegex || matchSplit;
+  } else {
+    // For simple taxonomies, split and look for exact match
+    const taxonomiesArray = taxonomiesLower.split(' ').filter(Boolean);
+    return taxonomiesArray.includes(filterLower);
+  }
+}
+
 function applyFilters(DOM) {
   console.log('Aplicando filtros...');
   if (window.isProcessing) return;
@@ -368,127 +386,31 @@ function applyFilters(DOM) {
 
     console.log(`Aplicando filtros con: categoría="${currentCategoryFilter}", tag="${currentTagFilter}", ordenación=${currentSortMethod}, dirección=${currentSortDirection}, búsqueda="${currentSearchQuery}"`);
 
-    // Obtener todos los posts del contenedor unificado
+    // Get all posts from the unified container
     const allPostItems = Array.from(DOM.mainPostsContainer?.querySelectorAll('.archive-post-item') || []);
     
-    const originalPosts = allPostItems.filter(p => p.dataset.originalPost === 'true');
-    const additionalPosts = allPostItems.filter(p => p.dataset.additionalPost === 'true');
-    
-    console.log(`Aplicando filtros a ${allPostItems.length} posts (${originalPosts.length} originales, ${additionalPosts.length} adicionales)`);
-
-    // Filtrar por taxonomía - Mejorar manejo de espacios y caracteres especiales
+    // Filter by taxonomy using the utility function
     const filteredByTaxonomy = allPostItems.filter(item => {
-      // Convertir a minúsculas para comparación case-insensitive
-      const categoryFilterLower = currentCategoryFilter.toLowerCase();
-      const tagFilterLower = currentTagFilter.toLowerCase();
+      const postCategories = item.dataset.categories || '';
+      const postTags = item.dataset.tags || '';
       
-      // Obtener categorías y tags del post
-      const postCategories = (item.dataset.categories || '').toLowerCase();
-      const postTags = (item.dataset.tags || '').toLowerCase();
-      
-      // Debug para ver qué valores estamos comparando
-      if (categoryFilterLower !== 'all' || tagFilterLower !== 'all') {
-        console.log(`Comparando: 
-          Post: ${item.querySelector('.post-link')?.textContent || 'Sin título'}
-          Categorías del post: "${postCategories}"
-          Filtro de categoría: "${categoryFilterLower}"
-          Tags del post: "${postTags}"
-          Filtro de tag: "${tagFilterLower}"
-          Es post adicional: ${item.dataset.additionalPost === 'true'}`);
-      }
-      
-      // Verificar si coincide con el filtro de categoría
-      let matchesCategory = categoryFilterLower === 'all';
-      if (!matchesCategory) {
-        // Para manejar categorías con espacios o caracteres especiales
-        if (categoryFilterLower.includes(' ') || categoryFilterLower.includes('/')) {
-          // Método 1: Buscar la categoría exacta en el string completo
-          const regex = new RegExp(`\\b${escapeRegExp(categoryFilterLower)}\\b`, 'i');
-          const matchRegex = regex.test(postCategories);
-          
-          // Método 2: Verificar si está en el array de categorías
-          let matchArray = false;
-          try {
-            // Intentar obtener el array de categorías del debug data
-            if (item.dataset.categoriesDebug) {
-              const categoriesArray = JSON.parse(item.dataset.categoriesDebug);
-              matchArray = categoriesArray.some(cat => cat.toLowerCase() === categoryFilterLower);
-            }
-          } catch (e) {
-            console.warn('Error al parsear categorías debug:', e);
-          }
-          
-          // Método 3: Dividir por espacios y buscar coincidencia exacta
-          const categoriesArray = postCategories.split(' ').filter(Boolean);
-          const matchSplit = categoriesArray.some(cat => cat === categoryFilterLower);
-          
-          // Combinar resultados
-          matchesCategory = matchRegex || matchArray || matchSplit;
-          
-          if (matchesCategory) {
-            console.log(`Coincidencia de categoría encontrada para "${categoryFilterLower}" en post "${item.querySelector('.post-link')?.textContent || 'Sin título'}" - Regex: ${matchRegex}, Array: ${matchArray}, Split: ${matchSplit}`);
-          }
-        } else {
-          // Para categorías simples, dividir y buscar coincidencia exacta
-          const categoriesArray = postCategories.split(' ').filter(Boolean);
-          matchesCategory = categoriesArray.includes(categoryFilterLower);
-        }
-      }
-      
-      // Verificar si coincide con el filtro de tag
-      let matchesTag = tagFilterLower === 'all';
-      if (!matchesTag) {
-        // Para manejar tags con espacios o caracteres especiales
-        if (tagFilterLower.includes(' ') || tagFilterLower.includes('/')) {
-          // Método 1: Buscar el tag exacto en el string completo
-          const regex = new RegExp(`\\b${escapeRegExp(tagFilterLower)}\\b`, 'i');
-          const matchRegex = regex.test(postTags);
-          
-          // Método 2: Verificar si está en el array de tags
-          let matchArray = false;
-          try {
-            // Intentar obtener el array de tags del debug data
-            if (item.dataset.tagsDebug) {
-              const tagsArray = JSON.parse(item.dataset.tagsDebug);
-              matchArray = tagsArray.some(tag => tag.toLowerCase() === tagFilterLower);
-            }
-          } catch (e) {
-            console.warn('Error al parsear tags debug:', e);
-          }
-          
-          // Método 3: Dividir por espacios y buscar coincidencia exacta
-          const tagsArray = postTags.split(' ').filter(Boolean);
-          const matchSplit = tagsArray.some(tag => tag === tagFilterLower);
-          
-          // Combinar resultados
-          matchesTag = matchRegex || matchArray || matchSplit;
-          
-          if (matchesTag) {
-            console.log(`Coincidencia de tag encontrada para "${tagFilterLower}" en post "${item.querySelector('.post-link')?.textContent || 'Sin título'}" - Regex: ${matchRegex}, Array: ${matchArray}, Split: ${matchSplit}`);
-          }
-        } else {
-          // Para tags simples, dividir y buscar coincidencia exacta
-          const tagsArray = postTags.split(' ').filter(Boolean);
-          matchesTag = tagsArray.includes(tagFilterLower);
-        }
-      }
+      const matchesCategory = matchesTaxonomy(postCategories, currentCategoryFilter);
+      const matchesTag = matchesTaxonomy(postTags, currentTagFilter);
       
       return matchesCategory && matchesTag;
     });
 
-    // Filtrar por búsqueda
+    // Filter by search
     const filteredPosts = Search.filterPostsBySearch(filteredByTaxonomy, currentSearchQuery);
     
-    // Ordenar posts
+    // Sort posts
     console.log(`Ordenando ${filteredPosts.length} posts por ${currentSortMethod} en dirección ${currentSortDirection}`);
     const sortedPosts = Sorting.sortPosts(filteredPosts, currentSortMethod, currentSortDirection);
 
-    console.log(`Después de filtrar: ${filteredPosts.length} posts, después de ordenar: ${sortedPosts.length} posts`);
-
-    // Renderizar posts
+    // Render posts
     Rendering.renderPosts(sortedPosts);
 
-    // Actualizaciones visuales
+    // Visual updates
     Filters.updateActiveFiltersDisplay(
       DOM.activeCategoryFilter, 
       DOM.activeTagFilter, 
@@ -509,193 +431,38 @@ function applyFilters(DOM) {
     window.isProcessing = false;
   }, 10);
 }
+// POST RENDERING
 
-// Función auxiliar para escapar caracteres especiales en expresiones regulares
-function escapeRegExp(string) {
-  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-}
-
-
-
-window.loadAdditionalPosts = function() {
-  console.log('Cargando posts adicionales...');
-  const mainPostsContainer = document.getElementById('main-posts-list');
-  const additionalPostsMarker = document.getElementById('additional-posts-marker');
-  const loadingIndicator = document.getElementById('posts-loading-indicator');
-  
-  if (!mainPostsContainer || !additionalPostsMarker) {
-    console.error('No se encontraron los elementos necesarios para cargar posts adicionales');
-    return;
-  }
-  
-  // Mostrar indicador de carga si existe
-  if (loadingIndicator) loadingIndicator.style.display = 'block';
-  
-  // Verificar si ya hay posts adicionales cargados
-  const existingAdditionalPosts = mainPostsContainer.querySelectorAll('.archive-post-item[data-additional-post="true"]');
-  if (existingAdditionalPosts.length > 0) {
-    console.log(`Los posts adicionales ya están cargados (${existingAdditionalPosts.length} posts)`);
-    
-    // Ocultar indicador de carga
-    if (loadingIndicator) loadingIndicator.style.display = 'none';
-    
-    // Notificar al módulo de renderizado
-    if (typeof Rendering !== 'undefined' && Rendering.setAdditionalPostsLoaded) {
-      Rendering.setAdditionalPostsLoaded();
-    }
-    
-    // Aplicar filtros actuales
-    setTimeout(() => {
-      if (typeof window.applyFilters === 'function') {
-        window.applyFilters(getDOMElements());
-      }
-    }, 50);
-    
-    return;
-  }
-  
-  // Insertar indicador de carga antes del marcador
-  const loadingElement = document.createElement('div');
-  loadingElement.className = 'loading-indicator';
-  loadingElement.textContent = 'Cargando posts adicionales...';
-  mainPostsContainer.insertBefore(loadingElement, additionalPostsMarker);
-  
-  // Recopilar URLs de posts ya mostrados para evitar duplicados
-  const existingPostUrls = new Set();
-  const existingPosts = mainPostsContainer.querySelectorAll('.archive-post-item[data-original-post="true"]');
-  existingPosts.forEach(post => {
-    const url = post.dataset.url || '';
-    if (url) {
-      existingPostUrls.add(url);
-    }
-  });
-  
-  console.log(`Detectados ${existingPostUrls.size} posts existentes para evitar duplicados`);
-  
-  // Intentar recuperar de sessionStorage primero
-  try {
-    const savedPosts = sessionStorage.getItem('additionalPosts');
-    const timestamp = sessionStorage.getItem('additionalPostsTimestamp');
-    const now = Date.now();
-    const maxAge = 24 * 60 * 60 * 1000; // 24 horas en milisegundos
-    
-    // Verificar si los posts guardados son recientes (menos de 24 horas)
-    if (savedPosts && timestamp && (now - parseInt(timestamp)) < maxAge) {
-      // Crear un elemento temporal para analizar el HTML guardado
-      const tempDiv = document.createElement('div');
-      tempDiv.innerHTML = savedPosts;
-      
-      // Filtrar posts duplicados
-      const nonDuplicatePosts = Array.from(tempDiv.children).filter(post => {
-        const link = post.querySelector('.post-link');
-        return link && link.getAttribute('href') && !existingPostUrls.has(link.getAttribute('href'));
-      });
-      
-      if (nonDuplicatePosts.length > 0) {
-        // Eliminar el indicador de carga
-        if (loadingElement && loadingElement.parentNode) {
-          loadingElement.parentNode.removeChild(loadingElement);
-        }
-        
-        // Añadir solo los posts no duplicados antes del marcador
-        nonDuplicatePosts.forEach(post => {
-          mainPostsContainer.insertBefore(post.cloneNode(true), additionalPostsMarker);
-        });
-        
-        console.log(`Posts adicionales restaurados desde sessionStorage (${nonDuplicatePosts.length} posts no duplicados)`);
-        
-        // Ocultar indicador de carga
-        if (loadingIndicator) loadingIndicator.style.display = 'none';
-        
-        // Notificar al módulo de renderizado
-        if (typeof Rendering !== 'undefined' && Rendering.setAdditionalPostsLoaded) {
-          Rendering.setAdditionalPostsLoaded();
-        }
-        
-        // Añadir event listeners a los nuevos enlaces
-        const newCategoryLinks = mainPostsContainer.querySelectorAll('.archive-post-item[data-additional-post="true"] .category-filter-link');
-        const newTagLinks = mainPostsContainer.querySelectorAll('.archive-post-item[data-additional-post="true"] .tag-filter-link');
-        
-        initLinkListeners(newCategoryLinks, 'category');
-        initLinkListeners(newTagLinks, 'tag');
-        
-        // Aplicar filtros actuales
-        setTimeout(() => {
-          if (typeof window.applyFilters === 'function') {
-            window.applyFilters(getDOMElements());
-          }
-        }, 50);
-        
-        return;
-      } else {
-        console.log('Todos los posts en sessionStorage son duplicados, cargando desde el servidor');
-      }
-    }
-  } catch (e) {
-    console.warn('Error al recuperar posts adicionales de sessionStorage:', e);
-  }
-  
-  // Si no hay posts en sessionStorage o todos son duplicados, cargar desde el servidor
-  console.log('Realizando fetch a /posts.json');
-  fetch('/posts.json')
-    .then(response => {
-      console.log('Respuesta recibida:', response.status, response.statusText);
-      if (!response.ok) {
-        throw new Error(`Error al cargar posts adicionales: ${response.status} ${response.statusText}`);
-      }
-      return response.json();
-    })
-    .then(data => {
-      console.log(`Datos recibidos: ${data.posts ? data.posts.length : 0} posts`);
-      
-      if (!data || !data.posts || !Array.isArray(data.posts)) {
-        throw new Error('Formato de datos inválido');
-      }
-      
-      // Filtrar posts para eliminar duplicados
-      const nonDuplicatePosts = data.posts.filter(post => !existingPostUrls.has(post.url));
-      console.log(`Filtrando duplicados: ${data.posts.length} posts totales, ${nonDuplicatePosts.length} posts únicos`);
-      
-      // Eliminar el indicador de carga
-      if (loadingElement && loadingElement.parentNode) {
-        loadingElement.parentNode.removeChild(loadingElement);
-      }
-      
-// Crear elementos HTML para cada post no duplicado
-// Crear elementos HTML para cada post no duplicado
-const postsHTML = nonDuplicatePosts.map(post => {
-  // Asegurarse de que las categorías y tags sean arrays
+// Break down loadAdditionalPosts into smaller functions
+function createPostElement(post) {
+  // Ensure categories and tags are arrays
   const categories = Array.isArray(post.categories) ? post.categories : [];
   const tags = Array.isArray(post.tags) ? post.tags : [];
   
-  // Formatear la fecha correctamente para que coincida con el formato de Liquid
+  // Format date correctly
   let formattedDate = post.date || '';
   let displayDate = post.date_formatted || '';
   
-  // Si tenemos una fecha pero no está en formato ISO, intentar convertirla
   if (formattedDate && !formattedDate.includes('T')) {
     try {
-      // Convertir a formato ISO similar al que usa Liquid
       const dateObj = new Date(formattedDate);
       if (!isNaN(dateObj)) {
         formattedDate = dateObj.toISOString();
-        // Si no tenemos date_formatted, crear uno con el mismo formato que Liquid
         if (!displayDate) {
           const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
           displayDate = `${months[dateObj.getMonth()]} ${dateObj.getDate()}, ${dateObj.getFullYear()}`;
         }
       }
     } catch (e) {
-      console.warn('Error al formatear la fecha:', e);
+      console.warn('Error formatting date:', e);
     }
   }
   
-  // IMPORTANTE: Cambiar cómo formateamos las categorías y tags para que coincidan exactamente con el formato de Liquid
-  // En lugar de unir con espacios, vamos a usar el mismo formato que Jekyll
+  // Format categories and tags to match Liquid format
   const categoriesData = categories.map(cat => cat.toLowerCase()).join(' ');
   const tagsData = tags.map(tag => tag.toLowerCase()).join(' ');
   
-  // Añadir atributos data adicionales para debugging
+  // Add debug data
   const categoriesDebug = JSON.stringify(categories);
   const tagsDebug = JSON.stringify(tags);
   
@@ -710,8 +477,6 @@ const postsHTML = nonDuplicatePosts.map(post => {
          data-url="${post.url || ''}"
          data-additional-post="true">
       <div class="post-meta">
-      <span> generado2</span>
-
         <span class="post-date" data-date="${formattedDate}">${displayDate}</span>
         <a class="post-link" href="${post.url || '#'}">${post.title || 'Sin título'}</a>
         
@@ -735,71 +500,170 @@ const postsHTML = nonDuplicatePosts.map(post => {
       </div>
     </div>
   `;
-}).join('');
-      
-      // Insertar los posts antes del marcador
-      additionalPostsMarker.insertAdjacentHTML('beforebegin', postsHTML);
-      console.log(`${nonDuplicatePosts.length} posts adicionales cargados y añadidos al DOM`);
-      
-      // Ocultar indicador de carga
-      if (loadingIndicator) loadingIndicator.style.display = 'none';
-      
-      // Guardar en sessionStorage para futuras navegaciones
-      try {
-        sessionStorage.setItem('additionalPosts', postsHTML);
-        sessionStorage.setItem('additionalPostsTimestamp', Date.now().toString());
-      } catch (e) {
-        console.warn('No se pudieron guardar los posts adicionales en sessionStorage:', e);
+}
+// Check if additional posts are already loaded
+function checkExistingAdditionalPosts(mainPostsContainer) {
+  const existingAdditionalPosts = mainPostsContainer.querySelectorAll('.archive-post-item[data-additional-post="true"]');
+  if (existingAdditionalPosts.length > 0) {
+    console.log(`Los posts adicionales ya están cargados (${existingAdditionalPosts.length} posts)`);
+    
+    // Notify rendering module
+    if (typeof Rendering !== 'undefined' && Rendering.setAdditionalPostsLoaded) {
+      Rendering.setAdditionalPostsLoaded();
+    }
+    
+    // Apply current filters
+    setTimeout(() => {
+      if (typeof window.applyFilters === 'function') {
+        window.applyFilters(getDOMElements());
+      }
+    }, 50);
+    
+    return true;
+  }
+  return false;
+}
+
+// Create and insert loading indicator
+function createLoadingIndicator(mainPostsContainer, additionalPostsMarker) {
+  const loadingElement = document.createElement('div');
+  loadingElement.className = 'loading-indicator';
+  loadingElement.textContent = 'Cargando posts adicionales...';
+  mainPostsContainer.insertBefore(loadingElement, additionalPostsMarker);
+  return loadingElement;
+}
+
+// Collect existing post URLs to avoid duplicates
+function collectExistingPostUrls(mainPostsContainer) {
+  const existingPostUrls = new Set();
+  const existingPosts = mainPostsContainer.querySelectorAll('.archive-post-item[data-original-post="true"]');
+  existingPosts.forEach(post => {
+    const url = post.dataset.url || '';
+    if (url) existingPostUrls.add(url);
+  });
+  return existingPostUrls;
+}
+
+// Process loaded posts data
+function processPostsData(data, existingPostUrls, loadingElement, additionalPostsMarker, mainPostsContainer) {
+  if (!data || !data.posts || !Array.isArray(data.posts)) {
+    throw new Error('Formato de datos inválido');
+  }
+  
+  // Filter out duplicates
+  const nonDuplicatePosts = data.posts.filter(post => !existingPostUrls.has(post.url));
+  console.log(`Filtrando duplicados: ${data.posts.length} posts totales, ${nonDuplicatePosts.length} posts únicos`);
+  
+  // Remove loading indicator
+  if (loadingElement && loadingElement.parentNode) {
+    loadingElement.parentNode.removeChild(loadingElement);
+  }
+  
+  // Create HTML for each post
+  const postsHTML = nonDuplicatePosts.map(createPostElement).join('');
+  
+  // Insert posts before marker
+  additionalPostsMarker.insertAdjacentHTML('beforebegin', postsHTML);
+  console.log(`${nonDuplicatePosts.length} posts adicionales cargados y añadidos al DOM`);
+  
+  // Save in sessionStorage for future navigation
+  saveToSessionStorage(postsHTML);
+  
+  // Notify rendering module
+  if (typeof Rendering !== 'undefined' && Rendering.setAdditionalPostsLoaded) {
+    Rendering.setAdditionalPostsLoaded();
+  }
+  
+  // Add event listeners to new filter links
+  addEventListenersToNewPosts(mainPostsContainer);
+  
+  // Apply current filters
+  setTimeout(() => {
+    if (typeof window.applyFilters === 'function') {
+      window.applyFilters(getDOMElements());
+    }
+  }, 50);
+}
+
+// Save posts HTML to sessionStorage
+function saveToSessionStorage(postsHTML) {
+  try {
+    sessionStorage.setItem('additionalPosts', postsHTML);
+    sessionStorage.setItem('additionalPostsTimestamp', Date.now().toString());
+  } catch (e) {
+    console.warn('No se pudieron guardar los posts adicionales en sessionStorage:', e);
+  }
+}
+
+// Add event listeners to new filter links
+function addEventListenersToNewPosts(mainPostsContainer) {
+  const newCategoryLinks = mainPostsContainer.querySelectorAll('.archive-post-item[data-additional-post="true"] .category-filter-link');
+  const newTagLinks = mainPostsContainer.querySelectorAll('.archive-post-item[data-additional-post="true"] .tag-filter-link');
+  
+  initLinkListeners(newCategoryLinks, 'category');
+  initLinkListeners(newTagLinks, 'tag');
+}
+
+// Handle error when loading posts
+function handleLoadError(error, loadingElement, additionalPostsMarker, mainPostsContainer) {
+  console.error('Error al cargar posts adicionales:', error);
+  
+  // Remove loading indicator
+  if (loadingElement && loadingElement.parentNode) {
+    loadingElement.parentNode.removeChild(loadingElement);
+  }
+  
+  // Insert error message
+  const errorHTML = '<div class="error-message">Error al cargar posts adicionales. <button class="retry-button">Reintentar</button></div>';
+  additionalPostsMarker.insertAdjacentHTML('beforebegin', errorHTML);
+  
+  // Add event listener to retry button
+  const retryButton = mainPostsContainer.querySelector('.error-message .retry-button');
+  if (retryButton) {
+    retryButton.addEventListener('click', () => {
+      const errorMessage = mainPostsContainer.querySelector('.error-message');
+      if (errorMessage && errorMessage.parentNode) {
+        errorMessage.parentNode.removeChild(errorMessage);
       }
       
-      // Notificar al módulo de renderizado
-      if (typeof Rendering !== 'undefined' && Rendering.setAdditionalPostsLoaded) {
-        Rendering.setAdditionalPostsLoaded();
-      }
-      
-      // Añadir event listeners a los nuevos enlaces de filtro
-      const newCategoryLinks = mainPostsContainer.querySelectorAll('.archive-post-item[data-additional-post="true"] .category-filter-link');
-      const newTagLinks = mainPostsContainer.querySelectorAll('.archive-post-item[data-additional-post="true"] .tag-filter-link');
-      
-      initLinkListeners(newCategoryLinks, 'category');
-      initLinkListeners(newTagLinks, 'tag');
-      
-      // Aplicar filtros actuales
-      setTimeout(() => {
-        if (typeof window.applyFilters === 'function') {
-          window.applyFilters(getDOMElements());
-        }
-      }, 50);
-    })
-    .catch(error => {
-      console.error('Error al cargar posts adicionales:', error);
-      
-      // Eliminar el indicador de carga
-      if (loadingElement && loadingElement.parentNode) {
-        loadingElement.parentNode.removeChild(loadingElement);
-      }
-      
-      // Insertar mensaje de error antes del marcador
-      const errorHTML = '<div class="error-message">Error al cargar posts adicionales. <button class="retry-button">Reintentar</button></div>';
-      additionalPostsMarker.insertAdjacentHTML('beforebegin', errorHTML);
-      
-      // Ocultar indicador de carga
-      if (loadingIndicator) loadingIndicator.style.display = 'none';
-      
-      // Añadir event listener al botón de reintentar
-      const retryButton = mainPostsContainer.querySelector('.error-message .retry-button');
-      if (retryButton) {
-        retryButton.addEventListener('click', () => {
-          // Eliminar el mensaje de error
-          const errorMessage = mainPostsContainer.querySelector('.error-message');
-          if (errorMessage && errorMessage.parentNode) {
-            errorMessage.parentNode.removeChild(errorMessage);
-          }
-          
-          window.loadAdditionalPosts();
-        });
-      }
+      window.loadAdditionalPosts();
     });
+  }
+}
+
+// Main function to load additional posts
+window.loadAdditionalPosts = function() {
+  console.log('Cargando posts adicionales...');
+  
+  const mainPostsContainer = document.getElementById('main-posts-list');
+  const additionalPostsMarker = document.getElementById('additional-posts-marker');
+  
+  if (!mainPostsContainer || !additionalPostsMarker) {
+    console.error('No se encontraron los elementos necesarios para cargar posts adicionales');
+    return;
+  }
+  
+  // Check if additional posts are already loaded
+  if (checkExistingAdditionalPosts(mainPostsContainer)) {
+    return;
+  }
+  
+  // Insert loading indicator
+  const loadingElement = createLoadingIndicator(mainPostsContainer, additionalPostsMarker);
+  
+  // Collect existing post URLs to avoid duplicates
+  const existingPostUrls = collectExistingPostUrls(mainPostsContainer);
+  
+  // Load posts from server
+  fetch('/posts.json')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Error al cargar posts adicionales: ${response.status} ${response.statusText}`);
+      }
+      return response.json();
+    })
+    .then(data => processPostsData(data, existingPostUrls, loadingElement, additionalPostsMarker, mainPostsContainer))
+    .catch(error => handleLoadError(error, loadingElement, additionalPostsMarker, mainPostsContainer));
 };
 
 
