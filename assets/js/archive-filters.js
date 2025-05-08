@@ -5,7 +5,10 @@ import { Dropdowns } from './modules/dropdowns.js';
 import { URLManager } from './modules/urlManager.js';
 import { Search } from './modules/search.js';
 
-// In the initArchiveFilters function, add:
+// Add this flag at the top of the file, after imports
+let initialFilterApplied = false;
+
+// Modify the initArchiveFilters function
 const initArchiveFilters = () => {
   console.log('Inicializando filtros de archivo');
   const archivePage = document.querySelector('.archive-page');
@@ -27,7 +30,11 @@ const initArchiveFilters = () => {
   else applyURLFilters(DOM);
 
   // Aplicar filtros iniciales - aumentamos el tiempo para asegurar que todo esté listo
-  setTimeout(() => applyFilters(DOM), 100);
+  // Prevent multiple filter applications during initialization
+  if (!initialFilterApplied) {
+    initialFilterApplied = true;
+    setTimeout(() => applyFilters(DOM), 100);
+  }
 };
 
 function getDOMElements() {
@@ -372,9 +379,45 @@ function matchesTaxonomy(postTaxonomies, filterValue) {
   }
 }
 
+// Utility function to check and remove duplicate posts
+function checkAndRemoveDuplicates(container) {
+  if (!container) return [];
+  
+  const allPosts = container.querySelectorAll('.archive-post-item');
+  const postUrls = new Map();
+  const duplicates = [];
+  
+  allPosts.forEach(item => {
+    const url = item.dataset.url || item.querySelector('a.post-link')?.getAttribute('href');
+    if (url) {
+      if (postUrls.has(url)) {
+        // This is a duplicate
+        duplicates.push(item);
+      } else {
+        postUrls.set(url, item);
+      }
+    }
+  });
+  
+  // Remove duplicates if found
+  if (duplicates.length > 0) {
+    console.warn(`Encontrados ${duplicates.length} posts duplicados, eliminando...`);
+    duplicates.forEach(item => {
+      if (item.parentNode) {
+        item.parentNode.removeChild(item);
+      }
+    });
+  }
+  
+  return duplicates;
+}
+
 function applyFilters(DOM) {
   console.log('Aplicando filtros...');
-  if (window.isProcessing) return;
+  if (window.isProcessing) {
+    console.log('Ya se están procesando filtros, ignorando solicitud');
+    return;
+  }
   window.isProcessing = true;
 
   if (DOM.filterContainer) DOM.filterContainer.classList.add('loading');
@@ -386,11 +429,14 @@ function applyFilters(DOM) {
 
     console.log(`Aplicando filtros con: categoría="${currentCategoryFilter}", tag="${currentTagFilter}", ordenación=${currentSortMethod}, dirección=${currentSortDirection}, búsqueda="${currentSearchQuery}"`);
 
-    // Get all posts from the unified container
-    const allPostItems = Array.from(DOM.mainPostsContainer?.querySelectorAll('.archive-post-item') || []);
+    // Check for and remove duplicates
+    checkAndRemoveDuplicates(DOM.mainPostsContainer);
+    
+    // Continue with normal filtering on the deduplicated posts
+    const deduplicatedPosts = Array.from(DOM.mainPostsContainer?.querySelectorAll('.archive-post-item') || []);
     
     // Filter by taxonomy using the utility function
-    const filteredByTaxonomy = allPostItems.filter(item => {
+    const filteredByTaxonomy = deduplicatedPosts.filter(item => {
       const postCategories = item.dataset.categories || '';
       const postTags = item.dataset.tags || '';
       
@@ -632,6 +678,8 @@ function handleLoadError(error, loadingElement, additionalPostsMarker, mainPosts
 }
 
 // Main function to load additional posts
+// Modify loadAdditionalPosts to check for duplicates
+// And modify the loadAdditionalPosts function to use the utility
 window.loadAdditionalPosts = function() {
   console.log('Cargando posts adicionales...');
   
@@ -645,6 +693,18 @@ window.loadAdditionalPosts = function() {
   
   // Check if additional posts are already loaded
   if (checkExistingAdditionalPosts(mainPostsContainer)) {
+    // Check for and remove duplicates
+    const duplicatesRemoved = checkAndRemoveDuplicates(mainPostsContainer);
+    
+    // Apply filters again after removing duplicates if any were found
+    if (duplicatesRemoved.length > 0) {
+      setTimeout(() => {
+        if (typeof window.applyFilters === 'function') {
+          window.applyFilters(getDOMElements());
+        }
+      }, 50);
+    }
+    
     return;
   }
   
