@@ -5,8 +5,7 @@ import { Dropdowns } from './modules/dropdowns.js';
 import { URLManager } from './modules/urlManager.js';
 import { Search } from './modules/search.js';
 
-// Función para inicializar los filtros
-// Función para inicializar los filtros
+// In the initArchiveFilters function, add:
 const initArchiveFilters = () => {
   console.log('Inicializando filtros de archivo');
   const archivePage = document.querySelector('.archive-page');
@@ -18,6 +17,11 @@ const initArchiveFilters = () => {
   initializeDropdowns(DOM);
   initializeSearch(DOM);
   initializeEventListeners(DOM);
+
+  // Configurar lazy loading para posts adicionales
+  if (typeof Rendering !== 'undefined' && Rendering.setupLazyLoading) {
+    Rendering.setupLazyLoading();
+  }
 
   if (isFirstVisit) resetAllFilters(DOM);
   else applyURLFilters(DOM);
@@ -53,7 +57,7 @@ function getDOMElements() {
     noResultsMessage: document.querySelector('.no-results-message'),
     noResultsResetBtn: document.querySelector('.no-results-message .reset-filters-btn'),
     mainPostsContainer: document.getElementById('main-posts-list'),
-    additionalPostsContainer: document.getElementById('additional-posts-container')
+    additionalPostsMarker: document.getElementById('additional-posts-marker')
   };
 }
 
@@ -136,9 +140,41 @@ function resetAllFilters({ searchInput, clearSearchBtn }) {
 function applyURLFilters({ searchInput, clearSearchBtn, sortButtons }) {
   const params = new URLSearchParams(window.location.search);
   
-  // Si hay parámetros, aplicarlos
-  Filters.setCategoryFilter(params.get('category') || 'all');
-  Filters.setTagFilter(params.get('tag') || 'all');
+  // Si hay parámetros, aplicarlos - Asegurarse de decodificar correctamente los parámetros
+  let categoryParam = params.get('category') || 'all';
+  let tagParam = params.get('tag') || 'all';
+  
+  // Decodificar correctamente los parámetros para manejar espacios y caracteres especiales
+  if (categoryParam !== 'all') {
+    try {
+      // Primero decodificar con decodeURIComponent para manejar %20
+      categoryParam = decodeURIComponent(categoryParam);
+      // Luego reemplazar cualquier + que pueda quedar
+      categoryParam = categoryParam.replace(/\+/g, ' ');
+      console.log(`Categoría decodificada de URL: "${categoryParam}"`);
+    } catch (e) {
+      console.warn('Error al decodificar categoría:', e);
+      // Si falla, intentar solo reemplazar +
+      categoryParam = categoryParam.replace(/\+/g, ' ');
+    }
+  }
+  
+  if (tagParam !== 'all') {
+    try {
+      // Primero decodificar con decodeURIComponent para manejar %20
+      tagParam = decodeURIComponent(tagParam);
+      // Luego reemplazar cualquier + que pueda quedar
+      tagParam = tagParam.replace(/\+/g, ' ');
+      console.log(`Tag decodificado de URL: "${tagParam}"`);
+    } catch (e) {
+      console.warn('Error al decodificar tag:', e);
+      // Si falla, intentar solo reemplazar +
+      tagParam = tagParam.replace(/\+/g, ' ');
+    }
+  }
+  
+  Filters.setCategoryFilter(categoryParam);
+  Filters.setTagFilter(tagParam);
   
   // Mejorar la aplicación de parámetros de ordenación
   const sortMethod = params.get('sort') || 'date';
@@ -152,7 +188,15 @@ function applyURLFilters({ searchInput, clearSearchBtn, sortButtons }) {
   
   // Set initial search query from URL if present
   if (params.has('search')) {
-    const searchQuery = params.get('search');
+    let searchQuery = params.get('search');
+    try {
+      searchQuery = decodeURIComponent(searchQuery);
+      searchQuery = searchQuery.replace(/\+/g, ' ');
+    } catch (e) {
+      console.warn('Error al decodificar búsqueda:', e);
+      searchQuery = searchQuery.replace(/\+/g, ' ');
+    }
+    
     Search.setSearchQuery(searchQuery);
     if (searchInput) {
       searchInput.value = searchQuery;
@@ -185,7 +229,8 @@ function initFilterListeners(filters, type, dropdownContent) {
       e.preventDefault();
       e.stopPropagation();
 
-      const value = filter.dataset[type];
+      // Asegurarse de que el valor del filtro se obtenga correctamente, incluso con espacios
+      const value = filter.dataset[type].toLowerCase(); // Ensure lowercase for consistency
       const currentValue = Filters.getCurrentFilters()[`current${capitalize(type)}Filter`];
 
       // Cerrar dropdown si está abierto
@@ -196,6 +241,7 @@ function initFilterListeners(filters, type, dropdownContent) {
       // Si es el mismo filtro, no hacer nada más
       if (value === currentValue) return;
 
+      console.log(`Aplicando filtro de ${type}: "${value}"`);
       Filters[`set${capitalize(type)}Filter`](value);
       applyFilters(getDOMElements());
     });
@@ -210,8 +256,15 @@ function initLinkListeners(links, type) {
   links?.forEach(link => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
-      const value = link.dataset.filter;
-      if (value === Filters.getCurrentFilters()[`current${capitalize(type)}Filter`]) return;
+      
+      // Asegurarse de que el valor del filtro se obtenga correctamente
+      const value = link.dataset.filter.toLowerCase();
+      const currentValue = Filters.getCurrentFilters()[`current${capitalize(type)}Filter`].toLowerCase();
+      
+      // Si es el mismo filtro, no hacer nada más
+      if (value === currentValue) return;
+      
+      console.log(`Aplicando filtro de ${type} desde enlace: "${value}"`);
       Filters[`set${capitalize(type)}Filter`](value);
       applyFilters(getDOMElements());
     });
@@ -245,13 +298,6 @@ function initSortButtons(buttons) {
         console.log(`Cambiando método a: ${sortMethod}, dirección: ${direction}`);
         Sorting.setSortMethod(sortMethod, direction);
       }
-      
-      // Usar la función del módulo Sorting para actualizar los botones
-      Sorting.updateActiveSortButton(document.querySelectorAll('.sort-button'), sortMethod, 
-        sortMethod === currentSortMethod ? 
-          (currentSortDirection === 'desc' ? 'asc' : 'desc') : 
-          (newButton.dataset.direction || 'desc')
-      );
       
       applyFilters(getDOMElements());
     });
@@ -320,21 +366,126 @@ function applyFilters(DOM) {
     const { currentSortMethod, currentSortDirection } = Sorting.getCurrentSort();
     const currentSearchQuery = Search.getCurrentSearchQuery();
 
-    const additionalPostsContainer = DOM.additionalPostsContainer;
-    let additionalPostsBackup = (additionalPostsContainer && additionalPostsContainer.children.length > 0)
-      ? additionalPostsContainer.innerHTML
-      : null;
+    console.log(`Aplicando filtros con: categoría="${currentCategoryFilter}", tag="${currentTagFilter}", ordenación=${currentSortMethod}, dirección=${currentSortDirection}, búsqueda="${currentSearchQuery}"`);
 
-    // Filtrar y ordenar posts
-    const filteredByTaxonomy = Array.from(DOM.postItems).filter(item => {
-      const matchesCategory = currentCategoryFilter === 'all' || item.dataset.categories?.includes(currentCategoryFilter);
-      const matchesTag = currentTagFilter === 'all' || item.dataset.tags?.includes(currentTagFilter);
+    // Obtener todos los posts del contenedor unificado
+    const allPostItems = Array.from(DOM.mainPostsContainer?.querySelectorAll('.archive-post-item') || []);
+    
+    const originalPosts = allPostItems.filter(p => p.dataset.originalPost === 'true');
+    const additionalPosts = allPostItems.filter(p => p.dataset.additionalPost === 'true');
+    
+    console.log(`Aplicando filtros a ${allPostItems.length} posts (${originalPosts.length} originales, ${additionalPosts.length} adicionales)`);
+
+    // Filtrar por taxonomía - Mejorar manejo de espacios y caracteres especiales
+    const filteredByTaxonomy = allPostItems.filter(item => {
+      // Convertir a minúsculas para comparación case-insensitive
+      const categoryFilterLower = currentCategoryFilter.toLowerCase();
+      const tagFilterLower = currentTagFilter.toLowerCase();
+      
+      // Obtener categorías y tags del post
+      const postCategories = (item.dataset.categories || '').toLowerCase();
+      const postTags = (item.dataset.tags || '').toLowerCase();
+      
+      // Debug para ver qué valores estamos comparando
+      if (categoryFilterLower !== 'all' || tagFilterLower !== 'all') {
+        console.log(`Comparando: 
+          Post: ${item.querySelector('.post-link')?.textContent || 'Sin título'}
+          Categorías del post: "${postCategories}"
+          Filtro de categoría: "${categoryFilterLower}"
+          Tags del post: "${postTags}"
+          Filtro de tag: "${tagFilterLower}"
+          Es post adicional: ${item.dataset.additionalPost === 'true'}`);
+      }
+      
+      // Verificar si coincide con el filtro de categoría
+      let matchesCategory = categoryFilterLower === 'all';
+      if (!matchesCategory) {
+        // Para manejar categorías con espacios o caracteres especiales
+        if (categoryFilterLower.includes(' ') || categoryFilterLower.includes('/')) {
+          // Método 1: Buscar la categoría exacta en el string completo
+          const regex = new RegExp(`\\b${escapeRegExp(categoryFilterLower)}\\b`, 'i');
+          const matchRegex = regex.test(postCategories);
+          
+          // Método 2: Verificar si está en el array de categorías
+          let matchArray = false;
+          try {
+            // Intentar obtener el array de categorías del debug data
+            if (item.dataset.categoriesDebug) {
+              const categoriesArray = JSON.parse(item.dataset.categoriesDebug);
+              matchArray = categoriesArray.some(cat => cat.toLowerCase() === categoryFilterLower);
+            }
+          } catch (e) {
+            console.warn('Error al parsear categorías debug:', e);
+          }
+          
+          // Método 3: Dividir por espacios y buscar coincidencia exacta
+          const categoriesArray = postCategories.split(' ').filter(Boolean);
+          const matchSplit = categoriesArray.some(cat => cat === categoryFilterLower);
+          
+          // Combinar resultados
+          matchesCategory = matchRegex || matchArray || matchSplit;
+          
+          if (matchesCategory) {
+            console.log(`Coincidencia de categoría encontrada para "${categoryFilterLower}" en post "${item.querySelector('.post-link')?.textContent || 'Sin título'}" - Regex: ${matchRegex}, Array: ${matchArray}, Split: ${matchSplit}`);
+          }
+        } else {
+          // Para categorías simples, dividir y buscar coincidencia exacta
+          const categoriesArray = postCategories.split(' ').filter(Boolean);
+          matchesCategory = categoriesArray.includes(categoryFilterLower);
+        }
+      }
+      
+      // Verificar si coincide con el filtro de tag
+      let matchesTag = tagFilterLower === 'all';
+      if (!matchesTag) {
+        // Para manejar tags con espacios o caracteres especiales
+        if (tagFilterLower.includes(' ') || tagFilterLower.includes('/')) {
+          // Método 1: Buscar el tag exacto en el string completo
+          const regex = new RegExp(`\\b${escapeRegExp(tagFilterLower)}\\b`, 'i');
+          const matchRegex = regex.test(postTags);
+          
+          // Método 2: Verificar si está en el array de tags
+          let matchArray = false;
+          try {
+            // Intentar obtener el array de tags del debug data
+            if (item.dataset.tagsDebug) {
+              const tagsArray = JSON.parse(item.dataset.tagsDebug);
+              matchArray = tagsArray.some(tag => tag.toLowerCase() === tagFilterLower);
+            }
+          } catch (e) {
+            console.warn('Error al parsear tags debug:', e);
+          }
+          
+          // Método 3: Dividir por espacios y buscar coincidencia exacta
+          const tagsArray = postTags.split(' ').filter(Boolean);
+          const matchSplit = tagsArray.some(tag => tag === tagFilterLower);
+          
+          // Combinar resultados
+          matchesTag = matchRegex || matchArray || matchSplit;
+          
+          if (matchesTag) {
+            console.log(`Coincidencia de tag encontrada para "${tagFilterLower}" en post "${item.querySelector('.post-link')?.textContent || 'Sin título'}" - Regex: ${matchRegex}, Array: ${matchArray}, Split: ${matchSplit}`);
+          }
+        } else {
+          // Para tags simples, dividir y buscar coincidencia exacta
+          const tagsArray = postTags.split(' ').filter(Boolean);
+          matchesTag = tagsArray.includes(tagFilterLower);
+        }
+      }
+      
       return matchesCategory && matchesTag;
     });
 
+    // Filtrar por búsqueda
     const filteredPosts = Search.filterPostsBySearch(filteredByTaxonomy, currentSearchQuery);
+    
+    // Ordenar posts
+    console.log(`Ordenando ${filteredPosts.length} posts por ${currentSortMethod} en dirección ${currentSortDirection}`);
     const sortedPosts = Sorting.sortPosts(filteredPosts, currentSortMethod, currentSortDirection);
 
+    console.log(`Después de filtrar: ${filteredPosts.length} posts, después de ordenar: ${sortedPosts.length} posts`);
+
+    // Renderizar posts
     Rendering.renderPosts(sortedPosts);
 
     // Actualizaciones visuales
@@ -355,110 +506,243 @@ function applyFilters(DOM) {
     URLManager.updateURL(currentCategoryFilter, currentTagFilter, currentSortMethod, currentSortDirection, currentSearchQuery);
 
     if (DOM.filterContainer) DOM.filterContainer.classList.remove('loading');
-
-    // Restaurar posts adicionales si desaparecieron
-    setTimeout(() => {
-      if (additionalPostsContainer && additionalPostsBackup && additionalPostsContainer.children.length === 0) {
-        console.log('Los posts adicionales desaparecieron después de aplicar filtros, restaurando...');
-        additionalPostsContainer.innerHTML = additionalPostsBackup;
-
-        Rendering.setAdditionalPostsLoaded?.();
-        Rendering.applyVisualFilters?.(currentCategoryFilter, currentTagFilter, currentSearchQuery, currentSortMethod, currentSortDirection);
-      }
-
-      window.isProcessing = false;
-    }, 100);
+    window.isProcessing = false;
   }, 10);
+}
+
+// Función auxiliar para escapar caracteres especiales en expresiones regulares
+function escapeRegExp(string) {
+  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
 
 
-// Función para cargar posts adicionales
 window.loadAdditionalPosts = function() {
   console.log('Cargando posts adicionales...');
-  const additionalPostsContainer = document.getElementById('additional-posts-container');
+  const mainPostsContainer = document.getElementById('main-posts-list');
+  const additionalPostsMarker = document.getElementById('additional-posts-marker');
+  const loadingIndicator = document.getElementById('posts-loading-indicator');
   
-  if (!additionalPostsContainer) {
-    console.error('No se encontró el contenedor de posts adicionales');
+  if (!mainPostsContainer || !additionalPostsMarker) {
+    console.error('No se encontraron los elementos necesarios para cargar posts adicionales');
     return;
   }
   
+  // Mostrar indicador de carga si existe
+  if (loadingIndicator) loadingIndicator.style.display = 'block';
+  
   // Verificar si ya hay posts adicionales cargados
-  if (additionalPostsContainer.children.length > 0) {
-    console.log('Los posts adicionales ya están cargados');
+  const existingAdditionalPosts = mainPostsContainer.querySelectorAll('.archive-post-item[data-additional-post="true"]');
+  if (existingAdditionalPosts.length > 0) {
+    console.log(`Los posts adicionales ya están cargados (${existingAdditionalPosts.length} posts)`);
+    
+    // Ocultar indicador de carga
+    if (loadingIndicator) loadingIndicator.style.display = 'none';
     
     // Notificar al módulo de renderizado
     if (typeof Rendering !== 'undefined' && Rendering.setAdditionalPostsLoaded) {
       Rendering.setAdditionalPostsLoaded();
     }
     
+    // Aplicar filtros actuales
+    setTimeout(() => {
+      if (typeof window.applyFilters === 'function') {
+        window.applyFilters(getDOMElements());
+      }
+    }, 50);
+    
     return;
   }
+  
+  // Insertar indicador de carga antes del marcador
+  const loadingElement = document.createElement('div');
+  loadingElement.className = 'loading-indicator';
+  loadingElement.textContent = 'Cargando posts adicionales...';
+  mainPostsContainer.insertBefore(loadingElement, additionalPostsMarker);
+  
+  // Recopilar URLs de posts ya mostrados para evitar duplicados
+  const existingPostUrls = new Set();
+  const existingPosts = mainPostsContainer.querySelectorAll('.archive-post-item[data-original-post="true"]');
+  existingPosts.forEach(post => {
+    const url = post.dataset.url || '';
+    if (url) {
+      existingPostUrls.add(url);
+    }
+  });
+  
+  console.log(`Detectados ${existingPostUrls.size} posts existentes para evitar duplicados`);
   
   // Intentar recuperar de sessionStorage primero
   try {
     const savedPosts = sessionStorage.getItem('additionalPosts');
-    if (savedPosts) {
-      additionalPostsContainer.innerHTML = savedPosts;
-      console.log('Posts adicionales restaurados desde sessionStorage');
+    const timestamp = sessionStorage.getItem('additionalPostsTimestamp');
+    const now = Date.now();
+    const maxAge = 24 * 60 * 60 * 1000; // 24 horas en milisegundos
+    
+    // Verificar si los posts guardados son recientes (menos de 24 horas)
+    if (savedPosts && timestamp && (now - parseInt(timestamp)) < maxAge) {
+      // Crear un elemento temporal para analizar el HTML guardado
+      const tempDiv = document.createElement('div');
+      tempDiv.innerHTML = savedPosts;
       
-      // Notificar al módulo de renderizado
-      if (typeof Rendering !== 'undefined' && Rendering.setAdditionalPostsLoaded) {
-        Rendering.setAdditionalPostsLoaded();
+      // Filtrar posts duplicados
+      const nonDuplicatePosts = Array.from(tempDiv.children).filter(post => {
+        const link = post.querySelector('.post-link');
+        return link && link.getAttribute('href') && !existingPostUrls.has(link.getAttribute('href'));
+      });
+      
+      if (nonDuplicatePosts.length > 0) {
+        // Eliminar el indicador de carga
+        if (loadingElement && loadingElement.parentNode) {
+          loadingElement.parentNode.removeChild(loadingElement);
+        }
+        
+        // Añadir solo los posts no duplicados antes del marcador
+        nonDuplicatePosts.forEach(post => {
+          mainPostsContainer.insertBefore(post.cloneNode(true), additionalPostsMarker);
+        });
+        
+        console.log(`Posts adicionales restaurados desde sessionStorage (${nonDuplicatePosts.length} posts no duplicados)`);
+        
+        // Ocultar indicador de carga
+        if (loadingIndicator) loadingIndicator.style.display = 'none';
+        
+        // Notificar al módulo de renderizado
+        if (typeof Rendering !== 'undefined' && Rendering.setAdditionalPostsLoaded) {
+          Rendering.setAdditionalPostsLoaded();
+        }
+        
+        // Añadir event listeners a los nuevos enlaces
+        const newCategoryLinks = mainPostsContainer.querySelectorAll('.archive-post-item[data-additional-post="true"] .category-filter-link');
+        const newTagLinks = mainPostsContainer.querySelectorAll('.archive-post-item[data-additional-post="true"] .tag-filter-link');
+        
+        initLinkListeners(newCategoryLinks, 'category');
+        initLinkListeners(newTagLinks, 'tag');
+        
+        // Aplicar filtros actuales
+        setTimeout(() => {
+          if (typeof window.applyFilters === 'function') {
+            window.applyFilters(getDOMElements());
+          }
+        }, 50);
+        
+        return;
+      } else {
+        console.log('Todos los posts en sessionStorage son duplicados, cargando desde el servidor');
       }
-      
-      // Aplicar filtros actuales
-      applyFilters(getDOMElements());
-      return;
     }
   } catch (e) {
     console.warn('Error al recuperar posts adicionales de sessionStorage:', e);
   }
   
-  // Si no hay posts en sessionStorage, cargar desde el servidor
+  // Si no hay posts en sessionStorage o todos son duplicados, cargar desde el servidor
+  console.log('Realizando fetch a /posts.json');
   fetch('/posts.json')
     .then(response => {
+      console.log('Respuesta recibida:', response.status, response.statusText);
       if (!response.ok) {
-        throw new Error('Error al cargar posts adicionales');
+        throw new Error(`Error al cargar posts adicionales: ${response.status} ${response.statusText}`);
       }
       return response.json();
     })
     .then(data => {
+      console.log(`Datos recibidos: ${data.posts ? data.posts.length : 0} posts`);
+      
       if (!data || !data.posts || !Array.isArray(data.posts)) {
         throw new Error('Formato de datos inválido');
       }
       
-      // Crear elementos HTML para cada post
-      const postsHTML = data.posts.map(post => {
-        return `
-          <div class="archive-post-item additional-post" 
-               data-title="${post.title}" 
-               data-date="${post.date}" 
-               data-categories="${post.categories.join(',')}" 
-               data-tags="${post.tags.join(',')}"
-               data-additional-post="true">
-            <div class="post-meta">
-              <span class="post-date">${post.date_formatted}</span>
-            </div>
-            <h3 class="post-title">
-              <a href="${post.url}">${post.title}</a>
-            </h3>
-            <div class="post-categories">
-              ${post.categories.map(cat => 
-                `<a href="javascript:void(0);" class="category-filter-link" data-filter="${cat}">${cat}</a>`
-              ).join(', ')}
-            </div>
-            <div class="post-tags">
-              ${post.tags.map(tag => 
-                `<a href="javascript:void(0);" class="tag-filter-link" data-filter="${tag}">${tag}</a>`
-              ).join(', ')}
-            </div>
-          </div>
-        `;
-      }).join('');
+      // Filtrar posts para eliminar duplicados
+      const nonDuplicatePosts = data.posts.filter(post => !existingPostUrls.has(post.url));
+      console.log(`Filtrando duplicados: ${data.posts.length} posts totales, ${nonDuplicatePosts.length} posts únicos`);
       
-      // Añadir al contenedor
-      additionalPostsContainer.innerHTML = postsHTML;
+      // Eliminar el indicador de carga
+      if (loadingElement && loadingElement.parentNode) {
+        loadingElement.parentNode.removeChild(loadingElement);
+      }
+      
+// Crear elementos HTML para cada post no duplicado
+// Crear elementos HTML para cada post no duplicado
+const postsHTML = nonDuplicatePosts.map(post => {
+  // Asegurarse de que las categorías y tags sean arrays
+  const categories = Array.isArray(post.categories) ? post.categories : [];
+  const tags = Array.isArray(post.tags) ? post.tags : [];
+  
+  // Formatear la fecha correctamente para que coincida con el formato de Liquid
+  let formattedDate = post.date || '';
+  let displayDate = post.date_formatted || '';
+  
+  // Si tenemos una fecha pero no está en formato ISO, intentar convertirla
+  if (formattedDate && !formattedDate.includes('T')) {
+    try {
+      // Convertir a formato ISO similar al que usa Liquid
+      const dateObj = new Date(formattedDate);
+      if (!isNaN(dateObj)) {
+        formattedDate = dateObj.toISOString();
+        // Si no tenemos date_formatted, crear uno con el mismo formato que Liquid
+        if (!displayDate) {
+          const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+          displayDate = `${months[dateObj.getMonth()]} ${dateObj.getDate()}, ${dateObj.getFullYear()}`;
+        }
+      }
+    } catch (e) {
+      console.warn('Error al formatear la fecha:', e);
+    }
+  }
+  
+  // IMPORTANTE: Cambiar cómo formateamos las categorías y tags para que coincidan exactamente con el formato de Liquid
+  // En lugar de unir con espacios, vamos a usar el mismo formato que Jekyll
+  const categoriesData = categories.map(cat => cat.toLowerCase()).join(' ');
+  const tagsData = tags.map(tag => tag.toLowerCase()).join(' ');
+  
+  // Añadir atributos data adicionales para debugging
+  const categoriesDebug = JSON.stringify(categories);
+  const tagsDebug = JSON.stringify(tags);
+  
+  return `
+    <div class="archive-post-item" 
+         data-title="${post.title || ''}" 
+         data-date="${formattedDate}" 
+         data-categories="${categoriesData}" 
+         data-tags="${tagsData}"
+         data-categories-debug="${categoriesDebug.replace(/"/g, '&quot;')}"
+         data-tags-debug="${tagsDebug.replace(/"/g, '&quot;')}"
+         data-url="${post.url || ''}"
+         data-additional-post="true">
+      <div class="post-meta">
+      <span> generado2</span>
+
+        <span class="post-date" data-date="${formattedDate}">${displayDate}</span>
+        <a class="post-link" href="${post.url || '#'}">${post.title || 'Sin título'}</a>
+        
+        <div class="post-taxonomies">
+          ${categories.length > 0 ? `
+            <div class="post-categories">
+              ${categories.map(cat => 
+                `<a href="javascript:void(0);" class="category-badge category-filter-link" data-filter="${cat.toLowerCase()}">${cat}</a>`
+              ).join(' ')}
+            </div>
+          ` : ''}
+          
+          ${tags.length > 0 ? `
+            <div class="post-tags">
+              ${tags.map(tag => 
+                `<a href="javascript:void(0);" class="tag-badge tag-filter-link" data-filter="${tag.toLowerCase()}">#${tag}</a>`
+              ).join(' ')}
+            </div>
+          ` : ''}
+        </div>
+      </div>
+    </div>
+  `;
+}).join('');
+      
+      // Insertar los posts antes del marcador
+      additionalPostsMarker.insertAdjacentHTML('beforebegin', postsHTML);
+      console.log(`${nonDuplicatePosts.length} posts adicionales cargados y añadidos al DOM`);
+      
+      // Ocultar indicador de carga
+      if (loadingIndicator) loadingIndicator.style.display = 'none';
       
       // Guardar en sessionStorage para futuras navegaciones
       try {
@@ -468,34 +752,56 @@ window.loadAdditionalPosts = function() {
         console.warn('No se pudieron guardar los posts adicionales en sessionStorage:', e);
       }
       
-      // Añadir event listeners a los nuevos enlaces
-      const newCategoryLinks = additionalPostsContainer.querySelectorAll('.category-filter-link');
-      const newTagLinks = additionalPostsContainer.querySelectorAll('.tag-filter-link');
-      
-      initLinkListeners(newCategoryLinks, 'category');
-      initLinkListeners(newTagLinks, 'tag');
-      
       // Notificar al módulo de renderizado
       if (typeof Rendering !== 'undefined' && Rendering.setAdditionalPostsLoaded) {
         Rendering.setAdditionalPostsLoaded();
       }
       
+      // Añadir event listeners a los nuevos enlaces de filtro
+      const newCategoryLinks = mainPostsContainer.querySelectorAll('.archive-post-item[data-additional-post="true"] .category-filter-link');
+      const newTagLinks = mainPostsContainer.querySelectorAll('.archive-post-item[data-additional-post="true"] .tag-filter-link');
+      
+      initLinkListeners(newCategoryLinks, 'category');
+      initLinkListeners(newTagLinks, 'tag');
+      
       // Aplicar filtros actuales
-      applyFilters(getDOMElements());
+      setTimeout(() => {
+        if (typeof window.applyFilters === 'function') {
+          window.applyFilters(getDOMElements());
+        }
+      }, 50);
     })
     .catch(error => {
       console.error('Error al cargar posts adicionales:', error);
-      additionalPostsContainer.innerHTML = '<p class="error-message">Error al cargar posts adicionales. <button class="retry-button">Reintentar</button></p>';
+      
+      // Eliminar el indicador de carga
+      if (loadingElement && loadingElement.parentNode) {
+        loadingElement.parentNode.removeChild(loadingElement);
+      }
+      
+      // Insertar mensaje de error antes del marcador
+      const errorHTML = '<div class="error-message">Error al cargar posts adicionales. <button class="retry-button">Reintentar</button></div>';
+      additionalPostsMarker.insertAdjacentHTML('beforebegin', errorHTML);
+      
+      // Ocultar indicador de carga
+      if (loadingIndicator) loadingIndicator.style.display = 'none';
       
       // Añadir event listener al botón de reintentar
-      const retryButton = additionalPostsContainer.querySelector('.retry-button');
+      const retryButton = mainPostsContainer.querySelector('.error-message .retry-button');
       if (retryButton) {
         retryButton.addEventListener('click', () => {
+          // Eliminar el mensaje de error
+          const errorMessage = mainPostsContainer.querySelector('.error-message');
+          if (errorMessage && errorMessage.parentNode) {
+            errorMessage.parentNode.removeChild(errorMessage);
+          }
+          
           window.loadAdditionalPosts();
         });
       }
     });
 };
+
 
 // Exportar la función para que pueda ser llamada desde fuera
 window.initArchiveFilters = initArchiveFilters;

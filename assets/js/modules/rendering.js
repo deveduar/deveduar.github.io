@@ -4,89 +4,236 @@ export const Rendering = (() => {
   let additionalPostsLoaded = false;
   
   const renderPosts = (sortedPosts) => {
-    // Separar los contenedores
+    console.log(`Renderizando ${sortedPosts.length} posts en total`);
+    
     const mainPostsContainer = document.getElementById('main-posts-list');
-    const additionalPostsContainer = document.getElementById('additional-posts-container');
-    const postItems = document.querySelectorAll('.archive-post-item');
+    const additionalPostsMarker = document.getElementById('additional-posts-marker');
     const noResultsMessage = document.querySelector('.no-results-message');
     
-    // Ocultar todos los posts primero
-    postItems.forEach(item => item.style.display = 'none');
+    if (!mainPostsContainer) {
+      console.error('No se encontró el contenedor de posts');
+      return;
+    }
     
     // Mostrar mensaje de no resultados si es necesario
     if (sortedPosts.length === 0) {
       if (noResultsMessage) noResultsMessage.style.display = 'block';
+      
+      // Ocultar todos los posts
+      const allPosts = mainPostsContainer.querySelectorAll('.archive-post-item');
+      allPosts.forEach(post => post.style.display = 'none');
+      
       return;
     } else {
       if (noResultsMessage) noResultsMessage.style.display = 'none';
     }
     
-    // Identificar a qué contenedor pertenece cada post
-    sortedPosts.forEach(post => {
-      post.style.display = 'block';
-      
-      // Verificar si es un post adicional
-      const isAdditionalPost = post.classList.contains('additional-post') || 
-                              post.dataset.additionalPost === 'true' ||
-                              post.closest('#additional-posts-container') !== null;
-      
-      // Mover al contenedor correcto
-      if (isAdditionalPost && additionalPostsContainer) {
-        additionalPostsContainer.appendChild(post);
-      } else if (mainPostsContainer) {
-        mainPostsContainer.appendChild(post);
+    // Enfoque más seguro: solo ocultar los posts que no están en sortedPosts
+    const allPosts = Array.from(mainPostsContainer.querySelectorAll('.archive-post-item'));
+    const sortedPostIds = sortedPosts.map(post => post.dataset.url || post.querySelector('a.post-link')?.getAttribute('href'));
+    
+    // Ocultar posts que no están en la lista ordenada
+    allPosts.forEach(post => {
+      const postUrl = post.dataset.url || post.querySelector('a.post-link')?.getAttribute('href');
+      if (!sortedPostIds.includes(postUrl)) {
+        post.style.display = 'none';
       }
     });
+    
+    // Mostrar y ordenar los posts que sí están en la lista
+    if (sortedPosts.length > 0) {
+      console.log('Aplicando orden visual a los posts...');
+      
+      // Crear un mapa para acceso rápido a los índices
+      const postOrderMap = new Map();
+      sortedPosts.forEach((post, index) => {
+        const postUrl = post.dataset.url || post.querySelector('a.post-link')?.getAttribute('href');
+        postOrderMap.set(postUrl, index);
+      });
+      
+      // Ordenar los posts visualmente (cambiando el orden de flexbox)
+      allPosts.forEach(post => {
+        const postUrl = post.dataset.url || post.querySelector('a.post-link')?.getAttribute('href');
+        if (postOrderMap.has(postUrl)) {
+          post.style.display = 'block';
+          post.style.order = postOrderMap.get(postUrl);
+        }
+      });
+      
+      // Asegurarse de que el contenedor usa flexbox
+      mainPostsContainer.style.display = 'flex';
+      mainPostsContainer.style.flexDirection = 'column';
+      
+      console.log('Posts ordenados visualmente según el criterio de ordenación');
+    } else {
+      // Si no hay posts que mostrar, simplemente mostrarlos
+      sortedPosts.forEach(post => {
+        post.style.display = 'block';
+      });
+    }
+    
+    // Verificar si necesitamos cargar más posts
+    checkIfMorePostsNeeded();
+  };
+  
+  // Función para aplicar filtros visuales sin modificar el DOM
+  // Función para aplicar filtros visuales sin modificar el DOM
+  const applyVisualFilters = (categoryFilter, tagFilter, searchQuery) => {
+    console.log('Aplicando filtros visuales a posts');
+    const mainPostsContainer = document.getElementById('main-posts-list');
+    
+    if (!mainPostsContainer) return;
+    
+    // Aplicar filtros a todos los posts
+    const allPosts = mainPostsContainer.querySelectorAll('.archive-post-item');
+    
+    // Convertir filtros a minúsculas para comparación case-insensitive
+    const categoryFilterLower = categoryFilter.toLowerCase();
+    const tagFilterLower = tagFilter.toLowerCase();
+    
+    console.log(`Aplicando filtros visuales: categoría="${categoryFilterLower}", tag="${tagFilterLower}", búsqueda="${searchQuery}"`);
+    
+    allPosts.forEach(post => {
+      // Obtener categorías y tags del post
+      const postCategories = (post.dataset.categories || '').toLowerCase();
+      const postTags = (post.dataset.tags || '').toLowerCase();
+      
+      // Verificar si coincide con el filtro de categoría
+      let matchesCategory = categoryFilterLower === 'all';
+      if (!matchesCategory) {
+        // Para manejar categorías con espacios o caracteres especiales
+        if (categoryFilterLower.includes(' ') || categoryFilterLower.includes('/')) {
+          // Buscar la categoría exacta en el string completo
+          const regex = new RegExp(`\\b${escapeRegExp(categoryFilterLower)}\\b`, 'i');
+          matchesCategory = regex.test(postCategories);
+        } else {
+          // Para categorías simples, dividir y buscar coincidencia exacta
+          const categoriesArray = postCategories.split(' ').filter(Boolean);
+          matchesCategory = categoriesArray.includes(categoryFilterLower);
+        }
+      }
+      
+      // Verificar si coincide con el filtro de tag
+      let matchesTag = tagFilterLower === 'all';
+      if (!matchesTag) {
+        // Para manejar tags con espacios o caracteres especiales
+        if (tagFilterLower.includes(' ') || tagFilterLower.includes('/')) {
+          // Buscar el tag exacto en el string completo
+          const regex = new RegExp(`\\b${escapeRegExp(tagFilterLower)}\\b`, 'i');
+          matchesTag = regex.test(postTags);
+        } else {
+          // Para tags simples, dividir y buscar coincidencia exacta
+          const tagsArray = postTags.split(' ').filter(Boolean);
+          matchesTag = tagsArray.includes(tagFilterLower);
+        }
+      }
+      
+      // Aplicar filtro de búsqueda
+      let matchesSearch = true;
+      if (searchQuery) {
+        const searchLower = searchQuery.toLowerCase();
+        const title = post.dataset.title?.toLowerCase() || '';
+        matchesSearch = title.includes(searchLower) || 
+                       postCategories.includes(searchLower) || 
+                       postTags.includes(searchLower);
+      }
+      
+      // Mostrar u ocultar según los filtros
+      post.style.display = (matchesCategory && matchesTag && matchesSearch) ? 'block' : 'none';
+      
+      // Debug para posts que no coinciden
+      if (categoryFilterLower !== 'all' || tagFilterLower !== 'all') {
+        if (!matchesCategory || !matchesTag) {
+          console.log(`Post no coincide: ${post.querySelector('.post-link')?.textContent || 'Sin título'} - Categoría: ${matchesCategory}, Tag: ${matchesTag}`);
+        }
+      }
+    });
+  };
+  
+  // Función auxiliar para escapar caracteres especiales en expresiones regulares
+  function escapeRegExp(string) {
+    return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  }
+  
+  // Función para verificar si necesitamos cargar más posts
+  const checkIfMorePostsNeeded = () => {
+    // Si los posts adicionales ya están cargados, no hacemos nada
+    if (additionalPostsLoaded) return;
+    
+    const mainPostsContainer = document.getElementById('main-posts-list');
+    const visiblePosts = mainPostsContainer ? 
+      Array.from(mainPostsContainer.querySelectorAll('.archive-post-item')).filter(post => 
+        post.style.display !== 'none'
+      ) : [];
+    
+    // Si hay menos de X posts visibles, cargar los adicionales
+    if (visiblePosts.length < 10) {
+      console.log(`Solo hay ${visiblePosts.length} posts visibles, cargando posts adicionales...`);
+      if (typeof window.loadAdditionalPosts === 'function') {
+        window.loadAdditionalPosts();
+      }
+    }
   };
   
   // Función para establecer que los posts adicionales están cargados
   const setAdditionalPostsLoaded = () => {
     additionalPostsLoaded = true;
+  };
+  
+  // Función para configurar lazy loading
+  const setupLazyLoading = () => {
+    console.log('Configurando lazy loading para posts adicionales');
     
-    // Guardar en sessionStorage para recuperación futura
-    const additionalPostsContainer = document.getElementById('additional-posts-container');
-    if (additionalPostsContainer && additionalPostsContainer.children.length > 0) {
-      try {
-        sessionStorage.setItem('additionalPosts', additionalPostsContainer.innerHTML);
-        sessionStorage.setItem('additionalPostsTimestamp', Date.now().toString());
-      } catch (e) {
-        console.warn('No se pudieron guardar los posts adicionales en sessionStorage:', e);
+    // Verificar si estamos en la página de archivo
+    const archivePage = document.querySelector('.archive-page');
+    if (!archivePage) return;
+    
+    // Verificar si ya tenemos posts adicionales cargados
+    const additionalPosts = document.querySelectorAll('.archive-post-item[data-additional-post="true"]');
+    if (additionalPosts.length > 0) {
+      console.log('Posts adicionales ya cargados');
+      additionalPostsLoaded = true;
+      return;
+    }
+    
+    // Configurar un observador de intersección para cargar posts adicionales
+    // cuando el usuario se acerca al final de la lista principal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !additionalPostsLoaded) {
+          console.log('Usuario cerca del final de la lista, cargando posts adicionales...');
+          if (typeof window.loadAdditionalPosts === 'function') {
+            window.loadAdditionalPosts();
+          }
+          observer.disconnect(); // Solo necesitamos cargar una vez
+        }
+      });
+    }, {
+      rootMargin: '0px 0px 200px 0px' // Cargar cuando estemos a 200px del final
+    });
+    
+    // Observar el marcador de posts adicionales
+    const loadMoreTrigger = document.getElementById('load-more-trigger');
+    if (loadMoreTrigger) {
+      observer.observe(loadMoreTrigger);
+    } else {
+      // Si no hay trigger, cargar inmediatamente
+      if (typeof window.loadAdditionalPosts === 'function') {
+        window.loadAdditionalPosts();
       }
     }
   };
   
-  // Función para limpiar duplicados sin eliminar posts adicionales
-  const cleanDuplicates = () => {
-    const additionalPostsContainer = document.getElementById('additional-posts-container');
-    if (!additionalPostsContainer) return;
-    
-    // Crear un mapa para rastrear posts únicos
-    const uniquePosts = new Map();
-    const duplicates = [];
-    
-    // Procesar solo los posts adicionales
-    Array.from(additionalPostsContainer.children).forEach(post => {
-      const postId = `${post.dataset.title}-${post.dataset.date}`;
-      
-      if (uniquePosts.has(postId)) {
-        duplicates.push(post);
-      } else {
-        uniquePosts.set(postId, post);
-      }
-    });
-    
-    // Eliminar duplicados
-    duplicates.forEach(duplicate => {
-      if (duplicate.parentNode) {
-        duplicate.parentNode.removeChild(duplicate);
-      }
-    });
+  // Función para reiniciar el estado
+  const reset = () => {
+    additionalPostsLoaded = false;
   };
-
+  
   return {
     renderPosts,
+    applyVisualFilters,
     setAdditionalPostsLoaded,
-    cleanDuplicates,
-    isAdditionalPostsLoaded: () => additionalPostsLoaded
+    setupLazyLoading,
+    reset
   };
 })();

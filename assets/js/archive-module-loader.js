@@ -7,6 +7,61 @@ window.getSortParameters = function() {
   };
 };
 
+// Añadir una función auxiliar para escapar caracteres especiales en expresiones regulares
+function escapeRegExp(string) {
+  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+// Función para asegurar que los filtros se aplican correctamente después de cargar posts adicionales
+window.ensureFiltersApplied = function() {
+  setTimeout(() => {
+    if (typeof window.applyFilters === 'function') {
+      console.log('Asegurando que los filtros se aplican correctamente después de cargar posts adicionales');
+      window.applyFilters();
+    }
+  }, 300);
+};
+
+// Modificar la función tryLoadAdditionalPosts para llamar a ensureFiltersApplied
+window.tryLoadAdditionalPosts = function (delay = 800, retryDelay = 500) {
+  setTimeout(() => {
+    if (typeof window.loadAdditionalPosts === 'function') {
+      window.loadAdditionalPosts();
+      
+      // Aplicar ordenación después de cargar posts adicionales
+      setTimeout(() => {
+        console.log('Aplicando ordenación después de cargar posts adicionales');
+        const { method, direction } = window.getSortParameters();
+        
+        // Actualizar botones de ordenación
+        window.updateSortButtonsDirectly(method, direction);
+        
+        // Aplicar filtros para ordenar todos los posts
+        window.ensureFiltersApplied();
+      }, 500);
+    } else {
+      console.warn('loadAdditionalPosts no está disponible, intentando de nuevo...');
+      setTimeout(() => {
+        if (typeof window.loadAdditionalPosts === 'function') {
+          window.loadAdditionalPosts();
+          
+          // Aplicar ordenación después de cargar posts adicionales
+          setTimeout(() => {
+            console.log('Aplicando ordenación después de cargar posts adicionales (retry)');
+            const { method, direction } = window.getSortParameters();
+            
+            // Actualizar botones de ordenación
+            window.updateSortButtonsDirectly(method, direction);
+            
+            // Aplicar filtros para ordenar todos los posts
+            window.ensureFiltersApplied();
+          }, 500);
+        }
+      }, retryDelay);
+    }
+  }, delay);
+};
+
 
 function initializeArchiveModules() {
   // Check if ARCHIVE_PATHS exists
@@ -28,18 +83,14 @@ function initializeArchiveModules() {
   }
 
   // Function to load archive modules
-  if (typeof window.loadArchiveScripts === 'function') {
-    window.loadArchiveScripts();
-  } else {
+  if (typeof window.loadArchiveScripts !== 'function') {
     window.loadArchiveScripts = function () {
-      // Usar la función utilitaria para obtener parámetros
-      const { method: sortMethod, direction: sortDirection } = window.getSortParameters();
+      const { method, direction } = window.getSortParameters();
 
-      // Guardar estos valores en sessionStorage
       try {
-        sessionStorage.setItem('lastSortMethod', sortMethod);
-        sessionStorage.setItem('lastSortDirection', sortDirection);
-        console.log(`Guardando en sessionStorage: método=${sortMethod}, dirección=${sortDirection}`);
+        sessionStorage.setItem('lastSortMethod', method);
+        sessionStorage.setItem('lastSortDirection', direction);
+        console.log(`Guardando en sessionStorage: método=${method}, dirección=${direction}`);
       } catch (e) {
         console.warn('No se pudo guardar en sessionStorage:', e);
       }
@@ -50,16 +101,12 @@ function initializeArchiveModules() {
         window.ARCHIVE_PATHS.ARCHIVE_FILTERS_PATH,
         'initArchiveFilters',
         function () {
-          // Callback después de cargar los módulos
           if (typeof window.initArchiveFilters === 'function') {
             window.initArchiveFilters();
           }
 
-         // Aplicar ordenación inicial - simplificado
-         const { method, direction } = window.getSortParameters();
-         window.updateSortButtonsDirectly(method, direction);
+          window.updateSortButtonsDirectly(method, direction);
 
-          // Aplicar filtros para actualizar la visualización
           setTimeout(() => {
             if (typeof window.applyFilters === 'function') {
               console.log('Aplicando filtros después de actualizar ordenación');
@@ -69,8 +116,9 @@ function initializeArchiveModules() {
         }
       );
     };
-    window.loadArchiveScripts();
   }
+
+  window.loadArchiveScripts();
 }
 
 // Función simplificada para actualizar botones de ordenación
@@ -85,19 +133,33 @@ window.updateSortButtonsDirectly = function(method, direction) {
   
   // Primero, quitar la clase active de todos los botones
   sortButtons.forEach(btn => {
-    btn.classList.remove('active');
+    btn.classList.remove('active', 'asc', 'desc');
   });
   
   // Luego, encontrar y activar el botón correspondiente al método actual
   const activeButton = Array.from(sortButtons).find(btn => btn.dataset.sort === method);
   if (activeButton) {
-    activeButton.classList.add('active');
+    activeButton.classList.add('active', direction);
     activeButton.dataset.direction = direction;
     
     // Actualizar el ícono si existe
     const icon = activeButton.querySelector('i');
     if (icon) {
       icon.className = direction === 'asc' ? 'fas fa-arrow-up' : 'fas fa-arrow-down';
+    }
+    
+    // Importante: Actualizar también el módulo de ordenación si está disponible
+    if (typeof window.Sorting !== 'undefined') {
+      if (typeof window.Sorting.setSortMethod === 'function') {
+        window.Sorting.setSortMethod(method, direction);
+        console.log(`Método de ordenación actualizado en módulo Sorting: ${method}, ${direction}`);
+      } else if (typeof window.Sorting.getCurrentSort === 'function') {
+        // Si no podemos establecer directamente, intentamos aplicar filtros
+        console.log('No se puede establecer directamente el método de ordenación, aplicando filtros...');
+        if (typeof window.applyFilters === 'function') {
+          window.applyFilters();
+        }
+      }
     }
     
     console.log(`Botón de ordenación activado: ${method}, dirección: ${direction}`);
@@ -126,24 +188,20 @@ window.archiveInitialized = false;
 window.initializeArchiveOnDOMReady = function() {
   if (document.querySelector('.archive-page')) {
     console.log('Inicializando archivo en DOMContentLoaded centralizado');
-    
-    // Pequeño retraso para asegurar que el DOM está listo
+
     setTimeout(function() {
-      // Usar la función utilitaria para inicializar componentes
       if (typeof window.initArchiveFilters === 'function') {
         window.initArchiveFilters();
       }
-      
-      // Obtener y aplicar parámetros de ordenación
+
       const { method, direction } = window.getSortParameters();
       window.updateSortButtonsDirectly(method, direction);
-      
-      // Cargar posts adicionales después de inicializar los filtros
+
+      // ✅ Usamos la función reutilizable
       setTimeout(() => {
-        if (typeof window.loadAdditionalPosts === 'function') {
-          window.loadAdditionalPosts();
-        }
-      }, 200);
+        console.log('Intentando cargar posts desde initializeArchiveOnDOMReady con retry');
+        window.tryLoadAdditionalPosts(300, 500);
+      }, 300);
     }, 100);
   }
 };

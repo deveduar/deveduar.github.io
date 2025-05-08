@@ -74,7 +74,7 @@ export const Dropdowns = (() => {
 
   const updateDropdownText = (selectedSpan, filterType, currentFilter) => {
     if (!selectedSpan) return;
-
+  
     if (currentFilter === 'all') {
       // Fix the pluralization for "category" -> "categories"
       if (filterType === 'category') {
@@ -83,11 +83,41 @@ export const Dropdowns = (() => {
         selectedSpan.textContent = `All ${filterType.charAt(0).toUpperCase() + filterType.slice(1)}s`;
       }
     } else {
-      const activeFilter = document.querySelector(`.${filterType}-filter[data-${filterType}="${currentFilter}"]`);
+      // Buscar el filtro activo de forma case-insensitive
+      const currentFilterLower = currentFilter.toLowerCase();
+      
+      // Mejorar la búsqueda para manejar espacios correctamente
+      const activeFilter = Array.from(document.querySelectorAll(`.${filterType}-filter`))
+        .find(el => {
+          const dataValue = (el.dataset[filterType] || '').toLowerCase();
+          // Comparación exacta para manejar correctamente los espacios
+          return dataValue === currentFilterLower;
+        });
+        
       if (activeFilter) {
         selectedSpan.textContent = activeFilter.textContent.replace(/\(\d+\)/, '').trim();
+      } else {
+        // Si no encontramos el filtro en los dropdowns, buscar en los enlaces de filtro
+        const activeFilterLink = Array.from(document.querySelectorAll(`.${filterType}-filter-link`))
+          .find(el => {
+            const dataValue = (el.dataset.filter || '').toLowerCase();
+            return dataValue === currentFilterLower;
+          });
+          
+        if (activeFilterLink) {
+          selectedSpan.textContent = activeFilterLink.textContent.replace(/^#/, '').trim();
+        } else {
+          // Si no encontramos el filtro, usar el valor directamente con la primera letra en mayúscula
+          const words = currentFilter.split(' ');
+          const capitalizedWords = words.map(word => 
+            word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+          );
+          selectedSpan.textContent = capitalizedWords.join(' ');
+        }
       }
     }
+    
+    console.log(`Dropdown text updated for ${filterType}: "${selectedSpan.textContent}"`);
   };
   
   // Method to reinitialize all dropdowns

@@ -1,176 +1,113 @@
-// _includes/js/modules/sorting.js
 export const Sorting = (() => {
   let currentSortMethod = 'date';
   let currentSortDirection = 'desc';
-
+  
   const setSortMethod = (method, direction) => {
-    console.log(`Sorting: Estableciendo método de ordenación: ${method}, dirección: ${direction}`);
-    currentSortMethod = method || 'date';
-    currentSortDirection = direction || 'desc';
+    currentSortMethod = method;
+    currentSortDirection = direction;
+    console.log(`Método de ordenación establecido: ${method}, dirección: ${direction}`);
   };
-
+  
+  const getCurrentSort = () => {
+    return { currentSortMethod, currentSortDirection };
+  };
+  
   const sortPosts = (posts, method, direction) => {
-    // Use passed parameters if provided, otherwise use module state
-    const sortMethod = method || currentSortMethod;
-    const sortDirection = direction || currentSortDirection;
+    console.log(`Ordenando ${posts.length} posts por ${method} en dirección ${direction}`);
     
-    console.log(`Sorting: Ordenando ${posts.length} posts por: ${sortMethod}, dirección: ${sortDirection}`);
-    
-    if (!posts || posts.length === 0) {
-      console.log('Sorting: No hay posts para ordenar');
-      return [];
-    }
-    
-    const sortedPosts = [...posts];
-    try {
-      switch (sortMethod) {
+    return [...posts].sort((a, b) => {
+      let valueA, valueB;
+      
+      // Extraer valores según el método de ordenación
+      switch (method) {
         case 'date':
-          sortedPosts.sort((a, b) => {
-            let dateA, dateB;
-            try {
-              const dateElementA = a.querySelector('.post-date');
-              const dateElementB = b.querySelector('.post-date');
-              
-              if (!dateElementA || !dateElementB) {
-                console.warn('Sorting: Elementos de fecha no encontrados');
-                return 0;
-              }
-              
-              dateA = new Date(dateElementA.getAttribute('data-date') || dateElementA.textContent);
-              dateB = new Date(dateElementB.getAttribute('data-date') || dateElementB.textContent);
-              
-              if (isNaN(dateA) || isNaN(dateB)) {
-                console.warn('Sorting: Fechas inválidas', dateA, dateB);
-                return 0;
-              }
-            } catch (e) {
-              console.error('Sorting: Error al obtener fechas', e);
-              return 0;
-            }
-            
-            return sortDirection === 'desc' ? dateB - dateA : dateA - dateB;
-          });
+          valueA = a.dataset.date || '';
+          valueB = b.dataset.date || '';
           break;
         case 'title':
-          sortedPosts.sort((a, b) => {
-            let titleA = '', titleB = '';
-            try {
-              const titleElementA = a.querySelector('.post-link');
-              const titleElementB = b.querySelector('.post-link');
-              
-              if (!titleElementA || !titleElementB) {
-                console.warn('Sorting: Elementos de título no encontrados');
-                return 0;
-              }
-              
-              titleA = titleElementA.textContent.trim().toLowerCase();
-              titleB = titleElementB.textContent.trim().toLowerCase();
-            } catch (e) {
-              console.error('Sorting: Error al obtener títulos', e);
-              return 0;
-            }
-            
-            return sortDirection === 'desc' ? titleB.localeCompare(titleA) : titleA.localeCompare(titleB);
-          });
+          valueA = (a.dataset.title || '').toLowerCase();
+          valueB = (b.dataset.title || '').toLowerCase();
           break;
         case 'category':
-          sortedPosts.sort((a, b) => {
-            let categoryA = '', categoryB = '';
-            try {
-              const categoryElementA = a.querySelector('.category-badge');
-              const categoryElementB = b.querySelector('.category-badge');
-              
-              categoryA = categoryElementA ? categoryElementA.textContent.trim().toLowerCase() : '';
-              categoryB = categoryElementB ? categoryElementB.textContent.trim().toLowerCase() : '';
-            } catch (e) {
-              console.error('Sorting: Error al obtener categorías', e);
-              return 0;
-            }
-            
-            return sortDirection === 'desc' ? categoryB.localeCompare(categoryA) : categoryA.localeCompare(categoryB);
-          });
+          // Usar la primera categoría para ordenar
+          const categoriesA = a.dataset.categories ? a.dataset.categories.split(' ').filter(c => c) : [];
+          const categoriesB = b.dataset.categories ? b.dataset.categories.split(' ').filter(c => c) : [];
+          valueA = categoriesA.length > 0 ? categoriesA[0].toLowerCase() : '';
+          valueB = categoriesB.length > 0 ? categoriesB[0].toLowerCase() : '';
           break;
         case 'tag':
-          sortedPosts.sort((a, b) => {
-            let tagA = '', tagB = '';
-            try {
-              const tagElementA = a.querySelector('.tag-badge');
-              const tagElementB = b.querySelector('.tag-badge');
-              
-              tagA = tagElementA ? tagElementA.textContent.trim().toLowerCase() : '';
-              tagB = tagElementB ? tagElementB.textContent.trim().toLowerCase() : '';
-            } catch (e) {
-              console.error('Sorting: Error al obtener etiquetas', e);
-              return 0;
-            }
-            
-            return sortDirection === 'desc' ? tagB.localeCompare(tagA) : tagA.localeCompare(tagB);
-          });
+          // Usar el primer tag para ordenar
+          const tagsA = a.dataset.tags ? a.dataset.tags.split(' ').filter(t => t) : [];
+          const tagsB = b.dataset.tags ? b.dataset.tags.split(' ').filter(t => t) : [];
+          valueA = tagsA.length > 0 ? tagsA[0].toLowerCase() : '';
+          valueB = tagsB.length > 0 ? tagsB[0].toLowerCase() : '';
           break;
+        default:
+          valueA = a.dataset.date || '';
+          valueB = b.dataset.date || '';
       }
-    } catch (e) {
-      console.error('Sorting: Error general al ordenar', e);
-    }
-    
-    console.log(`Sorting: Ordenación completada, ${sortedPosts.length} posts ordenados`);
-    return sortedPosts;
-  };
-
-  const updateActiveSortButton = (sortButtons, method, direction) => {
-    // If sortButtons is not provided, try to get them from the DOM
-    if (!sortButtons) {
-      sortButtons = document.querySelectorAll('.sort-button');
-    }
-    
-    // Verificar si estamos en la página de archivo antes de actualizar botones
-    // if (!document.querySelector('.archive-page')) {
-    //   console.log('Sorting: No estamos en la página de archivo, no se actualizarán los botones');
-    //   return false;
-    // }
-    
-    if (!sortButtons || sortButtons.length === 0) {
-      console.log('Sorting: No hay botones de ordenación para actualizar');
-      return false;
-    }
-    
-    // Use current values if not provided
-    method = method || currentSortMethod;
-    direction = direction || currentSortDirection;
-    
-    console.log(`Sorting: Actualizando ${sortButtons.length} botones de ordenación para método: ${method}, dirección: ${direction}`);
-    
-    // Primero, quitar la clase active de TODOS los botones
-    Array.from(sortButtons).forEach(button => {
-      button.classList.remove('active');
+      
+      // Comparar valores
+      let comparison = 0;
+      
+      if (method === 'date') {
+        // Para fechas, convertir a objetos Date para comparación
+        const dateA = new Date(valueA);
+        const dateB = new Date(valueB);
+        
+        // Verificar si las fechas son válidas
+        const isValidDateA = !isNaN(dateA.getTime());
+        const isValidDateB = !isNaN(dateB.getTime());
+        
+        if (isValidDateA && isValidDateB) {
+          comparison = dateA - dateB;
+        } else if (isValidDateA) {
+          comparison = -1; // A es válido, B no, A va primero
+        } else if (isValidDateB) {
+          comparison = 1;  // B es válido, A no, B va primero
+        } else {
+          // Ninguna fecha es válida, comparar como strings
+          comparison = valueA.localeCompare(valueB);
+        }
+      } else {
+        // Para otros tipos, comparar como strings
+        comparison = valueA.localeCompare(valueB);
+      }
+      
+      // Aplicar dirección
+      return direction === 'asc' ? comparison : -comparison;
     });
-    
-    // Luego, encontrar el botón que coincide con el método actual y activarlo
-    const activeButton = Array.from(sortButtons).find(button => button.dataset.sort === method);
-    
-    if (activeButton) {
-      // Añadir clase active SOLO al botón correspondiente
-      activeButton.classList.add('active');
-      
-      // Update direction attribute and icon
-      activeButton.dataset.direction = direction;
-      const icon = activeButton.querySelector('i');
-      if (icon) {
-        icon.className = direction === 'desc' ? 
-          'fas fa-arrow-down' : 'fas fa-arrow-up';
-      }
-      
-      console.log(`Sorting: Botón ${method} activado con dirección ${direction}`);
-      return true;
-    } else {
-      console.log(`Sorting: No se encontró botón para el método ${method}`);
-      return false;
-    }
   };
-
+  
+  const updateActiveSortButton = (buttons, method, direction) => {
+    if (!buttons) return;
+    
+    console.log(`Actualizando botones de ordenación: método=${method}, dirección=${direction}`);
+    
+    buttons.forEach(button => {
+      const buttonMethod = button.dataset.sort;
+      
+      // Eliminar clases activas de todos los botones
+      button.classList.remove('active', 'asc', 'desc');
+      
+      // Si este botón corresponde al método actual, marcarlo como activo
+      if (buttonMethod === method) {
+        button.classList.add('active', direction);
+        button.dataset.direction = direction; // Actualizar la dirección en el dataset
+        
+        // Actualizar el ícono según la dirección
+        const icon = button.querySelector('i');
+        if (icon) {
+          icon.className = direction === 'asc' ? 'fas fa-arrow-up' : 'fas fa-arrow-down';
+        }
+      }
+    });
+  };
+  
   return {
-    sortPosts,
     setSortMethod,
-    updateActiveSortButton,
-    getCurrentSort: () => ({ currentSortMethod, currentSortDirection })
+    getCurrentSort,
+    sortPosts,
+    updateActiveSortButton
   };
 })();
