@@ -26,19 +26,37 @@ window.ensureFiltersApplied = function() {
   }, 300);
 };
 
-// Refactorizar tryLoadAdditionalPosts para evitar cargas múltiples
-window.tryLoadAdditionalPosts = function (delay = 800, retryDelay = 500) {
-  // Si ya estamos cargando posts o ya hay posts adicionales, no hacer nada
-  if (window.isLoadingAdditionalPosts) {
-    console.log('Ya se están cargando posts adicionales, ignorando solicitud');
-    return;
+window.initArchivePageOnNavigation = function() {
+  console.log('Initializing archive page after navigation');
+  
+  // Check if we're on the archive page
+  const archivePage = document.querySelector('.archive-page');
+  if (!archivePage) return;
+  
+  // Initialize archive filters if not already done
+  if (typeof window.initArchiveFilters === 'function') {
+    window.initArchiveFilters();
   }
   
-  // Verificar si ya hay posts adicionales cargados
-  const additionalPosts = document.querySelectorAll('.archive-post-item[data-additional-post="true"]');
-  if (additionalPosts.length > 0) {
-    console.log(`Ya hay ${additionalPosts.length} posts adicionales cargados, aplicando filtros`);
-    window.ensureFiltersApplied();
+  // Ensure lazy loading is set up
+  if (typeof Rendering !== 'undefined' && Rendering.setupLazyLoading) {
+    console.log('Setting up lazy loading after navigation');
+    Rendering.setupLazyLoading();
+  }
+  
+  // Try to load additional posts if needed
+  setTimeout(() => {
+    if (typeof window.tryLoadAdditionalPosts === 'function') {
+      window.tryLoadAdditionalPosts(300);
+    }
+  }, 500);
+};
+
+// Refactorizar tryLoadAdditionalPosts para evitar cargas múltiples
+window.tryLoadAdditionalPosts = function (delay = 800, retryDelay = 500) {
+  // Si ya estamos cargando posts, no hacer nada
+  if (window.isLoadingAdditionalPosts) {
+    console.log('Ya se están cargando posts adicionales, ignorando solicitud');
     return;
   }
   
@@ -47,8 +65,9 @@ window.tryLoadAdditionalPosts = function (delay = 800, retryDelay = 500) {
   
   setTimeout(() => {
     if (typeof window.loadAdditionalPosts === 'function') {
-      console.log('Cargando posts adicionales (primera vez)');
-      window.loadAdditionalPosts();
+      console.log('Cargando primer batch de posts adicionales');
+      // Start with batch 1
+      window.loadAdditionalPosts(1, 50);
       
       // Aplicar ordenación después de cargar posts adicionales
       setTimeout(() => {
@@ -56,20 +75,27 @@ window.tryLoadAdditionalPosts = function (delay = 800, retryDelay = 500) {
         const { method, direction } = window.getSortParameters();
         
         // Actualizar botones de ordenación
-        window.updateSortButtonsDirectly(method, direction);
+        if (typeof window.updateSortButtonsDirectly === 'function') {
+          window.updateSortButtonsDirectly(method, direction);
+        }
         
         // Aplicar filtros para ordenar todos los posts
         window.ensureFiltersApplied();
         
         // Resetear el flag
         window.isLoadingAdditionalPosts = false;
+        
+        // Set up intersection observer for infinite scroll
+        if (typeof Rendering !== 'undefined' && Rendering.setupLazyLoading) {
+          Rendering.setupLazyLoading();
+        }
       }, 500);
     } else {
       console.warn('loadAdditionalPosts no está disponible, intentando de nuevo...');
       setTimeout(() => {
         if (typeof window.loadAdditionalPosts === 'function') {
-          console.log('Cargando posts adicionales (reintento)');
-          window.loadAdditionalPosts();
+          console.log('Cargando primer batch de posts adicionales (reintento)');
+          window.loadAdditionalPosts(1, 50);
           
           // Aplicar ordenación después de cargar posts adicionales
           setTimeout(() => {
@@ -95,6 +121,7 @@ window.tryLoadAdditionalPosts = function (delay = 800, retryDelay = 500) {
 };
 
 
+// Modificar la función initializeArchiveModules para exponer Rendering globalmente
 function initializeArchiveModules() {
   // Check if ARCHIVE_PATHS exists
   if (typeof window.ARCHIVE_PATHS === 'undefined') {
@@ -133,6 +160,12 @@ function initializeArchiveModules() {
         window.ARCHIVE_PATHS.ARCHIVE_FILTERS_PATH,
         'initArchiveFilters',
         function () {
+          // Exponer Rendering globalmente para que sea accesible desde otros archivos
+          if (typeof Rendering !== 'undefined' && typeof window.Rendering === 'undefined') {
+            window.Rendering = Rendering;
+            console.log('Rendering expuesto globalmente');
+          }
+
           if (typeof window.initArchiveFilters === 'function') {
             window.initArchiveFilters();
           }
@@ -221,6 +254,12 @@ window.initializeArchiveOnDOMReady = function() {
   if (document.querySelector('.archive-page')) {
     console.log('Inicializando archivo en DOMContentLoaded centralizado');
 
+    // Reset Rendering state when initializing the archive page
+    if (typeof window.Rendering !== 'undefined' && window.Rendering.reset) {
+      console.log('Reseteando estado de Rendering en initializeArchiveOnDOMReady');
+      window.Rendering.reset();
+    }
+
     setTimeout(function() {
       if (typeof window.initArchiveFilters === 'function') {
         window.initArchiveFilters();
@@ -229,11 +268,23 @@ window.initializeArchiveOnDOMReady = function() {
       const { method, direction } = window.getSortParameters();
       window.updateSortButtonsDirectly(method, direction);
 
-      // ✅ Usamos la función reutilizable
-      setTimeout(() => {
+      // Verificar si llegamos aquí por navegación desde otra página
+      if (document.referrer && document.referrer !== document.location.href) {
+        console.log('Detectada navegación desde otra página a la página de archivo en DOMContentLoaded');
+        if (typeof window.initArchivePageOnNavigation === 'function' || 
+            typeof window.initArchivePageAfterNavigation === 'function') {
+          const navigationFunction = window.initArchivePageAfterNavigation || window.initArchivePageOnNavigation;
+          setTimeout(() => navigationFunction(), 300);
+        } else {
+          // Si no hay función específica de navegación, usar la carga normal
+          console.log('Intentando cargar posts desde initializeArchiveOnDOMReady con retry');
+          window.tryLoadAdditionalPosts(300, 500);
+        }
+      } else {
+        // ✅ Usamos la función reutilizable para carga normal
         console.log('Intentando cargar posts desde initializeArchiveOnDOMReady con retry');
         window.tryLoadAdditionalPosts(300, 500);
-      }, 300);
+      }
     }, 100);
   }
 };
@@ -288,8 +339,23 @@ function resetArchiveFilters() {
 
 
 // Registrar event listeners
-// window.addEventListener('pageshow', window.handlePageShowEvent);
 document.addEventListener('DOMContentLoaded', window.initializeArchiveOnDOMReady);
+
+
+// Añadir listener para pageshow para manejar navegación back/forward
+window.addEventListener('pageshow', function(event) {
+  // Verificar si la página se está cargando desde el bfcache
+  if (event.persisted) {
+    console.log('Página cargada desde caché back/forward en archive-module-loader');
+    if (document.querySelector('.archive-page')) {
+      if (typeof window.initArchivePageOnNavigation === 'function') {
+        setTimeout(() => window.initArchivePageOnNavigation(), 300);
+      } else if (typeof window.initArchivePageAfterNavigation === 'function') {
+        setTimeout(() => window.initArchivePageAfterNavigation(), 300);
+      }
+    }
+  }
+});
 
 // Fallback para navegación normal (sin Turbo)
 if (typeof Turbo === 'undefined' && !('Turbo' in window)) {

@@ -189,26 +189,31 @@ permalink: /archive/
     <div id="additional-posts-marker"></div>
   </div>
   
-  <!-- Improved load-more-trigger with better visibility for debugging -->
-  <div class="load-more-trigger" style="height: 20px; margin: 20px 0; text-align: center;" aria-hidden="true" id="load-more-trigger">
-    <span class="loading-dots" style="display: none;">
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-    </span>
-  </div>
-  
-  <!-- Indicador de carga para posts adicionales -->
-  <div id="posts-loading-indicator" class="posts-loading" style="display: none;">
-    <div class="loading-spinner"></div>
-    <span>Loading more posts...</span>
-  </div>
-  
-  <!-- No Results Message -->
-  <div class="no-results-message" style="display: none;">
-    <p>No posts match the selected filters. Try changing your selection.</p>
-    <button class="reset-filters-btn">Reset All Filters</button>
-  </div>
+<!-- After the load-more-trigger div -->
+<div class="load-more-trigger" style="height: 20px; margin: 20px 0; text-align: center;" aria-hidden="true" id="load-more-trigger">
+  <span class="loading-dots" style="display: none;">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </span>
+</div>
+
+<!-- Indicador de carga para posts adicionales -->
+<div id="posts-loading-indicator" class="posts-loading" style="display: none;">
+  <div class="loading-spinner"></div>
+  <span>Loading more posts...</span>
+</div>
+
+<!-- No More Posts Message -->
+<div id="no-more-posts-message" class="no-more-posts-message" style="display: none; text-align: center; padding: 20px; color: #666;">
+  <p>No hay más posts para cargar</p>
+</div>
+
+<!-- No Results Message -->
+<div class="no-results-message" style="display: none;">
+  <p>No posts match the selected filters. Try changing your selection.</p>
+  <button class="reset-filters-btn">Reset All Filters</button>
+</div>
 </div>
 </div>
 </div>

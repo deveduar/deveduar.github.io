@@ -33,7 +33,16 @@ const initArchiveFilters = () => {
   // Prevent multiple filter applications during initialization
   if (!initialFilterApplied) {
     initialFilterApplied = true;
-    setTimeout(() => applyFilters(DOM), 100);
+    setTimeout(() => {
+      applyFilters(DOM);
+      
+      // Initialize page for navigation if this is not a direct page load
+      if (document.readyState === 'complete' && !window.performance.getEntriesByType('navigation')[0].type.includes('navigate')) {
+        if (typeof window.initArchivePageOnNavigation === 'function') {
+          window.initArchivePageOnNavigation();
+        }
+      }
+    }, 100);
   }
 };
 
@@ -473,6 +482,21 @@ function applyFilters(DOM) {
 
     URLManager.updateURL(currentCategoryFilter, currentTagFilter, currentSortMethod, currentSortDirection, currentSearchQuery);
 
+    // Dispatch event that filters have been applied
+    document.dispatchEvent(new CustomEvent('filtersApplied', {
+      detail: {
+        visiblePostsCount: sortedPosts.length,
+        totalPostsCount: deduplicatedPosts.length,
+        filters: {
+          category: currentCategoryFilter,
+          tag: currentTagFilter,
+          search: currentSearchQuery,
+          sort: currentSortMethod,
+          direction: currentSortDirection
+        }
+      }
+    }));
+
     if (DOM.filterContainer) DOM.filterContainer.classList.remove('loading');
     window.isProcessing = false;
   }, 10);
@@ -677,39 +701,32 @@ function handleLoadError(error, loadingElement, additionalPostsMarker, mainPosts
   }
 }
 
-// Main function to load additional posts
-// Modify loadAdditionalPosts to check for duplicates
-// And modify the loadAdditionalPosts function to use the utility
-window.loadAdditionalPosts = function() {
-  console.log('Cargando posts adicionales...');
+window.loadAdditionalPosts = function(batch = 1, postsPerBatch = 50) {
+  console.log(`Cargando posts adicionales (batch ${batch}, ${postsPerBatch} posts por batch)...`);
   
   const mainPostsContainer = document.getElementById('main-posts-list');
   const additionalPostsMarker = document.getElementById('additional-posts-marker');
+  const loadingIndicator = document.getElementById('posts-loading-indicator');
   
   if (!mainPostsContainer || !additionalPostsMarker) {
     console.error('No se encontraron los elementos necesarios para cargar posts adicionales');
     return;
   }
   
-  // Check if additional posts are already loaded
-  if (checkExistingAdditionalPosts(mainPostsContainer)) {
-    // Check for and remove duplicates
-    const duplicatesRemoved = checkAndRemoveDuplicates(mainPostsContainer);
-    
-    // Apply filters again after removing duplicates if any were found
-    if (duplicatesRemoved.length > 0) {
-      setTimeout(() => {
-        if (typeof window.applyFilters === 'function') {
-          window.applyFilters(getDOMElements());
-        }
-      }, 50);
-    }
-    
+  // Check if we're already loading posts
+  if (window.isLoadingAdditionalPosts) {
+    console.log('Ya se están cargando posts adicionales, ignorando solicitud');
     return;
   }
   
-  // Insert loading indicator
-  const loadingElement = createLoadingIndicator(mainPostsContainer, additionalPostsMarker);
+  // Set loading flag
+  window.isLoadingAdditionalPosts = true;
+  
+  // Show loading indicator
+  if (loadingIndicator) loadingIndicator.style.display = 'flex';
+  
+  // Insert loading indicator if not using the global one
+  const loadingElement = loadingIndicator ? null : createLoadingIndicator(mainPostsContainer, additionalPostsMarker);
   
   // Collect existing post URLs to avoid duplicates
   const existingPostUrls = collectExistingPostUrls(mainPostsContainer);
@@ -722,9 +739,142 @@ window.loadAdditionalPosts = function() {
       }
       return response.json();
     })
-    .then(data => processPostsData(data, existingPostUrls, loadingElement, additionalPostsMarker, mainPostsContainer))
-    .catch(error => handleLoadError(error, loadingElement, additionalPostsMarker, mainPostsContainer));
+    .then(data => {
+      // Ensure data is in the expected format
+      let postsArray = [];
+      
+      if (Array.isArray(data)) {
+        // If data is already an array
+        postsArray = data;
+      } else if (data && typeof data === 'object') {
+        // If data is an object with a posts property
+        if (Array.isArray(data.posts)) {
+          postsArray = data.posts;
+        } else {
+          // Try to convert object to array if it has post-like properties
+          if (data.url || data.title) {
+            postsArray = [data];
+          } else {
+            // Last resort: try to extract values from the object
+            postsArray = Object.values(data).filter(item => 
+              item && typeof item === 'object' && (item.url || item.title)
+            );
+          }
+        }
+      }
+      
+      if (postsArray.length === 0) {
+        throw new Error('No se encontraron posts en los datos recibidos');
+      }
+      
+      console.log(`Procesando ${postsArray.length} posts totales`);
+      
+      // Filter out posts that already exist in the DOM
+      const newPosts = postsArray.filter(post => !existingPostUrls.has(post.url));
+      
+      // Calculate start and end indices for this batch
+      const startIndex = (batch - 1) * postsPerBatch;
+      const endIndex = startIndex + postsPerBatch;
+      
+      // Get the current batch of posts
+      const batchPosts = newPosts.slice(startIndex, endIndex);
+      
+      console.log(`Batch ${batch}: Procesando ${batchPosts.length} posts nuevos (de ${newPosts.length} disponibles)`);
+      
+      if (batchPosts.length === 0) {
+        console.log('No hay más posts para cargar');
+        
+        // Show "no more posts" message
+        showNoMorePostsMessage(mainPostsContainer, additionalPostsMarker);
+        
+        // Remove loading indicators
+        if (loadingElement && loadingElement.parentNode) {
+          loadingElement.parentNode.removeChild(loadingElement);
+        }
+        if (loadingIndicator) loadingIndicator.style.display = 'none';
+        
+        // Update the flag to indicate we've loaded all posts
+        if (typeof Rendering !== 'undefined' && Rendering.setAdditionalPostsLoaded) {
+          Rendering.setAdditionalPostsLoaded();
+        }
+        
+        window.isLoadingAdditionalPosts = false;
+        return;
+      }
+      
+      // Generate HTML for the batch of posts
+      const postsHTML = batchPosts.map(createPostElement).join('');
+      
+      // Insert the posts before the marker
+      additionalPostsMarker.insertAdjacentHTML('beforebegin', postsHTML);
+      
+      // Save to session storage
+      saveToSessionStorage(postsHTML);
+      
+      // Add event listeners to new posts
+      addEventListenersToNewPosts(mainPostsContainer);
+      
+      // Remove loading indicators
+      if (loadingElement && loadingElement.parentNode) {
+        loadingElement.parentNode.removeChild(loadingElement);
+      }
+      if (loadingIndicator) loadingIndicator.style.display = 'none';
+      
+      // Increment the batch counter
+      if (typeof Rendering !== 'undefined' && Rendering.incrementBatch) {
+        Rendering.incrementBatch();
+      }
+      
+      // Apply filters to include the new posts
+      setTimeout(() => {
+        if (typeof window.applyFilters === 'function') {
+          window.applyFilters(getDOMElements());
+        }
+        
+        // Reset loading flag
+        window.isLoadingAdditionalPosts = false;
+        
+        // Check if we've loaded all available posts
+        if (endIndex >= newPosts.length) {
+          console.log('Se han cargado todos los posts disponibles');
+          showNoMorePostsMessage(mainPostsContainer, additionalPostsMarker);
+          if (typeof Rendering !== 'undefined' && Rendering.setAdditionalPostsLoaded) {
+            Rendering.setAdditionalPostsLoaded();
+          }
+        } else {
+          // Check if we need to load more posts based on current filters
+          setTimeout(() => {
+            if (typeof Rendering !== 'undefined' && Rendering.checkIfMorePostsNeeded) {
+              Rendering.checkIfMorePostsNeeded();
+            }
+          }, 300);
+        }
+      }, 100);
+    })
+    .catch(error => {
+      handleLoadError(error, loadingElement, additionalPostsMarker, mainPostsContainer);
+      if (loadingIndicator) loadingIndicator.style.display = 'none';
+      window.isLoadingAdditionalPosts = false;
+    });
 };
+
+// Function to show "no more posts" message
+function showNoMorePostsMessage(mainPostsContainer, additionalPostsMarker) {
+  // Check if message already exists
+  if (document.getElementById('no-more-posts-message')) return;
+  
+  const messageElement = document.createElement('div');
+  messageElement.id = 'no-more-posts-message';
+  messageElement.className = 'no-more-posts-message';
+  messageElement.innerHTML = '<p>No hay más posts para cargar</p>';
+  
+  // Insert after the marker
+  if (additionalPostsMarker.nextSibling) {
+    mainPostsContainer.insertBefore(messageElement, additionalPostsMarker.nextSibling);
+  } else {
+    mainPostsContainer.appendChild(messageElement);
+  }
+}
 
 
 // Exportar la función para que pueda ser llamada desde fuera

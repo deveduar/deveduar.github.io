@@ -2,7 +2,11 @@
 export const Rendering = (() => {
   // Variable para rastrear si los posts adicionales ya se han cargado
   let additionalPostsLoaded = false;
-  
+  // Track the current batch of posts
+  let currentBatch = 1;
+  // Number of posts to load per batch
+  const POSTS_PER_BATCH = 50;
+
   const renderPosts = (sortedPosts) => {
     console.log(`Renderizando ${sortedPosts.length} posts en total`);
     
@@ -156,84 +160,152 @@ export const Rendering = (() => {
   }
   
   // Función para verificar si necesitamos cargar más posts
-  const checkIfMorePostsNeeded = () => {
-    // Si los posts adicionales ya están cargados, no hacemos nada
-    if (additionalPostsLoaded) return;
+// Función para verificar si necesitamos cargar más posts
+const checkIfMorePostsNeeded = () => {
+  // Si los posts adicionales ya están completamente cargados, no hacemos nada
+  if (additionalPostsLoaded) {
+    console.log('Todos los posts adicionales ya están cargados, no se cargarán más');
+    return false;
+  }
+  
+  const mainPostsContainer = document.getElementById('main-posts-list');
+  const visiblePosts = mainPostsContainer ? 
+    Array.from(mainPostsContainer.querySelectorAll('.archive-post-item')).filter(post => 
+      post.style.display !== 'none'
+    ) : [];
+  
+  // Si hay menos de X posts visibles, cargar los adicionales
+  if (visiblePosts.length < 10) {
+    console.log(`Solo hay ${visiblePosts.length} posts visibles, cargando más posts...`);
+    if (typeof window.loadAdditionalPosts === 'function' && !window.isLoadingAdditionalPosts) {
+      // Cargar el siguiente lote
+      window.loadAdditionalPosts(currentBatch, POSTS_PER_BATCH);
+      return true;
+    }
+  }
+  
+  // También verificar si estamos cerca del final de la lista
+  const lastVisiblePost = visiblePosts[visiblePosts.length - 1];
+  if (lastVisiblePost) {
+    const rect = lastVisiblePost.getBoundingClientRect();
+    const isNearBottom = rect.bottom < window.innerHeight + 500;
     
-    const mainPostsContainer = document.getElementById('main-posts-list');
-    const visiblePosts = mainPostsContainer ? 
-      Array.from(mainPostsContainer.querySelectorAll('.archive-post-item')).filter(post => 
-        post.style.display !== 'none'
-      ) : [];
-    
-    // Si hay menos de X posts visibles, cargar los adicionales
-    if (visiblePosts.length < 10) {
-      console.log(`Solo hay ${visiblePosts.length} posts visibles, cargando posts adicionales...`);
+    if (isNearBottom && !window.isLoadingAdditionalPosts) {
+      console.log('Cerca del final de la lista visible, cargando más posts...');
       if (typeof window.loadAdditionalPosts === 'function') {
-        window.loadAdditionalPosts();
+        window.loadAdditionalPosts(currentBatch, POSTS_PER_BATCH);
+        return true;
       }
     }
-  };
+  }
   
-  // Función para establecer que los posts adicionales están cargados
-  const setAdditionalPostsLoaded = () => {
-    additionalPostsLoaded = true;
-  };
+  return false;
+};
   
   // Función para configurar lazy loading
-  const setupLazyLoading = () => {
-    console.log('Configurando lazy loading para posts adicionales');
-    
-    // Verificar si estamos en la página de archivo
-    const archivePage = document.querySelector('.archive-page');
-    if (!archivePage) return;
-    
-    // Verificar si ya tenemos posts adicionales cargados
-    const additionalPosts = document.querySelectorAll('.archive-post-item[data-additional-post="true"]');
-    if (additionalPosts.length > 0) {
-      console.log('Posts adicionales ya cargados');
-      additionalPostsLoaded = true;
-      return;
-    }
-    
-    // Configurar un observador de intersección para cargar posts adicionales
-    // cuando el usuario se acerca al final de la lista principal
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting && !additionalPostsLoaded) {
-          console.log('Usuario cerca del final de la lista, cargando posts adicionales...');
-          if (typeof window.loadAdditionalPosts === 'function') {
-            window.loadAdditionalPosts();
-          }
-          observer.disconnect(); // Solo necesitamos cargar una vez
+// Función para configurar lazy loading
+// Función para configurar lazy loading
+// Función para configurar lazy loading
+const setupLazyLoading = () => {
+  console.log('Configurando lazy loading para posts adicionales');
+  
+  // Verificar si estamos en la página de archivo
+  const archivePage = document.querySelector('.archive-page');
+  if (!archivePage) return;
+  
+  // Check if we need to reset the state when coming back to the archive page
+  const additionalPosts = document.querySelectorAll('.archive-post-item[data-additional-post="true"]');
+  if (additionalPosts.length === 0 && additionalPostsLoaded) {
+    console.log('Detectada navegación de regreso a la página de archivo sin posts adicionales, reseteando estado');
+    reset();
+  }
+  
+  // Remove any existing observers to prevent duplicates
+  if (window.postsIntersectionObserver) {
+    window.postsIntersectionObserver.disconnect();
+    console.log('Disconnected existing intersection observer');
+  }
+  
+  // Verificar si ya tenemos posts adicionales cargados
+  if (additionalPosts.length > 0) {
+    console.log(`${additionalPosts.length} posts adicionales ya cargados`);
+    // No marcamos como completamente cargados, solo que ya hay algunos cargados
+  }
+  
+  // Configurar un observador de intersección para cargar posts adicionales
+  // cuando el usuario se acerca al final de la lista principal
+  window.postsIntersectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !window.isLoadingAdditionalPosts && !additionalPostsLoaded) {
+        console.log('Usuario cerca del final de la lista, cargando posts adicionales...');
+        if (typeof window.loadAdditionalPosts === 'function') {
+          // Load the next batch of posts
+          window.loadAdditionalPosts(currentBatch, POSTS_PER_BATCH);
+          // Don't disconnect the observer - we want to continue observing for infinite scroll
         }
-      });
-    }, {
-      rootMargin: '0px 0px 200px 0px' // Cargar cuando estemos a 200px del final
-    });
-    
-    // Observar el marcador de posts adicionales
-    const loadMoreTrigger = document.getElementById('load-more-trigger');
-    if (loadMoreTrigger) {
-      observer.observe(loadMoreTrigger);
-    } else {
-      // Si no hay trigger, cargar inmediatamente
-      if (typeof window.loadAdditionalPosts === 'function') {
-        window.loadAdditionalPosts();
       }
+    });
+  }, {
+    rootMargin: '0px 0px 300px 0px' // Cargar cuando estemos a 300px del final
+  });
+  
+  // Observar el marcador de posts adicionales
+  const loadMoreTrigger = document.getElementById('load-more-trigger') || 
+                          document.getElementById('additional-posts-marker');
+  if (loadMoreTrigger) {
+    window.postsIntersectionObserver.observe(loadMoreTrigger);
+    console.log('Observador de scroll configurado en el elemento trigger');
+  } else {
+    console.warn('No se encontró el elemento trigger para lazy loading');
+    // Si no hay trigger, cargar inmediatamente la primera tanda
+    if (typeof window.loadAdditionalPosts === 'function' && !window.isLoadingAdditionalPosts) {
+      window.loadAdditionalPosts(currentBatch, POSTS_PER_BATCH);
     }
-  };
+  }
   
-  // Función para reiniciar el estado
-  const reset = () => {
-    additionalPostsLoaded = false;
-  };
+  // También observar cuando se aplican filtros para cargar más posts si es necesario
+  if (!window.filtersAppliedListenerAdded) {
+    document.addEventListener('filtersApplied', () => {
+      setTimeout(() => {
+        checkIfMorePostsNeeded();
+      }, 300);
+    });
+    window.filtersAppliedListenerAdded = true;
+  }
+};
   
-  return {
-    renderPosts,
-    applyVisualFilters,
-    setAdditionalPostsLoaded,
-    setupLazyLoading,
-    reset
-  };
+// Function to increment the batch counter
+const incrementBatch = () => {
+  currentBatch++;
+  console.log(`Incrementando a batch ${currentBatch}`);
+  
+  // Después de incrementar el batch, verificar si necesitamos cargar más posts
+  // debido a los filtros actuales
+  setTimeout(() => {
+    checkIfMorePostsNeeded();
+  }, 200);
+};
+
+// Función para establecer que los posts adicionales están completamente cargados
+const setAdditionalPostsLoaded = () => {
+  additionalPostsLoaded = true;
+  console.log('Todos los posts adicionales han sido cargados');
+};
+
+// Función para reiniciar el estado
+const reset = () => {
+  additionalPostsLoaded = false;
+  currentBatch = 1;
+  console.log('Estado de carga de posts adicionales reiniciado');
+};
+
+return {
+  renderPosts,
+  applyVisualFilters,
+  setAdditionalPostsLoaded,
+  setupLazyLoading,
+  incrementBatch,
+  checkIfMorePostsNeeded,
+  reset
+};
 })();
