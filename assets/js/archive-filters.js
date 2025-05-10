@@ -274,6 +274,7 @@ function initLinkListeners(links, type) {
   });
 }
 
+// Add this to the initSortButtons function
 function initSortButtons(buttons) {
   buttons.forEach(button => {
     const newButton = button.cloneNode(true);
@@ -290,6 +291,50 @@ function initSortButtons(buttons) {
       
       console.log(`Botón clickeado: ${sortMethod}, Estado actual: ${currentSortMethod}, ${currentSortDirection}`);
       
+      // Check if we need to load all posts first
+      const needToLoadAllPosts = 
+        (sortMethod !== 'date' || 
+        (sortMethod === 'date' && currentSortDirection === 'desc')) && 
+        typeof Rendering !== 'undefined' && 
+        typeof Rendering.areAdditionalPostsLoaded === 'function' && 
+        !Rendering.areAdditionalPostsLoaded();
+      
+      if (needToLoadAllPosts) {
+        console.log('Cambiando ordenación, cargando todos los posts primero...');
+        
+        // Show loading indicator
+        const loadingIndicator = document.querySelector('.loading-indicator');
+        if (loadingIndicator) loadingIndicator.style.display = 'block';
+        
+        // Store the sort method and direction to apply after loading
+        window.pendingSortMethod = sortMethod;
+        window.pendingSortDirection = (sortMethod === currentSortMethod) ? 
+          (currentSortDirection === 'desc' ? 'asc' : 'desc') : 
+          (newButton.dataset.direction || 'desc');
+        
+        // Load all posts
+        if (typeof window.loadAdditionalPosts === 'function') {
+          window.loadAdditionalPosts(1, 500, true, () => {
+            // This callback will be called after all posts are loaded
+            console.log('Todos los posts cargados, aplicando ordenación...');
+            
+            // Apply the pending sort method
+            if (window.pendingSortMethod) {
+              Sorting.setSortMethod(window.pendingSortMethod, window.pendingSortDirection);
+              
+              // Clear pending sort
+              window.pendingSortMethod = null;
+              window.pendingSortDirection = null;
+              
+              // Apply filters with the new sort
+              applyFilters(getDOMElements());
+            }
+          });
+        }
+        return;
+      }
+      
+      // If we already have all posts loaded, apply sort immediately
       // Si clickeamos el mismo método de ordenación, invertir la dirección
       if (sortMethod === currentSortMethod) {
         const newDirection = currentSortDirection === 'desc' ? 'asc' : 'desc';
@@ -437,6 +482,51 @@ function applyFilters(DOM) {
     const currentSearchQuery = Search.getCurrentSearchQuery();
 
     console.log(`Aplicando filtros con: categoría="${currentCategoryFilter}", tag="${currentTagFilter}", ordenación=${currentSortMethod}, dirección=${currentSortDirection}, búsqueda="${currentSearchQuery}"`);
+
+    // Check if we need to load all posts immediately
+    // Only use lazy loading for default sort (date desc)
+    const isDefaultSort = currentSortMethod === 'date' && currentSortDirection === 'desc';
+    const hasFilters = 
+      (currentCategoryFilter !== 'all' && currentCategoryFilter !== '') || 
+      (currentTagFilter !== 'all' && currentTagFilter !== '') || 
+      (currentSearchQuery && currentSearchQuery.trim() !== '');
+    
+    // Load all posts immediately if not using default sort or if filters are applied
+    if ((!isDefaultSort || hasFilters) && 
+        typeof Rendering !== 'undefined' && 
+        typeof Rendering.areAdditionalPostsLoaded === 'function' && 
+        !Rendering.areAdditionalPostsLoaded()) {
+      
+      console.log('Usando filtros o ordenación no predeterminada, cargando todos los posts inmediatamente...');
+      
+      // Show loading indicator
+      const loadingIndicator = document.querySelector('.loading-indicator');
+      if (loadingIndicator) loadingIndicator.style.display = 'block';
+      
+      // Set a flag to indicate we're loading posts for filters
+      window.loadingPostsForFilters = true;
+      
+      // Try to load all posts at once
+      if (typeof window.loadAdditionalPosts === 'function') {
+        // Store current filter state to reapply after loading
+        window.pendingFilters = {
+          category: currentCategoryFilter,
+          tag: currentTagFilter,
+          sort: currentSortMethod,
+          direction: currentSortDirection,
+          search: currentSearchQuery
+        };
+        
+        // Load all posts with a larger batch size
+        window.loadAdditionalPosts(1, 200, true); // Pass true to indicate loading all posts
+        
+        // Reset processing flag before returning
+        if (DOM.filterContainer) DOM.filterContainer.classList.remove('loading');
+        window.isProcessing = false;
+        
+        return; // Exit early, we'll reapply filters after loading in the loadAdditionalPosts callback
+      }
+    }
 
     // Check for and remove duplicates
     checkAndRemoveDuplicates(DOM.mainPostsContainer);
@@ -615,44 +705,71 @@ function collectExistingPostUrls(mainPostsContainer) {
 }
 
 // Process loaded posts data
-function processPostsData(data, existingPostUrls, loadingElement, additionalPostsMarker, mainPostsContainer) {
-  if (!data || !data.posts || !Array.isArray(data.posts)) {
-    throw new Error('Formato de datos inválido');
-  }
+// function processPostsData(data, existingPostUrls, loadingElement, additionalPostsMarker, mainPostsContainer) {
+//   if (!data || !data.posts || !Array.isArray(data.posts)) {
+//     throw new Error('Formato de datos inválido');
+//   }
   
-  // Filter out duplicates
-  const nonDuplicatePosts = data.posts.filter(post => !existingPostUrls.has(post.url));
-  console.log(`Filtrando duplicados: ${data.posts.length} posts totales, ${nonDuplicatePosts.length} posts únicos`);
+//   // Filter out duplicates
+//   const nonDuplicatePosts = data.posts.filter(post => !existingPostUrls.has(post.url));
+//   console.log(`Filtrando duplicados: ${data.posts.length} posts totales, ${nonDuplicatePosts.length} posts únicos`);
   
-  // Remove loading indicator
-  if (loadingElement && loadingElement.parentNode) {
-    loadingElement.parentNode.removeChild(loadingElement);
-  }
+//   // Remove loading indicator
+//   if (loadingElement && loadingElement.parentNode) {
+//     loadingElement.parentNode.removeChild(loadingElement);
+//   }
   
-  // Create HTML for each post
-  const postsHTML = nonDuplicatePosts.map(createPostElement).join('');
+//   // Create HTML for each post
+//   const postsHTML = nonDuplicatePosts.map(createPostElement).join('');
   
-  // Insert posts before marker
-  additionalPostsMarker.insertAdjacentHTML('beforebegin', postsHTML);
-  console.log(`${nonDuplicatePosts.length} posts adicionales cargados y añadidos al DOM`);
+//   // Insert posts before marker
+//   additionalPostsMarker.insertAdjacentHTML('beforebegin', postsHTML);
+//   console.log(`${nonDuplicatePosts.length} posts adicionales cargados y añadidos al DOM`);
   
-  // Save in sessionStorage for future navigation
-  saveToSessionStorage(postsHTML);
+//   // Save in sessionStorage for future navigation
+//   saveToSessionStorage(postsHTML);
   
-  // Notify rendering module
-  if (typeof Rendering !== 'undefined' && Rendering.setAdditionalPostsLoaded) {
-    Rendering.setAdditionalPostsLoaded();
-  }
+//   // Notify rendering module
+//   if (typeof Rendering !== 'undefined' && Rendering.setAdditionalPostsLoaded) {
+//     Rendering.setAdditionalPostsLoaded();
+//   }
   
-  // Add event listeners to new filter links
-  addEventListenersToNewPosts(mainPostsContainer);
+//   // Add event listeners to new filter links
+//   addEventListenersToNewPosts(mainPostsContainer);
   
-  // Apply current filters
-  setTimeout(() => {
-    if (typeof window.applyFilters === 'function') {
-      window.applyFilters(getDOMElements());
+//   // Apply current filters
+//   setTimeout(() => {
+//     if (typeof window.applyFilters === 'function') {
+//       window.applyFilters(getDOMElements());
+//     }
+//   }, 50);
+// }
+
+// Helper function to process posts data
+function processPostsData(data) {
+  let postsArray = [];
+  
+  if (Array.isArray(data)) {
+    // If data is already an array
+    postsArray = data;
+  } else if (data && typeof data === 'object') {
+    // If data is an object with a posts property
+    if (Array.isArray(data.posts)) {
+      postsArray = data.posts;
+    } else {
+      // Try to convert object to array if it has post-like properties
+      if (data.url || data.title) {
+        postsArray = [data];
+      } else {
+        // Last resort: try to extract values from the object
+        postsArray = Object.values(data).filter(item => 
+          item && typeof item === 'object' && (item.url || item.title)
+        );
+      }
     }
-  }, 50);
+  }
+  
+  return postsArray;
 }
 
 // Save posts HTML to sessionStorage
@@ -701,8 +818,8 @@ function handleLoadError(error, loadingElement, additionalPostsMarker, mainPosts
   }
 }
 
-window.loadAdditionalPosts = function(batch = 1, postsPerBatch = 50) {
-  console.log(`Cargando posts adicionales (batch ${batch}, ${postsPerBatch} posts por batch)...`);
+window.loadAdditionalPosts = function(batch = 1, postsPerBatch = 50, loadAll = false, callback = null) {
+  console.log(`Cargando posts adicionales (batch ${batch}, ${postsPerBatch} posts por batch, loadAll=${loadAll})...`);
   
   const mainPostsContainer = document.getElementById('main-posts-list');
   const additionalPostsMarker = document.getElementById('additional-posts-marker');
@@ -710,12 +827,14 @@ window.loadAdditionalPosts = function(batch = 1, postsPerBatch = 50) {
   
   if (!mainPostsContainer || !additionalPostsMarker) {
     console.error('No se encontraron los elementos necesarios para cargar posts adicionales');
+    if (callback) callback();
     return;
   }
   
   // Check if we're already loading posts
   if (window.isLoadingAdditionalPosts) {
     console.log('Ya se están cargando posts adicionales, ignorando solicitud');
+    if (callback) callback();
     return;
   }
   
@@ -740,28 +859,8 @@ window.loadAdditionalPosts = function(batch = 1, postsPerBatch = 50) {
       return response.json();
     })
     .then(data => {
-      // Ensure data is in the expected format
-      let postsArray = [];
-      
-      if (Array.isArray(data)) {
-        // If data is already an array
-        postsArray = data;
-      } else if (data && typeof data === 'object') {
-        // If data is an object with a posts property
-        if (Array.isArray(data.posts)) {
-          postsArray = data.posts;
-        } else {
-          // Try to convert object to array if it has post-like properties
-          if (data.url || data.title) {
-            postsArray = [data];
-          } else {
-            // Last resort: try to extract values from the object
-            postsArray = Object.values(data).filter(item => 
-              item && typeof item === 'object' && (item.url || item.title)
-            );
-          }
-        }
-      }
+      // Process the data and get posts array
+      const postsArray = processPostsData(data);
       
       if (postsArray.length === 0) {
         throw new Error('No se encontraron posts en los datos recibidos');
@@ -772,92 +871,144 @@ window.loadAdditionalPosts = function(batch = 1, postsPerBatch = 50) {
       // Filter out posts that already exist in the DOM
       const newPosts = postsArray.filter(post => !existingPostUrls.has(post.url));
       
-      // Calculate start and end indices for this batch
-      const startIndex = (batch - 1) * postsPerBatch;
-      const endIndex = startIndex + postsPerBatch;
-      
-      // Get the current batch of posts
-      const batchPosts = newPosts.slice(startIndex, endIndex);
-      
-      console.log(`Batch ${batch}: Procesando ${batchPosts.length} posts nuevos (de ${newPosts.length} disponibles)`);
-      
-      if (batchPosts.length === 0) {
-        console.log('No hay más posts para cargar');
+      // If loadAll is true, load all remaining posts at once
+      if (loadAll) {
+        console.log('Cargando todos los posts restantes de una vez');
+        const batchPosts = newPosts;
+        processBatchPosts(batchPosts, newPosts, mainPostsContainer, additionalPostsMarker, loadingElement, loadingIndicator, true, callback);
+      } else {
+        // Calculate start and end indices for this batch
+        const startIndex = (batch - 1) * postsPerBatch;
+        const endIndex = startIndex + postsPerBatch;
         
-        // Show "no more posts" message
-        showNoMorePostsMessage(mainPostsContainer, additionalPostsMarker);
+        // Get the current batch of posts
+        const batchPosts = newPosts.slice(startIndex, endIndex);
         
-        // Remove loading indicators
-        if (loadingElement && loadingElement.parentNode) {
-          loadingElement.parentNode.removeChild(loadingElement);
-        }
-        if (loadingIndicator) loadingIndicator.style.display = 'none';
-        
-        // Update the flag to indicate we've loaded all posts
-        if (typeof Rendering !== 'undefined' && Rendering.setAdditionalPostsLoaded) {
-          Rendering.setAdditionalPostsLoaded();
-        }
-        
-        window.isLoadingAdditionalPosts = false;
-        return;
+        console.log(`Batch ${batch}: Procesando ${batchPosts.length} posts nuevos (de ${newPosts.length} disponibles)`);
+        processBatchPosts(batchPosts, newPosts, mainPostsContainer, additionalPostsMarker, loadingElement, loadingIndicator, false, callback);
       }
-      
-      // Generate HTML for the batch of posts
-      const postsHTML = batchPosts.map(createPostElement).join('');
-      
-      // Insert the posts before the marker
-      additionalPostsMarker.insertAdjacentHTML('beforebegin', postsHTML);
-      
-      // Save to session storage
-      saveToSessionStorage(postsHTML);
-      
-      // Add event listeners to new posts
-      addEventListenersToNewPosts(mainPostsContainer);
-      
-      // Remove loading indicators
-      if (loadingElement && loadingElement.parentNode) {
-        loadingElement.parentNode.removeChild(loadingElement);
-      }
-      if (loadingIndicator) loadingIndicator.style.display = 'none';
-      
-      // Increment the batch counter
-      if (typeof Rendering !== 'undefined' && Rendering.incrementBatch) {
-        Rendering.incrementBatch();
-      }
-      
-      // Apply filters to include the new posts
-      setTimeout(() => {
-        if (typeof window.applyFilters === 'function') {
-          window.applyFilters(getDOMElements());
-        }
-        
-        // Reset loading flag
-        window.isLoadingAdditionalPosts = false;
-        
-        // Check if we've loaded all available posts
-        if (endIndex >= newPosts.length) {
-          console.log('Se han cargado todos los posts disponibles');
-          showNoMorePostsMessage(mainPostsContainer, additionalPostsMarker);
-          if (typeof Rendering !== 'undefined' && Rendering.setAdditionalPostsLoaded) {
-            Rendering.setAdditionalPostsLoaded();
-          }
-        } else {
-          // Check if we need to load more posts based on current filters
-          setTimeout(() => {
-            if (typeof Rendering !== 'undefined' && Rendering.checkIfMorePostsNeeded) {
-              Rendering.checkIfMorePostsNeeded();
-            }
-          }, 300);
-        }
-      }, 100);
     })
     .catch(error => {
       handleLoadError(error, loadingElement, additionalPostsMarker, mainPostsContainer);
       if (loadingIndicator) loadingIndicator.style.display = 'none';
       window.isLoadingAdditionalPosts = false;
+      
+      // If we were loading posts for filters, try to apply them anyway
+      if (window.loadingPostsForFilters && window.pendingFilters) {
+        console.log('Error loading posts for filters, applying filters anyway');
+        setTimeout(() => {
+          window.loadingPostsForFilters = false;
+          applyFilters(getDOMElements());
+        }, 100);
+      }
+      
+      // Call the callback even on error
+      if (callback) callback();
     });
 };
 
+
+function processBatchPosts(batchPosts, newPosts, mainPostsContainer, additionalPostsMarker, loadingElement, loadingIndicator, loadedAll, callback) {
+  if (batchPosts.length === 0) {
+    console.log('No hay más posts para cargar');
+    
+    // Show "no more posts" message
+    showNoMorePostsMessage(mainPostsContainer, additionalPostsMarker);
+    
+    // Remove loading indicators
+    if (loadingElement && loadingElement.parentNode) {
+      loadingElement.parentNode.removeChild(loadingElement);
+    }
+    if (loadingIndicator) loadingIndicator.style.display = 'none';
+    
+    // Update the flag to indicate we've loaded all posts
+    if (typeof Rendering !== 'undefined' && Rendering.setAdditionalPostsLoaded) {
+      Rendering.setAdditionalPostsLoaded();
+    }
+    
+    window.isLoadingAdditionalPosts = false;
+    
+    // If we were loading posts for filters, reapply them now
+    if (window.loadingPostsForFilters && window.pendingFilters) {
+      console.log('Reapplying filters after loading all posts');
+      setTimeout(() => {
+        window.loadingPostsForFilters = false;
+        applyFilters(getDOMElements());
+      }, 100);
+    }
+    
+    // Execute callback if provided
+    if (callback) callback();
+    
+    return;
+  }
+  
+  // Generate HTML for the batch of posts
+  const postsHTML = batchPosts.map(createPostElement).join('');
+  
+  // Insert the posts before the marker
+  additionalPostsMarker.insertAdjacentHTML('beforebegin', postsHTML);
+  
+  // Save to session storage
+  saveToSessionStorage(postsHTML);
+  
+  // Add event listeners to new posts
+  addEventListenersToNewPosts(mainPostsContainer);
+  
+  // Remove loading indicators
+  if (loadingElement && loadingElement.parentNode) {
+    loadingElement.parentNode.removeChild(loadingElement);
+  }
+  if (loadingIndicator) loadingIndicator.style.display = 'none';
+  
+  // Increment the batch counter
+  if (typeof Rendering !== 'undefined' && Rendering.incrementBatch) {
+    Rendering.incrementBatch();
+  }
+  
+  // Check if we've loaded all available posts
+  const allPostsLoaded = loadedAll || batchPosts.length >= newPosts.length;
+  
+  // If we've loaded all posts, set the flag
+  if (allPostsLoaded) {
+    console.log('Se han cargado todos los posts disponibles');
+    showNoMorePostsMessage(mainPostsContainer, additionalPostsMarker);
+    if (typeof Rendering !== 'undefined' && Rendering.setAdditionalPostsLoaded) {
+      Rendering.setAdditionalPostsLoaded();
+    }
+  }
+  
+  // Reset loading flag
+  window.isLoadingAdditionalPosts = false;
+  
+  // If we were loading posts for filters, reapply them now
+  if (window.loadingPostsForFilters && window.pendingFilters) {
+    console.log('Reapplying filters after loading posts');
+    setTimeout(() => {
+      window.loadingPostsForFilters = false;
+      applyFilters(getDOMElements());
+    }, 100);
+  } else if (callback) {
+    // Execute callback if provided
+    callback();
+  } else {
+    // Apply filters to include the new posts
+    setTimeout(() => {
+      if (typeof window.applyFilters === 'function') {
+        window.applyFilters(getDOMElements());
+      }
+      
+      // If we haven't loaded all posts, check if we need to load more
+      if (!allPostsLoaded) {
+        setTimeout(() => {
+          if (typeof Rendering !== 'undefined' && Rendering.checkIfMorePostsNeeded) {
+            Rendering.checkIfMorePostsNeeded();
+          }
+        }, 300);
+      }
+    }, 100);
+  }
+}
 // Function to show "no more posts" message
 function showNoMorePostsMessage(mainPostsContainer, additionalPostsMarker) {
   // Check if message already exists

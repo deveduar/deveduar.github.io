@@ -11,7 +11,7 @@ export const Rendering = (() => {
     console.log(`Renderizando ${sortedPosts.length} posts en total`);
     
     const mainPostsContainer = document.getElementById('main-posts-list');
-    const additionalPostsMarker = document.getElementById('additional-posts-marker');
+    // const additionalPostsMarker = document.getElementById('additional-posts-marker');
     const noResultsMessage = document.querySelector('.no-results-message');
     
     if (!mainPostsContainer) {
@@ -80,7 +80,6 @@ export const Rendering = (() => {
     checkIfMorePostsNeeded();
   };
   
-  // Función para aplicar filtros visuales sin modificar el DOM
   // Función para aplicar filtros visuales sin modificar el DOM
   const applyVisualFilters = (categoryFilter, tagFilter, searchQuery) => {
     console.log('Aplicando filtros visuales a posts');
@@ -159,7 +158,6 @@ export const Rendering = (() => {
     return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   }
   
-  // Función para verificar si necesitamos cargar más posts
 // Función para verificar si necesitamos cargar más posts
 const checkIfMorePostsNeeded = () => {
   // Si los posts adicionales ya están completamente cargados, no hacemos nada
@@ -168,6 +166,19 @@ const checkIfMorePostsNeeded = () => {
     return false;
   }
   
+  // Check if we're using default sort (date desc)
+  // Only load more posts automatically if using default sort
+  if (typeof Sorting !== 'undefined') {
+    const { currentSortMethod, currentSortDirection } = Sorting.getCurrentSort();
+    // If we're not using the default sort, we should load all posts
+    if (currentSortMethod !== 'date' || currentSortDirection !== 'desc') {
+      console.log('Ordenación no predeterminada detectada, cargando todos los posts...');
+      loadAllRemainingPosts();
+      return true;
+    }
+  }
+  
+  // Continue with normal lazy loading for default sort
   const mainPostsContainer = document.getElementById('main-posts-list');
   const visiblePosts = mainPostsContainer ? 
     Array.from(mainPostsContainer.querySelectorAll('.archive-post-item')).filter(post => 
@@ -184,27 +195,21 @@ const checkIfMorePostsNeeded = () => {
     }
   }
   
-  // También verificar si estamos cerca del final de la lista
-  const lastVisiblePost = visiblePosts[visiblePosts.length - 1];
-  if (lastVisiblePost) {
-    const rect = lastVisiblePost.getBoundingClientRect();
-    const isNearBottom = rect.bottom < window.innerHeight + 500;
-    
-    if (isNearBottom && !window.isLoadingAdditionalPosts) {
-      console.log('Cerca del final de la lista visible, cargando más posts...');
-      if (typeof window.loadAdditionalPosts === 'function') {
-        window.loadAdditionalPosts(currentBatch, POSTS_PER_BATCH);
-        return true;
-      }
-    }
-  }
-  
   return false;
 };
+
+// Add a new function to load all remaining posts at once
+const loadAllRemainingPosts = () => {
+  if (additionalPostsLoaded || window.isLoadingAdditionalPosts) {
+    return;
+  }
   
-  // Función para configurar lazy loading
-// Función para configurar lazy loading
-// Función para configurar lazy loading
+  console.log('Cargando todos los posts restantes para ordenación no predeterminada...');
+  if (typeof window.loadAdditionalPosts === 'function') {
+    window.loadAdditionalPosts(1, 500, true); // Load all posts at once
+  }
+};
+  
 // Función para configurar lazy loading
 const setupLazyLoading = () => {
   console.log('Configurando lazy loading para posts adicionales');
@@ -286,11 +291,39 @@ const incrementBatch = () => {
   }, 200);
 };
 
-// Función para establecer que los posts adicionales están completamente cargados
-const setAdditionalPostsLoaded = () => {
-  additionalPostsLoaded = true;
-  console.log('Todos los posts adicionales han sido cargados');
-};
+  // Add this function to check if additional posts are loaded
+  const areAdditionalPostsLoaded = () => {
+    return additionalPostsLoaded;
+  };
+
+  // Add this function to set the flag when posts are loaded
+  const setAdditionalPostsLoaded = () => {
+    additionalPostsLoaded = true;
+  };
+
+  // Function to load more posts for operations that need all posts
+  const loadMorePostsForOperation = (callback) => {
+    if (isLoadingMorePosts) {
+      console.log('Ya se están cargando más posts, ignorando solicitud');
+      return;
+    }
+    
+    isLoadingMorePosts = true;
+    console.log('Cargando todos los posts para la operación actual...');
+    
+    // Use the window.loadAdditionalPosts function to load all posts
+    if (typeof window.loadAdditionalPosts === 'function') {
+      window.loadAdditionalPosts(currentBatch, POSTS_PER_BATCH, true, callback);
+    } else {
+      console.error('window.loadAdditionalPosts no está disponible');
+      isLoadingMorePosts = false;
+      
+      // Execute callback if provided
+      if (typeof callback === 'function') {
+        callback();
+      }
+    }
+  };
 
 // Función para reiniciar el estado
 const reset = () => {
@@ -301,11 +334,14 @@ const reset = () => {
 
 return {
   renderPosts,
+  areAdditionalPostsLoaded,
   applyVisualFilters,
   setAdditionalPostsLoaded,
-  setupLazyLoading,
+  loadMorePostsForOperation,
   incrementBatch,
+  setupLazyLoading,
   checkIfMorePostsNeeded,
+  loadAllRemainingPosts,
   reset
 };
 })();
