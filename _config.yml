@@ -43,7 +43,9 @@ feed:
   
 paginate: 10
 paginate_path: "/page:num/"
-permalink: /blog/:year/:month/:day/:title/
+# permalink: /blog/:year/:month/:day/:title/
+permalink: /:categories/:title/
+
 
 
 # Exclude from processing.
