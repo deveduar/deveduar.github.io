@@ -50,18 +50,23 @@
           </a>
         </div>
       </div>
-
-      <div class="sidebar-content">
-        <!-- Loading indicator outside of the dynamic content container -->
-        <div class="sidebar-loading" id="sidebar-loading-indicator">
-          <div class="loading-spinner"></div>
-          <span>Loading categories...</span>
+      <div class="sidebar-body">
+        <div class="sidebar-content">
+          <!-- Loading indicator outside of the dynamic content container -->
+          <div class="sidebar-loading" id="sidebar-loading-indicator">
+            <div class="loading-spinner"></div>
+            <span>Loading categories...</span>
+          </div>
+          
+          <!-- Dynamic sidebar content will be loaded here via JavaScript -->
+          <ul class="sidebar-categories" id="dynamic-sidebar-categories" data-turbolinks-permanent>
+            <!-- Categories will be loaded here -->
+          </ul>
         </div>
-        
-        <!-- Dynamic sidebar content will be loaded here via JavaScript -->
-        <ul class="sidebar-categories" id="dynamic-sidebar-categories" data-turbolinks-permanent>
-          <!-- Categories will be loaded here -->
-        </ul>
+        <div class="sidebar-footer">
+          <!-- <a href="/privacy-policy" class="footer-link">Privacy</a> -->
+          <!-- <a href="/terms" class="footer-link">Terms</a> -->
+        </div>
       </div>
     </div>
   </aside>

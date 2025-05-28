@@ -193,31 +193,32 @@
 }
 
 .site-sidebar {
-    width: 250px;
-    min-width: 250px;
-    background-color:  $background-color;
-    // padding: 5px;
-    transition: all 0.3s ease;
-    border-right: 1px solid rgba($grey-color-dark, 0.2);
+  width: 250px;
+  min-width: 250px;
+  background-color: $background-color;
+  transition: all 0.3s ease;
+  border-right: 1px solid rgba($grey-color-dark, 0.2);
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
 
-    height: 100vh;
-    position: sticky;
-    top: 0;
-  
-    @include scrollbar(transparent); // Barra invisible por defecto
-  
-    &:hover {
-      @include scrollbar($grey-color-dark); // Muestra la barra al hacer hover
-    }
-  
-    .sidebar-content {
-      max-width: 100%;
-      box-sizing: border-box;
-      overflow-y: auto; // Habilita el desplazamiento vertical
-      max-height: calc(100vh - #{$spacing-unit} * 2); // Limita la altura para evitar desbordamientos
-      padding: $spacing-unit / 2;
-    }
+  // Always show a subtle scrollbar
+  @include scrollbar(rgba($grey-color-dark, 0.3), transparent);
+
+  &:hover {
+    // Enhance scrollbar visibility on hover
+    @include scrollbar($grey-color-dark, rgba($grey-color-dark, 0.1));
   }
+}
+
+.sidebar-inner {
+display: flex;
+flex-direction: column;
+height: 100%;
+overflow: hidden;
+}
 
 .sidebar-heading {
   @include relative-font-size(1.2);
@@ -295,6 +296,7 @@
 }
 
 // Comportamiento responsivo
+// Comportamiento responsivo
 @media screen and (min-width: ($on-laptop + 1px)) {
   .menu-icon {
     display: none;
@@ -312,13 +314,20 @@
     display: none;
   }
 
-
   .desktop-title {
     display: block;
   }
 
   .site-sidebar {
     transform: translateX(0);
+    position: sticky; // Keep it sticky for desktop
+    top: 0;
+    height: 100vh;
+    width: 250px;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
   }
 
   .category-header, .sidebar-nav {
@@ -358,16 +367,16 @@
     z-index: 1000;
     transform: translateX(-100%);
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    overflow-y: auto;
+    overflow-y: hidden;
     padding-top: calc(#{$spacing-unit} * 1.865 + 5px + 1px + 10px);
+    display: flex;
 
     .sidebar-inner {
-      margin-right: 15px;
-      overflow-y: auto;
       height: 100%;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
     }
-
-    
   }
 
   .menu-icon {
@@ -525,3 +534,43 @@
   100% { transform: rotate(360deg); }
 }
 
+.sidebar-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden; // Contain overflow
+}
+
+.sidebar-content {
+  flex: 1;
+  box-sizing: border-box;
+  overflow-y: auto; // Enable vertical scrolling
+  padding: $spacing-unit / 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-footer {
+  padding: $spacing-unit / 2;
+  border-top: 1px solid rgba($grey-color-dark, 0.2);
+  background-color: lighten($background-color, 2%);
+  text-align: center;
+  margin-top: auto; // Push to bottom
+  flex-shrink: 0; // Prevent shrinking
+  position: sticky; // Make it sticky
+  bottom: 0; // Stick to bottom
+  z-index: 10; // Ensure it stays on top of content
+
+  .footer-link {
+    display: block;
+    color: $grey-color;
+    font-size: 0.9rem;
+    margin: 0.2rem 0;
+
+    &:hover {
+      color: $brand-color;
+      text-decoration: none;
+    }
+  }
+}
