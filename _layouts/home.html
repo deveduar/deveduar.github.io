@@ -23,7 +23,7 @@ layout: default
           {% if post.categories.size > 0 %}
           <div class="post-categories">
             {% for category in post.categories %}
-            <a class="category-badge" href="/archive?category={{ category | slugify }}" data-no-instant>{{ category }}</a>
+            <a class="category-badge" href="/archive?category={{ category | uri_escape }}" data-no-instant>{{ category }}</a>
             {% endfor %}
           </div>
           {% endif %}

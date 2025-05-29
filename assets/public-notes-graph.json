@@ -1,0 +1,1343 @@
+{
+  "nodes": [
+    {
+      "id": "backend",
+      "title": "Backend",
+      "slug": "backend",
+      "date": "2024-09-04 19:26",
+      "categories": [
+        "uncategorized"
+      ],
+      "url": "/uncategorized/backend"
+    },
+    {
+      "id": "websockets",
+      "title": "websockets",
+      "slug": "websockets",
+      "date": "2025-01-29 17:19",
+      "categories": [
+        "Backend"
+      ],
+      "url": "/backend/websockets"
+    },
+    {
+      "id": "webhooks",
+      "title": "webhooks",
+      "slug": "webhooks",
+      "date": "2024-11-16 17:54",
+      "categories": [
+        "Backend"
+      ],
+      "url": "/backend/webhooks"
+    },
+    {
+      "id": "web-services",
+      "title": "web services",
+      "slug": "web-services",
+      "date": "2024-11-16 17:44",
+      "categories": [
+        "Backend"
+      ],
+      "url": "/backend/web-services"
+    },
+    {
+      "id": "stream-processing",
+      "title": "Stream Processing",
+      "slug": "stream-processing",
+      "date": "2025-05-19 04:38",
+      "categories": [
+        "Backend"
+      ],
+      "url": "/backend/stream-processing"
+    },
+    {
+      "id": "swagger",
+      "title": "swagger",
+      "slug": "swagger",
+      "date": "2025-01-29 14:04",
+      "categories": [
+        "Backend"
+      ],
+      "url": "/backend/swagger"
+    },
+    {
+      "id": "supervisor",
+      "title": "Supervisor",
+      "slug": "supervisor",
+      "date": "2025-01-29 19:28",
+      "categories": [
+        "Backend"
+      ],
+      "url": "/backend/supervisor"
+    },
+    {
+      "id": "strapi",
+      "title": "strapi",
+      "slug": "strapi",
+      "date": "2024-11-23 19:36",
+      "categories": [
+        "Backend"
+      ],
+      "url": "/backend/strapi"
+    },
+    {
+      "id": "springboot",
+      "title": "Springboot",
+      "slug": "springboot",
+      "date": "2024-11-21 01:17",
+      "categories": [
+        "Backend"
+      ],
+      "url": "/backend/springboot"
+    },
+    {
+      "id": "serverless",
+      "title": "serverless",
+      "slug": "serverless",
+      "date": "2025-05-18 04:04",
+      "categories": [
+        "Backend"
+      ],
+      "url": "/backend/serverless"
+    },
+    {
+      "id": "server-actions",
+      "title": "server actions",
+      "slug": "server-actions",
+      "date": "2025-05-18 04:01",
+      "categories": [
+        "Backend"
+      ],
+      "url": "/backend/server-actions"
+    },
+    {
+      "id": "sequelize",
+      "title": "Sequelize",
+      "slug": "sequelize",
+      "date": "2024-11-23 19:47",
+      "categories": [
+        "Backend"
+      ],
+      "url": "/backend/sequelize"
+    },
+    {
+      "id": "runtime-management",
+      "title": "Runtime Management",
+      "slug": "runtime-management",
+      "date": "2025-05-17 19:07",
+      "categories": [
+        "Backend"
+      ],
+      "url": "/backend/runtime-management"
+    },
+    {
+      "id": "rabbitmq",
+      "title": "RabbitMQ",
+      "slug": "rabbitmq",
+      "date": "2025-01-29 00:30",
+      "categories": [
+        "Backend"
+      ],
+      "url": "/backend/rabbitmq"
+    },
+    {
+      "id": "poketbase",
+      "title": "poketbase",
+      "slug": "poketbase",
+      "date": "2024-11-23 19:31",
+      "categories": [
+        "Backend"
+      ],
+      "url": "/backend/poketbase"
+    },
+    {
+      "id": "pm2",
+      "title": "PM2",
+      "slug": "pm2",
+      "date": "2025-01-29 19:26",
+      "categories": [
+        "Backend"
+      ],
+      "url": "/backend/pm2"
+    },
+    {
+      "id": "php",
+      "title": "PHP",
+      "slug": "php",
+      "date": "2024-09-04T03:13:00",
+      "categories": [
+        "Backend"
+      ],
+      "url": "/backend/php"
+    },
+    {
+      "id": "open-api",
+      "title": "open api",
+      "slug": "open-api",
+      "date": "2025-01-29 14:08",
+      "categories": [
+        "Backend"
+      ],
+      "url": "/backend/open-api"
+    },
+    {
+      "id": "nodejs",
+      "title": "nodejs",
+      "slug": "nodejs",
+      "date": "2024-11-07 03:13",
+      "categories": [
+        "Backend"
+      ],
+      "url": "/backend/nodejs"
+    },
+    {
+      "id": "ngrok",
+      "title": "ngrok",
+      "slug": "ngrok",
+      "date": "2025-01-29 14:39",
+      "categories": [
+        "Backend"
+      ],
+      "url": "/backend/ngrok"
+    },
+    {
+      "id": "nginx",
+      "title": "nginx",
+      "slug": "nginx",
+      "date": "2024-11-16 17:03",
+      "categories": [
+        "Backend"
+      ],
+      "url": "/backend/nginx"
+    },
+    {
+      "id": "nestjs",
+      "title": "nestjs",
+      "slug": "nestjs",
+      "date": "2024-11-07 03:11",
+      "categories": [
+        "Backend"
+      ],
+      "url": "/backend/nestjs"
+    },
+    {
+      "id": "monorepo",
+      "title": "monorepo",
+      "slug": "monorepo",
+      "date": "2025-05-15 16:04",
+      "categories": [
+        "Backend"
+      ],
+      "url": "/backend/monorepo"
+    },
+    {
+      "id": "microservicios",
+      "title": "microservicios",
+      "slug": "microservicios",
+      "date": "2024-11-16 17:32",
+      "categories": [
+        "Backend"
+      ],
+      "url": "/backend/microservicios"
+    },
+    {
+      "id": "laravel",
+      "title": "laravel",
+      "slug": "laravel",
+      "date": "2024-11-22 20:57",
+      "categories": [
+        "Backend"
+      ],
+      "url": "/backend/laravel"
+    },
+    {
+      "id": "jax-ws",
+      "title": "JAX-WS",
+      "slug": "jax-ws",
+      "date": "2024-11-22 20:48",
+      "categories": [
+        "Backend"
+      ],
+      "url": "/backend/jax-ws"
+    },
+    {
+      "id": "java-ee",
+      "title": "java EE",
+      "slug": "java-ee",
+      "date": "2024-11-22 17:31",
+      "categories": [
+        "Backend"
+      ],
+      "url": "/backend/java-ee"
+    },
+    {
+      "id": "instance-scaling",
+      "title": "Instance Scaling",
+      "slug": "instance-scaling",
+      "date": "2025-05-18 03:59",
+      "categories": [
+        "Backend"
+      ],
+      "url": "/backend/instance-scaling"
+    },
+    {
+      "id": "graphql",
+      "title": "GraphQL",
+      "slug": "graphql",
+      "date": "2024-11-25 16:24",
+      "categories": [
+        "Backend"
+      ],
+      "url": "/backend/graphql"
+    },
+    {
+      "id": "gestor-de-colas",
+      "title": "gestor de colas",
+      "slug": "gestor-de-colas",
+      "date": "2025-05-17 19:05",
+      "categories": [
+        "Backend"
+      ],
+      "url": "/backend/gestor-de-colas"
+    },
+    {
+      "id": "firebase",
+      "title": "Firebase",
+      "slug": "firebase",
+      "date": "2024-11-23 20:32",
+      "categories": [
+        "Backend"
+      ],
+      "url": "/backend/firebase"
+    },
+    {
+      "id": "fastify",
+      "title": "fastify",
+      "slug": "fastify",
+      "date": "2025-01-29 14:36",
+      "categories": [
+        "Backend"
+      ],
+      "url": "/backend/fastify"
+    },
+    {
+      "id": "fastapi",
+      "title": "FastApi",
+      "slug": "fastapi",
+      "date": "2024-11-16 19:43",
+      "categories": [
+        "Backend"
+      ],
+      "url": "/backend/fastapi"
+    },
+    {
+      "id": "django",
+      "title": "django",
+      "slug": "django",
+      "date": "2025-01-09 02:28",
+      "categories": [
+        "Backend"
+      ],
+      "url": "/backend/django"
+    },
+    {
+      "id": "cron-jobs",
+      "title": "cron jobs",
+      "slug": "cron-jobs",
+      "date": "2025-05-21 04:05",
+      "categories": [
+        "Backend"
+      ],
+      "url": "/backend/cron-jobs"
+    },
+    {
+      "id": "cors",
+      "title": "CORS",
+      "slug": "cors",
+      "date": "2025-05-19 20:30",
+      "categories": [
+        "Backend"
+      ],
+      "url": "/backend/cors"
+    },
+    {
+      "id": "composer",
+      "title": "composer",
+      "slug": "composer",
+      "date": "2024-11-22 21:02",
+      "categories": [
+        "Backend"
+      ],
+      "url": "/backend/composer"
+    },
+    {
+      "id": "axios",
+      "title": "axios",
+      "slug": "axios",
+      "date": "2024-11-24 17:25",
+      "categories": [
+        "Backend"
+      ],
+      "url": "/backend/axios"
+    },
+    {
+      "id": "asp-net",
+      "title": "ASP NET",
+      "slug": "asp-net",
+      "date": "2025-05-19 22:20",
+      "categories": [
+        "Backend"
+      ],
+      "url": "/backend/asp-net"
+    },
+    {
+      "id": "api",
+      "title": "api",
+      "slug": "api",
+      "date": "2024-11-18 21:27",
+      "categories": [
+        "Backend"
+      ],
+      "url": "/backend/api"
+    },
+    {
+      "id": "apache",
+      "title": "apache",
+      "slug": "apache",
+      "date": "",
+      "categories": [
+        "uncategorized"
+      ],
+      "url": "/uncategorized/apache"
+    },
+    {
+      "id": "apache-kafka",
+      "title": "Apache Kafka",
+      "slug": "apache-kafka",
+      "date": "2025-01-29 00:32",
+      "categories": [
+        "Backend"
+      ],
+      "url": "/backend/apache-kafka"
+    },
+    {
+      "id": "apache-flinkcccccccccccccccccc",
+      "title": "apache flinkcccccccccccccccccc",
+      "slug": "apache-flinkcccccccccccccccccc",
+      "date": "2025-04-17 22:25",
+      "categories": [
+        "Backend"
+      ],
+      "url": "/backend/apache-flinkcccccccccccccccccc"
+    },
+    {
+      "id": "yeoman",
+      "title": "yeoman",
+      "slug": "yeoman",
+      "date": "2025-02-19 17:14",
+      "categories": [
+        "Automatizacion y Build"
+      ],
+      "url": "/automatizacion%20y%20build/yeoman"
+    },
+    {
+      "id": "webpack",
+      "title": "webpack",
+      "slug": "webpack",
+      "date": "2025-01-29 01:58",
+      "categories": [
+        "Automatizacion y Build"
+      ],
+      "url": "/automatizacion%20y%20build/webpack"
+    },
+    {
+      "id": "vite",
+      "title": "vite",
+      "slug": "vite",
+      "date": "2025-01-29 01:21",
+      "categories": [
+        "Automatizacion y Build"
+      ],
+      "url": "/automatizacion%20y%20build/vite"
+    },
+    {
+      "id": "nx",
+      "title": "nx",
+      "slug": "nx",
+      "date": "2025-05-12 22:51",
+      "categories": [
+        "Automatizacion y Build"
+      ],
+      "url": "/automatizacion%20y%20build/nx"
+    },
+    {
+      "id": "jhipster",
+      "title": "JHipster",
+      "slug": "jhipster",
+      "date": "2025-02-19 16:44",
+      "categories": [
+        "Automatizacion y Build"
+      ],
+      "url": "/automatizacion%20y%20build/jhipster"
+    },
+    {
+      "id": "maven",
+      "title": "maven",
+      "slug": "maven",
+      "date": "2024-11-22 21:17",
+      "categories": [
+        "Automatizacion y Build"
+      ],
+      "url": "/automatizacion%20y%20build/maven"
+    },
+    {
+      "id": "gulp",
+      "title": "gulp",
+      "slug": "gulp",
+      "date": "2025-04-17 18:43",
+      "categories": [
+        "Automatizacion y Build"
+      ],
+      "url": "/automatizacion%20y%20build/gulp"
+    },
+    {
+      "id": "gradle",
+      "title": "Gradle",
+      "slug": "gradle",
+      "date": "2024-12-17 16:43",
+      "categories": [
+        "Automatizacion y Build"
+      ],
+      "url": "/automatizacion%20y%20build/gradle"
+    },
+    {
+      "id": "celery",
+      "title": "Celery",
+      "slug": "celery",
+      "date": "2024-11-23 02:21",
+      "categories": [
+        "Automatizacion y Build"
+      ],
+      "url": "/automatizacion%20y%20build/celery"
+    },
+    {
+      "id": "automatizacion-y-build",
+      "title": "Automatizacion y Build",
+      "slug": "automatizacion-y-build",
+      "date": "2024-11-20 17:53",
+      "categories": [
+        "uncategorized"
+      ],
+      "url": "/uncategorized/automatizacion-y-build"
+    },
+    {
+      "id": "---how-to-upload-a-project-to-github",
+      "title": "🛠 how to upload a project to github",
+      "slug": "---how-to-upload-a-project-to-github",
+      "date": "2024-04-29",
+      "categories": [
+        "uncategorized"
+      ],
+      "url": "/uncategorized/---how-to-upload-a-project-to-github"
+    },
+    {
+      "id": "--my-favourite-plugins-for-obsidian",
+      "title": "⭐ My favourite plugins for obsidian",
+      "slug": "--my-favourite-plugins-for-obsidian",
+      "date": "2024-05-06",
+      "categories": [
+        "uncategorized"
+      ],
+      "url": "/uncategorized/--my-favourite-plugins-for-obsidian"
+    },
+    {
+      "id": "readme-como-fuente-de-verdad-en-mi-portafolio",
+      "title": "readme como fuente de verdad en mi portafolio",
+      "slug": "readme-como-fuente-de-verdad-en-mi-portafolio",
+      "date": "2025-04-20",
+      "categories": [
+        "uncategorized"
+      ],
+      "url": "/uncategorized/readme-como-fuente-de-verdad-en-mi-portafolio"
+    },
+    {
+      "id": "my-personal-blog",
+      "title": "My personal Blog",
+      "slug": "my-personal-blog",
+      "date": "2024-05-02",
+      "categories": [
+        "uncategorized"
+      ],
+      "url": "/uncategorized/my-personal-blog"
+    },
+    {
+      "id": "my-css-snnipets-for-obsidian",
+      "title": "My CSS snnipets for obsidian",
+      "slug": "my-css-snnipets-for-obsidian",
+      "date": "2024-04-30",
+      "categories": [
+        "uncategorized"
+      ],
+      "url": "/uncategorized/my-css-snnipets-for-obsidian"
+    },
+    {
+      "id": "intro-a-progrmacion-post",
+      "title": "intro a progrmacion post",
+      "slug": "intro-a-progrmacion-post",
+      "date": "2024-12-31 20:40",
+      "categories": [
+        "uncategorized"
+      ],
+      "url": "/uncategorized/intro-a-progrmacion-post"
+    },
+    {
+      "id": "idea-fundamentos-python",
+      "title": "Fundamentos de Ejecución en Python",
+      "slug": "idea-fundamentos-python",
+      "date": "2025-05-23",
+      "categories": [
+        "python"
+      ],
+      "url": "/python/idea-fundamentos-python"
+    },
+    {
+      "id": "desarrollo-de-ping-test-post-de-linkeding",
+      "title": "desarrollo de ping test post de linkeding",
+      "slug": "desarrollo-de-ping-test-post-de-linkeding",
+      "date": "2025-04-12",
+      "categories": [
+        "uncategorized"
+      ],
+      "url": "/uncategorized/desarrollo-de-ping-test-post-de-linkeding"
+    },
+    {
+      "id": "desarrollo-de-mi-primer-juego",
+      "title": "desarrollo de mi primer juego",
+      "slug": "desarrollo-de-mi-primer-juego",
+      "date": "2024-04-30",
+      "categories": [
+        "uncategorized"
+      ],
+      "url": "/uncategorized/desarrollo-de-mi-primer-juego"
+    },
+    {
+      "id": "c-mo-uso-obsidian-para-pensar--documentar-y-automatizar-mi-flujo-de-trabajo",
+      "title": [
+        "Cómo uso Obsidian para pensar",
+        "documentar y automatizar mi flujo de trabajo"
+      ],
+      "slug": "c-mo-uso-obsidian-para-pensar--documentar-y-automatizar-mi-flujo-de-trabajo",
+      "date": "2025-04-21",
+      "categories": [
+        "uncategorized"
+      ],
+      "url": "/uncategorized/c-mo-uso-obsidian-para-pensar--documentar-y-automatizar-mi-flujo-de-trabajo"
+    },
+    {
+      "id": "conceptos-python-v1",
+      "title": "conceptos python pcap y pcpp1",
+      "slug": "conceptos-python-v1",
+      "date": "2025-05-24",
+      "categories": [
+        "uncategorized"
+      ],
+      "url": "/uncategorized/conceptos-python-v1"
+    },
+    {
+      "id": "como-sincronizar-obsidian-con-android",
+      "title": "como sincronizar obsidian con android",
+      "slug": "como-sincronizar-obsidian-con-android",
+      "date": "2024-10-29",
+      "categories": [
+        "uncategorized"
+      ],
+      "url": "/uncategorized/como-sincronizar-obsidian-con-android"
+    }
+  ],
+  "links": [
+    {
+      "source": "/uncategorized/backend",
+      "target": "/backend/nestjs/"
+    },
+    {
+      "source": "/uncategorized/backend",
+      "target": "/backend/nodejs/"
+    },
+    {
+      "source": "/uncategorized/backend",
+      "target": "/backend/asp-net/"
+    },
+    {
+      "source": "/uncategorized/backend",
+      "target": "/backend/fastify/"
+    },
+    {
+      "source": "/uncategorized/backend",
+      "target": "/backend/fastapi/"
+    },
+    {
+      "source": "/uncategorized/backend",
+      "target": "/backend/springboot/"
+    },
+    {
+      "source": "/uncategorized/backend",
+      "target": "/backend/poketbase/"
+    },
+    {
+      "source": "/uncategorized/backend",
+      "target": "/backend/strapi/"
+    },
+    {
+      "source": "/uncategorized/backend",
+      "target": "/backend/firebase/"
+    },
+    {
+      "source": "/uncategorized/backend",
+      "target": "/backend/nginx/"
+    },
+    {
+      "source": "/uncategorized/backend",
+      "target": "/uncategorized/apache/"
+    },
+    {
+      "source": "/uncategorized/backend",
+      "target": "/backend/api/"
+    },
+    {
+      "source": "/uncategorized/backend",
+      "target": "/backend/graphql/"
+    },
+    {
+      "source": "/uncategorized/backend",
+      "target": "/backend/axios/"
+    },
+    {
+      "source": "/uncategorized/backend",
+      "target": "/backend/stream-processing/"
+    },
+    {
+      "source": "/uncategorized/backend",
+      "target": "/backend/microservicios/"
+    },
+    {
+      "source": "/uncategorized/backend",
+      "target": "/backend/monorepo/"
+    },
+    {
+      "source": "/uncategorized/backend",
+      "target": "/backend/gestor-de-colas/"
+    },
+    {
+      "source": "/uncategorized/backend",
+      "target": "/backend/websockets/"
+    },
+    {
+      "source": "/uncategorized/backend",
+      "target": "/backend/webhooks/"
+    },
+    {
+      "source": "/uncategorized/backend",
+      "target": "/backend/web-services/"
+    },
+    {
+      "source": "/uncategorized/backend",
+      "target": "/backend/api/"
+    },
+    {
+      "source": "/uncategorized/backend",
+      "target": "/backend/cors/"
+    },
+    {
+      "source": "/uncategorized/backend",
+      "target": "/backend/server-actions/"
+    },
+    {
+      "source": "/uncategorized/backend",
+      "target": "/backend/serverless/"
+    },
+    {
+      "source": "/uncategorized/backend",
+      "target": "/backend/runtime-management/"
+    },
+    {
+      "source": "/uncategorized/backend",
+      "target": "/backend/instance-scaling/"
+    },
+    {
+      "source": "/backend/websockets",
+      "target": "/uncategorized/backend/"
+    },
+    {
+      "source": "/backend/webhooks",
+      "target": "/uncategorized/backend/"
+    },
+    {
+      "source": "/backend/webhooks",
+      "target": "/backend/php/"
+    },
+    {
+      "source": "/backend/web-services",
+      "target": "/backend/microservicios/"
+    },
+    {
+      "source": "/backend/web-services",
+      "target": "/uncategorized/backend/"
+    },
+    {
+      "source": "/backend/web-services",
+      "target": "/backend/springboot/"
+    },
+    {
+      "source": "/backend/web-services",
+      "target": "/backend/jax-ws/"
+    },
+    {
+      "source": "/backend/stream-processing",
+      "target": "/uncategorized/backend/"
+    },
+    {
+      "source": "/backend/stream-processing",
+      "target": "/backend/gestor-de-colas/"
+    },
+    {
+      "source": "/backend/stream-processing",
+      "target": "/backend/rabbitmq/"
+    },
+    {
+      "source": "/backend/stream-processing",
+      "target": "/backend/apache-flinkcccccccccccccccccc/"
+    },
+    {
+      "source": "/backend/stream-processing",
+      "target": "/backend/apache-kafka/"
+    },
+    {
+      "source": "/backend/swagger",
+      "target": "/backend/api/"
+    },
+    {
+      "source": "/backend/supervisor",
+      "target": "/uncategorized/backend/"
+    },
+    {
+      "source": "/backend/strapi",
+      "target": "/uncategorized/backend/"
+    },
+    {
+      "source": "/backend/strapi",
+      "target": "/backend/nodejs/"
+    },
+    {
+      "source": "/backend/strapi",
+      "target": "/backend/api/"
+    },
+    {
+      "source": "/backend/strapi",
+      "target": "/backend/graphql/"
+    },
+    {
+      "source": "/backend/springboot",
+      "target": "/uncategorized/backend/"
+    },
+    {
+      "source": "/backend/springboot",
+      "target": "/backend/api/"
+    },
+    {
+      "source": "/backend/springboot",
+      "target": "/automatizacion%20y%20build/maven/"
+    },
+    {
+      "source": "/backend/springboot",
+      "target": "/backend/microservicios/"
+    },
+    {
+      "source": "/backend/serverless",
+      "target": "/uncategorized/backend/"
+    },
+    {
+      "source": "/backend/serverless",
+      "target": "/backend/instance-scaling/"
+    },
+    {
+      "source": "/backend/serverless",
+      "target": "/backend/api/"
+    },
+    {
+      "source": "/backend/server-actions",
+      "target": "/uncategorized/backend/"
+    },
+    {
+      "source": "/backend/server-actions",
+      "target": "/backend/api/"
+    },
+    {
+      "source": "/backend/server-actions",
+      "target": "/backend/graphql/"
+    },
+    {
+      "source": "/backend/sequelize",
+      "target": "/backend/nodejs/"
+    },
+    {
+      "source": "/backend/sequelize",
+      "target": "/uncategorized/backend/"
+    },
+    {
+      "source": "/backend/sequelize",
+      "target": "/backend/api/"
+    },
+    {
+      "source": "/backend/runtime-management",
+      "target": "/uncategorized/backend/"
+    },
+    {
+      "source": "/backend/runtime-management",
+      "target": "/backend/pm2/"
+    },
+    {
+      "source": "/backend/runtime-management",
+      "target": "/backend/microservicios/"
+    },
+    {
+      "source": "/backend/runtime-management",
+      "target": "/backend/supervisor/"
+    },
+    {
+      "source": "/backend/rabbitmq",
+      "target": "/uncategorized/backend/"
+    },
+    {
+      "source": "/backend/rabbitmq",
+      "target": "/backend/apache-kafka/"
+    },
+    {
+      "source": "/backend/poketbase",
+      "target": "/uncategorized/backend/"
+    },
+    {
+      "source": "/backend/pm2",
+      "target": "/uncategorized/backend/"
+    },
+    {
+      "source": "/backend/pm2",
+      "target": "/backend/nodejs/"
+    },
+    {
+      "source": "/backend/php",
+      "target": "/uncategorized/apache/"
+    },
+    {
+      "source": "/backend/php",
+      "target": "/backend/composer/"
+    },
+    {
+      "source": "/backend/php",
+      "target": "/backend/laravel/"
+    },
+    {
+      "source": "/backend/php",
+      "target": "/backend/php/"
+    },
+    {
+      "source": "/backend/open-api",
+      "target": "/backend/api/"
+    },
+    {
+      "source": "/backend/nodejs",
+      "target": "/uncategorized/backend/"
+    },
+    {
+      "source": "/backend/nginx",
+      "target": "/uncategorized/backend/"
+    },
+    {
+      "source": "/backend/nginx",
+      "target": "/uncategorized/apache/"
+    },
+    {
+      "source": "/backend/nginx",
+      "target": "/backend/microservicios/"
+    },
+    {
+      "source": "/backend/nginx",
+      "target": "/backend/nginx/"
+    },
+    {
+      "source": "/backend/nginx",
+      "target": "/uncategorized/apache/"
+    },
+    {
+      "source": "/backend/nestjs",
+      "target": "/uncategorized/backend/"
+    },
+    {
+      "source": "/backend/monorepo",
+      "target": "/automatizacion%20y%20build/nx/"
+    },
+    {
+      "source": "/backend/microservicios",
+      "target": "/uncategorized/backend/"
+    },
+    {
+      "source": "/backend/microservicios",
+      "target": "/backend/api/"
+    },
+    {
+      "source": "/backend/microservicios",
+      "target": "/backend/springboot/"
+    },
+    {
+      "source": "/backend/laravel",
+      "target": "/backend/php/"
+    },
+    {
+      "source": "/backend/laravel",
+      "target": "/uncategorized/backend/"
+    },
+    {
+      "source": "/backend/jax-ws",
+      "target": "/backend/web-services/"
+    },
+    {
+      "source": "/backend/jax-ws",
+      "target": "/backend/api/"
+    },
+    {
+      "source": "/backend/java-ee",
+      "target": "/uncategorized/backend/"
+    },
+    {
+      "source": "/backend/instance-scaling",
+      "target": "/uncategorized/backend/"
+    },
+    {
+      "source": "/backend/instance-scaling",
+      "target": "/backend/nodejs/"
+    },
+    {
+      "source": "/backend/instance-scaling",
+      "target": "/backend/nginx/"
+    },
+    {
+      "source": "/backend/instance-scaling",
+      "target": "/backend/microservicios/"
+    },
+    {
+      "source": "/backend/graphql",
+      "target": "/uncategorized/backend/"
+    },
+    {
+      "source": "/backend/graphql",
+      "target": "/backend/api/"
+    },
+    {
+      "source": "/backend/graphql",
+      "target": "/backend/websockets/"
+    },
+    {
+      "source": "/backend/graphql",
+      "target": "/backend/web-services/"
+    },
+    {
+      "source": "/backend/graphql",
+      "target": "/backend/nodejs/"
+    },
+    {
+      "source": "/backend/gestor-de-colas",
+      "target": "/uncategorized/backend/"
+    },
+    {
+      "source": "/backend/gestor-de-colas",
+      "target": "/uncategorized/automatizacion-y-build/"
+    },
+    {
+      "source": "/backend/gestor-de-colas",
+      "target": "/backend/stream-processing/"
+    },
+    {
+      "source": "/backend/gestor-de-colas",
+      "target": "/backend/microservicios/"
+    },
+    {
+      "source": "/backend/gestor-de-colas",
+      "target": "/backend/rabbitmq/"
+    },
+    {
+      "source": "/backend/gestor-de-colas",
+      "target": "/backend/apache-kafka/"
+    },
+    {
+      "source": "/backend/firebase",
+      "target": "/uncategorized/backend/"
+    },
+    {
+      "source": "/backend/fastify",
+      "target": "/backend/api/"
+    },
+    {
+      "source": "/backend/fastify",
+      "target": "/uncategorized/backend/"
+    },
+    {
+      "source": "/backend/fastify",
+      "target": "/backend/nodejs/"
+    },
+    {
+      "source": "/backend/fastify",
+      "target": "/backend/graphql/"
+    },
+    {
+      "source": "/backend/fastapi",
+      "target": "/uncategorized/backend/"
+    },
+    {
+      "source": "/backend/cron-jobs",
+      "target": "/uncategorized/automatizacion-y-build/"
+    },
+    {
+      "source": "/backend/cron-jobs",
+      "target": "/uncategorized/backend/"
+    },
+    {
+      "source": "/backend/cors",
+      "target": "/uncategorized/backend/"
+    },
+    {
+      "source": "/backend/composer",
+      "target": "/uncategorized/automatizacion-y-build/"
+    },
+    {
+      "source": "/backend/composer",
+      "target": "/backend/php/"
+    },
+    {
+      "source": "/backend/axios",
+      "target": "/uncategorized/backend/"
+    },
+    {
+      "source": "/backend/axios",
+      "target": "/backend/api/"
+    },
+    {
+      "source": "/backend/axios",
+      "target": "/backend/nodejs/"
+    },
+    {
+      "source": "/backend/asp-net",
+      "target": "/uncategorized/backend/"
+    },
+    {
+      "source": "/backend/asp-net",
+      "target": "/backend/api/"
+    },
+    {
+      "source": "/backend/api",
+      "target": "/uncategorized/backend/"
+    },
+    {
+      "source": "/backend/api",
+      "target": "/backend/fastapi/"
+    },
+    {
+      "source": "/backend/api",
+      "target": "/backend/open-api/"
+    },
+    {
+      "source": "/backend/api",
+      "target": "/backend/web-services/"
+    },
+    {
+      "source": "/backend/api",
+      "target": "/backend/microservicios/"
+    },
+    {
+      "source": "/backend/api",
+      "target": "/backend/graphql/"
+    },
+    {
+      "source": "/backend/api",
+      "target": "/backend/axios/"
+    },
+    {
+      "source": "/backend/api",
+      "target": "/backend/ngrok/"
+    },
+    {
+      "source": "/backend/api",
+      "target": "/backend/swagger/"
+    },
+    {
+      "source": "/backend/api",
+      "target": "/backend/open-api/"
+    },
+    {
+      "source": "/backend/api",
+      "target": "/backend/graphql/"
+    },
+    {
+      "source": "/backend/apache-kafka",
+      "target": "/backend/stream-processing/"
+    },
+    {
+      "source": "/backend/apache-kafka",
+      "target": "/uncategorized/apache/"
+    },
+    {
+      "source": "/backend/apache-kafka",
+      "target": "/backend/apache-flinkcccccccccccccccccc/"
+    },
+    {
+      "source": "/backend/apache-kafka",
+      "target": "/uncategorized/apache/"
+    },
+    {
+      "source": "/backend/apache-flinkcccccccccccccccccc",
+      "target": "/uncategorized/apache/"
+    },
+    {
+      "source": "/backend/apache-flinkcccccccccccccccccc",
+      "target": "/backend/apache-kafka/"
+    },
+    {
+      "source": "/backend/apache-flinkcccccccccccccccccc",
+      "target": "/backend/stream-processing/"
+    },
+    {
+      "source": "/backend/apache-flinkcccccccccccccccccc",
+      "target": "/backend/apache-flinkcccccccccccccccccc/"
+    },
+    {
+      "source": "/backend/apache-flinkcccccccccccccccccc",
+      "target": "/backend/apache-kafka/"
+    },
+    {
+      "source": "/backend/apache-flinkcccccccccccccccccc",
+      "target": "/backend/apache-flinkcccccccccccccccccc/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/yeoman",
+      "target": "/automatizacion%20y%20build/jhipster/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/yeoman",
+      "target": "/backend/nodejs/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/yeoman",
+      "target": "/uncategorized/automatizacion-y-build/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/yeoman",
+      "target": "/automatizacion%20y%20build/gulp/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/yeoman",
+      "target": "/backend/nodejs/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/webpack",
+      "target": "/uncategorized/automatizacion-y-build/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/vite",
+      "target": "/uncategorized/automatizacion-y-build/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/nx",
+      "target": "/backend/monorepo/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/nx",
+      "target": "/uncategorized/automatizacion-y-build/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/jhipster",
+      "target": "/automatizacion%20y%20build/yeoman/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/maven",
+      "target": "/uncategorized/automatizacion-y-build/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/maven",
+      "target": "/uncategorized/apache/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/maven",
+      "target": "/backend/php/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/gulp",
+      "target": "/uncategorized/automatizacion-y-build/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/gradle",
+      "target": "/uncategorized/automatizacion-y-build/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/gradle",
+      "target": "/automatizacion%20y%20build/maven/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/celery",
+      "target": "/uncategorized/backend/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/celery",
+      "target": "/uncategorized/automatizacion-y-build/"
+    },
+    {
+      "source": "/uncategorized/automatizacion-y-build",
+      "target": "/backend/cron-jobs/"
+    },
+    {
+      "source": "/uncategorized/automatizacion-y-build",
+      "target": "/backend/webhooks/"
+    },
+    {
+      "source": "/uncategorized/automatizacion-y-build",
+      "target": "/automatizacion%20y%20build/gulp/"
+    },
+    {
+      "source": "/uncategorized/automatizacion-y-build",
+      "target": "/backend/nodejs/"
+    },
+    {
+      "source": "/uncategorized/automatizacion-y-build",
+      "target": "/automatizacion%20y%20build/celery/"
+    },
+    {
+      "source": "/uncategorized/automatizacion-y-build",
+      "target": "/automatizacion%20y%20build/gradle/"
+    },
+    {
+      "source": "/uncategorized/automatizacion-y-build",
+      "target": "/automatizacion%20y%20build/maven/"
+    },
+    {
+      "source": "/uncategorized/automatizacion-y-build",
+      "target": "/automatizacion%20y%20build/webpack/"
+    },
+    {
+      "source": "/uncategorized/automatizacion-y-build",
+      "target": "/automatizacion%20y%20build/vite/"
+    },
+    {
+      "source": "/uncategorized/automatizacion-y-build",
+      "target": "/automatizacion%20y%20build/nx/"
+    },
+    {
+      "source": "/uncategorized/automatizacion-y-build",
+      "target": "/automatizacion%20y%20build/yeoman/"
+    },
+    {
+      "source": "/uncategorized/automatizacion-y-build",
+      "target": "/automatizacion%20y%20build/nx/"
+    },
+    {
+      "source": "/uncategorized/automatizacion-y-build",
+      "target": "/automatizacion%20y%20build/jhipster/"
+    }
+  ]
+}
