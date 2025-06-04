@@ -13,10 +13,10 @@ cssclasses:
   - hide-embedded-header1
   - wide
 categories:
-  - Projectsinfraestructura IT
+  - infraestructura IT
 public_note: true
 publico: true
-category: Projectsinfraestructura IT
+category: infraestructura IT
 ---
 # SI Sistema de Información
 `$= dv.current().file.tags.join(" ")`
@@ -29,13 +29,13 @@ category: Projectsinfraestructura IT
 	- [ERPx](/management/erpx/)
 	- [CRM](/management/crm/)
 - Gestion de Negocio
-	- [soporte tecnico](/projects/infraestructura%20it/soporte-tecnico/)
+	- [soporte tecnico](/infraestructura%20it/soporte-tecnico/)
 	- DSS
 		- Sistema de soporte de decisiones 8 TIPOS INCREÍBLES-
 	- IDL
 	- EIS
 	- SIG
-- [CMDB](/projects/infraestructura%20it/cmdb/) 
-- [CORBA](/projects/infraestructura%20it/corba/) 
+- [CMDB](/infraestructura%20it/cmdb/) 
+- [CORBA](/infraestructura%20it/corba/) 
 - W3C
 	- [Web Standards | W3C](https://www.w3.org/standards/) 

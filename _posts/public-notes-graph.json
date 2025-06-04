@@ -1,0 +1,454 @@
+{
+  "nodes": [
+    {
+      "id": "soporte-tecnico",
+      "title": "soporte tecnico",
+      "slug": "soporte-tecnico",
+      "date": "2024-11-19 02:46",
+      "categories": [
+        "infraestructura IT"
+      ],
+      "url": "/infraestructura%20it/soporte-tecnico"
+    },
+    {
+      "id": "soa",
+      "title": "SOA",
+      "slug": "soa",
+      "date": "2025-04-14 04:21",
+      "categories": [
+        "infraestructura IT"
+      ],
+      "url": "/infraestructura%20it/soa"
+    },
+    {
+      "id": "si-sistema-de-informaci-n",
+      "title": "SI Sistema de Información",
+      "slug": "si-sistema-de-informaci-n",
+      "date": "2025-05-21 16:53",
+      "categories": [
+        "infraestructura IT"
+      ],
+      "url": "/infraestructura%20it/si-sistema-de-informaci-n"
+    },
+    {
+      "id": "psd2",
+      "title": "PSD2",
+      "slug": "psd2",
+      "date": "2025-05-21 17:40",
+      "categories": [
+        "infraestructura IT"
+      ],
+      "url": "/infraestructura%20it/psd2"
+    },
+    {
+      "id": "pci-dss",
+      "title": "PCI-DSS",
+      "slug": "pci-dss",
+      "date": "2025-05-21 17:39",
+      "categories": [
+        "infraestructura IT"
+      ],
+      "url": "/infraestructura%20it/pci-dss"
+    },
+    {
+      "id": "otrs-znuny",
+      "title": "OTRS Znuny",
+      "slug": "otrs-znuny",
+      "date": "2025-04-14 03:14",
+      "categories": [
+        "infraestructura IT"
+      ],
+      "url": "/infraestructura%20it/otrs-znuny"
+    },
+    {
+      "id": "odoo",
+      "title": "odoo",
+      "slug": "odoo",
+      "date": "2024-11-18 23:24",
+      "categories": [
+        "infraestructura IT"
+      ],
+      "url": "/infraestructura%20it/odoo"
+    },
+    {
+      "id": "lopd",
+      "title": "LOPD",
+      "slug": "lopd",
+      "date": "2025-05-21 17:18",
+      "categories": [
+        "infraestructura IT"
+      ],
+      "url": "/infraestructura%20it/lopd"
+    },
+    {
+      "id": "itsm",
+      "title": "ITSM",
+      "slug": "itsm",
+      "date": "2025-05-21 15:37",
+      "categories": [
+        "infraestructura IT"
+      ],
+      "url": "/infraestructura%20it/itsm"
+    },
+    {
+      "id": "itil",
+      "title": "ITIL",
+      "slug": "itil",
+      "date": "2025-05-21 15:35",
+      "categories": [
+        "infraestructura IT"
+      ],
+      "url": "/infraestructura%20it/itil"
+    },
+    {
+      "id": "iso-31010",
+      "title": "ISO 31010",
+      "slug": "iso-31010",
+      "date": "2025-05-21 17:37",
+      "categories": [
+        "infraestructura IT"
+      ],
+      "url": "/infraestructura%20it/iso-31010"
+    },
+    {
+      "id": "iso-22301",
+      "title": "ISO 22301",
+      "slug": "iso-22301",
+      "date": "2025-05-21 17:35",
+      "categories": [
+        "infraestructura IT"
+      ],
+      "url": "/infraestructura%20it/iso-22301"
+    },
+    {
+      "id": "iso-20000",
+      "title": "ISO 20000",
+      "slug": "iso-20000",
+      "date": "2025-05-21 17:49",
+      "categories": [
+        "infraestructura IT"
+      ],
+      "url": "/infraestructura%20it/iso-20000"
+    },
+    {
+      "id": "ipaas-integration-platform-as-a-service",
+      "title": "iPaaS Integration Platform as a Service",
+      "slug": "ipaas-integration-platform-as-a-service",
+      "date": "2025-05-21 15:31",
+      "categories": [
+        "infraestructura IT"
+      ],
+      "url": "/infraestructura%20it/ipaas-integration-platform-as-a-service"
+    },
+    {
+      "id": "findops",
+      "title": "FindOps",
+      "slug": "findops",
+      "date": "2025-05-21 01:17",
+      "categories": [
+        "infraestructura IT"
+      ],
+      "url": "/infraestructura%20it/findops"
+    },
+    {
+      "id": "isms",
+      "title": "ISMS",
+      "slug": "isms",
+      "date": "2025-05-21 17:01",
+      "categories": [
+        "infraestructura IT"
+      ],
+      "url": "/infraestructura%20it/isms"
+    },
+    {
+      "id": "iec-27002",
+      "title": "IEC 27002",
+      "slug": "iec-27002",
+      "date": "2025-05-21 17:21",
+      "categories": [
+        "infraestructura IT"
+      ],
+      "url": "/infraestructura%20it/iec-27002"
+    },
+    {
+      "id": "ietf",
+      "title": "IETF",
+      "slug": "ietf",
+      "date": "2025-05-21 15:40",
+      "categories": [
+        "infraestructura IT"
+      ],
+      "url": "/infraestructura%20it/ietf"
+    },
+    {
+      "id": "iec-27001",
+      "title": "IEC 27001",
+      "slug": "iec-27001",
+      "date": "2025-05-21 17:04",
+      "categories": [
+        "infraestructura IT"
+      ],
+      "url": "/infraestructura%20it/iec-27001"
+    },
+    {
+      "id": "hipaa",
+      "title": "HIPAA",
+      "slug": "hipaa",
+      "date": "2025-05-21 17:19",
+      "categories": [
+        "infraestructura IT"
+      ],
+      "url": "/infraestructura%20it/hipaa"
+    },
+    {
+      "id": "grc",
+      "title": "GRC",
+      "slug": "grc",
+      "date": "2025-05-21 17:14",
+      "categories": [
+        "infraestructura IT"
+      ],
+      "url": "/infraestructura%20it/grc"
+    },
+    {
+      "id": "gdpr",
+      "title": "GDPR",
+      "slug": "gdpr",
+      "date": "2025-05-21 17:17",
+      "categories": [
+        "infraestructura IT"
+      ],
+      "url": "/infraestructura%20it/gdpr"
+    },
+    {
+      "id": "ens-esquema-nacional-de-seguridad",
+      "title": "ENS Esquema Nacional de Seguridad",
+      "slug": "ens-esquema-nacional-de-seguridad",
+      "date": "2025-05-21 17:44",
+      "categories": [
+        "infraestructura IT"
+      ],
+      "url": "/infraestructura%20it/ens-esquema-nacional-de-seguridad"
+    },
+    {
+      "id": "corba",
+      "title": "CORBA",
+      "slug": "corba",
+      "date": "2025-05-21 15:11",
+      "categories": [
+        "infraestructura IT"
+      ],
+      "url": "/infraestructura%20it/corba"
+    },
+    {
+      "id": "control-m",
+      "title": "Control-M",
+      "slug": "control-m",
+      "date": "2025-04-14 03:16",
+      "categories": [
+        "infraestructura IT"
+      ],
+      "url": "/infraestructura%20it/control-m"
+    },
+    {
+      "id": "combodo-itop",
+      "title": "Combodo itop",
+      "slug": "combodo-itop",
+      "date": "2025-04-14 03:12",
+      "categories": [
+        "infraestructura IT"
+      ],
+      "url": "/infraestructura%20it/combodo-itop"
+    },
+    {
+      "id": "cmdb",
+      "title": "CMDB",
+      "slug": "cmdb",
+      "date": "2025-05-21 15:13",
+      "categories": [
+        "infraestructura IT"
+      ],
+      "url": "/infraestructura%20it/cmdb"
+    },
+    {
+      "id": "sap",
+      "title": "SAP",
+      "slug": "sap",
+      "date": "2025-05-21 18:38",
+      "categories": [
+        "Management"
+      ],
+      "url": "/management/sap"
+    },
+    {
+      "id": "ticketing",
+      "title": "ticketing",
+      "slug": "ticketing",
+      "date": "2025-05-21 19:54",
+      "categories": [
+        "Management"
+      ],
+      "url": "/management/ticketing"
+    },
+    {
+      "id": "project-management",
+      "title": "Project Management",
+      "slug": "project-management",
+      "date": "2025-05-21 20:08",
+      "categories": [
+        "Management"
+      ],
+      "url": "/management/project-management"
+    },
+    {
+      "id": "product-management",
+      "title": "Product Management",
+      "slug": "product-management",
+      "date": "2025-05-21 20:07",
+      "categories": [
+        "Management"
+      ],
+      "url": "/management/product-management"
+    },
+    {
+      "id": "erpx",
+      "title": "ERPx",
+      "slug": "erpx",
+      "date": "2024-11-19 22:22",
+      "categories": [
+        "Management"
+      ],
+      "url": "/management/erpx"
+    },
+    {
+      "id": "jira",
+      "title": "Jira",
+      "slug": "jira",
+      "date": "2024-11-18 23:23",
+      "categories": [
+        "Management"
+      ],
+      "url": "/management/jira"
+    },
+    {
+      "id": "crm",
+      "title": "CRM",
+      "slug": "crm",
+      "date": "2024-11-19 22:20",
+      "categories": [
+        "Management"
+      ],
+      "url": "/management/crm"
+    }
+  ],
+  "links": [
+    {
+      "source": "/infraestructura%20it/soporte-tecnico",
+      "target": "/management/ticketing/"
+    },
+    {
+      "source": "/infraestructura%20it/si-sistema-de-informaci-n",
+      "target": "/management/erpx/"
+    },
+    {
+      "source": "/infraestructura%20it/si-sistema-de-informaci-n",
+      "target": "/management/crm/"
+    },
+    {
+      "source": "/infraestructura%20it/si-sistema-de-informaci-n",
+      "target": "/infraestructura%20it/soporte-tecnico/"
+    },
+    {
+      "source": "/infraestructura%20it/si-sistema-de-informaci-n",
+      "target": "/infraestructura%20it/cmdb/"
+    },
+    {
+      "source": "/infraestructura%20it/si-sistema-de-informaci-n",
+      "target": "/infraestructura%20it/corba/"
+    },
+    {
+      "source": "/infraestructura%20it/otrs-znuny",
+      "target": "/management/ticketing/"
+    },
+    {
+      "source": "/infraestructura%20it/odoo",
+      "target": "/management/erpx/"
+    },
+    {
+      "source": "/infraestructura%20it/odoo",
+      "target": "/management/ticketing/"
+    },
+    {
+      "source": "/infraestructura%20it/itil",
+      "target": "/infraestructura%20it/itsm/"
+    },
+    {
+      "source": "/infraestructura%20it/findops",
+      "target": "/management/erpx/"
+    },
+    {
+      "source": "/infraestructura%20it/findops",
+      "target": "/management/erpx/"
+    },
+    {
+      "source": "/infraestructura%20it/ietf",
+      "target": "/infraestructura%20it/itil/"
+    },
+    {
+      "source": "/infraestructura%20it/iec-27001",
+      "target": "/infraestructura%20it/isms/"
+    },
+    {
+      "source": "/management/sap",
+      "target": "/management/erpx/"
+    },
+    {
+      "source": "/management/ticketing",
+      "target": "/management/crm/"
+    },
+    {
+      "source": "/management/ticketing",
+      "target": "/management/erpx/"
+    },
+    {
+      "source": "/management/ticketing",
+      "target": "/infraestructura%20it/itil/"
+    },
+    {
+      "source": "/management/ticketing",
+      "target": "/management/jira/"
+    },
+    {
+      "source": "/management/ticketing",
+      "target": "/infraestructura%20it/odoo/"
+    },
+    {
+      "source": "/management/project-management",
+      "target": "/management/jira/"
+    },
+    {
+      "source": "/management/product-management",
+      "target": "/management/sap/"
+    },
+    {
+      "source": "/management/product-management",
+      "target": "/management/crm/"
+    },
+    {
+      "source": "/management/product-management",
+      "target": "/management/erpx/"
+    },
+    {
+      "source": "/management/erpx",
+      "target": "/management/crm/"
+    },
+    {
+      "source": "/management/erpx",
+      "target": "/infraestructura%20it/odoo/"
+    },
+    {
+      "source": "/management/crm",
+      "target": "/management/jira/"
+    }
+  ]
+}

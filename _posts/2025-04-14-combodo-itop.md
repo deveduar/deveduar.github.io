@@ -12,10 +12,10 @@ cssclasses:
   - hide-embedded-header1
   - wide
 categories:
-  - Projectsinfraestructura IT
+  - infraestructura IT
 public_note: true
 publico: true
-category: Projectsinfraestructura IT
+category: infraestructura IT
 ---
 # Combodo itop
 `$= dv.current().file.tags.join(" ")`

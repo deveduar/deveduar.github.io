@@ -29,11 +29,11 @@ category: Management
 - Projects/infraestructura IT
 - Gestion de Negocio
 - 
-- [ITIL](/projects/infraestructura%20it/itil/)
+- [ITIL](/infraestructura%20it/itil/)
 - [Jira](/management/jira/)
 - cloud computing
 	- akamai 
-- [odoo](/projects/infraestructura%20it/odoo/)
+- [odoo](/infraestructura%20it/odoo/)
 - freescout
 	- [Best open source help desk: Zendesk & Help Scout alternative](https://freescout.net/) 
 	- en docker: [GitHub - tiredofit/docker-freescout: Dockerized web based help desk and shared inbox](https://github.com/tiredofit/docker-freescout) 
