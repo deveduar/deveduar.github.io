@@ -281,7 +281,22 @@ const pandaPalette = [
           orphansVisible = false;
         } else {
           // Show orphans
-          data.nodes.add(orphanNodesBackup);
+          const restored = orphanNodesBackup.map(n => {
+            const originalNode = graph.nodes.find(gn => normalize(gn.url) === n.id);
+            const bgColor = getCategoryColor(originalNode?.categories);
+            return {
+              ...n,
+              color: {
+                background: bgColor,
+                border: '#ffffff',
+                highlight: {
+                  background: '#b1e1f4',
+                  border: '#ffffff'
+                }
+              }
+            };
+          });
+          data.nodes.add(restored);
           button.textContent = 'Quitar huérfanos';
           orphansVisible = true;
         }
@@ -302,17 +317,27 @@ document.body.appendChild(tooltip);
 
 // Mostrar tooltip al hacer hover sobre nodo
 network.on("hoverNode", function (params) {
-  const nodeId = params.node;
-  const node = data.nodes.get(nodeId);
-
-  tooltip.innerHTML = `
-    <strong>${node.label}</strong><br>
-    Conexiones: ${node.value}<br>
-    ID: ${nodeId}
-  `;
-
-  tooltip.style.display = 'block';
-});
+    const nodeId = params.node;
+    const node = data.nodes.get(nodeId);
+  
+    const originalNode = graph.nodes.find(n => normalize(n.url) === nodeId);
+    const category = (originalNode?.categories?.[0] || 'Uncategorized');
+  
+    // Colores del nodo
+    const nodeBg = node.color?.background || '#333';
+  
+    tooltip.innerHTML = `
+      <strong>${node.label}</strong><br>
+      Categoría: ${category}<br>
+      Conexiones: ${node.value}
+    `;
+  
+    tooltip.style.background = nodeBg;
+    tooltip.style.border = `2px solid ${nodeBg}`;
+    tooltip.style.color = '#fff';
+    tooltip.style.display = 'block';
+  });
+  
 
 // Mover el tooltip con el mouse
 container.addEventListener('mousemove', function (e) {
