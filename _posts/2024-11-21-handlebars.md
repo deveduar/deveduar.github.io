@@ -41,7 +41,7 @@ category: Motor de plantillas
 
 ## Conceptos fundamentales
 ### Plantillas
-- Archivos de texto (normalmente HTML) con placeholders `{% raw %}{{ }}{% endraw %}`.
+- Archivos de texto (normalmente HTML) con placeholders `{{ }}`.
 - No ejecutan código arbitrario, solo interpolan datos.
 - Favorecen seguridad y mantenibilidad.
 
@@ -54,9 +54,9 @@ category: Motor de plantillas
 - El diseño correcto del contexto reduce la complejidad de la plantilla.
 
 ### Expresiones
-- `{% raw %}{{variable}}{% endraw %}` para imprimir valores escapados.
-- `{% raw %}{{{variable}}{% endraw %}}` para imprimir HTML sin escape (uso controlado).
-- Soporte para rutas profundas: `{% raw %}{{user.profile.name}}{% endraw %}`.
+- `{{variable}}` para imprimir valores escapados.
+- `{{{variable}}}` para imprimir HTML sin escape (uso controlado).
+- Soporte para rutas profundas: `{{user.profile.name}}`.
 
 ### Helpers
 - Funciones reutilizables que extienden la expresividad.
@@ -116,7 +116,7 @@ category: Motor de plantillas
 ## Limitaciones y consideraciones
 - No diseñado para lógica compleja
 - Requiere una buena preparación de datos
-- Uso incorrecto de `{% raw %}{{{ }}{% endraw %}}` puede introducir riesgos XSS
+- Uso incorrecto de `{{{ }}}` puede introducir riesgos XSS
 - En proyectos muy dinámicos puede quedarse corto frente a frameworks reactivos
 
 ## Casos de uso recomendados
@@ -163,7 +163,7 @@ category: Motor de plantillas
 ## Escapado y seguridad avanzada
 - Handlebars escapa HTML por defecto.
 - Riesgos potenciales:
-	- Uso excesivo de `{% raw %}{{{ }}{% endraw %}}`
+	- Uso excesivo de `{{{ }}}`
 	- Datos no saneados desde backend
 - Buenas prácticas:
 	- Escapar siempre por defecto

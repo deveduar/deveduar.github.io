@@ -127,7 +127,7 @@ Los motores suelen integrar sistemas de localización que permiten:
 - Adaptar formato de fechas, moneda y unidades.
 - Generar múltiples versiones del mismo contenido para diferentes idiomas.
 
-Ejemplo: usar `{% raw %}{{ i18n("welcome_message") }}{% endraw %}` para mostrar el texto en el idioma configurado.
+Ejemplo: usar `{{ i18n("welcome_message") }}` para mostrar el texto en el idioma configurado.
 
 ### 2. **Layouts y herencia**
 Permite definir plantillas base que otras vistas pueden extender. Esto mejora la mantenibilidad y evita duplicación de código.
