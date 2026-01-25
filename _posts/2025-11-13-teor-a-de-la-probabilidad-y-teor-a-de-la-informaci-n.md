@@ -413,6 +413,7 @@ Información mutua, Independencia
 
 ## 💻 Ejemplo de código (Python)
 
+{% raw %}
 ```python
 import numpy as np
 
@@ -425,7 +426,8 @@ E = np.mean(x)
 Var = np.var(x)
 
 print(f"Esperanza: {E:.2f}, Varianza: {Var:.2f}")
-````
+```
+{% endraw %}`
 
 **Resultado esperado:**
 

@@ -197,6 +197,7 @@ categories:
 
 ## Flujo de autenticación SSO con OAuth / OIDC
 
+{% raw %}
 ```mermaid
 sequenceDiagram
 	User->>App: Solicita acceso
@@ -209,10 +210,12 @@ sequenceDiagram
 	User->>Microservice: Solicita recurso con JWT
 	Microservice->>App: Verifica token JWT / claims
 	Microservice-->>User: Entrega recurso autorizado
-````
+```
+{% endraw %}`
 
 ## Flujo de Refresh Tokens
 
+{% raw %}
 ```mermaid
 sequenceDiagram
 	User->>App: Access Token caducado
@@ -220,9 +223,11 @@ sequenceDiagram
 	IdP->>App: Devuelve nuevo Access Token (opcional nuevo Refresh Token)
 	App->>User: Sesión renovada sin re-login
 ```
+{% endraw %}
 
 ## Arquitectura de autenticación distribuida para microservicios
 
+{% raw %}
 ```mermaid
 graph TD
 	App[Frontend / Cliente]
@@ -239,9 +244,11 @@ graph TD
 	Micro1 -->|Acceso a datos| DB
 	Micro2 -->|Acceso a datos| DB
 ```
+{% endraw %}
 
 ## Flujo de MFA (2FA / biometría)
 
+{% raw %}
 ```mermaid
 sequenceDiagram
 	User->>App: Solicita login
@@ -251,6 +258,7 @@ sequenceDiagram
 	IdP-->>App: Login exitoso, emite tokens JWT
 	App-->>User: Acceso autorizado
 ```
+{% endraw %}
 
 ## Consideraciones avanzadas
 
@@ -332,6 +340,7 @@ Perfecto, aquí tienes una nota centrada **en técnicas de autenticación con ej
 - Algoritmos recomendados: **bcrypt, scrypt, Argon2**.  
 
 **Ejemplo en Python con bcrypt:**
+{% raw %}
 ```python
 import bcrypt
 
@@ -345,7 +354,8 @@ if bcrypt.checkpw(password, hashed):
     print("Contraseña correcta")
 else:
     print("Contraseña incorrecta")
-````
+```
+{% endraw %}`
 
 ### 2. Autenticación con tokens JWT
 
@@ -355,6 +365,7 @@ else:
 
 **Ejemplo en Node.js usando jsonwebtoken:**
 
+{% raw %}
 ```javascript
 const jwt = require('jsonwebtoken');
 
@@ -371,6 +382,7 @@ try {
     console.log('Token inválido');
 }
 ```
+{% endraw %}
 
 ### 3. Autenticación OAuth 2.0
 
@@ -379,6 +391,7 @@ try {
 
 **Ejemplo conceptual en Python (Flask + requests):**
 
+{% raw %}
 ```python
 from flask import Flask, redirect, request
 import requests
@@ -408,6 +421,7 @@ def callback():
     token = r.json()
     return token
 ```
+{% endraw %}
 
 ### 4. Autenticación multifactor (MFA / 2FA)
 
@@ -416,6 +430,7 @@ def callback():
 
 **Ejemplo TOTP en Python:**
 
+{% raw %}
 ```python
 import pyotp
 
@@ -433,6 +448,7 @@ if totp.verify(otp):
 else:
     print("OTP inválido")
 ```
+{% endraw %}
 
 ### 5. Autenticación sin contraseña (Passwordless / WebAuthn / FIDO2)
 
@@ -444,6 +460,7 @@ else:
 * Provee gestión de usuarios, login con correo/contraseña, OAuth y MFA.
 * Ejemplo en JavaScript:
 
+{% raw %}
 ```javascript
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
@@ -456,6 +473,7 @@ signInWithEmailAndPassword(auth, email, password)
     console.error("Error de login:", error);
   });
 ```
+{% endraw %}
 
 ## Buenas prácticas de programación en autenticación
 
@@ -494,6 +512,7 @@ Perfecto, aquí tienes una **versión extendida tipo “recetario completo de al
 - **Peppering:** valor secreto adicional conocido solo por servidor
 
 ### Ejemplo Python con bcrypt
+{% raw %}
 ```python
 import bcrypt
 
@@ -504,7 +523,8 @@ hashed = bcrypt.hashpw(password, salt)
 # Verificación
 if bcrypt.checkpw(password, hashed):
     print("Contraseña correcta")
-````
+```
+{% endraw %}`
 
 ### Flujo
 
@@ -524,6 +544,7 @@ if bcrypt.checkpw(password, hashed):
 
 ### Ejemplo Node.js
 
+{% raw %}
 ```javascript
 const jwt = require('jsonwebtoken');
 
@@ -535,6 +556,7 @@ const token = jwt.sign(payload, secret, { expiresIn: '1h' });
 const decoded = jwt.verify(token, secret);
 console.log(decoded);
 ```
+{% endraw %}
 
 ### Flujo
 
@@ -557,6 +579,7 @@ console.log(decoded);
 
 ### Ejemplo conceptual Flask (Python)
 
+{% raw %}
 ```python
 from flask import Flask, redirect, request
 import requests
@@ -584,6 +607,7 @@ def callback():
     })
     return r.json()
 ```
+{% endraw %}
 
 ---
 
@@ -597,6 +621,7 @@ def callback():
 
 ### Ejemplo TOTP Python
 
+{% raw %}
 ```python
 import pyotp
 
@@ -608,6 +633,7 @@ print("Código OTP:", otp)
 if totp.verify(otp):
     print("OTP válido")
 ```
+{% endraw %}
 
 ### Flujo
 
@@ -647,6 +673,7 @@ if totp.verify(otp):
 
 ### Ejemplo JS
 
+{% raw %}
 ```javascript
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
@@ -655,6 +682,7 @@ signInWithEmailAndPassword(auth, email, password)
   .then(userCredential => console.log(userCredential.user))
   .catch(error => console.error(error));
 ```
+{% endraw %}
 
 ---
 
@@ -668,6 +696,7 @@ signInWithEmailAndPassword(auth, email, password)
 
 ### Flujo conceptual
 
+{% raw %}
 ```mermaid
 graph TD
 	Client -->|JWT| Gateway
@@ -676,6 +705,7 @@ graph TD
 	Microservice1 --> DB
 	Microservice2 --> DB
 ```
+{% endraw %}
 
 ---
 
@@ -710,12 +740,14 @@ graph TD
 	- **Auth0 Adaptive MFA**
 	- **Okta Adaptive Authentication**
 - Pseudocódigo:
+{% raw %}
 ```python
 if user.location not in known_locations:
     require_mfa(user)
 else:
     standard_login(user)
-````
+```
+{% endraw %}`
 
 ## 2. Hardware Tokens y Smart Cards
 
@@ -723,6 +755,7 @@ else:
 * Integración con **PKCS#11** para validación de certificados
 * Ejemplo conceptual (Python + yubikey-manager):
 
+{% raw %}
 ```python
 from yubikit.core import YubiKeyDevice
 yk = YubiKeyDevice.connect()
@@ -730,6 +763,7 @@ challenge = generate_challenge()
 response = yk.authenticate(challenge)
 verify_response(response)
 ```
+{% endraw %}
 
 ## 3. Biometría y autenticación local segura
 
@@ -748,6 +782,7 @@ verify_response(response)
 * Middleware o proxies validan identidad, contexto y permisos antes de cada request
 * Ejemplo conceptual:
 
+{% raw %}
 ```javascript
 function zeroTrustMiddleware(req, res, next) {
     if (!validateToken(req.headers.token)) return res.sendStatus(401);
@@ -755,12 +790,14 @@ function zeroTrustMiddleware(req, res, next) {
     next();
 }
 ```
+{% endraw %}
 
 ## 5. SCIM / Provisionamiento automatizado
 
 * Automatiza creación, actualización y eliminación de usuarios entre sistemas
 * Ejemplo: sincronizar directorio corporativo con aplicación SaaS
 
+{% raw %}
 ```python
 import requests
 payload = {
@@ -770,6 +807,7 @@ payload = {
 }
 requests.post("https://api.saas.com/scim/v2/Users", json=payload, headers=headers)
 ```
+{% endraw %}
 
 ## 6. SSO corporativo avanzado
 
@@ -777,6 +815,7 @@ requests.post("https://api.saas.com/scim/v2/Users", json=payload, headers=header
 * Uso de assertion consumer service (ACS) para recibir tokens
 * Ejemplo conceptual:
 
+{% raw %}
 ```javascript
 app.post('/saml/acs', (req, res) => {
     const assertion = parseSAML(req.body.SAMLResponse);
@@ -784,6 +823,7 @@ app.post('/saml/acs', (req, res) => {
     loginUser(user);
 });
 ```
+{% endraw %}
 
 ## 7. Passwordless enterprise-ready
 
@@ -796,10 +836,12 @@ app.post('/saml/acs', (req, res) => {
   3. Dispositivo firma con clave privada ligada a biometría o PIN
   4. Servidor valida firma y registra contexto (dispositivo, ubicación)
 
+{% raw %}
 ```javascript
 navigator.credentials.get({ publicKey: publicKeyOptions })
 .then(assertion => sendToServer(assertion))
 ```
+{% endraw %}
 
 ## 8. Buenas prácticas avanzadas CE
 

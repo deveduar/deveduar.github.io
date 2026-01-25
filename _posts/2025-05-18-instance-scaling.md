@@ -163,6 +163,7 @@ category: Backend
 	- Métricas y tracing con X-Ray.
 
 ## Código: Ejemplo de Autoscaling [Kubernetes](/virtualizacion/kubernetes/) (HPA)
+{% raw %}
 ```yaml
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
@@ -182,18 +183,22 @@ spec:
         target:
           type: Utilization
           averageUtilization: 70
-````
+```
+{% endraw %}`
 
 ## Código: Ejemplo de Cluster Node.js con [PM2](/backend/pm2/)
 
+{% raw %}
 ```bash
 pm2 start app.js -i max
 pm2 monit
 pm2 reload all
 ```
+{% endraw %}
 
 ## Código: Ejemplo de Cache-aside con Redis y Node.js
 
+{% raw %}
 ```javascript
 const redis = require("redis");
 const client = redis.createClient();
@@ -208,6 +213,7 @@ async function getUser(id) {
 	return user;
 }
 ```
+{% endraw %}
 
 
 # Instance Scaling — Conceptos Avanzados Pendientes

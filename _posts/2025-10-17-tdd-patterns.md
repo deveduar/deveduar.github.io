@@ -33,11 +33,13 @@ category: Testing
 - Ejemplo en el bloque [[#🧪 Ejemplo - Test Doubles]]
 
 ### 🧪 Ejemplo - Test Doubles
+{% raw %}
 ```js
 const emailService = { send: jest.fn() };
 loginUser('user', '1234', emailService);
 expect(emailService.send).toHaveBeenCalledWith('user');
-````
+```
+{% endraw %}`
 
 ## 🧠 Naming Patterns
 
@@ -54,11 +56,13 @@ expect(emailService.send).toHaveBeenCalledWith('user');
 
 ### 🧪 Ejemplo - Naming Patterns
 
+{% raw %}
 ```js
 test('should return 401 when user is unauthorized', () => {
 	expect(login('user', 'badpass')).toBe(401);
 });
 ```
+{% endraw %}
 
 ## ⚖️ Assertions
 
@@ -77,10 +81,12 @@ test('should return 401 when user is unauthorized', () => {
 
 ### 🧪 Ejemplo - Assertions
 
+{% raw %}
 ```js
 expect(suma(2, 2)).toBe(4);
 expect(resultado.error).toBeUndefined();
 ```
+{% endraw %}
 
 ## 🔁 Parametrización de Tests
 
@@ -93,6 +99,7 @@ expect(resultado.error).toBeUndefined();
 
 ### 🧪 Ejemplo - Parametrización de Tests
 
+{% raw %}
 ```js
 test.each([
   [1, 2, 3],
@@ -102,6 +109,7 @@ test.each([
   expect(suma(a, b)).toBe(esperado);
 });
 ```
+{% endraw %}
 
 ## ⚙️ Fixture Setup
 
@@ -114,6 +122,7 @@ test.each([
 
 ### 🧪 Ejemplo - Fixture Setup
 
+{% raw %}
 ```js
 let usuario;
 beforeEach(() => {
@@ -123,6 +132,7 @@ test('usuario activo tiene acceso', () => {
   expect(usuario.activo).toBe(true);
 });
 ```
+{% endraw %}
 
 ## 🧱 Anti-patterns
 
@@ -161,6 +171,7 @@ test('usuario activo tiene acceso', () => {
 
 ### 🧪 Ejemplo - Readability
 
+{% raw %}
 ```js
 describe('Gestión de cuentas', () => {
   test('crea usuario correctamente', () => {
@@ -169,6 +180,7 @@ describe('Gestión de cuentas', () => {
   });
 });
 ```
+{% endraw %}
 
 ## ⏱️ Fake Time y Mocking Avanzado
 
@@ -181,6 +193,7 @@ describe('Gestión de cuentas', () => {
 
 ### 🧪 Ejemplo - Fake Time
 
+{% raw %}
 ```js
 jest.useFakeTimers();
 const callback = jest.fn();
@@ -188,6 +201,7 @@ setTimeout(callback, 1000);
 jest.advanceTimersByTime(1000);
 expect(callback).toHaveBeenCalled();
 ```
+{% endraw %}
 
 ## 🧩 Dependency Injection en Tests
 
@@ -200,6 +214,7 @@ expect(callback).toHaveBeenCalled();
 
 ### 🧪 Ejemplo - Dependency Injection
 
+{% raw %}
 ```js
 class ServicioUsuarios {
   constructor(db) { this.db = db; }
@@ -209,6 +224,7 @@ const fakeDb = { query: jest.fn().mockReturnValue([{ id: 1 }]) };
 const servicio = new ServicioUsuarios(fakeDb);
 expect(servicio.getAll()).toHaveLength(1);
 ```
+{% endraw %}
 
 ## 🔄 Test-Driven Refactoring Patterns
 
@@ -234,11 +250,13 @@ expect(servicio.getAll()).toHaveLength(1);
 
 ### 🧪 Ejemplo - Test Isolation
 
+{% raw %}
 ```js
 afterEach(() => {
   jest.clearAllMocks();
 });
 ```
+{% endraw %}
 
 ## 🔁 Continuous Integration
 
@@ -249,6 +267,7 @@ afterEach(() => {
 
 ## 🧩 Ejemplo Completo - Patrones Combinados
 
+{% raw %}
 ```js
 describe('Gestor de pagos', () => {
   let servicio, mockAPI;
@@ -268,3 +287,4 @@ describe('Gestor de pagos', () => {
   });
 });
 ```
+{% endraw %}

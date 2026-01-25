@@ -40,13 +40,16 @@ category: autenticacion
 ## Ejemplos de código
 
 ### Instalación básica
+{% raw %}
 ```bash
 # Instalación usando npm
 npm install better-auth
-````
+```
+{% endraw %}`
 
 ### Configuración inicial
 
+{% raw %}
 ```javascript
 const BetterAuth = require('better-auth');
 
@@ -55,17 +58,21 @@ const auth = new BetterAuth({
 	sessionSecret: 'miSecretoSuperSeguro'
 });
 ```
+{% endraw %}
 
 ### Autenticación de usuario
 
+{% raw %}
 ```javascript
 auth.login('usuario@example.com', 'contraseña123')
 	.then(user => console.log('Usuario autenticado:', user))
 	.catch(err => console.error('Error de autenticación:', err));
 ```
+{% endraw %}
 
 ### Uso de plugins
 
+{% raw %}
 ```javascript
 const auditPlugin = require('better-auth-plugin-audit');
 
@@ -73,6 +80,7 @@ auth.use(auditPlugin({
 	logFile: './audit.log'
 }));
 ```
+{% endraw %}
 
 ## Buenas prácticas
 

@@ -53,6 +53,7 @@ category: Data Science
 
 ### Ejemplo de Código: Red Neuronal Simple
 
+{% raw %}
 ```python
 import tensorflow as tf
 from tensorflow import keras
@@ -76,10 +77,12 @@ history = model.fit(celsius, fahrenheit, epochs=500, verbose=0)
 
 # Predicciones
 print(model.predict([100.0]))
-````
+```
+{% endraw %}`
 
 ### Visualización del Entrenamiento
 
+{% raw %}
 ```python
 import matplotlib.pyplot as plt
 
@@ -89,6 +92,7 @@ plt.xlabel('Epochs')
 plt.ylabel('Loss')
 plt.show()
 ```
+{% endraw %}
 
 ### Expansión de Conceptos
 
@@ -179,6 +183,7 @@ plt.show()
 - Operaciones básicas: suma, multiplicación, reshape, slicing, concatenación.  
 - Ejemplo:
 
+{% raw %}
 ```python
 import tensorflow as tf
 
@@ -186,7 +191,8 @@ a = tf.constant([[1, 2], [3, 4]])
 b = tf.Variable([[5, 6], [7, 8]])
 c = tf.add(a, b)
 print(c)
-````
+```
+{% endraw %}`
 
 ## Computación con Grafos
 
@@ -212,6 +218,7 @@ print(c)
 - Permite crear modelos secuenciales y funcionales.
 - Simplifica compilación, entrenamiento y evaluación de modelos.
 
+{% raw %}
 ```python
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
@@ -222,6 +229,7 @@ model = Sequential([
 ])
 model.compile(optimizer='adam', loss='mse')
 ```
+{% endraw %}
 
 ## Entrenamiento de Modelos
 

@@ -132,6 +132,7 @@ Ventajas:
 
 ## Ejemplo de Playbook de Patching con Ansible
 ### Actualización de sistemas Linux
+{% raw %}
 ```yaml
 - name: Patching de servidores Linux
   hosts: servidores
@@ -141,7 +142,8 @@ Ventajas:
       apt:
         update_cache: yes
         upgrade: dist
-````
+```
+{% endraw %}`
 
 ## Consideraciones Avanzadas
 

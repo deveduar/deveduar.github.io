@@ -26,6 +26,7 @@ category: Sistemas
 - Surfingkeys – A better alternative for vimium or cVim-surfingkeys.html 
 ## shortcuts
 
+{% raw %}
 ```python
 Rich shortcuts to click links/switch tabs/scroll, capture pages, use your browser like vim for productivity.
 
@@ -94,3 +95,4 @@ A Chrome extension for Vim users, but EMACS users would also love it, as it is m
 
     su   Edit current URL with vim editor
 ```
+{% endraw %}

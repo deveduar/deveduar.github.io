@@ -35,6 +35,7 @@ Incluye ejemplos funcionales y referencias cruzadas a [TDD patterns](/testing/td
 
 Todos los entornos comparten esta base:
 
+{% raw %}
 ```
 
 src/  
@@ -46,9 +47,11 @@ src/
 ├── app/  
 └── ...
 
-````
+```
+{% endraw %}`
 
 ### `handlers.ts`
+{% raw %}
 ```ts
 import { rest } from 'msw';
 
@@ -62,7 +65,8 @@ export const handlers = [
 		return res(ctx.status(200), ctx.json({ token: 'jwt' }));
 	}),
 ];
-````
+```
+{% endraw %}`
 
 ---
 
@@ -70,14 +74,17 @@ export const handlers = [
 
 ### `server.ts`
 
+{% raw %}
 ```ts
 import { setupServer } from 'msw/node';
 import { handlers } from './handlers';
 export const server = setupServer(...handlers);
 ```
+{% endraw %}
 
 ### `jest.setup.ts`
 
+{% raw %}
 ```ts
 import { server } from './src/mocks/server';
 
@@ -85,16 +92,20 @@ beforeAll(() => server.listen({ onUnhandledRequest: 'error' }));
 afterEach(() => server.resetHandlers());
 afterAll(() => server.close());
 ```
+{% endraw %}
 
 ### `jest.config.ts`
 
+{% raw %}
 ```ts
 setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
 testEnvironment: 'jsdom',
 ```
+{% endraw %}
 
 ### ✅ Ejemplo de test con mock dinámico
 
+{% raw %}
 ```ts
 import { fetchUser } from '../api';
 
@@ -103,6 +114,7 @@ test('fetchUser devuelve datos simulados', async () => {
 	expect(data.name).toBe('Edu');
 });
 ```
+{% endraw %}
 
 🧠 _Consejo:_  
 Usa `server.use(...)` dentro del test para sobrescribir handlers en tiempo real → ver [Mocks MSW - patrones y casos reales > Patrón 4 — Fallback de Handlers](/testing/mocks-msw---patrones-y-casos-reales/#patrn-4--fallback-de-handlers).
@@ -115,6 +127,7 @@ Vitest soporta MSW nativamente en modo Node y Browser.
 
 ### `vitest.setup.ts`
 
+{% raw %}
 ```ts
 import { server } from './src/mocks/server';
 
@@ -122,9 +135,11 @@ beforeAll(() => server.listen({ onUnhandledRequest: 'error' }));
 afterEach(() => server.resetHandlers());
 afterAll(() => server.close());
 ```
+{% endraw %}
 
 ### `vitest.config.ts`
 
+{% raw %}
 ```ts
 import { defineConfig } from 'vitest/config';
 
@@ -135,9 +150,11 @@ export default defineConfig({
 	},
 });
 ```
+{% endraw %}
 
 ### 🧪 Ejemplo de test
 
+{% raw %}
 ```ts
 import { fetchData } from '@/api';
 
@@ -146,6 +163,7 @@ test('mock de login exitoso', async () => {
 	expect(result.token).toBe('jwt');
 });
 ```
+{% endraw %}
 
 💡 Usa `vi.spyOn(fetch, 'default')` o mocks de red nativos si necesitas verificar llamadas de red reales.
 
@@ -157,6 +175,7 @@ MSW puede actuar como **proxy de mock** para pruebas end-to-end, interceptando f
 
 ### Estructura
 
+{% raw %}
 ```
 tests/
  ├── e2e/
@@ -167,17 +186,21 @@ tests/
      ├── handlers.ts
      └── server.ts
 ```
+{% endraw %}
 
 ### `browser.ts`
 
+{% raw %}
 ```ts
 import { setupWorker } from 'msw';
 import { handlers } from './handlers';
 export const worker = setupWorker(...handlers);
 ```
+{% endraw %}
 
 ### `example.spec.ts`
 
+{% raw %}
 ```ts
 import { test, expect } from '@playwright/test';
 
@@ -204,6 +227,7 @@ test('renderiza datos mockeados', async ({ page }) => {
 	await expect(page.getByText('Playwright User')).toBeVisible();
 });
 ```
+{% endraw %}
 
 🧭 _Opcional:_ Puedes cargar `mockServiceWorker.js` directamente en el contexto del navegador para una simulación total de red.
 
@@ -213,6 +237,7 @@ test('renderiza datos mockeados', async ({ page }) => {
 
 Ejemplo de uso en CI (con Vitest o Jest):
 
+{% raw %}
 ```yaml
 name: CI
 on: [push, pull_request]
@@ -230,6 +255,7 @@ jobs:
     env:
       NODE_ENV: test
 ```
+{% endraw %}
 
 📦 En entornos Docker:
 

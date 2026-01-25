@@ -64,6 +64,7 @@ category: Backend
 
 ## Configuración básica de un programa
 ### Ejemplo de configuración
+{% raw %}
 ```ini
 [program:mi_app]
 command=/usr/bin/python3 /ruta/app.py
@@ -72,7 +73,8 @@ autostart=true
 autorestart=true
 stderr_logfile=/var/log/mi_app.err.log
 stdout_logfile=/var/log/mi_app.out.log
-````
+```
+{% endraw %}`
 
 ### Explicación de parámetros clave
 
@@ -88,6 +90,7 @@ stdout_logfile=/var/log/mi_app.out.log
 
 ### Uso de supervisorctl
 
+{% raw %}
 ```bash
 supervisorctl status
 supervisorctl start mi_app
@@ -96,6 +99,7 @@ supervisorctl restart mi_app
 supervisorctl reread
 supervisorctl update
 ```
+{% endraw %}
 
 ## Gestión avanzada
 
@@ -109,6 +113,7 @@ supervisorctl update
 
 ### Ejemplo systemd
 
+{% raw %}
 ```ini
 [Unit]
 Description=Supervisor daemon
@@ -119,6 +124,7 @@ ExecStart=/usr/bin/supervisord -n -c /etc/supervisor/supervisord.conf
 [Install]
 WantedBy=multi-user.target
 ```
+{% endraw %}
 
 ## Logging
 

@@ -91,6 +91,7 @@ Los motores de plantillas permiten personalizar las vistas y documentación gene
 - Generación de archivos estáticos para publicación automatizada en CI/CD
 
 ## Ejemplo básico (EJS)
+{% raw %}
 ```ejs
 <!DOCTYPE html>
 <html>
@@ -102,7 +103,8 @@ Los motores de plantillas permiten personalizar las vistas y documentación gene
 		<p>Tu pedido #<%= order.id %> está en proceso.</p>
 	</body>
 </html>
-````
+```
+{% endraw %}`
 
 Este ejemplo combina datos del backend (`title`, `user.name`, `order.id`) para generar contenido HTML dinámico.
 
@@ -132,6 +134,7 @@ Ejemplo: usar `{{ i18n("welcome_message") }}` para mostrar el texto en el idioma
 ### 2. **Layouts y herencia**
 Permite definir plantillas base que otras vistas pueden extender. Esto mejora la mantenibilidad y evita duplicación de código.
 
+{% raw %}
 ```pug
 //- layout.pug
 html
@@ -139,8 +142,10 @@ html
 		block head
 	body
 		block content
-````
+```
+{% endraw %}`
 
+{% raw %}
 ```pug
 //- index.pug
 extends layout.pug
@@ -148,6 +153,7 @@ extends layout.pug
 block content
 	h1 Bienvenido al panel
 ```
+{% endraw %}
 
 ### 3. **Componentes reutilizables**
 
@@ -297,8 +303,8 @@ Los motores permiten condicionar la salida según valores recibidos:
 {{else}}
 	<p>Hola {{user.name}}, no tienes acceso a esta sección.</p>
 {{/if}}
-````
-{% endraw %}
+```
+{% endraw %}`
 
 ## Testing y mantenimiento de plantillas
 

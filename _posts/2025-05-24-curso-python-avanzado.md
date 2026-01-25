@@ -226,6 +226,7 @@ category: python
 - 030-9-Excepciones
 - 031-10-biblioteca-request
 
+{% raw %}
 ```base
 type: list
 name: Ejercicios python
@@ -256,6 +257,7 @@ views:
       note.Mejorado: 23
 
 ```
+{% endraw %}
 
 ## Examenes
 - Examen Final Revisión del intento

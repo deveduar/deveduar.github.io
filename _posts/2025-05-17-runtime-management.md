@@ -42,25 +42,33 @@ category: Backend
 - Ejemplo de uso:
 	
 	### Iniciar una aplicación
-	```bash
+	{% raw %}
+```bash
 	pm2 start app.js --name "mi-app"
 	```
+{% endraw %}
 
 	### Ver estado de procesos
-	```bash
+	{% raw %}
+```bash
 	pm2 status
 	```
+{% endraw %}
 
 	### Reiniciar aplicación automáticamente
-	```bash
+	{% raw %}
+```bash
 	pm2 restart mi-app
 	```
+{% endraw %}
 
 	### Guardar configuración para reinicio al reiniciar el sistema
-	```bash
+	{% raw %}
+```bash
 	pm2 save
 	pm2 startup
 	```
+{% endraw %}
 
 ### [Supervisor](/backend/supervisor/)
 - Herramienta genérica para gestión de procesos en sistemas Unix/Linux.
@@ -69,6 +77,7 @@ category: Backend
 	tab	- Auto-reinicio configurable.
 	tab	- Manejo de logs y rotación de archivos.
 - Configuración típica (`/etc/supervisor/conf.d/miapp.conf`):
+{% raw %}
 ```ini
 [program:miapp]
 command=node /ruta/a/app.js
@@ -77,6 +86,7 @@ autorestart=true
 stdout_logfile=/var/log/miapp.log
 stderr_logfile=/var/log/miapp.err
 ```
+{% endraw %}
 	
 - Integración con scripts de deployment y control de múltiples servicios.
 
@@ -89,6 +99,7 @@ stderr_logfile=/var/log/miapp.err
 	tab	- Logging integrado con `journalctl`.
 	tab	- Configuración de reinicios automáticos y límites de recursos.
 - Ejemplo de unidad de servicio (`/etc/systemd/system/miapp.service`):
+{% raw %}
 ```ini
 [Unit]
 Description=Mi aplicación Node.js
@@ -103,14 +114,17 @@ Environment=NODE_ENV=production
 [Install]
 WantedBy=multi-user.target
 ```
+{% endraw %}
 	
 - Comandos útiles:
-	```bash
+	{% raw %}
+```bash
 	systemctl start miapp
 	systemctl status miapp
 	systemctl enable miapp
 	systemctl restart miapp
 	```
+{% endraw %}
 
 ## Consideraciones de Uso
 - Elección de herramienta:
@@ -146,28 +160,36 @@ WantedBy=multi-user.target
 - Ejemplo de uso:
 
 #### Iniciar una aplicación
+{% raw %}
 ```bash
 pm2 start app.js --name "mi-app"
-````
+```
+{% endraw %}`
 
 #### Ver estado de procesos
 
+{% raw %}
 ```bash
 pm2 status
 ```
+{% endraw %}
 
 #### Reiniciar aplicación automáticamente
 
+{% raw %}
 ```bash
 pm2 restart mi-app
 ```
+{% endraw %}
 
 #### Guardar configuración para reinicio al reiniciar el sistema
 
+{% raw %}
 ```bash
 pm2 save
 pm2 startup
 ```
+{% endraw %}
 
 ### [Supervisor](/backend/supervisor/)
 
@@ -179,6 +201,7 @@ pm2 startup
   * Manejo de logs y rotación de archivos.
 * Configuración típica (`/etc/supervisor/conf.d/miapp.conf`):
 
+{% raw %}
 ```ini
 [program:miapp]
 command=node /ruta/a/app.js
@@ -187,6 +210,7 @@ autorestart=true
 stdout_logfile=/var/log/miapp.log
 stderr_logfile=/var/log/miapp.err
 ```
+{% endraw %}
 
 * Integración con scripts de deployment y control de múltiples servicios.
 
@@ -202,6 +226,7 @@ stderr_logfile=/var/log/miapp.err
   * Configuración de reinicios automáticos y límites de recursos.
 * Ejemplo de unidad de servicio (`/etc/systemd/system/miapp.service`):
 
+{% raw %}
 ```ini
 [Unit]
 Description=Mi aplicación Node.js
@@ -216,15 +241,18 @@ Environment=NODE_ENV=production
 [Install]
 WantedBy=multi-user.target
 ```
+{% endraw %}
 
 * Comandos útiles:
 
+{% raw %}
 ```bash
 systemctl start miapp
 systemctl status miapp
 systemctl enable miapp
 systemctl restart miapp
 ```
+{% endraw %}
 
 ## Gestión de Recursos y Rendimiento
 
@@ -240,6 +268,7 @@ systemctl restart miapp
 * Diferencias entre gestión de procesos a nivel de host y a nivel de contenedor.
 * Ejemplo de proceso Node.js en Docker usando PM2:
 
+{% raw %}
 ```dockerfile
 FROM node:20
 WORKDIR /app
@@ -249,6 +278,7 @@ COPY . .
 EXPOSE 3000
 CMD ["pm2-runtime", "app.js", "--name", "mi-app"]
 ```
+{% endraw %}
 
 ## Seguridad y Aislamiento
 

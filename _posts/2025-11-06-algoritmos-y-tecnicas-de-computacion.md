@@ -98,12 +98,14 @@ category: Computer Science
 	- Recursión → legibilidad.
 	- Iteración → eficiencia (en tiempo y memoria).
 - Ejemplo:
+{% raw %}
 ```python
 def factorial(n):
 	if n == 0:
 		return 1
 	return n * factorial(n-1)
-````
+```
+{% endraw %}`
 
 ---
 
@@ -202,9 +204,11 @@ def factorial(n):
 * **Función acumuladora**: aplica operaciones sucesivas sobre una colección (reduce, fold).
 * Ejemplo en [javascript](/desarrollo%20web/javascript/):
 
+{% raw %}
 ```javascript
 const sum = arr => arr.reduce((acc, val) => acc + val, 0);
 ```
+{% endraw %}
 
 * Riesgos: *callback hell* → mitigado por promesas y `async/await`.
 
@@ -230,6 +234,7 @@ const sum = arr => arr.reduce((acc, val) => acc + val, 0);
 * Evaluación mediante **pila (stack)**.
 * Algoritmo típico:
 
+{% raw %}
 ```python
 def eval_rpn(tokens):
 	stack = []
@@ -245,6 +250,7 @@ def eval_rpn(tokens):
 			elif token == '/': stack.append(a / b)
 	return stack[0]
 ```
+{% endraw %}
 
 * Usos:
   * Evaluación de expresiones.
@@ -275,6 +281,7 @@ def eval_rpn(tokens):
 ### Búsqueda binaria
 - Requiere lista ordenada. Divide el espacio de búsqueda a la mitad en cada iteración.
 - Complejidad: **O(log n)**.
+{% raw %}
 ```python
 def binary_search(arr, target):
 	left, right = 0, len(arr) - 1
@@ -287,7 +294,8 @@ def binary_search(arr, target):
 		else:
 			right = mid - 1
 	return -1
-````
+```
+{% endraw %}`
 
 ### Hashing
 
@@ -318,6 +326,7 @@ def binary_search(arr, target):
 * Requiere **estructura recursiva + subproblemas repetidos**.
 * Ejemplo clásico: Fibonacci con memoización.
 
+{% raw %}
 ```python
 def fib(n, memo={}):
 	if n in memo: return memo[n]
@@ -325,6 +334,7 @@ def fib(n, memo={}):
 	memo[n] = fib(n-1, memo) + fib(n-2, memo)
 	return memo[n]
 ```
+{% endraw %}
 
 * Claves:
 
@@ -391,6 +401,7 @@ def fib(n, memo={}):
 * Combina flexibilidad (Strategy) con control centralizado (Factory).
 * Permite seleccionar e instanciar comportamientos dinámicamente.
 
+{% raw %}
 ```python
 class Strategy:
 	def execute(self, a, b): pass
@@ -409,6 +420,7 @@ class StrategyFactory:
 s = StrategyFactory.get_strategy("add")
 print(s.execute(3, 4))  # 7
 ```
+{% endraw %}
 
 ---
 
@@ -427,10 +439,12 @@ print(s.execute(3, 4))  # 7
 
 * **Currying**: convertir una función de N parámetros en una secuencia de funciones unarias.
 
+{% raw %}
 ```javascript
 const add = x => y => x + y;
 console.log(add(2)(3)); // 5
 ```
+{% endraw %}
 
 * **Composición**: combinar funciones para crear pipelines (`f∘g(x) = f(g(x))`).
 * Beneficios:

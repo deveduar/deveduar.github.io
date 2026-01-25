@@ -129,6 +129,7 @@ Expansiones hacia áreas relacionadas y multidisciplinarias.
 ---
 
 # Omnivore CS
+{% raw %}
 ```base
 type: list
 name: "Notas con #CS en Omnivore"
@@ -148,5 +149,6 @@ views:
     sort:
       - property: file.mtime
         direction: DESC
-````
+```
+{% endraw %}`
 

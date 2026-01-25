@@ -133,25 +133,30 @@ Las Server Actions son parte del ecosistema de [nextjs](/frontend/nextjs/) App R
 ## Ejemplos de Código (cada uno bajo su heading)
 
 ### Declaración básica de Server Action
+{% raw %}
 ```javascript
 "use server"
 
 export async function crearItem(data) {
 	// Lógica de servidor
 }
-````
+```
+{% endraw %}`
 
 ### Uso en formulario Next.js
 
+{% raw %}
 ```jsx
 <form action={crearItem}>
 	<input name="titulo" />
 	<button type="submit">Guardar</button>
 </form>
 ```
+{% endraw %}
 
 ### Con revalidación automática
 
+{% raw %}
 ```javascript
 "use server"
 import { revalidatePath } from "next/cache"
@@ -161,9 +166,11 @@ export async function crearPost(data) {
 	revalidatePath("/blog")
 }
 ```
+{% endraw %}
 
 ### Pasando parámetros dinámicos (slug)
 
+{% raw %}
 ```javascript
 "use server"
 
@@ -174,9 +181,11 @@ export async function actualizarPorSlug(slug, data) {
 	})
 }
 ```
+{% endraw %}
 
 ### Integrando GraphQL dentro de Server Action
 
+{% raw %}
 ```javascript
 "use server"
 import { client } from "@/lib/graphql"
@@ -192,14 +201,17 @@ export async function actualizarProfile(input) {
 	`, { input })
 }
 ```
+{% endraw %}
 
 ### Llamada desde React Hook Form
 
+{% raw %}
 ```javascript
 const onSubmit = handleSubmit(async (values) => {
 	await actualizarProfile(values)
 })
 ```
+{% endraw %}
 
 ---
 

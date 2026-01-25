@@ -147,6 +147,7 @@ El **control de datos** comprende el conjunto de prácticas, políticas, configu
 
 ## Código de Ejemplo: Etiquetado Automático en O365
 ### Ejemplo de regla JSON (clasificación)
+{% raw %}
 ```json
 {
 	"policyName": "Clasificación Automática - Confidencial",
@@ -159,15 +160,18 @@ El **control de datos** comprende el conjunto de prácticas, políticas, configu
 		"notifyUser": true
 	}
 }
-````
+```
+{% endraw %}`
 
 ## Código de Ejemplo: Regex para Detección de Datos Sensibles
 
 ### Detección de DNI español
 
+{% raw %}
 ```regex
 \b\d{8}[A-Za-z]\b
 ```
+{% endraw %}
 
 ---
 

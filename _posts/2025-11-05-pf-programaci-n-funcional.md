@@ -31,6 +31,7 @@ La **programación funcional (PF)** es un paradigma de programación que se cent
 ### Funciones puras
 Una **función pura** siempre devuelve el mismo resultado para los mismos argumentos y **no altera el estado global** ni produce efectos externos (como modificar una variable fuera de su ámbito o realizar operaciones de E/S).
 
+{% raw %}
 ```js
 // Ejemplo de función pura
 const suma = (a, b) => a + b;
@@ -38,12 +39,14 @@ const suma = (a, b) => a + b;
 // Ejemplo de función impura
 let x = 0;
 const sumaImpura = (a) => (x += a); // modifica el estado global
-````
+```
+{% endraw %}`
 
 ### Inmutabilidad
 
 Los datos no se modifican; en su lugar, se crean **nuevas estructuras** con los cambios aplicados. Esto evita errores por efectos colaterales y mejora la trazabilidad del estado.
 
+{% raw %}
 ```js
 // Inmutable
 const nums = [1, 2, 3];
@@ -52,31 +55,37 @@ const nuevos = [...nums, 4];
 // Mutable
 nums.push(4);
 ```
+{% endraw %}
 
 ### Funciones de orden superior
 
 Las **funciones de orden superior** son aquellas que reciben o devuelven otras funciones, permitiendo la composición y reutilización de lógica.
 
+{% raw %}
 ```js
 const aplicarOperacion = (operacion, x, y) => operacion(x, y);
 const multiplicar = (a, b) => a * b;
 console.log(aplicarOperacion(multiplicar, 2, 3)); // 6
 ```
+{% endraw %}
 
 ### Composición de funciones
 
 La **composición** consiste en combinar funciones pequeñas para formar funciones más complejas, reduciendo el acoplamiento y mejorando la claridad.
 
+{% raw %}
 ```js
 const doble = x => x * 2;
 const cuadrado = x => x * x;
 const dobleYCuadrado = x => cuadrado(doble(x));
 ```
+{% endraw %}
 
 ### Evaluación perezosa (Lazy evaluation)
 
 Evalúa expresiones **solo cuando son necesarias**, mejorando el rendimiento y permitiendo trabajar con estructuras infinitas.
 
+{% raw %}
 ```js
 function* numerosNaturales() {
 	let n = 0;
@@ -86,6 +95,7 @@ const generador = numerosNaturales();
 console.log(generador.next().value); // 0
 console.log(generador.next().value); // 1
 ```
+{% endraw %}
 
 ## Principios y conceptos clave
 
@@ -100,32 +110,39 @@ console.log(generador.next().value); // 1
 
 ### Currificación
 
+{% raw %}
 ```js
 const suma = a => b => a + b;
 console.log(suma(2)(3)); // 5
 ```
+{% endraw %}
 
 ### Aplicación parcial
 
+{% raw %}
 ```js
 const sumar = (a, b, c) => a + b + c;
 const sumarParcial = sumar.bind(null, 1, 2);
 console.log(sumarParcial(3)); // 6
 ```
+{% endraw %}
 
 ## Funciones comunes en PF
 
 ### map, filter y reduce
 
+{% raw %}
 ```js
 const numeros = [1, 2, 3, 4, 5];
 const dobles = numeros.map(n => n * 2);
 const pares = numeros.filter(n => n % 2 === 0);
 const sumaTotal = numeros.reduce((acc, n) => acc + n, 0);
 ```
+{% endraw %}
 
 ### pipe y compose
 
+{% raw %}
 ```js
 const pipe = (...fns) => x => fns.reduce((v, f) => f(v), x);
 const compose = (...fns) => x => fns.reduceRight((v, f) => f(v), x);
@@ -136,6 +153,7 @@ const duplicar = x => x * 2;
 const pipeline = pipe(incrementar, duplicar);
 console.log(pipeline(3)); // 8
 ```
+{% endraw %}
 
 ## Ventajas
 
@@ -199,6 +217,7 @@ console.log(pipeline(3)); // 8
 Las **mónadas** encapsulan un valor y un contexto (como errores, asincronía o estado) permitiendo **encadenar operaciones** de forma segura y declarativa.  
 Siguen tres leyes: **identidad izquierda**, **identidad derecha** y **asociatividad**.
 
+{% raw %}
 ```js
 // Ejemplo de mónada Maybe en JS
 const Maybe = x => ({
@@ -207,13 +226,15 @@ const Maybe = x => ({
 });
 
 const resultado = Maybe(5).map(x => x * 2).map(x => x + 3).value; // 13
-````
+```
+{% endraw %}`
 
 ### Functores y Aplicativos
 
 Un **functor** es un contenedor que implementa `map`, permitiendo transformar su contenido sin modificar la estructura.
 Un **aplicativo** amplía la idea permitiendo aplicar funciones también encapsuladas.
 
+{% raw %}
 ```js
 // Ejemplo de functor simple
 const Box = x => ({
@@ -223,11 +244,13 @@ const Box = x => ({
 
 const res = Box(2).map(x => x * 3).map(x => x + 1).value; // 7
 ```
+{% endraw %}
 
 ### Monad Maybe y Either
 
 Se utilizan para manejar errores o valores opcionales sin lanzar excepciones.
 
+{% raw %}
 ```js
 const Either = (left, right) => ({
 	map: f => (right === null ? Either(left, null) : Either(left, f(right))),
@@ -238,6 +261,7 @@ const Either = (left, right) => ({
 const safeDivide = (a, b) => (b === 0 ? Either("División por cero", null) : Either(null, a / b));
 const resultado = safeDivide(10, 2).map(x => x * 2).getOrElse(0); // 10
 ```
+{% endraw %}
 
 ### Inmutabilidad estructural
 
@@ -245,6 +269,7 @@ Las estructuras inmutables no se modifican, sino que generan nuevas versiones co
 
 **Ejemplo:** Librerías como `Immutable.js` o `Immer` permiten trabajar con objetos inmutables de forma eficiente.
 
+{% raw %}
 ```js
 import { produce } from "immer";
 
@@ -255,6 +280,7 @@ const nuevo = produce(estado, draft => {
 console.log(estado.usuario.edad); // 30
 console.log(nuevo.usuario.edad); // 31
 ```
+{% endraw %}
 
 ## Programación funcional y asincronía
 
@@ -262,17 +288,20 @@ console.log(nuevo.usuario.edad); // 31
 
 Aunque las funciones asíncronas dependen de temporizadores o promesas, se puede mantener la pureza si devuelven nuevas promesas sin alterar el entorno.
 
+{% raw %}
 ```js
 const obtenerDatos = url =>
 	fetch(url)
 		.then(res => res.json())
 		.then(data => procesar(data)); // devuelve una nueva promesa
 ```
+{% endraw %}
 
 ### Composición de Promesas
 
 Se pueden **componer funciones asíncronas** con utilidades como `Promise.all`, `async/await`, o librerías de flujo funcional (`fp-ts`, `Ramda`).
 
+{% raw %}
 ```js
 const getUser = id => Promise.resolve({ id, nombre: "Juan" });
 const getPosts = id => Promise.resolve([{ id: 1, userId: id }]);
@@ -283,6 +312,7 @@ async function pipeline() {
 	return { usuario, posts };
 }
 ```
+{% endraw %}
 
 ## Composición avanzada
 
@@ -290,6 +320,7 @@ async function pipeline() {
 
 La **programación point-free** elimina argumentos explícitos al encadenar funciones, haciendo el código más declarativo.
 
+{% raw %}
 ```js
 import { compose } from "ramda";
 
@@ -298,17 +329,20 @@ const exclaim = s => `${s}!`;
 const shout = compose(exclaim, upper);
 console.log(shout("hola")); // "HOLA!"
 ```
+{% endraw %}
 
 ### Composición con datos inmutables
 
 Usar funciones puras facilita la **composición de transformaciones** sobre datos complejos.
 
+{% raw %}
 ```js
 const actualizarUsuario = pipe(
 	u => ({ ...u, activo: true }),
 	u => ({ ...u, nombre: u.nombre.toUpperCase() })
 );
 ```
+{% endraw %}
 
 ## PF en lenguajes imperativos
 
@@ -324,6 +358,7 @@ JS permite aplicar PF con librerías y patrones, aunque no es puramente funciona
 
 Soporta PF con funciones como `map`, `filter`, `reduce`, `lambda`, `functools` y `itertools`.
 
+{% raw %}
 ```python
 from functools import reduce
 
@@ -331,6 +366,7 @@ numeros = [1, 2, 3, 4]
 resultado = reduce(lambda a, b: a + b, map(lambda x: x * 2, numeros))
 print(resultado)  # 20
 ```
+{% endraw %}
 
 ### Scala y Kotlin
 
@@ -350,10 +386,12 @@ Los **efectos controlados** se gestionan encapsulando interacciones externas (E/
 
 Las funciones puras son más **testeables**, pues no dependen del estado global ni del tiempo. Se testean por **entradas y salidas**.
 
+{% raw %}
 ```js
 const sumar = (a, b) => a + b;
 console.assert(sumar(2, 3) === 5);
 ```
+{% endraw %}
 
 ### Refactorización funcional
 
@@ -372,6 +410,7 @@ Transformar código imperativo a funcional implica:
 
 ## Ejemplo: Functional Core, Imperative Shell
 
+{% raw %}
 ```js
 // Núcleo funcional
 const procesarPedido = pedido => ({
@@ -387,6 +426,7 @@ function main() {
 }
 main();
 ```
+{% endraw %}
 
 ## Enfoques modernos y tendencias
 
@@ -431,6 +471,7 @@ En lenguajes multiparadigma (JavaScript, Python, Kotlin, Scala) es común integr
 - **Clases como contenedores de funciones puras**.  
 - **Uso de lambdas o closures** como reemplazo de patrones como Strategy o Command.
 
+{% raw %}
 ```js
 class Calculadora {
 	constructor() {}
@@ -439,28 +480,33 @@ class Calculadora {
 }
 const calc = new Calculadora();
 console.log(calc.sumar(3, 4)); // 7
-````
+```
+{% endraw %}`
 
 ### FP y Arquitectura orientada a eventos
 
 La PF encaja con sistemas **event-driven** porque cada evento puede tratarse como una **transformación pura** sobre un flujo de datos inmutable.
 
+{% raw %}
 ```js
 import { fromEvent } from "rxjs";
 fromEvent(document, "click")
 	.map(e => ({ x: e.clientX, y: e.clientY }))
 	.subscribe(console.log);
 ```
+{% endraw %}
 
 ### FP y programación declarativa reactiva
 
 Frameworks como **React**, **Svelte** o **SolidJS** aplican PF indirectamente: el estado se deriva de funciones puras que describen la interfaz como una proyección del estado actual.
 
+{% raw %}
 ```js
 function Componente({ contador }) {
 	return <p>El doble es {contador * 2}</p>;
 }
 ```
+{% endraw %}
 
 ## Aplicaciones prácticas de PF en entornos reales
 
@@ -480,11 +526,13 @@ En entornos distribuidos, PF:
 * Permite **replicar estados sin conflictos** gracias a la inmutabilidad.
 * Es base de sistemas como MapReduce o Apache Spark.
 
+{% raw %}
 ```python
 # Ejemplo de transformación funcional en Spark (PySpark)
 rdd = sc.parallelize([1, 2, 3, 4])
 resultado = rdd.map(lambda x: x * 2).filter(lambda x: x > 4).collect()
 ```
+{% endraw %}
 
 ## PF y control de efectos
 
@@ -495,6 +543,7 @@ Permiten definir *qué efectos* puede tener una función sin ejecutarlos inmedia
 
 Ejemplo conceptual (pseudocódigo):
 
+{% raw %}
 ```
 effect Log: { log(msg: String): Void }
 
@@ -503,11 +552,13 @@ function calcular(x) {
   return x * 2
 }
 ```
+{% endraw %}
 
 ### IO Monads
 
 Encapsulan efectos de entrada/salida dentro de una estructura funcional, ejecutándose solo al final del programa.
 
+{% raw %}
 ```js
 const IO = effect => ({
 	run: () => effect()
@@ -516,6 +567,7 @@ const IO = effect => ({
 const imprimir = IO(() => console.log("Hola funcionalidad pura"));
 imprimir.run(); // ejecución explícita
 ```
+{% endraw %}
 
 ## PF y optimización
 
@@ -523,6 +575,7 @@ imprimir.run(); // ejecución explícita
 
 Técnica funcional para **almacenar resultados de funciones puras** y evitar recalcular valores costosos.
 
+{% raw %}
 ```js
 const memoizar = f => {
 	const cache = new Map();
@@ -535,16 +588,19 @@ const memoizar = f => {
 const fib = memoizar(n => (n <= 1 ? n : fib(n - 1) + fib(n - 2)));
 console.log(fib(40));
 ```
+{% endraw %}
 
 ### Evaluación diferida
 
 Evita cálculos innecesarios mediante la construcción de **pipelines perezosos**.
 
+{% raw %}
 ```js
 const lazy = (gen, fn) => {
 	for (const val of gen) yield fn(val);
 };
 ```
+{% endraw %}
 
 ## FP en dominios específicos
 
@@ -580,9 +636,11 @@ const lazy = (gen, fn) => {
 Fundamento teórico de la PF, donde todo se expresa como **función anónima** y aplicación de funciones.
 Ejemplo de reducción lambda:
 
+{% raw %}
 ```
 (λx. x + 1) 4  ⇒  4 + 1  ⇒  5
 ```
+{% endraw %}
 
 ### Teoría de categorías
 
@@ -648,6 +706,7 @@ Los **Algebraic Data Types (ADT)** permiten modelar información compleja median
 
 Ejemplo en TypeScript:
 
+{% raw %}
 ```ts
 type Resultado = 
 	| { tipo: "ok"; valor: number }
@@ -658,17 +717,20 @@ function dividir(a: number, b: number): Resultado {
 		? { tipo: "error", mensaje: "División por cero" }
 		: { tipo: "ok", valor: a / b };
 }
-````
+```
+{% endraw %}`
 
 ### Type Inference y Polimorfismo paramétrico
 
 La inferencia de tipos permite determinar automáticamente el tipo de cada expresión sin anotaciones explícitas.
 El **polimorfismo paramétrico** permite escribir funciones genéricas seguras por tipo.
 
+{% raw %}
 ```haskell
 -- Ejemplo en Haskell
 map :: (a -> b) -> [a] -> [b]
 ```
+{% endraw %}
 
 ### Tipos dependientes
 
@@ -676,11 +738,13 @@ Extienden la relación entre tipos y valores, permitiendo que el **tipo dependa 
 
 Ejemplo conceptual (Idris):
 
+{% raw %}
 ```idris
 data Vector : Nat -> Type -> Type where
 	Nil  : Vector 0 a
 	Cons : a -> Vector n a -> Vector (S n) a
 ```
+{% endraw %}
 
 ---
 
@@ -696,11 +760,13 @@ data Vector : Nat -> Type -> Type where
 
 Optimización que permite **reemplazar llamadas recursivas** por saltos directos, evitando desbordamientos de pila.
 
+{% raw %}
 ```js
 function factorial(n, acc = 1) {
 	return n <= 1 ? acc : factorial(n - 1, acc * n);
 }
 ```
+{% endraw %}
 
 ---
 
@@ -710,9 +776,11 @@ function factorial(n, acc = 1) {
 
 Las transformaciones se organizan en **pipelines funcionales** de pasos puros.
 
+{% raw %}
 ```js
 const pipeline = x => [f1, f2, f3].reduce((acc, fn) => fn(acc), x);
 ```
+{% endraw %}
 
 ### Functional Core + Imperative Shell
 
@@ -722,6 +790,7 @@ Estructura donde la lógica central es **totalmente funcional**, mientras que la
 
 Cada cambio del sistema se representa como una **transformación inmutable del estado**.
 
+{% raw %}
 ```js
 const aplicarEvento = (estado, evento) => {
 	switch (evento.tipo) {
@@ -731,6 +800,7 @@ const aplicarEvento = (estado, evento) => {
 	}
 };
 ```
+{% endraw %}
 
 ---
 
@@ -740,6 +810,7 @@ const aplicarEvento = (estado, evento) => {
 
 Permiten **componer estructuras funcionales complejas** (como `Maybe` dentro de `IO`).
 
+{% raw %}
 ```js
 const Maybe = x => ({
 	map: f => (x == null ? Maybe(null) : Maybe(f(x))),
@@ -747,12 +818,14 @@ const Maybe = x => ({
 	value: x
 });
 ```
+{% endraw %}
 
 ### Catamorfismos y Anamorfismos
 
 * **Catamorfismo:** reduce una estructura (como `reduce` en listas).
 * **Anamorfismo:** genera una estructura (como `unfold`).
 
+{% raw %}
 ```js
 const unfold = (fn, seed) => {
 	const res = [];
@@ -764,15 +837,18 @@ const unfold = (fn, seed) => {
 	return res;
 };
 ```
+{% endraw %}
 
 ### Lenses y Optics
 
 Permiten acceder y modificar **estructuras inmutables anidadas** de forma declarativa.
 
+{% raw %}
 ```js
 const view = (lens, obj) => lens.get(obj);
 const set = (lens, val, obj) => lens.set(val, obj);
 ```
+{% endraw %}
 
 ---
 
@@ -783,15 +859,18 @@ const set = (lens, val, obj) => lens.set(val, obj);
 Gracias a la inmutabilidad, múltiples procesos pueden trabajar sobre datos sin conflictos.
 Ejemplo: **map-reduce** funcional.
 
+{% raw %}
 ```js
 const mapReduce = (mapFn, reduceFn, data) =>
 	data.map(mapFn).reduce(reduceFn);
 ```
+{% endraw %}
 
 ### Actor Model y PF
 
 Modelo basado en actores que comunican mensajes inmutables (como en Erlang o Elixir).
 
+{% raw %}
 ```elixir
 defmodule Contador do
 	def loop(contador) do
@@ -802,6 +881,7 @@ defmodule Contador do
 	end
 end
 ```
+{% endraw %}
 
 ---
 
@@ -813,11 +893,13 @@ En lugar de probar casos concretos, se definen **propiedades que siempre deben c
 
 Ejemplo (JavaScript con fast-check):
 
+{% raw %}
 ```js
 fc.assert(
 	fc.property(fc.integer(), fc.integer(), (a, b) => a + b === b + a)
 );
 ```
+{% endraw %}
 
 ### Razonamiento ecuacional
 
@@ -939,11 +1021,13 @@ Esta extensión aborda los **temas más avanzados, contemporáneos y experimenta
 La **semántica denotacional** describe programas funcionales mediante **funciones matemáticas puras**, garantizando que cada expresión tiene un significado exacto e independiente del entorno.
 
 Ejemplo conceptual:
+{% raw %}
 ```
 
 ⟦ λx. x + 1 ⟧ = f donde f(n) = n + 1
 
-````
+```
+{% endraw %}`
 
 Esto permite **razonamiento formal**, equivalencia y refactorización segura entre expresiones.
 
@@ -966,6 +1050,7 @@ Base lógica de los lenguajes funcionales modernos:
 ### Programación funcional probabilística
 Extiende la PF clásica para manejar **incertidumbre y distribuciones**.
 
+{% raw %}
 ```python
 # Ejemplo en Pyro (Python)
 import pyro.distributions as dist
@@ -974,7 +1059,8 @@ def modelo():
     x = dist.Normal(0, 1).sample()
     y = dist.Normal(x, 1).sample()
     return y
-````
+```
+{% endraw %}`
 
 Se usa en inferencia bayesiana, aprendizaje automático y modelado estocástico.
 
@@ -994,10 +1080,12 @@ Investiga **costes computacionales como efectos**, integrando PF con **análisis
 
 La PF permite expresar **computación paralela sin condiciones de carrera**, gracias a la ausencia de estado mutable.
 
+{% raw %}
 ```js
 const procesar = datos => datos.map(async d => await transformar(d));
 Promise.all(procesar(entrada));
 ```
+{% endraw %}
 
 ### Data Parallelism y Functional Streams
 
@@ -1011,11 +1099,13 @@ Modelo inspirado en PF para **controlar concurrencia** mediante transacciones at
 
 Ejemplo conceptual (Haskell):
 
+{% raw %}
 ```haskell
 atomically $ do
   x <- readTVar var
   writeTVar var (x + 1)
 ```
+{% endraw %}
 
 ---
 
@@ -1028,15 +1118,18 @@ Frameworks modernos (JAX, Haiku, Flax) tratan las redes como **funciones puras**
 * Entradas → Transformaciones → Salidas.
 * Entrenamiento → transformación funcional de parámetros.
 
+{% raw %}
 ```python
 def modelo(params, x):
     return x @ params["w"] + params["b"]
 ```
+{% endraw %}
 
 ### Derivación automática funcional
 
 La **diferenciación automática** (autodiff) se implementa de forma funcional mediante composición de derivadas.
 
+{% raw %}
 ```python
 from jax import grad
 
@@ -1044,6 +1137,7 @@ def f(x): return x ** 2 + 3 * x
 df = grad(f)
 print(df(2))  # 7
 ```
+{% endraw %}
 
 ---
 
@@ -1055,10 +1149,12 @@ Los contratos inteligentes deben ser **puros y deterministas**, para que su ejec
 
 Ejemplo: **Cardano** usa **Plutus**, basado en Haskell.
 
+{% raw %}
 ```haskell
 validate :: Tx -> Bool
 validate tx = (sum (inputs tx)) >= (sum (outputs tx))
 ```
+{% endraw %}
 
 ### Modelos funcionales de consenso
 
@@ -1074,10 +1170,12 @@ La PF facilita la **generación de código declarativo** mediante funciones que 
 
 Ejemplo con macros funcionales (Clojure):
 
+{% raw %}
 ```clojure
 (defmacro unless [pred a b]
   `(if (not ~pred) ~a ~b))
 ```
+{% endraw %}
 
 ### MetaPF y DSLs
 
@@ -1085,9 +1183,11 @@ Los **Domain Specific Languages (DSLs)** funcionales definen lenguajes internos 
 
 Ejemplo (DSL para operaciones de base de datos):
 
+{% raw %}
 ```haskell
 data Query = Select [Field] | Where Condition | Join Query Query
 ```
+{% endraw %}
 
 ---
 
@@ -1100,11 +1200,13 @@ Una función no compila si no se demuestra que cumple sus invariantes.
 
 Ejemplo conceptual (Agda):
 
+{% raw %}
 ```agda
 plus-zero : (n : ℕ) → n + 0 ≡ n
 plus-zero zero = refl
 plus-zero (suc n) = cong suc (plus-zero n)
 ```
+{% endraw %}
 
 ### Programación como demostración
 
@@ -1140,10 +1242,12 @@ Lenguajes como **Quipper** o **Q#** usan PF para modelar **circuitos cuánticos 
 
 Ejemplo conceptual:
 
+{% raw %}
 ```haskell
 hadamardChain :: Qubit -> Circ Qubit
 hadamardChain q = hadamard q >>= hadamard
 ```
+{% endraw %}
 
 ---
 
@@ -1154,11 +1258,13 @@ hadamardChain q = hadamard q >>= hadamard
 Interfaces descritas como **funciones puras del estado**.
 React, SwiftUI, Jetpack Compose siguen este modelo.
 
+{% raw %}
 ```jsx
 function Componente({ nombre }) {
 	return <h1>Hola {nombre}</h1>;
 }
 ```
+{% endraw %}
 
 ### State as a function of time
 
@@ -1172,10 +1278,12 @@ PF aplicada a interfaces reactivas: la UI es una **proyección funcional del est
 
 Lenguajes como **Lisp**, **Clojure** o **Wolfram Language** modelan código como **estructuras funcionales que pueden evaluarse o transformarse dinámicamente.**
 
+{% raw %}
 ```clojure
 (def expr '(* (+ x 1) 3))
 (eval expr)
 ```
+{% endraw %}
 
 ### Transformaciones algebraicas automáticas
 
@@ -1227,11 +1335,13 @@ Combinación de PF con otros paradigmas para aprovechar sus ventajas:
 - **PF + Imperativa controlada:** uso de efectos localizados mediante mónadas o efectos algebraicos.  
 
 Ejemplo en Scala:
+{% raw %}
 ```scala
 trait Repositorio {
 	def guardar(dato: Dato): IO[Unit]
 }
-````
+```
+{% endraw %}`
 
 ### PF en lenguajes multiparadigma
 
@@ -1250,6 +1360,7 @@ Lenguajes como **Python**, **JavaScript**, **Rust** o **C#** adoptan conceptos f
 Los **efectos algebraicos** son una evolución de las mónadas:
 permiten **declarar efectos** (estado, IO, excepciones) sin comprometer pureza ni modularidad.
 
+{% raw %}
 ```ocaml
 effect Choose : int list -> int
 
@@ -1257,6 +1368,7 @@ let ejemplo () =
 	match perform (Choose [1;2;3]) with
 	| x -> x + 1
 ```
+{% endraw %}
 
 Ventajas:
 
@@ -1274,9 +1386,11 @@ Técnica que elimina estructuras intermedias innecesarias en funciones compuesta
 
 Ejemplo conceptual:
 
+{% raw %}
 ```haskell
 sum (map (+1) [1..n])  →  foldl' (\acc x -> acc + (x+1)) 0 [1..n]
 ```
+{% endraw %}
 
 ### Evaluación mixta
 
@@ -1297,9 +1411,11 @@ Principios de diseño aplicados a sistemas reales:
 
 Ejemplo: Arquitectura **Functional Hexagonal** (Domain-driven + PF):
 
+{% raw %}
 ```text
 Dominio puro → Adaptadores funcionales → Efectos controlados (IO)
 ```
+{% endraw %}
 
 ### Testing funcional avanzado
 
@@ -1309,10 +1425,12 @@ Dominio puro → Adaptadores funcionales → Efectos controlados (IO)
 
 Ejemplo en Haskell:
 
+{% raw %}
 ```haskell
 prop_reverso :: [Int] -> Bool
 prop_reverso xs = reverse (reverse xs) == xs
 ```
+{% endraw %}
 
 ---
 
@@ -1325,9 +1443,11 @@ Inspirada en PF: la infraestructura se **describe como funciones puras del estad
 * Ejemplo: Terraform, NixOS, Pulumi (en FP).
 * Garantiza reproducibilidad, trazabilidad y rollback seguro.
 
+{% raw %}
 ```nix
 services.nginx.enable = true;
 ```
+{% endraw %}
 
 ### Pipelines funcionales
 
@@ -1347,9 +1467,11 @@ Modelos funcionales sobre bases de datos inmutables:
 
 Ejemplo:
 
+{% raw %}
 ```clojure
 [:find ?e :where [?e :user/name "Alice"]]
 ```
+{% endraw %}
 
 ### Transformaciones inmutables
 
@@ -1363,9 +1485,11 @@ Cada transacción genera un nuevo estado derivado sin modificar el anterior, fac
 
 Cada microservicio actúa como una **función pura sobre su input**, con entradas y salidas bien tipadas:
 
+{% raw %}
 ```text
 Servicio: Input JSON → Transformación → Output JSON
 ```
+{% endraw %}
 
 * Efectos aislados (llamadas externas) manejados por contenedores monádicos o pipelines declarativos.
 * Facilita **observabilidad funcional** y **reproceso determinista**.
@@ -1377,9 +1501,11 @@ Modelo donde los eventos son **inmutables y procesados funcionalmente**:
 * Cada evento = entrada de una función.
 * Estado = `fold` de todos los eventos.
 
+{% raw %}
 ```haskell
 foldEvents :: State -> [Event] -> State
 ```
+{% endraw %}
 
 ---
 
@@ -1395,17 +1521,21 @@ Garantizan propiedades de seguridad en tiempo de compilación:
 
 Ejemplo (Idris):
 
+{% raw %}
 ```idris
 login : (u : Usuario) -> {auto prf : PuedeLogin u} -> Sesion
 ```
+{% endraw %}
 
 ### Políticas funcionales
 
 Las reglas de seguridad se expresan como **funciones puras sobre el contexto**:
 
+{% raw %}
 ```haskell
 puedeAcceder :: Usuario -> Recurso -> Bool
 ```
+{% endraw %}
 
 ---
 
@@ -1482,8 +1612,10 @@ La PF contribuye a la **eficiencia energética y sostenibilidad**:
 * Sostenibilidad del software
 * Functional Hybrid Paradigms
 
+{% raw %}
 ```
 ```
+{% endraw %}
 
 
 

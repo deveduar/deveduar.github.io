@@ -126,34 +126,42 @@ category: Databases
 ## Codificación Ejemplos
 
 ### Crear un tipo compuesto
+{% raw %}
 ```sql
 CREATE TYPE Human AS (
 	name text,
 	age int,
 	bio text
 );
-````
+```
+{% endraw %}`
 
 ### Insertar valores usando tipos compuestos
 
+{% raw %}
 ```sql
 INSERT INTO client (details)
 VALUES (ROW('Eduardo', 30, 'developer')::Human);
 ```
+{% endraw %}
 
 ### Acceso por notación punto
 
+{% raw %}
 ```sql
 SELECT (details).bio
 FROM client;
 ```
+{% endraw %}
 
 ### Conversión a JSON o hstore
 
+{% raw %}
 ```sql
 SELECT '{"name":"edu"}'::jsonb;
 SELECT 'name=>edu,age=>20'::hstore;
 ```
+{% endraw %}
 
 
 Aquí tienes un **cheat sheet de PostgreSQL** claro, práctico y compacto, listo para pegar en Obsidian si quieres:
@@ -178,46 +186,57 @@ Aquí tienes un **cheat sheet de PostgreSQL** claro, práctico y compacto, listo
 
 ## CRUD Básico
 **SELECT**
+{% raw %}
 ```sql
 SELECT columna1, columna2 FROM tabla;
 SELECT * FROM tabla WHERE condicion;
 SELECT DISTINCT columna FROM tabla;
-````
+```
+{% endraw %}`
 
 **INSERT**
 
+{% raw %}
 ```sql
 INSERT INTO tabla (col1, col2)
 VALUES (val1, val2);
 ```
+{% endraw %}
 
 **UPDATE**
 
+{% raw %}
 ```sql
 UPDATE tabla SET col1 = valor WHERE id = 1;
 ```
+{% endraw %}
 
 **DELETE**
 
+{% raw %}
 ```sql
 DELETE FROM tabla WHERE id = 1;
 ```
+{% endraw %}
 
 ---
 
 ## Filtrado y Orden
 
+{% raw %}
 ```sql
 SELECT * FROM tabla
 WHERE col > 10 AND col2 LIKE '%text%'
 ORDER BY col DESC
 LIMIT 10 OFFSET 20;
 ```
+{% endraw %}
 
 ---
 
 ## Joins
 
+{% raw %}
 ```sql
 SELECT *
 FROM a
@@ -225,22 +244,26 @@ JOIN b ON a.id = b.a_id;
 
 LEFT JOIN, RIGHT JOIN, FULL JOIN
 ```
+{% endraw %}
 
 ---
 
 ## Funciones de Agregado
 
+{% raw %}
 ```sql
 SELECT COUNT(*), SUM(col), AVG(col), MAX(col), MIN(col)
 FROM tabla
 GROUP BY otra_columna
 HAVING SUM(col) > 100;
 ```
+{% endraw %}
 
 ---
 
 ## Transacciones
 
+{% raw %}
 ```sql
 BEGIN;
 UPDATE tabla SET col = val;
@@ -249,6 +272,7 @@ COMMIT;
 -- Cancelar
 ROLLBACK;
 ```
+{% endraw %}
 
 ---
 
@@ -256,35 +280,44 @@ ROLLBACK;
 
 **JSON / JSONB**
 
+{% raw %}
 ```sql
 SELECT data->'name', data->>'age'
 FROM usuarios;
 
 UPDATE usuarios SET data = data || '{"nuevo": true}';
 ```
+{% endraw %}
 
 **Arrays**
 
+{% raw %}
 ```sql
 SELECT * FROM tabla WHERE 3 = ANY(mi_array);
 ```
+{% endraw %}
 
 **HSTORE**
 
+{% raw %}
 ```sql
 SELECT h->'key' FROM tabla;
 ```
+{% endraw %}
 
 **Custom Types**
 
+{% raw %}
 ```sql
 CREATE TYPE human AS (name text, age int);
 ```
+{% endraw %}
 
 ---
 
 ## Crear y Modificar Tablas
 
+{% raw %}
 ```sql
 CREATE TABLE personas (
 	id SERIAL PRIMARY KEY,
@@ -296,11 +329,13 @@ CREATE TABLE personas (
 ALTER TABLE personas ADD COLUMN activo BOOL DEFAULT TRUE;
 ALTER TABLE personas DROP COLUMN edad;
 ```
+{% endraw %}
 
 ---
 
 ## Índices
 
+{% raw %}
 ```sql
 CREATE INDEX idx_name ON tabla(columna);
 CREATE INDEX idx_json ON tabla USING GIN(json_col);
@@ -308,11 +343,13 @@ CREATE INDEX idx_json ON tabla USING GIN(json_col);
 -- Índice parcial
 CREATE INDEX idx_active ON tabla(col) WHERE activo = true;
 ```
+{% endraw %}
 
 ---
 
 ## Vistas y Materialized Views
 
+{% raw %}
 ```sql
 CREATE VIEW vista AS
 SELECT * FROM tabla WHERE activo = true;
@@ -322,11 +359,13 @@ SELECT * FROM tabla;
 
 REFRESH MATERIALIZED VIEW vista_mat;
 ```
+{% endraw %}
 
 ---
 
 ## Funciones y Procedimientos
 
+{% raw %}
 ```sql
 CREATE FUNCTION sumar(a INT, b INT)
 RETURNS INT AS $$
@@ -336,40 +375,48 @@ END; $$ LANGUAGE plpgsql;
 
 SELECT sumar(3,5);
 ```
+{% endraw %}
 
 ---
 
 ## Esquemas
 
+{% raw %}
 ```sql
 CREATE SCHEMA admin;
 SET search_path TO admin, public;
 
 CREATE TABLE admin.users (...);
 ```
+{% endraw %}
 
 ---
 
 ## Copias y Restauración
 
+{% raw %}
 ```sql
 pg_dump basedatos > backup.sql
 pg_restore -d nuevaBD backup.dump
 ```
+{% endraw %}
 
 ---
 
 ## EXPLAIN
 
+{% raw %}
 ```sql
 EXPLAIN ANALYZE
 SELECT * FROM tabla WHERE col = 10;
 ```
+{% endraw %}
 
 ---
 
 ## Particionamiento
 
+{% raw %}
 ```sql
 CREATE TABLE logs (
 	id SERIAL,
@@ -380,6 +427,7 @@ CREATE TABLE logs (
 CREATE TABLE logs_2025 PARTITION OF logs
 FOR VALUES FROM ('2025-01-01') TO ('2026-01-01');
 ```
+{% endraw %}
 
 
 # PostgreSQL — Conceptos Avanzados y Completos
@@ -478,45 +526,56 @@ FOR VALUES FROM ('2025-01-01') TO ('2026-01-01');
 ## Ejemplos de Código
 
 ### Crear un tipo compuesto
+{% raw %}
 ```sql
 CREATE TYPE human AS (
 	name text,
 	age int,
 	bio text
 );
-````
+```
+{% endraw %}`
 
 ### Insertar usando tipo compuesto
 
+{% raw %}
 ```sql
 INSERT INTO client (details)
 VALUES (ROW('Eduardo', 30, 'developer')::human);
 ```
+{% endraw %}
 
 ### Notación punto
 
+{% raw %}
 ```sql
 SELECT (details).bio
 FROM client;
 ```
+{% endraw %}
 
 ### JSON y hstore
 
+{% raw %}
 ```sql
 SELECT '{"name":"edu"}'::jsonb;
 SELECT 'name=>edu,age=>20'::hstore;
 ```
+{% endraw %}
 
 ### Upsert
 
+{% raw %}
 ```sql
 INSERT INTO clientes(id, nombre)
 VALUES (1, 'Eduardo')
 ON CONFLICT(id) DO UPDATE SET nombre = EXCLUDED.nombre;
 ```
+{% endraw %}
 
 ### CTE recursiva
 
+{% raw %}
 ```sql
 WITH RECURSIVE nums AS (
 	SELECT 1 AS n
@@ -525,5 +584,6 @@ WITH RECURSIVE nums AS (
 )
 SELECT * FROM nums;
 ```
+{% endraw %}
 
 

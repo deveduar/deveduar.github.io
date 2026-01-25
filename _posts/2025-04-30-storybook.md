@@ -52,21 +52,27 @@ Se convierte en un entorno visual donde diseñadores, desarrolladores y testers 
 
 1. Instalar dependencias:
 
-	```bash
+	{% raw %}
+```bash
 	npm install storybook @storybook/react-vite --save-dev
 	```
+{% endraw %}
 
 2. Inicializar configuración:
 
-	```bash
+	{% raw %}
+```bash
 	npx storybook init
 	```
+{% endraw %}
 
 3. Ejecutar Storybook:
 
-	```bash
+	{% raw %}
+```bash
 	npm run storybook
 	```
+{% endraw %}
 
 Esto generará la carpeta `.storybook/` con los archivos de configuración (`main.js`, `preview.js`) y abrirá la UI en el navegador.
 
@@ -78,14 +84,17 @@ Cada componente debe ir acompañado de un archivo `*.stories.tsx` que describa s
 
 ### Ejemplo: `Button.tsx`
 
+{% raw %}
 ```tsx
 export const Button = ({ label, onClick }: { label: string; onClick?: () => void }) => {
 	return <button onClick={onClick}>{label}</button>;
 };
-````
+```
+{% endraw %}`
 
 ### Ejemplo: `Button.stories.tsx`
 
+{% raw %}
 ```tsx
 import { Button } from './Button';
 import type { Meta, StoryObj } from '@storybook/react';
@@ -114,6 +123,7 @@ export const WithAction: Story = {
 	},
 };
 ```
+{% endraw %}
 
 ---
 
@@ -127,13 +137,17 @@ Storybook permite **testear componentes UI** directamente en su entorno visual m
 
 ### Ejemplo de prueba con `@storybook/test-runner`
 
+{% raw %}
 ```bash
 npm install @storybook/test-runner --save-dev
 ```
+{% endraw %}
 
+{% raw %}
 ```bash
 npx storybook test
 ```
+{% endraw %}
 
 Esto ejecuta las historias en un entorno headless, validando que los componentes se rendericen correctamente.
 
@@ -151,9 +165,11 @@ Esto ejecuta las historias en un entorno headless, validando que los componentes
   * `@storybook/addon-a11y`: para verificar accesibilidad.
 * Exportar la documentación final como **sitio estático**:
 
-  ```bash
+  {% raw %}
+```bash
   npm run build-storybook
   ```
+{% endraw %}
 
 ---
 
@@ -207,6 +223,7 @@ Permite estructurar un *Design System viviente*:
 
 ### Ejemplo: Jerarquía de historias
 
+{% raw %}
 ```
 
 Components/
@@ -219,7 +236,8 @@ RegistrationForm.stories.tsx
 Layouts/
 AppShell.stories.tsx
 
-````
+```
+{% endraw %}`
 
 ---
 
@@ -229,6 +247,7 @@ Storybook 7+ soporta renderizado híbrido con Vite y frameworks como Next.js, pe
 
 ### Configuración en `.storybook/main.ts`
 
+{% raw %}
 ```ts
 import type { StorybookConfig } from '@storybook/react-vite';
 
@@ -241,7 +260,8 @@ const config: StorybookConfig = {
 	stories: ['../src/**/*.stories.@(ts|tsx)'],
 };
 export default config;
-````
+```
+{% endraw %}`
 
 ### Integración con rutas y hooks de Next.js
 
@@ -269,9 +289,11 @@ export const decorators = [
 
 Chromatic permite subir automáticamente las stories a un entorno remoto, ejecutando comparaciones visuales por commit y generando documentación pública.
 
+{% raw %}
 ```bash
 npx chromatic --project-token=<tu_token>
 ```
+{% endraw %}
 
 Beneficios:
 
@@ -281,6 +303,7 @@ Beneficios:
 
 ### ⚙️ Ejecución en GitHub Actions
 
+{% raw %}
 ```yaml
 name: Storybook CI
 on: [push, pull_request]
@@ -296,6 +319,7 @@ jobs:
 			- run: npm run build-storybook
 			- run: npx chromatic --project-token=$CHROMATIC_TOKEN
 ```
+{% endraw %}
 
 ---
 
@@ -308,6 +332,7 @@ Storybook puede actuar como **mock de frontend** en pipelines de E2E, eliminando
 
 ### Ejemplo con Cypress:
 
+{% raw %}
 ```ts
 describe('Storybook Components', () => {
 	it('renders Button correctly', () => {
@@ -316,6 +341,7 @@ describe('Storybook Components', () => {
 	});
 });
 ```
+{% endraw %}
 
 Esto facilita pruebas visuales automatizadas sin levantar la app completa.
 
@@ -325,6 +351,7 @@ Esto facilita pruebas visuales automatizadas sin levantar la app completa.
 
 Para componentes dependientes de APIs o stores globales, Storybook puede mockear proveedores:
 
+{% raw %}
 ```tsx
 export const decorators = [
 	(Story) => (
@@ -334,6 +361,7 @@ export const decorators = [
 	),
 ];
 ```
+{% endraw %}
 
 También puede integrar herramientas como:
 
@@ -351,7 +379,8 @@ También puede integrar herramientas como:
 
 * **Snapshot Testing con Jest:** importar stories como fixtures para validar props renderizadas.
 
-  ```ts
+  {% raw %}
+```ts
   import { render } from '@testing-library/react';
   import { Default } from './Button.stories';
 
@@ -360,6 +389,7 @@ También puede integrar herramientas como:
   	expect(asFragment()).toMatchSnapshot();
   });
   ```
+{% endraw %}
 
 * **Mock visual de estados dinámicos:** loading, error, empty, success — documentados explícitamente como stories.
 
@@ -369,9 +399,11 @@ También puede integrar herramientas como:
 
 * Generar la documentación estática:
 
-  ```bash
+  {% raw %}
+```bash
   npm run build-storybook
   ```
+{% endraw %}
 * Publicar en servicios como:
 
   * GitHub Pages
@@ -435,7 +467,8 @@ Storybook puede servir como **portal de diseño unificado** en entornos distribu
 - **Storybook Composition:**  
 	Permite combinar múltiples Storybooks en uno central, ideal para proyectos con varios repos o equipos.
 
-	```js
+	{% raw %}
+```js
 	module.exports = {
 		stories: [],
 		refs: {
@@ -444,6 +477,7 @@ Storybook puede servir como **portal de diseño unificado** en entornos distribu
 		},
 	};
 	```
+{% endraw %}
 
 - **Nx / Turborepo:**  
 	Storybook puede correr en paralelo por paquete, compartiendo configuraciones base.
@@ -458,6 +492,7 @@ Storybook soporta formato **MDX (Markdown + JSX)** para documentar componentes, 
 
 ### Ejemplo básico
 
+{% raw %}
 ```mdx
 import { Button } from './Button';
 
@@ -465,7 +500,8 @@ import { Button } from './Button';
 El componente `Button` se usa para acciones primarias en formularios.
 
 <Button label="Guardar" />
-````
+```
+{% endraw %}`
 
 Esto genera documentación navegable, enriquecida con ejemplos interactivos y notas técnicas.
 
@@ -490,6 +526,7 @@ Storybook se integra fácilmente con herramientas de diseño para sincronizar lo
 
 ### Ejemplo de uso con tokens globales
 
+{% raw %}
 ```ts
 export const parameters = {
 	designToken: {
@@ -498,6 +535,7 @@ export const parameters = {
 	},
 };
 ```
+{% endraw %}
 
 ---
 
@@ -511,6 +549,7 @@ Además de documentar componentes, Storybook puede servir como **sandbox de fluj
 
 ### Ejemplo de flujo mockeado
 
+{% raw %}
 ```tsx
 export const WizardFlow = () => {
 	const [step, setStep] = useState(1);
@@ -523,6 +562,7 @@ export const WizardFlow = () => {
 	);
 };
 ```
+{% endraw %}
 
 ---
 
@@ -537,6 +577,7 @@ Storybook es excelente para evaluar **accesibilidad** en etapas tempranas del de
 
 ### Ejemplo de test visual accesible
 
+{% raw %}
 ```ts
 import { within, userEvent } from '@storybook/testing-library';
 
@@ -548,6 +589,7 @@ export const AccessibleStory = {
 	},
 };
 ```
+{% endraw %}
 
 ---
 
@@ -571,6 +613,7 @@ Los addons extienden la funcionalidad nativa de Storybook. Se pueden crear perso
 
 ### Ejemplo: addon personalizado
 
+{% raw %}
 ```ts
 import { addons, types } from '@storybook/manager-api';
 import { AddonPanel } from '@storybook/components';
@@ -587,6 +630,7 @@ addons.register('my/custom-addon', () => {
 	});
 });
 ```
+{% endraw %}
 
 ---
 
@@ -599,6 +643,7 @@ Storybook puede emular APIs complejas para testear UI sin backend real:
 
 ### Ejemplo:
 
+{% raw %}
 ```ts
 import { graphql, HttpResponse } from 'msw';
 
@@ -608,6 +653,7 @@ export const handlers = [
 	}),
 ];
 ```
+{% endraw %}
 
 Permite probar flujos completos (loading, error, success) directamente en Storybook.
 
@@ -658,10 +704,12 @@ Ideal para flujos de desarrollo **UI-driven**, donde los componentes se crean y 
 
 ### Paso 1 — Instalar Storybook
 
+{% raw %}
 ```bash
 npm install @storybook/react-vite --save-dev
 npx storybook init
-````
+```
+{% endraw %}`
 
 Esto genera la carpeta `.storybook/` con los archivos principales:
 
@@ -674,6 +722,7 @@ Esto genera la carpeta `.storybook/` con los archivos principales:
 
 `.storybook/main.ts`:
 
+{% raw %}
 ```ts
 import type { StorybookConfig } from '@storybook/react-vite';
 
@@ -691,12 +740,15 @@ const config: StorybookConfig = {
 };
 export default config;
 ```
+{% endraw %}
 
 ### Paso 3 — Iniciar el entorno
 
+{% raw %}
 ```bash
 npm run storybook
 ```
+{% endraw %}
 
 Abrirá `http://localhost:6006` con la interfaz interactiva.
 
@@ -706,6 +758,7 @@ Abrirá `http://localhost:6006` con la interfaz interactiva.
 
 ### Ejemplo: Componente `Button.tsx`
 
+{% raw %}
 ```tsx
 type ButtonProps = {
 	label: string;
@@ -726,9 +779,11 @@ export const Button = ({ label, variant = 'primary', disabled, onClick }: Button
 	);
 };
 ```
+{% endraw %}
 
 ### Story asociada: `Button.stories.tsx`
 
+{% raw %}
 ```tsx
 import { Button } from './Button';
 import type { Meta, StoryObj } from '@storybook/react';
@@ -765,6 +820,7 @@ export const Disabled: Story = {
 	},
 };
 ```
+{% endraw %}
 
 📌 **Resultado:**  
 Cada variante del botón puede verse, probarse y modificarse en tiempo real desde el panel de Storybook.
@@ -810,6 +866,7 @@ Storybook integra herramientas de testing visual y automatizado.
 
 ### a) Prueba interactiva con `play` function
 
+{% raw %}
 ```tsx
 import { within, userEvent } from '@storybook/testing-library';
 
@@ -822,15 +879,18 @@ export const Interactive: Story = {
 	},
 };
 ```
+{% endraw %}
 
 💡 Ideal para testear flujos UI sin levantar toda la app.
 
 ### b) Integración con Chromatic
 
+{% raw %}
 ```bash
 npm install chromatic --save-dev
 npx chromatic --project-token=<tu_token>
 ```
+{% endraw %}
 
 Sube tus stories para revisión visual automática y control de versiones UI.
 
@@ -840,6 +900,7 @@ Sube tus stories para revisión visual automática y control de versiones UI.
 
 ### Decoradores en `.storybook/preview.ts`
 
+{% raw %}
 ```tsx
 import '../src/styles/globals.css';
 import { ThemeProvider } from '../src/context/ThemeContext';
@@ -854,6 +915,7 @@ export const decorators = [
 	),
 ];
 ```
+{% endraw %}
 
 📌 Permite aplicar temas, estilos globales o providers a todas las stories.
 
@@ -863,10 +925,13 @@ export const decorators = [
 
 Instalar y configurar **Mock Service Worker**:
 
+{% raw %}
 ```bash
 npm install msw --save-dev
 ```
+{% endraw %}
 
+{% raw %}
 ```ts
 // .storybook/preview.ts
 import { initialize, mswDecorator } from 'msw-storybook-addon';
@@ -888,6 +953,7 @@ export const parameters = {
 	},
 };
 ```
+{% endraw %}
 
 🎯 Resultado: tus componentes pueden simular respuestas API sin backend real.
 
@@ -897,6 +963,7 @@ export const parameters = {
 
 ### Ejemplo: `LoginForm.tsx`
 
+{% raw %}
 ```tsx
 export const LoginForm = () => {
 	const [email, setEmail] = useState('');
@@ -926,9 +993,11 @@ export const LoginForm = () => {
 	);
 };
 ```
+{% endraw %}
 
 ### `LoginForm.stories.tsx`
 
+{% raw %}
 ```tsx
 import { LoginForm } from './LoginForm';
 import type { Meta, StoryObj } from '@storybook/react';
@@ -943,6 +1012,7 @@ type Story = StoryObj<typeof LoginForm>;
 
 export const Default: Story = {};
 ```
+{% endraw %}
 
 ✅ Permite probar interactividad, validaciones y diseño sin backend.
 
@@ -952,6 +1022,7 @@ export const Default: Story = {};
 
 ### Ejemplo: `cypress/e2e/storybook.cy.ts`
 
+{% raw %}
 ```ts
 describe('Storybook Component Testing', () => {
 	it('renders the Primary Button story', () => {
@@ -960,6 +1031,7 @@ describe('Storybook Component Testing', () => {
 	});
 });
 ```
+{% endraw %}
 
 📦 Usa el entorno Storybook como sandbox para testear UI sin dependencia del resto de la app.
 
@@ -969,15 +1041,19 @@ describe('Storybook Component Testing', () => {
 
 ### Generar versión estática
 
+{% raw %}
 ```bash
 npm run build-storybook
 ```
+{% endraw %}
 
 ### Desplegar en [Vercel](/cloud/vercel/) o Netlify
 
+{% raw %}
 ```bash
 npx vercel deploy storybook-static
 ```
+{% endraw %}
 
 También puede integrarse a CI/CD (e.g. GitHub Actions + Chromatic).
 
@@ -1100,6 +1176,7 @@ Combinado con Vite, Chromatic, Cypress y [MSW Mocks service worker](/testing/msw
 
 ### 📁 Estructura básica de historias
 
+{% raw %}
 ```tsx
 // Button.stories.tsx
 import type { Meta, StoryObj } from '@storybook/react';
@@ -1130,7 +1207,8 @@ export const Disabled: Story = {
 		disabled: true,
 	},
 };
-````
+```
+{% endraw %}`
 
 ---
 
@@ -1160,6 +1238,7 @@ export default {
 
 ### 🧩 Ejemplo con Testing Integrado
 
+{% raw %}
 ```tsx
 // Button.test.ts
 import { composeStories } from '@storybook/react';
@@ -1173,6 +1252,7 @@ test('Renderiza el botón con texto correcto', () => {
 	expect(screen.getByText('Primary Button')).toBeInTheDocument();
 });
 ```
+{% endraw %}
 
 ---
 

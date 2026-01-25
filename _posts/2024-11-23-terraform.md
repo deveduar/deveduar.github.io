@@ -128,24 +128,30 @@ category: devops
 
 ## Comandos principales
 ### Inicialización y formato
+{% raw %}
 ```bash
 terraform init
 terraform fmt
-````
+```
+{% endraw %}`
 
 ### Planificación
 
+{% raw %}
 ```bash
 terraform plan
 ```
+{% endraw %}
 
 ### Aplicación y destrucción
 
+{% raw %}
 ```bash
 terraform apply
 terraform destroy
 terraform apply -auto-approve
 ```
+{% endraw %}
 
 ## Configuración inicial de proyecto
 
@@ -172,11 +178,13 @@ terraform apply -auto-approve
 - Outputs
     - Mostrar IPs y datos relevantes
 
+{% raw %}
 ```hcl
 output "instance_ip_addr" {
 	value = aws_instance.example.private_ip
 }
 ```
+{% endraw %}
 
 ## Creación de instancias EC2 en AWS
 
@@ -186,17 +194,20 @@ output "instance_ip_addr" {
     - `for_each` para múltiples instancias
     - Interpolación de claves
 
+{% raw %}
 ```hcl
 tags = {
 	Name = "EC2-${each.key}"
 	ExtraTag = local.extra_tagName
 }
 ```
+{% endraw %}
 
 ## Integración con CloudWatch
 
 - Creación de recursos adicionales
 
+{% raw %}
 ```hcl
 resource "aws_cloudwatch_log_group" "ec2_log_group" {
 	tags = {
@@ -205,9 +216,11 @@ resource "aws_cloudwatch_log_group" "ec2_log_group" {
 	}
 }
 ```
+{% endraw %}
 
 ### Output de logs y direcciones
 
+{% raw %}
 ```hcl
 output "ec2_private_ips" {
 	value = {
@@ -216,6 +229,7 @@ output "ec2_private_ips" {
 	}
 }
 ```
+{% endraw %}
 
 ## Uso de módulos: VPC y Security Groups
 
@@ -227,27 +241,33 @@ output "ec2_private_ips" {
     - Buenas prácticas integradas
 - Configuración de networking
 
+{% raw %}
 ```hcl
 module "vpc" {
 	source = "terraform-aws-modules/vpc/aws"
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```hcl
 module "terraform-sg" {
 	source = "terraform-aws-modules/security-group/aws"
 	vpc_id = module.vpc.vpc_id
 }
 ```
+{% endraw %}
 
 ### Referencia de módulos en recursos
 
+{% raw %}
 ```hcl
 resource "aws_instance" "example" {
 	subnet_id = module.vpc.public_subnets[0]
 	vpc_security_group_ids = [module.terraform-sg.security_group_id]
 }
 ```
+{% endraw %}
 
 ## Workspaces y diseño de código
 
@@ -256,14 +276,17 @@ resource "aws_instance" "example" {
     - dev, prod, test
 - Comandos
 
+{% raw %}
 ```bash
 terraform workspace list
 terraform workspace new prod
 terraform workspace select default
 ```
+{% endraw %}
 
 ### Lógica condicional por entorno
 
+{% raw %}
 ```hcl
 resource "aws_instance" "example" {
 	count = terraform.workspace == "prod" ? 2 : 1
@@ -273,7 +296,8 @@ resource "aws_instance" "example" {
 		Name = format("%s-%s", terraform.workspace, count.index)
 	}
 }
-````
+```
+{% endraw %}`
 # Ejemplos de app web con [Aws](/cloud/aws/)
 `$= dv.current().file.tags.join(" ")`
 
@@ -292,13 +316,15 @@ resource "aws_instance" "example" {
 - Script bash ejecutado al iniciar la instancia
 
 ### Script user_data (bash)
+{% raw %}
 ```bash
 #!/bin/bash
 yum update -y
 amazon-linux-extras install nginx1 -y
 systemctl start nginx
 systemctl enable nginx
-````
+```
+{% endraw %}`
 
 
 ## Red y seguridad
@@ -313,21 +339,25 @@ systemctl enable nginx
 
 * Generar par de claves
 
+{% raw %}
 ```bash
 ssh-keygen -t rsa 2048 -f "nginx-server.key"
 ```
+{% endraw %}
 
 * Subir clave pública a AWS
 * Uso del recurso `aws_key_pair`
 
 ### Recurso aws_key_pair
 
+{% raw %}
 ```hcl
 resource "aws_key_pair" "nginx-server-ssh" {
 	key_name   = "nginx-server-key"
 	public_key = file("nginx-server.key.pub")
 }
 ```
+{% endraw %}
 
 ## Security Group
 
@@ -337,6 +367,7 @@ resource "aws_key_pair" "nginx-server-ssh" {
 
 ### Recurso aws_security_group
 
+{% raw %}
 ```hcl
 resource "aws_security_group" "nginx-server-sg" {
 	name   = "nginx-server-sg"
@@ -364,12 +395,15 @@ resource "aws_security_group" "nginx-server-sg" {
 	}
 }
 ```
+{% endraw %}
 
 ### Asociación del SG a la instancia
 
+{% raw %}
 ```hcl
 vpc_security_group_ids = [aws_security_group.nginx-server-sg.id]
 ```
+{% endraw %}
 
 ## Tags y metadatos
 
@@ -378,12 +412,14 @@ vpc_security_group_ids = [aws_security_group.nginx-server-sg.id]
 
 ### Tags en recursos
 
+{% raw %}
 ```hcl
 tags = {
 	Name        = var.server_name
 	Environment = var.environment
 }
 ```
+{% endraw %}
 
 ## Outputs y verificación
 
@@ -392,6 +428,7 @@ tags = {
 
 ### Outputs definidos
 
+{% raw %}
 ```hcl
 output "server_public_ip" {
 	value = aws_instance.nginx-server.public_ip
@@ -401,20 +438,25 @@ output "server_public_dns" {
 	value = aws_instance.nginx-server.public_dns
 }
 ```
+{% endraw %}
 
 ## Pruebas de acceso
 
 * Probar servidor web
 
+{% raw %}
 ```bash
 curl http://<public_ip>
 ```
+{% endraw %}
 
 * Conexión SSH
 
+{% raw %}
 ```bash
 ssh ec2-user@3.232.132.177 -i ./nginx-server.key
 ```
+{% endraw %}
 
 ## Variables y entornos
 
@@ -426,12 +468,14 @@ ssh ec2-user@3.232.132.177 -i ./nginx-server.key
 
 ### Variable de ejemplo
 
+{% raw %}
 ```hcl
 variable "server_name" {
 	type    = string
 	default = "nginx-server"
 }
 ```
+{% endraw %}
 
 ## Uso de módulos
 
@@ -442,9 +486,11 @@ variable "server_name" {
 
 ### Output desde módulo
 
+{% raw %}
 ```hcl
 value = module.nginx_server_dev.server_public_ip
 ```
+{% endraw %}
 
 ## Gestión de estado (tf state)
 
@@ -456,9 +502,11 @@ value = module.nginx_server_dev.server_public_ip
 
 * Guardar plan para revisión
 
+{% raw %}
 ```bash
 terraform plan -out server_qa.tfplan
 ```
+{% endraw %}
 
 * Integración con [CICD](/devops/cicd/)
 
@@ -469,21 +517,27 @@ terraform plan -out server_qa.tfplan
 
 ### Importar recurso
 
+{% raw %}
 ```bash
 terraform import aws_instance.server-web i-23234235fdg
 ```
+{% endraw %}
 
 ### Recurso vacío inicial
 
+{% raw %}
 ```hcl
 resource "aws_instance" "server-web" {}
 ```
+{% endraw %}
 
 ### Inspección del estado
 
+{% raw %}
 ```bash
 terraform state show aws_instance.server-web
 ```
+{% endraw %}
 
 * Copiar propiedades al recurso:
 	* ami
@@ -495,9 +549,11 @@ terraform state show aws_instance.server-web
 * Uso de [Aws](/cloud/aws/) CLI
 * Configuración inicial
 
+{% raw %}
 ```bash
 aws configure
 ```
+{% endraw %}
 
 ## Ciclo de vida de recursos
 
@@ -546,10 +602,12 @@ aws configure
 
 ### Recursos S3
 
+{% raw %}
 ```hcl
 resource "aws_s3_bucket" "codepipeline_artifacts" {}
 resource "aws_s3_bucket" "terraformstate" {}
 ```
+{% endraw %}
 
 ## Makefile y automatización
 
@@ -559,27 +617,33 @@ resource "aws_s3_bucket" "terraformstate" {}
 
 ### Comando de ejemplo
 
+{% raw %}
 ```bash
 make apply
 ```
+{% endraw %}
 
 ## Backend remoto y provider
 
 ### Configuración de backend S3
 
+{% raw %}
 ```hcl
 backend "s3" {
 	bucket = "es3"
 }
 ```
+{% endraw %}
 
 ### Provider AWS
 
+{% raw %}
 ```hcl
 provider "aws" {
 	region = "eu-west-1"
 }
 ```
+{% endraw %}
 
 ## Docker Compose
 
@@ -605,12 +669,14 @@ provider "aws" {
 	- `data` solo consulta
 
 ### Uso típico
+{% raw %}
 ```hcl
 data "aws_ami" "amazon_linux" {
 	most_recent = true
 	owners      = ["amazon"]
 }
-````
+```
+{% endraw %}`
 
 ## Dependencias explícitas
 
@@ -622,9 +688,11 @@ data "aws_ami" "amazon_linux" {
 
 ### Ejemplo
 
+{% raw %}
 ```hcl
 depends_on = [aws_security_group.nginx-server-sg]
 ```
+{% endraw %}
 
 ## Ciclo de vida de recursos
 
@@ -633,12 +701,14 @@ depends_on = [aws_security_group.nginx-server-sg]
 
 ### lifecycle
 
+{% raw %}
 ```hcl
 lifecycle {
 	prevent_destroy = true
 	create_before_destroy = true
 }
 ```
+{% endraw %}
 
 * `prevent_destroy`
 	* Evita borrados accidentales
@@ -654,6 +724,7 @@ lifecycle {
 
 ### dynamic block
 
+{% raw %}
 ```hcl
 dynamic "ingress" {
 	for_each = var.ingress_rules
@@ -665,6 +736,7 @@ dynamic "ingress" {
 	}
 }
 ```
+{% endraw %}
 
 ## Locals avanzados
 
@@ -674,6 +746,7 @@ dynamic "ingress" {
 
 ### locals
 
+{% raw %}
 ```hcl
 locals {
 	env_prefix = "${var.project}-${var.environment}"
@@ -683,6 +756,7 @@ locals {
 	}
 }
 ```
+{% endraw %}
 
 ## IAM Roles para EC2
 
@@ -761,12 +835,14 @@ locals {
 
 ### sensitive outputs
 
+{% raw %}
 ```hcl
 output "db_password" {
 	value     = var.db_password
 	sensitive = true
 }
 ```
+{% endraw %}
 
 ## Gestión de costes
 
@@ -935,11 +1011,13 @@ Estructura típica:
 - Gestiona autenticación y región
 
 ### Provider AWS
+{% raw %}
 ```hcl
 provider "aws" {
 	region = "eu-west-1"
 }
-````
+```
+{% endraw %}`
 
 ## Recursos (resource)
 
@@ -951,12 +1029,14 @@ provider "aws" {
 
 ### Recurso EC2 básico
 
+{% raw %}
 ```hcl
 resource "aws_instance" "web" {
 	ami           = "ami-0abcdef1234567890"
 	instance_type = "t3.micro"
 }
 ```
+{% endraw %}
 
 ## Variables
 
@@ -966,18 +1046,22 @@ resource "aws_instance" "web" {
 
 ### Definición de variable
 
+{% raw %}
 ```hcl
 variable "instance_type" {
 	type    = string
 	default = "t3.micro"
 }
 ```
+{% endraw %}
 
 ### Uso de variable
 
+{% raw %}
 ```hcl
 instance_type = var.instance_type
 ```
+{% endraw %}
 
 ## Variables por entorno (.tfvars)
 
@@ -986,15 +1070,19 @@ instance_type = var.instance_type
 
 ### Archivo `dev.tfvars`
 
+{% raw %}
 ```hcl
 instance_type = "t3.micro"
 ```
+{% endraw %}
 
 ### Aplicar variables
 
+{% raw %}
 ```bash
 terraform apply -var-file=dev.tfvars
 ```
+{% endraw %}
 
 ## Variables locales (locals)
 
@@ -1003,11 +1091,13 @@ terraform apply -var-file=dev.tfvars
 
 ### locals
 
+{% raw %}
 ```hcl
 locals {
 	name_prefix = "${var.project}-${var.environment}"
 }
 ```
+{% endraw %}
 
 ## Tags
 
@@ -1016,12 +1106,14 @@ locals {
 
 ### Tags comunes
 
+{% raw %}
 ```hcl
 tags = {
 	Name        = local.name_prefix
 	Environment = var.environment
 }
 ```
+{% endraw %}
 
 ## Outputs
 
@@ -1030,11 +1122,13 @@ tags = {
 
 ### Output de IP pública
 
+{% raw %}
 ```hcl
 output "public_ip" {
 	value = aws_instance.web.public_ip
 }
 ```
+{% endraw %}
 
 ## Data sources
 
@@ -1043,18 +1137,22 @@ output "public_ip" {
 
 ### Obtener AMI más reciente
 
+{% raw %}
 ```hcl
 data "aws_ami" "amazon_linux" {
 	most_recent = true
 	owners      = ["amazon"]
 }
 ```
+{% endraw %}
 
 ### Uso del data source
 
+{% raw %}
 ```hcl
 ami = data.aws_ami.amazon_linux.id
 ```
+{% endraw %}
 
 ## user_data
 
@@ -1063,6 +1161,7 @@ ami = data.aws_ami.amazon_linux.id
 
 ### user_data con Nginx
 
+{% raw %}
 ```hcl
 user_data = <<EOF
 #!/bin/bash
@@ -1071,6 +1170,7 @@ systemctl start nginx
 systemctl enable nginx
 EOF
 ```
+{% endraw %}
 
 ## Security Groups
 
@@ -1079,6 +1179,7 @@ EOF
 
 ### Security Group básico
 
+{% raw %}
 ```hcl
 resource "aws_security_group" "web_sg" {
 	name = "web-sg"
@@ -1098,6 +1199,7 @@ resource "aws_security_group" "web_sg" {
 	}
 }
 ```
+{% endraw %}
 
 ## Dependencias
 
@@ -1106,9 +1208,11 @@ resource "aws_security_group" "web_sg" {
 
 ### depends_on
 
+{% raw %}
 ```hcl
 depends_on = [aws_security_group.web_sg]
 ```
+{% endraw %}
 
 ## Bucles y for_each
 
@@ -1116,6 +1220,7 @@ depends_on = [aws_security_group.web_sg]
 
 ### Crear varias instancias
 
+{% raw %}
 ```hcl
 resource "aws_instance" "servers" {
 	for_each = var.servers
@@ -1127,6 +1232,7 @@ resource "aws_instance" "servers" {
 	}
 }
 ```
+{% endraw %}
 
 ## Condiciones
 
@@ -1134,9 +1240,11 @@ resource "aws_instance" "servers" {
 
 ### count condicional
 
+{% raw %}
 ```hcl
 count = var.environment == "prod" ? 2 : 1
 ```
+{% endraw %}
 
 ## Módulos
 
@@ -1145,12 +1253,14 @@ count = var.environment == "prod" ? 2 : 1
 
 ### Llamada a módulo
 
+{% raw %}
 ```hcl
 module "web_server" {
 	source        = "./modules/web"
 	instance_type = "t3.micro"
 }
 ```
+{% endraw %}
 
 ## Outputs en módulos
 
@@ -1158,11 +1268,13 @@ module "web_server" {
 
 ### Output en módulo
 
+{% raw %}
 ```hcl
 output "server_ip" {
 	value = aws_instance.web.public_ip
 }
 ```
+{% endraw %}
 
 ## Backend remoto
 
@@ -1171,6 +1283,7 @@ output "server_ip" {
 
 ### Backend S3
 
+{% raw %}
 ```hcl
 terraform {
 	backend "s3" {
@@ -1180,6 +1293,7 @@ terraform {
 	}
 }
 ```
+{% endraw %}
 
 ## Workspaces
 
@@ -1188,18 +1302,22 @@ terraform {
 
 ### Uso de workspace
 
+{% raw %}
 ```bash
 terraform workspace new prod
 terraform workspace select prod
 ```
+{% endraw %}
 
 ### Uso en código
 
+{% raw %}
 ```hcl
 tags = {
 	Environment = terraform.workspace
 }
 ```
+{% endraw %}
 
 ## lifecycle
 
@@ -1207,12 +1325,14 @@ tags = {
 
 ### lifecycle
 
+{% raw %}
 ```hcl
 lifecycle {
 	prevent_destroy = true
 	create_before_destroy = true
 }
 ```
+{% endraw %}
 
 ## Importar infraestructura existente
 
@@ -1220,9 +1340,11 @@ lifecycle {
 
 ### Import
 
+{% raw %}
 ```bash
 terraform import aws_instance.legacy i-0123456789abcdef0
 ```
+{% endraw %}
 
 ## Plan y apply
 
@@ -1231,10 +1353,12 @@ terraform import aws_instance.legacy i-0123456789abcdef0
 
 ### Guardar plan
 
+{% raw %}
 ```bash
 terraform plan -out=tfplan
 terraform apply tfplan
 ```
+{% endraw %}
 
 ## Buenas prácticas
 
@@ -1492,274 +1616,351 @@ terraform apply tfplan
 
 ## Inicialización y configuración
 - Inicializar proyecto y descargar providers
+{% raw %}
 ```bash
 terraform init
-````
+```
+{% endraw %}`
 
 * Reconfigurar backend
 
+{% raw %}
 ```bash
 terraform init -reconfigure
 ```
+{% endraw %}
 
 * Actualizar providers
 
+{% raw %}
 ```bash
 terraform init -upgrade
 ```
+{% endraw %}
 
 ## Formato y validación
 
 * Formatear archivos `.tf`
 
+{% raw %}
 ```bash
 terraform fmt
 ```
+{% endraw %}
 
 * Formatear recursivamente
 
+{% raw %}
 ```bash
 terraform fmt -recursive
 ```
+{% endraw %}
 
 * Validar configuración
 
+{% raw %}
 ```bash
 terraform validate
 ```
+{% endraw %}
 
 ## Planificación
 
 * Generar plan
 
+{% raw %}
 ```bash
 terraform plan
 ```
+{% endraw %}
 
 * Plan con variables
 
+{% raw %}
 ```bash
 terraform plan -var="env=dev"
 ```
+{% endraw %}
 
 * Plan con archivo tfvars
 
+{% raw %}
 ```bash
 terraform plan -var-file=dev.tfvars
 ```
+{% endraw %}
 
 * Guardar plan
 
+{% raw %}
 ```bash
 terraform plan -out=tfplan
 ```
+{% endraw %}
 
 ## Aplicación y destrucción
 
 * Aplicar cambios
 
+{% raw %}
 ```bash
 terraform apply
 ```
+{% endraw %}
 
 * Aplicar plan guardado
 
+{% raw %}
 ```bash
 terraform apply tfplan
 ```
+{% endraw %}
 
 * Aplicar sin confirmación
 
+{% raw %}
 ```bash
 terraform apply -auto-approve
 ```
+{% endraw %}
 
 * Destruir infraestructura
 
+{% raw %}
 ```bash
 terraform destroy
 ```
+{% endraw %}
 
 * Destruir sin confirmación
 
+{% raw %}
 ```bash
 terraform destroy -auto-approve
 ```
+{% endraw %}
 
 ## Variables
 
 * Variable por CLI
 
+{% raw %}
 ```bash
 terraform apply -var="instance_type=t3.micro"
 ```
+{% endraw %}
 
 * Variable por entorno
 
+{% raw %}
 ```bash
 export TF_VAR_instance_type=t3.micro
 ```
+{% endraw %}
 
 ## Outputs
 
 * Mostrar outputs
 
+{% raw %}
 ```bash
 terraform output
 ```
+{% endraw %}
 
 * Output específico
 
+{% raw %}
 ```bash
 terraform output public_ip
 ```
+{% endraw %}
 
 * Output en JSON
 
+{% raw %}
 ```bash
 terraform output -json
 ```
+{% endraw %}
 
 ## Estado (state)
 
 * Listar recursos en el estado
 
+{% raw %}
 ```bash
 terraform state list
 ```
+{% endraw %}
 
 * Mostrar recurso
 
+{% raw %}
 ```bash
 terraform state show aws_instance.web
 ```
+{% endraw %}
 
 * Mover recurso
 
+{% raw %}
 ```bash
 terraform state mv aws_instance.old aws_instance.new
 ```
+{% endraw %}
 
 * Eliminar recurso del estado
 
+{% raw %}
 ```bash
 terraform state rm aws_instance.temp
 ```
+{% endraw %}
 
 * Reemplazar recurso
 
+{% raw %}
 ```bash
 terraform apply -replace="aws_instance.web"
 ```
+{% endraw %}
 
 ## Importación de recursos
 
 * Importar recurso existente
 
+{% raw %}
 ```bash
 terraform import aws_instance.server i-0123456789abcdef0
 ```
+{% endraw %}
 
 ## Workspaces
 
 * Listar workspaces
 
+{% raw %}
 ```bash
 terraform workspace list
 ```
+{% endraw %}
 
 * Crear workspace
 
+{% raw %}
 ```bash
 terraform workspace new prod
 ```
+{% endraw %}
 
 * Seleccionar workspace
 
+{% raw %}
 ```bash
 terraform workspace select dev
 ```
+{% endraw %}
 
 * Mostrar workspace actual
 
+{% raw %}
 ```bash
 terraform workspace show
 ```
+{% endraw %}
 
 ## Providers
 
 * Bloque provider
 
+{% raw %}
 ```hcl
 provider "aws" {
 	region = "eu-west-1"
 }
 ```
+{% endraw %}
 
 ## Recursos
 
 * Recurso básico
 
+{% raw %}
 ```hcl
 resource "aws_instance" "web" {
 	ami           = "ami-xxxx"
 	instance_type = "t3.micro"
 }
 ```
+{% endraw %}
 
 ## Variables
 
 * Definición
 
+{% raw %}
 ```hcl
 variable "environment" {
 	type    = string
 	default = "dev"
 }
 ```
+{% endraw %}
 
 * Uso
 
+{% raw %}
 ```hcl
 environment = var.environment
 ```
+{% endraw %}
 
 ## Variables locales
 
+{% raw %}
 ```hcl
 locals {
 	name_prefix = "${var.project}-${var.environment}"
 }
 ```
+{% endraw %}
 
 ## Tags
 
+{% raw %}
 ```hcl
 tags = {
 	Name        = local.name_prefix
 	Environment = var.environment
 }
 ```
+{% endraw %}
 
 ## Data sources
 
+{% raw %}
 ```hcl
 data "aws_ami" "amazon_linux" {
 	most_recent = true
 	owners      = ["amazon"]
 }
 ```
+{% endraw %}
 
 ## Outputs
 
+{% raw %}
 ```hcl
 output "public_ip" {
 	value = aws_instance.web.public_ip
 }
 ```
+{% endraw %}
 
 ## user_data
 
+{% raw %}
 ```hcl
 user_data = <<EOF
 #!/bin/bash
@@ -1767,9 +1968,11 @@ yum install -y nginx
 systemctl start nginx
 EOF
 ```
+{% endraw %}
 
 ## Security Groups
 
+{% raw %}
 ```hcl
 resource "aws_security_group" "web_sg" {
 	ingress {
@@ -1780,23 +1983,29 @@ resource "aws_security_group" "web_sg" {
 	}
 }
 ```
+{% endraw %}
 
 ## count y for_each
 
 * count
 
+{% raw %}
 ```hcl
 count = var.environment == "prod" ? 2 : 1
 ```
+{% endraw %}
 
 * for_each
 
+{% raw %}
 ```hcl
 for_each = var.servers
 ```
+{% endraw %}
 
 ## Dynamic blocks
 
+{% raw %}
 ```hcl
 dynamic "ingress" {
 	for_each = var.ingress_rules
@@ -1805,34 +2014,42 @@ dynamic "ingress" {
 	}
 }
 ```
+{% endraw %}
 
 ## Dependencias explícitas
 
+{% raw %}
 ```hcl
 depends_on = [aws_security_group.web_sg]
 ```
+{% endraw %}
 
 ## lifecycle
 
+{% raw %}
 ```hcl
 lifecycle {
 	prevent_destroy = true
 	create_before_destroy = true
 }
 ```
+{% endraw %}
 
 ## Módulos
 
 * Llamada a módulo
 
+{% raw %}
 ```hcl
 module "web" {
 	source = "./modules/web"
 }
 ```
+{% endraw %}
 
 ## Backend remoto (S3)
 
+{% raw %}
 ```hcl
 terraform {
 	backend "s3" {
@@ -1842,39 +2059,50 @@ terraform {
 	}
 }
 ```
+{% endraw %}
 
 ## Debug y troubleshooting
 
 * Logs detallados
 
+{% raw %}
 ```bash
 export TF_LOG=TRACE
 ```
+{% endraw %}
 
 * Log a archivo
 
+{% raw %}
 ```bash
 export TF_LOG_PATH=terraform.log
 ```
+{% endraw %}
 
 ## Limpieza
 
 * Borrar caché local
 
+{% raw %}
 ```bash
 rm -rf .terraform
 ```
+{% endraw %}
 
 ## Utilidades
 
 * Mostrar versión
 
+{% raw %}
 ```bash
 terraform version
 ```
+{% endraw %}
 
 * Ayuda
 
+{% raw %}
 ```bash
 terraform -help
 ```
+{% endraw %}

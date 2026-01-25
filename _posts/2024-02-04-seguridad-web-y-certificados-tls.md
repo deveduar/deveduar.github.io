@@ -56,11 +56,13 @@ category: devops
 - **Add new MX records**
 	- Definir servidor de correo con prioridad 1 y TTL 1h.
 - **Ejemplo:**
-	```
+	{% raw %}
+```
 	MX 1 ASPMX.L.GOOGLE.COM.
 	MX 5 ALT1.ASPMX.L.GOOGLE.COM.
 	MX 10 ALT2.ASPMX.L.GOOGLE.COM.
 	```
+{% endraw %}
 
 ## SSL Certificates (Secure Socket Layer)
 - Permiten cifrar las comunicaciones entre cliente y servidor.
@@ -138,6 +140,7 @@ category: devops
 ## LAMP STACK
 
 ### Instalación
+{% raw %}
 ```
 apt-get install lamp-server^
 apt-get install apache2-utils
@@ -145,6 +148,7 @@ apt-get install phpmyadmin
 ln -s /etc/phpmyadmin/apache.conf /etc/apache2/conf-enabled/phpmyadmin.conf
 service apache2 reload
 ```
+{% endraw %}
 
 - Verificar acceso en navegador: `http://<IP_DEL_SERVIDOR>`
 
@@ -160,29 +164,36 @@ service apache2 reload
 
 ## CRON-JOB
 - Configurar zona horaria y host local:
-	```
+	{% raw %}
+```
 	nano /etc/hosts
 	# Añadir:
 	<IP> dominio.com
 	ctrl + x
 	dpkg-reconfigure tzdata
 	```
+{% endraw %}
 
 ## INSTALACIÓN DEL CLIENTE DE CERTIFICADOS
+{% raw %}
 ```
 apt-get install python3-certbot-apache
 certbot --apache -d yourdomain.com -d www.yourdomain.com
 ```
+{% endraw %}
 - Verificar estado SSL:
 	- [Qualys SSL Labs](https://www.ssllabs.com/ssltest/)
 
 ## REDIRECCIÓN A HTTPS (.htaccess)
+{% raw %}
 ```
 cd /var/www/html
 nano .htaccess
 ```
+{% endraw %}
 
 ### Ejemplo de configuración:
+{% raw %}
 ```
 Options +FollowSymLinks
 RewriteEngine on
@@ -193,21 +204,26 @@ RewriteRule (.*) https://yourdomain.com/$1 [R=301,L]
 RewriteCond %{HTTP_USER_AGENT} libwww-perl.*
 RewriteRule .* - [F,L]
 ```
+{% endraw %}
 
 ### Apache Configuración
+{% raw %}
 ```
 nano /etc/apache2/apache2.conf
 AllowOverride All
 service apache2 restart
 ```
+{% endraw %}
 
 ## AUTO RENOVACIÓN DE CERTIFICADOS
 - Editar cron job:
+{% raw %}
 ```
 crontab -e
 30 3 * * 1 /usr/bin/certbot renew >> /var/log/le-renew.log
 ctrl + x
 ```
+{% endraw %}
 - Verificar logs en `/var/log/le-renew.log`.
 
 
@@ -218,10 +234,12 @@ ctrl + x
 	- Desde 2024, la mayoría de navegadores y servidores han deshabilitado soporte para TLS 1.0/1.1 y pronto TLS 1.2.
 	- TLS 1.3 mejora velocidad de handshake y elimina algoritmos inseguros (RSA key exchange, CBC).
 	- Configuración recomendada:
-		```
+		{% raw %}
+```
 		ssl_protocols TLSv1.3;
 		ssl_prefer_server_ciphers off;
 		```
+{% endraw %}
 - **Perfect Forward Secrecy (PFS)**
 	- Obligatoria en servidores modernos. Usa suites basadas en ECDHE para garantizar que cada sesión tenga su propia clave efímera.
 - **OCSP Stapling y Must-Staple**
@@ -250,16 +268,20 @@ ctrl + x
 - **CAA Records**
 	- Nuevo requisito extendido por las CA en 2025.  
 	  Define qué autoridades pueden emitir certificados para tu dominio.
-		```
+		{% raw %}
+```
 		CAA 0 issue "letsencrypt.org"
 		CAA 0 issuewild "digicert.com"
 		```
+{% endraw %}
 - **HSTS y Preload**
 	- Política obligatoria en Chrome 2025 para sitios que manejan datos personales.  
 	  Se recomienda añadir:
-		```
+		{% raw %}
+```
 		Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
 		```
+{% endraw %}
 
 ## OBSERVABILIDAD Y VALIDACIÓN DE CERTIFICADOS
 - **Certificate Transparency (CT)**
@@ -268,10 +290,12 @@ ctrl + x
 - **SSLLabs y Hardenize**
 	- Usados para validar compatibilidad, fuerza del cifrado y políticas HSTS/OCSP.  
 	  Ejemplo:
-		```
+		{% raw %}
+```
 		https://www.ssllabs.com/ssltest/analyze.html?d=tu-dominio.com
 		https://www.hardenize.com/report/tu-dominio.com
 		```
+{% endraw %}
 - **Automated Renewal Monitoring**
 	- Integración con Prometheus + Grafana para alertar certificados que vencen.  
 	  Métrica: `ssl_certificate_expiry_seconds`.
@@ -282,7 +306,8 @@ ctrl + x
 - **No mezclar HTTP y HTTPS.**  
   Usar redirección 301 global desde el reverse proxy o `server block`.
 - **Configuración moderna en Nginx:**
-	```nginx
+	{% raw %}
+```nginx
 	server {
 		listen 443 ssl http2;
 		server_name ejemplo.com www.ejemplo.com;
@@ -297,6 +322,7 @@ ctrl + x
 		ssl_stapling_verify on;
 	}
 	```
+{% endraw %}
 
 ## ENTORNOS CLOUD Y CONTENEDORES
 - **Kubernetes + Cert-Manager**

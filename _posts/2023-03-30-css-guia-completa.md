@@ -118,12 +118,14 @@ category: uncategorized
 	- Para elementos padre con hijos, los márgenes del primer o último hijo pueden colapsar con el padre.
 	- Elementos vacíos con márgenes: se aplica el margen más grande.
 - Shorthand y propiedades individuales:
+{% raw %}
 ```css
 border: 2px dashed orange; /* width style color */
 margin: 5px 10px 5px 10px; /* top right bottom left */
 margin: 5px 10px;          /* top/bottom, left/right */
 margin: 10px;              /* todas las direcciones */
-````
+```
+{% endraw %}`
 
 ### Box-sizing
 
@@ -162,6 +164,7 @@ margin: 10px;              /* todas las direcciones */
 - [Pseudo-elements - MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements)
 - Ejemplo práctico:
 
+{% raw %}
 ```css
 .main-nav__item a {
 font-weight: bold;
@@ -173,12 +176,15 @@ border-bottom: 5px solid white; /* en hover o active */
 border-bottom-color: white;
 }
 ```
+{% endraw %}
 
 - **Call-to-action link**:
 
+{% raw %}
 ```html
 <li class="main-nav__item main-nav__item--cta">
 ```
+{% endraw %}
 
 - BEM naming para sobrescribir estilos: `border: none;`, background con imagen, etc.
 
@@ -205,6 +211,7 @@ border-bottom-color: white;
 - Elemento sigue en el DOM, no altera el flujo.
 ## Codigo 
 
+{% raw %}
 ```css
 .main-nav__items {
 	margin: 0;
@@ -212,7 +219,9 @@ border-bottom-color: white;
 	list-style: none;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .main-header__brand {
 color: rgb(24, 24, 151);
@@ -221,7 +230,9 @@ font-weight: bold;
 font-size: 22px;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .main-nav__item a::after {
 	content: " (link)";
@@ -231,14 +242,18 @@ font-size: 22px;
 	color: white;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .main-nav__item a:hover,
 .main-nav__item a:active {
 color: white;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 	.main-nav__item--cta a {
 	color: white;
@@ -247,7 +262,9 @@ color: white;
 	border-radius: 8px;
 	}
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .main-nav__item--cta a {
 	color: white;
@@ -263,7 +280,9 @@ color: white;
 	border: none;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .box-1 {
 display: none;
@@ -273,7 +292,9 @@ display: none;
 display: inline-block;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .box-1 {
 visibility: hidden;
@@ -283,6 +304,7 @@ visibility: hidden;
 display: inline-block;
 }
 ```
+{% endraw %}
 
 # 03-Selectores y Características
 
@@ -330,6 +352,7 @@ display: inline-block;
 - `:not()` útil para excluir elementos, usar con precaución.
 - Encadenar selectores y usar clases permite **control preciso** y **resolución de casos extremos**.
 ## Codigo
+{% raw %}
 ```css
     .main-section {
         height: 800px;
@@ -341,7 +364,9 @@ display: inline-block;
         border: 2px solid #fa923f;
     }
 ```
+{% endraw %}
     
+{% raw %}
 ```css
     .highlighted {
         border: 2px solid #fa923f;
@@ -353,13 +378,17 @@ display: inline-block;
         padding: 16px;
     }
     ```
+{% endraw %}
     
+{% raw %}
 ```css
     a.active {
         color: #521751;
     }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .main-section {
     height: 800px;
@@ -372,13 +401,17 @@ display: inline-block;
     height: 200px;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 a:not(.active) {
     color: rgb(109, 128, 0);
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 a.active {
     color: #521751;
@@ -388,6 +421,7 @@ a {
     color: blue;
 }
 ```
+{% endraw %}
 
 # 04-Práctica Básica
 
@@ -401,17 +435,20 @@ a {
 ## Box Shadow
 - Aplicar sombras en elementos: [box-shadow - MDN](https://developer.mozilla.org/es/docs/Web/CSS/box-shadow)
 - Ejemplo:
+{% raw %}
 ```css
 .plan {
 	box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
-````
+```
+{% endraw %}`
 
 ## Flexbox
 
 - Para alinear tarjetas o elementos horizontalmente.
 - Problema común: elementos **no alineados exactamente** a la izquierda y derecha.
 
+{% raw %}
 ```css
 .plan__list {
 	display: flex;
@@ -419,6 +456,7 @@ a {
 	gap: 20px; /* espacio entre cards */
 }
 ```
+{% endraw %}
 
 ## Action Button
 
@@ -426,11 +464,13 @@ a {
 - La herencia puede ser sobrescrita: `font: inherit;` fuerza la herencia de CSS.
 - Quitar outline predeterminado:  
 
+{% raw %}
 ```css
 button {
 	outline: none; /* outline no forma parte del box model */
 }
 ```
+{% endraw %}
 
 ## Características Clave
 
@@ -447,11 +487,13 @@ button {
 - Para cada plan: usar **ID selector** y background distinto.
 - Hover effect en cada plan:
 
+{% raw %}
 ```css
 #plan-1:hover {
 	background-color: #f0f0f0;
 }
 ```
+{% endraw %}
 
 - Posicionar paquetes a la derecha:
 	- `float: right;`  
@@ -459,10 +501,13 @@ button {
 	- Explica: mueve el elemento a izquierda/derecha y saca del flujo del documento.
 - Limpiar floats:
 
+{% raw %}
 ```html
 <div class="clearfix"></div>
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .clearfix::after {
 	content: "";
@@ -470,6 +515,7 @@ button {
 	clear: both;
 }
 ```
+{% endraw %}
 
 - Mejor usar **flexbox** para alineaciones limpias y responsivas.
 
@@ -478,28 +524,33 @@ button {
 - Problema: border a la izquierda no funciona con hover debido a especificidad.
 - Solución rápida: usar `!important` solo si es necesario para librerías externas.
 
+{% raw %}
 ```css
 .plan--highlighted {
 	border-left: 5px solid #ff0000 !important;
 }
 ```
+{% endraw %}
 
 ## Centrado de Plan List
 
 - Para centrar varios planes:
 
+{% raw %}
 ```css
 .plan__list {
 	display: flex;
 	justify-content: center;
 }
 ```
+{% endraw %}
 
 - Problema común: títulos no alineados correctamente debido a **inline-block** y espacio entre elementos.
 - Soluciones:
 	- Eliminar espacios en HTML entre los elementos.
 	- Usar `flexbox` en lugar de `inline-block`.
 
+{% raw %}
 ```css
 .plan {
 	display: flex;
@@ -507,6 +558,7 @@ button {
 	align-items: center;
 }
 ```
+{% endraw %}
 
 ## Resumen de Buenas Prácticas
 
@@ -518,6 +570,7 @@ button {
 - Asegurar alineación y centrado con `display: flex` y `justify-content/align-items`.
 ## Codigo
 
+{% raw %}
 ```css
 .plan {
 background-color: rgb(199, 238, 250);
@@ -529,14 +582,18 @@ width: 30%;
 vertical-align: middle;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .section-title {
 color: #3140ca;
 text-align: center;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .plan--highlighted {
 background-color: rgb(82, 82, 167);
@@ -544,7 +601,9 @@ color: white;
 box-shadow: 2px 4px 2px 2px rgba(82, 82, 167, 0.5);
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .plan__annotation {
 background-color: rgb(255, 255, 255);
@@ -554,7 +613,9 @@ box-shadow: 2px 2px 2px 2px rgba(76, 76, 95, 0.5);
 border-radius: 8px;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .plan__features {
 list-style: none;
@@ -562,13 +623,17 @@ padding: 0;
 margin: 0;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .plan__features li {
 padding: 8px 0;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .plan__title {
 color: rgb(82, 82, 167);
@@ -586,14 +651,18 @@ color: white;
 color: rgb(14, 17, 19);
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .button {
 background:rgb(82, 82, 167);
 color: white;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .button {
 background:rgb(48, 48, 95);
@@ -613,7 +682,9 @@ color: rgb(14, 17, 19);
 outline: none;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 #key-features {
 background: #3140ca;
@@ -626,7 +697,9 @@ color: white;
 margin: 32px;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .key-feature__list {
 list-style: none;
@@ -648,7 +721,9 @@ color: white;
 font-size: 20px;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .key-feature__image {
 background: rgb(88, 125, 226);
@@ -659,7 +734,9 @@ border-radius: 50%;
 margin: 0 auto;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .main-footer {
 background: black;
@@ -689,12 +766,16 @@ text-decoration: none;
 color: #ccc;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```html
 <link rel="stylesheet" href="shared.css">
 <link rel="stylesheet" href="main.css">
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 main {
 padding-top: 32px;
@@ -715,7 +796,9 @@ padding: 32px;
 
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 #plus {
 background-color: rgba(199, 239, 255, 0.95);
@@ -737,7 +820,9 @@ color: white;
 color: rgb(110, 109, 109);
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .package:hover,
 .package:active {
@@ -745,13 +830,17 @@ box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.5) ;
 border-color: rgb(92, 92, 230);
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .clearfix {
 	clear: both;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 #free {
 background: rgba(152, 231, 245, 0.95);
@@ -761,14 +850,18 @@ border-left: solid 4px rgb(84, 157, 199);
 text-align: right;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 #free:hover,
 #free:active {
 	border-left-color:  rgb(92, 92, 230);
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .package {
 	width: 80%;
@@ -796,8 +889,10 @@ text-align: right;
 	
 }
 ```
+{% endraw %}
 
 
+{% raw %}
 ```css
 	.package:hover,
 	.package:active {
@@ -805,15 +900,19 @@ text-align: right;
 		border-color: rgb(92, 92, 230) !important;
 	}
 	```
+{% endraw %}
 
+{% raw %}
 ```css
 .plan__list {
 width: 80%;
 margin: auto;
 }
 ```
+{% endraw %}
 
 
+{% raw %}
 ```css
 .plan__list {
 width: 80%;
@@ -821,6 +920,7 @@ margin: auto;
 text-align: center;
 }
 ```
+{% endraw %}
 
 # 05-Posicionar Elementos
 
@@ -854,10 +954,13 @@ text-align: center;
 - Valores solo aplican si `position != static`.
 - Elemento fuera del flujo: los demás no lo consideran.
 - Ejemplo: badge en paquete Plus:
+{% raw %}
 ```html
 <h2 class="package__badge">RECOMMENDED</h2>
-````
+```
+{% endraw %}`
 
+{% raw %}
 ```css
 .package__badge {
 	position: absolute; 
@@ -865,6 +968,7 @@ text-align: center;
 	left: 0;
 }
 ```
+{% endraw %}
 
 - `position: fixed;` usa el viewport como referencia.
 - Ajustes con `box-sizing: border-box;` para borders y padding.
@@ -873,10 +977,13 @@ text-align: center;
 
 - Añadir al proyecto:
 
+{% raw %}
 ```html
 <header class="main-header"></header>
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .main-header {
 	position: fixed;
@@ -885,10 +992,12 @@ text-align: center;
 	z-index: 5;
 }
 ```
+{% endraw %}
 
 - Margin aplicado al `html` no afecta al viewport, debe aplicarse al elemento padre.
 - Background image detrás de contenido:
 
+{% raw %}
 ```css
 .background {
 	position: fixed;
@@ -897,6 +1006,7 @@ text-align: center;
 	z-index: -1;
 }
 ```
+{% endraw %}
 
 ## Z-Index
 
@@ -912,6 +1022,7 @@ text-align: center;
 - Elemento mantiene su posición en el flujo.
 - Se mueve relativo a su posición inicial:
 
+{% raw %}
 ```css
 .child {
 	position: relative;
@@ -919,6 +1030,7 @@ text-align: center;
 	left: 50px;
 }
 ```
+{% endraw %}
 
 - `overflow: hidden;` en el padre evita que el hijo se salga visualmente.
 
@@ -927,12 +1039,14 @@ text-align: center;
 - Comportamiento híbrido entre `relative` y `fixed`.
 - Se mueve con el flujo hasta un límite definido:
 
+{% raw %}
 ```css
 .header-sticky {
 	position: sticky;
 	top: 0;
 }
 ```
+{% endraw %}
 
 - Soporte parcial en algunos navegadores.
 
@@ -943,6 +1057,7 @@ text-align: center;
 - Elementos hijos respetan el contexto del padre.
 - Ejemplo: imagen detrás de nav:
 
+{% raw %}
 ```css
 .background-image {
 	position: fixed;
@@ -952,6 +1067,7 @@ text-align: center;
 	z-index: 5;
 }
 ```
+{% endraw %}
 
 ## Resumen
 
@@ -969,6 +1085,7 @@ text-align: center;
 	- Un elemento con z-index bajo dentro de un contexto alto puede quedar encima de otro contexto vecino.
 ## Codigo
 
+{% raw %}
 ```css
     html {
         background: #b3b3b3;
@@ -1000,14 +1117,18 @@ text-align: center;
         margin: 10px;
     }
     ```
+{% endraw %}
 
+{% raw %}
 ```css
 .parent .child-1 {
   position: fixed;
   top: 100px;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .parent .child-1 {
   position: fixed;
@@ -1017,7 +1138,9 @@ text-align: center;
   margin: 0;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .parent .child-1 {
   position: fixed;
@@ -1029,7 +1152,9 @@ text-align: center;
   width: 100%;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .main-header {
     width: 100%;
@@ -1042,13 +1167,17 @@ text-align: center;
     
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 html {
 margin: 30px;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .main-header {
     width: 100%;
@@ -1063,7 +1192,9 @@ margin: 30px;
     
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .background {
     background: url(../images/plans-background.jpg);
@@ -1071,7 +1202,9 @@ margin: 30px;
     height: 100%;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .background {
     background: url(../images/plans-background.jpg);
@@ -1079,7 +1212,9 @@ margin: 30px;
     height: 500px;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .background {
     background: url(../images/plans-background.jpg);
@@ -1088,7 +1223,9 @@ margin: 30px;
     position: fixed;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .background {
     background: url(../images/plans-background.jpg);
@@ -1098,7 +1235,9 @@ margin: 30px;
     z-index: -1;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .main-header {
     width: 100%;
@@ -1113,7 +1252,9 @@ margin: 30px;
     z-index: 0; 
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .package__badge {
     position: fixed;
@@ -1122,7 +1263,9 @@ margin: 30px;
 
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .package__badge {
     position: fixed;
@@ -1132,7 +1275,9 @@ margin: 30px;
 
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
     .package {
         width: 80%;
@@ -1143,7 +1288,9 @@ margin: 30px;
         
     }
     ```
+{% endraw %}
 
+{% raw %}
 ```css
 .package__badge {
     position: absolute;
@@ -1156,7 +1303,9 @@ margin: 30px;
     padding: 8px;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .main-header {
     width: 100%;
@@ -1171,7 +1320,9 @@ margin: 30px;
     z-index: 1; 
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .parent {
     background: white;
@@ -1183,7 +1334,9 @@ margin: 30px;
     top: 100px;
   }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .parent .country {
     background: #fa923f;
@@ -1195,8 +1348,10 @@ margin: 30px;
     top: 0;
 }
 ```
+{% endraw %}
 
 
+{% raw %}
 ```css
 .navigation, .headline, .contact-us {
     padding: 20px;
@@ -1205,6 +1360,7 @@ margin: 30px;
     position: fixed;
 }
 ```
+{% endraw %}
 
 # 06-Background Images & Images
 
@@ -1235,16 +1391,21 @@ margin: 30px;
 - `background-clip`: determina área visible del fondo
 	- `content-box`, `padding-box`, `border-box`
 - Shorthand:
+{% raw %}
 ```css
 background: url(./freedom.jpg) left 10% bottom 20%/cover no-repeat border-box padding-box;
-````
+```
+{% endraw %}`
 
+{% raw %}
 ```
 - El primer valor después de la posición es **origin**, el segundo **clip**.
 ```
+{% endraw %}
 
 ## Logos e imágenes en página
 
+{% raw %}
 ```
 - `.main-header__brand` es contenedor, no afecta directamente a la imagen.
 - Por defecto, imágenes usan su width y height originales.
@@ -1254,16 +1415,20 @@ background: url(./freedom.jpg) left 10% bottom 20%/cover no-repeat border-box pa
 	- Ajustar texto al lado de la imagen: `vertical-align: middle;`.
 	- Sombra: `box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.3);`.
 ```
+{% endraw %}
 
 ## Gradients
 
 ### Linear Gradients
 
+{% raw %}
 ```
 - Tratados como imágenes de fondo.
 - Sintaxis básica:
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 background-image: linear-gradient(red, blue);
 background-image: linear-gradient(to bottom, red, blue);
@@ -1271,13 +1436,17 @@ background-image: linear-gradient(30deg, red, blue);
 background-image: linear-gradient(180deg, red, transparent);
 background-image: linear-gradient(180deg, red 70%, blue 80%, rgba(0,0,0,0.5));
 ```
+{% endraw %}
 
 ### Radial Gradients
 
+{% raw %}
 ```
 - Sintaxis básica:
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 background-image: radial-gradient(red, blue);
 background-image: radial-gradient(circle, red, blue);
@@ -1285,34 +1454,45 @@ background-image: radial-gradient(circle at top left, red, blue);
 background-image: radial-gradient(ellipse 80px 30px at 20% 50%, red, blue);
 background-image: radial-gradient(ellipse farthest-side at 20% 50%, red, blue);
 ```
+{% endraw %}
 
+{% raw %}
 ```
 - Parametros: `shape`, `size`, `position`, `color stops`.
 ```
+{% endraw %}
 
 ## Multiples Backgrounds
 
+{% raw %}
 ```
 - Apilar imágenes de fondo usando comas:
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 background: linear-gradient(to bottom, red, blue), url(./freedom.jpg) left 10% bottom 20%/cover no-repeat, red;
 ```
+{% endraw %}
 
+{% raw %}
 ```
 - Solo un solid color puede estar debajo.
 - Usar transparencia para combinar capas.
 ```
+{% endraw %}
 
 ## Filters
 
+{% raw %}
 ```
 - [Filter Syntax](https://developer.mozilla.org/en-US/docs/Web/CSS/filter#syntax)
 - Filtros aplicables a `background-image` o `img`.
 - Limitaciones en Internet Explorer.
 - Compatible con SVG.
 ```
+{% endraw %}
 
 ## Resumen
 
@@ -1333,21 +1513,28 @@ background: linear-gradient(to bottom, red, blue), url(./freedom.jpg) left 10% b
 	- Permiten efectos visuales sin alterar la imagen original
 
 ## Codigos
+{% raw %}
 ```css
 background-image: url(./freedom.jpg);
 background-color: red;
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 background-size: 150px;
 background-repeat: no-repeat;
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 background-repeat: repeat-x;
 background-repeat: repeat-y;
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 #product-overview {
 
@@ -1364,13 +1551,17 @@ background-repeat: repeat-y;
     position: relative;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 		background-attachment: fixed;
     background-attachment: scroll;
     background-attachment: local;
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 #product-overview {
 
@@ -1394,7 +1585,9 @@ background-repeat: repeat-y;
     border: 5px dashed red;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .main-header__brand {
     color: rgb(6, 26, 27);
@@ -1405,13 +1598,17 @@ background-repeat: repeat-y;
 
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .main-header__brand img {
     height: 22px;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .testimonial__image-container {
     width: 80%;
@@ -1422,7 +1619,9 @@ background-repeat: repeat-y;
     width: 100%;
   }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .testimonial__info {
     text-align: right;
@@ -1432,7 +1631,9 @@ background-repeat: repeat-y;
     width: 20%;
   }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .testimonial__image-container {
     width: 70%;
@@ -1440,7 +1641,9 @@ background-repeat: repeat-y;
 
   }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .testimonial__image-container {
     width: 70%;
@@ -1449,7 +1652,9 @@ background-repeat: repeat-y;
 
   }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .testimonial__image-container {
     width: 65%;
@@ -1469,7 +1674,9 @@ background-repeat: repeat-y;
     width: 30%;
   }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .testimonial__image-container {
     width: 65%;
@@ -1478,18 +1685,24 @@ background-repeat: repeat-y;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
   }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .testimonial__image {
     width: 100%;
     vertical-align: top;
   }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 background: linear-gradient(to top, rgba(89,68,18,0.6) 10%, transparent), url(./images/freedom.jpg) left 10% bottom 20%/cover no-repeat border-box, red;
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .background {
     background: url(../images/plans-background.jpg) center/cover;
@@ -1500,7 +1713,9 @@ background: linear-gradient(to top, rgba(89,68,18,0.6) 10%, transparent), url(./
     z-index: -1;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .key-feature__image {
     background: rgb(88, 125, 226);
@@ -1512,6 +1727,7 @@ background: linear-gradient(to top, rgba(89,68,18,0.6) 10%, transparent), url(./
     padding: 20px;
 }
 ```
+{% endraw %}
 
 # 07-Dimensions, Sizes & Units
 - **Hiding Scrollbars on Windows**
@@ -1521,9 +1737,11 @@ background: linear-gradient(to top, rgba(89,68,18,0.6) 10%, transparent), url(./
 		- Ocultar scroll horizontal: `overflow-x: hidden;` en `body`.
 		- Ocultar scroll vertical: `overflow-y: hidden;`.
 		- Alternativa: usar pseudo-elemento `::-webkit-scrollbar`:
-			```
+			{% raw %}
+```
 			body::-webkit-scrollbar { width: 0; }
 			```
+{% endraw %}
 	- Referencia: [Hiding vertical scrollbars - blog MSDN](https://web.archive.org/web/20180505112131/https://blogs.msdn.microsoft.com/kurlak/2013/11/03/hiding-vertical-scrollbars-with-pure-css-in-chrome-ie-6-firefox-opera-and-safari/)
 - **Font Size Properties**
 	- Referencia: [MDN Font Size](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size)
@@ -1588,7 +1806,8 @@ background: linear-gradient(to top, rgba(89,68,18,0.6) 10%, transparent), url(./
 	4. Para tipografía, preferir `rem` para consistencia y accesibilidad.
 	5. Combinar unidades relativas y absolutas según diseño y compatibilidad.
 - **Ejemplo práctico**
-	```css
+	{% raw %}
+```css
 	html { font-size: 16px; height: 100%; }
 	body { font-size: 1rem; height: 100%; }
 	.backdrop {
@@ -1602,8 +1821,10 @@ background: linear-gradient(to top, rgba(89,68,18,0.6) 10%, transparent), url(./
 	h1 { font-size: 2rem; }
 	p { font-size: 1em; margin-bottom: 1.5rem; }
 	```
+{% endraw %}
 ### Codigo
 
+{% raw %}
 ```css
 .main-header {
 width: 100%;
@@ -1618,7 +1839,9 @@ left: 0;
 z-index: 1; 
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 #product-overview {
 
@@ -1634,7 +1857,9 @@ position: relative;
 /* border: 5px dashed red; */
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 #product-overview h1 {
 color: white;
@@ -1646,7 +1871,9 @@ left: 3%;
 width: 100%;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .testimonial__image-container {
 width: 100%;
@@ -1655,7 +1882,9 @@ vertical-align: middle;
 box-shadow: 3px 3px 5px 3px rgba(0, 0, 0, 0.3);
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .testimonial {
 font-size: 20px;
@@ -1663,7 +1892,9 @@ margin: 48px 0;
 padding: 0 10px;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .testimonial__image-container {
 width: 50%;
@@ -1673,7 +1904,9 @@ box-shadow: 3px 3px 5px 3px rgba(0, 0, 0, 0.3);
 position: relative;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .backdrop {
 position: relative;
@@ -1683,7 +1916,9 @@ height: 100%;
 background: rgba(0, 0, 0, 0.5);  
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 body {
 font-family: 'Montserrat', sans-serif;
@@ -1692,7 +1927,9 @@ height: 100%;
 
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 body {
 font-family: 'Montserrat', sans-serif;
@@ -1709,7 +1946,9 @@ height: 100%;
 background: rgba(0, 0, 0, 0.5);  
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .backdrop {
 position: fixed;
@@ -1721,14 +1960,18 @@ height: 100%;
 background: rgba(0, 0, 0, 0.5);  
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 html {
 /* height: 100%; */
 font-size: 75%;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .testimonial__image-container {
 width: 65%;
@@ -1738,7 +1981,9 @@ vertical-align: middle;
 box-shadow: 3px 3px 5px 3px rgba(0, 0, 0, 0.3);
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .testimonial {
 font-size: 1.2em;
@@ -1746,7 +1991,9 @@ margin: 48px 0;
 padding: 0 10px;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .testimonial__name {
 margin: 3px;
@@ -1754,7 +2001,9 @@ color: #ff5454;
 font-size: 2em;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .testimonial__subtitle {
 margin: 0;
@@ -1762,7 +2011,9 @@ font-size: 1.1em;
 color: #ccc;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .testimonial__subtitle {
 margin: 0;
@@ -1770,7 +2021,9 @@ font-size: 1.1rem;
 color: #ccc;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .testimonial__name {
 margin: 3px;
@@ -1778,7 +2031,9 @@ color: #ff5454;
 font-size: 2rem;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .testimonial {
 font-size: 1.2rem;
@@ -1786,7 +2041,9 @@ margin: 48px 0;
 padding: 0 10px;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .testimonial {
 font-size: 1.2rem;
@@ -1795,19 +2052,25 @@ padding: 0 10px;
 }
 
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .testimonial:first-of-type {
 margin-top: 96px;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .testimonial:first-of-type {
 margin-top: 6rem;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .testimonial__info {
 text-align: right;
@@ -1817,7 +2080,9 @@ vertical-align: middle;
 width: 30%;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .testimonial__name {
 margin: 0.2rem;
@@ -1825,7 +2090,9 @@ color: #ff5454;
 font-size: 2rem;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .backdrop {
 position: fixed;
@@ -1838,7 +2105,9 @@ height: 100vh;
 background: rgba(0, 0, 0, 0.5);  
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .backdrop {
 position: fixed;
@@ -1852,7 +2121,9 @@ background: rgba(0, 0, 0, 0.5);
 } 
 
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 #product-overview {
 background: linear-gradient(to top, rgba(89,68,18,0.6) 10%, transparent), url(./images/freedom.jpg) left 10% bottom 70%/cover no-repeat border-box, red;
@@ -1862,7 +2133,9 @@ margin-top: 2.75rem;
 position: relative;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .plan__list {
 width: 80%;
@@ -1870,7 +2143,9 @@ margin: auto;
 text-align: center;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .background {
 background: url(../images/plans-background.jpg) center/cover;
@@ -1881,6 +2156,7 @@ position: fixed;
 z-index: -1;
 }
 ```
+{% endraw %}
 
 # 08-Trabajando con CSS y JS
 
@@ -1900,17 +2176,22 @@ z-index: -1;
 		- `element.style` → permite modificar **inline styles**.  
 		- Inline styles tienen **prioridad sobre CSS externo**.
 		- En JS, los nombres de propiedades CSS se escriben en **camelCase**, por ejemplo:
-			```js
+			{% raw %}
+```js
 			element.style.backgroundColor = 'red';
 			element.style.fontSize = '16px';
 			```
+{% endraw %}
 		- Alternativa con notación de strings para propiedades multi-word:
-			```js
+			{% raw %}
+```js
 			console.dir(element.style['background-image']);
 			```
+{% endraw %}
 - **Añadir Event Listeners**
 	- Seleccionar botones dentro de un contenedor usando combinadores:
-		```js
+		{% raw %}
+```js
 		const buttons = document.querySelectorAll('.plan button');
 		buttons.forEach(btn => {
 		    btn.addEventListener('click', () => {
@@ -1918,6 +2199,7 @@ z-index: -1;
 		    });
 		});
 		```
+{% endraw %}
 	- Se recomiendan **funciones anónimas** si no se reutilizan.
 	- Manejar cierre de modal y backdrop con el mismo patrón:
 		- Añadir clase `.open` para mostrar.
@@ -1926,11 +2208,13 @@ z-index: -1;
 	- `Cannot read properties of null (reading 'addEventListener')`
 		- Ocurre si el selector no encuentra elementos en la página actual.
 		- Solución: condicional:
-			```js
+			{% raw %}
+```js
 			if (selectPlanButtons) {
 			    // añadir event listeners
 			}
 			```
+{% endraw %}
 	- Clase `.open` sobreescrita por `.modal` debido al **CSS specificity**.
 		- Soluciones:
 			- Aumentar prioridad con `!important` (no recomendado salvo casos específicos).
@@ -1939,27 +2223,33 @@ z-index: -1;
 	- Crear barra lateral responsive:
 		- Añadir media queries en CSS para tamaños móviles.
 		- Ajustar ancho del nav con `calc()`, por ejemplo:
-			```css
+			{% raw %}
+```css
 			width: calc(100% - 74px);
 			width: calc(100% - 122px);
 			```
+{% endraw %}
 		- Vertical align para centrar logo: `vertical-align: middle;`.
 	- Abrir/cerrar con **hamburger menu**:
 		- Alternativa: cambiar estilos directamente o añadir/quitar clases CSS.
 		- Acceso al modal a través de `className` o `classList`:
-			```js
+			{% raw %}
+```js
 			modal.classList.add('open');
 			modal.classList.remove('open');
 			```
+{% endraw %}
 		- No es necesario poner `.` al usar `classList`.
 - **Buenas prácticas JS/CSS**
 	- Revisar que el elemento exista antes de ejecutar código JS:
-		```js
+		{% raw %}
+```js
 		const modal = document.querySelector('.modal');
 		if (modal) {
 		    modal.addEventListener('click', closeModal);
 		}
 		```
+{% endraw %}
 	- Evitar errores al correr código en páginas donde no existen ciertos elementos (por ejemplo `modal` o `selectPlanButtons`).
 	- Evitar conflictos de CSS asegurando el **orden de carga**: CSS global primero, CSS específico de modales después.
 - **Resumen**
@@ -1975,6 +2265,7 @@ z-index: -1;
 - **Añadir o borrar css clases**
 	- usar className o classList (mas facil y flexible)
 ### Codigo
+{% raw %}
 ```html
 <div class="modal">
         <h1 class="modal__title">Do you want to continue?</h1>
@@ -1984,35 +2275,47 @@ z-index: -1;
         </div>
     </div>
 ```
+{% endraw %}
 
+{% raw %}
 ```jsx
 var backdrop = document.querySelector('.backdrop');
 console.log(backdrop);
 ```
+{% endraw %}
 
+{% raw %}
 ```jsx
 var backdrop = document.querySelector('.backdrop');
 console.dir(backdrop);
 ```
+{% endraw %}
 
+{% raw %}
 ```jsx
 var backdrop = document.querySelectorAll('.backdrop');
 console.dir(backdrop);
 ```
+{% endraw %}
 
+{% raw %}
 ```jsx
 var backdrop = document.querySelector('.backdrop');
 // console.dir(backdrop);
 backdrop.style.display = 'block';
 ```
+{% endraw %}
 
+{% raw %}
 ```jsx
 var backdrop = document.querySelector('.backdrop');
 var selectPlanButtons = document.querySelectorAll('.plan button');
 
 console.dir(selectPlanButtons);
 ```
+{% endraw %}
 
+{% raw %}
 ```jsx
 var backdrop = document.querySelector('.backdrop');
 var modal = document.querySelector('.modal');
@@ -2025,7 +2328,9 @@ for (var i = 0; i < selectPlanButtons.length; i++) {
     });
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```jsx
 var backdrop = document.querySelector('.backdrop');
 var modal = document.querySelector('.modal');
@@ -2047,7 +2352,9 @@ function closeModal() {
     modal.style.display = 'none';
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .main-nav__item a,
 .mobile-nav__item a {
@@ -2075,7 +2382,9 @@ function closeModal() {
     border: none;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .main-nav {
     display: inline-block;
@@ -2084,7 +2393,9 @@ function closeModal() {
     vertical-align: middle;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .main-header__brand {
     color: rgb(6, 26, 27);
@@ -2097,12 +2408,16 @@ function closeModal() {
     vertical-align: middle;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```jsx
 var toggleButton = document.querySelector('.toggle-button');
 var mobileNav = document.querySelector('mobile-nav');
 ```
+{% endraw %}
 
+{% raw %}
 ```jsx
 var backdrop = document.querySelector('.backdrop');
 var modal = document.querySelector('.modal');
@@ -2137,21 +2452,29 @@ toggleButton.addEventListener('click', function() {
 
 });
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .open {
     display: block;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```jsx
 modal.className = 'open'; //sobreescribe la lista completa de clases
 ```
+{% endraw %}
 
+{% raw %}
 ```jsx
 modal.classList.add('open')
 ```
+{% endraw %}
 
+{% raw %}
 ```jsx
 for (var i = 0; i < selectPlanButtons.length; i++) {
     selectPlanButtons[i].addEventListener('click', function() {
@@ -2163,13 +2486,17 @@ for (var i = 0; i < selectPlanButtons.length; i++) {
     });
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .open {
     display: block !important;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```jsx
 function closeModal() {
     // backdrop.style.display = 'none';
@@ -2179,7 +2506,9 @@ function closeModal() {
 
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```jsx
 backdrop.addEventListener('click', function() {
     // mobileNav.style.display = 'none';
@@ -2187,7 +2516,9 @@ backdrop.addEventListener('click', function() {
     closeModal(); 
 });
 ```
+{% endraw %}
 
+{% raw %}
 ```jsx
 toggleButton.addEventListener('click', function() {
     // mobileNav.style.display = 'block';
@@ -2197,17 +2528,23 @@ toggleButton.addEventListener('click', function() {
 
 });
 ```
+{% endraw %}
 
+{% raw %}
 ```jsx
 modalNoButton.addEventListener('click', closeModal);
 ```
+{% endraw %}
 
+{% raw %}
 ```jsx
 if(modalNoButton){
     modalNoButton.addEventListener('click', closeModal);
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```jsx
 function closeModal() {
     // backdrop.style.display = 'none';
@@ -2219,6 +2556,7 @@ function closeModal() {
     backdrop.classList.remove('open');
 }
 ```
+{% endraw %}
 
 # 09-Hacer la Web Responsiva
 
@@ -2244,9 +2582,11 @@ function closeModal() {
 		- Permite cambiar diseño dependiendo del tamaño.
 		- Se aplican reglas CSS según width, height u otras características.
 - **Viewport meta tag**
-	```html
+	{% raw %}
+```html
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	```
+{% endraw %}
 	- `width=device-width`: ajusta al ancho del dispositivo.
 	- `initial-scale=1.0`: zoom inicial.
 	- `user-scalable=yes` (por defecto, se puede omitir).
@@ -2260,17 +2600,21 @@ function closeModal() {
 		- Comenzar con estilos para <640px.
 		- Desktop y tablet se ajustan con media queries.
 	- Ejemplo:
-	```css
+	{% raw %}
+```css
 	@media (max-width: 40rem) { 
 	    /* estilos desktop first */
 	}
 	```
+{% endraw %}
 	- Ajustes landscape:
-	```css
+	{% raw %}
+```css
 	@media (min-width: 40rem) and (min-height: 60rem) { 
 	    /* landscape desktop */
 	}
 	```
+{% endraw %}
 	- `orientation: portrait/landscape` puede ser útil, pero no siempre confiable en desktop.
 - **Arreglos en el diseño responsivo**
 	- **Background images**
@@ -2317,6 +2661,7 @@ function closeModal() {
 
 ### codigo
 
+{% raw %}
 ```css
 @media (min-width: 40rem) {
     #product-overview h1 {
@@ -2324,7 +2669,9 @@ function closeModal() {
     }
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 @media (min-width: 40rem) {
     #product-overview {
@@ -2337,7 +2684,9 @@ function closeModal() {
     }
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 @media (min-width: 60rem) {
     #product-overview {
@@ -2350,16 +2699,22 @@ function closeModal() {
     }
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 background: linear-gradient(to top, rgba(89,68,18,0.6) 10%, transparent), url(./images/freedom.jpg) left 10% bottom 70%/cover no-repeat border-box, red;
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 background: linear-gradient(to top, rgba(89,68,18,0.6) 10%, transparent), url(./images/freedom.jpg) center/cover no-repeat border-box, red;
 ```
+{% endraw %}
 
 
+{% raw %}
 ```css
 @media (min-width: 40rem) {
     .plan {
@@ -2367,7 +2722,9 @@ background: linear-gradient(to top, rgba(89,68,18,0.6) 10%, transparent), url(./
     }
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 @media (min-width: 40rem) {
 
@@ -2386,7 +2743,9 @@ background: linear-gradient(to top, rgba(89,68,18,0.6) 10%, transparent), url(./
     }
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 @media (min-width: 40rem) {
 
@@ -2407,7 +2766,9 @@ background: linear-gradient(to top, rgba(89,68,18,0.6) 10%, transparent), url(./
     }
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 @media (min-width: 40rem) {
     .key-feature {
@@ -2416,7 +2777,9 @@ background: linear-gradient(to top, rgba(89,68,18,0.6) 10%, transparent), url(./
     }
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 @media (min-width: 40rem) {
     .key-feature {
@@ -2426,13 +2789,17 @@ background: linear-gradient(to top, rgba(89,68,18,0.6) 10%, transparent), url(./
     }
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .key-feature {
 /* width: 100%; */
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 @media (min-width: 40rem) {
     .key-feature {
@@ -2444,7 +2811,9 @@ background: linear-gradient(to top, rgba(89,68,18,0.6) 10%, transparent), url(./
     }
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 @media (min-width: 40rem) and (orientation: portrait) {
     #product-overview {
@@ -2457,11 +2826,15 @@ background: linear-gradient(to top, rgba(89,68,18,0.6) 10%, transparent), url(./
     }
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 @media (min-width: 40rem) and (orientation: landscape) {
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 @media (min-width: 40rem) and (orientation: landscape) {
 
@@ -2482,11 +2855,15 @@ background: linear-gradient(to top, rgba(89,68,18,0.6) 10%, transparent), url(./
     }
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 @media (min-width: 40rem), (orientation: landscape) {
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 @media (min-width: 40rem) and (min-height: 60rem) {
     #product-overview {
@@ -2499,9 +2876,11 @@ background: linear-gradient(to top, rgba(89,68,18,0.6) 10%, transparent), url(./
     }
 }
 ```
+{% endraw %}
 
 Arreglar navbar
 
+{% raw %}
 ```css
 .main-header__brand {
     color: rgb(6, 26, 27);
@@ -2514,7 +2893,9 @@ Arreglar navbar
     vertical-align: middle;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .main-header__brand img {
     /* height: 100%; */
@@ -2522,13 +2903,17 @@ Arreglar navbar
     /* width: 100%; */
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .main-nav {
     display: none;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 @media (min-width: 40rem) {
     .toggle-button {
@@ -2544,16 +2929,20 @@ Arreglar navbar
 
 }
 ```
+{% endraw %}
 
 arreglar footer
 
+{% raw %}
 ```css
 .main-footer__link {
     display: block;
     margin: 1rem 0;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 @media (min-width: 40rem) {
     .main-footer__link {
@@ -2562,9 +2951,11 @@ arreglar footer
     }
 }
 ```
+{% endraw %}
 
 Mejorando la pagina de customers
 
+{% raw %}
 ```css
 .testimonial__image-container {
     width: 65%;
@@ -2574,7 +2965,9 @@ Mejorando la pagina de customers
     box-shadow: 3px 3px 5px 3px rgba(0, 0, 0, 0.3);
   }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .testimonial__info {
     text-align: right;
@@ -2584,7 +2977,9 @@ Mejorando la pagina de customers
     width: 30%; */
   }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .testimonial {
     font-size: 1.2rem;
@@ -2592,14 +2987,18 @@ Mejorando la pagina de customers
     padding: 0 10px;
   }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 /* .testimonial__list {
     width: 80%;
     margin: auto;
   } */
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 @media (min-width: 40rem) {
     .testimonial {
@@ -2611,7 +3010,9 @@ Mejorando la pagina de customers
     }
   }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .testimonial__image-container {
     width: 100%;
@@ -2621,7 +3022,9 @@ Mejorando la pagina de customers
     box-shadow: 3px 3px 5px 3px rgba(0, 0, 0, 0.3);
   }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 @media (min-width: 40rem) {
     .testimonial {
@@ -2639,8 +3042,10 @@ Mejorando la pagina de customers
     }
   }
 ```
+{% endraw %}
 
 
+{% raw %}
 ```css
 @media (min-width: 40rem) {
     .testimonial {
@@ -2659,7 +3064,9 @@ Mejorando la pagina de customers
     }
   }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 @media (min-width: 40rem) {
     .testimonial {
@@ -2667,7 +3074,9 @@ Mejorando la pagina de customers
       max-width: 1500px;
     }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 @media (min-width: 40rem) {
     .testimonial {
@@ -2675,7 +3084,9 @@ Mejorando la pagina de customers
       max-width: 1500px;
     }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 @media (min-width: 40rem) {
     main {
@@ -2684,7 +3095,9 @@ Mejorando la pagina de customers
     } 
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 @media (min-width: 1500px) {
     .package {
@@ -2702,12 +3115,16 @@ Mejorando la pagina de customers
 }
 }
 ```
+{% endraw %}
 
 
+{% raw %}
 ```
 /* border-left: none; */
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .package {
     width: 80%;
@@ -2718,11 +3135,15 @@ Mejorando la pagina de customers
     
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```
 @media (min-width: 40rem) and (min-height: 40rem) {
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .main-header__brand img {
     /* height: 100%; */
@@ -2730,7 +3151,9 @@ Mejorando la pagina de customers
     /* width: 100%; */
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .main-header__brand {
     color: rgb(6, 26, 27);
@@ -2742,7 +3165,9 @@ Mejorando la pagina de customers
     vertical-align: middle;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .main-header__brand {
     color: rgb(6, 26, 27);
@@ -2754,7 +3179,9 @@ Mejorando la pagina de customers
     vertical-align: middle;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .main-header__brand img {
     /* height: 100%; */
@@ -2762,7 +3189,9 @@ Mejorando la pagina de customers
     /* width: 100%; */
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 #product-overview {
     background: linear-gradient(to top, rgba(89,68,18,0.6) 10%, transparent), url(./images/freedom.jpg) center/cover no-repeat border-box, red;
@@ -2772,7 +3201,9 @@ Mejorando la pagina de customers
     position: relative;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 @media (min-width: 40rem) {
     .toggle-button {
@@ -2788,13 +3219,17 @@ Mejorando la pagina de customers
 
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 main {
     min-height: calc(100vh - 3.5rem - 8rem);
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 #product-overview {
     background: linear-gradient(to top, rgba(89,68,18,0.6) 10%, transparent), url(./images/freedom.jpg) center/cover no-repeat border-box, red;
@@ -2803,7 +3238,9 @@ main {
     position: relative;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 @media (min-width: 40rem) {
     main {
@@ -2812,19 +3249,25 @@ main {
     } 
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .testimonial:first-of-type {
     margin-top: 6rem;
   }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 main {
     padding-top: 2.5rem;
   }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 @media (min-width: 40rem) {
     main {
@@ -2835,7 +3278,9 @@ main {
     } 
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 @media (min-width: 40rem) {
     .testimonial {
@@ -2843,6 +3288,7 @@ main {
       max-width: 1500px;
     }
 ```
+{% endraw %}
 
 
 
@@ -2894,9 +3340,11 @@ main {
 	- No afecta box size ni box shadow.
 - Inputs:
 	- Selección general:  
-	  ```css
+	  {% raw %}
+```css
 	  .signup-form input:not([type="checkbox"])
 	  ```
+{% endraw %}
 	- Para evitar conflicto con pseudo-selectors `:focus` y `:invalid`.
 
 ---
@@ -2912,18 +3360,22 @@ main {
 - Soluciones:
 	- Usar `!important` en reglas temporales.
 	- Añadir clases dinámicamente vía JS:
-	  ```js
+	  {% raw %}
+```js
 	  .signup-form.needs-validation
 	  ```
+{% endraw %}
 	  cuando se hace submit.
 
 ---
 
 ## 6. Estilización de botones
 - Botón submit:
-	```html
+	{% raw %}
+```html
 	<button type="submit" class="button" disabled>Sign Up</button>
 	```
+{% endraw %}
 - CSS:
 	- Estado deshabilitado: `.button[disabled]`.
 	- Hover no aplica mientras esté `disabled`.
@@ -2950,6 +3402,7 @@ main {
 `
 ### Codigo
 
+{% raw %}
 ```css
 main {
     padding-top: 1rem;
@@ -2961,7 +3414,9 @@ main {
     color: #ff5454;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .signup-form label,
 .signup-form input,
@@ -2971,7 +3426,9 @@ main {
     width: 100%;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 [type] {
 	color: red;
@@ -2979,7 +3436,9 @@ main {
 
 <input type="text">
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 [type="email"] { 
 	color: red;
@@ -2987,7 +3446,9 @@ main {
 
 <input type="email">
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 [lang~="en-us"]
 { 
@@ -2996,7 +3457,9 @@ color: red;
 
 <p lang="en-us en-gb"> Hi!</p>
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 [lang|="en"] {
 color: red;
@@ -3004,7 +3467,9 @@ color: red;
 
 <p lang="en-us">Hi!</p>
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 [href^="#"] {
 color: red;
@@ -3012,21 +3477,27 @@ color: red;
 
 <a href="#all">Link</a>
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 [href$=".de"] {
 color: red;
 }
 <a href="ab.de">Link</a>
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 [src*="cdn"] {
 color: red;
 }
 <img src="i.cdn.com">
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 [src*="cdn i"] {
 color: red;
@@ -3034,11 +3505,15 @@ color: red;
 <img src="i.CDN.com">
 
 ```
+{% endraw %}
 
+{% raw %}
 ```html
 <input type="checkbox" id="agree-terms">
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 /* .signup-form input[type="checkbox"] */
 .signup-form input[id*="terms"],
@@ -3052,19 +3527,25 @@ color: red;
     margin-top: 1rem;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .signup-form {
     padding: 1rem;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 label {
     font-weight: bold;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 @media (min-width: 40rem)  {
     .signup-form {
@@ -3073,7 +3554,9 @@ label {
     }
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .signup-form input,
 .signup-form select {
@@ -3083,7 +3566,9 @@ label {
 
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .signup-form input:focus,
 .signup-form select:focus {
@@ -3092,7 +3577,9 @@ label {
  border-color: rgb(167, 233, 253); 
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .signup-form input:not([type="chekbox"]),
 .signup-form select {
@@ -3108,7 +3595,9 @@ label {
  border-color: rgb(167, 233, 253); 
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .signup-form input[type="checkbox"] {
     border: 1px solid #ccc;
@@ -3120,7 +3609,9 @@ label {
     appearance: none;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .signup-form input[id*="terms"],
 .signup-form input[id*="terms"] + label {
@@ -3129,15 +3620,19 @@ label {
     vertical-align: bottom;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .signup-form input[type="checkbox"]:checked {
     background: rgb(167, 233, 253);
     border: rgb(98, 139, 153);
 }
 ```
+{% endraw %}
 
 
+{% raw %}
 ```css
 .signup-form input:focus,
 .signup-form select:focus {
@@ -3146,7 +3641,9 @@ label {
  border-color: rgb(167, 233, 253); 
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .signup-form input.invalid,
 .signup-form select.invalid {
@@ -3155,7 +3652,9 @@ label {
 
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .signup-form input.invalid,
 .signup-form select.invalid, 
@@ -3165,7 +3664,9 @@ label {
 
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .signup-form input:not([type="checkbox"]),
 .signup-form select {
@@ -3175,7 +3676,9 @@ label {
 
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .signup-form input.invalid,
 .signup-form select.invalid, 
@@ -3185,7 +3688,9 @@ label {
 
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .signup-form input.invalid,
 .signup-form select.invalid, 
@@ -3196,7 +3701,9 @@ label {
 
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .button[disabled] {
     cursor: not-allowed;
@@ -3206,6 +3713,7 @@ label {
 
 }
 ```
+{% endraw %}
 
 # 11-Text y Fonts
 
@@ -3234,15 +3742,19 @@ label {
 
 ## 3. Configuración de fonts en el proyecto
 - Ejemplo en `.package__info`:
-	```css
+	{% raw %}
+```css
 	font-family: 'Montserrat', sans-serif;
 	```
+{% endraw %}
 - Tips:
 	- Comenzar por la fuente específica y terminar con la generic.
 	- Varias font families:  
-	  ```css
+	  {% raw %}
+```css
 	  font-family: 'Montserrat', 'Verdana', sans-serif;
 	  ```
+{% endraw %}
 - Herramientas y referencias:
 	- [CSS Font Stack](https://www.cssfontstack.com/)
 	- [Google Fonts Roboto](https://fonts.google.com/specimen/Roboto?preview.text=dghdhdhy&preview.text_type=custom)
@@ -3287,14 +3799,18 @@ label {
 
 ## 6. Font Shorthand
 - Sintaxis general:
-	```css
+	{% raw %}
+```css
 	font: [font-style] [font-variant] [font-weight] font-size[/line-height] font-family;
 	```
+{% endraw %}
 - Ejemplos:
-	```css
+	{% raw %}
+```css
 	font: italic small-caps 700 1.2rem/2 'AnonymousPro', sans-serif;
 	font: 700 1.2rem 'AnonymousPro', sans-serif;
 	```
+{% endraw %}
 - Shorthand para **system fonts**:
 	- `font: menu;`
 	- `font: status-bar;`
@@ -3326,6 +3842,7 @@ label {
 - **Font-display**: controlar visibilidad y rendimiento de fuentes personalizadas.
 
 ## codigo
+{% raw %}
 ```css
 .package__info {
 padding: 1rem;
@@ -3337,7 +3854,9 @@ font-family: 'Roboto', sans-serif;
 font-weight: 900;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .package__info {
 padding: 1rem;
@@ -3350,18 +3869,24 @@ font-weight: 100;
 font-style: italic;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@400,900;1,100&display=swap');
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 @font-face {
 font-family: "AnonymousPro";
 src: url("AnonymousPro-Regular.ttf");
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .package__info {
 padding: 1rem;
@@ -3374,14 +3899,18 @@ font-family: 'AnonymousPro', sans-serif;
 font-style: italic; */
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 @font-face {
 font-family: "AnonymousPro";
 src: url("AnonymousPro-Bold.ttf");
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 @font-face {
 font-family: "AnonymousPro";
@@ -3389,7 +3918,9 @@ src: url("AnonymousPro-Bold.ttf");
 font-weight: 700;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 @font-face {
 font-family: "AnonymousPro";
@@ -3402,11 +3933,15 @@ src: url("anonymousPro-Bold.ttf");
 font-weight: 700;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 src: url("anonymousPro-Bold.ttf") format("truetype");
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 @font-face {
 font-family: "AnonymousPro";
@@ -3415,13 +3950,17 @@ src: url("anonymousPro-Regular.woff2") format("woff2"),
 	 url("anonymousPro-Regular.ttf") format("truetype");
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .testimonial__text {
 margin: 0.2rem;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 @font-face {
 font-family: "AnonymousPro";
@@ -3434,6 +3973,7 @@ font-display: auto;
 
 }
 ```
+{% endraw %}
 
 
 
@@ -3529,9 +4069,11 @@ font-display: auto;
 ---
 
 ## 8. Ejemplo shorthand flex
+{% raw %}
 ```css
 flex: 0 1 auto; /* flex-grow: 0; flex-shrink: 1; flex-basis: auto; */
-````
+```
+{% endraw %}`
 
 - Distribución proporcional:
     
@@ -3559,6 +4101,7 @@ flex: 0 1 auto; /* flex-grow: 0; flex-shrink: 1; flex-basis: auto; */
 
 ## Codigo
 
+{% raw %}
 ```css
 .main-header > div {
     /* display: none; */
@@ -3566,7 +4109,9 @@ flex: 0 1 auto; /* flex-grow: 0; flex-shrink: 1; flex-basis: auto; */
     vertical-align: middle;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 @media (min-width: 40rem) {
     .toggle-button {
@@ -3582,7 +4127,9 @@ flex: 0 1 auto; /* flex-grow: 0; flex-shrink: 1; flex-basis: auto; */
 
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 @media (min-width: 40rem) {
     .testimonial {
@@ -3602,7 +4149,9 @@ flex: 0 1 auto; /* flex-grow: 0; flex-shrink: 1; flex-basis: auto; */
     }
   }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 @media (min-width: 40rem) {
 
@@ -3623,9 +4172,11 @@ flex: 0 1 auto; /* flex-grow: 0; flex-shrink: 1; flex-basis: auto; */
     }
 }
 ```
+{% endraw %}
 
 Theory proyect
 
+{% raw %}
 ```css
 .flex-container {
     background: white;
@@ -3633,14 +4184,18 @@ Theory proyect
     border: 5px solid black;
   }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 flex-direction: row;
 flex-wrap: nowrap;
 ```
+{% endraw %}
 
 !Data/Data-Prog/CSS-Guia completa/image.png
 
+{% raw %}
 ```css
 .flex-container {
     background: white;
@@ -3654,7 +4209,9 @@ flex-wrap: nowrap;
     justify-content: center;
   }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .flex-container {
     background: white;
@@ -3668,7 +4225,9 @@ flex-wrap: nowrap;
     justify-content: center;
   }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .flex-container {
     background: white;
@@ -3682,11 +4241,13 @@ flex-wrap: nowrap;
     justify-content: flex-end;
   }
 ```
+{% endraw %}
 
 
 !Data/Data-Prog/CSS-Guia completa/image1.png
 
 
+{% raw %}
 ```css
 .flex-container {
     background: white;
@@ -3700,7 +4261,9 @@ flex-wrap: nowrap;
     justify-content: center;
   }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .flex-container {
     background: white;
@@ -3715,7 +4278,9 @@ flex-wrap: nowrap;
     align-content: center;
   }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .main-header {
     width: 100%;
@@ -3733,7 +4298,9 @@ flex-wrap: nowrap;
     justify-content: space-between;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css borrar:
 .main-header > div {
     /* display: none; */
@@ -3741,7 +4308,9 @@ flex-wrap: nowrap;
     vertical-align: middle;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css borrar display y vertical align:
 .main-header__brand {
     color: rgb(6, 26, 27);
@@ -3752,7 +4321,9 @@ flex-wrap: nowrap;
     vertical-align: middle;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .main-header__brand img {
     /* height: 100%; */
@@ -3760,7 +4331,9 @@ flex-wrap: nowrap;
     /* width: 100%; */
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .main-header__brand {
     color: rgb(6, 26, 27);
@@ -3773,21 +4346,27 @@ flex-wrap: nowrap;
     height: 2.5rem;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .main-header__brand img {
     height: 2.5rem;
     vertical-align: middle;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css quitar inline block
 .main-nav__item {
     display: inline-block;
     margin: 0 1rem;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .main-nav__items {
     margin: 0;
@@ -3800,7 +4379,9 @@ flex-wrap: nowrap;
     margin: 0 1rem;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 @media (min-width: 40rem) {
     .toggle-button {
@@ -3816,7 +4397,9 @@ flex-wrap: nowrap;
 
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 @media (min-width: 40rem) {
     .toggle-button {
@@ -3832,14 +4415,18 @@ flex-wrap: nowrap;
 
 }
 ```
+{% endraw %}
 
 
+{% raw %}
 ```css
 .main-nav {
     display: none;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 @media (min-width: 40rem) {
     .toggle-button {
@@ -3856,7 +4443,9 @@ flex-wrap: nowrap;
 
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .mobile-nav__items {
     width: 90%;
@@ -3867,9 +4456,11 @@ flex-wrap: nowrap;
     text-align: center;
   }
 ```
+{% endraw %}
 
 cambiar margen a 0
 
+{% raw %}
 ```css
 .mobile-nav__items {
     width: 90%;
@@ -3883,9 +4474,11 @@ cambiar margen a 0
     justify-content: center;
   }
 ```
+{% endraw %}
 
 Añadir al footer
 
+{% raw %}
 ```css
 .main-footer__links {
     list-style: none;
@@ -3896,13 +4489,17 @@ Añadir al footer
     align-items: center;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .main-footer__link {
     margin: 0.5rem 0;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 @media (min-width: 40rem) {
     .main-footer__link {
@@ -3915,9 +4512,11 @@ Añadir al footer
     }
 }
 ```
+{% endraw %}
 
 flexbox a plans
 
+{% raw %}
 ```css
 @media (min-width: 40rem) {
 
@@ -3944,9 +4543,11 @@ flexbox a plans
     }
 }
 ```
+{% endraw %}
 
 flexbox a keyfeatures
 
+{% raw %}
 ```css
 @media (min-width: 40rem) {
     .key-feature {
@@ -3960,9 +4561,11 @@ flexbox a keyfeatures
     }
 }
 ```
+{% endraw %}
 
 flexbox a customers
 
+{% raw %}
 ```css
 @media (min-width: 40rem) {
     .testimonial {
@@ -3981,6 +4584,7 @@ flexbox a customers
     }
   }
 ```
+{% endraw %}
 
 # 13-CSS Grid
 
@@ -4024,9 +4628,11 @@ flexbox a customers
 
 ### Nombres de líneas y áreas
 - Nombrar líneas:
-	```css
+	{% raw %}
+```css
 	grid-template-rows: [row-1-start] 5rem [row-1-end row-2-start] minmax(10px, auto) [row-2-end];
 	```
+{% endraw %}
 - Asignar nombres a áreas:
 	- Crear un patrón en un string.
 	- Usar `.` para celdas vacías.
@@ -4106,6 +4712,7 @@ flexbox a customers
 ## Codigos
 
 !Data/Data-Prog/CSS-Guia completa/image2.png
+{% raw %}
 ```css
 .container {
     margin: 20px;
@@ -4114,7 +4721,9 @@ flexbox a customers
     grid-template-rows: 5rem 2.5rem;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .el3 {
     background: rgba(0, 128, 0, 0.5);
@@ -4124,7 +4733,9 @@ flexbox a customers
     grid-row-end: 3;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .container {
     margin: 20px;
@@ -4134,8 +4745,10 @@ flexbox a customers
     grid-template-rows: 5rem 2rem;
 }
 ```
+{% endraw %}
 
 
+{% raw %}
 ```css
 .container {
     margin: 20px;
@@ -4146,7 +4759,9 @@ flexbox a customers
     grid-template-rows: 5rem minmax(10px, auto) 100px;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .el3 {
     background: rgba(0, 128, 0, 0.5);
@@ -4156,7 +4771,9 @@ flexbox a customers
     grid-row-end: 3; 
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .el2 {
     background: rgba(255, 0, 0, 0.5);
@@ -4164,7 +4781,9 @@ flexbox a customers
     grid-column-end: -1;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .el2 {
     background: rgba(255, 0, 0, 0.5);
@@ -4182,7 +4801,9 @@ flexbox a customers
     grid-row-end: 3; 
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .el2 {
     background: rgba(255, 0, 0, 0.5);
@@ -4201,7 +4822,9 @@ flexbox a customers
     grid-row-end: row-2-end; 
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .container {
 grid-column-gap: 20px;
@@ -4209,7 +4832,9 @@ grid-row-gap: 10px;
 grid-gap: 10px 20px;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .el3 {
 grid-area: header;
@@ -4222,7 +4847,9 @@ grid-area: header;
  "footer footer footer footer";
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .container {
 grid-template-columns: repeat(4, [col-start] 25% [col-end]);
@@ -4231,7 +4858,9 @@ grid-template-columns: repeat(4, [col-start] 25% [col-end]);
 grid-column: col-start 2 / col-end 2;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .container {
 grid-template-columns: repeat(4, [col-start] 25% [col-end]);
@@ -4240,8 +4869,10 @@ grid-template-columns: repeat(4, [col-start] 25% [col-end]);
 grid-column: col-start 2 / col-end 2;
 }
 ```
+{% endraw %}
 
 
+{% raw %}
 ````css
 .container {
 grid-template-columns: repeat(4, [col-start] 25% [col-end]);
@@ -4249,8 +4880,10 @@ grid-template-columns: repeat(4, [col-start] 25% [col-end]);
 .el1 {
 grid-column: col-start 2 / col-end 2;
 }
-````
+```
+{% endraw %}`
 
+{% raw %}
 ```
 body
  display: grid;
@@ -4260,19 +4893,25 @@ main
 /* min-height: calc(100vh - 3.5rem - 8rem); */
 
 ```
+{% endraw %}
+{% raw %}
 ```
 body
 padding-top: 3.5rem;
 height: 100%;
 
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 html {
     height: 100%;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```
 body
  grid-template-rows: 3.5rem auto 8rem;
@@ -4285,7 +4924,9 @@ main-footer
  grid-row: 3 / 4;
  
 ```
+{% endraw %}
 
+{% raw %}
 ```
 body
  grid-template-areas: "header" "main" "footer";
@@ -4294,24 +4935,32 @@ main
 main-footer
  grid-area: footer;
 ```
+{% endraw %}
 
+{% raw %}
 ```
 body
  grid-template-rows: 3.5rem auto auto;
 
 ```
+{% endraw %}
 
+{% raw %}
 ```
 body
 grid-template-rows: 3.5rem auto fit-content(8rem);
 ```
+{% endraw %}
 
+{% raw %}
 ```
 el2
  justify-self: center;
  align-self: center;
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 @media (max-width: 48rem) {
 
@@ -4331,43 +4980,59 @@ el2
 
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .el1 {
 grid-area: side;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```
 grid-template-areas: "header header header header" ". side main main" "footer footer footer footer";
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 grid-template-columns: repeat(2, 15rem);
 grid-auto-rows: auto;
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .container {
  grid-template-columns: repeat(auto-fill, 10rem);
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 grid-template-columns: repeat(auto-fit, 10rem);
 ```
+{% endraw %}
 
 
+{% raw %}
 ```css
 grid-template-columns: repeat(3, 10rem);
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .quote:nth-of-type(2) {
   grid-column: span 2;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .signup-form {
     display: grid;
@@ -4378,7 +5043,9 @@ grid-template-columns: repeat(3, 10rem);
  grid-template-columns: 10rem auto;
 }}
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .signup-form label,
 .signup-form input,
@@ -4388,7 +5055,9 @@ grid-template-columns: repeat(3, 10rem);
     width: 100%;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 @media (min-width: 40rem)  {
     .signup-form {
@@ -4400,7 +5069,9 @@ grid-template-columns: repeat(3, 10rem);
     }
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```html
 <div class="signup-form__checkbox">
 <input type="checkbox" id="agree-terms" required>
@@ -4409,7 +5080,9 @@ grid-template-columns: repeat(3, 10rem);
 </label>
 </div>
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 @media (min-width: 40rem)  {
     .signup-form__checkbox {
@@ -4417,13 +5090,17 @@ grid-template-columns: repeat(3, 10rem);
     }
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
     .signup-form [id="title"] {
         grid-row: 2;
     }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
     .signup-form [id="title"] {
         /* grid-row: 2; */
@@ -4431,7 +5108,9 @@ grid-template-columns: repeat(3, 10rem);
 
     }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .signup-form {
     padding: 1rem;
@@ -4441,6 +5120,7 @@ grid-template-columns: repeat(3, 10rem);
 
 }
 ```
+{% endraw %}
 
 
 # 15. Transforming Elements with CSS Transforms
@@ -4595,36 +5275,47 @@ grid-template-columns: repeat(3, 10rem);
 - `perspective-origin` ajusta desde dónde se percibe la transformación.
 
 ## Codigos
+{% raw %}
 ```css
 .package__badge {
  transform: rotateZ(45deg);
  transform-origin: 25% 50%;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 transform: rotateZ(45deg) translateX(2rem) translateY(0.5rem);
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 transform: rotateZ(45deg) translateX(3.5rem) translateY(-1rem);
 transform-origin: center;
 width: 12rem;
 text-align: center;
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .package {
     overflow: hidden;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
   .testimonial__image-container {
     transform: skewX(20deg);
   }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
   .testimonial__image {
     width: 100%;
@@ -4632,14 +5323,18 @@ text-align: center;
     transform: skew(-20deg);
   }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
   .testimonial__image-container {
     transform: skew(20deg);
     overflow: hidden;
   }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
   .testimonial__image {
     width: 100%;
@@ -4647,26 +5342,35 @@ text-align: center;
     transform: skew(-20deg) scaleX(2);
   }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 	transform: skew(-20deg) scale(1.2);
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .testimonial__image-container {
     width: 60%;
   }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 transform: rotate(45deg) translate(3.5rem, -2rem);
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .container {
     perspective: 1000px;
 }
 ```
+{% endraw %}
 
 !Data/Data-Prog/CSS-Guia completa/image3.png
 
@@ -4792,6 +5496,7 @@ Ejemplo:
 ## 7. Keyframes Avanzados
 
 ### Múltiples pasos
+{% raw %}
 ```css
 @keyframes wiggle {
 	0% { transform: rotate(0deg); }
@@ -4799,7 +5504,8 @@ Ejemplo:
 	75% { transform: rotate(-3deg); }
 	100% { transform: rotate(0deg); }
 }
-````
+```
+{% endraw %}`
 
 ### Notas
 
@@ -4820,12 +5526,14 @@ Ejemplo:
 - Solución: incluir **skew dentro del keyframe**
     
 
+{% raw %}
 ```css
 @keyframes rotateCard {
 	from { transform: skew(20deg) rotate(0); }
 	to { transform: skew(20deg) rotate(5deg); }
 }
 ```
+{% endraw %}
 
 - En móviles sin hover → animación via click o JS
     
@@ -4867,6 +5575,7 @@ Ejemplo:
 
 ## Codigos
 
+{% raw %}
 ```css
 .modal {
     /* display: none; */
@@ -4874,7 +5583,9 @@ Ejemplo:
     transform: translateY(-3rem);
   }
 ```
+{% endraw %}
 
+{% raw %}
 ```js
 for (var i = 0; i < selectPlanButtons.length; i++) {
 electPlanButtons[i].addEventListener('click', function() {
@@ -4883,13 +5594,17 @@ electPlanButtons[i].addEventListener('click', function() {
     });
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .open {
     display: block !important;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .open {
     display: block !important;
@@ -4897,7 +5612,9 @@ electPlanButtons[i].addEventListener('click', function() {
     transform: translateY(0) !important;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```js
 function closeModal() {
     if (modal) {
@@ -4913,7 +5630,9 @@ toggleButton.addEventListener('click', function() {
     backdrop.classList.add('open');
 });
 ```
+{% endraw %}
 
+{% raw %}
 ```js
 toggleButton.addEventListener('click', function() {
     mobileNav.classList.add('open');
@@ -4923,7 +5642,9 @@ toggleButton.addEventListener('click', function() {
     },10);
 });
 ```
+{% endraw %}
 
+{% raw %}
 ```js
 function closeModal() {
     if (modal) {
@@ -4935,7 +5656,9 @@ function closeModal() {
     },10);
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```js
 for (var i = 0; i < selectPlanButtons.length; i++) {
 
@@ -4948,7 +5671,9 @@ selectPlanButtons[i].addEventListener('click', function() {
     });
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```js
 function closeModal() {
     if (modal) {
@@ -4960,7 +5685,9 @@ function closeModal() {
     },200);
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .main-nav__item--cta a,
 .mobile-nav__item--cta a {
@@ -4978,7 +5705,9 @@ function closeModal() {
     border: none;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 @keyframes wiggle {
     from {
@@ -4989,13 +5718,17 @@ function closeModal() {
     }
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .main-nav__item--cta {
     animation: wiggle 200ms 3s 8 alternate;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 @keyframes wiggle {
     0% {
@@ -5009,13 +5742,17 @@ function closeModal() {
     }
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .main-nav__item--cta {
     animation: wiggle 400ms 3s 8 none;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
   @keyframes flip-customer {
     0% {
@@ -5029,13 +5766,17 @@ function closeModal() {
     }
   }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 #customer-1:hover .testimonial__image-container {
  animation: flip-costumer 1s ease-out forwards;
   }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
   @keyframes flip-customer {
     0% {
@@ -5049,7 +5790,9 @@ function closeModal() {
     }
   }
 ```
+{% endraw %}
 
+{% raw %}
 ```js 
 var ctaButton = document.querySelector('.main-nav__item--cta');
 ctaButton.addEventListener('animationstart', function(event){
@@ -5061,6 +5804,7 @@ ctaButton.addEventListener('animationend', function(event){
     console.log('animation iteration', event);
 })
 ```
+{% endraw %}
 
 
 # 17. Writing Future-Proof CSS Code
@@ -5218,6 +5962,7 @@ ctaButton.addEventListener('animationend', function(event){
 
 ## Codigos
 
+{% raw %}
 ```jsx
 .element-1 {
 color: #fa923f;
@@ -5229,7 +5974,9 @@ color: #fa923f;
 color: #fa923f;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```jsx
 :root {
 --my-color: #fa923f;
@@ -5245,14 +5992,18 @@ color: var(--my-color);
 color: var(--my-color, #fa923f);
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 :root {
     --dark-blue: rgb(48, 48, 95);
     --hightlight-color: blue;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```jsx
 .container {
 display: -webkit-box;
@@ -5261,7 +6012,9 @@ display: -webkit-flex;
 display: flex;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```jsx
 @supports (display: grid) {
 .container {
@@ -5269,7 +6022,9 @@ display: grid;
 }
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 body {
     font-family: 'Montserrat', sans-serif;
@@ -5287,12 +6042,15 @@ body {
     }
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 * {
     box-sizing: border-box;
 }
 ```
+{% endraw %}
 
 
 
@@ -5371,12 +6129,14 @@ body {
 ## Nested Properties
 - Permiten agrupar propiedades que comparten namespace.
 - Ejemplo:
-	```scss
+	{% raw %}
+```scss
 	border: {
 		color: red;
 		width: 2px;
 	}
 	```
+{% endraw %}
 
 ---
 
@@ -5384,24 +6144,30 @@ body {
 - Funciona en todos los navegadores porque es compilado.
 - Reemplazo directo del valor en CSS final.
 - Ideal para colores, fuentes, z-index, breakpoints:
-	```scss
+	{% raw %}
+```scss
 	$primary-color: #3498db;
 	```
+{% endraw %}
 
 ---
 
 ## Variables con Listas y Maps
 - **Listas**:
-	```scss
+	{% raw %}
+```scss
 	$sizes: 10px 20px 30px;
 	```
+{% endraw %}
 - **Maps** (clave/valor):
-	```scss
+	{% raw %}
+```scss
 	$colors: (
 		primary: #3498db,
 		secondary: #2ecc71
 	);
 	```
+{% endraw %}
 - Acceso rápido:
 	- `map-get($colors, primary)`
 - Sass permite comentarios con `//` y funciones integradas.
@@ -5421,10 +6187,12 @@ body {
 ## Aritmética Simple
 - Permite calcular valores derivados (padding, tamaños, layouts).
 - Ejemplo:
-	```scss
+	{% raw %}
+```scss
 	$base: 1rem;
 	padding: $base * 2;
 	```
+{% endraw %}
 
 ---
 
@@ -5436,9 +6204,11 @@ body {
 	- Archivos con `_nombre.scss`.
 	- Usados para dividir estilos y compartir variables.
 	- Ejemplo:
-		```scss
+		{% raw %}
+```scss
 		@import "_variables.scss";
 		```
+{% endraw %}
 - Nota: Sass moderno recomienda `@use` y `@forward`, pero `@import` sigue siendo común en proyectos legacy.
 
 ---
@@ -5446,7 +6216,8 @@ body {
 ## Media Queries Mejoradas
 - Mantener media queries **cerca del selector** que modifican.
 - Anidar:
-	```scss
+	{% raw %}
+```scss
 	.button {
 		font-size: 1rem;
 
@@ -5455,6 +6226,7 @@ body {
 		}
 	}
 	```
+{% endraw %}
 - Múltiples queries por selector, más organizado.
 
 ---
@@ -5464,7 +6236,8 @@ body {
 - Útil para agrupar capacidades compartidas.
 - Evita duplicar estilos.
 - Ejemplo:
-	```scss
+	{% raw %}
+```scss
 	.message {
 		padding: 1rem;
 		border-radius: 4px;
@@ -5475,6 +6248,7 @@ body {
 		background: green;
 	}
 	```
+{% endraw %}
 
 ---
 
@@ -5482,48 +6256,58 @@ body {
 - Snippets reutilizables de código.
 - Útiles para estilos repetidos, vendor prefixes y media queries.
 - Ejemplo:
-	```scss
+	{% raw %}
+```scss
 	@mixin flex-center {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 	}
 	```
+{% endraw %}
 - Con argumentos:
-	```scss
+	{% raw %}
+```scss
 	@mixin respond($breakpoint) {
 		@media (min-width: $breakpoint) {
 			@content;
 		}
 	}
 	```
+{% endraw %}
 - Uso:
-	```scss
+	{% raw %}
+```scss
 	@include respond(800px) {
 		font-size: 2rem;
 	}
 	```
+{% endraw %}
 
 ---
 
 ## Ampersand Operator `&`
 - Controla cómo se refiere el selector al nivel actual.
 - Perfecto para pseudo-selectores:
-	```scss
+	{% raw %}
+```scss
 	.button {
 		&:hover {
 			background: red;
 		}
 	}
 	```
+{% endraw %}
 - También funciona con clases:
-	```scss
+	{% raw %}
+```scss
 	.button {
 		&--large {
 			padding: 2rem;
 		}
 	}
 	```
+{% endraw %}
 
 ---
 
@@ -5534,6 +6318,7 @@ body {
 - Mantener el proyecto modular usando partials y `@use`.
 ## Codigo
 
+{% raw %}
 ```scss
 .documentation-links {
 
@@ -5548,14 +6333,18 @@ li {
 }
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 .container {
 flex-direction: column;
 flex-wrap: nowrap;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```scss
 .container {
 flex: {
@@ -5564,38 +6353,54 @@ wrap: nowrap;
 }
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```scss
 $main-color: #51568;
 ```
+{% endraw %}
 
+{% raw %}
 ```scss
 $border-default: 0.85rem solid $main-color;
 ```
+{% endraw %}
 
+{% raw %}
 ```scss
 $colors: (main: #456854, secondary: #000156);
 ```
+{% endraw %}
 
+{% raw %}
 ```scss
 $order-default: 0.85rem solid map-get($colors, main);
 ```
+{% endraw %}
 
+{% raw %}
 ```scss
 background: map-get($colors, secondary);
 color: map-get($colors, main);
 ```
+{% endraw %}
 
+{% raw %}
 ```scss
 background: lighten(map-get($colors, main), 68%);
 ```
+{% endraw %}
 
+{% raw %}
 ```scss
 padding: $size-default * 3 0;
 box-shadow: $size-tiny $size-tiny $size-tiny / 2 #ccc;
 margin: $size-default * 2;
 ```
+{% endraw %}
 
+{% raw %}
 ```scss
 html {
 @media () {
@@ -5603,7 +6408,9 @@ html {
 }
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```scss
 .sass-section {
 
@@ -5612,13 +6419,17 @@ html {
 @extend .sass-section;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```scss
 .sass-section, .sass-introduction, .sass-details {
 
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```scss
 @mixin display-flex() {
 
@@ -5627,7 +6438,9 @@ html {
 @include display-flex();
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```scss
 @mixin media-min-width($width){
 	@media (min-width: $width) {
@@ -5640,7 +6453,9 @@ html {
 	}
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```scss
 .documentation-link {
 &:hover,
@@ -5648,3 +6463,4 @@ html {
 }
 }
 ```
+{% endraw %}

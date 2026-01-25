@@ -42,18 +42,22 @@ Las **funciones lambda** (también llamadas **funciones anónimas**) son expresi
 
 ## Sintaxis y Ejemplo Básico
 
+{% raw %}
 ```python
 # Función lambda que suma dos números
 suma = lambda x, y: x + y
 print(suma(3, 5))  # Salida: 8
-````
+```
+{% endraw %}`
 
 Equivalente a:
 
+{% raw %}
 ```python
 def suma(x, y):
 	return x + y
 ```
+{% endraw %}
 
 ## Casos de Uso Típicos
 
@@ -61,39 +65,47 @@ def suma(x, y):
 
 Permite aplicar una función a cada elemento de un iterable.
 
+{% raw %}
 ```python
 numeros = [1, 2, 3, 4]
 cuadrados = list(map(lambda n: n ** 2, numeros))
 print(cuadrados)  # [1, 4, 9, 16]
 ```
+{% endraw %}
 
 ### 2. Con `filter()`
 
 Filtra elementos que cumplen una condición.
 
+{% raw %}
 ```python
 pares = list(filter(lambda n: n % 2 == 0, numeros))
 print(pares)  # [2, 4]
 ```
+{% endraw %}
 
 ### 3. Con `reduce()`
 
 Permite acumular resultados sucesivos de una función binaria.
 
+{% raw %}
 ```python
 from functools import reduce
 
 producto = reduce(lambda x, y: x * y, numeros)
 print(producto)  # 24
 ```
+{% endraw %}
 
 ### 4. Ordenamiento Personalizado con `sorted()`
 
+{% raw %}
 ```python
 personas = [{'nombre': 'Ana', 'edad': 30}, {'nombre': 'Luis', 'edad': 25}]
 ordenadas = sorted(personas, key=lambda p: p['edad'])
 print(ordenadas)
 ```
+{% endraw %}
 
 ## Ventajas y Desventajas
 
@@ -113,6 +125,7 @@ print(ordenadas)
 
 ### Lambda en estructuras de datos
 
+{% raw %}
 ```python
 acciones = {
 	'sumar': lambda x, y: x + y,
@@ -121,16 +134,20 @@ acciones = {
 }
 print(acciones['sumar'](10, 5))  # 15
 ```
+{% endraw %}
 
 ### Lambdas en expresiones de comprensión
 
+{% raw %}
 ```python
 resultados = [(lambda x: x ** 2)(n) for n in range(5)]
 print(resultados)  # [0, 1, 4, 9, 16]
 ```
+{% endraw %}
 
 ### Lambdas con funciones personalizadas
 
+{% raw %}
 ```python
 def aplicar(f, valor):
 	return f(valor)
@@ -138,6 +155,7 @@ def aplicar(f, valor):
 doble = aplicar(lambda x: x * 2, 10)
 print(doble)  # 20
 ```
+{% endraw %}
 
 ## Comparación con Funciones normales
 
@@ -178,6 +196,7 @@ Las funciones lambda son una pieza clave en la Programación funcional al promov
 
 Se pueden combinar lambdas para crear funciones más complejas:
 
+{% raw %}
 ```python
 componer = lambda f, g: lambda x: f(g(x))
 doble = lambda x: x * 2
@@ -185,7 +204,8 @@ incrementar = lambda x: x + 1
 
 doble_y_incrementar = componer(incrementar, doble)
 print(doble_y_incrementar(3))  # 7
-````
+```
+{% endraw %}`
 
 Este patrón refleja el concepto matemático de composición y es fundamental en librerías funcionales.
 
@@ -193,6 +213,7 @@ Este patrón refleja el concepto matemático de composición y es fundamental en
 
 Las lambdas pueden **capturar variables del entorno externo**, formando un *closure*:
 
+{% raw %}
 ```python
 def multiplicador(n):
 	return lambda x: x * n
@@ -203,6 +224,7 @@ triple = multiplicador(3)
 print(doble(5))   # 10
 print(triple(5))  # 15
 ```
+{% endraw %}
 
 Este mecanismo permite crear funciones parametrizadas dinámicamente, un principio usado en programación funcional y decoradores.
 
@@ -216,36 +238,44 @@ El uso de lambdas permite **reducir el acoplamiento** en el código, facilitando
 
 Ejemplo con callbacks:
 
+{% raw %}
 ```python
 def ejecutar(accion, x):
 	return accion(x)
 
 ejecutar(lambda x: x ** 3, 2)  # 8
 ```
+{% endraw %}
 
 ## Lambdas en Estructuras Avanzadas de Python
 
 ### En sorted, max y min
 
+{% raw %}
 ```python
 frutas = ['manzana', 'kiwi', 'banana']
 print(sorted(frutas, key=lambda f: len(f)))  # ['kiwi', 'banana', 'manzana']
 ```
+{% endraw %}
 
 ### En Expresiones generadoras
 
+{% raw %}
 ```python
 pares_cuadrados = (lambda xs: [x**2 for x in xs if x % 2 == 0])(range(10))
 print(pares_cuadrados)
 ```
+{% endraw %}
 
 ### En Decoradores simples
 
+{% raw %}
 ```python
 decorador = lambda f: lambda *a, **kw: f(*a, **kw).upper()
 saludar = decorador(lambda: "hola mundo")
 print(saludar())  # HOLA MUNDO
 ```
+{% endraw %}
 
 ## Diferencias entre Lenguajes
 
@@ -263,6 +293,7 @@ print(saludar())  # HOLA MUNDO
 
 Las lambdas también pueden emplearse en contextos asíncronos o concurrentes:
 
+{% raw %}
 ```python
 import asyncio
 
@@ -272,9 +303,11 @@ async def ejecutar(func):
 
 asyncio.run(ejecutar(lambda: "tarea completada"))
 ```
+{% endraw %}
 
 O integradas en concurrent.futures:
 
+{% raw %}
 ```python
 from concurrent.futures import ThreadPoolExecutor
 
@@ -282,17 +315,20 @@ with ThreadPoolExecutor() as ex:
 	res = ex.submit(lambda: sum(range(1000000)))
 	print(res.result())
 ```
+{% endraw %}
 
 ## Lambdas y Type Hints
 
 Aunque breves, las lambdas pueden tener **anotaciones de tipo** mediante `Callable` del módulo `typing`:
 
+{% raw %}
 ```python
 from typing import Callable
 
 Operacion = Callable[[int, int], int]
 op: Operacion = lambda x, y: x + y
 ```
+{% endraw %}
 
 Esto es útil para documentación, control estático de tipos y herramientas como mypy o Pyright.
 
@@ -312,6 +348,7 @@ Esto es útil para documentación, control estático de tipos y herramientas com
 
 Ejemplo:
 
+{% raw %}
 ```python
 from functools import partial
 from operator import add
@@ -319,6 +356,7 @@ from operator import add
 sumar5 = partial(add, 5)
 print(sumar5(10))  # 15
 ```
+{% endraw %}
 
 ## Buenas Prácticas Avanzadas
 
@@ -396,11 +434,13 @@ Ambas comparten el principio de **eficiencia funcional**, pero a diferentes nive
 
 ### Ejemplo simple (Python)
 
+{% raw %}
 ```python
 def lambda_handler(event, context):
 	nombre = event.get("nombre", "desconocido")
 	return {"mensaje": f"Hola, {nombre} desde AWS Lambda"}
 ```
+{% endraw %}
 
 
 # Lambda Functions - Ecosistema, Extensión y Aplicaciones Modernas
@@ -418,6 +458,7 @@ Las **funciones lambda** han trascendido su origen como simples funciones anóni
 En frameworks modernos (como RxPy, RxJS o Reactor), las lambdas son esenciales para definir la lógica de transformación sobre flujos de datos.
 
 Ejemplo (RxPy):
+{% raw %}
 ```python
 from rx import from_iterable
 
@@ -426,7 +467,8 @@ from_iterable([1, 2, 3, 4]) \
 		lambda obs: obs.map(lambda x: x * 2)
 	) \
 	.subscribe(lambda v: print(v))
-````
+```
+{% endraw %}`
 
 Aquí las lambdas encapsulan transformaciones y efectos, sin necesidad de definir funciones externas.
 
@@ -436,9 +478,11 @@ Las lambdas son ideales para el manejo de eventos asíncronos, actuando como **m
 
 Ejemplo conceptual:
 
+{% raw %}
 ```python
 on_click = lambda event: print(f"Botón {event.id} presionado")
 ```
+{% endraw %}
 
 En arquitecturas como las de AWS Lambda o Azure Functions, este patrón se amplía: cada evento del ecosistema (archivo subido, mensaje en cola, cambio en base de datos) dispara la ejecución de una función aislada.
 
@@ -454,12 +498,14 @@ En arquitecturas como las de AWS Lambda o Azure Functions, este patrón se ampl�
 
 Ejemplo:
 
+{% raw %}
 ```python
 import pandas as pd
 
 df = pd.DataFrame({"n": [1, 2, 3, 4]})
 df["cuadrado"] = df["n"].apply(lambda x: x**2)
 ```
+{% endraw %}
 
 ### JavaScript / TypeScript
 
@@ -470,10 +516,12 @@ Las **arrow functions (`=>`)** representan la evolución natural de las lambdas:
 
 Ejemplo:
 
+{% raw %}
 ```javascript
 const numeros = [1, 2, 3, 4];
 const dobles = numeros.map(n => n * 2);
 ```
+{% endraw %}
 
 ### Java y C#
 
@@ -510,9 +558,11 @@ Con la expansión del **edge computing** y la **IA descentralizada**, las lambda
 
 Ejemplo conceptual (pseudocódigo):
 
+{% raw %}
 ```python
 process_frame = lambda frame: detect_faces(frame)
 ```
+{% endraw %}
 
 Cada frame procesado por un dispositivo IoT puede pasar por esta lambda antes de enviarse a la nube.
 
@@ -524,13 +574,16 @@ Cada frame procesado por un dispositivo IoT puede pasar por esta lambda antes de
 
 Permite transformar una función de múltiples argumentos en una secuencia de funciones unarias:
 
+{% raw %}
 ```python
 sumar = lambda x: (lambda y: x + y)
 print(sumar(3)(5))  # 8
 ```
+{% endraw %}
 
 ### 2. Lambdas como Factories o Generadores de Comportamiento
 
+{% raw %}
 ```python
 def factory(multiplicador):
 	return lambda x: x * multiplicador
@@ -538,13 +591,16 @@ def factory(multiplicador):
 doble = factory(2)
 triple = factory(3)
 ```
+{% endraw %}
 
 ### 3. Lambda Pipeline (encadenamiento funcional)
 
+{% raw %}
 ```python
 pipeline = lambda x: (lambda f, g: g(f(x)))(lambda y: y + 2, lambda z: z * 3)
 print(pipeline(4))  # 18
 ```
+{% endraw %}
 
 Estos patrones reflejan la adopción creciente del pensamiento funcional en entornos híbridos (serverless, IA, data pipelines).
 

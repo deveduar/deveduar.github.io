@@ -130,6 +130,7 @@ categories:
 
 
 # Docs Databases
+{% raw %}
 ```base
 type: list
 name: "Notas con #db en Projects"
@@ -159,7 +160,9 @@ views:
       file.name: 443
 
 ```
+{% endraw %}
 # omnivore db
+{% raw %}
 ```base
 type: list
 name: "Notas con #db en Omnivore"
@@ -181,6 +184,7 @@ views:
         direction: DESC
 
 ```
+{% endraw %}
 
 
 

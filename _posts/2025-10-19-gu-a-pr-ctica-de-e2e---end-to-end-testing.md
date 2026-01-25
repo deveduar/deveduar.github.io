@@ -25,15 +25,18 @@ Esta guía práctica muestra cómo implementar pruebas E2E completas con las her
 
 ### 🧰 Instalación
 
+{% raw %}
 ```bash
 npm install cypress --save-dev
 npx cypress open
-````
+```
+{% endraw %}`
 
 Esto abrirá el panel visual de Cypress, donde puedes crear pruebas E2E dentro de `cypress/e2e/`.
 
 ### 📂 Estructura recomendada
 
+{% raw %}
 ```
 cypress/
  ├── e2e/
@@ -47,9 +50,11 @@ cypress/
  │   └── e2e.js
  └── cypress.config.js
 ```
+{% endraw %}
 
 ### 🧠 Ejemplo: flujo de login
 
+{% raw %}
 ```js
 describe('Flujo de login', () => {
 	beforeEach(() => {
@@ -65,9 +70,11 @@ describe('Flujo de login', () => {
 	})
 })
 ```
+{% endraw %}
 
 ### 🧾 Ejemplo: flujo de formulario
 
+{% raw %}
 ```js
 describe('Flujo de envío de formulario', () => {
 	it('Envía correctamente el formulario', () => {
@@ -82,23 +89,29 @@ describe('Flujo de envío de formulario', () => {
 	})
 })
 ```
+{% endraw %}
 
 ### ⚙️ Ejecución
 
 * Ejecutar en modo headless:
 
+{% raw %}
 ```bash
 npx cypress run
 ```
+{% endraw %}
 
 * Ejecutar una suite específica:
 
+{% raw %}
 ```bash
 npx cypress run --spec cypress/e2e/formulario.cy.js
 ```
+{% endraw %}
 
 ### 🧭 Integración en CI/CD (GitHub Actions)
 
+{% raw %}
 ```yaml
 name: E2E Tests
 on: [push]
@@ -115,6 +128,7 @@ jobs:
           browser: chrome
           headless: true
 ```
+{% endraw %}
 
 ---
 
@@ -122,9 +136,11 @@ jobs:
 
 ### 🧰 Instalación
 
+{% raw %}
 ```bash
 npm init playwright@latest
 ```
+{% endraw %}
 
 Selecciona:
 
@@ -134,6 +150,7 @@ Selecciona:
 
 ### 📂 Estructura recomendada
 
+{% raw %}
 ```
 tests/
  ├── login.spec.ts
@@ -143,9 +160,11 @@ tests/
      └── helpers.ts
 playwright.config.ts
 ```
+{% endraw %}
 
 ### 🧠 Ejemplo: flujo de login
 
+{% raw %}
 ```ts
 import { test, expect } from '@playwright/test'
 
@@ -158,9 +177,11 @@ test('flujo de login exitoso', async ({ page }) => {
 	await expect(page.locator('h1')).toContainText('Bienvenido')
 })
 ```
+{% endraw %}
 
 ### 🧾 Ejemplo: flujo de compra
 
+{% raw %}
 ```ts
 test('flujo de compra completo', async ({ page }) => {
 	await page.goto('https://miapp.test')
@@ -171,29 +192,37 @@ test('flujo de compra completo', async ({ page }) => {
 	await expect(page.locator('.mensaje-exito')).toHaveText('Compra realizada con éxito')
 })
 ```
+{% endraw %}
 
 ### ⚙️ Ejecución
 
 * Ejecutar todas las pruebas:
 
+{% raw %}
 ```bash
 npx playwright test
 ```
+{% endraw %}
 
 * Ejecutar una sola prueba:
 
+{% raw %}
 ```bash
 npx playwright test tests/login.spec.ts
 ```
+{% endraw %}
 
 * Ver resultados visuales:
 
+{% raw %}
 ```bash
 npx playwright show-report
 ```
+{% endraw %}
 
 ### 📦 CI/CD (GitHub Actions)
 
+{% raw %}
 ```yaml
 name: Playwright E2E
 on: [push]
@@ -212,6 +241,7 @@ jobs:
           name: playwright-report
           path: playwright-report/
 ```
+{% endraw %}
 
 ---
 
@@ -219,12 +249,15 @@ jobs:
 
 ### 🧰 Instalación (JavaScript)
 
+{% raw %}
 ```bash
 npm install selenium-webdriver chromedriver
 ```
+{% endraw %}
 
 ### 🧠 Ejemplo: flujo de login
 
+{% raw %}
 ```js
 import { Builder, By, until } from 'selenium-webdriver'
 
@@ -243,12 +276,15 @@ async function flujoLogin() {
 }
 flujoLogin()
 ```
+{% endraw %}
 
 ### ⚙️ Ejecución
 
+{% raw %}
 ```bash
 node tests/login.js
 ```
+{% endraw %}
 
 ---
 

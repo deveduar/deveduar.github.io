@@ -157,6 +157,7 @@ Patrones que se centran en la **comunicación y responsabilidad entre objetos**.
 ## Código de ejemplo
 
 ### Factory Pattern (TypeScript)
+{% raw %}
 ```typescript
 interface Product {
 	operation(): string;
@@ -202,12 +203,14 @@ function clientCode(creator: Creator) {
 
 clientCode(new ConcreteCreatorA());
 clientCode(new ConcreteCreatorB());
-````
+```
+{% endraw %}`
 
 ---
 
 ### Observer Pattern (TypeScript)
 
+{% raw %}
 ```typescript
 interface Observer {
 	update(subject: Subject): void;
@@ -257,6 +260,7 @@ subject.attach(observer2);
 
 subject.setState(5);
 ```
+{% endraw %}
 
 # Patrones de diseño — Expansión y conceptos avanzados
 `$= dv.current().file.tags.join(" ")`
@@ -314,12 +318,14 @@ subject.setState(5);
 	- Simplifica pruebas unitarias.
 	- Oculta la complejidad de ORMs o SQL.
 - **Ejemplo:**
+{% raw %}
 ```typescript
 interface UserRepository {
 	findByEmail(email: string): User | null;
 	save(user: User): void;
 }
 ```
+{% endraw %}
 
 ---
 
@@ -493,6 +499,7 @@ interface UserRepository {
 ## 🧱 PATRONES CREACIONALES
 
 ### Factory Pattern (TypeScript)
+{% raw %}
 ```typescript
 interface Product {
   getDescription(): string;
@@ -534,12 +541,14 @@ class ConcreteCreatorB extends Creator {
 // Uso realista
 const creators: Creator[] = [new ConcreteCreatorA(), new ConcreteCreatorB()];
 creators.forEach(c => c.deliver());
-````
+```
+{% endraw %}`
 
 ---
 
 ### Abstract Factory (Java)
 
+{% raw %}
 ```java
 interface Button {
   void render();
@@ -583,11 +592,13 @@ public class App {
   }
 }
 ```
+{% endraw %}
 
 ---
 
 ### Builder Pattern (Python)
 
+{% raw %}
 ```python
 class House:
     def __init__(self):
@@ -627,11 +638,13 @@ house = (builder
 
 print(house)
 ```
+{% endraw %}
 
 ---
 
 ### Prototype Pattern (JavaScript)
 
+{% raw %}
 ```javascript
 class Document {
   constructor(title, content) {
@@ -651,6 +664,7 @@ doc2.content.pages = 12;
 
 console.log(doc1, doc2);
 ```
+{% endraw %}
 
 ---
 
@@ -658,6 +672,7 @@ console.log(doc1, doc2);
 
 ### Adapter Pattern (TypeScript)
 
+{% raw %}
 ```typescript
 class OldPaymentGateway {
   makePayment(amount: number) {
@@ -682,11 +697,13 @@ const oldSystem = new OldPaymentGateway();
 const newSystem: ModernGateway = new PaymentAdapter(oldSystem);
 newSystem.pay(250);
 ```
+{% endraw %}
 
 ---
 
 ### Decorator Pattern (Python)
 
+{% raw %}
 ```python
 class Notifier:
     def send(self, message):
@@ -712,11 +729,13 @@ class SlackDecorator(Notifier):
 notifier = SlackDecorator(EmailDecorator(Notifier()))
 notifier.send("Actualización del sistema completada ✅")
 ```
+{% endraw %}
 
 ---
 
 ### Proxy Pattern (Python)
 
+{% raw %}
 ```python
 class ExpensiveService:
     def request(self):
@@ -738,6 +757,7 @@ service = ProxyService()
 service.request()
 service.request()
 ```
+{% endraw %}
 
 ---
 
@@ -745,6 +765,7 @@ service.request()
 
 ### Strategy Pattern (TypeScript)
 
+{% raw %}
 ```typescript
 interface SortingStrategy {
   sort(data: number[]): number[];
@@ -779,11 +800,13 @@ const dataset = [5, 2, 9, 1];
 new Context(new QuickSort()).execute(dataset);
 new Context(new BubbleSort()).execute(dataset);
 ```
+{% endraw %}
 
 ---
 
 ### Observer Pattern (TypeScript)
 
+{% raw %}
 ```typescript
 interface Observer {
   update(stock: string, price: number): void;
@@ -826,11 +849,13 @@ market.attach(trader2);
 
 market.setPrice("AAPL", 175.5);
 ```
+{% endraw %}
 
 ---
 
 ### Command Pattern (Python)
 
+{% raw %}
 ```python
 class Light:
     def on(self):
@@ -872,11 +897,13 @@ remote.set_command("off", TurnOffCommand(light))
 remote.press("on")
 remote.press("off")
 ```
+{% endraw %}
 
 ---
 
 ### State Pattern (JavaScript)
 
+{% raw %}
 ```javascript
 class Context {
   constructor(state) {
@@ -916,6 +943,7 @@ const context = new Context(new ConcreteStateA());
 context.request();
 context.request();
 ```
+{% endraw %}
 
 ---
 
@@ -923,6 +951,7 @@ context.request();
 
 ### Repository Pattern (TypeScript)
 
+{% raw %}
 ```typescript
 interface User {
   id: number;
@@ -951,11 +980,13 @@ const repo = new UserRepository();
 repo.save({ id: 1, name: "Eduardo", email: "edu@domain.com" });
 console.log(repo.findByEmail("edu@domain.com"));
 ```
+{% endraw %}
 
 ---
 
 ### Event Sourcing + CQRS (Python simplificado)
 
+{% raw %}
 ```python
 class Event:
     def __init__(self, type, data):
@@ -988,6 +1019,7 @@ acc.deposit(100)
 acc.withdraw(30)
 print("Saldo actual:", acc.balance)
 ```
+{% endraw %}
 
 ---
 
@@ -995,6 +1027,7 @@ print("Saldo actual:", acc.balance)
 
 ### Thread Pool (Python)
 
+{% raw %}
 ```python
 import concurrent.futures
 import time
@@ -1008,11 +1041,13 @@ with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:
     for r in results:
         print(r)
 ```
+{% endraw %}
 
 ---
 
 ### Reactor Pattern (Node.js)
 
+{% raw %}
 ```javascript
 const net = require("net");
 
@@ -1025,6 +1060,7 @@ const server = net.createServer(socket => {
 
 server.listen(4000, () => console.log("Servidor Reactor en puerto 4000"));
 ```
+{% endraw %}
 
 ---
 
@@ -1057,6 +1093,7 @@ Un sistema de pagos:
 - **Observer** notifica a los clientes cuando un pago cambia de estado.
 
 ### Código del sistema (TypeScript)
+{% raw %}
 ```typescript
 // 1. OBSERVER ---------------------------------------------------
 interface Observer {
@@ -1154,10 +1191,12 @@ class PaymentService {
     return result;
   }
 }
-````
+```
+{% endraw %}`
 
 ### Test realista
 
+{% raw %}
 ```typescript
 // TEST DE INTEGRACIÓN COMPLETA -------------------------
 
@@ -1173,6 +1212,7 @@ const premiumPayment = new PaymentService(new PremiumFee(), eventBus);
   console.log(await premiumPayment.process(200, "paypal"));
 })();
 ```
+{% endraw %}
 
 ---
 
@@ -1188,6 +1228,7 @@ Un sistema de pedidos:
 
 ### Código (Python)
 
+{% raw %}
 ```python
 # 1. BUILDER ------------------------------------------------------
 class Order:
@@ -1247,9 +1288,11 @@ class UnitOfWork:
         self._pending_orders.clear()
         return ids
 ```
+{% endraw %}
 
 ### Test realista
 
+{% raw %}
 ```python
 repo = OrderRepository()
 uow = UnitOfWork(repo)
@@ -1266,6 +1309,7 @@ ids = uow.commit()
 
 print("Pedidos guardados:", ids)
 ```
+{% endraw %}
 
 ---
 
@@ -1279,6 +1323,7 @@ print("Pedidos guardados:", ids)
 
 ### Código (TypeScript)
 
+{% raw %}
 ```typescript
 // 1. ADAPTERS -----------------------------------------------------
 class DHLApi {
@@ -1345,9 +1390,11 @@ class ShippingFacade {
   }
 }
 ```
+{% endraw %}
 
 ### Test realista
 
+{% raw %}
 ```typescript
 const pkg = { id: "PKG-777", weight: 5 };
 
@@ -1365,6 +1412,7 @@ const facade2 = new ShippingFacade(
 
 console.log(facade2.processShipment(pkg));
 ```
+{% endraw %}
 
 ---
 
@@ -1372,6 +1420,7 @@ console.log(facade2.processShipment(pkg));
 
 ### Código (Python)
 
+{% raw %}
 ```python
 # 1. OBSERVER ------------------------------------------------------
 class EventBus:
@@ -1437,9 +1486,11 @@ class ApplyHandler(Handler):
     def process(self, ctx):
         return self.command.execute(ctx)
 ```
+{% endraw %}
 
 ### Test realista
 
+{% raw %}
 ```python
 eventbus = EventBus()
 eventbus.subscribe(lambda e, d: print("[LOG EVENT]", e, d))
@@ -1455,6 +1506,7 @@ eventbus.publish("transaction_completed", result)
 
 print(result)
 ```
+{% endraw %}
 
 ---
 
@@ -1462,6 +1514,7 @@ print(result)
 
 ### Código (JavaScript)
 
+{% raw %}
 ```javascript
 class Kernel {
   constructor() {
@@ -1499,6 +1552,7 @@ kernel.register(new MetricsPlugin());
 
 kernel.execute("request", { url: "/home" });
 ```
+{% endraw %}
 
 ---
 
@@ -1529,6 +1583,7 @@ Un sistema de **pedidos distribuidos**:
 - **Strategy:** define cómo aplicar descuentos según tipo de cliente.
 
 ### Código (Python)
+{% raw %}
 ```python
 from abc import ABC, abstractmethod
 from datetime import datetime
@@ -1625,10 +1680,12 @@ class OrderReadModel:
             }
         elif isinstance(event, OrderPaid):
             self.orders[event.order_id]["status"] = "PAID"
-````
+```
+{% endraw %}`
 
 ### Test de integración
 
+{% raw %}
 ```python
 order = OrderAggregate()
 strategy = VIPDiscount()
@@ -1641,6 +1698,7 @@ for e in order.events:
 
 print(read_model.orders)
 ```
+{% endraw %}
 
 ---
 
@@ -1654,6 +1712,7 @@ print(read_model.orders)
 
 ### Código (TypeScript)
 
+{% raw %}
 ```typescript
 // 1. ADAPTER -------------------------------------------------------
 interface HttpService {
@@ -1698,9 +1757,11 @@ class LoggingDecorator implements HttpService {
   }
 }
 ```
+{% endraw %}
 
 ### Test realista
 
+{% raw %}
 ```typescript
 const baseApi = new ExternalApiAdapter();
 const cachedApi = new CachedApiProxy(baseApi);
@@ -1711,6 +1772,7 @@ const loggedApi = new LoggingDecorator(cachedApi);
   await loggedApi.get("https://service/api/users"); // viene del cache
 })();
 ```
+{% endraw %}
 
 ---
 
@@ -1724,6 +1786,7 @@ const loggedApi = new LoggingDecorator(cachedApi);
 
 ### Código (TypeScript)
 
+{% raw %}
 ```typescript
 // 1. OBSERVER ------------------------------------------------------
 type ObserverFn = () => void;
@@ -1779,9 +1842,11 @@ class ToggleTaskCommand {
   execute() { this.vm.toggleTask(this.id); }
 }
 ```
+{% endraw %}
 
 ### Test realista (simulación)
 
+{% raw %}
 ```typescript
 const vm = new TaskViewModel();
 vm.tasks.subscribe(() => console.log("UI Update:", vm.tasks.value));
@@ -1795,6 +1860,7 @@ add2.execute();
 const toggle = new ToggleTaskCommand(vm, 1);
 toggle.execute();
 ```
+{% endraw %}
 
 ---
 
@@ -1810,6 +1876,7 @@ Simula un flujo de reserva de viaje:
 
 ### Código (Python)
 
+{% raw %}
 ```python
 import random, time
 
@@ -1885,9 +1952,11 @@ class TravelBookingSaga:
         finally:
             self.repo.save(self.id, {"state": self.state})
 ```
+{% endraw %}
 
 ### Test realista
 
+{% raw %}
 ```python
 repo = SagaRepository()
 circuit = CircuitBreaker(failure_threshold=2, reset_time=3)
@@ -1897,6 +1966,7 @@ for i in range(5):
     saga.execute()
     print(f"Saga {saga.id} → {saga.state}")
 ```
+{% endraw %}
 
 ---
 
@@ -1938,6 +2008,7 @@ Un **API Gateway** centraliza las peticiones desde el cliente y delega las llama
 - **Facade Pattern:** expone una interfaz única y consistente al cliente.
 
 ### Código (TypeScript)
+{% raw %}
 ```typescript
 // Simulación de microservicios
 class UserService {
@@ -1985,16 +2056,19 @@ class ApiGateway {
     return this.adapter.adapt(user, orders);
   }
 }
-````
+```
+{% endraw %}`
 
 ### Test realista
 
+{% raw %}
 ```typescript
 (async () => {
   const gateway = new ApiGateway();
   console.log(await gateway.handleRequest("user-123"));
 })();
 ```
+{% endraw %}
 
 ---
 
@@ -2010,6 +2084,7 @@ Una arquitectura distribuida en la que:
 
 ### Código (Python)
 
+{% raw %}
 ```python
 import uuid
 
@@ -2069,15 +2144,18 @@ event_bus.subscribe("OrderCreated", payment_service.handle_order_created)
 event_bus.subscribe("OrderCreated", read_model.project_order_created)
 event_bus.subscribe("PaymentDone", read_model.project_payment_done)
 ```
+{% endraw %}
 
 ### Test de flujo completo
 
+{% raw %}
 ```python
 command_service = OrderCommandService(event_bus)
 order_id = command_service.create_order("cust-001", 300)
 
 print("[READ MODEL]", read_model.data)
 ```
+{% endraw %}
 
 ---
 
@@ -2093,6 +2171,7 @@ Un servicio que guarda pedidos en base de datos remota.
 
 ### Código (Python)
 
+{% raw %}
 ```python
 import time, random
 
@@ -2158,9 +2237,11 @@ class UnitOfWork:
                 print("Failed permanently:", order["id"])
         self.pending.clear()
 ```
+{% endraw %}
 
 ### Test realista
 
+{% raw %}
 ```python
 repo = OrderRepository()
 breaker = CircuitBreaker()
@@ -2172,6 +2253,7 @@ for i in range(5):
 
 uow.commit()
 ```
+{% endraw %}
 
 ---
 
@@ -2187,6 +2269,7 @@ Un sistema **event-driven** donde:
 
 ### Código (Python)
 
+{% raw %}
 ```python
 from collections import defaultdict
 
@@ -2233,9 +2316,11 @@ class ProductQueryModel:
     def on_product_created(self, event):
         self.products.append({"name": event["name"], "price": event["price"]})
 ```
+{% endraw %}
 
 ### Test de integración
 
+{% raw %}
 ```python
 broker = KafkaBroker()
 store = EventStore()
@@ -2249,6 +2334,7 @@ command.create_product("Tablet", 700)
 
 print("Productos (Query Model):", query.products)
 ```
+{% endraw %}
 
 ---
 
@@ -2301,9 +2387,11 @@ Cada escenario incluye:
 
 Instalación sugerida (virtualenv):
 
+{% raw %}
 ```bash
 pip install pytest pytest-asyncio
 ```
+{% endraw %}
 
 ---
 
@@ -2321,6 +2409,7 @@ Si cualquiera de los pasos falla, el Orchestrator ejecuta **compensaciones** en 
 
 ### Código (tests/escenario_a.py)
 
+{% raw %}
 ```python
 import asyncio
 import uuid
@@ -2452,6 +2541,7 @@ async def test_orchestrator_inventory_failure_triggers_compensation():
 	state = repo.get(res["saga_id"])
 	assert state["state"] == "COMPENSATED"
 ```
+{% endraw %}
 
 
 ## Escenario B — Coreografía de Saga (Choreography)
@@ -2460,6 +2550,7 @@ async def test_orchestrator_inventory_failure_triggers_compensation():
 En lugar de un Orchestrator central, cada servicio reacciona a eventos y publica nuevos eventos. El flujo emerge de la interacción (choreography). Incluye idempotencia y deduplicación simple.
 
 ### Código (tests/escenario_b.py)
+{% raw %}
 ```python
 import asyncio
 import uuid
@@ -2576,7 +2667,8 @@ dedup = DedupStore()
 	await order_svc.create_order(order)
 	await asyncio.sleep(0.2)
 	assert ("C-2", "FAILED") in notif.events
-````
+```
+{% endraw %}`
 
 
 ## Escenario C — Outbox Pattern + Poller (garantía atómica entre DB y broker)
@@ -2585,6 +2677,7 @@ dedup = DedupStore()
 El Outbox Pattern asegura que la escritura de estado y la emisión de eventos se comporten de forma atómica: la aplicación escribe el estado y el evento en la misma transacción (outbox table). Un poller lee la tabla outbox y publica los eventos al broker.
 
 ### Código (tests/escenario_c.py)
+{% raw %}
 ```python
 import asyncio
 import uuid
@@ -2659,7 +2752,8 @@ async def test_outbox_poller_publishes():
 	assert broker.received[0][1]["id"] == order["id"]
 	# Outbox emptied
 	assert db.fetch_outbox() == []
-````
+```
+{% endraw %}`
 
 ## Escenario D — Dead Letter Queue (DLQ) y Retries
 
@@ -2667,6 +2761,7 @@ async def test_outbox_poller_publishes():
 Mensajes que fallan repetidamente acaban en una DLQ para inspección manual o re-procesado con lógica específica. Implementamos un broker que soporta reintentos configurables y DLQ.
 
 ### Código (tests/escenario_d.py)
+{% raw %}
 ```python
 import asyncio
 import pytest
@@ -2728,7 +2823,8 @@ async def test_retry_succeeds():
 	await broker.publish("S", {"x": 1})
 	await asyncio.sleep(0.1)
 	assert len(broker.dlq) == 0
-````
+```
+{% endraw %}`
 
 ## Buenas prácticas incluidas en los tests
 - Idempotencia: deduplicadores y keys en eventos.

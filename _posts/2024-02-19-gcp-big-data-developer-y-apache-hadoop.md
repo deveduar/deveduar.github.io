@@ -238,6 +238,7 @@ Se va más allá de **MapReduce**, incorporando componentes avanzados del ecosis
 
 ### Manejo eficiente de grandes volúmenes de datos en Python
 #### Lectura de archivos grandes usando iteradores
+{% raw %}
 ```python
 def read_large_file(path):
 	with open(path, "r") as f:
@@ -246,12 +247,14 @@ def read_large_file(path):
 
 for row in read_large_file("datos_grandes.csv"):
 	process(row)
-````
+```
+{% endraw %}`
 
 ### Uso de generadores para optimizar memoria
 
 #### Generadores aplicados a pipelines de datos
 
+{% raw %}
 ```python
 def clean_data(rows):
 	for r in rows:
@@ -261,11 +264,13 @@ data = clean_data(read_large_file("input.txt"))
 for row in data:
 	print(row)
 ```
+{% endraw %}
 
 ### Programación orientada a objetos aplicada a Big Data
 
 #### Clase para un pipeline de procesamiento
 
+{% raw %}
 ```python
 class DataPipeline:
 	def __init__(self, source):
@@ -286,11 +291,13 @@ class DataPipeline:
 pipeline = DataPipeline(read_large_file("data.txt"))
 pipeline.load(pipeline.transform(pipeline.extract()))
 ```
+{% endraw %}
 
 ### Manejo de formatos comunes en Big Data
 
 #### Lectura y escritura de CSV con Pandas
 
+{% raw %}
 ```python
 import pandas as pd
 
@@ -298,18 +305,22 @@ df = pd.read_csv("data.csv")
 df["total"] = df["price"] * df["quantity"]
 df.to_csv("output.csv", index=False)
 ```
+{% endraw %}
 
 #### Lectura y escritura de Parquet
 
+{% raw %}
 ```python
 df = pd.read_parquet("data.parquet")
 df.to_parquet("output.parquet")
 ```
+{% endraw %}
 
 ### Uso de NumPy para cálculo eficiente
 
 #### Operaciones vectorizadas
 
+{% raw %}
 ```python
 import numpy as np
 
@@ -317,11 +328,13 @@ data = np.array([10, 20, 30, 40])
 result = data * 1.21
 print(result)
 ```
+{% endraw %}
 
 ### Procesamiento distribuido con Dask
 
 #### DataFrame distribuido tipo Pandas
 
+{% raw %}
 ```python
 import dask.dataframe as dd
 
@@ -329,11 +342,13 @@ df = dd.read_csv("large_*.csv")
 df_filtered = df[df["sales"] > 1000]
 df_filtered.compute()
 ```
+{% endraw %}
 
 ### Introducción a PySpark
 
 #### Creación de una sesión Spark
 
+{% raw %}
 ```python
 from pyspark.sql import SparkSession
 
@@ -341,68 +356,82 @@ spark = SparkSession.builder \
 	.appName("BigDataApp") \
 	.getOrCreate()
 ```
+{% endraw %}
 
 ### RDDs en PySpark
 
 #### Transformations y Actions
 
+{% raw %}
 ```python
 rdd = spark.sparkContext.parallelize([1, 2, 3, 4, 5])
 rdd_squared = rdd.map(lambda x: x * x)
 print(rdd_squared.collect())
 ```
+{% endraw %}
 
 ### DataFrames en PySpark
 
 #### Creación y operaciones básicas
 
+{% raw %}
 ```python
 data = [("Ana", 34), ("Luis", 45), ("Eva", 29)]
 df = spark.createDataFrame(data, ["name", "age"])
 df.filter(df.age > 30).show()
 ```
+{% endraw %}
 
 ### Operaciones SQL-like en Spark
 
 #### Uso de Spark SQL
 
+{% raw %}
 ```python
 df.createOrReplaceTempView("people")
 spark.sql("SELECT name FROM people WHERE age > 30").show()
 ```
+{% endraw %}
 
 ### Lectura de datos desde HDFS con PySpark
 
 #### Acceso a archivos distribuidos
 
+{% raw %}
 ```python
 df = spark.read.csv("hdfs:///data/input.csv", header=True)
 df.show()
 ```
+{% endraw %}
 
 ### Integración de Python con Hive
 
 #### Lectura de tablas Hive desde Spark
 
+{% raw %}
 ```python
 spark.sql("SELECT * FROM sales_db.transactions").show()
 ```
+{% endraw %}
 
 ### Buenas prácticas de logging
 
 #### Logging en pipelines Big Data
 
+{% raw %}
 ```python
 import logging
 
 logging.basicConfig(level=logging.INFO)
 logging.info("Inicio del procesamiento de datos")
 ```
+{% endraw %}
 
 ### Testing básico de funciones de datos
 
 #### Prueba unitaria simple
 
+{% raw %}
 ```python
 def transform(x):
 	return x * 2
@@ -410,11 +439,13 @@ def transform(x):
 def test_transform():
 	assert transform(3) == 6
 ```
+{% endraw %}
 
 ### Estructuración de proyectos Big Data en Python
 
 #### Estructura típica
 
+{% raw %}
 ```text
 project/
 ├── src/
@@ -426,14 +457,17 @@ project/
 ├── requirements.txt
 └── main.py
 ```
+{% endraw %}
 
 ### Ejecución local vs clúster
 
 #### Envío de una aplicación PySpark a clúster
 
+{% raw %}
 ```bash
 spark-submit --master yarn app.py
 ```
+{% endraw %}
 
 # Developer Training for Spark & Hadoop — Arquitectura Hadoop
 
@@ -668,6 +702,7 @@ spark-submit --master yarn app.py
 	- Lógica de agregación
 
 ### Mapper
+{% raw %}
 ```java
 public class WordCountMapper
 	extends Mapper<LongWritable, Text, Text, IntWritable> {
@@ -686,10 +721,12 @@ public class WordCountMapper
 		}
 	}
 }
-````
+```
+{% endraw %}`
 
 ### Reducer
 
+{% raw %}
 ```java
 public class WordCountReducer
 	extends Reducer<Text, IntWritable, Text, IntWritable> {
@@ -706,9 +743,11 @@ public class WordCountReducer
 	}
 }
 ```
+{% endraw %}
 
 ### Driver
 
+{% raw %}
 ```java
 public class WordCountDriver {
 
@@ -731,6 +770,7 @@ public class WordCountDriver {
 	}
 }
 ```
+{% endraw %}
 
 ## Tipos de datos en MapReduce
 
@@ -863,6 +903,7 @@ public class WordCountDriver {
 
 ## Desarrollo de Mapper en Python
 ### Mapper básico (WordCount)
+{% raw %}
 ```python
 #!/usr/bin/env python3
 import sys
@@ -872,12 +913,14 @@ for line in sys.stdin:
 	words = line.split()
 	for word in words:
 		print(f"{word}\t1")
-````
+```
+{% endraw %}`
 
 ## Desarrollo de Reducer en Python
 
 ### Reducer básico (WordCount)
 
+{% raw %}
 ```python
 #!/usr/bin/env python3
 import sys
@@ -900,6 +943,7 @@ for line in sys.stdin:
 if current_word:
 	print(f"{current_word}\t{current_count}")
 ```
+{% endraw %}
 
 ## Formato de entrada y salida
 
@@ -917,12 +961,15 @@ if current_word:
 
 ### Subida de datos a HDFS
 
+{% raw %}
 ```bash
 hdfs dfs -put input.txt /user/hadoop/input
 ```
+{% endraw %}
 
 ### Ejecución del Job
 
+{% raw %}
 ```bash
 hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming.jar \
 	-input /user/hadoop/input \
@@ -932,28 +979,35 @@ hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming.jar \
 	-file mapper.py \
 	-file reducer.py
 ```
+{% endraw %}
 
 ## Visualización del resultado
 
 ### Lectura de resultados desde HDFS
 
+{% raw %}
 ```bash
 hdfs dfs -cat /user/hadoop/output/part-00000
 ```
+{% endraw %}
 
 ## Debugging y pruebas locales
 
 ### Prueba local del Mapper
 
+{% raw %}
 ```bash
 cat input.txt | python3 mapper.py
 ```
+{% endraw %}
 
 ### Prueba local del flujo completo
 
+{% raw %}
 ```bash
 cat input.txt | python3 mapper.py | sort | python3 reducer.py
 ```
+{% endraw %}
 
 ## Casos de uso comunes
 
@@ -1101,46 +1155,58 @@ cat input.txt | python3 mapper.py | sort | python3 reducer.py
 
 ## Uso práctico de Apache Spark
 ### Creación de una SparkSession
+{% raw %}
 ```python
 from pyspark.sql import SparkSession
 
 spark = SparkSession.builder \
 	.appName("SparkIntro") \
 	.getOrCreate()
-````
+```
+{% endraw %}`
 
 ### Lectura de datos desde HDFS
 
+{% raw %}
 ```python
 df = spark.read.csv("hdfs:///data/input.csv", header=True)
 df.show()
 ```
+{% endraw %}
 
 ### Transformaciones básicas
 
+{% raw %}
 ```python
 df_filtered = df.filter(df["age"] > 30)
 df_filtered.select("name", "age").show()
 ```
+{% endraw %}
 
 ### Agregaciones
 
+{% raw %}
 ```python
 df.groupBy("country").count().show()
 ```
+{% endraw %}
 
 ### Uso de Spark SQL
 
+{% raw %}
 ```python
 df.createOrReplaceTempView("people")
 spark.sql("SELECT country, COUNT(*) FROM people GROUP BY country").show()
 ```
+{% endraw %}
 
 ### Escritura de resultados
 
+{% raw %}
 ```python
 df_filtered.write.parquet("hdfs:///data/output")
 ```
+{% endraw %}
 
 ## Integración con Hadoop
 
@@ -1212,46 +1278,56 @@ df_filtered.write.parquet("hdfs:///data/output")
 
 ## Lectura de datos desde HDFS
 ### Lectura de CSV
+{% raw %}
 ```python
 df = spark.read \
 	.option("header", "true") \
 	.csv("hdfs:///data/input.csv")
 
 df.show()
-````
+```
+{% endraw %}`
 
 ### Lectura de Parquet
 
+{% raw %}
 ```python
 df = spark.read.parquet("hdfs:///data/input_parquet")
 df.printSchema()
 ```
+{% endraw %}
 
 ### Lectura de JSON
 
+{% raw %}
 ```python
 df = spark.read.json("hdfs:///data/input.json")
 df.show()
 ```
+{% endraw %}
 
 ## Escritura de datos en HDFS
 
 ### Escritura en CSV
 
+{% raw %}
 ```python
 df.write \
 	.mode("overwrite") \
 	.option("header", "true") \
 	.csv("hdfs:///data/output_csv")
 ```
+{% endraw %}
 
 ### Escritura en Parquet
 
+{% raw %}
 ```python
 df.write \
 	.mode("overwrite") \
 	.parquet("hdfs:///data/output_parquet")
 ```
+{% endraw %}
 
 ## Formatos de archivo soportados
 
@@ -1275,29 +1351,35 @@ df.write \
 
 ### Cacheo de DataFrames
 
+{% raw %}
 ```python
 df.cache()
 df.count()
 ```
+{% endraw %}
 
 ### Persistencia con nivel de almacenamiento
 
+{% raw %}
 ```python
 from pyspark import StorageLevel
 
 df.persist(StorageLevel.MEMORY_AND_DISK)
 ```
+{% endraw %}
 
 ## Ejecución de Spark sobre YARN
 
 ### Envío de aplicación Spark
 
+{% raw %}
 ```bash
 spark-submit \
 	--master yarn \
 	--deploy-mode cluster \
 	app.py
 ```
+{% endraw %}
 
 ### Beneficios
 
@@ -1729,11 +1811,13 @@ spark-submit \
 - Elegir nivel de persistencia adecuado
 
 ### Persistencia en Spark
+{% raw %}
 ```python
 from pyspark import StorageLevel
 
 df.persist(StorageLevel.MEMORY_AND_DISK)
-````
+```
+{% endraw %}`
 
 ## Optimización de Spark
 
@@ -1752,6 +1836,7 @@ df.persist(StorageLevel.MEMORY_AND_DISK)
 
 ### Ejemplo de envío optimizado
 
+{% raw %}
 ```bash
 spark-submit \
 	--executor-memory 4G \
@@ -1759,6 +1844,7 @@ spark-submit \
 	--num-executors 10 \
 	app.py
 ```
+{% endraw %}
 
 ## Gestión de archivos pequeños
 
@@ -1775,9 +1861,11 @@ spark-submit \
 
 ### Reparticionado en Spark
 
+{% raw %}
 ```python
 df.repartition(10).write.parquet("hdfs:///data/output")
 ```
+{% endraw %}
 
 ## Monitorización y tuning
 

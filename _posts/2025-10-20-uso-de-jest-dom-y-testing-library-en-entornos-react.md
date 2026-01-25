@@ -37,18 +37,23 @@ category: Testing
 
 ## ⚙️ Instalación y configuración
 
+{% raw %}
 ```bash
 npm install --save-dev @testing-library/react @testing-library/jest-dom @testing-library/user-event jest
-````
+```
+{% endraw %}`
 
 Archivo: `jest.setup.ts`
 
+{% raw %}
 ```typescript
 import '@testing-library/jest-dom'
 ```
+{% endraw %}
 
 Archivo: `jest.config.ts`
 
+{% raw %}
 ```typescript
 export default {
   preset: 'ts-jest',
@@ -60,11 +65,13 @@ export default {
   },
 }
 ```
+{% endraw %}
 
 ---
 
 ## 🧩 Ejemplo básico
 
+{% raw %}
 ```tsx
 // src/components/Saludo.tsx
 import React from 'react'
@@ -73,7 +80,9 @@ export const Saludo = ({ nombre }: { nombre: string }) => {
   return <h1 data-testid="titulo">Hola, {nombre} 👋</h1>
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```tsx
 // src/components/Saludo.test.tsx
 import { render, screen } from '@testing-library/react'
@@ -86,18 +95,22 @@ describe('Saludo', () => {
   })
 })
 ```
+{% endraw %}
 
 Resultado:
 
+{% raw %}
 ```
 PASS src/components/Saludo.test.tsx
 ✓ muestra el nombre correctamente (12 ms)
 ```
+{% endraw %}
 
 ---
 
 ## ⚙️ Testing de interacción con `userEvent`
 
+{% raw %}
 ```tsx
 // src/components/Contador.tsx
 import React, { useState } from 'react'
@@ -112,7 +125,9 @@ export const Contador = () => {
   )
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```tsx
 // src/components/Contador.test.tsx
 import { render, screen } from '@testing-library/react'
@@ -131,6 +146,7 @@ describe('Contador', () => {
   })
 })
 ```
+{% endraw %}
 
 > 💡 `userEvent` simula acciones reales (click, tab, input, teclado, etc.), a diferencia de `fireEvent`, que es más bajo nivel.
 
@@ -138,6 +154,7 @@ describe('Contador', () => {
 
 ## 🧠 Ejemplo de pruebas de formularios
 
+{% raw %}
 ```tsx
 // src/components/LoginForm.tsx
 import React, { useState } from 'react'
@@ -160,7 +177,9 @@ export const LoginForm = ({ onLogin }: { onLogin: (u: string, p: string) => void
   )
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```tsx
 // src/components/LoginForm.test.tsx
 import { render, screen } from '@testing-library/react'
@@ -179,11 +198,13 @@ test('envía los datos correctos al login', async () => {
   expect(mockLogin).toHaveBeenCalledWith('admin', '1234')
 })
 ```
+{% endraw %}
 
 ---
 
 ## 🧩 Testing de componentes con hooks o efectos
 
+{% raw %}
 ```tsx
 // src/components/Loader.tsx
 import React, { useEffect, useState } from 'react'
@@ -199,7 +220,9 @@ export const Loader = () => {
   return <div>{ready ? 'Listo ✅' : 'Cargando...'}</div>
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```tsx
 // src/components/Loader.test.tsx
 import { render, screen, waitFor } from '@testing-library/react'
@@ -211,6 +234,7 @@ test('muestra "Listo ✅" después de 1s', async () => {
   await waitFor(() => expect(screen.getByText(/listo/i)).toBeInTheDocument())
 })
 ```
+{% endraw %}
 
 > 🧩 `waitFor` es útil para pruebas con temporizadores, efectos o peticiones asíncronas.
 
@@ -242,6 +266,7 @@ test('muestra "Listo ✅" después de 1s', async () => {
 
 ## 📊 Ejemplo de integración en [CICD](/devops/cicd/)
 
+{% raw %}
 ```yaml
 name: Jest UI Tests
 on: [push, pull_request]
@@ -257,6 +282,7 @@ jobs:
       - run: npm ci
       - run: npm run test -- --coverage
 ```
+{% endraw %}
 
 ---
 

@@ -75,16 +75,19 @@ Apache Spark sigue una arquitectura maestro-esclavo basada en cluster:
 
 ## Ejemplo de Código: PySpark
 ### Creación de SparkSession
+{% raw %}
 ```python
 from pyspark.sql import SparkSession
 
 spark = SparkSession.builder \
 	.appName("EjemploSpark") \
 	.getOrCreate()
-````
+```
+{% endraw %}`
 
 ### Creación y Transformación de DataFrame
 
+{% raw %}
 ```python
 data = [("Eduardo", 30), ("Ana", 25), ("Luis", 35)]
 columns = ["Nombre", "Edad"]
@@ -95,9 +98,11 @@ df.show()
 df_filtered = df.filter(df.Edad > 28)
 df_filtered.show()
 ```
+{% endraw %}
 
 ### Lectura y Escritura de Datos
 
+{% raw %}
 ```python
 # Leer desde CSV
 df_csv = spark.read.csv("datos.csv", header=True, inferSchema=True)
@@ -105,6 +110,7 @@ df_csv = spark.read.csv("datos.csv", header=True, inferSchema=True)
 # Escribir en parquet
 df_csv.write.parquet("salida.parquet")
 ```
+{% endraw %}
 
 ## Optimización y Buenas Prácticas
 
@@ -182,6 +188,7 @@ df_csv.write.parquet("salida.parquet")
 
 ## Ejemplo de Código: Broadcast y Accumulator en PySpark
 ### Broadcast
+{% raw %}
 ```python
 from pyspark.sql import SparkSession
 
@@ -194,10 +201,12 @@ broadcast_factor = spark.sparkContext.broadcast(factor)
 
 df_rdd = df.rdd.map(lambda row: (row.Nombre, row.Edad * broadcast_factor.value))
 df_rdd.collect()
-````
+```
+{% endraw %}`
 
 ### Accumulator
 
+{% raw %}
 ```python
 accum = spark.sparkContext.accumulator(0)
 
@@ -209,9 +218,11 @@ def increment(x):
 
 print("Cantidad de mayores de 30:", accum.value)
 ```
+{% endraw %}
 
 ## Ejemplo de Código: Structured Streaming con Kafka
 
+{% raw %}
 ```python
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import expr
@@ -233,6 +244,7 @@ query = df_parsed.writeStream \
 
 query.awaitTermination()
 ```
+{% endraw %}
 
 ## Recursos y Referencias Avanzadas
 
@@ -310,6 +322,7 @@ Apache Sqoop es una herramienta diseñada para transferir datos entre sistemas d
 - Integración con Hadoop para generar automáticamente ficheros CSV o Avro a partir de tablas relacionales.
 
 ### Ejemplo de Uso Básico
+{% raw %}
 ```bash
 # Importar una tabla de MySQL a HDFS
 sqoop import \
@@ -319,7 +332,8 @@ sqoop import \
 --table empleados \
 --target-dir /hadoop/empleados \
 --m 1
-````
+```
+{% endraw %}`
 
 - `--m 1` indica número de mappers (tareas paralelas) para la importación.
 - Los datos importados pueden ser procesados posteriormente con Spark, Hive o Impala.
@@ -388,6 +402,7 @@ La partición de datos es clave para mejorar la eficiencia en procesamiento y co
 	- Facilita la organización y mantenimiento de datos históricos.
 
 ### Ejemplo de Creación de Tabla Particionada en Hive
+{% raw %}
 ```sql
 CREATE TABLE ventas (
 	id INT,
@@ -396,16 +411,19 @@ CREATE TABLE ventas (
 )
 PARTITIONED BY (anio INT, mes INT)
 STORED AS PARQUET;
-````
+```
+{% endraw %}`
 
 ### Ejemplo de Consulta Particionada
 
+{% raw %}
 ```sql
 SELECT producto, SUM(monto)
 FROM ventas
 WHERE anio = 2025 AND mes = 12
 GROUP BY producto;
 ```
+{% endraw %}
 
 * Solo se escanean los datos correspondientes a la partición seleccionada, mejorando el rendimiento de la consulta.
 
@@ -427,6 +445,7 @@ Apache Flume es un sistema distribuido diseñado para la ingestión eficiente de
 - Integración con Spark para procesamiento en tiempo real o batch.
 
 ### Ejemplo de Configuración Básica
+{% raw %}
 ```properties
 # Flume agent configuration
 agent.sources = source1
@@ -441,7 +460,8 @@ agent.channels.channel1.type = memory
 agent.sinks.sink1.type = hdfs
 agent.sinks.sink1.hdfs.path = hdfs://namenode:8020/logs/
 agent.sinks.sink1.channel = channel1
-````
+```
+{% endraw %}`
 
 ## Parte 3: Spark Basics
 
@@ -479,12 +499,14 @@ Los RDDs son la base de Spark y permiten el procesamiento distribuido y tolerant
 
 ### Ejemplo Básico en PySpark
 
+{% raw %}
 ```python
 rdd = spark.sparkContext.parallelize([1, 2, 3, 4, 5])
 rdd_filtered = rdd.filter(lambda x: x % 2 == 0)
 rdd_sum = rdd_filtered.reduce(lambda a, b: a + b)
 print(rdd_sum)  # Output: 6
 ```
+{% endraw %}
 
 ## Parte 3: Writing and Deploying Spark Applications
 
@@ -497,6 +519,7 @@ print(rdd_sum)  # Output: 6
 
 ### Ejemplo de Aplicación PySpark
 
+{% raw %}
 ```python
 from pyspark.sql import SparkSession
 
@@ -509,6 +532,7 @@ df_agg.write.parquet("hdfs://namenode:8020/output/ventas_agg.parquet")
 
 spark.stop()
 ```
+{% endraw %}
 
 ### Despliegue
 
@@ -516,6 +540,7 @@ spark.stop()
 * **Modo Cluster:** enviar la aplicación a un cluster Hadoop/Spark para ejecución distribuida.
 * **Comando spark-submit:**
 
+{% raw %}
 ```bash
 spark-submit \
 --master yarn \
@@ -525,6 +550,7 @@ spark-submit \
 --executor-cores 2 \
 mi_aplicacion.py
 ```
+{% endraw %}
 
 * Parámetros importantes:
 
@@ -561,12 +587,14 @@ Caching y persistence permiten almacenar RDD o DataFrames en memoria o disco par
 - **MEMORY_ONLY_SER / MEMORY_AND_DISK_SER:** versiones serializadas que ocupan menos espacio en memoria.
 
 ### Ejemplo en PySpark
+{% raw %}
 ```python
 rdd = spark.sparkContext.textFile("hdfs://namenode:8020/logs/app.log")
 rdd_filtered = rdd.filter(lambda line: "ERROR" in line)
 rdd_filtered.persist(storageLevel=StorageLevel.MEMORY_AND_DISK)
 count_errors = rdd_filtered.count()
-````
+```
+{% endraw %}`
 
 ### Beneficios
 
@@ -586,11 +614,13 @@ Algunos patrones comunes que facilitan el desarrollo de aplicaciones Spark:
 
 ### Ejemplo de Patrón Map-Reduce
 
+{% raw %}
 ```python
 rdd = spark.sparkContext.parallelize([("a",1), ("b",1), ("a",2)])
 rdd_agg = rdd.reduceByKey(lambda x, y: x + y)
 rdd_agg.collect()  # Output: [('a',3), ('b',1)]
 ```
+{% endraw %}
 
 ## Parte 4: Preview: Spark SQL
 
@@ -601,11 +631,13 @@ Spark SQL permite consultar datos estructurados usando SQL y DataFrames, integra
 * Soporta integración con BI tools y visualización de datos.
 * Ejemplo básico:
 
+{% raw %}
 ```python
 df.createOrReplaceTempView("ventas")
 result = spark.sql("SELECT producto, SUM(monto) as total FROM ventas GROUP BY producto")
 result.show()
 ```
+{% endraw %}
 
 ## Parte 4: Conclusion
 
@@ -643,13 +675,15 @@ Kite SDK es un framework que simplifica la interacción con datasets en Hadoop, 
 - Integración con herramientas de desarrollo y testing para pipelines de datos.
 
 ### Ejemplo de Uso Básico (Java)
+{% raw %}
 ```java
 Dataset<Record> dataset = Datasets.create("ventas", Record.class);
 Record record = new Record();
 record.put("producto", "Laptop");
 record.put("monto", 1200.0);
 dataset.write(record);
-````
+```
+{% endraw %}`
 
 ## Parte 1: Definiendo y usando Data Sets
 
@@ -682,6 +716,7 @@ Apache Sqoop permite la transferencia eficiente de datos entre bases de datos re
 
 ### Ejemplo de Importación Básica
 
+{% raw %}
 ```bash
 sqoop import \
 --connect jdbc:mysql://localhost:3306/empresa \
@@ -691,6 +726,7 @@ sqoop import \
 --target-dir /user/hadoop/empleados \
 --m 1
 ```
+{% endraw %}
 
 - `--m 1` indica el número de mappers (tareas paralelas) para la importación.
 - Los datos importados pueden ser procesados con Spark, Hive o Impala.
@@ -710,6 +746,7 @@ Apache Flume es un sistema distribuido diseñado para recolectar, agregar y move
 - Integración con Spark para procesamiento posterior.
 
 ### Ejemplo de Configuración Básica
+{% raw %}
 ```properties
 agent.sources = source1
 agent.channels = channel1
@@ -723,7 +760,8 @@ agent.channels.channel1.type = memory
 agent.sinks.sink1.type = hdfs
 agent.sinks.sink1.hdfs.path = hdfs://namenode:8020/logs/
 agent.sinks.sink1.channel = channel1
-````
+```
+{% endraw %}`
 
 ## Parte 2: Desarrollo de componentes Flume customizados
 
@@ -754,6 +792,7 @@ Apache Oozie es un coordinador de workflows que permite automatizar y programar 
 
 ### Ejemplo de Workflow Básico (XML)
 
+{% raw %}
 ```xml
 <workflow-app name="ejemplo_workflow" xmlns="uri:oozie:workflow:0.5">
     <start to="spark-node"/>
@@ -776,6 +815,7 @@ Apache Oozie es un coordinador de workflows que permite automatizar y programar 
     <end name="end"/>
 </workflow-app>
 ```
+{% endraw %}
 
 ## Parte 2: Procesamiento de pipeline de datos con Apache Crunch
 
@@ -795,6 +835,7 @@ Apache Crunch es un framework para construir pipelines de datos escalables sobre
 
 ### Ejemplo de Pipeline Básico en Java
 
+{% raw %}
 ```java
 Pipeline pipeline = new MRPipeline(EjemploCrunch.class, getConf());
 PCollection<String> lines = pipeline.readTextFile("hdfs://user/data/input.txt");
@@ -804,6 +845,7 @@ PCollection<String> errors = lines.filter(new FilterFn<String>() {
 errors.write(To.textFile("hdfs://user/data/errors_output.txt"));
 pipeline.run();
 ```
+{% endraw %}
 
 * El pipeline lee datos desde HDFS, filtra registros de error y los escribe en un directorio de salida.
 
@@ -816,6 +858,7 @@ Apache Hive permite trabajar con datos estructurados y semi-estructurados, inclu
 - **Tabla Externa:** permite leer datos existentes en HDFS sin moverlos ni copiarlos.
 
 ### Ejemplo de Tabla con Formato JSON
+{% raw %}
 ```sql
 CREATE EXTERNAL TABLE logs_json (
     user_id STRING,
@@ -825,7 +868,8 @@ CREATE EXTERNAL TABLE logs_json (
 ROW FORMAT SERDE 'org.apache.hive.hcatalog.data.JsonSerDe'
 STORED AS TEXTFILE
 LOCATION '/user/hive/logs_json';
-````
+```
+{% endraw %}`
 
 * Hive utiliza el SerDe para interpretar los archivos JSON y permitir consultas SQL sobre ellos.
 
@@ -847,6 +891,7 @@ Impala permite ejecutar consultas SQL de baja latencia sobre datos almacenados e
 
 ### Ejemplo de Query Interactiva
 
+{% raw %}
 ```sql
 SELECT producto, SUM(monto) as total_ventas
 FROM ventas
@@ -854,6 +899,7 @@ WHERE fecha BETWEEN '2025-01-01' AND '2025-12-31'
 GROUP BY producto
 ORDER BY total_ventas DESC;
 ```
+{% endraw %}
 
 * Solo escanea las particiones necesarias si la tabla está particionada, mejorando rendimiento.
 
@@ -876,6 +922,7 @@ Morphlines es un framework ligero que permite procesar, limpiar y transformar da
 
 ### Ejemplo Básico de Configuración Morphlines
 
+{% raw %}
 ```json
 {
   "commands": [
@@ -886,6 +933,7 @@ Morphlines es un framework ligero que permite procesar, limpiar y transformar da
   ]
 }
 ```
+{% endraw %}
 
 ## Parte 3: Autorizar Búsqueda completa en los datos guardados con HDFS
 
@@ -930,11 +978,13 @@ Los RDDs (Resilient Distributed Datasets) son la unidad fundamental de procesami
 - **Particionamiento:** distribución de datos entre nodos para paralelismo y eficiencia en joins/aggregations.
 
 ### Ejemplo PySpark
+{% raw %}
 ```python
 rdd = spark.sparkContext.parallelize([1,2,3,4,5])
 rdd_squared = rdd.map(lambda x: x**2)
 print(rdd_squared.collect())  # Output: [1,4,9,16,25]
-````
+```
+{% endraw %}`
 
 ## Parte 4: El Hadoop Distributed File System
 
@@ -966,6 +1016,7 @@ Spark puede ejecutarse en diferentes modos para aprovechar recursos de un cluste
 
 ### Uso de spark-submit
 
+{% raw %}
 ```bash
 spark-submit \
 --master yarn \
@@ -975,6 +1026,7 @@ spark-submit \
 --executor-cores 2 \
 mi_aplicacion.py
 ```
+{% endraw %}
 
 * `--master`: tipo de cluster manager.
 * `--deploy-mode`: cluster o client.
@@ -1011,6 +1063,7 @@ El caching y persistence permiten almacenar RDDs o DataFrames en memoria o disco
 - **MEMORY_ONLY_SER / MEMORY_AND_DISK_SER:** versiones serializadas para reducir uso de memoria.
 
 ### Ejemplo PySpark
+{% raw %}
 ```python
 from pyspark import StorageLevel
 
@@ -1018,7 +1071,8 @@ rdd = spark.sparkContext.textFile("hdfs://namenode:8020/logs/app.log")
 rdd_errors = rdd.filter(lambda line: "ERROR" in line)
 rdd_errors.persist(StorageLevel.MEMORY_AND_DISK)
 count_errors = rdd_errors.count()
-````
+```
+{% endraw %}`
 
 ### Beneficios
 
@@ -1040,6 +1094,7 @@ Desarrollar aplicaciones Spark implica estructurar el flujo de procesamiento de 
 
 ### Ejemplo PySpark
 
+{% raw %}
 ```python
 from pyspark.sql import SparkSession
 
@@ -1052,9 +1107,11 @@ df_agg.write.parquet("hdfs://namenode:8020/output/ventas_agg.parquet")
 
 spark.stop()
 ```
+{% endraw %}
 
 ### Despliegue con spark-submit
 
+{% raw %}
 ```bash
 spark-submit \
 --master yarn \
@@ -1064,6 +1121,7 @@ spark-submit \
 --executor-cores 2 \
 mi_aplicacion.py
 ```
+{% endraw %}
 
 ## Parte 5: Spark, Hadoop y el Enterprise Data Center
 
@@ -1094,6 +1152,7 @@ Spark Streaming permite procesar flujos de datos en tiempo real utilizando la mi
 - **Sinks:** salida de datos a HDFS, bases de datos, dashboards o sistemas externos.
 
 ### Ejemplo Básico en PySpark
+{% raw %}
 ```python
 from pyspark.sql import SparkSession
 from pyspark.streaming import StreamingContext
@@ -1107,7 +1166,8 @@ errors.pprint()
 
 ssc.start()
 ssc.awaitTermination()
-````
+```
+{% endraw %}`
 
 ### Buenas Prácticas
 

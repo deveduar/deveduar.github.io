@@ -90,6 +90,7 @@ category: cloud
 ## Bloques de Código
 
 ### Ejemplo AWS Auto Scaling Group (Terraform)
+{% raw %}
 ```hcl
 resource "aws_autoscaling_group" "app" {
 	launch_template {
@@ -107,10 +108,12 @@ resource "aws_autoscaling_group" "app" {
 		propagate_at_launch = true
 	}
 }
-````
+```
+{% endraw %}`
 
 ### Ejemplo de HPA en Kubernetes (YAML)
 
+{% raw %}
 ```yaml
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
@@ -131,9 +134,11 @@ spec:
 	      type: Utilization
 	      averageUtilization: 70
 ```
+{% endraw %}
 
 ### Ejemplo de Auto Scaling basado en Métricas Personalizadas (Prometheus Adapter)
 
+{% raw %}
 ```yaml
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
@@ -155,6 +160,7 @@ spec:
 	      type: AverageValue
 	      averageValue: "30"
 ```
+{% endraw %}
 
 # Auto Scaling — Conceptos Avanzados y Arquitecturas
 

@@ -10,6 +10,7 @@ categories:
 ## Integración con Frameworks Específicos
 
 ### Django Celery Integration
+{% raw %}
 ```python
 # settings.py Django
 CELERY_BROKER_URL = 'redis://localhost:6379/0'
@@ -22,8 +23,10 @@ def debug_task(self):
     from django.core.cache import cache
     cache.set('celery_status', 'running', 300)
 ```
+{% endraw %}
 
 ### Flask Context Management
+{% raw %}
 ```python
 from celery import Celery
 
@@ -39,10 +42,12 @@ def make_celery(app):
     celery.Task = ContextTask
     return celery
 ```
+{% endraw %}
 
 ## Protocolos de Comunicación Avanzados
 
 ### Custom Serializers
+{% raw %}
 ```python
 # Serializador personalizado para mensajes complejos
 from kombu.serialization import register
@@ -58,6 +63,7 @@ register('my_serializer', my_serializer, my_deserializer,
          content_type='application/x-my-serializer',
          content_encoding='utf-8')
 ```
+{% endraw %}
 
 ### Protocolos de Mensajería Alternativos
 - **Protocolo AMQP 1.0**: Para entornos enterprise
@@ -68,6 +74,7 @@ register('my_serializer', my_serializer, my_deserializer,
 ## Gestión de Estado Distribuido
 
 ### Distributed Locks
+{% raw %}
 ```python
 from celery.contrib import rdb
 from redis.lock import Lock
@@ -82,8 +89,10 @@ def tarea_con_lock(resource_id):
         finally:
             lock.release()
 ```
+{% endraw %}
 
 ### State Machines para Workflows Complejos
+{% raw %}
 ```python
 class OrderProcessingWorkflow:
     states = ['created', 'payment_processing', 'fulfillment', 'completed']
@@ -93,10 +102,12 @@ class OrderProcessingWorkflow:
         # Transición de estado
         self.update_state(order_id, 'payment_processing')
 ```
+{% endraw %}
 
 ## Optimizaciones de Memoria y CPU
 
 ### Memory Profiling y Optimization
+{% raw %}
 ```python
 import tracemalloc
 from celery.signals import worker_process_init
@@ -111,8 +122,10 @@ def tarea_optimizada():
     for chunk in read_large_file_in_chunks():
         procesar_chunk(chunk)
 ```
+{% endraw %}
 
 ### CPU Affinity y Resource Management
+{% raw %}
 ```python
 # Configuración de afinidad de CPU
 app.conf.worker_cpu_affinity = [0, 1, 2, 3]  # Cores específicos
@@ -121,10 +134,12 @@ app.conf.worker_cpu_affinity = [0, 1, 2, 3]  # Cores específicos
 app.conf.worker_max_memory_per_child = 256000  # 256MB
 app.conf.worker_max_tasks_per_child = 1000
 ```
+{% endraw %}
 
 ## Seguridad Avanzada
 
 ### Task Signing y Verification
+{% raw %}
 ```python
 # Firma de tareas para seguridad
 from celery.security import setup_security
@@ -139,8 +154,10 @@ def tarea_segura(self, datos_sensibles):
     # Solo se ejecuta si la firma es válida
     pass
 ```
+{% endraw %}
 
 ### Encryption en Tránsito
+{% raw %}
 ```python
 # Configuración de encriptación
 app.conf.broker_use_ssl = {
@@ -150,10 +167,12 @@ app.conf.broker_use_ssl = {
     'cert_reqs': ssl.CERT_REQUIRED
 }
 ```
+{% endraw %}
 
 ## Internacionalización y Localización
 
 ### Multi-language Task Support
+{% raw %}
 ```python
 from celery import current_app
 
@@ -164,10 +183,12 @@ def enviar_email_localizado(usuario_id, template_base):
         template = f"{template_base}_{usuario.language}.html"
         generar_y_enviar_email(usuario, template)
 ```
+{% endraw %}
 
 ## Analytics y Business Intelligence
 
 ### Task Metrics Integration
+{% raw %}
 ```python
 from prometheus_client import Counter, Histogram
 
@@ -182,10 +203,12 @@ def tarea_instrumentada(self, *args):
     with TASK_DURATION.labels(task_name=self.name).time():
         return proceso_principal(*args)
 ```
+{% endraw %}
 
 ## Edge Computing y Dispositivos Móviles
 
 ### Celery en Entornos Resource-Constrained
+{% raw %}
 ```python
 # Configuración para dispositivos con recursos limitados
 app.conf.worker_concurrency = 1
@@ -196,10 +219,12 @@ app.conf.broker_heartbeat = 0  # Desactivar heartbeat para ahorrar batería
 def tarea_movil(datos_sensor):
     procesar_datos_baja_energia(datos_sensor)
 ```
+{% endraw %}
 
 ## Machine Learning Integration
 
 ### Distributed Model Training
+{% raw %}
 ```python
 @app.task
 def entrenar_modelo_federado(participante_id, modelo_global):
@@ -213,10 +238,12 @@ def agregar_modelos(weights_list):
     averaged_weights = promedio_pesados(weights_list)
     return averaged_weights
 ```
+{% endraw %}
 
 ## Blockchain y Smart Contracts
 
 ### Task Execution con Inmutabilidad
+{% raw %}
 ```python
 @app.task
 def ejecutar_smart_contract(contract_address, function_call):
@@ -230,10 +257,12 @@ def ejecutar_smart_contract(contract_address, function_call):
     confirmar_ejecucion(tx_hash, resultado)
     return tx_hash
 ```
+{% endraw %}
 
 ## Quantum Computing Preparation
 
 ### Task Distribution para Computación Cuántica
+{% raw %}
 ```python
 @app.task
 def distribuir_calculo_cuantico(problema, backend_preferido):
@@ -247,10 +276,12 @@ def distribuir_calculo_cuantico(problema, backend_preferido):
     job = backend.run(circuito, shots=1000)
     return job.result().get_counts()
 ```
+{% endraw %}
 
 ## Legal y Compliance
 
 ### GDPR Compliant Task Processing
+{% raw %}
 ```python
 @app.task
 def procesar_datos_gdpr(usuario_id, derecho_ejercido):
@@ -266,10 +297,12 @@ def procesar_datos_gdpr(usuario_id, derecho_ejercido):
     
     registrar_ejercicio_derecho(usuario_id, derecho_ejercido)
 ```
+{% endraw %}
 
 ## Real-time Collaboration
 
 ### Collaborative Editing con Operational Transforms
+{% raw %}
 ```python
 @app.task
 def procesar_operacion_edicion(doc_id, operacion, version):
@@ -282,10 +315,12 @@ def procesar_operacion_edicion(doc_id, operacion, version):
     # Broadcast a otros colaboradores
     broadcast_actualizacion(doc_id, operacion_transformada)
 ```
+{% endraw %}
 
 ## Gaming y Real-time Applications
 
 ### Game State Synchronization
+{% raw %}
 ```python
 @app.task
 def procesar_accion_jugador(partida_id, jugador_id, accion):
@@ -299,3 +334,4 @@ def procesar_accion_jugador(partida_id, jugador_id, accion):
         # Verificar condiciones de victoria
         verificar_condiciones_victoria(partida_id)
 ```
+{% endraw %}

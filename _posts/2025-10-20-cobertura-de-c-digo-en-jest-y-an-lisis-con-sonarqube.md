@@ -42,23 +42,28 @@ category: Testing
 - **Lines** → líneas de código ejecutadas al menos una vez.
 
 Ejemplo de reporte en consola:
+{% raw %}
 ```
 
 | File      | % Stmts | % Branch | % Funcs | % Lines |
 | --------- | ------- | -------- | ------- | ------- |
 | All files | 92.3    | 88.7     | 91.5    | 93.2    |
 
-````
+```
+{% endraw %}`
 
 ## ⚙️ Activar la cobertura en Jest
 
 ### 1. Desde línea de comandos
+{% raw %}
 ```bash
 npx jest --coverage
-````
+```
+{% endraw %}`
 
 ### 2. En el archivo `package.json`
 
+{% raw %}
 ```json
 {
 	"scripts": {
@@ -66,9 +71,11 @@ npx jest --coverage
 	}
 }
 ```
+{% endraw %}
 
 ### 3. Configuración avanzada en `jest.config.js`
 
+{% raw %}
 ```javascript
 export default {
 	collectCoverage: true,
@@ -80,6 +87,7 @@ export default {
 	coverageReporters: ["text", "lcov", "cobertura"],
 }
 ```
+{% endraw %}
 
 ## 📂 Reportes generados
 
@@ -92,12 +100,15 @@ export default {
 
 ### 1. Instalar y configurar jest-sonar - npm
 
+{% raw %}
 ```bash
 npm install --save-dev jest-sonar
 ```
+{% endraw %}
 
 ### 2. Agregar al `package.json`
 
+{% raw %}
 ```json
 "jestSonar": {
 	"reportPath": "coverage",
@@ -105,17 +116,21 @@ npm install --save-dev jest-sonar
 	"indent": 4
 }
 ```
+{% endraw %}
 
 ### 3. Ejecutar los tests con reporter Sonar
 
+{% raw %}
 ```bash
 jest --coverage --testResultsProcessor jest-sonar
 ```
+{% endraw %}
 
 ### 4. Configurar el análisis en SonarQube o SonarCloud
 
 * En el archivo `sonar-project.properties`:
 
+{% raw %}
 ```
 sonar.projectKey=mi-proyecto
 sonar.sources=src
@@ -123,11 +138,13 @@ sonar.tests=tests
 sonar.javascript.lcov.reportPaths=coverage/lcov.info
 sonar.testExecutionReportPaths=coverage/sonar-report.xml
 ```
+{% endraw %}
 
 ## 🔄 Integración con github actions
 
 Ejemplo de pipeline que genera y sube cobertura a SonarCloud:
 
+{% raw %}
 ```yaml
 name: Jest Coverage Report
 on:
@@ -155,6 +172,7 @@ jobs:
             -Dsonar.organization=mi-org
             -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
 ```
+{% endraw %}
 
 ## 📈 Análisis de resultados y métricas
 
@@ -167,12 +185,15 @@ jobs:
 * Las alertas de cobertura pueden configurarse en SonarQube para bloquear merges si no se cumplen umbrales.
 * Puedes integrar badges de cobertura en README.md mediante servicios como Codecov o SonarCloud:
 
-  ```markdown
+  {% raw %}
+```markdown
   ![Coverage](https://sonarcloud.io/api/project_badges/measure?project=mi-proyecto&metric=coverage)
   ```
+{% endraw %}
 
 ## 🧠 Ejemplo práctico
 
+{% raw %}
 ```javascript
 // math.js
 export const dividir = (a, b) => {
@@ -180,7 +201,9 @@ export const dividir = (a, b) => {
 	return a / b
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```javascript
 // math.test.js
 import { dividir } from './math'
@@ -194,12 +217,15 @@ describe('dividir()', () => {
 	})
 })
 ```
+{% endraw %}
 
 Ejecutar cobertura:
 
+{% raw %}
 ```bash
 npm run test:coverage
 ```
+{% endraw %}
 
 Generará reportes con información de líneas y ramas cubiertas, lo que permitirá a Sonar detectar que todos los flujos están probados.
 

@@ -41,6 +41,7 @@ category: Testing
 - **Refactor:** Mejorar la estructura del código manteniendo los tests verdes.  
 
 **Código de ejemplo:**
+{% raw %}
 ```ts
 // Red
 test('should fail login with wrong password', () => {
@@ -62,7 +63,8 @@ function login(email: string, password: string) {
     ? { success: true, token: 'jwt-token' } 
     : { success: false };
 }
-````
+```
+{% endraw %}`
 
 **Experiencia de uso:** "Implementé este ciclo en un microservicio de autenticación, logrando tests unitarios confiables y cobertura completa antes de mergear."
 
@@ -74,11 +76,13 @@ function login(email: string, password: string) {
 **Respuesta:** Objetos que reemplazan dependencias reales para aislar unidades bajo prueba. Incluye Dummy, Stub, Spy, Mock y Fake.  
 **Ejemplo:**
 
+{% raw %}
 ```ts
 import axios from 'axios';
 jest.mock('axios');
 axios.get.mockResolvedValue({ data: { name: 'Empresa ABC' } });
 ```
+{% endraw %}
 
 **Experiencia de uso:** "Mockeamos APIs externas en integración de pagos para tests rápidos y consistentes."
 
@@ -102,6 +106,7 @@ axios.get.mockResolvedValue({ data: { name: 'Empresa ABC' } });
 
 **Ejemplo práctico:**
 
+{% raw %}
 ```ts
 describe('calculateDiscount', () => {
   beforeEach(() => resetDatabase());
@@ -111,6 +116,7 @@ describe('calculateDiscount', () => {
   });
 });
 ```
+{% endraw %}
 
 ---
 

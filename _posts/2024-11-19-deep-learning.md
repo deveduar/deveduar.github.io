@@ -48,6 +48,7 @@ category: Data Science
 ## Bloques de Código
 
 ### Ejemplo de Regresión Lineal en Python
+{% raw %}
 ```python
 import numpy as np
 from sklearn.linear_model import LinearRegression
@@ -63,10 +64,12 @@ model.fit(X, y)
 # Predicción
 pred = model.predict(np.array(6))
 print(pred)
-````
+```
+{% endraw %}`
 
 ### Ejemplo Básico de NLP con Hugging Face
 
+{% raw %}
 ```python
 from transformers import pipeline
 
@@ -77,9 +80,11 @@ classifier = pipeline("sentiment-analysis")
 result = classifier("Me encanta aprender Deep Learning!")
 print(result)
 ```
+{% endraw %}
 
 ### Ejemplo de Computer Vision con PyTorch
 
+{% raw %}
 ```python
 import torch
 import torchvision.models as models
@@ -104,6 +109,7 @@ out = model(img_t)
 _, pred = torch.max(out, 1)
 print(pred)
 ```
+{% endraw %}
 
 # Deep Learning Intro
 
@@ -265,6 +271,7 @@ print(pred)
 - [Azure](/cloud/azure/): despliegue de modelos, entrenamiento a gran escala y servicios de IA.
 
 ## Ejemplo: Arquitectura Simple de Red Neuronal con Keras
+{% raw %}
 ```python
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Dropout
@@ -280,10 +287,12 @@ model = Sequential([
 # Compilar modelo
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 model.summary()
-````
+```
+{% endraw %}`
 
 ## Ejemplo: Red Convolucional Básica
 
+{% raw %}
 ```python
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense
@@ -301,3 +310,4 @@ model = Sequential([
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 model.summary()
 ```
+{% endraw %}

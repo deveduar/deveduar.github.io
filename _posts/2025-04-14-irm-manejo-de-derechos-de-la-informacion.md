@@ -188,6 +188,7 @@ IRM es una pieza esencial del hardening a nivel **documental**, complementando l
 # Bloques de Código (Cada uno con Heading Propio)
 
 ## Ejemplo de Política IRM en Pseudocódigo
+{% raw %}
 ```yaml
 document_policy:
   classification: "Confidencial"
@@ -208,10 +209,12 @@ document_policy:
       - open
       - forward_attempt
       - print_attempt
-````
+```
+{% endraw %}`
 
 ## Ejemplo de Flujo de Verificación de Identidad Antes de Abrir Archivo
 
+{% raw %}
 ```python
 def verify_access(user, document):
     if not user.is_authenticated():
@@ -222,5 +225,6 @@ def verify_access(user, document):
         raise AccessDenied("Document expired")
     return decrypt_document(document, user.keys)
 ```
+{% endraw %}
 
 ---

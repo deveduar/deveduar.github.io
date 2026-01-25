@@ -40,6 +40,7 @@ El testing de software es la práctica de **verificar y validar** que un sistema
 ### AAA Pattern (Arrange – Act – Assert)
 Estructura clásica para escribir tests claros:
 
+{% raw %}
 ```js
 // JavaScript (Jest)
 describe('Calculator', () => {
@@ -54,7 +55,8 @@ describe('Calculator', () => {
     expect(result).toBe(5);
   });
 });
-````
+```
+{% endraw %}`
 
 ✅ **Prácticas**
 
@@ -71,6 +73,7 @@ describe('Calculator', () => {
 
 Preparar y limpiar el entorno antes/después de cada test.
 
+{% raw %}
 ```ts
 // TypeScript + Jest
 beforeEach(() => {
@@ -81,6 +84,7 @@ afterEach(() => {
   // limpiar estado global
 });
 ```
+{% endraw %}
 
 ---
 
@@ -92,6 +96,7 @@ Evalúa **funciones o métodos individuales** de manera aislada.
 
 ### 💻 Ejemplo (Python + pytest)
 
+{% raw %}
 ```python
 def add(a, b):
     return a + b
@@ -99,6 +104,7 @@ def add(a, b):
 def test_add():
     assert add(2, 3) == 5
 ```
+{% endraw %}
 
 ### 💡 Buenas Prácticas
 
@@ -121,6 +127,7 @@ Verifica que **varios componentes funcionen correctamente juntos**.
 
 ### 💻 Ejemplo (Node.js + Supertest)
 
+{% raw %}
 ```js
 import request from 'supertest';
 import app from '../app.js';
@@ -136,6 +143,7 @@ describe('POST /login', () => {
   });
 });
 ```
+{% endraw %}
 
 ✅ **Tips**
 
@@ -156,6 +164,7 @@ Validar **funcionalidad completa** o endpoints REST/API.
 
 ### 💻 Ejemplo (REST Assured – Java)
 
+{% raw %}
 ```java
 import io.restassured.RestAssured;
 import org.junit.jupiter.api.Test;
@@ -178,6 +187,7 @@ public class LoginAPITest {
   }
 }
 ```
+{% endraw %}
 
 ✅ **Prácticas**
 
@@ -203,6 +213,7 @@ public class LoginAPITest {
 
 ### 💻 Ejemplo (JavaScript + Jest)
 
+{% raw %}
 ```js
 function sum(a, b) {
   return a + b;
@@ -212,6 +223,7 @@ test('sum adds two numbers', () => {
   expect(sum(2, 3)).toBe(5);
 });
 ```
+{% endraw %}
 
 ✅ **Prácticas**
 
@@ -232,6 +244,7 @@ Se centra en **comportamiento esperado** usando lenguaje natural.
 
 ### 💻 Ejemplo (Cucumber + Gherkin)
 
+{% raw %}
 ```gherkin
 Feature: Login
   Scenario: Usuario correcto inicia sesión
@@ -239,6 +252,7 @@ Feature: Login
     When envía POST a "/login"
     Then recibe un código 200 y token JWT
 ```
+{% endraw %}
 
 ✅ **Prácticas**
 
@@ -259,6 +273,7 @@ Simula **flujo completo de usuario** desde interfaz hasta base de datos.
 
 ### 💻 Ejemplo (Playwright)
 
+{% raw %}
 ```ts
 import { test, expect } from '@playwright/test';
 
@@ -270,6 +285,7 @@ test('login flow', async ({ page }) => {
   await expect(page.locator('h1')).toHaveText('Bienvenido');
 });
 ```
+{% endraw %}
 
 ✅ **Prácticas**
 
@@ -290,6 +306,7 @@ Simular dependencias externas para **aislar pruebas**.
 
 ### 💻 Ejemplo (Jest)
 
+{% raw %}
 ```js
 import axios from 'axios';
 import { fetchUser } from './user';
@@ -302,6 +319,7 @@ test('fetchUser returns mocked user', async () => {
   expect(user.name).toBe('Eduardo');
 });
 ```
+{% endraw %}
 
 ✅ **Tipos**
 
@@ -320,9 +338,11 @@ test('fetchUser returns mocked user', async () => {
 
 ### 💻 Ejemplo (Jest coverage)
 
+{% raw %}
 ```bash
 npx jest --coverage
 ```
+{% endraw %}
 
 ### 📈 Métricas
 
@@ -359,12 +379,14 @@ npx jest --coverage
 
 ### 💻 Ejemplo (JS)
 
+{% raw %}
 ```js
 test('smoke test home page', async () => {
   const response = await fetch('https://app.example.com');
   expect(response.status).toBe(200);
 });
 ```
+{% endraw %}
 
 ✅ **Prácticas**
 
@@ -379,6 +401,7 @@ test('smoke test home page', async () => {
 
 ### 💻 Ejemplo (k6)
 
+{% raw %}
 ```js
 import http from 'k6/http';
 import { sleep, check } from 'k6';
@@ -389,6 +412,7 @@ export default function () {
   sleep(1);
 }
 ```
+{% endraw %}
 
 ✅ **Objetivos**
 

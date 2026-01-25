@@ -68,29 +68,35 @@ Arch Linux es una distribución de Linux ligera, flexible y orientada a usuarios
 
 ## Comandos útiles
 ### Pacman
+{% raw %}
 ```bash
 sudo pacman -Syu           # Actualizar sistema
 sudo pacman -S paquete     # Instalar paquete
 sudo pacman -R paquete     # Eliminar paquete
 pacman -Ss palabra_clave   # Buscar paquete
-````
+```
+{% endraw %}`
 
 ### AUR con Yay
 
+{% raw %}
 ```bash
 yay -S paquete             # Instalar paquete desde AUR
 yay -Syu                   # Actualizar sistema incluyendo AUR
 yay -R paquete             # Eliminar paquete desde AUR
 ```
+{% endraw %}
 
 ### Gestión de servicios
 
+{% raw %}
 ```bash
 sudo systemctl start servicio       # Iniciar servicio
 sudo systemctl enable servicio      # Activar servicio al arranque
 sudo systemctl status servicio      # Ver estado de servicio
 sudo systemctl stop servicio        # Detener servicio
 ```
+{% endraw %}
 
 
 
@@ -127,9 +133,11 @@ sudo systemctl stop servicio        # Detener servicio
 	- Crear backup de la lista actual.
 	- Instalar **Reflector** para actualizar repositorios automáticamente.
 - Actualizar Pacman y sistema:
+{% raw %}
 ```bash
 sudo pacman -Syu
-````
+```
+{% endraw %}`
 
 ### AUR y Flatpak
 
@@ -137,10 +145,12 @@ sudo pacman -Syu
 - **Flatpak**: gestión de aplicaciones sandbox.
 - Ejemplos:
 
+{% raw %}
 ```bash
 yay -S paquete
 flatpak install nombre_paquete
 ```
+{% endraw %}
 
 ## Software adicional
 
@@ -160,11 +170,13 @@ flatpak install nombre_paquete
      - `auto-cpufreq` instalado desde GitHub.
 - Preload para acelerar aplicaciones:
 
+{% raw %}
 ```bash
 yay -S preload
 sudo systemctl enable preload
 sudo systemctl start preload
 ```
+{% endraw %}
 
 ## Kernel y arranque
 
@@ -173,14 +185,17 @@ sudo systemctl start preload
      - Ver versión actual: `uname -a`.
 - Actualización de GRUB:
 
+{% raw %}
 ```bash
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
+{% endraw %}
 
 ## Seguridad y mantenimiento
 
 - **Firewall** con UFW:
 
+{% raw %}
 ```bash
 sudo ufw deny 22/tcp
 sudo ufw enable
@@ -188,6 +203,7 @@ sudo ufw start
 sudo ufw status
 sudo ufw list
 ```
+{% endraw %}
 
 - **Timeshift**: snapshots y restauración del sistema.
 ## Hibernación y gestión de energía

@@ -358,6 +358,7 @@ Esta expansión cubre los **aspectos avanzados, operativos y arquitectónicos** 
 Caso típico de uso en aplicaciones Spring Boot con SSR.
 
 ### Controller Spring MVC
+{% raw %}
 ```java
 @Controller
 @RequestMapping("/users")
@@ -369,15 +370,18 @@ public class UserController {
 		return "users/list";
 	}
 }
-````
+```
+{% endraw %}`
 
 ### Template Thymeleaf
 
+{% raw %}
 ```html
 <ul>
 	<li th:each="user : ${users}" th:text="${user.name}"></li>
 </ul>
 ```
+{% endraw %}
 
 Uso común:
 
@@ -391,6 +395,7 @@ Caso de uso central en aplicaciones empresariales.
 
 ### DTO con validación
 
+{% raw %}
 ```java
 public class UserForm {
 
@@ -401,9 +406,11 @@ public class UserForm {
 	private String email;
 }
 ```
+{% endraw %}
 
 ### Controller con validación
 
+{% raw %}
 ```java
 @PostMapping("/create")
 public String create(
@@ -417,9 +424,11 @@ public String create(
 	return "redirect:/users";
 }
 ```
+{% endraw %}
 
 ### Template de formulario
 
+{% raw %}
 ```html
 <form th:object="${userForm}" method="post">
 	<input type="text" th:field="*{username}">
@@ -430,6 +439,7 @@ public String create(
 	<button type="submit">Guardar</button>
 </form>
 ```
+{% endraw %}
 
 Ventaja:
 
@@ -442,20 +452,24 @@ Caso de uso frecuente en backoffices.
 
 ### Dependencia necesaria
 
+{% raw %}
 ```xml
 <dependency>
 	<groupId>org.thymeleaf.extras</groupId>
 	<artifactId>thymeleaf-extras-springsecurity6</artifactId>
 </dependency>
 ```
+{% endraw %}
 
 ### Template con control de roles
 
+{% raw %}
 ```html
 <div sec:authorize="hasRole('ADMIN')">
 	<a th:href="@{/admin}">Panel Admin</a>
 </div>
 ```
+{% endraw %}
 
 Casos:
 * Menús dinámicos
@@ -468,6 +482,7 @@ Uso clave para proyectos medianos y grandes.
 
 ### Fragment base
 
+{% raw %}
 ```html
 <!DOCTYPE html>
 <html th:fragment="layout(content)">
@@ -481,9 +496,11 @@ Uso clave para proyectos medianos y grandes.
 </body>
 </html>
 ```
+{% endraw %}
 
 ### Uso del layout
 
+{% raw %}
 ```html
 <html th:replace="layout :: layout(~{::section})">
 <section>
@@ -491,6 +508,7 @@ Uso clave para proyectos medianos y grandes.
 </section>
 </html>
 ```
+{% endraw %}
 
 Beneficio:
 * Consistencia visual
@@ -502,17 +520,21 @@ Caso de uso en aplicaciones multi-idioma.
 
 ### messages.properties
 
+{% raw %}
 ```properties
 title.users=Usuarios
 button.save=Guardar
 ```
+{% endraw %}
 
 ### Template
 
+{% raw %}
 ```html
 <h1 th:text="#{title.users}"></h1>
 <button th:text="#{button.save}"></button>
 ```
+{% endraw %}
 
 Configuración típica:
 * Soporte automático por locale
@@ -524,11 +546,13 @@ Caso de uso para routing mantenible.
 
 ### Template
 
+{% raw %}
 ```html
 <a th:href="@{/users/{id}(id=${user.id})}">
 	Ver detalle
 </a>
 ```
+{% endraw %}
 
 Ventaja:
 * Sin rutas hardcodeadas
@@ -540,18 +564,22 @@ Uso fuera del contexto web.
 
 ### Servicio de email
 
+{% raw %}
 ```java
 Context context = new Context();
 context.setVariable("username", user.getName());
 
 String html = templateEngine.process("emails/welcome", context);
 ```
+{% endraw %}
 
 ### Template de email
 
+{% raw %}
 ```html
 <p>Hola <span th:text="${username}"></span>, bienvenido.</p>
 ```
+{% endraw %}
 
 Casos:
 * Emails transaccionales
@@ -564,18 +592,22 @@ Caso de uso para estados de negocio.
 
 ### Template
 
+{% raw %}
 ```html
 <span th:if="${order.paid}">Pagado</span>
 <span th:unless="${order.paid}">Pendiente</span>
 ```
+{% endraw %}
 
 O con expresión compleja:
 
+{% raw %}
 ```html
 <div th:if="${order.status.name() == 'CANCELLED'}">
 	Pedido cancelado
 </div>
 ```
+{% endraw %}
 
 ## Configuración en Spring Boot
 
@@ -583,6 +615,7 @@ Configuración estándar y avanzada.
 
 ### application.yml
 
+{% raw %}
 ```yaml
 spring:
 	thymeleaf:
@@ -591,6 +624,7 @@ spring:
 		suffix: .html
 		mode: HTML
 ```
+{% endraw %}
 
 Buenas prácticas:
 * Cache desactivado en desarrollo
@@ -606,11 +640,13 @@ Consideraciones:
 
 Configuración recomendada:
 
+{% raw %}
 ```yaml
 spring:
 	thymeleaf:
 		cache: true
 ```
+{% endraw %}
 
 ## Testing de vistas
 
@@ -618,12 +654,14 @@ Uso en pipelines CI/CD.
 
 ### Test con MockMvc
 
+{% raw %}
 ```java
 mockMvc.perform(get("/users"))
 	.andExpect(status().isOk())
 	.andExpect(view().name("users/list"))
 	.andExpect(content().string(containsString("Usuarios")));
 ```
+{% endraw %}
 
 Beneficio:
 * Validación del renderizado
@@ -651,11 +689,13 @@ Ejemplo:
 * Thymeleaf renderiza datos iniciales
 * JS maneja eventos y AJAX
 
+{% raw %}
 ```html
 <script>
 	const userId = /*${user.id}*/ 0;
 </script>
 ```
+{% endraw %}
 
 Permite:
 * Evitar SPA completa

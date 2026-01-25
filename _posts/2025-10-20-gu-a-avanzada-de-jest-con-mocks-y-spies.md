@@ -41,32 +41,38 @@ category: Testing
 
 1. **Funciones simuladas**  
    Se crean con `jest.fn()` y pueden registrar llamadas o devolver valores personalizados.
-   ```javascript
+   {% raw %}
+```javascript
    const mockCallback = jest.fn(x => x * 2)
    [1, 2, 3].forEach(mockCallback)
    expect(mockCallback).toHaveBeenCalledTimes(3)
    expect(mockCallback).toHaveBeenCalledWith(2)
 ```
+{% endraw %}
 
 2. **Espías (spies)**  
     Usan `jest.spyOn(obj, 'método')` para observar llamadas sin reemplazar el método original.
     
-    ```javascript
+    {% raw %}
+```javascript
     const user = { save: () => 'ok' }
     const spy = jest.spyOn(user, 'save')
     user.save()
     expect(spy).toHaveBeenCalled()
     spy.mockRestore()
     ```
+{% endraw %}
     
 3. **Mocks de módulos completos**  
     Simulan dependencias completas como librerías o servicios HTTP.
     
-    ```javascript
+    {% raw %}
+```javascript
     jest.mock('axios')
     import axios from 'axios'
     axios.get.mockResolvedValue({ data: { message: 'ok' } })
     ```
+{% endraw %}
     
 
 ## ⚙️ Mocking de dependencias externas
@@ -75,7 +81,8 @@ category: Testing
     
 - Ejemplo con `fetch` y [MSW Mocks service worker](/testing/msw-mocks-service-worker/):
     
-    ```javascript
+    {% raw %}
+```javascript
     global.fetch = jest.fn(() =>
       Promise.resolve({ json: () => Promise.resolve({ id: 1, name: 'Eduardo' }) })
     )
@@ -88,6 +95,7 @@ category: Testing
       expect(fetch).toHaveBeenCalledWith('/users/1')
     })
     ```
+{% endraw %}
     
 - Para entornos más realistas (sin sobrescribir `fetch` global), usa [MSW Mocks service worker](/testing/msw-mocks-service-worker/) para interceptar peticiones en test suites o E2E.
     
@@ -98,7 +106,8 @@ category: Testing
     
 - `mockRestore()` y `clearAllMocks()` evitan contaminación entre tests.
     
-    ```javascript
+    {% raw %}
+```javascript
     const utils = { sumar: (a, b) => a + b }
     jest.spyOn(utils, 'sumar').mockImplementation(() => 42)
     
@@ -110,13 +119,15 @@ category: Testing
       jest.restoreAllMocks()
     })
     ```
+{% endraw %}
     
 
 ## 🔄 Mocks en [react](/frontend/react/) y componentes
 
 - Para componentes que usan hooks o contextos:
     
-    ```javascript
+    {% raw %}
+```javascript
     import { render, screen } from '@testing-library/react'
     import * as hooks from '../useAuth'
     import Dashboard from '../Dashboard'
@@ -128,6 +139,7 @@ category: Testing
       expect(screen.getByText(/Edu/)).toBeInTheDocument()
     })
     ```
+{% endraw %}
     
 - Este enfoque es útil cuando el hook o contexto obtiene datos externos, como autenticación o configuración remota.
     
@@ -136,21 +148,25 @@ category: Testing
 
 - **Timers simulados**
     
-    ```javascript
+    {% raw %}
+```javascript
     jest.useFakeTimers()
     const timer = jest.fn()
     setTimeout(timer, 1000)
     jest.advanceTimersByTime(1000)
     expect(timer).toHaveBeenCalled()
     ```
+{% endraw %}
     
 - **Mocks dinámicos por test**
     
-    ```javascript
+    {% raw %}
+```javascript
     beforeEach(() => {
       jest.resetModules()
     })
     ```
+{% endraw %}
     
 - **Reemplazo temporal de dependencias** para probar rutas o comportamientos alternos.
     

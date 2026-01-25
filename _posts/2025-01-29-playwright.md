@@ -51,6 +51,7 @@ category: Testing
 
 ## 🧠 Estructura de una Prueba
 
+{% raw %}
 ```ts
 import { test, expect } from '@playwright/test';
 
@@ -63,7 +64,8 @@ test('flujo de login y navegación', async ({ page }) => {
 	await page.click('text=Perfil');
 	await expect(page.locator('h1')).toHaveText('Perfil de usuario');
 });
-````
+```
+{% endraw %}`
 
 ### 🔍 Explicación
 
@@ -78,6 +80,7 @@ test('flujo de login y navegación', async ({ page }) => {
 
 Archivo: `playwright.config.ts`
 
+{% raw %}
 ```ts
 import { defineConfig } from '@playwright/test';
 
@@ -98,6 +101,7 @@ export default defineConfig({
 	],
 });
 ```
+{% endraw %}
 
 ---
 
@@ -123,6 +127,7 @@ export default defineConfig({
 
 ## 🚀 Ejemplo Avanzado: Flujos con Estado Persistente
 
+{% raw %}
 ```ts
 import { test, expect } from '@playwright/test';
 
@@ -144,6 +149,7 @@ test.describe('Gestión de tareas', () => {
 	});
 });
 ```
+{% endraw %}
 
 ---
 

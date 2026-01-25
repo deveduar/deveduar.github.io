@@ -82,6 +82,7 @@ category: uncategorized
 
 ### Ejemplo: Envío de Formulario (Playwright)
 
+{% raw %}
 ```js
 import { test, expect } from '@playwright/test'
 
@@ -92,7 +93,8 @@ test('flujo de envío de formulario', async ({ page }) => {
 	await page.click('#enviar')
 	await expect(page.locator('.mensaje-exito')).toHaveText('Formulario enviado correctamente')
 })
-````
+```
+{% endraw %}`
 
 ## 🧮 Cobertura de Flujos Críticos y Regresiones
 

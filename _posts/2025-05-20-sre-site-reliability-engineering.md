@@ -122,6 +122,7 @@ Más en [Gestion de Negocio](/uncategorized/gestion-de-negocio/).
 
 ### Cálculo básico de cumplimiento de SLO
 
+{% raw %}
 ```python
 # Ejemplo simple en Python para calcular cumplimiento de SLO y uso de Error Budget
 
@@ -136,7 +137,8 @@ error_budget_used = max(0, availability - slo_target) * -1
 print(f"Disponibilidad actual: {availability:.3f}%")
 print(f"Error budget total: {error_budget:.3f}%")
 print(f"Error budget utilizado: {error_budget_used:.3f}%")
-````
+```
+{% endraw %}`
 
 ---
 
@@ -260,6 +262,7 @@ Aplicar conceptos económicos para equilibrar fiabilidad y coste:
 
 ### Configuración en Prometheus (YAML)
 
+{% raw %}
 ```yaml
 groups:
   - name: SLO-alerts
@@ -272,7 +275,8 @@ groups:
         annotations:
           summary: "Error rate above SLO threshold"
           description: "The error rate has exceeded 0.1% for over 10 minutes."
-````
+```
+{% endraw %}`
 
 ---
 
@@ -384,6 +388,7 @@ La madurez de SRE se refleja en la transición hacia **fiabilidad declarativa**,
 
 ### Ejemplo de SLO declarativo (YAML)
 
+{% raw %}
 ```yaml
 apiVersion: sre/v1
 kind: ServiceLevelObjective
@@ -402,7 +407,8 @@ spec:
         window: 1h
       - rate: 1
         window: 24h
-````
+```
+{% endraw %}`
 
 ---
 

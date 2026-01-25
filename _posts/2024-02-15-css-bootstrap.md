@@ -291,16 +291,19 @@ HTML CSS templates for typography, froms,buttons,tables,navigation, modals and i
 
 ## EMBEDDING
 
+{% raw %}
 ```css
 <link rel="stylesheet" href="<https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css>">
 <script src="<https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js>"></script>
 <script src="<https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js>"></script>
 ```
+{% endraw %}
 
 ## BASIC PAGE (mobile-first)
 
 Container types: Fixed width container / Fluid Container
 
+{% raw %}
 ```css
 <!DOCTYPE html>
   <title>Bootstrap Example</title>
@@ -317,9 +320,11 @@ Container types: Fixed width container / Fluid Container
 	padding: 0 90px;
 }
 ```
+{% endraw %}
 
 Fluid:
 
+{% raw %}
 ```css
 <div class="container-fluid">
 	<h2>Text</h2>
@@ -331,11 +336,13 @@ Fluid:
 	padding: 0 90px;
 }
 ```
+{% endraw %}
 
 ## BOOTSTRAP GRID SYSTEM
 
 (max 12 colums) sums of grid column numbers must= 12 Colum Size: xs(extra small) sm (small) md(medium) lg(Larger)
 
+{% raw %}
 ```css
 .bg {
 	background-color: cyan;
@@ -351,11 +358,13 @@ Fluid:
 	</div>
 </div>
 ```
+{% endraw %}
 
 ## BOOTSTRAP THREE COLUMN LAYOUTS
 
 tablet in landscape mode without stacking. only if the tables screen resolution is 992px
 
+{% raw %}
 ```css
 <div class="container-fluid">
 	<div class="row" >
@@ -373,9 +382,11 @@ tablet in landscape mode without stacking. only if the tables screen resolution 
 	</div>
 </div>
 ```
+{% endraw %}
 
 ## BOOTSTRAP TYPOGRAPHY
 
+{% raw %}
 ```css
 <div class="container">
 		
@@ -456,11 +467,13 @@ visible   in html    code.
 		
 </div>
 ```
+{% endraw %}
 
 ## BOOTSTRAP TABLES
 
 `table-hover table-condensed table-striped table-bordered`
 
+{% raw %}
 ```css
 <div class="container">
    <table class="table table-hover">
@@ -491,20 +504,24 @@ visible   in html    code.
 </table>
 </div>
 ```
+{% endraw %}
 
 ## BOOTSTRAP STYLE IMAGES
 
 `img-circle img-thumbnail img-responsive`
 
+{% raw %}
 ```css
 <div class="container">            
   <img class="img-rounded" src="beach.jpg" width="500" height="300">
 ```
+{% endraw %}
 
 ## BOOTSTRAP JUMBOTROM
 
 jumbotron Outside the div container full viewport
 
+{% raw %}
 ```css
 <div class="container">
   <div class="jumbotron">
@@ -514,7 +531,9 @@ jumbotron Outside the div container full viewport
   <p>Page content can start here...</p>
 </div>
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 <div class="container">
   <div class="page-header">
@@ -523,9 +542,11 @@ jumbotron Outside the div container full viewport
   <p>Page content can start here...</p>
 </div>
 ```
+{% endraw %}
 
 ## BOOTSTRAP WELLS
 
+{% raw %}
 ```css
 <div class="container">
 <br>
@@ -534,9 +555,11 @@ jumbotron Outside the div container full viewport
   <div class="well well-lg">Large Well</div>
 </div>
 ```
+{% endraw %}
 
 ## BOOTSTRAP ALERTS
 
+{% raw %}
 ```css
 <div class="container">
 <br>  
@@ -555,9 +578,11 @@ jumbotron Outside the div container full viewport
  </div>
 </div>
 ```
+{% endraw %}
 
 ## BOOTSTRAP BUTTONS
 
+{% raw %}
 ```css
 <div class="container">
 <br>
@@ -598,9 +623,11 @@ jumbotron Outside the div container full viewport
 <button type="button" class="btn btn-primary disabled">Disabled Primary</button>
  </div>
 ```
+{% endraw %}
 
 ## BUTTON GROUPS btn-group
 
+{% raw %}
 ```css
 <div class="container">
 <h4>Large Buttons:</h4>
@@ -617,11 +644,13 @@ jumbotron Outside the div container full viewport
   </div>
 </div>
 ```
+{% endraw %}
 
 ## JUSTIFIED BUTTONS GROUPS
 
 btn-group-justified
 
+{% raw %}
 ```css
 <div class="container">
  <!--Justified Button Groups Using Link Elements -->
@@ -649,9 +678,11 @@ btn-group-justified
 </div>
   </div>
 ```
+{% endraw %}
 
 ## BOOTSTRAP GLYPHICONS
 
+{% raw %}
 ```css
 <div class="container">
 <h2>Glyphicons</h2>
@@ -671,9 +702,11 @@ btn-group-justified
 </a>
 </div>
 ```
+{% endraw %}
 
 ## BADGETS AND LABELS
 
+{% raw %}
 ```css
 <div class="container">
 <h4>Badges</h4>
@@ -696,11 +729,13 @@ btn-group-justified
 	<span class="label label-danger">Danger</span>
 </div>
 ```
+{% endraw %}
 
 ## PROGRESS BAR
 
 progress-bar-striped active
 
+{% raw %}
 ```css
 <div class="container">
 <h4>Progress Bar</h4>
@@ -710,9 +745,11 @@ progress-bar-striped active
 </div>
  </div>
 ```
+{% endraw %}
 
 ## PAGINATION
 
+{% raw %}
 ```css
 <div class="container">
  <h4>Pagination</h4>
@@ -726,9 +763,11 @@ progress-bar-striped active
  </ul>
  </div>
 ```
+{% endraw %}
 
 ## BREADCRUMB
 
+{% raw %}
 ```css
 <div class="container">
  <h4>Pagination</h4>
@@ -742,9 +781,11 @@ progress-bar-striped active
  </ul>
  </div>
 ```
+{% endraw %}
 
 ## BOOSTRAP PAGER PAGINATION
 
+{% raw %}
 ```css
 <div class="container">
   <h4>Pager</h4>
@@ -754,9 +795,11 @@ progress-bar-striped active
   </ul>
 </div>
 ```
+{% endraw %}
 
 ## BOOSTRAP LIST GROUP
 
+{% raw %}
 ```css
 <div class="container">
  <h4>Basic List Group</h4>
@@ -767,7 +810,9 @@ progress-bar-striped active
   </ul>
   </div>
 ```
+{% endraw %}
 
+{% raw %}
 ```css
 <div class="container">
  <h4>Basic List Group</h4>
@@ -778,9 +823,11 @@ progress-bar-striped active
   </ul>
   </div>
 ```
+{% endraw %}
 
 ## CUSTOM CONTENT
 
+{% raw %}
 ```css
 <div class="container">
  <h4>Basic List Group</h4>
@@ -801,9 +848,11 @@ progress-bar-striped active
   </ul>
   </div>
 ```
+{% endraw %}
 
 ## BOOSTRAP PANELS
 
+{% raw %}
 ```css
 <div class="container">
   <h4>Panel</h4>
@@ -832,11 +881,13 @@ progress-bar-striped active
   </div>
   </div>
 ```
+{% endraw %}
 
 ## DROPDOWN MENU
 
 dropdown-menu-right dropup
 
+{% raw %}
 ```css
 <div class="container">
  <h4>Dropdown Menu</h4>
@@ -858,9 +909,11 @@ dropdown-menu-right dropup
  </div>
 </div>
 ```
+{% endraw %}
 
 ## BOOTSTRAP COLLAPSIBLES
 
+{% raw %}
 ```css
 <div class="container">
   <br>
@@ -875,9 +928,11 @@ dropdown-menu-right dropup
   </div>
  </div>
 ```
+{% endraw %}
 
 ## COLLAPSE PANEL
 
+{% raw %}
 ```css
 <div class="container">
   <br>
@@ -896,9 +951,11 @@ dropdown-menu-right dropup
   </div>
   </div>
 ```
+{% endraw %}
 
 ## COLLAPSE LIST GROUP
 
+{% raw %}
 ```css
 <div class="container">
   <br>
@@ -921,9 +978,11 @@ dropdown-menu-right dropup
   </div>
 </div>
 ```
+{% endraw %}
 
 ## BOOSTRAP ACCORDIAN
 
+{% raw %}
 ```css
 <div class="container">
  <div class="panel-group" id="accordion">
@@ -958,9 +1017,11 @@ dropdown-menu-right dropup
       </div>
     </div>
 ```
+{% endraw %}
 
 ## BOOSTRAP TAB MENUS
 
+{% raw %}
 ```css
 <div class="container">
   <h4>Inline List Menu</h4>
@@ -988,9 +1049,11 @@ dropdown-menu-right dropup
     <li><a href="#">Link 4</a></li>
   </ul>
 ```
+{% endraw %}
 
 ## BOOTSTRAP PILL MENUS
 
+{% raw %}
 ```css
 <div class="container">
   <h4>Pill Menu</h4>
@@ -1019,11 +1082,13 @@ dropdown-menu-right dropup
 </ul>
  </div>
 ```
+{% endraw %}
 
 ## DINAMIC TAB AND PILLS MENUS
 
 (nav-pills, data-toggle="pill")
 
+{% raw %}
 ```css
 <div class="container">
  <h4>Dynamic Tabs and Pills</h4>
@@ -1053,11 +1118,13 @@ dropdown-menu-right dropup
   </div>
 </div>
 ```
+{% endraw %}
 
 ## BOOSTRAP NAVIGATION BAR
 
 .navbar-fixed-top .navbar-fixed-bottom .container-fluid
 
+{% raw %}
 ```css
 <nav class="navbar navbar-inverse">
  <div class="container">
@@ -1090,9 +1157,11 @@ dropdown-menu-right dropup
   <p>Content.</p>
 </div>
 ```
+{% endraw %}
 
 ## BOOSTRAP COLLAPSIBLE NAVIGATION BAR
 
+{% raw %}
 ```css
 <nav class="navbar navbar-inverse">
  <div class="container">
@@ -1138,11 +1207,13 @@ dropdown-menu-right dropup
   <p>Content.</p>
 </div>
 ```
+{% endraw %}
 
 ## BOOSTRAP FORMS
 
 Vertical (Default), Horizontal, Inline
 
+{% raw %}
 ```css
 <div class="container">
   <h4>Form:</h4>
@@ -1162,9 +1233,11 @@ Vertical (Default), Horizontal, Inline
 </form>
  </div>
 ```
+{% endraw %}
 
 ## BOOSTRAP INPUTS
 
+{% raw %}
 ```css
 <div class="container">
  <h4>Form inputs</h4>
@@ -1223,9 +1296,11 @@ Vertical (Default), Horizontal, Inline
   </form>
   </div>
 ```
+{% endraw %}
 
 ## BOOSTRAP FORMS CONTROL STATES
 
+{% raw %}
 ```css
 <div class="container">
   <h4>Horizontal form: control states</h4>
@@ -1266,9 +1341,11 @@ Vertical (Default), Horizontal, Inline
 </form>
  </div>
 ```
+{% endraw %}
 
 ## BOOSTRAP INPUT SIZING
 
+{% raw %}
 ```css
 <div class="container">
 <h4>Input Sizing</h4>
@@ -1323,9 +1400,11 @@ Vertical (Default), Horizontal, Inline
 	</div>
   </div>
 ```
+{% endraw %}
 
 ## BOOSTRAP CAROUSEL
 
+{% raw %}
 ```css
 .carousel-inner > .item > img {
       width: 80%;
@@ -1384,9 +1463,11 @@ Vertical (Default), Horizontal, Inline
   </div>
 </div>
 ```
+{% endraw %}
 
 ## BOOSTRAP MODAL
 
+{% raw %}
 ```css
 <div class="container">
   <br>
@@ -1413,9 +1494,11 @@ Vertical (Default), Horizontal, Inline
   </div>
 </div>
 ```
+{% endraw %}
 
 ## BOOSTRAP TOOLTIP
 
+{% raw %}
 ```jsx
 <div class="container">
 <br><br><br>
@@ -1428,11 +1511,13 @@ $(document).ready(function(){
 });
 </script>
 ```
+{% endraw %}
 
 ## BOOSTRAP POPOVER
 
 (data-trigger="hover")
 
+{% raw %}
 ```jsx
 <div class="container">
 <br><br><br><br>
@@ -1445,9 +1530,11 @@ $(document).ready(function(){
 });
 </script>
 ```
+{% endraw %}
 
 ## BOOSTRAP SCROLLSPY PLUGIN
 
+{% raw %}
 ```jsx
 body {
       position: relative; 
@@ -1502,6 +1589,7 @@ body {
 </div>
 </body>
 ```
+{% endraw %}
 
 ## BOOSTRAP PROJECT
 

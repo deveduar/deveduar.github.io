@@ -25,6 +25,7 @@ input[type=checkbox]:checked {
     box-shadow: none !important;
  hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
 .cm-preview-code-block.cm-embed-block.markdown-rendered, .blocnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+{% raw %}
 ```
 
 
@@ -99,8 +100,10 @@ p.omni-par {
   
 }
 ```
+{% endraw %}
 
 ## Backgrounds
+{% raw %}
 ```css
 /* Background color for notes */
 
@@ -123,8 +126,10 @@ p.omni-par {
 background: rgb(0, 0, 0);
 }
 ```
+{% endraw %}
 
 ## Links
+{% raw %}
 ```css
 /* Estilo para los enlaces algunos no van en el modo source*/
 
@@ -208,8 +213,10 @@ background: rgb(0, 0, 0);
     text-decoration: none;
 }
 ```
+{% endraw %}
 
 ## Outliner
+{% raw %}
 ```css
 /* Recursive font colors for headers in the outline pane list */
 .tree-item > .tree-item-self {
@@ -235,8 +242,10 @@ background: rgb(0, 0, 0);
   /* Add more levels as needed */
 
 ```
+{% endraw %}
 
 ## Tables
+{% raw %}
 ```css
 /*  Estilos para tablas y listas */
 .td:first-child {
@@ -327,8 +336,10 @@ td {
   text-overflow: unset; 
 }
 ```
+{% endraw %}
 
 ## Utils
+{% raw %}
 ```css
 /* tamaño de los tags */
 td .tag, li .tag, p .tag {
@@ -360,11 +371,14 @@ td .tag, li .tag, p .tag {
 }
 
 ```
+{% endraw %}
 
 ## Hide Boomarks icon
+{% raw %}
 ```css
 /* Ocultar el ícono de marcador en la barra de pestañas */
 .mod-bookmark.mod-bookmarked.mod-filled {
     display: none !important;
 }
 ```
+{% endraw %}

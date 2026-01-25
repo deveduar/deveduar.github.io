@@ -138,6 +138,7 @@ category: Desarrollo web
 ## Snippets
 
 ### custom-templates — Enqueue de estilos
+{% raw %}
 ```php
 <?php  
     function devedublog_register_styles() {
@@ -152,7 +153,8 @@ category: Desarrollo web
 
     add_action('wp_enqueue_scripts', 'devedublog_register_styles');
 ?>
-````
+```
+{% endraw %}`
 
 
 ## curso-wp-crear-custom-templates — Extensión de Conceptos Pendientes
@@ -226,6 +228,7 @@ A continuación se añaden los **conceptos que aún no estaban cubiertos**, ampl
 ### Snippets Adicionales
 
 #### Template Header para páginas personalizadas
+{% raw %}
 ```php
 <?php
 /*
@@ -233,10 +236,12 @@ Template Name: Landing Page Clean
 */
 get_header();
 ?>
-````
+```
+{% endraw %}`
 
 #### Carga condicional de scripts solo para una plantilla
 
+{% raw %}
 ```php
 <?php
 function mytheme_conditional_assets() {
@@ -247,9 +252,11 @@ function mytheme_conditional_assets() {
 add_action('wp_enqueue_scripts', 'mytheme_conditional_assets');
 ?>
 ```
+{% endraw %}
 
 #### Registro de Custom Post Type con plantilla propia
 
+{% raw %}
 ```php
 <?php
 function mytheme_register_portfolio_cpt() {
@@ -264,6 +271,7 @@ function mytheme_register_portfolio_cpt() {
 add_action('init', 'mytheme_register_portfolio_cpt');
 ?>
 ```
+{% endraw %}
 
 ### Qué falta por cubrir (si deseas expandir más)
 
@@ -691,9 +699,11 @@ Gracias a:
 - Arquitectura de seguridad avanzada (hardening)
 - Arquitectura para automatización CI/CD en WordPress
 
+{% raw %}
 ```
 # omnivore Wordpress
-```basej
+```
+{% endraw %}basej
 type: list
 name: "Notas con #wordpress en Omnivore"
 order:

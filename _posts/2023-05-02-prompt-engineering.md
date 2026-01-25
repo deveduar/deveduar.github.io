@@ -99,17 +99,21 @@ category: Data Science
 ## Vídeos y Contenido Multimedia
 ### YouTube Prompting Guides
 #### Prompt Engineering 2025
+{% raw %}
 ```markdown
 https://www.youtube.com/watch?v=CmB7_L_fF4k
-````
+```
+{% endraw %}`
 
 * Guía visual completa con tips, trucos y herramientas para elaborar prompts efectivos en 2025. [youtube.com](https://www.youtube.com/watch?v=CmB7_L_fF4k&utm_source=chatgpt.com)
 
 #### El Arte de Preguntar (Sapiens AI)
 
+{% raw %}
 ```markdown
 https://www.youtube.com/watch?v=7tiYEtLsD-U
 ```
+{% endraw %}
 
 * Explica método CAPEF para estructurar prompts con ejemplos prácticos y mejora de calidad de respuestas. [youtube.com](https://www.youtube.com/watch?v=7tiYEtLsD-U&utm_source=chatgpt.com)
 

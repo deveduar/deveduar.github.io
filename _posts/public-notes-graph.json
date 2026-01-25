@@ -778,16 +778,6 @@
       "url": "/testing/arquitectura-de-cucumber"
     },
     {
-      "id": "soporte-microinform-tico",
-      "title": "Soporte Microinformático",
-      "slug": "soporte-microinform-tico",
-      "date": "2025-10-29 19:54",
-      "categories": [
-        "Sistemas"
-      ],
-      "url": "/sistemas/soporte-microinform-tico"
-    },
-    {
       "id": "surfing-keys-vim-in-browser",
       "title": "surfing keys vim in browser",
       "slug": "surfing-keys-vim-in-browser",
@@ -798,6 +788,16 @@
       "url": "/sistemas/surfing-keys-vim-in-browser"
     },
     {
+      "id": "soporte-microinform-tico",
+      "title": "Soporte Microinformático",
+      "slug": "soporte-microinform-tico",
+      "date": "2025-10-29 19:54",
+      "categories": [
+        "Sistemas"
+      ],
+      "url": "/sistemas/soporte-microinform-tico"
+    },
+    {
       "id": "software-engineering",
       "title": "Software engineering",
       "slug": "software-engineering",
@@ -806,6 +806,16 @@
         "uncategorized"
       ],
       "url": "/uncategorized/software-engineering"
+    },
+    {
+      "id": "sistemas",
+      "title": "Sistemas",
+      "slug": "sistemas",
+      "date": "2024-03-17 21:17",
+      "categories": [
+        "uncategorized"
+      ],
+      "url": "/uncategorized/sistemas"
     },
     {
       "id": "vscode",
@@ -1128,14 +1138,14 @@
       "url": "/sistemas/active-directory"
     },
     {
-      "id": "sistemas",
-      "title": "Sistemas",
-      "slug": "sistemas",
-      "date": "2024-03-17 21:17",
+      "id": "seguridad-web-y-certificados-tls",
+      "title": "Seguridad Web y Certificados TLS",
+      "slug": "seguridad-web-y-certificados-tls",
+      "date": "2024-02-04 18:57",
       "categories": [
-        "uncategorized"
+        "devops"
       ],
-      "url": "/uncategorized/sistemas"
+      "url": "/devops/seguridad-web-y-certificados-tls"
     },
     {
       "id": "search-tool-grep",
@@ -1148,16 +1158,6 @@
       "url": "/sistemas/search-tool-grep"
     },
     {
-      "id": "seguridad-web-y-certificados-tls",
-      "title": "Seguridad Web y Certificados TLS",
-      "slug": "seguridad-web-y-certificados-tls",
-      "date": "2024-02-04 18:57",
-      "categories": [
-        "devops"
-      ],
-      "url": "/devops/seguridad-web-y-certificados-tls"
-    },
-    {
       "id": "redes",
       "title": "Redes",
       "slug": "redes",
@@ -1166,46 +1166,6 @@
         "uncategorized"
       ],
       "url": "/uncategorized/redes"
-    },
-    {
-      "id": "thymeleaf",
-      "title": "thymeleaf",
-      "slug": "thymeleaf",
-      "date": "2025-02-19 17:54",
-      "categories": [
-        "Motor de plantillas"
-      ],
-      "url": "/motor%20de%20plantillas/thymeleaf"
-    },
-    {
-      "id": "pug",
-      "title": "pug",
-      "slug": "pug",
-      "date": "2024-11-21 18:20",
-      "categories": [
-        "Motor de plantillas"
-      ],
-      "url": "/motor%20de%20plantillas/pug"
-    },
-    {
-      "id": "mustache",
-      "title": "mustache",
-      "slug": "mustache",
-      "date": "2024-11-21 18:17",
-      "categories": [
-        "Motor de plantillas"
-      ],
-      "url": "/motor%20de%20plantillas/mustache"
-    },
-    {
-      "id": "handlebars",
-      "title": "handlebars",
-      "slug": "handlebars",
-      "date": "2024-11-21 18:20",
-      "categories": [
-        "Motor de plantillas"
-      ],
-      "url": "/motor%20de%20plantillas/handlebars"
     },
     {
       "id": "voip",
@@ -1338,6 +1298,56 @@
       "url": "/telefona%20y%20uc/3cx"
     },
     {
+      "id": "thymeleaf",
+      "title": "thymeleaf",
+      "slug": "thymeleaf",
+      "date": "2025-02-19 17:54",
+      "categories": [
+        "Motor de plantillas"
+      ],
+      "url": "/motor%20de%20plantillas/thymeleaf"
+    },
+    {
+      "id": "pug",
+      "title": "pug",
+      "slug": "pug",
+      "date": "2024-11-21 18:20",
+      "categories": [
+        "Motor de plantillas"
+      ],
+      "url": "/motor%20de%20plantillas/pug"
+    },
+    {
+      "id": "mustache",
+      "title": "mustache",
+      "slug": "mustache",
+      "date": "2024-11-21 18:17",
+      "categories": [
+        "Motor de plantillas"
+      ],
+      "url": "/motor%20de%20plantillas/mustache"
+    },
+    {
+      "id": "handlebars",
+      "title": "handlebars",
+      "slug": "handlebars",
+      "date": "2024-11-21 18:20",
+      "categories": [
+        "Motor de plantillas"
+      ],
+      "url": "/motor%20de%20plantillas/handlebars"
+    },
+    {
+      "id": "monitoreo",
+      "title": "monitoreo",
+      "slug": "monitoreo",
+      "date": "2024-11-23 02:01",
+      "categories": [
+        "uncategorized"
+      ],
+      "url": "/uncategorized/monitoreo"
+    },
+    {
       "id": "zabbix",
       "title": "Zabbix",
       "slug": "zabbix",
@@ -1416,16 +1426,6 @@
         "monitoreo"
       ],
       "url": "/monitoreo/acunetix-scanner"
-    },
-    {
-      "id": "monitoreo",
-      "title": "monitoreo",
-      "slug": "monitoreo",
-      "date": "2024-11-23 02:01",
-      "categories": [
-        "uncategorized"
-      ],
-      "url": "/uncategorized/monitoreo"
     },
     {
       "id": "teor-a-de-la-probabilidad-y-teor-a-de-la-informaci-n",
@@ -4058,16 +4058,6 @@
       "url": "/ciberseguridad/ciclo-de-vida-de-vulnerabilidades"
     },
     {
-      "id": "ciberdefensa",
-      "title": "Ciberdefensa",
-      "slug": "ciberdefensa",
-      "date": "2025-04-14 18:07",
-      "categories": [
-        "ciberseguridad"
-      ],
-      "url": "/ciberseguridad/ciberdefensa"
-    },
-    {
       "id": "ciberinteligencia-tip",
       "title": "Ciberinteligencia TIP",
       "slug": "ciberinteligencia-tip",
@@ -4076,6 +4066,16 @@
         "ciberseguridad"
       ],
       "url": "/ciberseguridad/ciberinteligencia-tip"
+    },
+    {
+      "id": "ciberdefensa",
+      "title": "Ciberdefensa",
+      "slug": "ciberdefensa",
+      "date": "2025-04-14 18:07",
+      "categories": [
+        "ciberseguridad"
+      ],
+      "url": "/ciberseguridad/ciberdefensa"
     },
     {
       "id": "caza-de-amenazas",
@@ -4758,16 +4758,6 @@
       "url": "/automatizacion%20y%20build/git-hooks"
     },
     {
-      "id": "celery-temas-avanzados-varios",
-      "title": "Celery Temas Avanzados Varios",
-      "slug": "celery-temas-avanzados-varios",
-      "date": "",
-      "categories": [
-        "uncategorized"
-      ],
-      "url": "/uncategorized/celery-temas-avanzados-varios"
-    },
-    {
       "id": "celery",
       "title": "Celery",
       "slug": "celery",
@@ -4776,6 +4766,16 @@
         "Automatizacion y Build"
       ],
       "url": "/automatizacion%20y%20build/celery"
+    },
+    {
+      "id": "celery-temas-avanzados-varios",
+      "title": "Celery Temas Avanzados Varios",
+      "slug": "celery-temas-avanzados-varios",
+      "date": "",
+      "categories": [
+        "uncategorized"
+      ],
+      "url": "/uncategorized/celery-temas-avanzados-varios"
     },
     {
       "id": "celery-conceptos-avanzados-y-configuraci-n-profesional",
@@ -6994,6 +6994,10 @@
       "target": "/devops/cicd/"
     },
     {
+      "source": "/sistemas/surfing-keys-vim-in-browser",
+      "target": "/sistemas/vim/"
+    },
+    {
       "source": "/sistemas/soporte-microinform-tico",
       "target": "/infraestructura%20it/soporte-tecnico/"
     },
@@ -7020,10 +7024,6 @@
     {
       "source": "/sistemas/soporte-microinform-tico",
       "target": "/management/ticketing/"
-    },
-    {
-      "source": "/sistemas/surfing-keys-vim-in-browser",
-      "target": "/sistemas/vim/"
     },
     {
       "source": "/uncategorized/software-engineering",
@@ -7208,6 +7208,106 @@
     {
       "source": "/uncategorized/software-engineering",
       "target": "/uncategorized/gestion-de-negocio/"
+    },
+    {
+      "source": "/uncategorized/sistemas",
+      "target": "/uncategorized/ciberseguridad/"
+    },
+    {
+      "source": "/uncategorized/sistemas",
+      "target": "/sistemas/soporte-microinform-tico/"
+    },
+    {
+      "source": "/uncategorized/sistemas",
+      "target": "/uncategorized/administracion-de-sistemas/"
+    },
+    {
+      "source": "/uncategorized/sistemas",
+      "target": "/devops/virtualizacion/"
+    },
+    {
+      "source": "/uncategorized/sistemas",
+      "target": "/virtualizacion/vdi-infraestructura-de-escritorio-virtual/"
+    },
+    {
+      "source": "/uncategorized/sistemas",
+      "target": "/devops/windows-server/"
+    },
+    {
+      "source": "/uncategorized/sistemas",
+      "target": "/uncategorized/redes/"
+    },
+    {
+      "source": "/uncategorized/sistemas",
+      "target": "/uncategorized/telefon-a-y-uc/"
+    },
+    {
+      "source": "/uncategorized/sistemas",
+      "target": "/telefonía%20y%20uc/videoconferencia/"
+    },
+    {
+      "source": "/uncategorized/sistemas",
+      "target": "/uncategorized/infraestructura-it/"
+    },
+    {
+      "source": "/uncategorized/sistemas",
+      "target": "/ciberseguridad/control-de-datos/"
+    },
+    {
+      "source": "/uncategorized/sistemas",
+      "target": "/uncategorized/autenticacion/"
+    },
+    {
+      "source": "/uncategorized/sistemas",
+      "target": "/management/ticketing/"
+    },
+    {
+      "source": "/uncategorized/sistemas",
+      "target": "/uncategorized/autenticacion/"
+    },
+    {
+      "source": "/uncategorized/sistemas",
+      "target": "/cloud/azure/"
+    },
+    {
+      "source": "/uncategorized/sistemas",
+      "target": "/sistemas/active-directory/"
+    },
+    {
+      "source": "/uncategorized/sistemas",
+      "target": "/sistemas/office-365/"
+    },
+    {
+      "source": "/uncategorized/sistemas",
+      "target": "/sistemas/gesti-n-de-dispositivos-m-viles-mdm/"
+    },
+    {
+      "source": "/uncategorized/sistemas",
+      "target": "/sistemas/nas/"
+    },
+    {
+      "source": "/uncategorized/sistemas",
+      "target": "/linux/arch-linux/"
+    },
+    {
+      "source": "/uncategorized/sistemas",
+      "target": "/sistemas/vim/"
+    },
+    {
+      "source": "/uncategorized/sistemas",
+      "target": "/sistemas/tmux/"
+    },
+    {
+      "source": "/uncategorized/sistemas",
+      "target": "/sistemas/hyper/"
+    },
+    {
+      "source": "/uncategorized/sistemas",
+      "target": "/sistemas/vscode/"
+    },
+    {
+      "source": "/uncategorized/sistemas",
+      "target": "/sistemas/lite-xl/"
     },
     {
       "source": "/sistemas/vscode",
@@ -7654,128 +7754,28 @@
       "target": "/autenticacion/kerberos/"
     },
     {
-      "source": "/uncategorized/sistemas",
-      "target": "/uncategorized/ciberseguridad/"
-    },
-    {
-      "source": "/uncategorized/sistemas",
-      "target": "/sistemas/soporte-microinform-tico/"
-    },
-    {
-      "source": "/uncategorized/sistemas",
-      "target": "/uncategorized/administracion-de-sistemas/"
-    },
-    {
-      "source": "/uncategorized/sistemas",
-      "target": "/devops/virtualizacion/"
-    },
-    {
-      "source": "/uncategorized/sistemas",
-      "target": "/virtualizacion/vdi-infraestructura-de-escritorio-virtual/"
-    },
-    {
-      "source": "/uncategorized/sistemas",
-      "target": "/devops/windows-server/"
-    },
-    {
-      "source": "/uncategorized/sistemas",
-      "target": "/uncategorized/redes/"
-    },
-    {
-      "source": "/uncategorized/sistemas",
-      "target": "/uncategorized/telefon-a-y-uc/"
-    },
-    {
-      "source": "/uncategorized/sistemas",
-      "target": "/telefonía%20y%20uc/videoconferencia/"
-    },
-    {
-      "source": "/uncategorized/sistemas",
-      "target": "/uncategorized/infraestructura-it/"
-    },
-    {
-      "source": "/uncategorized/sistemas",
-      "target": "/ciberseguridad/control-de-datos/"
-    },
-    {
-      "source": "/uncategorized/sistemas",
-      "target": "/uncategorized/autenticacion/"
-    },
-    {
-      "source": "/uncategorized/sistemas",
-      "target": "/management/ticketing/"
-    },
-    {
-      "source": "/uncategorized/sistemas",
-      "target": "/uncategorized/autenticacion/"
-    },
-    {
-      "source": "/uncategorized/sistemas",
-      "target": "/cloud/azure/"
-    },
-    {
-      "source": "/uncategorized/sistemas",
-      "target": "/sistemas/active-directory/"
-    },
-    {
-      "source": "/uncategorized/sistemas",
-      "target": "/sistemas/office-365/"
-    },
-    {
-      "source": "/uncategorized/sistemas",
-      "target": "/sistemas/gesti-n-de-dispositivos-m-viles-mdm/"
-    },
-    {
-      "source": "/uncategorized/sistemas",
-      "target": "/sistemas/nas/"
-    },
-    {
-      "source": "/uncategorized/sistemas",
-      "target": "/linux/arch-linux/"
-    },
-    {
-      "source": "/uncategorized/sistemas",
-      "target": "/sistemas/vim/"
-    },
-    {
-      "source": "/uncategorized/sistemas",
-      "target": "/sistemas/tmux/"
-    },
-    {
-      "source": "/uncategorized/sistemas",
-      "target": "/sistemas/hyper/"
-    },
-    {
-      "source": "/uncategorized/sistemas",
-      "target": "/sistemas/vscode/"
-    },
-    {
-      "source": "/uncategorized/sistemas",
-      "target": "/sistemas/lite-xl/"
-    },
-    {
-      "source": "/sistemas/search-tool-grep",
-      "target": "/uncategorized/sistemas/"
-    },
-    {
-      "source": "/sistemas/search-tool-grep",
-      "target": "/uncategorized/sistemas/"
-    },
-    {
-      "source": "/sistemas/search-tool-grep",
-      "target": "/uncategorized/sistemas/"
-    },
-    {
-      "source": "/sistemas/search-tool-grep",
-      "target": "/uncategorized/sistemas/"
-    },
-    {
       "source": "/devops/seguridad-web-y-certificados-tls",
       "target": "/backend/cron-jobs/"
     },
     {
       "source": "/devops/seguridad-web-y-certificados-tls",
       "target": "/uncategorized/devops/"
+    },
+    {
+      "source": "/sistemas/search-tool-grep",
+      "target": "/uncategorized/sistemas/"
+    },
+    {
+      "source": "/sistemas/search-tool-grep",
+      "target": "/uncategorized/sistemas/"
+    },
+    {
+      "source": "/sistemas/search-tool-grep",
+      "target": "/uncategorized/sistemas/"
+    },
+    {
+      "source": "/sistemas/search-tool-grep",
+      "target": "/uncategorized/sistemas/"
     },
     {
       "source": "/uncategorized/redes",
@@ -7890,74 +7890,6 @@
       "target": "/devops/windows-server/"
     },
     {
-      "source": "/motor%20de%20plantillas/thymeleaf",
-      "target": "/software%20engineering/java/"
-    },
-    {
-      "source": "/motor%20de%20plantillas/thymeleaf",
-      "target": "/backend/springboot/"
-    },
-    {
-      "source": "/motor%20de%20plantillas/thymeleaf",
-      "target": "/databases/xml/"
-    },
-    {
-      "source": "/motor%20de%20plantillas/pug",
-      "target": "/backend/node-js/"
-    },
-    {
-      "source": "/motor%20de%20plantillas/pug",
-      "target": "/backend/node-js/"
-    },
-    {
-      "source": "/motor%20de%20plantillas/pug",
-      "target": "/backend/node-js/"
-    },
-    {
-      "source": "/motor%20de%20plantillas/mustache",
-      "target": "/backend/php/"
-    },
-    {
-      "source": "/motor%20de%20plantillas/mustache",
-      "target": "/software%20engineering/java/"
-    },
-    {
-      "source": "/motor%20de%20plantillas/mustache",
-      "target": "/desarrollo%20web/moodle/"
-    },
-    {
-      "source": "/motor%20de%20plantillas/mustache",
-      "target": "/backend/springboot/"
-    },
-    {
-      "source": "/motor%20de%20plantillas/mustache",
-      "target": "/backend/springboot/"
-    },
-    {
-      "source": "/motor%20de%20plantillas/mustache",
-      "target": "/software%20engineering/java/"
-    },
-    {
-      "source": "/motor%20de%20plantillas/mustache",
-      "target": "/backend/php/"
-    },
-    {
-      "source": "/motor%20de%20plantillas/mustache",
-      "target": "/backend/php/"
-    },
-    {
-      "source": "/motor%20de%20plantillas/mustache",
-      "target": "/backend/springboot/"
-    },
-    {
-      "source": "/motor%20de%20plantillas/mustache",
-      "target": "/desarrollo%20web/moodle/"
-    },
-    {
-      "source": "/motor%20de%20plantillas/handlebars",
-      "target": "/backend/php/"
-    },
-    {
       "source": "/telefona%20y%20uc/voip",
       "target": "/telefonía%20y%20uc/sip/"
     },
@@ -8056,6 +7988,150 @@
     {
       "source": "/telefona%20y%20uc/3cx",
       "target": "/telefonía%20y%20uc/sip/"
+    },
+    {
+      "source": "/motor%20de%20plantillas/thymeleaf",
+      "target": "/software%20engineering/java/"
+    },
+    {
+      "source": "/motor%20de%20plantillas/thymeleaf",
+      "target": "/backend/springboot/"
+    },
+    {
+      "source": "/motor%20de%20plantillas/thymeleaf",
+      "target": "/databases/xml/"
+    },
+    {
+      "source": "/motor%20de%20plantillas/pug",
+      "target": "/backend/node-js/"
+    },
+    {
+      "source": "/motor%20de%20plantillas/pug",
+      "target": "/backend/node-js/"
+    },
+    {
+      "source": "/motor%20de%20plantillas/pug",
+      "target": "/backend/node-js/"
+    },
+    {
+      "source": "/motor%20de%20plantillas/mustache",
+      "target": "/backend/php/"
+    },
+    {
+      "source": "/motor%20de%20plantillas/mustache",
+      "target": "/software%20engineering/java/"
+    },
+    {
+      "source": "/motor%20de%20plantillas/mustache",
+      "target": "/desarrollo%20web/moodle/"
+    },
+    {
+      "source": "/motor%20de%20plantillas/mustache",
+      "target": "/backend/springboot/"
+    },
+    {
+      "source": "/motor%20de%20plantillas/mustache",
+      "target": "/backend/springboot/"
+    },
+    {
+      "source": "/motor%20de%20plantillas/mustache",
+      "target": "/software%20engineering/java/"
+    },
+    {
+      "source": "/motor%20de%20plantillas/mustache",
+      "target": "/backend/php/"
+    },
+    {
+      "source": "/motor%20de%20plantillas/mustache",
+      "target": "/backend/php/"
+    },
+    {
+      "source": "/motor%20de%20plantillas/mustache",
+      "target": "/backend/springboot/"
+    },
+    {
+      "source": "/motor%20de%20plantillas/mustache",
+      "target": "/desarrollo%20web/moodle/"
+    },
+    {
+      "source": "/motor%20de%20plantillas/handlebars",
+      "target": "/backend/php/"
+    },
+    {
+      "source": "/uncategorized/monitoreo",
+      "target": "/uncategorized/devops/"
+    },
+    {
+      "source": "/uncategorized/monitoreo",
+      "target": "/devops/cicd/"
+    },
+    {
+      "source": "/uncategorized/monitoreo",
+      "target": "/infraestructura%20it/soporte-tecnico/"
+    },
+    {
+      "source": "/uncategorized/monitoreo",
+      "target": "/uncategorized/redes/"
+    },
+    {
+      "source": "/uncategorized/monitoreo",
+      "target": "/uncategorized/infraestructura-it/"
+    },
+    {
+      "source": "/uncategorized/monitoreo",
+      "target": "/uncategorized/management/"
+    },
+    {
+      "source": "/uncategorized/monitoreo",
+      "target": "/uncategorized/ciberseguridad/"
+    },
+    {
+      "source": "/uncategorized/monitoreo",
+      "target": "/monitoreo/zabbix/"
+    },
+    {
+      "source": "/uncategorized/monitoreo",
+      "target": "/monitoreo/pandora/"
+    },
+    {
+      "source": "/uncategorized/monitoreo",
+      "target": "/monitoreo/nagios/"
+    },
+    {
+      "source": "/uncategorized/monitoreo",
+      "target": "/monitoreo/grafana/"
+    },
+    {
+      "source": "/uncategorized/monitoreo",
+      "target": "/monitoreo/prometheus/"
+    },
+    {
+      "source": "/uncategorized/monitoreo",
+      "target": "/monitoreo/elasticsearch/"
+    },
+    {
+      "source": "/uncategorized/monitoreo",
+      "target": "/monitoreo/opentelemetry/"
+    },
+    {
+      "source": "/uncategorized/monitoreo",
+      "target": "/uncategorized/infraestructura-it/"
+    },
+    {
+      "source": "/uncategorized/monitoreo",
+      "target": "/monitoreo/elasticsearch/"
+    },
+    {
+      "source": "/uncategorized/monitoreo",
+      "target": "/monitoreo/prometheus/"
+    },
+    {
+      "source": "/uncategorized/monitoreo",
+      "target": "/monitoreo/grafana/"
+    },
+    {
+      "source": "/uncategorized/monitoreo",
+      "target": "/ciberseguridad/siem/"
     },
     {
       "source": "/monitoreo/zabbix",
@@ -8264,82 +8340,6 @@
     {
       "source": "/monitoreo/acunetix-scanner",
       "target": "/uncategorized/monitoreo/"
-    },
-    {
-      "source": "/uncategorized/monitoreo",
-      "target": "/uncategorized/devops/"
-    },
-    {
-      "source": "/uncategorized/monitoreo",
-      "target": "/devops/cicd/"
-    },
-    {
-      "source": "/uncategorized/monitoreo",
-      "target": "/infraestructura%20it/soporte-tecnico/"
-    },
-    {
-      "source": "/uncategorized/monitoreo",
-      "target": "/uncategorized/redes/"
-    },
-    {
-      "source": "/uncategorized/monitoreo",
-      "target": "/uncategorized/infraestructura-it/"
-    },
-    {
-      "source": "/uncategorized/monitoreo",
-      "target": "/uncategorized/management/"
-    },
-    {
-      "source": "/uncategorized/monitoreo",
-      "target": "/uncategorized/ciberseguridad/"
-    },
-    {
-      "source": "/uncategorized/monitoreo",
-      "target": "/monitoreo/zabbix/"
-    },
-    {
-      "source": "/uncategorized/monitoreo",
-      "target": "/monitoreo/pandora/"
-    },
-    {
-      "source": "/uncategorized/monitoreo",
-      "target": "/monitoreo/nagios/"
-    },
-    {
-      "source": "/uncategorized/monitoreo",
-      "target": "/monitoreo/grafana/"
-    },
-    {
-      "source": "/uncategorized/monitoreo",
-      "target": "/monitoreo/prometheus/"
-    },
-    {
-      "source": "/uncategorized/monitoreo",
-      "target": "/monitoreo/elasticsearch/"
-    },
-    {
-      "source": "/uncategorized/monitoreo",
-      "target": "/monitoreo/opentelemetry/"
-    },
-    {
-      "source": "/uncategorized/monitoreo",
-      "target": "/uncategorized/infraestructura-it/"
-    },
-    {
-      "source": "/uncategorized/monitoreo",
-      "target": "/monitoreo/elasticsearch/"
-    },
-    {
-      "source": "/uncategorized/monitoreo",
-      "target": "/monitoreo/prometheus/"
-    },
-    {
-      "source": "/uncategorized/monitoreo",
-      "target": "/monitoreo/grafana/"
-    },
-    {
-      "source": "/uncategorized/monitoreo",
-      "target": "/ciberseguridad/siem/"
     },
     {
       "source": "/mates/teor-a-de-la-probabilidad-y-teor-a-de-la-informaci-n",
@@ -17662,6 +17662,18 @@
       "target": "/ciberseguridad/vulnerabilidades/"
     },
     {
+      "source": "/ciberseguridad/ciberinteligencia-tip",
+      "target": "/uncategorized/ciberseguridad/"
+    },
+    {
+      "source": "/ciberseguridad/ciberinteligencia-tip",
+      "target": "/ciberseguridad/ciberdefensa/"
+    },
+    {
+      "source": "/ciberseguridad/ciberinteligencia-tip",
+      "target": "/ciberseguridad/siem/"
+    },
+    {
       "source": "/ciberseguridad/ciberdefensa",
       "target": "/uncategorized/ciberseguridad/"
     },
@@ -17680,18 +17692,6 @@
     {
       "source": "/ciberseguridad/ciberdefensa",
       "target": "/ciberseguridad/pentesting/"
-    },
-    {
-      "source": "/ciberseguridad/ciberinteligencia-tip",
-      "target": "/uncategorized/ciberseguridad/"
-    },
-    {
-      "source": "/ciberseguridad/ciberinteligencia-tip",
-      "target": "/ciberseguridad/ciberdefensa/"
-    },
-    {
-      "source": "/ciberseguridad/ciberinteligencia-tip",
-      "target": "/ciberseguridad/siem/"
     },
     {
       "source": "/ciberseguridad/caza-de-amenazas",

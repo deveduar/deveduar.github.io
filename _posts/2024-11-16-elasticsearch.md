@@ -150,6 +150,7 @@ Esta combinación de herramientas forma el conocido **ELK Stack**, proporcionand
 ## Ejemplo Práctico: Sistema de Gestión de Libros
 
 ### 1. Crear Índice con Mapping
+{% raw %}
 ```json
 PUT /biblioteca
 {
@@ -167,8 +168,10 @@ PUT /biblioteca
   }
 }
 ```
+{% endraw %}
 
 ### 2. Indexar Documentos
+{% raw %}
 ```json
 POST /biblioteca/_doc/1
 {
@@ -200,8 +203,10 @@ POST /biblioteca/_doc/2
   }
 }
 ```
+{% endraw %}
 
 ### 3. Búsquedas Básicas
+{% raw %}
 ```json
 // Búsqueda por término exacto
 GET /biblioteca/_search
@@ -236,8 +241,10 @@ GET /biblioteca/_search
   }
 }
 ```
+{% endraw %}
 
 ### 4. Búsqueda Avanzada con Filtros
+{% raw %}
 ```json
 GET /biblioteca/_search
 {
@@ -275,8 +282,10 @@ GET /biblioteca/_search
   ]
 }
 ```
+{% endraw %}
 
 ### 5. Aggregations para Análisis
+{% raw %}
 ```json
 GET /biblioteca/_search
 {
@@ -301,8 +310,10 @@ GET /biblioteca/_search
   }
 }
 ```
+{% endraw %}
 
 ### 6. Actualización y Eliminación
+{% raw %}
 ```json
 // Actualizar precio
 POST /biblioteca/_update/1
@@ -315,6 +326,7 @@ POST /biblioteca/_update/1
 // Eliminar documento
 DELETE /biblioteca/_doc/2
 ```
+{% endraw %}
 
 ## Flujo de Trabajo Completo
 
@@ -335,6 +347,7 @@ DELETE /biblioteca/_doc/2
 - Implementar paginación con `from` y `size`
 
 ### 4. Monitoreo y Mantenimiento
+{% raw %}
 ```json
 // Verificar health del cluster
 GET /_cluster/health
@@ -345,6 +358,7 @@ GET /biblioteca/_stats
 // Revisar mapping actual
 GET /biblioteca/_mapping
 ```
+{% endraw %}
 
 ## Casos de Uso Comunes
 

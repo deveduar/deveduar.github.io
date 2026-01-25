@@ -46,6 +46,7 @@ category: Backend
 - **API REST-ish**: endpoints sencillos para CRUD, autenticación y suscripciones.
 
 ## Ejemplo de uso en JavaScript
+{% raw %}
 ```javascript
 import PocketBase from 'pocketbase';
 
@@ -63,10 +64,12 @@ const record = await pb.collection('posts').create({
 // Obtener registros
 const posts = await pb.collection('posts').getFullList();
 console.log(posts);
-````
+```
+{% endraw %}`
 
 ## Ejemplo de uso en Dart / Flutter
 
+{% raw %}
 ```dart
 import 'package:pocketbase/pocketbase.dart';
 
@@ -84,6 +87,7 @@ void main() async {
 	print(posts);
 }
 ```
+{% endraw %}
 
 ## Integración con Next.js
 
@@ -140,14 +144,17 @@ void main() async {
 	- Node.js y Go para servicios backend
 
 ## Ejemplo de triggers en JavaScript
+{% raw %}
 ```javascript
 pb.collection('posts').on('create', (record) => {
 	console.log('Nuevo post creado:', record);
 });
-````
+```
+{% endraw %}`
 
 ## Ejemplo de reglas de permisos
 
+{% raw %}
 ```json
 {
 	"roles": [
@@ -166,6 +173,7 @@ pb.collection('posts').on('create', (record) => {
 	]
 }
 ```
+{% endraw %}
 
 ## Casos de uso ampliados
 

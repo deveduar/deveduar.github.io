@@ -85,20 +85,24 @@ SQL Server incluye un conjunto de servicios orientados a integración, análisis
 ### Ejemplo de Comandos Docker (Bajo su Propio Heading)
 
 #### Crear Contenedor SQL Server en Linux
+{% raw %}
 ```bash
 docker run -e "ACCEPT_EULA=Y" \
 -e "SA_PASSWORD=YourPassword123!" \
 -p 1433:1433 \
 --name sqlserver \
 -d mcr.microsoft.com/mssql/server:2022-latest
-````
+```
+{% endraw %}`
 
 #### Conectarse al Contenedor
 
+{% raw %}
 ```bash
 docker exec -it sqlserver /opt/mssql-tools/bin/sqlcmd \
 -S localhost -U SA -P "YourPassword123!"
 ```
+{% endraw %}
 
 ## Arquitectura Interna
 

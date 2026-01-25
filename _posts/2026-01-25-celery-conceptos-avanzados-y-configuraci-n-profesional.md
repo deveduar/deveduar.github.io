@@ -16,6 +16,7 @@ categories:
 - **Monitoring**: APIs y herramientas de inspección
 
 ### Patrones de Diseño
+{% raw %}
 ```python
 # Task routing avanzado
 app.conf.task_routes = {
@@ -24,10 +25,12 @@ app.conf.task_routes = {
     'proyecto.tareas.emails.*': {'queue': 'emails'}
 }
 ```
+{% endraw %}
 
 ## Configuración para Alta Disponibilidad
 
 ### Optimización de Workers
+{% raw %}
 ```python
 # Configuración para producción enterprise
 app.conf.update(
@@ -43,6 +46,7 @@ app.conf.update(
     }
 )
 ```
+{% endraw %}
 
 ### Escalado Horizontal
 - **Cluster de Workers**: Múltiples instancias procesando colas
@@ -52,6 +56,7 @@ app.conf.update(
 ## Seguridad y Autenticación
 
 ### Configuración Segura
+{% raw %}
 ```python
 # Seguridad en brokers
 app.conf.broker_use_ssl = {
@@ -65,10 +70,12 @@ app.conf.broker_use_ssl = {
 app.conf.broker_url = 'pyamqp://user:password@host:5672/vhost'
 app.conf.result_backend = 'redis://:password@host:6379/0'
 ```
+{% endraw %}
 
 ## Monitoreo Avanzado
 
 ### Integración con Sistemas de Observabilidad
+{% raw %}
 ```python
 # Métricas personalizadas
 from celery.signals import task_prerun, task_postrun
@@ -81,6 +88,7 @@ def task_prerun_handler(task_id, task, **kwargs):
 def task_postrun_handler(task_id, task, **kwargs):
     metrics.timing('celery.tasks.duration', kwargs['retval'])
 ```
+{% endraw %}
 
 ### Health Checks Completos
 - **Broker Connectivity**: Verificación continua del broker
@@ -91,6 +99,7 @@ def task_postrun_handler(task_id, task, **kwargs):
 ## Patrones de Resiliencia
 
 ### Manejo de Fallos
+{% raw %}
 ```python
 # Retry con exponential backoff
 @app.task(bind=True, max_retries=3)
@@ -107,6 +116,7 @@ def tarea_con_circuit_breaker(self, data):
     if self.rate_limit_exceeded():
         raise self.retry(countdown=300)  # Espera 5 minutos
 ```
+{% endraw %}
 
 ### Estrategias de Queue Management
 - **Dead Letter Queues**: Manejo de mensajes no procesables
@@ -116,6 +126,7 @@ def tarea_con_circuit_breaker(self, data):
 ## Integración con Ecosistemas Cloud
 
 ### Configuración Multicloud
+{% raw %}
 ```python
 # Broker en cloud diferente al backend
 app.conf.broker_url = 'sqs://aws-access-key:aws-secret-key@'
@@ -124,8 +135,10 @@ app.conf.result_backend = 'azureblockblob://account-name:account-key@'
 # Service discovery dinámico
 app.conf.broker_url = os.getenv('CELERY_BROKER_URL', 'redis://localhost:6379')
 ```
+{% endraw %}
 
 ### Auto-scaling Basado en Métricas
+{% raw %}
 ```python
 # Escalado automático de workers
 def auto_scale_workers():
@@ -135,10 +148,12 @@ def auto_scale_workers():
     elif queue_depth < 100:
         scale_down_workers(1)
 ```
+{% endraw %}
 
 ## Testing y Desarrollo
 
 ### Estrategias de Testing
+{% raw %}
 ```python
 # Testing de tareas
 @pytest.fixture
@@ -151,8 +166,10 @@ def test_tarea_asincrona(celery_app):
     result = mi_tarea.delay(1, 2)
     assert result.get() == 3
 ```
+{% endraw %}
 
 ### Desarrollo Local
+{% raw %}
 ```yaml
 # docker-compose para desarrollo
 version: '3.8'
@@ -166,10 +183,12 @@ services:
     command: celery -A app worker --loglevel=info
     depends_on: ["redis"]
 ```
+{% endraw %}
 
 ## Performance y Optimización
 
 ### Tuning Avanzado
+{% raw %}
 ```python
 # Optimización de serialización
 app.conf.task_serializer = 'pickle'
@@ -181,6 +200,7 @@ app.conf.worker_max_memory_per_child = 120000  # 120MB
 # Concurrency optimization
 app.conf.worker_concurrency = 4  # Por CPU core
 ```
+{% endraw %}
 
 ### Benchmarking y Profiling
 - **Task Duration Metrics**: Tiempos de ejecución por tipo
@@ -190,6 +210,7 @@ app.conf.worker_concurrency = 4  # Por CPU core
 ## Casos de Uso Especializados
 
 ### Batch Processing
+{% raw %}
 ```python
 # Procesamiento por lotes
 @app.task
@@ -198,8 +219,10 @@ def procesar_lote(items):
         for item in items:
             procesar_item.delay(item)
 ```
+{% endraw %}
 
 ### Stream Processing
+{% raw %}
 ```python
 # Procesamiento continuo
 @app.task
@@ -208,6 +231,7 @@ def procesar_stream(data_stream):
         if should_process(chunk):
             procesar_chunk.delay(chunk)
 ```
+{% endraw %}
 
 ## Migración y Versionado
 

@@ -50,6 +50,7 @@ La **arquitectura modular de testing** en QUnit permite escalar los tests de man
 
 ## 🧩 Estructura recomendada de carpetas
 
+{% raw %}
 ```plaintext
 /tests
  ├─ unit/
@@ -74,6 +75,7 @@ La **arquitectura modular de testing** en QUnit permite escalar los tests de man
  │       └─ userFactory.js
  └─ qunit.config.js
 ```
+{% endraw %}
 
 🧠 _Cada nivel tiene un propósito claro: `unit` valida lógica interna, `integration` relaciones entre módulos, `e2e` flujos reales._
 
@@ -86,6 +88,7 @@ QUnit permite definir hooks dentro de cada módulo, promoviendo un estilo limpio
 
 ### Ejemplo: Módulo con Hooks
 
+{% raw %}
 ```js
 QUnit.module("User Service", hooks => {
 	let service;
@@ -105,6 +108,7 @@ QUnit.module("User Service", hooks => {
 	});
 });
 ```
+{% endraw %}
 
 💡 _Los hooks garantizan independencia entre tests y limpieza del entorno._
 
@@ -123,11 +127,13 @@ La **composición modular** favorece la colaboración entre equipos y la evoluci
 
 Cada capa puede ejecutarse de forma independiente para reducir tiempos de CI:
 
+{% raw %}
 ```bash
 npm run test:unit
 npm run test:integration
 npm run test:e2e
 ```
+{% endraw %}
 
 ---
 
@@ -137,6 +143,7 @@ La modularidad del testing en QUnit se potencia al combinarlo con Mocks MSW para
 
 ### Ejemplo: Configuración con MSW
 
+{% raw %}
 ```js
 import { setupServer } from "msw/node";
 import { handlers } from "../mocks/handlers/apiHandlers.js";
@@ -155,6 +162,7 @@ QUnit.module("API Mocking", hooks => {
 	});
 });
 ```
+{% endraw %}
 
 ✅ _Este patrón desacopla los tests del backend real, acelerando las pruebas y garantizando resultados deterministas._
 
@@ -179,6 +187,7 @@ QUnit.module("API Mocking", hooks => {
 
 En proyectos grandes, se recomienda segmentar el pipeline:
 
+{% raw %}
 ```yaml
 name: QUnit Modular Testing
 on: [push, pull_request]
@@ -199,6 +208,7 @@ jobs:
       - uses: actions/checkout@v4
       - run: npm run test:integration
 ```
+{% endraw %}
 
 🚀 _Segmentar las pruebas reduce tiempos y mejora el feedback continuo._
 

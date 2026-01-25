@@ -63,6 +63,7 @@ El dominio se comunica con el exterior a través de **puertos (interfaces)** y e
 
 ## Ejemplo de estructura de carpetas (TypeScript / Java)
 
+{% raw %}
 ```bash
 src/
 ├── app/
@@ -82,12 +83,14 @@ src/
 └── shared/
 	├── utils/
 	└── config/
-````
+```
+{% endraw %}`
 
 Esta estructura se alinea con los proyectos de referencia de y facilita la aplicación de los patrones de DDD y arquitectura hexagonal.
 
 ## Ejemplo de código: Entidad y Objeto de Valor (TypeScript)
 
+{% raw %}
 ```typescript
 // domain/model/value-objects/Email.ts
 export class Email {
@@ -123,9 +126,11 @@ export class User {
 	}
 }
 ```
+{% endraw %}
 
 ## Ejemplo de código: Servicio de Aplicación
 
+{% raw %}
 ```typescript
 // app/use-cases/CreateUserService.ts
 import { UserRepository } from "../../domain/repositories/UserRepository";
@@ -141,6 +146,7 @@ export class CreateUserService {
 	}
 }
 ```
+{% endraw %}
 
 ## Beneficios de aplicar DDD
 
@@ -212,6 +218,7 @@ Se publican en un **Event Bus** que permite reaccionar a ellos de forma desacopl
 
 Ejemplo (simplificado):
 
+{% raw %}
 ```typescript
 export class UserCreatedEvent {
 	constructor(public readonly userId: string, public readonly email: string) {}
@@ -219,7 +226,8 @@ export class UserCreatedEvent {
 
 // Infraestructura
 eventBus.publish(new UserCreatedEvent("123", "user@example.com"));
-````
+```
+{% endraw %}`
 
 ## Integración con microservicios
 
@@ -290,6 +298,7 @@ El **Specification Pattern** encapsula condiciones de negocio reutilizables y co
 
 Ejemplo (TypeScript):
 
+{% raw %}
 ```typescript
 export interface Specification<T> {
 	isSatisfiedBy(candidate: T): boolean;
@@ -300,7 +309,8 @@ export class ActiveUserSpecification implements Specification<User> {
 		return user.isActive() && user.getEmail().includes("@");
 	}
 }
-````
+```
+{% endraw %}`
 
 Permite combinar reglas: `activeUsers.and(hasValidEmail)`.
 
@@ -450,6 +460,7 @@ El dominio debe garantizar:
 
 ## Estructura de proyecto
 
+{% raw %}
 ```bash
 src/
 ├── app/
@@ -466,7 +477,8 @@ src/
 │	└── adapters/
 └── shared/
 	└── utils/
-````
+```
+{% endraw %}`
 
 ---
 
@@ -474,6 +486,7 @@ src/
 
 ### Value Object: ProductItem
 
+{% raw %}
 ```typescript
 // domain/model/value-objects/ProductItem.ts
 export class ProductItem {
@@ -494,9 +507,11 @@ export class ProductItem {
 	}
 }
 ```
+{% endraw %}
 
 ### Entity: Order
 
+{% raw %}
 ```typescript
 // domain/model/entities/Order.ts
 import { ProductItem } from "../value-objects/ProductItem";
@@ -530,11 +545,13 @@ export class Order {
 	}
 }
 ```
+{% endraw %}
 
 ---
 
 ## Evento de Dominio
 
+{% raw %}
 ```typescript
 // domain/model/events/OrderConfirmedEvent.ts
 export class OrderConfirmedEvent {
@@ -544,11 +561,13 @@ export class OrderConfirmedEvent {
 	) {}
 }
 ```
+{% endraw %}
 
 ---
 
 ## Repositorio del Dominio
 
+{% raw %}
 ```typescript
 // domain/repositories/OrderRepository.ts
 import { Order } from "../model/entities/Order";
@@ -558,11 +577,13 @@ export interface OrderRepository {
 	findById(id: string): Promise<Order | null>;
 }
 ```
+{% endraw %}
 
 ---
 
 ## Caso de uso: Crear y confirmar pedido
 
+{% raw %}
 ```typescript
 // app/use-cases/CreateAndConfirmOrder.ts
 import { OrderRepository } from "../../domain/repositories/OrderRepository";
@@ -585,11 +606,13 @@ export class CreateAndConfirmOrder {
 	}
 }
 ```
+{% endraw %}
 
 ---
 
 ## Adaptador de Infraestructura (Ejemplo In-Memory)
 
+{% raw %}
 ```typescript
 // infrastructure/adapters/InMemoryOrderRepository.ts
 import { OrderRepository } from "../../domain/repositories/OrderRepository";
@@ -607,11 +630,13 @@ export class InMemoryOrderRepository implements OrderRepository {
 	}
 }
 ```
+{% endraw %}
 
 ---
 
 ## Ejecución de ejemplo
 
+{% raw %}
 ```typescript
 const repository = new InMemoryOrderRepository();
 const useCase = new CreateAndConfirmOrder(repository);
@@ -624,6 +649,7 @@ const useCase = new CreateAndConfirmOrder(repository);
 	console.log(event); // => OrderConfirmedEvent { orderId: 'order-123', total: 65 }
 })();
 ```
+{% endraw %}
 
 ---
 
@@ -674,6 +700,7 @@ const useCase = new CreateAndConfirmOrder(repository);
 
 ## Ejemplo de mapeo a base de datos (ORM)
 
+{% raw %}
 ```typescript
 // infrastructure/database/OrderEntity.ts
 import { Entity, PrimaryColumn, Column } from "typeorm";
@@ -693,6 +720,7 @@ export class OrderEntity {
 	confirmed!: boolean;
 }
 ```
+{% endraw %}
 
 El repositorio implementaría la traducción entre `Order` (modelo de dominio) y `OrderEntity` (modelo de persistencia).
 

@@ -87,6 +87,7 @@ Esta nota reúne:
 - `accent-color`
 
 ### Snippets claves
+{% raw %}
 ```css
 /* Centering absoluto */
 .parent {
@@ -107,7 +108,8 @@ Esta nota reúne:
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 	gap: 1rem;
 }
-````
+```
+{% endraw %}`
 
 ---
 
@@ -124,6 +126,7 @@ Cada proyecto incluye:
 
 **Aprendes:** estados hover, transiciones, pseudoelementos.
 
+{% raw %}
 ```css
 .button {
 	padding: 1rem 2rem;
@@ -150,11 +153,13 @@ Cada proyecto incluye:
 	opacity: 1;
 }
 ```
+{% endraw %}
 
 ---
 
 ## 2. Navbar Responsiva
 
+{% raw %}
 ```css
 nav {
 	display: flex;
@@ -176,11 +181,13 @@ nav ul {
 	}
 }
 ```
+{% endraw %}
 
 ---
 
 ## 3. Gallery Grid Auto-fit
 
+{% raw %}
 ```css
 .gallery {
 	display: grid;
@@ -188,11 +195,13 @@ nav ul {
 	gap: 1rem;
 }
 ```
+{% endraw %}
 
 ---
 
 ## 4. Glassmorphism Card
 
+{% raw %}
 ```css
 .card {
 	backdrop-filter: blur(20px) saturate(180%);
@@ -201,11 +210,13 @@ nav ul {
 	padding: 2rem;
 }
 ```
+{% endraw %}
 
 ---
 
 ## 5. Animated Gradient Background
 
+{% raw %}
 ```css
 .bg {
 	background: linear-gradient(120deg, #6a11cb, #2575fc);
@@ -217,11 +228,13 @@ nav ul {
 	50% { background-position: 100% 50%; }
 }
 ```
+{% endraw %}
 
 ---
 
 ## 6. Loader Spinner
 
+{% raw %}
 ```css
 .loader {
 	width: 50px;
@@ -235,11 +248,13 @@ nav ul {
 	to { transform: rotate(360deg); }
 }
 ```
+{% endraw %}
 
 ---
 
 ## 7. Tooltip
 
+{% raw %}
 ```css
 .tooltip {
 	position: relative;
@@ -256,11 +271,13 @@ nav ul {
 	white-space: nowrap;
 }
 ```
+{% endraw %}
 
 ---
 
 ## 8. Accordion
 
+{% raw %}
 ```css
 .accordion input:checked + .content {
 	max-height: 500px;
@@ -271,11 +288,13 @@ nav ul {
 	transition: max-height .4s ease;
 }
 ```
+{% endraw %}
 
 ---
 
 ## 9. Modal
 
+{% raw %}
 ```css
 .modal {
 	position: fixed;
@@ -292,11 +311,13 @@ nav ul {
 	pointer-events: auto;
 }
 ```
+{% endraw %}
 
 ---
 
 ## 10. Tabs con CSS
 
+{% raw %}
 ```css
 .tabs input:checked + label + .panel {
 	display: block;
@@ -306,11 +327,13 @@ nav ul {
 	padding: 1rem;
 }
 ```
+{% endraw %}
 
 ---
 
 ## 11. Pricing Table
 
+{% raw %}
 ```css
 .pricing {
 	display: grid;
@@ -318,11 +341,13 @@ nav ul {
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 ```
+{% endraw %}
 
 ---
 
 ## 12. Hero Section Fluid
 
+{% raw %}
 ```css
 .hero {
 	height: 90svh;
@@ -331,11 +356,13 @@ nav ul {
 	background: url(hero.jpg) center/cover no-repeat;
 }
 ```
+{% endraw %}
 
 ---
 
 ## 13. Landing Page Layout
 
+{% raw %}
 ```css
 .layout {
 	display: grid;
@@ -343,11 +370,13 @@ nav ul {
 	min-height: 100svh;
 }
 ```
+{% endraw %}
 
 ---
 
 ## 14. Footer Sticky
 
+{% raw %}
 ```css
 body {
 	min-height: 100svh;
@@ -355,11 +384,13 @@ body {
 	grid-template-rows: 1fr auto;
 }
 ```
+{% endraw %}
 
 ---
 
 ## 15. CSS Masonry
 
+{% raw %}
 ```css
 .masonry {
 	column-count: 3;
@@ -370,11 +401,13 @@ body {
 	margin-bottom: 1rem;
 }
 ```
+{% endraw %}
 
 ---
 
 ## 16. Icon Buttons
 
+{% raw %}
 ```css
 .icon-btn {
 	display: inline-flex;
@@ -385,11 +418,13 @@ body {
 	background: #eee;
 }
 ```
+{% endraw %}
 
 ---
 
 ## 17. Timeline
 
+{% raw %}
 ```css
 .timeline {
 	border-left: 2px solid #bbb;
@@ -410,11 +445,13 @@ body {
 	border-radius: 50%;
 }
 ```
+{% endraw %}
 
 ---
 
 ## 18. Hover Cards
 
+{% raw %}
 ```css
 .card {
 	transition: transform .3s, box-shadow .3s;
@@ -424,11 +461,13 @@ body {
 	box-shadow: 0 15px 40px rgba(0,0,0,.1);
 }
 ```
+{% endraw %}
 
 ---
 
 ## 19. Login Form UI
 
+{% raw %}
 ```css
 form {
 	display: grid;
@@ -442,11 +481,13 @@ input {
 	border: 1px solid #ccc;
 }
 ```
+{% endraw %}
 
 ---
 
 ## 20. Product Card + Hover
 
+{% raw %}
 ```css
 .product img {
 	transition: transform .3s;
@@ -455,11 +496,13 @@ input {
 	transform: scale(1.1);
 }
 ```
+{% endraw %}
 
 ---
 
 ## 21. Offcanvas Menu
 
+{% raw %}
 ```css
 .menu {
 	position: fixed;
@@ -472,11 +515,13 @@ input {
 	left: 0;
 }
 ```
+{% endraw %}
 
 ---
 
 ## 22. CSS Parallax
 
+{% raw %}
 ```css
 .parallax {
 	background-attachment: fixed;
@@ -484,11 +529,13 @@ input {
 	height: 60svh;
 }
 ```
+{% endraw %}
 
 ---
 
 ## 23. Card Flip
 
+{% raw %}
 ```css
 .flip {
 	perspective: 1000px;
@@ -509,11 +556,13 @@ input {
 	transform: rotateY(180deg);
 }
 ```
+{% endraw %}
 
 ---
 
 ## 24. Animated Border
 
+{% raw %}
 ```css
 .box {
 	border: 3px solid transparent;
@@ -521,11 +570,13 @@ input {
 	linear-gradient(45deg, #6a11cb, #2575fc) border-box;
 }
 ```
+{% endraw %}
 
 ---
 
 ## 25. Notification Badge
 
+{% raw %}
 ```css
 .badge {
 	position: relative;
@@ -542,11 +593,13 @@ input {
 	border-radius: 50%;
 }
 ```
+{% endraw %}
 
 ---
 
 ## 26. Chat Bubbles
 
+{% raw %}
 ```css
 .msg {
 	max-width: 70%;
@@ -562,11 +615,13 @@ input {
 	background: #eee;
 }
 ```
+{% endraw %}
 
 ---
 
 ## 27. Image Overlay Text
 
+{% raw %}
 ```css
 .card {
 	position: relative;
@@ -587,11 +642,13 @@ input {
 	opacity: 1;
 }
 ```
+{% endraw %}
 
 ---
 
 ## 28. Progress Bar
 
+{% raw %}
 ```css
 .progress {
 	height: 10px;
@@ -604,11 +661,13 @@ input {
 	background: #6200ea;
 }
 ```
+{% endraw %}
 
 ---
 
 ## 29. Stepper UI
 
+{% raw %}
 ```css
 .stepper {
 	display: flex;
@@ -624,11 +683,13 @@ input {
 	background: #6200ea;
 }
 ```
+{% endraw %}
 
 ---
 
 ## 30. Responsive Dashboard Layout
 
+{% raw %}
 ```css
 .dashboard {
 	display: grid;
@@ -641,6 +702,7 @@ input {
 	}
 }
 ```
+{% endraw %}
 
 ---
 
@@ -653,6 +715,7 @@ Esta nota amplía la colección anterior con **30 nuevos proyectos**, 100% disti
 
 ## 1. Menú tipo Mega-Dropdown
 **Qué aprendes:** posicionamiento, overlays, layouts internos.
+{% raw %}
 ```css
 .nav-item:hover .mega {
 	display: grid;
@@ -665,7 +728,8 @@ Esta nota amplía la colección anterior con **30 nuevos proyectos**, 100% disti
 	padding: 2rem;
 }
 .mega { display: none; }
-````
+```
+{% endraw %}`
 
 ---
 
@@ -673,6 +737,7 @@ Esta nota amplía la colección anterior con **30 nuevos proyectos**, 100% disti
 
 **Qué aprendes:** `perspective` + `transform` con pseudo-elemento.
 
+{% raw %}
 ```css
 .card {
 	perspective: 800px;
@@ -685,11 +750,13 @@ Esta nota amplía la colección anterior con **30 nuevos proyectos**, 100% disti
 	transform-style: preserve-3d;
 }
 ```
+{% endraw %}
 
 ---
 
 ## 3. Imagen con zoom animado y pan suave
 
+{% raw %}
 ```css
 .img-container:hover img {
 	transform: scale(1.3) translate(-10px, -10px);
@@ -698,11 +765,13 @@ img {
 	transition: transform .6s ease;
 }
 ```
+{% endraw %}
 
 ---
 
 ## 4. Tabs verticales responsivos
 
+{% raw %}
 ```css
 .tabs {
 	display: grid;
@@ -712,21 +781,25 @@ img {
 	.tabs { grid-template-columns: 1fr; }
 }
 ```
+{% endraw %}
 
 ---
 
 ## 5. Cursor personalizado
 
+{% raw %}
 ```css
 body {
 	cursor: url(cursor.svg) 4 4, auto;
 }
 ```
+{% endraw %}
 
 ---
 
 ## 6. Campo input con animación de etiqueta flotante
 
+{% raw %}
 ```css
 .group {
 	position: relative;
@@ -743,11 +816,13 @@ input:not(:placeholder-shown) + label {
 	font-size: .8rem;
 }
 ```
+{% endraw %}
 
 ---
 
 ## 7. Skeleton loading
 
+{% raw %}
 ```css
 .skeleton {
 	background: linear-gradient(90deg, #eee, #ddd, #eee);
@@ -758,11 +833,13 @@ input:not(:placeholder-shown) + label {
 	100% { background-position: -200% 0; }
 }
 ```
+{% endraw %}
 
 ---
 
 ## 8. Checkbox toggle iOS-style
 
+{% raw %}
 ```css
 .toggle {
 	width: 50px;
@@ -788,11 +865,13 @@ input:checked + .toggle::after {
 	transform: translateX(24px);
 }
 ```
+{% endraw %}
 
 ---
 
 ## 9. Botón tipo ripple (CSS-only)
 
+{% raw %}
 ```css
 .btn {
 	position: relative;
@@ -807,11 +886,13 @@ input:checked + .toggle::after {
 }
 @keyframes ripple { to { transform: scale(4); opacity: 0; } }
 ```
+{% endraw %}
 
 ---
 
 ## 10. Lista con líneas conectadas
 
+{% raw %}
 ```css
 .steps {
 	border-left: 2px solid #ccc;
@@ -831,11 +912,13 @@ input:checked + .toggle::after {
 	border-radius: 50%;
 }
 ```
+{% endraw %}
 
 ---
 
 ## 11. Menú lateral plegable (hover expand)
 
+{% raw %}
 ```css
 .sidebar {
 	width: 60px;
@@ -845,11 +928,13 @@ input:checked + .toggle::after {
 	width: 200px;
 }
 ```
+{% endraw %}
 
 ---
 
 ## 12. Botón 3D con sombra neumórfica
 
+{% raw %}
 ```css
 .button {
 	background: #e8e8e8;
@@ -858,11 +943,13 @@ input:checked + .toggle::after {
 	            -8px -8px 16px #ffffff;
 }
 ```
+{% endraw %}
 
 ---
 
 ## 13. Divider con texto centrado
 
+{% raw %}
 ```css
 .divider {
 	display: flex;
@@ -878,11 +965,13 @@ input:checked + .toggle::after {
 .divider::before { margin-right: .5rem; }
 .divider::after { margin-left: .5rem; }
 ```
+{% endraw %}
 
 ---
 
 ## 14. Modal inferior tipo mobile-sheet
 
+{% raw %}
 ```css
 .sheet {
 	position: fixed;
@@ -896,11 +985,13 @@ input:checked + .toggle::after {
 	bottom: 0;
 }
 ```
+{% endraw %}
 
 ---
 
 ## 15. Card con borde doble animado
 
+{% raw %}
 ```css
 .card {
 	padding: 2rem;
@@ -911,11 +1002,13 @@ input:checked + .toggle::after {
 }
 @keyframes spin { to { transform: rotate(1turn); } }
 ```
+{% endraw %}
 
 ---
 
 ## 16. Menú contextual estilo OS
 
+{% raw %}
 ```css
 .context {
 	position: fixed;
@@ -928,21 +1021,25 @@ input:checked + .toggle::after {
 	display: block;
 }
 ```
+{% endraw %}
 
 ---
 
 ## 17. Card con auto-resize según contenido
 
+{% raw %}
 ```css
 .card {
 	width: clamp(250px, 40vw, 450px);
 }
 ```
+{% endraw %}
 
 ---
 
 ## 18. Chip tags con hover de selección
 
+{% raw %}
 ```css
 .tag {
 	background: #f3f3f3;
@@ -954,11 +1051,13 @@ input:checked + .toggle::after {
 	background: #ddd;
 }
 ```
+{% endraw %}
 
 ---
 
 ## 19. Lista sortable visual (solo UI)
 
+{% raw %}
 ```css
 .item {
 	background: #fafafa;
@@ -968,11 +1067,13 @@ input:checked + .toggle::after {
 	cursor: move;
 }
 ```
+{% endraw %}
 
 ---
 
 ## 20. Avatar con estatus online
 
+{% raw %}
 ```css
 .avatar {
 	position: relative;
@@ -991,11 +1092,13 @@ input:checked + .toggle::after {
 	border: 2px solid white;
 }
 ```
+{% endraw %}
 
 ---
 
 ## 21. Tarjetas con gradiente rotativo
 
+{% raw %}
 ```css
 .card {
 	background: linear-gradient(135deg,#ff8a00,#e52e71);
@@ -1006,11 +1109,13 @@ input:checked + .toggle::after {
 	50% { background-position: 100% 50%; }
 }
 ```
+{% endraw %}
 
 ---
 
 ## 22. Scroll suave interno con snap Y
 
+{% raw %}
 ```css
 .container {
 	height: 300px;
@@ -1022,11 +1127,13 @@ input:checked + .toggle::after {
 	padding: 2rem;
 }
 ```
+{% endraw %}
 
 ---
 
 ## 23. Efecto de texto “stroke + fill”
 
+{% raw %}
 ```css
 .text {
 	color: transparent;
@@ -1036,11 +1143,13 @@ input:checked + .toggle::after {
 	color: #6200ea;
 }
 ```
+{% endraw %}
 
 ---
 
 ## 24. Menú hamburguesa animado (solo CSS)
 
+{% raw %}
 ```css
 .ham span {
 	display: block;
@@ -1054,11 +1163,13 @@ input:checked + .toggle::after {
 .ham.active .line2 { opacity: 0; }
 .ham.active .line3 { transform: translateY(-9px) rotate(-45deg); }
 ```
+{% endraw %}
 
 ---
 
 ## 25. Tooltip con flecha personalizada
 
+{% raw %}
 ```css
 .tooltip::after {
 	content: "";
@@ -1069,11 +1180,13 @@ input:checked + .toggle::after {
 	border-color: #333 transparent transparent transparent;
 }
 ```
+{% endraw %}
 
 ---
 
 ## 26. Input con borde gradiente animado
 
+{% raw %}
 ```css
 .input {
 	border: none;
@@ -1087,11 +1200,13 @@ input:checked + .toggle::after {
 }
 @keyframes move { to { background-position: 200%; } }
 ```
+{% endraw %}
 
 ---
 
 ## 27. Botón sticky flotante (FAB)
 
+{% raw %}
 ```css
 .fab {
 	position: fixed;
@@ -1103,11 +1218,13 @@ input:checked + .toggle::after {
 	border-radius: 50%;
 }
 ```
+{% endraw %}
 
 ---
 
 ## 28. Grid alineado por baseline
 
+{% raw %}
 ```css
 .list {
 	display: grid;
@@ -1115,31 +1232,37 @@ input:checked + .toggle::after {
 	gap: 1rem;
 }
 ```
+{% endraw %}
 
 ---
 
 ## 29. Modo oscuro automático
 
+{% raw %}
 ```css
 @media (prefers-color-scheme: dark) {
 	body { background: #121212; color: #eee; }
 }
 ```
+{% endraw %}
 
 ---
 
 ## 30. Imagen con borde recortado (clip-path)
 
+{% raw %}
 ```css
 .img {
 	clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
 }
 ```
+{% endraw %}
 
 ---
 
 Fin de la nota.
 
+{% raw %}
 ```
 
 ---
@@ -1153,3 +1276,4 @@ Si quieres, puedo crear:
 
 ¿Qué tipo de proyectos quieres ahora?
 ```
+{% endraw %}

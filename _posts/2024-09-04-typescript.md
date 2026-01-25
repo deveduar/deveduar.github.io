@@ -306,6 +306,7 @@ category: Software engineering
 ## Uso en Funciones
 
 ### Función genérica simple
+{% raw %}
 ```ts
 function identity<T>(arg: T): T {
 	return arg;
@@ -313,19 +314,23 @@ function identity<T>(arg: T): T {
 
 const num = identity<number>(42); // número
 const str = identity<string>("Hola"); // string
-````
+```
+{% endraw %}`
 
 ### Inferencia de tipos
 
 - TypeScript infiere automáticamente el tipo de `T` según el argumento pasado:
     
 
+{% raw %}
 ```ts
 const inferred = identity("texto"); // T inferido como string
 ```
+{% endraw %}
 
 ### Funciones con múltiples generics
 
+{% raw %}
 ```ts
 function merge<T, U>(obj1: T, obj2: U): T & U {
 	return { ...obj1, ...obj2 };
@@ -334,11 +339,13 @@ function merge<T, U>(obj1: T, obj2: U): T & U {
 const combined = merge({ name: "Alice" }, { age: 25 });
 // combined es { name: string; age: number }
 ```
+{% endraw %}
 
 ## Uso en Clases
 
 ### Clase genérica
 
+{% raw %}
 ```ts
 class Box<T> {
 	private contents: T;
@@ -355,9 +362,11 @@ class Box<T> {
 const numberBox = new Box<number>(100);
 const stringBox = new Box<string>("Texto");
 ```
+{% endraw %}
 
 ### Generics con herencia
 
+{% raw %}
 ```ts
 class SpecialBox<T extends { name: string }> {
 	constructor(private item: T) {}
@@ -368,11 +377,13 @@ class SpecialBox<T extends { name: string }> {
 
 const box = new SpecialBox({ name: "Alice", age: 25 });
 ```
+{% endraw %}
 
 ## Uso en Interfaces y Tipos
 
 ### Interface genérica
 
+{% raw %}
 ```ts
 interface KeyValue<K, V> {
 	key: K;
@@ -381,9 +392,11 @@ interface KeyValue<K, V> {
 
 const pair: KeyValue<string, number> = { key: "edad", value: 30 };
 ```
+{% endraw %}
 
 ### Type alias genérico
 
+{% raw %}
 ```ts
 type Response<T> = {
 	data: T;
@@ -394,6 +407,7 @@ const userResponse: Response<{ id: number; name: string }> = {
 	data: { id: 1, name: "Alice" },
 };
 ```
+{% endraw %}
 
 ## Constraints y Utilidades
 
@@ -401,6 +415,7 @@ const userResponse: Response<{ id: number; name: string }> = {
 
 - Limitar los tipos permitidos para un generic:
 
+{% raw %}
 ```ts
 function logLength<T extends { length: number }>(arg: T): void {
 	console.log(arg.length);
@@ -408,29 +423,35 @@ function logLength<T extends { length: number }>(arg: T): void {
 logLength([1, 2, 3]); // 3
 logLength("Hola TS"); // 7
 ```
+{% endraw %}
 
 ### Default Generics
 
 - Definir un tipo por defecto si no se pasa un generic:
 
+{% raw %}
 ```ts
 function createArray<T = string>(items: T[]): T[] {
 	return [...items];
 }
 const defaultArray = createArray(["a", "b"]); // T inferido como string
 ```
+{% endraw %}
 
 ## Generics Avanzados
 
 ### Conditional Generics
 
+{% raw %}
 ```ts
 type ElementType<T> = T extends (infer U)[] ? U : T;
 type StrType = ElementType<string[]>; // string
 ```
+{% endraw %}
 
 ### Mapped Types con Generics
 
+{% raw %}
 ```ts
 type ReadonlyProps<T> = {
 	readonly [K in keyof T]: T[K];
@@ -438,6 +459,7 @@ type ReadonlyProps<T> = {
 type User = { id: number; name: string };
 type ReadonlyUser = ReadonlyProps<User>; // { readonly id: number; readonly name: string }
 ```
+{% endraw %}
 
 ### Aplicaciones prácticas
 
@@ -463,9 +485,11 @@ type ReadonlyUser = ReadonlyProps<User>; // { readonly id: number; readonly name
 - Arrays: `number[]`, `[string, number]` (tuples)
 - Readonly arrays: `readonly number[]`
 - Enum:  
+{% raw %}
 ```ts
 enum Size { S = "S", M = "M", L = "L" }
-````
+```
+{% endraw %}`
 
 * Const enum: optimiza runtime y tipado
 
@@ -478,9 +502,11 @@ enum Size { S = "S", M = "M", L = "L" }
 * Generics `<T>`: reutilización con tipado seguro
 * Conditional Types:
 
+{% raw %}
 ```ts
 type MessageOf<T> = T extends { message: unknown } ? T['message'] : never
 ```
+{% endraw %}
 
 * Mapped Types: `[K in keyof T]: T[K]`
 * Template literal types: ``type Event<T extends string> = `${T}Changed` ``
@@ -496,10 +522,12 @@ type MessageOf<T> = T extends { message: unknown } ? T['message'] : never
 
 * Clases y herencia:
 
+{% raw %}
 ```ts
 abstract class Em { abstract getSalary(): number }
 class Am extends Em { getSalary() { return 1000; } }
 ```
+{% endraw %}
 
 * Modificadores: `public`, `private`, `protected`, `readonly`
 * Getter/Setter: `get fullName(): string { return this.name; }`
@@ -510,15 +538,19 @@ class Am extends Em { getSalary() { return 1000; } }
 
 * Funciones:
 
+{% raw %}
 ```ts
 function identity<T>(arg: T): T { return arg; }
 ```
+{% endraw %}
 
 * Clases genéricas:
 
+{% raw %}
 ```ts
 class Box<T> { constructor(private value: T) {} getContents(): T { return this.value; } }
 ```
+{% endraw %}
 
 * Constraints: `T extends { length: number }`
 * Type alias genéricos: `type Response<T> = { data: T; error?: string }`
@@ -575,9 +607,11 @@ class Box<T> { constructor(private value: T) {} getContents(): T { return this.v
 - Arrays: `number[]`, `[string, number]` (tuples)
 - Readonly arrays: `readonly number[]`
 - Enum:  
+{% raw %}
 ```ts
 enum Size { S = "S", M = "M", L = "L" }
-````
+```
+{% endraw %}`
 
 * Const enum: optimiza runtime y tipado
 
@@ -604,10 +638,12 @@ enum Size { S = "S", M = "M", L = "L" }
 
 * Clases y herencia:
 
+{% raw %}
 ```ts
 abstract class Em { abstract getSalary(): number }
 class Am extends Em { getSalary() { return 1000; } }
 ```
+{% endraw %}
 
 * Modificadores: `public`, `private`, `protected`, `readonly`
 * Getter/Setter
@@ -619,15 +655,19 @@ class Am extends Em { getSalary() { return 1000; } }
 
 * Funciones:
 
+{% raw %}
 ```ts
 function identity<T>(arg: T): T { return arg; }
 ```
+{% endraw %}
 
 * Clases:
 
+{% raw %}
 ```ts
 class Box<T> { constructor(private value: T) {} getContents(): T { return this.value; } }
 ```
+{% endraw %}
 
 * Constraints: `T extends { length: number }`
 * Multiple generics: `function merge<T, U>(a: T, b: U): T & U`
@@ -639,11 +679,13 @@ class Box<T> { constructor(private value: T) {} getContents(): T { return this.v
 * Añaden metadatos o lógica a clases, métodos, propiedades o parámetros
 * Ejemplo:
 
+{% raw %}
 ```ts
 function Logger(target: Function) { console.log(`Class ${target.name} created`); }
 @Logger
 class Person {}
 ```
+{% endraw %}
 
 * Tipos: class, property, method, parameter
 * Usados en Angular y NestJS
@@ -658,9 +700,11 @@ class Person {}
 
 * `declare` para variables globales o librerías JS:
 
+{% raw %}
 ```ts
 declare const myGlobalVar: string;
 ```
+{% endraw %}
 
 * `@types/` para tipado de librerías externas no escritas en TS
 
@@ -763,10 +807,12 @@ declare const myGlobalVar: string;
 - *LambdaNet: Probabilistic Type Inference using Graph Neural Networks*  
 	- Inferencia de tipos mediante redes neuronales  
 	- [arxiv.org](https://arxiv.org/abs/2005.02161?utm_source=chatgpt.com)
+{% raw %}
 ```
 
 # omnivore typescript
-```base
+```
+{% endraw %}base
 type: list
 name: "Notas con #typescript en Omnivore"
 order:

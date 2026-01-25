@@ -47,6 +47,7 @@ Estos patrones se aplican a entornos con múltiples endpoints, microservicios o 
 
 ## 🏗️ Estructura Recomendada de Carpetas
 
+{% raw %}
 ```plaintext
 src/
 └── mocks/
@@ -65,6 +66,7 @@ src/
 	├── server.ts
 	└── setupTests.ts
 ```
+{% endraw %}
 
 💡 **Consejo**: Cada archivo en `handlers/` debe exponer un array de mocks agrupados por dominio.
 
@@ -78,6 +80,7 @@ Agrupa y combina handlers desde diferentes dominios en un único punto de entrad
 
 ### Ejemplo
 
+{% raw %}
 ```ts
 // src/mocks/handlers/index.ts
 import { authHandlers } from './auth';
@@ -90,6 +93,7 @@ export const handlers = [
 	...productHandlers,
 ];
 ```
+{% endraw %}
 
 🧠 *Facilita mantener independencia de módulos y evita un único archivo monolítico.*
 
@@ -103,6 +107,7 @@ Genera datos dinámicos de prueba con funciones puras o librerías como Faker.js
 
 ### Ejemplo
 
+{% raw %}
 ```ts
 // src/mocks/factories/userFactory.ts
 import { faker } from '@faker-js/faker';
@@ -115,6 +120,7 @@ export const createMockUser = (overrides = {}) => ({
 	...overrides,
 });
 ```
+{% endraw %}
 
 📦 *Ideal para mantener consistencia entre diferentes tests que requieren usuarios simulados.*
 
@@ -128,6 +134,7 @@ Asegura coherencia entre los tipos usados en mocks y en las interfaces de API.
 
 ### Ejemplo
 
+{% raw %}
 ```ts
 import { http, HttpResponse } from 'msw';
 import type { User } from '@/types';
@@ -139,6 +146,7 @@ export const userHandlers = [
 	}),
 ];
 ```
+{% endraw %}
 
 🔒 *Evita mocks obsoletos o con propiedades incorrectas.*
 
@@ -152,21 +160,25 @@ Clasifica handlers según el entorno: `base`, `error`, `auth`, `integration`, et
 
 ### Ejemplo
 
+{% raw %}
 ```ts
 // src/mocks/handlers/context/index.ts
 export { baseHandlers } from './base';
 export { errorHandlers } from './error';
 export { authHandlers } from './auth';
 ```
+{% endraw %}
 
 Luego combínalos dinámicamente:
 
+{% raw %}
 ```ts
 export const handlers = [
 	...baseHandlers,
 	...(process.env.MOCK_ERROR ? errorHandlers : []),
 ];
 ```
+{% endraw %}
 
 ⚙️ *Permite cambiar comportamientos globales sin modificar código de producción.*
 
@@ -180,17 +192,21 @@ Centraliza funciones comunes como delays, logs o respuestas estándar.
 
 ### Ejemplo
 
+{% raw %}
 ```ts
 // src/mocks/utils/delay.ts
 export const simulateDelay = (ms = 500) =>
 	new Promise((resolve) => setTimeout(resolve, ms));
 ```
+{% endraw %}
 
+{% raw %}
 ```ts
 // uso dentro del handler
 await simulateDelay(800);
 return HttpResponse.json({ status: 'ok' });
 ```
+{% endraw %}
 
 💡 Mejora legibilidad y uniformidad del tiempo de respuesta en todos los tests.
 
@@ -204,6 +220,7 @@ Permite inicializar distintos conjuntos de handlers según el entorno (`dev`, `t
 
 ### Ejemplo
 
+{% raw %}
 ```ts
 // src/mocks/server.ts
 import { setupServer } from 'msw/node';
@@ -215,6 +232,7 @@ export const server = setupServer(
 	...(env === 'test' ? handlers.test : handlers.dev)
 );
 ```
+{% endraw %}
 
 🔧 *Facilita tener respuestas distintas sin duplicar lógica.*
 
@@ -228,6 +246,7 @@ Combina respuestas simuladas con datos reales (parcial mocking).
 
 ### Ejemplo
 
+{% raw %}
 ```ts
 http.get('/api/settings', async () => {
 	const response = await fetch('/__real__/settings');
@@ -235,6 +254,7 @@ http.get('/api/settings', async () => {
 	return HttpResponse.json({ ...realData, mode: 'mocked' });
 });
 ```
+{% endraw %}
 
 🧬 *Útil para entornos híbridos donde parte de la API real está disponible.*
 
@@ -248,6 +268,7 @@ Cada handler debe incluir un comentario de propósito y dependencias.
 
 ### Ejemplo
 
+{% raw %}
 ```ts
 // [users.ts]
 // Mock de /api/users
@@ -257,6 +278,7 @@ export const userHandlers = [
 	http.get('/api/users', () => HttpResponse.json([])),
 ];
 ```
+{% endraw %}
 
 📘 *Permite a nuevos desarrolladores entender fácilmente el alcance del mock.*
 
@@ -283,6 +305,7 @@ Valida que los mocks respondan correctamente antes de integrarlos en tests de UI
 
 ### Ejemplo
 
+{% raw %}
 ```ts
 import { handlers } from '@/mocks/handlers';
 import { setupServer } from 'msw/node';
@@ -297,6 +320,7 @@ test('endpoint /api/users mockeado', async () => {
 	expect(data).toBeInstanceOf(Array);
 });
 ```
+{% endraw %}
 
 ✅ *Permite garantizar calidad de los mocks como si fueran un microservicio.*
 

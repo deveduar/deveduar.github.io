@@ -78,6 +78,7 @@ category: Backend
 - Automatización operativa (infra, seguridad, auditoría de eventos).
 
 ## Código – Ejemplo de Lambda en Node.js
+{% raw %}
 ```javascript
 exports.handler = async (event) => {
 	const input = event.detail || {};
@@ -88,10 +89,12 @@ exports.handler = async (event) => {
 	};
 	return { statusCode: 200, body: JSON.stringify(result) };
 };
-````
+```
+{% endraw %}`
 
 ## Código – Ejemplo de Trigger EventBridge (Infra IaC)
 
+{% raw %}
 ```json
 {
 	"source": ["app.sales"],
@@ -101,6 +104,7 @@ exports.handler = async (event) => {
 	}
 }
 ```
+{% endraw %}
 
 
 # Serverless: Conceptos Avanzados y Arquitectura 2025
@@ -183,6 +187,7 @@ exports.handler = async (event) => {
 - Offloading de tareas de sistemas legacy mediante eventos.
 
 ## Heading: Código – Métrica de Cold Start (OTel)
+{% raw %}
 ```javascript
 import { trace } from "@opentelemetry/api";
 
@@ -192,10 +197,12 @@ exports.handler = async () => {
 	span.end();
 	return "ok";
 };
-````
+```
+{% endraw %}`
 
 ## Heading: Código – Patrón Fan-out con Mensajería
 
+{% raw %}
 ```json
 {
 	"fanout": {
@@ -208,6 +215,7 @@ exports.handler = async () => {
 	}
 }
 ```
+{% endraw %}
 
 # Glosario Serverless
 ## Conceptos Generales

@@ -146,6 +146,7 @@ Desplegar el Collector con Docker proporciona un entorno reproducible y portable
 
 Crear un archivo `otel-collector-config.yaml`:
 
+{% raw %}
 ```yaml
 receivers:
 	otlp:
@@ -197,18 +198,21 @@ service:
 			receivers: [otlp, filelog]
 			processors: [batch, attributes, transform]
 			exporters: [logging]
-````
+```
+{% endraw %}`
 
 ---
 
 ## Ejecutar el Collector con Docker
 
+{% raw %}
 ```bash
 docker run -p 4317:4317 -p 4318:4318 -p 8889:8889 \
 	-v $(pwd)/otel-collector-config.yaml:/etc/otel/config.yaml \
 	otel/opentelemetry-collector:latest \
 	--config=/etc/otel/config.yaml
 ```
+{% endraw %}
 
 ---
 
@@ -216,6 +220,7 @@ docker run -p 4317:4317 -p 4318:4318 -p 8889:8889 \
 
 Archivo `docker-compose.yml`:
 
+{% raw %}
 ```yaml
 version: '3'
 services:
@@ -236,12 +241,15 @@ services:
 			- "16686:16686"
 			- "14250:14250"
 ```
+{% endraw %}
 
 Lanzar los servicios:
 
+{% raw %}
 ```bash
 docker compose up -d
 ```
+{% endraw %}
 
 ---
 
@@ -271,11 +279,13 @@ docker compose up -d
 Esta nota recopila prácticas recomendadas para diseñar pipelines sólidos en el **OpenTelemetry Collector**, asegurando recolección confiable, escalabilidad global, gobernanza del flujo de datos y compatibilidad en arquitecturas complejas (service mesh, multi-región, multi-nube y despliegues progresivos).
 
 Los pipelines siguen la estructura:
+{% raw %}
 ```
 
 receivers → processors → exporters
 
 ```
+{% endraw %}
 
 ---
 
@@ -315,11 +325,13 @@ Los processors son el corazón del pipeline. Las prácticas más importantes:
 - `transform`: normalización avanzada (OTTL).
 
 ### Orden recomendado
+{% raw %}
 ```
 
 memory_limiter → batch → transform → resource → attributes → filter
 
 ```
+{% endraw %}
 
 ### Estándares
 - Normalizar nombres de servicios antes de exportar.
@@ -368,6 +380,7 @@ memory_limiter → batch → transform → resource → attributes → filter
 
 ## Pipelines Multi-Región / Multi-Cluster
 ### Arquitectura recomendada
+{% raw %}
 ```
 
 Agente Local (Pod/VM)
@@ -375,7 +388,8 @@ Agente Local (Pod/VM)
 → Collector Global
 → Backend(s)
 
-````
+```
+{% endraw %}`
 
 ### Buenas prácticas
 - Exportación regional → corte por región, no global.
@@ -399,7 +413,8 @@ Agente Local (Pod/VM)
 ### Prácticas recomendadas
 - Añadir atributo `service.version` o `deployment.version`.
 - Filtrado avanzado por versión usando OTTL:
-	```yaml
+	{% raw %}
+```yaml
 	processors:
 		filter/canary:
 			traces:
@@ -408,6 +423,7 @@ Agente Local (Pod/VM)
 					attributes:
 						service.version: "canary"
 	```
+{% endraw %}
 
 - Exportadores distintos:
 	- Canary → backend temporal
@@ -424,9 +440,11 @@ Agente Local (Pod/VM)
 - Reglas para mover atributos entre signals.
 
 ### Ejemplo de regla OTTL
+{% raw %}
 ```yaml
 - set(attributes["http.method"], "REDACTED") where attributes["http.method"] == "TRACE"
-````
+```
+{% endraw %}`
 
 ---
 
@@ -473,6 +491,7 @@ Agente Local (Pod/VM)
 
 ### 1. Pipeline Complejo Estándar
 
+{% raw %}
 ```
 Agent (host/app)
 	→ Collector Local
@@ -480,24 +499,29 @@ Agent (host/app)
 	→ Collector Global
 		→ Exporters: Prometheus, Jaeger, Loki, Kafka
 ```
+{% endraw %}
 
 ### 2. Service Mesh + Multi-Cluster
 
+{% raw %}
 ```
 Sidecars Istio
 	→ Node Agent
 	→ Cluster Collector
 	→ Global Collector
 ```
+{% endraw %}
 
 ### 3. Canary vs Stable
 
+{% raw %}
 ```
 Local Collector
 	→ Pipeline A (stable)
 	→ Pipeline B (canary)
 	→ Backends separados
 ```
+{% endraw %}
 
 ---
 
@@ -779,6 +803,7 @@ Esta nota recopila pipelines listos para usar en el Collector, cada uno diseñad
 
 ## Pipeline 1 — Traces + Tail Sampling + Exportación Múltiple
 
+{% raw %}
 ```yaml
 receivers:
 	otlp:
@@ -818,7 +843,8 @@ service:
 			receivers: [otlp]
 			processors: [tailsampling, batch]
 			exporters: [otlp, logging]
-````
+```
+{% endraw %}`
 
 **Aporta:**
 ✓ Mantiene 100% de errores
@@ -830,6 +856,7 @@ service:
 
 ## Pipeline 2 — Logs desde archivos + Normalización + Loki
 
+{% raw %}
 ```yaml
 receivers:
 	filelog:
@@ -866,6 +893,7 @@ service:
 			processors: [filter, attributes]
 			exporters: [loki]
 ```
+{% endraw %}
 
 **Aporta:**
 ✓ Ingresa logs desde archivos
@@ -877,6 +905,7 @@ service:
 
 ## Pipeline 3 — Métricas del Host + Node Exporter Replacement
 
+{% raw %}
 ```yaml
 receivers:
 	hostmetrics:
@@ -902,6 +931,7 @@ service:
 			processors: [batch]
 			exporters: [prometheus]
 ```
+{% endraw %}
 
 **Aporta:**
 ✓ Reemplaza a node_exporter
@@ -912,6 +942,7 @@ service:
 
 ## Pipeline 4 — Enrutamiento según tipo de señal → (Prometheus, Tempo, Loki)
 
+{% raw %}
 ```yaml
 receivers:
 	otlp:
@@ -949,6 +980,7 @@ service:
 			processors: [batch]
 			exporters: [loki]
 ```
+{% endraw %}
 
 **Aporta:**
 ✓ Separación por señal
@@ -958,6 +990,7 @@ service:
 
 ## Pipeline 5 — Kubernetes Logs + Metadata Enrichment
 
+{% raw %}
 ```yaml
 receivers:
 	filelog:
@@ -989,6 +1022,7 @@ service:
 			processors: [k8sattributes, batch]
 			exporters: [loki]
 ```
+{% endraw %}
 
 **Aporta:**
 ✓ Recolecta logs de contenedores Kubernetes
@@ -1000,6 +1034,7 @@ service:
 
 ## Pipeline 6 — Métricas Prometheus + Reetiquetado → OTLP
 
+{% raw %}
 ```yaml
 receivers:
 	prometheus:
@@ -1029,6 +1064,7 @@ service:
 			processors: [attributes]
 			exporters: [otlp]
 ```
+{% endraw %}
 
 **Aporta:**
 ✓ Collector actuando como mini Prometheus
@@ -1039,6 +1075,7 @@ service:
 
 ## Pipeline 7 — Logs + Traces Correlacionados (Insertar TraceID en Logs)
 
+{% raw %}
 ```yaml
 receivers:
 	otlp:
@@ -1079,6 +1116,7 @@ service:
 			processors: [resource]
 			exporters: [otlp]
 ```
+{% endraw %}
 
 **Aporta:**
 ✓ Enriquecimiento automático
@@ -1089,6 +1127,7 @@ service:
 
 ## Pipeline 8 — Kafka como Buffer de Telemetría
 
+{% raw %}
 ```yaml
 receivers:
 	otlp:
@@ -1123,6 +1162,7 @@ service:
 			processors: [batch]
 			exporters: [kafka]
 ```
+{% endraw %}
 
 **Aporta:**
 ✓ Buffer masivo
@@ -1133,6 +1173,7 @@ service:
 
 ## Pipeline 9 — Filtrado Avanzado (Excluir Salud, Incluir Errores 5xx)
 
+{% raw %}
 ```yaml
 receivers:
 	otlp:
@@ -1164,6 +1205,7 @@ service:
 			processors: [filter, transform]
 			exporters: [logging, otlp]
 ```
+{% endraw %}
 
 **Aporta:**
 ✓ Excluye tráfico irrelevante (/health)
@@ -1174,6 +1216,7 @@ service:
 
 ## Pipeline 10 — Collector como Router por Atributos (Multi-Tenant)
 
+{% raw %}
 ```yaml
 receivers:
 	otlp:
@@ -1209,6 +1252,7 @@ service:
 			processors: [routing]
 			exporters: [exporter_default]
 ```
+{% endraw %}
 
 **Aporta:**
 ✓ Multi-tenant real

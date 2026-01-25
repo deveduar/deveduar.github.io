@@ -41,9 +41,11 @@ La **comunicación entre procesos** (IPC - Inter Process Communication) permite 
 Las **tuberías** permiten conectar la salida de un proceso con la entrada de otro.
 
 #### Ejemplo Práctico con Comandos
+{% raw %}
 ```bash
 ls | grep hello
 ```
+{% endraw %}
 Este comando conecta la salida de `ls` con la entrada de `grep`, filtrando solo los archivos que contienen "hello".
 
 ### Sockets
@@ -57,6 +59,7 @@ Los [Sockets](/backend/sockets/) permiten la comunicación entre procesos en la 
 ## Ejemplos de Implementación
 
 ### Programa en C - Procesamiento de Argumentos
+{% raw %}
 ```c
 #include <stdio.h>
 int main(int argc, char **argv) {
@@ -66,8 +69,10 @@ int main(int argc, char **argv) {
     printf("\n");
 }
 ```
+{% endraw %}
 
 ### Programa en Python - Ordenamiento de Números
+{% raw %}
 ```python
 from sys import stdin
 
@@ -79,6 +84,7 @@ def main():
 if __name__ == '__main__':
     main()
 ```
+{% endraw %}
 
 ## Flujo de Comunicación
 
@@ -122,6 +128,7 @@ if __name__ == '__main__':
 - **SOCK_RAW**: Acceso directo al protocolo
 
 ### Estados de Conexión TCP
+{% raw %}
 ```python
 # Ejemplo de estados en conexión socket
 ESTADOS = {
@@ -133,6 +140,7 @@ ESTADOS = {
     "TIME_WAIT": "Esperando paquetes tardíos"
 }
 ```
+{% endraw %}
 
 ### Buffering y Blocking
 - **Buffering**: Almacenamiento temporal de datos
@@ -176,6 +184,7 @@ ESTADOS = {
 ## Ejemplos Avanzados
 
 ### Socket con Múltiples Clientes
+{% raw %}
 ```python
 import socket
 import threading
@@ -198,8 +207,10 @@ while True:
     thread = threading.Thread(target=handle_client, args=(client,))
     thread.start()
 ```
+{% endraw %}
 
 ### Memoria Compartida en C
+{% raw %}
 ```c
 #include <sys/shm.h>
 #include <stdio.h>
@@ -216,10 +227,12 @@ int main() {
     return 0;
 }
 ```
+{% endraw %}
 
 ## Herramientas de Diagnóstico
 
 ### Comandos de Monitoreo
+{% raw %}
 ```bash
 # Ver sockets abiertos
 netstat -tulpn
@@ -231,6 +244,7 @@ lsof -i
 # Monitorear uso de pipes
 lsof | grep FIFO
 ```
+{% endraw %}
 
 ### Performance y Optimización
 - **Throughput**: Cantidad de datos por unidad de tiempo
@@ -279,6 +293,7 @@ lsof | grep FIFO
 ## Comunicación Interdominio
 
 ### RPC (Remote Procedure Call)
+{% raw %}
 ```c
 // Ejemplo conceptual de RPC
 struct rpc_call {
@@ -290,6 +305,7 @@ struct rpc_call {
 // Cliente llama función remota como si fuera local
 result = remote_function(arg1, arg2);
 ```
+{% endraw %}
 
 ### Marshalling/Unmarshalling
 - **Marshalling**: Empaquetado de parámetros para transmisión
@@ -357,6 +373,7 @@ result = remote_function(arg1, arg2);
 - **Zipkin**: Sistema de seguimiento de peticiones
 
 ### Métricas de Comunicación
+{% raw %}
 ```python
 # Métricas clave para monitorizar IPC
 metricas = {
@@ -366,6 +383,7 @@ metricas = {
     "conexiones_activas": "número de conexiones simultáneas"
 }
 ```
+{% endraw %}
 
 ## Optimización de Performance
 
@@ -413,6 +431,7 @@ metricas = {
 ## Patrones de Resiliencia
 
 ### Circuit Breaker
+{% raw %}
 ```python
 class CircuitBreaker:
     def __init__(self):
@@ -430,6 +449,7 @@ class CircuitBreaker:
             self._on_failure()
             raise
 ```
+{% endraw %}
 
 ### Retry Patterns
 - **Exponential Backoff**: Espera exponencial entre reintentos
@@ -571,6 +591,7 @@ class CircuitBreaker:
 - **Region Locking**: Bloqueo de regiones específicas de archivos
 
 ### Memory-Mapped Files
+{% raw %}
 ```c
 #include <sys/mman.h>
 // Mapear archivo a memoria
@@ -578,6 +599,7 @@ void* mapped = mmap(NULL, file_size, PROT_READ|PROT_WRITE,
                    MAP_SHARED, fd, 0);
 // Procesos acceden al mismo espacio de memoria
 ```
+{% endraw %}
 
 ## Comunicación por Señales
 
@@ -654,12 +676,14 @@ void* mapped = mmap(NULL, file_size, PROT_READ|PROT_WRITE,
 ## Comunicación para Supercomputación
 
 ### MPI Avanzado
+{% raw %}
 ```c
 // Operaciones colectivas avanzadas en MPI
 MPI_Alltoallv();  // Comunicación todos-a-todos con desplazamientos
 MPI_Reduce_scatter(); // Reducción y dispersión combinadas
 MPI_Exscan();     // Scan exclusivo
 ```
+{% endraw %}
 
 ### PGAS Languages
 - **UPC**: Unified Parallel C
@@ -760,6 +784,7 @@ MPI_Exscan();     // Scan exclusivo
 - **Service Workers**: Proxy para network requests
 
 ### Message Passing en Workers
+{% raw %}
 ```javascript
 // Main thread
 const worker = new Worker('worker.js');
@@ -778,10 +803,12 @@ self.onmessage = (e) => {
     }
 };
 ```
+{% endraw %}
 
 ## Comunicación entre Tabs/Windows
 
 ### Broadcast Channel API
+{% raw %}
 ```javascript
 // Emisor
 const channel = new BroadcastChannel('app-channel');
@@ -795,8 +822,10 @@ channel.onmessage = (e) => {
     }
 };
 ```
+{% endraw %}
 
 ### LocalStorage Events
+{% raw %}
 ```javascript
 // Una pestaña escribe
 localStorage.setItem('shared-data', JSON.stringify(data));
@@ -809,6 +838,7 @@ window.addEventListener('storage', (e) => {
     }
 });
 ```
+{% endraw %}
 
 ## Comunicación en Microservicios Web
 
@@ -818,6 +848,7 @@ window.addEventListener('storage', (e) => {
 - **Service Discovery**: Descubrimiento dinámico de servicios
 
 ### Circuit Breaker en APIs Web
+{% raw %}
 ```javascript
 class APICircuitBreaker {
     constructor() {
@@ -848,6 +879,7 @@ class APICircuitBreaker {
     }
 }
 ```
+{% endraw %}
 
 ## Comunicación en Aplicaciones Isomórficas
 
@@ -857,6 +889,7 @@ class APICircuitBreaker {
 - **Progressive Enhancement**: Mejora progresiva de funcionalidad
 
 ### Next.js API Routes Communication
+{% raw %}
 ```javascript
 // pages/api/users/[id].js
 export default function handler(req, res) {
@@ -873,10 +906,12 @@ export default function handler(req, res) {
     }
 }
 ```
+{% endraw %}
 
 ## Comunicación en Aplicaciones Multiplataforma
 
 ### React Native Bridge
+{% raw %}
 ```javascript
 // Native Module
 import { NativeModules } from 'react-native';
@@ -893,8 +928,10 @@ MessageQueue.spy((msg) => {
     console.log(msg);
 });
 ```
+{% endraw %}
 
 ### Flutter Platform Channels
+{% raw %}
 ```dart
 // Flutter side
 static const platform = MethodChannel('com.example/app');
@@ -917,10 +954,12 @@ public class MainActivity extends FlutterActivity {
     }
 }
 ```
+{% endraw %}
 
 ## Comunicación en PWA y Apps Web
 
 ### Background Sync
+{% raw %}
 ```javascript
 // Registrar sync
 navigator.serviceWorker.ready.then(registration => {
@@ -934,8 +973,10 @@ self.addEventListener('sync', event => {
     }
 });
 ```
+{% endraw %}
 
 ### Push Notifications Communication
+{% raw %}
 ```javascript
 // Suscripción
 const subscription = await registration.pushManager.subscribe({
@@ -952,10 +993,12 @@ await fetch('/api/push/send', {
     })
 });
 ```
+{% endraw %}
 
 ## Comunicación en GraphQL
 
 ### Subscriptions para Comunicación en Tiempo Real
+{% raw %}
 ```javascript
 // Schema
 type Subscription {
@@ -975,8 +1018,10 @@ const resolvers = {
     }
 };
 ```
+{% endraw %}
 
 ### Apollo Client State Management
+{% raw %}
 ```javascript
 // Comunicación entre componentes via Apollo Cache
 const GET_LOCAL_STATE = gql`
@@ -993,10 +1038,12 @@ const ADD_TO_CART = gql`
     }
 `;
 ```
+{% endraw %}
 
 ## Comunicación en Serverless
 
 ### Function-to-Function Communication
+{% raw %}
 ```javascript
 // AWS Lambda invocation
 const AWS = require('aws-sdk');
@@ -1008,8 +1055,10 @@ const result = await lambda.invoke({
     Payload: JSON.stringify({ imageUrl, operations })
 }).promise();
 ```
+{% endraw %}
 
 ### Event Bridge Patterns
+{% raw %}
 ```javascript
 // Publicar evento
 await eventBridge.putEvents({
@@ -1021,10 +1070,12 @@ await eventBridge.putEvents({
     }]
 }).promise();
 ```
+{% endraw %}
 
 ## Comunicación en WebSockets Avanzado
 
 ### Room-based Communication
+{% raw %}
 ```javascript
 // Socket.io rooms
 io.on('connection', (socket) => {
@@ -1037,8 +1088,10 @@ io.on('connection', (socket) => {
     socket.broadcast.to('room-' + roomId).emit('user-joined', user);
 });
 ```
+{% endraw %}
 
 ### Connection Pooling y Load Balancing
+{% raw %}
 ```javascript
 // Sticky sessions para WebSocket load balancing
 const io = require('socket.io')(server, {
@@ -1050,10 +1103,12 @@ setInterval(() => {
     socket.emit('ping', { timestamp: Date.now() });
 }, 30000);
 ```
+{% endraw %}
 
 ## Comunicación para E-commerce en Tiempo Real
 
 ### Real-time Inventory Updates
+{% raw %}
 ```javascript
 // WebSocket para actualizaciones de inventario
 socket.on('inventory-update', (data) => {
@@ -1069,8 +1124,10 @@ redisSubscriber.on('message', (channel, message) => {
     }
 });
 ```
+{% endraw %}
 
 ### Shopping Cart Sync
+{% raw %}
 ```javascript
 // Sincronización de carrito entre dispositivos
 class CartSync {
@@ -1085,10 +1142,12 @@ class CartSync {
     }
 }
 ```
+{% endraw %}
 
 ## Comunicación para Analytics y Monitoring
 
 ### Real User Monitoring (RUM)
+{% raw %}
 ```javascript
 // Performance metrics collection
 const observer = new PerformanceObserver((list) => {
@@ -1104,8 +1163,10 @@ const observer = new PerformanceObserver((list) => {
 
 observer.observe({ entryTypes: ['measure', 'navigation'] });
 ```
+{% endraw %}
 
 ### Error Tracking Communication
+{% raw %}
 ```javascript
 // Global error handler
 window.addEventListener('error', (event) => {
@@ -1127,12 +1188,14 @@ window.addEventListener('unhandledrejection', (event) => {
     });
 });
 ```
+{% endraw %}
 
 # Fundamentos de Comunicación entre Procesos - Temas Clave No Cubiertos
 
 ## Modelos Teóricos Fundamentales
 
 ### Modelo de Pase de Mensajes (Actor Model)
+{% raw %}
 ```erlang
 % Ejemplo conceptual en estilo Erlang
 actor_process(State) ->
@@ -1147,6 +1210,7 @@ actor_process(State) ->
             ok
     end.
 ```
+{% endraw %}
 
 ### Modelo de Memoria Compartida
 - **Consistencia Sequential**: Memoria como si fuera secuencial
@@ -1156,6 +1220,7 @@ actor_process(State) ->
 ## Constructores de Sincronización Avanzados
 
 ### Barreras de Sincronización
+{% raw %}
 ```c
 pthread_barrier_t barrier;
 
@@ -1174,8 +1239,10 @@ void* worker(void* arg) {
     work_after();
 }
 ```
+{% endraw %}
 
 ### Monitores y Variables de Condición
+{% raw %}
 ```java
 public class BoundedBuffer<T> {
     private final T[] buffer;
@@ -1192,10 +1259,12 @@ public class BoundedBuffer<T> {
     }
 }
 ```
+{% endraw %}
 
 ## Patrones Arquitectónicos de Comunicación
 
 ### Arquitectura Reactor
+{% raw %}
 ```cpp
 class Reactor {
     std::map<int, EventHandler*> handlers;
@@ -1217,6 +1286,7 @@ public:
     }
 };
 ```
+{% endraw %}
 
 ### Patrón Proactor
 - **Iniciación asíncrona**: Operaciones iniciadas asíncronamente
@@ -1231,6 +1301,7 @@ public:
 - **Líder**: Optimización mediante líder
 
 ### Raft Consensus
+{% raw %}
 ```go
 type RaftNode struct {
     currentTerm int
@@ -1248,6 +1319,7 @@ func (r *RaftNode) startElection() {
     }
 }
 ```
+{% endraw %}
 
 ## Comunicación en Sistemas de Tiempo Real
 
@@ -1269,6 +1341,7 @@ func (r *RaftNode) startElection() {
 - **Message logging**: Registro de mensajes para recuperación
 
 ### Byzantine Fault Tolerance
+{% raw %}
 ```python
 class ByzantineAgreement:
     def __init__(self, nodes, f):
@@ -1281,6 +1354,7 @@ class ByzantineAgreement:
         # Fase de commit
         return self._reach_consensus(value)
 ```
+{% endraw %}
 
 ## Modelos de Consistencia de Datos
 
@@ -1290,6 +1364,7 @@ class ByzantineAgreement:
 - **Causal Consistency**: Preservación de relaciones causales
 
 ### Conflict-free Replicated Data Types (CRDTs)
+{% raw %}
 ```rust
 #[derive(Debug, Clone)]
 struct GSet<T> {
@@ -1306,6 +1381,7 @@ impl<T: Eq + Hash + Clone> GSet<T> {
     }
 }
 ```
+{% endraw %}
 
 ## Comunicación en Sistemas de Memoria Distribuida
 
@@ -1322,6 +1398,7 @@ impl<T: Eq + Hash + Clone> GSet<T> {
 ## Comunicación para Stream Processing
 
 ### Backpressure Mechanisms
+{% raw %}
 ```java
 public class BackpressureQueue<T> {
     private final Queue<T> queue;
@@ -1347,6 +1424,7 @@ public class BackpressureQueue<T> {
     }
 }
 ```
+{% endraw %}
 
 ### Watermarks en Stream Processing
 - **Event Time**: Tiempo de los eventos
@@ -1373,6 +1451,7 @@ public class BackpressureQueue<T> {
 - **Consistent Hashing**: Hashing consistente para redistribución mínima
 
 ### Health Checking y Failover
+{% raw %}
 ```go
 type HealthChecker struct {
     targets    []string
@@ -1391,10 +1470,12 @@ func (h *HealthChecker) checkTarget(target string) bool {
     return true
 }
 ```
+{% endraw %}
 
 ## Comunicación en Sistemas de Bases de Datos Distribuidas
 
 ### Two-Phase Commit (2PC)
+{% raw %}
 ```sql
 -- Fase 1: Prepare
 BEGIN TRANSACTION;
@@ -1405,6 +1486,7 @@ UPDATE accounts SET balance = balance - 100 WHERE id = 1;
 -- Si todos prepararon: COMMIT
 -- Si alguno falló: ROLLBACK
 ```
+{% endraw %}
 
 ### Replication Protocols
 - **Primary-Backup**: Réplicas primaria-secundaria
@@ -1414,6 +1496,7 @@ UPDATE accounts SET balance = balance - 100 WHERE id = 1;
 ## Comunicación para Service Mesh
 
 ### Sidecar Pattern
+{% raw %}
 ```yaml
 apiVersion: v1
 kind: Pod
@@ -1427,6 +1510,7 @@ spec:
     image: envoy:latest
     # Maneja toda la comunicación de red
 ```
+{% endraw %}
 
 ### Traffic Management
 - **Traffic Splitting**: División de tráfico
@@ -1441,6 +1525,7 @@ spec:
 - **Warm-up Requests**: Peticiones de calentamiento
 
 ### Function Chaining
+{% raw %}
 ```javascript
 // Ejemplo AWS Step Functions
 const stepFunction = new StepFunctions();
@@ -1449,10 +1534,12 @@ const execution = await stepFunction.startExecution({
     input: JSON.stringify({ data: inputData })
 }).promise();
 ```
+{% endraw %}
 
 ## Comunicación para Observabilidad
 
 ### Distributed Tracing Context Propagation
+{% raw %}
 ```java
 public class TracingInterceptor implements ClientInterceptor {
     @Override
@@ -1476,6 +1563,7 @@ public class TracingInterceptor implements ClientInterceptor {
     }
 }
 ```
+{% endraw %}
 
 ### Metrics Collection y Aggregation
 - **Push vs Pull**: Modelos de colección de métricas

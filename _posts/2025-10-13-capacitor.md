@@ -36,23 +36,29 @@ Capacitor es un **runtime nativo multiplataforma** que permite construir aplicac
 
 ## Instalación y configuración básica
 ### Instalación en un proyecto Angular
+{% raw %}
 ```bash
 npm install @capacitor/core @capacitor/cli
 npx cap init [appName] [appId]
-````
+```
+{% endraw %}`
 
 ### Añadir plataformas
 
+{% raw %}
 ```bash
 npx cap add android
 npx cap add ios
 ```
+{% endraw %}
 
 ### Sincronizar cambios del proyecto web
 
+{% raw %}
 ```bash
 npx cap sync
 ```
+{% endraw %}
 
 ## Uso con Angular
 
@@ -60,6 +66,7 @@ npx cap sync
 - Integración con servicios y componentes Angular.
 - Ejemplo de uso de un plugin de cámara:
 
+{% raw %}
 ```typescript
 import { Camera, CameraResultType } from '@capacitor/camera';
 
@@ -71,6 +78,7 @@ async function takePhoto() {
 	console.log(photo.webPath);
 }
 ```
+{% endraw %}
 
 ## Plugins y extensiones
 
@@ -120,10 +128,12 @@ La aplicación web se empaqueta y se comunica con el código nativo mediante un 
 - Separación clara entre frontend y nativo.
 
 ### Comandos clave
+{% raw %}
 ```bash
 npx cap open android
 npx cap open ios
-````
+```
+{% endraw %}`
 
 ## Ciclo de vida de la aplicación
 
@@ -195,9 +205,11 @@ npx cap open ios
 
 ## Inicialización del proyecto
 ### Inicializar Capacitor
+{% raw %}
 ```bash
 npx cap init myApp com.example.myapp
-````
+```
+{% endraw %}`
 
 ### Estructura generada
 
@@ -210,6 +222,7 @@ npx cap init myApp com.example.myapp
 
 ### capacitor.config.ts
 
+{% raw %}
 ```ts
 import { CapacitorConfig } from '@capacitor/cli';
 
@@ -225,33 +238,41 @@ const config: CapacitorConfig = {
 
 export default config;
 ```
+{% endraw %}
 
 ## Gestión de plataformas
 
 ### Añadir plataformas
 
+{% raw %}
 ```bash
 npx cap add android
 npx cap add ios
 ```
+{% endraw %}
 
 ### Sincronizar cambios
 
+{% raw %}
 ```bash
 npx cap sync
 ```
+{% endraw %}
 
 ### Abrir proyectos nativos
 
+{% raw %}
 ```bash
 npx cap open android
 npx cap open ios
 ```
+{% endraw %}
 
 ## Plugins oficiales
 
 ### Cámara
 
+{% raw %}
 ```ts
 import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
 
@@ -265,9 +286,11 @@ const takePhoto = async () => {
 	console.log(image.webPath);
 };
 ```
+{% endraw %}
 
 ### Geolocalización
 
+{% raw %}
 ```ts
 import { Geolocation } from '@capacitor/geolocation';
 
@@ -276,9 +299,11 @@ const getPosition = async () => {
 	console.log(coordinates.coords.latitude, coordinates.coords.longitude);
 };
 ```
+{% endraw %}
 
 ### Preferencias (almacenamiento clave-valor)
 
+{% raw %}
 ```ts
 import { Preferences } from '@capacitor/preferences';
 
@@ -290,11 +315,13 @@ await Preferences.set({
 const { value } = await Preferences.get({ key: 'token' });
 console.log(value);
 ```
+{% endraw %}
 
 ## Ciclo de vida de la aplicación
 
 ### Eventos de App
 
+{% raw %}
 ```ts
 import { App } from '@capacitor/app';
 
@@ -306,11 +333,13 @@ App.addListener('backButton', () => {
 	console.log('Back button pressed');
 });
 ```
+{% endraw %}
 
 ## Estado de red
 
 ### Network
 
+{% raw %}
 ```ts
 import { Network } from '@capacitor/network';
 
@@ -321,11 +350,13 @@ Network.addListener('networkStatusChange', status => {
 	console.log('Network status changed', status);
 });
 ```
+{% endraw %}
 
 ## Sistema de archivos
 
 ### Leer y escribir archivos
 
+{% raw %}
 ```ts
 import { Filesystem, Directory, Encoding } from '@capacitor/filesystem';
 
@@ -344,11 +375,13 @@ const content = await Filesystem.readFile({
 
 console.log(content.data);
 ```
+{% endraw %}
 
 ## Notificaciones locales
 
 ### Programar notificación
 
+{% raw %}
 ```ts
 import { LocalNotifications } from '@capacitor/local-notifications';
 
@@ -363,11 +396,13 @@ await LocalNotifications.schedule({
 	]
 });
 ```
+{% endraw %}
 
 ## Permisos
 
 ### Solicitar permisos
 
+{% raw %}
 ```ts
 import { Camera } from '@capacitor/camera';
 
@@ -375,11 +410,13 @@ await Camera.requestPermissions({
 	permissions: ['camera', 'photos']
 });
 ```
+{% endraw %}
 
 ## Uso con Angular
 
 ### Servicio Angular para plugins
 
+{% raw %}
 ```ts
 import { Injectable } from '@angular/core';
 import { Geolocation } from '@capacitor/geolocation';
@@ -391,19 +428,23 @@ export class LocationService {
 	}
 }
 ```
+{% endraw %}
 
 ## Plugins personalizados
 
 ### Interfaz TypeScript
 
+{% raw %}
 ```ts
 export interface ExamplePlugin {
 	echo(options: { value: string }): Promise<{ value: string }>;
 }
 ```
+{% endraw %}
 
 ### Uso desde la app
 
+{% raw %}
 ```ts
 import { registerPlugin } from '@capacitor/core';
 import type { ExamplePlugin } from './definitions';
@@ -413,22 +454,27 @@ const Example = registerPlugin<ExamplePlugin>('Example');
 const result = await Example.echo({ value: 'Hola' });
 console.log(result.value);
 ```
+{% endraw %}
 
 ## Build y despliegue
 
 ### Build web
 
+{% raw %}
 ```bash
 npm run build
 ```
+{% endraw %}
 
 ### Flujo completo
 
+{% raw %}
 ```bash
 npm run build
 npx cap sync
 npx cap open android
 ```
+{% endraw %}
 
 ## Debugging
 
@@ -441,12 +487,14 @@ npx cap open android
 
 ### Uso con Angular
 
+{% raw %}
 ```ts
 export const environment = {
 	production: true,
 	apiUrl: 'https://api.example.com'
 };
 ```
+{% endraw %}
 
 ## Buenas prácticas técnicas
 

@@ -428,6 +428,7 @@ Uso:
 
 ### Sigma rule básica
 #### Técnica: T1021.002 – SMB Lateral Movement
+{% raw %}
 ```yaml
 title: SMB Lateral Movement
 id: attack-t1021-002
@@ -444,7 +445,8 @@ condition: selection
 tags:
 - attack.lateral_movement
 - attack.t1021.002
-````
+```
+{% endraw %}`
 
 ### SIEM (ejemplo genérico)
 
@@ -462,9 +464,11 @@ Resultado:
 
 #### Técnica: T1059.001 PowerShell
 
+{% raw %}
 ```bash
 Invoke-AtomicTest T1059.001
 ```
+{% endraw %}
 
 Uso:
 - Ejecutar prueba controlada

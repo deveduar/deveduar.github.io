@@ -134,6 +134,7 @@ category: autenticacion
 ## Ejemplos de Código
 
 ### Metadatos SAML (SP → IdP)
+{% raw %}
 ```xml
 <EntityDescriptor entityID="https://sp.example.com/metadata">
 	<SPSSODescriptor AuthnRequestsSigned="true" WantAssertionsSigned="true">
@@ -143,10 +144,12 @@ category: autenticacion
 			index="1"/>
 	</SPSSODescriptor>
 </EntityDescriptor>
-````
+```
+{% endraw %}`
 
 ### Política IAM para AWS SSO
 
+{% raw %}
 ```json
 {
 	"Version": "2012-10-17",
@@ -159,6 +162,7 @@ category: autenticacion
 	]
 }
 ```
+{% endraw %}
 
 
 # Frameworks y Tecnologías SSO
@@ -334,6 +338,7 @@ category: autenticacion
 ## Ejemplo: Configuración Básica OIDC (Keycloak)
 
 ### Código (JSON de un Client OIDC)
+{% raw %}
 ```json
 {
 	"clientId": "my-app",
@@ -346,10 +351,12 @@ category: autenticacion
 	"standardFlowEnabled": true,
 	"directAccessGrantsEnabled": false
 }
-````
+```
+{% endraw %}`
 
 ## Ejemplo: Configuración SAML (AD FS → SaaS)
 
+{% raw %}
 ```xml
 <EntityDescriptor entityID="https://saas.example.com/sp">
 	<SPSSODescriptor WantAssertionsSigned="true">
@@ -360,6 +367,9 @@ category: autenticacion
 	</SPSSODescriptor>
 </EntityDescriptor>
 ```
+{% endraw %}
 
+{% raw %}
 ```
 ```
+{% endraw %}

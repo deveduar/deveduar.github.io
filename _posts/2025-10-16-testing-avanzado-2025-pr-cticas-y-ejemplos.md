@@ -29,6 +29,7 @@ category: Testing
 
 ### JS/TS – Playwright + AI Selector
 
+{% raw %}
 ```ts
 import { test, expect } from '@playwright/test';
 
@@ -46,7 +47,8 @@ test('login auto-healing', async ({ page }) => {
 
   await expect(page.locator('h1')).toHaveText('Bienvenido');
 });
-````
+```
+{% endraw %}`
 
 ✅ **Buenas prácticas**
 
@@ -65,6 +67,7 @@ test('login auto-healing', async ({ page }) => {
 
 ### JS – Gremlin + Node
 
+{% raw %}
 ```js
 import { GremlinClient } from 'gremlin';
 
@@ -75,9 +78,11 @@ client.injectFailure({
   duration: 5000
 });
 ```
+{% endraw %}
 
 ### Python – Chaos Toolkit
 
+{% raw %}
 ```python
 from chaoslib.experiment import run_experiment
 
@@ -91,6 +96,7 @@ experiment = {
 
 run_experiment(experiment)
 ```
+{% endraw %}
 
 ✅ **Objetivos**
 
@@ -109,6 +115,7 @@ run_experiment(experiment)
 
 ### JS – Pact
 
+{% raw %}
 ```js
 const { Pact } = require('@pact-foundation/pact');
 
@@ -125,12 +132,15 @@ provider.addInteraction({
   willRespondWith: { status: 200, body: { token: 'string' } }
 });
 ```
+{% endraw %}
 
 ### Java – Pact JVM
 
+{% raw %}
 ```java
 PactProviderRule provider = new PactProviderRule("AuthService", this);
 ```
+{% endraw %}
 
 ✅ **Tips**
 
@@ -149,19 +159,23 @@ PactProviderRule provider = new PactProviderRule("AuthService", this);
 
 ### JS – Playwright + Logging
 
+{% raw %}
 ```ts
 page.on('console', msg => console.log(msg.text()));
 page.on('pageerror', err => console.error(err));
 ```
+{% endraw %}
 
 ### Python – pytest + logging
 
+{% raw %}
 ```python
 import logging
 
 logging.basicConfig(level=logging.INFO)
 logging.info("Ejecutando test de login")
 ```
+{% endraw %}
 
 ✅ **Buenas prácticas**
 
@@ -180,6 +194,7 @@ logging.info("Ejecutando test de login")
 
 ### JS – Cypress + AI Generador de Test (pseudo-code)
 
+{% raw %}
 ```js
 const aiTest = generateTest('login workflow');
 cy.visit(aiTest.url);
@@ -188,6 +203,7 @@ cy.get(aiTest.selectors.password).type('1234');
 cy.get(aiTest.selectors.submit).click();
 cy.contains('Bienvenido').should('exist');
 ```
+{% endraw %}
 
 ✅ **Ventajas**
 
@@ -204,6 +220,7 @@ cy.contains('Bienvenido').should('exist');
 
 ### JS – MSW
 
+{% raw %}
 ```js
 import { setupServer } from 'msw/node';
 import { rest } from 'msw';
@@ -215,14 +232,17 @@ const server = setupServer(
 beforeAll(() => server.listen());
 afterAll(() => server.close());
 ```
+{% endraw %}
 
 ### Java – WireMock
 
+{% raw %}
 ```java
 WireMockServer wireMockServer = new WireMockServer(8080);
 wireMockServer.stubFor(post(urlEqualTo("/login"))
     .willReturn(aResponse().withBody("{\"token\": \"123\"}")));
 ```
+{% endraw %}
 
 ✅ **Tips**
 
@@ -244,6 +264,7 @@ wireMockServer.stubFor(post(urlEqualTo("/login"))
 
 ### JS – k6 avanzado
 
+{% raw %}
 ```js
 export let options = { vus: 50, duration: '1m' };
 
@@ -252,6 +273,7 @@ export default function () {
   check(res, { 'status is 200': (r) => r.status === 200 });
 }
 ```
+{% endraw %}
 
 ---
 

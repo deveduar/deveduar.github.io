@@ -51,6 +51,7 @@ Secure Service Edge (SSE) es un componente crítico dentro de la arquitectura [S
 
 ## Ejemplo de Arquitectura SSE
 
+{% raw %}
 ```mermaid
 graph LR
 	A[Usuario/Dispositivo] --> B(ZTNA)
@@ -60,7 +61,8 @@ graph LR
 	D --> E
 	C --> F[DLP/Inspección de tráfico]
 	D --> F
-````
+```
+{% endraw %}`
 
 ## Referencias y Recursos
 
@@ -150,6 +152,7 @@ Secure Service Edge (SSE) es un componente fundamental dentro de la arquitectura
 
 ## Ejemplo de Arquitectura SSE
 
+{% raw %}
 ```mermaid
 graph LR
 	A[Usuario/Dispositivo] --> B(ZTNA)
@@ -160,7 +163,8 @@ graph LR
 	C --> F[DLP / Inspección de tráfico]
 	D --> F
 	F --> G[Threat Intelligence / Análisis de amenazas]
-````
+```
+{% endraw %}`
 
 
 # Secure Service Edge (SSE) 2025 — Recursos Actualizados

@@ -42,20 +42,25 @@ category: Testing
 
 ### 1. Instalación
 
+{% raw %}
 ```bash
 npm install --save-dev jest ts-jest @types/jest typescript
-````
+```
+{% endraw %}`
 
 ### 2. Inicialización del entorno
 
+{% raw %}
 ```bash
 npx ts-jest config:init
 ```
+{% endraw %}
 
 Esto genera un archivo `jest.config.js` optimizado para TypeScript.
 
 ### 3. Ejemplo de configuración generada
 
+{% raw %}
 ```javascript
 export default {
   preset: 'ts-jest',
@@ -68,9 +73,11 @@ export default {
   coverageReporters: ['text', 'lcov'],
 }
 ```
+{% endraw %}
 
 ### 4. Archivo `tsconfig.json` ajustado para Jest
 
+{% raw %}
 ```json
 {
   "compilerOptions": {
@@ -87,6 +94,7 @@ export default {
   "include": ["src", "**/*.test.ts"]
 }
 ```
+{% endraw %}
 
 ---
 
@@ -94,12 +102,15 @@ export default {
 
 ### 1. Instalación
 
+{% raw %}
 ```bash
 npm install --save-dev jest babel-jest @babel/preset-env @babel/preset-typescript @types/jest
 ```
+{% endraw %}
 
 ### 2. Archivo `.babelrc`
 
+{% raw %}
 ```json
 {
   "presets": [
@@ -108,9 +119,11 @@ npm install --save-dev jest babel-jest @babel/preset-env @babel/preset-typescrip
   ]
 }
 ```
+{% endraw %}
 
 ### 3. Configuración `jest.config.js`
 
+{% raw %}
 ```javascript
 export default {
   transform: {
@@ -121,6 +134,7 @@ export default {
   collectCoverageFrom: ['src/**/*.{ts,tsx,js,jsx}'],
 }
 ```
+{% endraw %}
 
 > 💡 `babel-jest` es ideal en proyectos con Next.js, Vite o React, donde Babel ya está configurado y no se desea compilar dos veces.
 
@@ -130,12 +144,15 @@ export default {
 
 Si tu proyecto usa **React + TypeScript**, el setup recomendado incluye:
 
+{% raw %}
 ```bash
 npm install --save-dev jest ts-jest @types/jest @testing-library/react @testing-library/jest-dom
 ```
+{% endraw %}
 
 **jest.config.js**
 
+{% raw %}
 ```javascript
 export default {
   preset: 'ts-jest',
@@ -150,22 +167,28 @@ export default {
   },
 }
 ```
+{% endraw %}
 
 **jest.setup.ts**
 
+{% raw %}
 ```typescript
 import '@testing-library/jest-dom'
 ```
+{% endraw %}
 
 ---
 
 ## 🧠 Ejemplo práctico
 
+{% raw %}
 ```typescript
 // utils/sumar.ts
 export const sumar = (a: number, b: number): number => a + b
 ```
+{% endraw %}
 
+{% raw %}
 ```typescript
 // utils/sumar.test.ts
 import { sumar } from './sumar'
@@ -176,20 +199,25 @@ describe('sumar()', () => {
   })
 })
 ```
+{% endraw %}
 
 Ejecución:
 
+{% raw %}
 ```bash
 npm test
 ```
+{% endraw %}
 
 Salida:
 
+{% raw %}
 ```
  PASS  src/utils/sumar.test.ts
   sumar()
     ✓ suma dos números correctamente (3 ms)
 ```
+{% endraw %}
 
 ---
 
@@ -199,6 +227,7 @@ Para combinar Jest + TypeScript + cobertura en pipelines CI:
 
 **package.json**
 
+{% raw %}
 ```json
 "scripts": {
   "test": "jest --passWithNoTests",
@@ -206,9 +235,11 @@ Para combinar Jest + TypeScript + cobertura en pipelines CI:
   "test:coverage": "jest --coverage"
 }
 ```
+{% endraw %}
 
 **github actions:**
 
+{% raw %}
 ```yaml
 name: Jest TypeScript Tests
 on: [push, pull_request]
@@ -224,6 +255,7 @@ jobs:
       - run: npm ci
       - run: npm run test:coverage
 ```
+{% endraw %}
 
 ---
 

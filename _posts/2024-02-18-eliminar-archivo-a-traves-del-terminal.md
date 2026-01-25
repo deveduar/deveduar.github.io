@@ -39,9 +39,11 @@ Esta distinción es importante porque algunos comandos funcionan mejor cuando se
 Antes de eliminar el archivo, es recomendable posicionarse en la carpeta donde se encuentra:
 
 #### Comando
+{% raw %}
 ```powershell
 cd 'D:\bbb bb bbb\0 bbb\bbb bbbb 3'
-````
+```
+{% endraw %}`
 
 Este comando cambia el directorio actual al que contiene el archivo objetivo, evitando errores relacionados con rutas largas o mal escritas.
 
@@ -51,9 +53,11 @@ Una vez dentro del directorio, se puede proceder a borrar el archivo usando su n
 
 #### Comando
 
+{% raw %}
 ```powershell
 Remove-Item "Tnnnnnnn.mp3"
 ```
+{% endraw %}
 
 PowerShell requiere que los nombres con espacios estén entre comillas. Este comando elimina el archivo de forma permanente (no va a la papelera).
 
@@ -84,9 +88,11 @@ Estos aliases existen para compatibilidad y comodidad, pero en scripts se recomi
 ## Eliminación usando ruta absoluta
 No es obligatorio moverse al directorio del archivo. Se puede eliminar directamente usando la ruta completa:
 
+{% raw %}
 ```powershell
 Remove-Item 'D:\xxxx.mp3'
-````
+```
+{% endraw %}`
 
 Este enfoque reduce errores cuando se trabaja desde scripts o ubicaciones dinámicas.
 
@@ -94,9 +100,11 @@ Este enfoque reduce errores cuando se trabaja desde scripts o ubicaciones dinám
 
 Algunos archivos pueden estar marcados como solo lectura o tener restricciones menores.
 
+{% raw %}
 ```powershell
 Remove-Item "xxxx" -Force
 ```
+{% endraw %}
 
 `-Force` ignora atributos como _ReadOnly_, pero **no** elimina archivos en uso activo por otros procesos.
 
@@ -104,9 +112,11 @@ Remove-Item "xxxx" -Force
 
 Para reducir el riesgo de borrado accidental:
 
+{% raw %}
 ```powershell
 Remove-Item "xxxxxxx.mp3" -Confirm
 ```
+{% endraw %}
 
 PowerShell pedirá confirmación explícita antes de ejecutar la acción.
 
@@ -114,9 +124,11 @@ PowerShell pedirá confirmación explícita antes de ejecutar la acción.
 
 Antes de ejecutar una eliminación real, se puede simular:
 
+{% raw %}
 ```powershell
 Remove-Item "xxxxxxxx.mp3" -WhatIf
 ```
+{% endraw %}
 
 Esto muestra qué ocurriría sin borrar nada, ideal para validaciones.
 
@@ -136,9 +148,11 @@ Usar comodines incrementa el riesgo, por lo que se recomienda combinar con `-Wha
 
 Si el objetivo fuera una carpeta completa (no el caso del ejemplo, pero relevante):
 
+{% raw %}
 ```powershell
 Remove-Item 'xxxxx' -Recurse
 ```
+{% endraw %}
 
 `-Recurse` elimina todo el contenido interno, incluyendo subcarpetas.
 

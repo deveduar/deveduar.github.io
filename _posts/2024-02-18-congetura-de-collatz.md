@@ -33,11 +33,13 @@ La regla es extremadamente simple:
 Repitiendo este proceso, se genera una **secuencia**.  
 Por ejemplo, empezando con `n = 6`:
 
+{% raw %}
 ```
 
 6 → 3 → 10 → 5 → 16 → 8 → 4 → 2 → 1
 
-````
+```
+{% endraw %}`
 
 Una vez se alcanza el **1**, la secuencia entra en el ciclo infinito `4 → 2 → 1`.
 
@@ -85,6 +87,7 @@ A continuación se muestran dos enfoques: **iterativo** y **recursivo**.
 
 ### Versión iterativa
 
+{% raw %}
 ```python
 def collatz_iterativo(n):
 	seq = [n]
@@ -95,10 +98,12 @@ def collatz_iterativo(n):
 			n = 3 * n + 1
 		seq.append(n)
 	return seq
-````
+```
+{% endraw %}`
 
 ### Versión recursiva
 
+{% raw %}
 ```python
 def collatz_recursivo(n, seq=None):
 	if seq is None:
@@ -110,6 +115,7 @@ def collatz_recursivo(n, seq=None):
 	else:
 		return collatz_recursivo(3 * n + 1, seq + [3 * n + 1])
 ```
+{% endraw %}
 
 Comparar ambas versiones permite analizar la **eficiencia computacional** y el **comportamiento recursivo** en algoritmos de iteración infinita o semicaótica.
 

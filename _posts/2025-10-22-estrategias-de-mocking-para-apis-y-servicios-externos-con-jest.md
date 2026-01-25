@@ -51,6 +51,7 @@ category: uncategorized
 
 ## 🧩 Ejemplo 1: Mock de `fetch` global
 
+{% raw %}
 ```typescript
 // src/api/users.ts
 export async function getUsers() {
@@ -58,8 +59,10 @@ export async function getUsers() {
   if (!response.ok) throw new Error('Error al obtener usuarios')
   return response.json()
 }
-````
+```
+{% endraw %}`
 
+{% raw %}
 ```typescript
 // src/api/users.test.ts
 import { getUsers } from './users'
@@ -87,6 +90,7 @@ describe('getUsers', () => {
   })
 })
 ```
+{% endraw %}
 
 > ✅ Ideal para servicios basados en `fetch` o `window.fetch` en entornos frontend.
 
@@ -94,6 +98,7 @@ describe('getUsers', () => {
 
 ## 🧩 Ejemplo 2: Mock de [axios](/backend/axios/)
 
+{% raw %}
 ```typescript
 // src/api/login.ts
 import axios from 'axios'
@@ -102,7 +107,9 @@ export const login = async (user: string, pass: string) => {
   return data.token
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```typescript
 // src/api/login.test.ts
 import axios from 'axios'
@@ -116,6 +123,7 @@ test('devuelve token al hacer login', async () => {
   expect(axios.post).toHaveBeenCalledWith('/auth/login', { user: 'admin', pass: '1234' })
 })
 ```
+{% endraw %}
 
 > 💡 `vi.mock` o `jest.mock` interceptan las importaciones y permiten sustituir módulos enteros.
 
@@ -125,13 +133,16 @@ test('devuelve token al hacer login', async () => {
 
 Estructura:
 
+{% raw %}
 ```
 src/
 ├─ api/
 │  ├─ payments.ts
 │  └─ __mocks__/payments.ts
 ```
+{% endraw %}
 
+{% raw %}
 ```typescript
 // src/api/payments.ts
 export const getPaymentStatus = async (id: string) => {
@@ -139,12 +150,16 @@ export const getPaymentStatus = async (id: string) => {
   return res.json()
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```typescript
 // src/api/__mocks__/payments.ts
 export const getPaymentStatus = vi.fn().mockResolvedValue({ status: 'mocked-paid' })
 ```
+{% endraw %}
 
+{% raw %}
 ```typescript
 // src/tests/payment.test.ts
 import { getPaymentStatus } from '../api/payments'
@@ -155,6 +170,7 @@ test('usa el mock manual correctamente', async () => {
   expect(res.status).toBe('mocked-paid')
 })
 ```
+{% endraw %}
 
 > ✅ Los mocks manuales son ideales para reutilizar respuestas simuladas complejas o centralizar comportamientos de APIs externas.
 
@@ -166,12 +182,15 @@ MSW permite interceptar peticiones `fetch` o `XMLHttpRequest` sin modificar el c
 
 ### Instalación
 
+{% raw %}
 ```bash
 npm install msw --save-dev
 ```
+{% endraw %}
 
 ### Handlers (`src/mocks/handlers.ts`)
 
+{% raw %}
 ```typescript
 import { http, HttpResponse } from 'msw'
 
@@ -181,9 +200,11 @@ export const handlers = [
   ),
 ]
 ```
+{% endraw %}
 
 ### Setup (`src/mocks/server.ts`)
 
+{% raw %}
 ```typescript
 import { setupServer } from 'msw/node'
 import { handlers } from './handlers'
@@ -193,9 +214,11 @@ beforeAll(() => server.listen())
 afterEach(() => server.resetHandlers())
 afterAll(() => server.close())
 ```
+{% endraw %}
 
 ### Test
 
+{% raw %}
 ```typescript
 import { getUsers } from '../api/users'
 import { server } from '../mocks/server'
@@ -205,6 +228,7 @@ test('retorna usuario simulado desde MSW', async () => {
   expect(users[0].name).toBe('Mocked User')
 })
 ```
+{% endraw %}
 
 > 🧩 MSW es la opción más realista: intercepta las peticiones HTTP como lo haría el navegador o Node, sin necesidad de reescribir código ni usar `vi.mock`.
 
@@ -212,6 +236,7 @@ test('retorna usuario simulado desde MSW', async () => {
 
 ## 🧠 Ejemplo 5: Mock dinámico para errores controlados
 
+{% raw %}
 ```typescript
 import { server } from '../mocks/server'
 import { http, HttpResponse } from 'msw'
@@ -227,17 +252,21 @@ test('maneja errores del servidor', async () => {
   await expect(getUsers()).rejects.toThrow()
 })
 ```
+{% endraw %}
 
 ---
 
 ## 🧩 Ejemplo 6: Mock de módulos del sistema (ej. `fs`, `path`)
 
+{% raw %}
 ```typescript
 // src/utils/file.ts
 import fs from 'fs'
 export const readConfig = () => fs.readFileSync('config.json', 'utf8')
 ```
+{% endraw %}
 
+{% raw %}
 ```typescript
 // src/utils/file.test.ts
 import fs from 'fs'
@@ -249,6 +278,7 @@ test('lee el archivo simulado', () => {
   expect(readConfig()).toContain('test')
 })
 ```
+{% endraw %}
 
 > 💡 Los mocks de módulos internos permiten testear sin acceder al sistema de archivos, red o procesos reales.
 
@@ -281,6 +311,7 @@ test('lee el archivo simulado', () => {
 
 ## 📊 Integración con [CICD](/devops/cicd/)
 
+{% raw %}
 ```yaml
 name: Jest API Mocks
 on: [push, pull_request]
@@ -296,6 +327,7 @@ jobs:
       - run: npm ci
       - run: npm run test -- --coverage
 ```
+{% endraw %}
 
 > 📈 Se recomienda almacenar las respuestas mock en JSONs versionados (`/fixtures`) y validarlas con SonarQube para consistencia.
 

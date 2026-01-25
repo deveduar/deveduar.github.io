@@ -193,22 +193,27 @@ Ubuntu Server es una versión **especializada de Ubuntu diseñada para funcionar
 
 ### Crear y administrar usuarios
 - Crear usuario y home:
+{% raw %}
 ```bash
 sudo useradd -d /home/jdoe -m jdoe
 ls -l /home
 sudo passwd jdoe
-````
+```
+{% endraw %}`
 
 * Alternativa con adduser:
 
+{% raw %}
 ```bash
 sudo adduser jdoe
 nano /usr/sbin/adduser
 Ctrl + x
 ```
+{% endraw %}
 
 * Eliminar usuario:
 
+{% raw %}
 ```bash
 sudo userdel dscully
 sudo mv /home/dscully /store/file_archive
@@ -216,47 +221,59 @@ sudo mkdir -p /store/file_archive
 sudo userdel -r dscully
 sudo rm -r /home/dscully  # !! DANGER: cuidado con espacios
 ```
+{% endraw %}
 
 * Ver usuarios y contraseñas:
 
+{% raw %}
 ```bash
 cat /etc/passwd
 sudo cat /etc/shadow
 sudo cat /etc/shadow | grep root
 ```
+{% endraw %}
 
 * Bloquear/Desbloquear cuentas:
 
+{% raw %}
 ```bash
 passwd -l <username>  # bloquear
 sudo passwd -u <username>  # desbloquear
 ```
+{% endraw %}
 
 * Switch users:
 
+{% raw %}
 ```bash
 sudo su -
 su - <username>
 sudo su - <username>
 ```
+{% endraw %}
 
 ### Administrar grupos
 
 * Listar grupos:
 
+{% raw %}
 ```bash
 cat /etc/group
 ```
+{% endraw %}
 
 * Crear/eliminar grupos:
 
+{% raw %}
 ```bash
 sudo groupadd admins
 sudo groupdel admins
 ```
+{% endraw %}
 
 * Modificar membresía de usuario:
 
+{% raw %}
 ```bash
 sudo usermod -aG admins myuser
 sudo usermod -g <group-name> <username>
@@ -264,20 +281,24 @@ sudo usermod -d /home/jsmith jdoe -m
 sudo usermod -l jsmith jdoe
 sudo gpasswd -d <username> <grouptoremove>
 ```
+{% endraw %}
 
 ### Políticas de contraseñas
 
 * Cambiar configuración de expiración y bloqueo:
 
+{% raw %}
 ```bash
 sudo chage -l <username>
 sudo chage -d 0 <username>
 sudo chage -M 90 <username>
 sudo chage -m 5 dscully
 ```
+{% endraw %}
 
 * Requisitos de historial y complejidad:
 
+{% raw %}
 ```bash
 sudo apt install libpam-cracklib
 sudo nano /etc/pam.d/common-password
@@ -285,24 +306,30 @@ sudo nano /etc/pam.d/common-password
 # Ejemplo:
 password required pam_pwhistory.so remember=99 use_authok
 ```
+{% endraw %}
 
 ### Dar acceso sudo
 
 * Añadir usuario al grupo sudo:
 
+{% raw %}
 ```bash
 sudo usermod -aG sudo <username>
 ```
+{% endraw %}
 
 * Configuración en `/etc/sudoers` mediante `visudo` o `nano`:
 
+{% raw %}
 ```bash
 %sudo ALL=(ALL:ALL) ALL  # Acceso completo para miembros de sudo
 root ALL=(ALL:ALL) ALL   # Acceso completo root
 ```
+{% endraw %}
 
 * Limitar comandos sudo a usuarios específicos:
 
+{% raw %}
 ```bash
 # Ejemplo:
 charlie ALL=(ALL:ALL) /sbin/reboot,/sbin/shutdown
@@ -310,20 +337,24 @@ charlie ubuntu=(ALL:ALL) /usr/bin/apt
 charlie ubuntu=/usr/bin/apt  # Sin opción -u
 charlie ubuntu=(dscully:admins) ALL  # Ejecutar como usuario y grupo específicos
 ```
+{% endraw %}
 
 ### Permisos en archivos y directorios
 
 * Componentes de la lista de permisos: tipo de objeto, usuario, grupo, mundo, tamaño, fecha y nombre.
 * Ejemplos de permisos:
 
+{% raw %}
 ```
 - rw-  rw-  rw-
 - rw-  r--  r--
 - rwx  rwx  r-x
 ```
+{% endraw %}
 
 * Modificar permisos:
 
+{% raw %}
 ```bash
 chmod o-r budget.txt
 chmod o-r /home/sue/budget.txt
@@ -331,37 +362,46 @@ chmod u+rw
 chmod g+r
 chmod o-rw
 ```
+{% endraw %}
 
 * Equivalentes octales: r=4, w=2, x=1
 
+{% raw %}
 ```
 600: -rw------
 740: -rwxr-----
 770: -rwxrwx---
 777: -rwxrwxrwx
 ```
+{% endraw %}
 
 * Recursivo:
 
+{% raw %}
 ```bash
 chmod 770 -R mydir
 ```
+{% endraw %}
 
 * Aplicar permisos a archivos y directorios por separado:
 
+{% raw %}
 ```bash
 find /path/to/dir/ -type f -exec chmod 644 {} \;
 find /path/to/dir/ -type d -exec chmod 755 {} \;
 ```
+{% endraw %}
 
 ### Cambiar propietario y grupo
 
+{% raw %}
 ```bash
 sudo chown sue myfile.txt
 sudo chown -R sue mydir
 sudo chown sue:sales myfile.txt
 sudo chgrp sales myfile.txt
 ```
+{% endraw %}
 
 
 
@@ -378,9 +418,11 @@ sudo chgrp sales myfile.txt
 
 #### Root user
 - Se recomienda que un administrador tenga su propia cuenta y utilice **sudo** para ejecutar comandos privilegiados:  
+{% raw %}
 ```bash
 sudo apt install tmux
-````
+```
+{% endraw %}`
 
 * Ubuntu bloquea la cuenta root por defecto para seguridad.
 
@@ -388,11 +430,13 @@ sudo apt install tmux
 
 #### useradd
 
+{% raw %}
 ```bash
 sudo useradd -d /home/jdoe -m jdoe
 ls -l /home
 sudo passwd jdoe  # contraseña ejemplo: pepe1
 ```
+{% endraw %}
 
 * `-d` define el directorio home.
 * `-m` crea automáticamente el directorio home si no existe.
@@ -403,13 +447,16 @@ sudo passwd jdoe  # contraseña ejemplo: pepe1
 * Crea home basado en `/etc/skel` y asigna UID y GID automáticamente.
 * `adduser` es un script en Perl que guía al usuario mediante prompts.
 
+{% raw %}
 ```bash
 nano /usr/sbin/adduser  # ver script
 Ctrl + x  # salir
 ```
+{% endraw %}
 
 #### Removing users
 
+{% raw %}
 ```bash
 sudo userdel dscully
 ls -l /home
@@ -418,6 +465,7 @@ sudo mv /home/dscully /store/file_archive
 sudo userdel -r dscully  # elimina usuario y home
 sudo rm -r /home/dscully  # si no se eliminó con -r
 ```
+{% endraw %}
 
 * ¡Cuidado! `sudo rm -r / home/dscully` con espacio es destructivo.
 
@@ -426,11 +474,13 @@ sudo rm -r /home/dscully  # si no se eliminó con -r
 * `/etc/passwd`: Información de cuentas de usuario (UID, GID, home, shell).
 * `/etc/shadow`: Contraseñas cifradas y estado de cuentas (solo accesible por root).
 
+{% raw %}
 ```bash
 cat /etc/passwd
 sudo cat /etc/shadow
 sudo cat /etc/shadow | grep root
 ```
+{% endraw %}
 
 * `x` en /etc/passwd indica contraseña cifrada en /etc/shadow.
 * Bloquear cuenta: `passwd -l <username>`.
@@ -450,14 +500,17 @@ sudo cat /etc/shadow | grep root
 
 * Archivos de configuración predeterminados para nuevos usuarios se copian desde `/etc/skel`.
 
+{% raw %}
 ```bash
 ls -la /etc/skel
 ```
+{% endraw %}
 
 * Incluir archivos de configuración de editores o sistemas de control de versiones.
 
 ### Switching users
 
+{% raw %}
 ```bash
 sudo passwd          # establecer contraseña root
 sudo su -            # cambiar a root
@@ -465,6 +518,7 @@ exit                 # volver al usuario anterior
 su - <username>
 sudo su - <username>
 ```
+{% endraw %}
 
 * Con sudo, se puede cambiar a cualquier usuario sin conocer su contraseña.
 
@@ -473,66 +527,84 @@ sudo su - <username>
 * Asignar grupos controla acceso a archivos y recursos.
 * Cada archivo/directorio tiene un **usuario y un grupo principal**.
 
+{% raw %}
 ```bash
 ls -l
 cat /etc/group
 ```
+{% endraw %}
 
 * Crear/eliminar grupos:
 
+{% raw %}
 ```bash
 sudo groupadd admins
 sudo groupdel admins
 ```
+{% endraw %}
 
 * Añadir usuario a grupo secundario:
 
+{% raw %}
 ```bash
 sudo usermod -aG admins myuser
 sudo gpasswd -a <username> <group>  # alternativa
 ```
+{% endraw %}
 
 * Cambiar grupo principal:
 
+{% raw %}
 ```bash
 sudo usermod -g <group-name> <username>
 ```
+{% endraw %}
 
 * Cambiar home o renombrar usuario:
 
+{% raw %}
 ```bash
 sudo usermod -d /home/jsmith jdoe -m
 sudo usermod -l jsmith jdoe
 ```
+{% endraw %}
 
 * Eliminar usuario de un grupo:
 
+{% raw %}
 ```bash
 sudo gpasswd -d <username> <grouptoremove>
 ```
+{% endraw %}
 
 ## Managing passwords and password policies
 
 ### Changing passwords
 - El comando `passwd` permite cambiar la contraseña del usuario actualmente logueado.  
 - Como root, se puede cambiar la contraseña de cualquier usuario:
+{% raw %}
 ```bash
 sudo passwd <username>
-````
+```
+{% endraw %}`
 
 ### Locking and unlocking user accounts
 
 * Bloquear usuario:
 
+{% raw %}
 ```bash
 sudo passwd -l <username>
 ```
+{% endraw %}
 
 * Desbloquear usuario:
 
+{% raw %}
 ```bash
 sudo passwd -u <username>
 ```
+{% endraw %}
 
 * Nota: Bloquear una cuenta **no impide el acceso por SSH con clave pública**. Para restringir completamente, hay que limitar acceso SSH a usuarios de grupos específicos.
 
@@ -541,27 +613,35 @@ sudo passwd -u <username>
 * Se puede definir expiración de contraseña y políticas de cambio usando `/etc/shadow` y `chage`.
 * Ver información de expiración de un usuario:
 
+{% raw %}
 ```bash
 sudo chage -l <username>
 ```
+{% endraw %}
 
 * Forzar cambio de contraseña en el próximo login:
 
+{% raw %}
 ```bash
 sudo chage -d 0 <username>
 ```
+{% endraw %}
 
 * Configurar máximo de días entre cambios de contraseña:
 
+{% raw %}
 ```bash
 sudo chage -M 90 <username>
 ```
+{% endraw %}
 
 * Configurar mínimo de días entre cambios de contraseña:
 
+{% raw %}
 ```bash
 sudo chage -m 5 dscully
 ```
+{% endraw %}
 
 * Esto evita que los usuarios regresen a su contraseña anterior inmediatamente, manteniendo seguridad y flexibilidad.
 
@@ -569,53 +649,67 @@ sudo chage -m 5 dscully
 
 * Usar Pluggable Authentication Modules (PAM) para configurar políticas de contraseñas:
 
+{% raw %}
 ```bash
 sudo apt install libpam-cracklib
 sudo nano /etc/pam.d/common-password
 ```
+{% endraw %}
 
 * Configurar historial de contraseñas para evitar reutilización:
 
+{% raw %}
 ```bash
 password required pam_pwhistory.so remember=99 use_authok
 ```
+{% endraw %}
 
 * `difok=3` — al menos 3 caracteres deben ser diferentes de la contraseña anterior para ser aceptada.
 * Previene contraseñas simples y aumenta la seguridad sin generar frustración en los usuarios.
 
 ![Untitled](Data/Data-Sistemas/Data-Linux/Untitled%203.png)
 
+{% raw %}
 ```
 ```
+{% endraw %}
 
 ### Configuring administrator access with sudo
 - Puedes restringir a usuarios para ejecutar solo comandos específicos, limitando lo que pueden hacer en el sistema.  
 - Miembros del grupo `sudo` pueden usar sudo sin restricciones:
+{% raw %}
 ```bash
 sudo usermod -aG sudo <username>
-````
+```
+{% endraw %}`
 
 * En algunas distribuciones, sudo debe instalarse manualmente y usar otro grupo, como `wheel`.
 * Configuración de sudo:
 
+{% raw %}
 ```bash
 sudo visudo
 # o con nano:
 sudo nano /etc/sudoers
 ```
+{% endraw %}
 
 * Guardar cambios en nano: `Ctrl + w`, salir: `Ctrl + x`.
 * Ejemplo de acceso sudo por grupo:
 
+{% raw %}
 ```bash
 %sudo ALL=(ALL:ALL) ALL
 ```
+{% endraw %}
 
 * Para usuarios específicos (sin %):
 
+{% raw %}
 ```bash
 root ALL=(ALL:ALL) ALL
 ```
+{% endraw %}
 
 * Significado de las columnas:
 
@@ -625,12 +719,14 @@ root ALL=(ALL:ALL) ALL
   * Cuarto ALL: comandos permitidos.
 * Ejemplos de permisos restringidos:
 
+{% raw %}
 ```bash
 charlie ALL=(ALL:ALL) /sbin/reboot,/sbin/shutdown
 charlie ubuntu=(ALL:ALL) /usr/bin/apt
 charlie ubuntu=/usr/bin/apt       # no puede usar -u
 charlie ubuntu=(dscully:admins) ALL  # puede actuar en nombre de un usuario y grupo específico
 ```
+{% endraw %}
 
 * Buenas prácticas: usar grupos específicos (apt, reboot, etc.) para mayor control y responsabilidad.
 
@@ -638,9 +734,11 @@ charlie ubuntu=(dscully:admins) ALL  # puede actuar en nombre de un usuario y gr
 
 * Ver permisos:
 
+{% raw %}
 ```bash
 ls -l
 ```
+{% endraw %}
 
 ![Untitled](Data/Data-Sistemas/Data-Linux/Untitled%204.png)
 
@@ -659,29 +757,35 @@ ls -l
 * Cada string de permisos tiene 4 secciones: tipo de objeto, usuario, grupo, mundo.
 * Ejemplo de archivo:
 
+{% raw %}
 ```
 -rw-rw-rw- 1 doctor doctor 5 Jan 11 12:52 welcome
 ```
+{% endraw %}
 
 * `r` = read, `w` = write, `x` = execute
 * `-` = permiso no asignado
 * Directorios (`d`) y enlaces (`l`) tienen significados especiales.
 * Ejemplo directorio:
 
+{% raw %}
 ```
 drwxr-xr-x 1 bob sales 4096 Jan 11 12:52 annual_projects
 ```
+{% endraw %}
 
 * Propietario: bob, grupo: sales, permisos: rwx para propietario, ningún permiso para otros.
 
 #### Cambiar permisos
 
+{% raw %}
 ```bash
 chmod o-r budget.txt          # quitar lectura a otros
 chmod u+rw <filename>         # añadir rw a usuario
 chmod g+r <filename>          # añadir lectura a grupo
 chmod o-rw <filename>         # quitar rw a otros
 ```
+{% endraw %}
 
 * Uso de octales: r=4, w=2, x=1
 
@@ -690,19 +794,24 @@ chmod o-rw <filename>         # quitar rw a otros
   * 770 = -rwxrwx---
   * 777 = -rwxrwxrwx
 
+{% raw %}
 ```bash
 chmod 770 -R mydir            # recursivo
 ```
+{% endraw %}
 
 * Diferenciar archivos y directorios:
 
+{% raw %}
 ```bash
 find /path/to/dir/ -type f -exec chmod 644 {} \;
 find /path/to/dir/ -type d -exec chmod 755 {} \;
 ```
+{% endraw %}
 
 #### Cambiar propietario y grupo
 
+{% raw %}
 ```bash
 sudo chown sue myfile.txt         # cambiar propietario
 sudo chown -R sue mydir           # recursivo
@@ -710,6 +819,7 @@ sudo chown sue:sales myfile.txt   # cambiar propietario y grupo
 sudo chgrp sales myfile.txt       # cambiar solo grupo
 sudo chgrp -R sales mydir         # recursivo
 ```
+{% endraw %}
 
 
 ## 04-Managing Software Packages
@@ -740,21 +850,25 @@ sudo chgrp -R sales mydir         # recursivo
 
 #### Managing Debian packages with apt
 - APT (Advanced Package Tool) maneja dependencias automáticamente.  
+{% raw %}
 ```bash
 sudo apt update
 sudo apt install openssh-server
 sudo apt install <package1> <package2> <package3>
-````
+```
+{% endraw %}`
 
 * Para confirmar automáticamente: `-y`.
 * Opcional: `--install-suggests` instala paquetes sugeridos (puede ser innecesario).
 * Eliminación:
 
+{% raw %}
 ```bash
 sudo apt remove <package>
 sudo apt remove <package1> <package2> <package3>
 sudo apt remove --purge <package>  # elimina configuración
 ```
+{% endraw %}
 
 * Configuración de paquetes: la mayoría inicia automáticamente servicios y daemons al instalarse.
 
@@ -762,52 +876,66 @@ sudo apt remove --purge <package>  # elimina configuración
 
 * Buscar paquetes Snap:
 
+{% raw %}
 ```bash
 snap find <keyword>
 snap find nmap
 ```
+{% endraw %}
 
 * Instalar paquete Snap:
 
+{% raw %}
 ```bash
 sudo snap install nmap
 ```
+{% endraw %}
 
 * Ubicación del binario:
 
+{% raw %}
 ```bash
 which nmap   # Snap: /snap/bin/nmap, APT: /usr/bin/nmap
 ```
+{% endraw %}
 
 * Ejecutar versión específica usando path completo.
 * Eliminar y actualizar paquetes Snap:
 
+{% raw %}
 ```bash
 sudo snap remove nmap
 sudo snap refresh <package>  # actualizar un paquete
 sudo snap refresh            # actualizar todos los Snap
 ```
+{% endraw %}
 
 * Snap es independiente de los paquetes APT; ambos pueden coexistir.
 
 
 ### Searching for packages
 - Buscar paquetes con apt:
+{% raw %}
 ```bash
 apt search <search term>
-````
+```
+{% endraw %}`
 
 * Ejemplo: buscar plugin PHP para Apache:
 
+{% raw %}
 ```bash
 apt search apache php
 ```
+{% endraw %}
 
 * Ver información detallada de un paquete:
 
+{% raw %}
 ```bash
 apt-cache show libapache2-mod-php
 ```
+{% endraw %}
 
 * Nota: `libapache2-mod-php` depende de PHP.
 * Repositorio oficial de paquetes: [Ubuntu Packages](http://packages.ubuntu.com/)
@@ -822,9 +950,11 @@ apt-cache show libapache2-mod-php
 * Archivos adicionales: `/etc/apt/sources.list.d/*.list`
 * Formato de línea típica:
 
+{% raw %}
 ```text
 deb http://us.archive.ubuntu.com/ubuntu/ focal main restricted
 ```
+{% endraw %}
 
 * Significado de los campos:
 
@@ -834,9 +964,11 @@ deb http://us.archive.ubuntu.com/ubuntu/ focal main restricted
 * Método recomendado: crear un archivo `.list` en `/etc/apt/sources.list.d/` para agregar repositorios; eliminarlo elimina el repositorio.
 * Clave de seguridad: algunas veces se requiere instalar **GnuPG key** para verificar paquetes firmados.
 
+{% raw %}
 ```bash
 sudo apt update
 ```
+{% endraw %}
 
 * Actualiza la caché local de paquetes disponibles.
 
@@ -847,15 +979,19 @@ sudo apt update
 * Riesgo: si el PPA deja de estar activo, no habrá más actualizaciones de seguridad.
 * Ejemplo de agregar un PPA:
 
+{% raw %}
 ```bash
 sudo apt-add-repository ppa:username/myawesomesoftware-1.0
 ```
+{% endraw %}
 
 * Automatiza la adición del archivo de repositorio y su clave; eliminar archivo desinstala el PPA.
 * Información adicional: [Launchpad PPAs](https://launchpad.net/ubuntu/+ppas)
 
+{% raw %}
 ```
 ```
+{% endraw %}
 
 ### Adding Personal Package Archives (PPAs)
 - PPAs: pequeños repositorios que usualmente contienen una sola aplicación.  
@@ -863,9 +999,11 @@ sudo apt-add-repository ppa:username/myawesomesoftware-1.0
 - Riesgo: si el PPA deja de estar disponible, se detienen las actualizaciones de seguridad.  
 - Permite acceso a aplicaciones no disponibles en repositorios predeterminados o versiones más recientes.  
 - Comando para agregar un PPA:
+{% raw %}
 ```bash
 sudo apt-add-repository ppa:username/myawesomesoftware-1.0
-````
+```
+{% endraw %}`
 
 * Automatiza la creación del archivo en `/etc/apt/sources.list.d` y la instalación de la clave.
 * Para desinstalar un PPA: simplemente eliminar el archivo del directorio.
@@ -875,19 +1013,24 @@ sudo apt-add-repository ppa:username/myawesomesoftware-1.0
 
 * Exportar lista de paquetes instalados:
 
+{% raw %}
 ```bash
 dpkg --get-selections > packages.list
 ```
+{% endraw %}
 
 * Permite reinstalar paquetes en un servidor limpio o similar.
 * Actualizar índice de paquetes:
 
+{% raw %}
 ```bash
 sudo apt update
 ```
+{% endraw %}
 
 * Usar `dselect` para restaurar paquetes:
 
+{% raw %}
 ```bash
 sudo apt install dselect
 which dselect  # comprobar ubicación
@@ -895,6 +1038,7 @@ sudo dselect update
 sudo dpkg --set-selections < packages.list
 sudo apt-get dselect-upgrade
 ```
+{% endraw %}
 
 * Nota: `dselect-upgrade` funciona solo con `apt-get`.
 * Confirmar cambios instalará los paquetes faltantes según la lista.
@@ -904,9 +1048,11 @@ sudo apt-get dselect-upgrade
 * Paquetes huérfanos: dependencias de paquetes eliminados que no se borran automáticamente.
 * Eliminar paquetes huérfanos:
 
+{% raw %}
 ```bash
 sudo apt autoremove
 ```
+{% endraw %}
 
 * Precaución: no eliminar kernels antiguos hasta verificar que el nuevo funciona correctamente.
 * Si reinstalas un paquete marcado para auto-removal, no aparecerá como huérfano en el futuro.
@@ -917,8 +1063,10 @@ sudo apt autoremove
 * Backport de compatibilidad de la última versión no-LTS, para aprovechar nuevo hardware.
 * Instalación de Ubuntu Server con opción HWE: el sistema incluirá estos paquetes para mejor compatibilidad y soporte de hardware reciente.
 
+{% raw %}
 ```
 ```
+{% endraw %}
 
 ## 04-Managing Software Packages — Resumen
 
@@ -933,11 +1081,13 @@ sudo apt autoremove
 
 ## Managing Debian packages with apt
 - Instalar paquetes:
+{% raw %}
 ```bash
 sudo apt install openssh-server
 sudo apt install <package1> <package2> <package3>
 sudo apt install apache2
-````
+```
+{% endraw %}`
 
 - `apt-get install` funciona de forma similar a `apt install`.
     

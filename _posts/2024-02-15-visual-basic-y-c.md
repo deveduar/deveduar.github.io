@@ -77,6 +77,7 @@ category: Software engineering
 - Proyecto ejemplo: `ConsoleApp1`
 - Ruta de proyecto: ``C:\Users\Admin\source\repos``
 
+{% raw %}
 ```visual-basic
 Imports System
 
@@ -85,7 +86,8 @@ Module Program
 		Console.WriteLine("Hello World!")
 	End Sub
 End Module
-````
+```
+{% endraw %}`
 
 * Permite comprender la estructura básica de un programa en Visual Basic
 * Uso de `Module` como contenedor de funciones y procedimientos
@@ -162,6 +164,7 @@ End Module
 
 ## Ejemplo avanzado de Visual Basic - Multihilo y eventos
 
+{% raw %}
 ```visual-basic
 Imports System.Threading
 
@@ -179,7 +182,8 @@ Module Program
 		Next
 	End Sub
 End Module
-````
+```
+{% endraw %}`
 
 - Muestra cómo crear y ejecutar hilos en paralelo
 - Demuestra el concepto de programación orientada a eventos y concurrencia
@@ -278,6 +282,7 @@ End Module
 
 # Ejemplo de arquitectura básica de aplicación en VB
 
+{% raw %}
 ```visual-basic
 Imports System
 
@@ -295,7 +300,8 @@ Module Program
 		Console.WriteLine("Resultado: " & calc.Sumar(5, 3))
 	End Sub
 End Module
-````
+```
+{% endraw %}`
 
 * Ejemplo simple de separación de capas
 * `Calculadora` representa la capa de negocio

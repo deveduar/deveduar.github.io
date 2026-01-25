@@ -201,6 +201,7 @@ categories:
 	- [Future of RCM](https://www.mantenimientoelectrico.com/mantenimiento/estrategias-mantenimiento-basadas-confiabilidad-operacional-rcm-ia-hibrida-n8032)
 
 # omnivore mantenimiento
+{% raw %}
 ```base
 type: list
 name: "Notas con #mantenimiento en Omnivore"
@@ -221,6 +222,7 @@ views:
       - property: file.mtime
         direction: DESC
 ```
+{% endraw %}
 
 
 

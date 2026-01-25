@@ -65,6 +65,7 @@ La **Programación Orientada a Aspectos (AOP)** es un paradigma que complementa 
 ## Ejemplo de Implementación
 
 ### Ejemplo en Java con Spring AOP
+{% raw %}
 ```java
 @Aspect
 @Component
@@ -80,10 +81,12 @@ public class LoggingAspect {
 		System.out.println("Método completado: " + joinPoint.getSignature().getName() + " con resultado: " + result);
 	}
 }
-````
+```
+{% endraw %}`
 
 ### Ejemplo en Python (Decorator Pattern + AOP Conceptual)
 
+{% raw %}
 ```python
 def log_execution(func):
 	def wrapper(*args, **kwargs):
@@ -99,6 +102,7 @@ def calcular(a, b):
 
 calcular(5, 7)
 ```
+{% endraw %}
 
 ---
 
@@ -471,14 +475,17 @@ Antes de entrar en el código, es importante entender la relación entre los com
 ## Ejemplo 1: AOP con Spring AOP (Java)
 
 ### Dependencias (Gradle)
+{% raw %}
 ```groovy
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-aop'
 }
-````
+```
+{% endraw %}`
 
 ### Definición del Aspecto
 
+{% raw %}
 ```java
 @Aspect
 @Component
@@ -499,9 +506,11 @@ public class LoggingAspect {
 	}
 }
 ```
+{% endraw %}
 
 ### Clase de Servicio
 
+{% raw %}
 ```java
 @Service
 public class MathService {
@@ -510,13 +519,16 @@ public class MathService {
 	}
 }
 ```
+{% endraw %}
 
 **Resultado:**
 
+{% raw %}
 ```
 → Iniciando: sumar
 ✔ Finalizado: sumar, Resultado: 15
 ```
+{% endraw %}
 
 ---
 
@@ -524,6 +536,7 @@ public class MathService {
 
 ### Definición de Aspecto con AspectJ
 
+{% raw %}
 ```java
 @Aspect
 public class PerformanceAspect {
@@ -538,9 +551,11 @@ public class PerformanceAspect {
 	}
 }
 ```
+{% endraw %}
 
 ### Configuración del Weaving
 
+{% raw %}
 ```xml
 <aspectj>
 	<weaver>
@@ -551,6 +566,7 @@ public class PerformanceAspect {
 	</aspects>
 </aspectj>
 ```
+{% endraw %}
 
 ---
 
@@ -558,6 +574,7 @@ public class PerformanceAspect {
 
 ### Decorador de Logging
 
+{% raw %}
 ```python
 import time
 from functools import wraps
@@ -572,9 +589,11 @@ def log_execution(func):
 		return result
 	return wrapper
 ```
+{% endraw %}
 
 ### Uso en una Función
 
+{% raw %}
 ```python
 @log_execution
 def procesar_datos(x):
@@ -583,13 +602,16 @@ def procesar_datos(x):
 
 procesar_datos(10)
 ```
+{% endraw %}
 
 **Salida:**
 
+{% raw %}
 ```
 → Ejecutando: procesar_datos
 ✔ procesar_datos completado en 1.001s
 ```
+{% endraw %}
 
 ---
 
@@ -599,6 +621,7 @@ procesar_datos(10)
 
 `tsconfig.json`
 
+{% raw %}
 ```json
 {
 	"compilerOptions": {
@@ -607,9 +630,11 @@ procesar_datos(10)
 	}
 }
 ```
+{% endraw %}
 
 ### Implementación
 
+{% raw %}
 ```typescript
 function Log(target: any, propertyKey: string, descriptor: PropertyDescriptor) {
 	const original = descriptor.value;
@@ -631,6 +656,7 @@ class Calculadora {
 
 new Calculadora().sumar(3, 4);
 ```
+{% endraw %}
 
 ---
 
@@ -638,6 +664,7 @@ new Calculadora().sumar(3, 4);
 
 ### Interceptor Genérico
 
+{% raw %}
 ```typescript
 import { Injectable, NestInterceptor, ExecutionContext, CallHandler } from '@nestjs/common';
 import { Observable, tap } from 'rxjs';
@@ -654,12 +681,15 @@ export class LoggingInterceptor implements NestInterceptor {
 	}
 }
 ```
+{% endraw %}
 
 ### Aplicación Global
 
+{% raw %}
 ```typescript
 app.useGlobalInterceptors(new LoggingInterceptor());
 ```
+{% endraw %}
 
 ---
 
@@ -667,6 +697,7 @@ app.useGlobalInterceptors(new LoggingInterceptor());
 
 ### Middleware HTTP (equivalente a un Aspecto)
 
+{% raw %}
 ```go
 func LoggingMiddleware(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
@@ -677,13 +708,16 @@ func LoggingMiddleware(next http.Handler) http.Handler {
 	})
 }
 ```
+{% endraw %}
 
 ### Aplicación
 
+{% raw %}
 ```go
 mux := http.NewServeMux()
 mux.Handle("/api", LoggingMiddleware(http.HandlerFunc(handler)))
 ```
+{% endraw %}
 
 ---
 
@@ -769,6 +803,7 @@ Esta nota amplía la guía de implementación de [AOP Programación Orientada a 
 Los aspectos pueden activarse o desactivarse en tiempo de ejecución según variables de entorno, configuraciones externas o contexto del sistema.
 
 #### Ejemplo (Java - Spring Boot)
+{% raw %}
 ```java
 @Aspect
 @Component
@@ -780,14 +815,17 @@ public class ConditionalLoggingAspect {
 		System.out.println("Logging activo: " + joinPoint.getSignature().getName());
 	}
 }
-````
+```
+{% endraw %}`
 
 **Uso:**
 Controlar la activación desde `application.properties`:
 
+{% raw %}
 ```
 app.logging.enabled=true
 ```
+{% endraw %}
 
 ---
 
@@ -799,6 +837,7 @@ Permite que el comportamiento AOP se defina fuera del código fuente.
 
 #### Ejemplo (JavaScript)
 
+{% raw %}
 ```javascript
 import fs from 'fs';
 
@@ -831,6 +870,7 @@ const aspectoTiempo = {
 	}
 };
 ```
+{% endraw %}
 
 ---
 
@@ -843,6 +883,7 @@ const aspectoTiempo = {
 
 #### Ejemplo (Spring AOP)
 
+{% raw %}
 ```java
 @Order(1)
 @Aspect
@@ -854,6 +895,7 @@ public class SeguridadAspect {}
 @Component
 public class LoggingAspect {}
 ```
+{% endraw %}
 
 **Orden de ejecución:**
 
@@ -870,6 +912,7 @@ Usar AOP para generar métricas y exportarlas a sistemas de observabilidad.
 
 #### Ejemplo (Spring Boot + Micrometer)
 
+{% raw %}
 ```java
 @Aspect
 @Component
@@ -894,6 +937,7 @@ public class MetricsAspect {
 	}
 }
 ```
+{% endraw %}
 
 **Resultado:**
 Las métricas pueden visualizarse en Grafana o Prometheus.
@@ -908,6 +952,7 @@ Los aspectos pueden aplicarse a flujos de datos usando *operators* o *intercepto
 
 #### Ejemplo (Project Reactor)
 
+{% raw %}
 ```java
 @Aspect
 @Component
@@ -921,6 +966,7 @@ public class ReactiveAspect {
 	}
 }
 ```
+{% endraw %}
 
 ---
 
@@ -932,6 +978,7 @@ Implementación de Memoization cache mediante aspectos.
 
 #### Ejemplo (Python)
 
+{% raw %}
 ```python
 cache = {}
 
@@ -953,6 +1000,7 @@ def calcular(x, y):
 calcular(3, 5)
 calcular(3, 5)
 ```
+{% endraw %}
 
 ---
 
@@ -964,6 +1012,7 @@ Aplicación de AOP sobre colas y mensajes (Kafka, RabbitMQ, etc.)
 
 #### Ejemplo (Spring Cloud Stream)
 
+{% raw %}
 ```java
 @Aspect
 @Component
@@ -975,6 +1024,7 @@ public class EventAuditAspect {
 	}
 }
 ```
+{% endraw %}
 
 **Aplicación:**
 
@@ -996,6 +1046,7 @@ public class EventAuditAspect {
 
 #### Ejemplo de estructura
 
+{% raw %}
 ```
 /src
 	/domain
@@ -1005,6 +1056,7 @@ public class EventAuditAspect {
 			LoggingAspect.java
 			SecurityAspect.java
 ```
+{% endraw %}
 
 ---
 
@@ -1016,6 +1068,7 @@ Los aspectos deben ser probados aisladamente del código de negocio.
 
 #### Ejemplo (JUnit)
 
+{% raw %}
 ```java
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = {AppConfig.class})
@@ -1032,6 +1085,7 @@ public class LoggingAspectTest {
 	}
 }
 ```
+{% endraw %}
 
 ---
 
@@ -1046,6 +1100,7 @@ public class LoggingAspectTest {
 
 ### Ejemplo de Aspecto Reutilizable
 
+{% raw %}
 ```java
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
@@ -1053,7 +1108,9 @@ public @interface Audit {
 	String value() default "";
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```java
 @Aspect
 @Component
@@ -1064,6 +1121,7 @@ public class AuditAspect {
 	}
 }
 ```
+{% endraw %}
 
 ---
 
@@ -1073,6 +1131,7 @@ public class AuditAspect {
 
 Integración con [OpenTelemetry](/monitoreo/opentelemetry/):
 
+{% raw %}
 ```java
 @Aspect
 @Component
@@ -1095,6 +1154,7 @@ public class TelemetryAspect {
 	}
 }
 ```
+{% endraw %}
 
 **Ventaja:**
 

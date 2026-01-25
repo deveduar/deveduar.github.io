@@ -19,6 +19,7 @@ category: Testing
 ## Arquitectura de Cucumber
 
 ### Componentes Principales
+{% raw %}
 ```java
 // Feature Files -> Step Definitions -> Test Execution
 @CucumberContextConfiguration
@@ -30,8 +31,10 @@ public class TestConfiguration {
     }
 }
 ```
+{% endraw %}
 
 ### Hooks y Configuración
+{% raw %}
 ```java
 public class Hooks {
     @Before("@ui")
@@ -47,10 +50,12 @@ public class Hooks {
     }
 }
 ```
+{% endraw %}
 
 ## Patrones de Implementación
 
 ### Page Object Model Integration
+{% raw %}
 ```java
 public class LoginPageSteps {
     private LoginPage loginPage;
@@ -67,8 +72,10 @@ public class LoginPageSteps {
     }
 }
 ```
+{% endraw %}
 
 ### Test Data Management
+{% raw %}
 ```java
 @Data
 @Builder
@@ -90,10 +97,12 @@ public class TestDataConfig {
     }
 }
 ```
+{% endraw %}
 
 ## Integraciones Específicas
 
 ### Base de Datos
+{% raw %}
 ```java
 public class DatabaseSteps {
     @Autowired
@@ -110,8 +119,10 @@ public class DatabaseSteps {
     }
 }
 ```
+{% endraw %}
 
 ### API Testing
+{% raw %}
 ```java
 public class ApiSteps {
     private Response response;
@@ -130,18 +141,22 @@ public class ApiSteps {
     }
 }
 ```
+{% endraw %}
 
 ## Configuraciones Avanzadas
 
 ### Properties y Configuración
+{% raw %}
 ```properties
 # application-test.properties
 cucumber.filter.tags=@regression
 cucumber.publish.quiet=true
 cucumber.plugin=pretty, html:target/cucumber.html
 ```
+{% endraw %}
 
 ### Parallel Execution
+{% raw %}
 ```java
 @Configuration
 public class ParallelConfig {
@@ -152,10 +167,12 @@ public class ParallelConfig {
     }
 }
 ```
+{% endraw %}
 
 ## Reporting y Monitoreo
 
 ### Custom Reports
+{% raw %}
 ```java
 @AfterAll
 public static void generateCustomReport() {
@@ -163,8 +180,10 @@ public static void generateCustomReport() {
     CucumberReportGenerator.generate();
 }
 ```
+{% endraw %}
 
 ### Integración con herramientas externas
+{% raw %}
 ```java
 public class MetricsCollector {
     @AfterStep
@@ -174,10 +193,12 @@ public class MetricsCollector {
     }
 }
 ```
+{% endraw %}
 
 ## Best Practices
 
 ### Organización de Proyecto
+{% raw %}
 ```
 src/test/
 ├── resources/
@@ -192,8 +213,10 @@ src/test/
 │       └── api/
 └── configuration/
 ```
+{% endraw %}
 
 ### Mantenibilidad
+{% raw %}
 ```java
 // Reutilización de steps
 public class CommonSteps {
@@ -203,10 +226,12 @@ public class CommonSteps {
     }
 }
 ```
+{% endraw %}
 
 ## Performance y Optimización
 
 ### Configuración de Timeouts
+{% raw %}
 ```java
 public class TimeoutConfig {
     @Before
@@ -216,8 +241,10 @@ public class TimeoutConfig {
     }
 }
 ```
+{% endraw %}
 
 ### Database Cleanup
+{% raw %}
 ```java
 @Transactional
 public class DatabaseCleanup {
@@ -228,10 +255,12 @@ public class DatabaseCleanup {
     }
 }
 ```
+{% endraw %}
 
 ## Troubleshooting
 
 ### Debug Configuration
+{% raw %}
 ```java
 public class DebugSteps {
     @Given("debug step")
@@ -241,8 +270,10 @@ public class DebugSteps {
     }
 }
 ```
+{% endraw %}
 
 ### Logging Integration
+{% raw %}
 ```java
 @Slf4j
 public class LoggedSteps {
@@ -253,10 +284,12 @@ public class LoggedSteps {
     }
 }
 ```
+{% endraw %}
 
 ## Seguridad en Tests
 
 ### Authentication Testing
+{% raw %}
 ```java
 public class SecuritySteps {
     @Given("I am authenticated as {string}")
@@ -270,8 +303,10 @@ public class SecuritySteps {
     }
 }
 ```
+{% endraw %}
 
 ### API Security Testing
+{% raw %}
 ```java
 public class ApiSecuritySteps {
     private Headers authHeaders;
@@ -293,10 +328,12 @@ public class ApiSecuritySteps {
     }
 }
 ```
+{% endraw %}
 
 ## Mobile Testing Integration
 
 ### Appium con Cucumber
+{% raw %}
 ```java
 public class MobileSteps {
     private AppiumDriver driver;
@@ -313,8 +350,10 @@ public class MobileSteps {
     }
 }
 ```
+{% endraw %}
 
 ### Mobile-Specific Features
+{% raw %}
 ```gherkin
 @mobile
 Feature: Mobile Login
@@ -324,10 +363,12 @@ Feature: Mobile Login
         Then I should access the main screen
         And biometric prompt should appear
 ```
+{% endraw %}
 
 ## Microservices Testing
 
 ### Service Integration
+{% raw %}
 ```java
 public class MicroserviceSteps {
     @WireMockInject
@@ -342,8 +383,10 @@ public class MicroserviceSteps {
     }
 }
 ```
+{% endraw %}
 
 ### Contract Testing
+{% raw %}
 ```java
 public class ContractSteps {
     @Given("a valid service contract")
@@ -354,10 +397,12 @@ public class ContractSteps {
     }
 }
 ```
+{% endraw %}
 
 ## Performance Testing
 
 ### Load Testing Integration
+{% raw %}
 ```java
 public class PerformanceSteps {
     @When("I execute {int} concurrent requests")
@@ -371,8 +416,10 @@ public class PerformanceSteps {
     }
 }
 ```
+{% endraw %}
 
 ### Response Time Validation
+{% raw %}
 ```java
 public class ResponseTimeSteps {
     @Then("the response time should be less than {long} ms")
@@ -382,10 +429,12 @@ public class ResponseTimeSteps {
     }
 }
 ```
+{% endraw %}
 
 ## AI/ML Testing
 
 ### Model Validation
+{% raw %}
 ```java
 public class MLModelSteps {
     @Given("a trained ML model")
@@ -407,10 +456,12 @@ public class MLModelSteps {
     }
 }
 ```
+{% endraw %}
 
 ## Cloud Testing
 
 ### AWS Integration
+{% raw %}
 ```java
 public class CloudSteps {
     private AmazonS3 s3Client;
@@ -427,8 +478,10 @@ public class CloudSteps {
     }
 }
 ```
+{% endraw %}
 
 ### Kubernetes Testing
+{% raw %}
 ```java
 public class KubernetesSteps {
     private KubernetesClient k8sClient;
@@ -441,10 +494,12 @@ public class KubernetesSteps {
     }
 }
 ```
+{% endraw %}
 
 ## Accessibility Testing
 
 ### WCAG Compliance
+{% raw %}
 ```java
 public class AccessibilitySteps {
     @Then("the page should meet WCAG {string} guidelines")
@@ -457,8 +512,10 @@ public class AccessibilitySteps {
     }
 }
 ```
+{% endraw %}
 
 ### Screen Reader Testing
+{% raw %}
 ```gherkin
 Feature: Screen Reader Compatibility
     Scenario: Navigate with keyboard only
@@ -467,10 +524,12 @@ Feature: Screen Reader Compatibility
         Then focus should follow logical order
         And all interactive elements should be reachable
 ```
+{% endraw %}
 
 ## Internationalization Testing
 
 ### Multi-language Support
+{% raw %}
 ```java
 public class LocalizationSteps {
     @Given("the application is set to {string} locale")
@@ -484,8 +543,10 @@ public class LocalizationSteps {
     }
 }
 ```
+{% endraw %}
 
 ### RTL Language Support
+{% raw %}
 ```java
 public class RTLSteps {
     @Given("I am using RTL language {string}")
@@ -500,10 +561,12 @@ public class RTLSteps {
     }
 }
 ```
+{% endraw %}
 
 ## Blockchain Testing
 
 ### Smart Contract Testing
+{% raw %}
 ```java
 public class BlockchainSteps {
     private Web3j web3j;
@@ -521,10 +584,12 @@ public class BlockchainSteps {
     }
 }
 ```
+{% endraw %}
 
 ## IoT Testing
 
 ### Device Simulation
+{% raw %}
 ```java
 public class IoTSteps {
     private MqttClient mqttClient;
@@ -541,10 +606,12 @@ public class IoTSteps {
     }
 }
 ```
+{% endraw %}
 
 ## Quantum Computing Testing
 
 ### Quantum Algorithm Validation
+{% raw %}
 ```java
 public class QuantumSteps {
     private QuantumSimulator simulator;
@@ -567,3 +634,4 @@ public class QuantumSteps {
     }
 }
 ```
+{% endraw %}

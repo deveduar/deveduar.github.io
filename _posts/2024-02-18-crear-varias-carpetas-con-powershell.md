@@ -44,6 +44,7 @@ El enfoque se basa en:
 
 ## Código PowerShell: creación de carpetas
 
+{% raw %}
 ```c
 // Crear varias carpetas powershell
 $folderNames = "adminpages", "classes", "css", "js", "images", "includes"
@@ -51,7 +52,8 @@ $folderNames = "adminpages", "classes", "css", "js", "images", "includes"
 foreach ($folderName in $folderNames) {
 	New-Item -ItemType Directory -Name $folderName
 }
-````
+```
+{% endraw %}`
 
 ## Posibles extensiones
 

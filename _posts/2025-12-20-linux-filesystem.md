@@ -46,22 +46,26 @@ Referencias:
 ## Wildcards (comodines)
 - Permiten trabajar con múltiples archivos o carpetas a la vez  
 - Ejemplos:
+{% raw %}
 ```bash
 ls *           # Todos los archivos
 ls D*          # Archivos que empiezan con D
 ls *.txt       # Archivos que terminan en .txt
 ls ?.txt       # Archivos de un solo caracter seguido de .txt
 ls ?? .pdf     # Archivos con dos caracteres antes de .pdf
-````
+```
+{% endraw %}`
 
 * Corchetes para rangos específicos:
 
+{% raw %}
 ```bash
 ls file[0-9].txt
 ls file[A-Z].txt
 ls file[0-9][A-Z][a-z].txt
 ls file[0-9-abc].txt
 ```
+{% endraw %}
 
 Referencias:
 
@@ -77,42 +81,52 @@ Referencias:
 * Uso de espacios: `mkdir "happy birthday"` (mejor usar `_`)
 * Crear múltiples directorios:
 
+{% raw %}
 ```bash
 mkdir proyect
 mkdir {jan,feb,mar,apr,may,jun,aug,sep,oct,nov,dec}_{2017..2022}
 ```
+{% endraw %}
 
 * Crear múltiples archivos en carpetas con brace expansion:
 
+{% raw %}
 ```bash
 cd proyect
 touch {jan,feb,mar,apr,may,jun,aug,sep,oct,nov,dec}_{2017..2022}/file{1..100}
 ```
+{% endraw %}
 
 * Brace expansion en otros comandos:
 
+{% raw %}
 ```bash
 touch file{A,B,C}.txt
 touch file{A..C}.txt
 touch file{F..V}.txt
 ```
+{% endraw %}
 
 ## Eliminar archivos
 
 * `rm file.txt` — Eliminar archivo
 * Con comodines:
 
+{% raw %}
 ```bash
 rm *.txt         # Todos los archivos .txt
 rm *2*           # Archivos que contengan "2"
 rm *[2,3]*       # Archivos que contengan "2" o "3"
 ```
+{% endraw %}
 
 * Eliminar múltiples archivos:
 
+{% raw %}
 ```bash
 rm file1.txt file2.png file3.jpg
 ```
+{% endraw %}
 
 ## Eliminar directorios
 
@@ -120,11 +134,13 @@ rm file1.txt file2.png file3.jpg
 * `rm -r folder` — Eliminar carpeta y contenido recursivamente
 * Ejemplo:
 
+{% raw %}
 ```bash
 mkdir delfolder/deleteme{1,2,3}
 touch delfolder/deleteme{1,2,3}/file{1,2,3}
 rm -r delfolder
 ```
+{% endraw %}
 
 ## Resumen
 

@@ -117,10 +117,12 @@ Get-ExecutionPolicy -List
 ## Comandos básicos y útiles (2025-2026)
 
 ### 🎯 Consultar y entender la política actual
+{% raw %}
 ```powershell
 Get-ExecutionPolicy
 Get-ExecutionPolicy -List
-````
+```
+{% endraw %}`
 
 - Muestra la política efectiva actual y por scope.
 - En Windows cliente suele venir por defecto en `Restricted`; en Windows Server suele estar en `RemoteSigned` o superior.  
@@ -129,9 +131,11 @@ Get-ExecutionPolicy -List
 
 ### 🧰 Cambiar la política local o por usuario
 
+{% raw %}
 ```powershell
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
+{% endraw %}
 
 - Permite ejecutar scripts propios localmente y requiere firma para scripts descargados de Internet.
     [Change PowerShell Execution Policy | Dahln Farnes](https://dahln.com/change-powershell-execution-policy.html)
@@ -139,9 +143,11 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 ### 🔒 Alternativas de scopes para casos especiales
 
+{% raw %}
 ```powershell
 Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
 ```
+{% endraw %}
 
 - Cambia la política **solo para la sesión actual**, útil cuando no deseas afectar otros contextos.  
     [Gist – PowerShell Execution Policy Scopes](https://gist.github.com/sergiomas/3abdfe5d449392a7d27faf08dbe7421f)
@@ -169,9 +175,11 @@ Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
 - Tras actualizar herramientas (por ejemplo Node.js), scripts como `npm.ps1` pueden bloquearse por ExecutionPolicy.  
     Solución típica:
 
+{% raw %}
 ```powershell
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 ```
+{% endraw %}
 
 - Caso reportado por desarrolladores en 2025.  
     [PowerShell npm.ps1 script blocked after updating Node.js](https://www.reddit.com/r/node/comments/1lm0bsx)
@@ -202,8 +210,10 @@ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 
 ## Comandos de referencia rápida
 
+{% raw %}
 ```powershell
 Get-ExecutionPolicy -List
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
 ```
+{% endraw %}

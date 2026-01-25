@@ -10,6 +10,7 @@ categories:
 ## Configuración Inicial
 
 ### Instalación y Setup Básico
+{% raw %}
 ```bash
 # Instalación
 pip install celery redis
@@ -18,8 +19,10 @@ pip install celery redis
 redis-server --version
 celery --version
 ```
+{% endraw %}
 
 ### Aplicación Básica
+{% raw %}
 ```python
 # celery_app.py
 from celery import Celery
@@ -58,10 +61,12 @@ def tarea_larga(self, segundos):
     
     return f'Tarea completada después de {segundos} segundos'
 ```
+{% endraw %}
 
 ## Ejemplos Completos por Categoría
 
 ### 1. Sistema de Notificaciones por Email
+{% raw %}
 ```python
 # tareas/emails.py
 from celery_app import app
@@ -109,8 +114,10 @@ def enviar_newsletter_masiva(lista_emails, contenido):
     
     return f'Newsletter programada para {len(resulta)} destinatarios'
 ```
+{% endraw %}
 
 ### 2. Procesamiento de Archivos
+{% raw %}
 ```python
 # tareas/archivos.py
 from celery_app import app
@@ -188,8 +195,10 @@ def procesar_chunk_csv(chunk_data, operaciones, chunk_num):
         'columnas': list(df.columns)
     }
 ```
+{% endraw %}
 
 ### 3. Web Scraping Distribuido
+{% raw %}
 ```python
 # tareas/scraping.py
 from celery_app import app
@@ -252,8 +261,10 @@ def scrapear_sitio_completo(urls_config):
     
     return datos_completos
 ```
+{% endraw %}
 
 ### 4. Sistema de Reportes
+{% raw %}
 ```python
 # tareas/reportes.py
 from celery_app import app
@@ -321,10 +332,12 @@ def obtener_ventas_periodo(fecha_inicio, fecha_fin):
         # ... más datos
     ]
 ```
+{% endraw %}
 
 ## Configuración de Producción
 
 ### Docker Compose para Desarrollo
+{% raw %}
 ```yaml
 # docker-compose.yml
 version: '3.8'
@@ -370,8 +383,10 @@ services:
 volumes:
   redis_data:
 ```
+{% endraw %}
 
 ### Configuración Avanzada de Worker
+{% raw %}
 ```python
 # config/production.py
 class ProductionConfig:
@@ -398,10 +413,12 @@ class ProductionConfig:
 # Aplicar configuración
 app.config_from_object(ProductionConfig)
 ```
+{% endraw %}
 
 ## Monitoreo y Management
 
 ### Script de Monitoreo
+{% raw %}
 ```python
 # monitoreo.py
 from celery_app import app
@@ -442,8 +459,10 @@ if __name__ == '__main__':
     estado = verificar_estado_tarea(tarea.id)
     print(f"Estado: {estado}")
 ```
+{% endraw %}
 
 ### Comandos Útiles de Terminal
+{% raw %}
 ```bash
 # Iniciar worker con múltiples colas
 celery -A celery_app worker --loglevel=info --queues=emails,procesamiento,scraping
@@ -461,10 +480,12 @@ celery -A celery_app inspect stats
 # Purgar colas (cuidado!)
 celery -A celery_app purge
 ```
+{% endraw %}
 
 ## Patrones Comunes Resueltos
 
 ### Chain (Ejecución Secuencial)
+{% raw %}
 ```python
 from celery import chain
 
@@ -477,8 +498,10 @@ flujo = chain(
 
 resultado = flujo.delay()
 ```
+{% endraw %}
 
 ### Group (Ejecución Paralela)
+{% raw %}
 ```python
 from celery import group
 
@@ -489,8 +512,10 @@ tareas_paralelas = group(
 
 resultado = tareas_paralelas.delay()
 ```
+{% endraw %}
 
 ### Chord (Paralelo + Callback)
+{% raw %}
 ```python
 from celery import chord
 
@@ -500,8 +525,10 @@ callback = agregar_resultados.s()
 
 resultado = chord(header)(callback)
 ```
+{% endraw %}
 
 ### Retry con Exponential Backoff
+{% raw %}
 ```python
 @app.task(bind=True, max_retries=5)
 def tarea_con_reintentos(self, url):
@@ -513,4 +540,5 @@ def tarea_con_reintentos(self, url):
         countdown = 2 ** self.request.retries
         raise self.retry(countdown=countdown, exc=exc)
 ```
+{% endraw %}
 

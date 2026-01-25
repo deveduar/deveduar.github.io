@@ -262,16 +262,19 @@ category: Desarrollo multiplataforma
 	- Estado del servidor separado del estado de UI.
 
 ### Servicio de API
+{% raw %}
 ```ts
 export async function getUsers() {
 	const response = await fetch('https://api.example.com/users');
 	if (!response.ok) throw new Error('Error fetching users');
 	return response.json();
 }
-````
+```
+{% endraw %}`
 
 ### Uso en componente
 
+{% raw %}
 ```tsx
 import { useEffect, useState } from 'react';
 import { View, Text } from 'react-native';
@@ -293,6 +296,7 @@ export function UserList() {
 	);
 }
 ```
+{% endraw %}
 
 ## Caso de Uso: Formularios Complejos
 
@@ -305,6 +309,7 @@ export function UserList() {
 
 ### Formulario controlado
 
+{% raw %}
 ```tsx
 import { useState } from 'react';
 import { View, TextInput, Button, Text } from 'react-native';
@@ -330,6 +335,7 @@ export function RegisterForm() {
 	);
 }
 ```
+{% endraw %}
 
 ## Caso de Uso: Navegación entre Pantallas
 
@@ -341,6 +347,7 @@ export function RegisterForm() {
 
 ### Navegación básica
 
+{% raw %}
 ```tsx
 function HomeScreen({ navigation }) {
 	return (
@@ -355,6 +362,7 @@ function ProfileScreen({ route }) {
 	return <Text>User ID: {route.params.id}</Text>;
 }
 ```
+{% endraw %}
 
 ## Caso de Uso: Listas Grandes y Rendimiento
 
@@ -367,6 +375,7 @@ function ProfileScreen({ route }) {
 
 ### FlatList optimizada
 
+{% raw %}
 ```tsx
 import { FlatList, Text } from 'react-native';
 
@@ -380,6 +389,7 @@ export function Feed({ data }) {
 	);
 }
 ```
+{% endraw %}
 
 ## Caso de Uso: Gestión de Estado Global
 
@@ -423,6 +433,7 @@ export function useAuth() {
 
 ### Uso de geolocalización
 
+{% raw %}
 ```ts
 export async function getLocation() {
 	const permission = await requestLocationPermission();
@@ -431,6 +442,7 @@ export async function getLocation() {
 	return getCurrentPosition();
 }
 ```
+{% endraw %}
 
 ## Caso de Uso: Persistencia y Offline
 
@@ -442,6 +454,7 @@ export async function getLocation() {
 
 ### Persistencia simple
 
+{% raw %}
 ```ts
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
@@ -454,6 +467,7 @@ export async function loadData(key) {
 	return data ? JSON.parse(data) : null;
 }
 ```
+{% endraw %}
 
 ## Caso de Uso: Animaciones de UI
 
@@ -1236,8 +1250,8 @@ export default function Counter() {
 		</View>
 	);
 }
-````
-{% endraw %}
+```
+{% endraw %}`
 
 ## Ejemplo 2 — Lista con FlatList
 

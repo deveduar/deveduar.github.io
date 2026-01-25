@@ -238,6 +238,7 @@ category: Computer Science
 `$= dv.current().file.tags.join(" ")`
 
 ## Deque (Double-Ended Queue) - Python
+{% raw %}
 ```python
 from collections import deque
 
@@ -247,10 +248,12 @@ dq.appendleft(0)   # agregar al inicio
 dq.pop()           # eliminar del final
 dq.popleft()       # eliminar del inicio
 print(dq)
-````
+```
+{% endraw %}`
 
 ## Circular / Ring Buffer - Python
 
+{% raw %}
 ```python
 class CircularBuffer:
     def __init__(self, size):
@@ -275,9 +278,11 @@ class CircularBuffer:
         self.count -= 1
         return val
 ```
+{% endraw %}
 
 ## Segment Tree - Python
 
+{% raw %}
 ```python
 class SegmentTree:
     def __init__(self, arr):
@@ -311,9 +316,11 @@ class SegmentTree:
             r >>= 1
         return res
 ```
+{% endraw %}
 
 ## Fenwick Tree / Binary Indexed Tree - Python
 
+{% raw %}
 ```python
 class FenwickTree:
     def __init__(self, n):
@@ -334,9 +341,11 @@ class FenwickTree:
             idx -= idx & -idx
         return res
 ```
+{% endraw %}
 
 ## Grafos Dirigidos Acíclicos (DAG) - Python
 
+{% raw %}
 ```python
 from collections import defaultdict
 
@@ -372,9 +381,11 @@ dag.add_edge(2, 3)
 dag.add_edge(3, 1)
 print(dag.topological_sort())
 ```
+{% endraw %}
 
 ## Advanced Hashing - Python (Cuckoo Hash Simplificado)
 
+{% raw %}
 ```python
 class CuckooHash:
     def __init__(self, size):
@@ -397,9 +408,11 @@ class CuckooHash:
             key, self.table2[self.hash2(key)] = self.table2[self.hash2(key)], key
         raise Exception("Rehash necesario")
 ```
+{% endraw %}
 
 ## Persistent Data Structure (Ejemplo simple: lista inmutable) - Python
 
+{% raw %}
 ```python
 class PersistentList:
     def __init__(self, data=None):
@@ -416,6 +429,7 @@ lst2 = lst1.append(4)
 print(lst1)  # [1,2,3]
 print(lst2)  # [1,2,3,4]
 ```
+{% endraw %}
 
 
 # Estructuras de Datos - Conceptos Complementarios Nuevos

@@ -17,6 +17,7 @@ category: Testing
 
 Una buena estructura de testing sigue el patrón **AAA (Arrange – Act – Assert)**, aplicable en cualquier lenguaje:
 
+{% raw %}
 ```js
 // Ejemplo en JavaScript (Jest)
 describe('User login', () => {
@@ -32,7 +33,8 @@ describe('User login', () => {
     expect(response.status).toBe(200);
   });
 });
-````
+```
+{% endraw %}`
 
 ✅ **Buenas prácticas**
 
@@ -53,6 +55,7 @@ Evalúan funciones o métodos individuales de forma aislada, sin depender de ser
 
 ### 💻 Ejemplo (TypeScript + Vitest)
 
+{% raw %}
 ```ts
 import { calculateDiscount } from '../utils/discount';
 
@@ -68,6 +71,7 @@ describe('calculateDiscount', () => {
   });
 });
 ```
+{% endraw %}
 
 ✅ **Tips**
 
@@ -88,6 +92,7 @@ Verifican la interacción entre varios módulos, servicios o capas (p. ej. API �
 
 ### 💻 Ejemplo (Node.js + Supertest)
 
+{% raw %}
 ```js
 import request from 'supertest';
 import app from '../app.js';
@@ -103,6 +108,7 @@ describe('POST /login', () => {
   });
 });
 ```
+{% endraw %}
 
 ✅ **Tips**
 
@@ -119,6 +125,7 @@ describe('POST /login', () => {
 
 ### 💻 Ejemplo (REST Assured – Java)
 
+{% raw %}
 ```java
 import io.restassured.RestAssured;
 import org.junit.jupiter.api.Test;
@@ -141,6 +148,7 @@ public class LoginAPITest {
   }
 }
 ```
+{% endraw %}
 
 ✅ **Herramientas clave**
 
@@ -168,6 +176,7 @@ public class LoginAPITest {
 
 ### 💻 Ejemplo (Python + pytest)
 
+{% raw %}
 ```python
 def test_sum_two_numbers():
     assert sum_two_numbers(2, 3) == 5
@@ -175,6 +184,7 @@ def test_sum_two_numbers():
 def sum_two_numbers(a, b):
     return a + b
 ```
+{% endraw %}
 
 ✅ **Consejos**
 
@@ -191,6 +201,7 @@ def sum_two_numbers(a, b):
 
 ### 💬 Ejemplo (Cucumber + Gherkin)
 
+{% raw %}
 ```gherkin
 Feature: Login de usuario
   Scenario: Usuario inicia sesión correctamente
@@ -198,6 +209,7 @@ Feature: Login de usuario
     When envía una petición POST a "/login"
     Then recibe un código 200 y un token JWT
 ```
+{% endraw %}
 
 ✅ **Herramientas**
 
@@ -218,6 +230,7 @@ Simulan el flujo real del usuario, abarcando frontend, backend y base de datos.
 
 ### 💻 Ejemplo (Playwright)
 
+{% raw %}
 ```ts
 import { test, expect } from '@playwright/test';
 
@@ -229,6 +242,7 @@ test('flujo completo de login', async ({ page }) => {
   await expect(page.locator('h1')).toHaveText('Bienvenido');
 });
 ```
+{% endraw %}
 
 ✅ **Consejos**
 
@@ -245,6 +259,7 @@ test('flujo completo de login', async ({ page }) => {
 
 ### 💻 Ejemplo (Jest)
 
+{% raw %}
 ```js
 import axios from 'axios';
 import { fetchUser } from './user';
@@ -257,6 +272,7 @@ it('debe retornar datos del usuario mockeados', async () => {
   expect(user.name).toBe('Eduardo');
 });
 ```
+{% endraw %}
 
 ✅ **Tipos**
 
@@ -275,9 +291,11 @@ it('debe retornar datos del usuario mockeados', async () => {
 
 ### 💻 Ejemplo (Jest con coverage)
 
+{% raw %}
 ```bash
 npx jest --coverage
 ```
+{% endraw %}
 
 📈 **Métricas útiles**
 
@@ -307,6 +325,7 @@ npx jest --coverage
 
 ### 💻 Ejemplo (GitHub Actions)
 
+{% raw %}
 ```yaml
 name: Test Pipeline
 
@@ -324,6 +343,7 @@ jobs:
       - run: npm test -- --coverage
       - uses: codecov/codecov-action@v4
 ```
+{% endraw %}
 
 ✅ **Buenas prácticas**
 
@@ -340,6 +360,7 @@ jobs:
 
 ### 💻 Ejemplo (k6)
 
+{% raw %}
 ```js
 import http from 'k6/http';
 import { sleep, check } from 'k6';
@@ -350,6 +371,7 @@ export default function () {
   sleep(1);
 }
 ```
+{% endraw %}
 
 ✅ **Objetivos**
 
@@ -366,12 +388,15 @@ export default function () {
 
 ### 💻 Ejemplo (OWASP ZAP CLI)
 
+{% raw %}
 ```bash
 zap-cli quick-scan --self-contained http://localhost:3000
 ```
+{% endraw %}
 
 ### 💻 Ejemplo (Accessibility con axe-core)
 
+{% raw %}
 ```js
 import AxeBuilder from '@axe-core/playwright';
 
@@ -381,6 +406,7 @@ test('debe cumplir accesibilidad WCAG', async ({ page }) => {
   expect(results.violations).toHaveLength(0);
 });
 ```
+{% endraw %}
 
 ✅ **Herramientas**
 
@@ -395,6 +421,7 @@ test('debe cumplir accesibilidad WCAG', async ({ page }) => {
 
 ### 💻 Ejemplo (Python + Faker)
 
+{% raw %}
 ```python
 from faker import Faker
 
@@ -402,6 +429,7 @@ fake = Faker()
 print(fake.name())
 print(fake.email())
 ```
+{% endraw %}
 
 ✅ **Buenas prácticas**
 
@@ -418,9 +446,11 @@ print(fake.email())
 
 ### 💻 Ejemplo (Allure Report)
 
+{% raw %}
 ```bash
 npm run test && allure generate allure-results --clean -o allure-report
 ```
+{% endraw %}
 
 ✅ **KPIs de testing**
 
@@ -498,6 +528,7 @@ Pruebas de componentes visuales en aislamiento, clave en frameworks modernos.
 
 ### 💻 Ejemplo (React + Testing Library)
 
+{% raw %}
 ```tsx
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
@@ -509,6 +540,7 @@ test('marca una tarea como completada', async () => {
   expect(screen.getByRole('checkbox')).toBeChecked();
 });
 ```
+{% endraw %}
 
 ✅ **Herramientas populares**
 
@@ -549,6 +581,7 @@ Uso de inteligencia artificial para generar, optimizar o mantener tests automát
 
 ### 💻 Ejemplo (Pact JS)
 
+{% raw %}
 ```js
 import { Pact } from '@pact-foundation/pact';
 
@@ -575,6 +608,7 @@ describe('Contract Test', () => {
   // ...pruebas aquí
 });
 ```
+{% endraw %}
 
 ✅ **Ventaja**  
 Permite validar que las interfaces entre microservicios se mantengan coherentes sin necesidad de entornos completos.
@@ -589,9 +623,11 @@ Evalúa la **resiliencia** de sistemas distribuidos bajo fallos controlados.
 
 ### 💻 Ejemplo (Gremlin CLI)
 
+{% raw %}
 ```bash
 gremlin attack cpu --length 60 --percent 80
 ```
+{% endraw %}
 
 ✅ **Pruebas comunes**
 
@@ -657,9 +693,11 @@ Evalúa la efectividad de tus tests introduciendo errores deliberados ("mutacion
 
 ### 💻 Ejemplo (Stryker)
 
+{% raw %}
 ```bash
 npx stryker run
 ```
+{% endraw %}
 
 ✅ **Métrica clave**
 
@@ -678,15 +716,19 @@ Comparan el resultado actual de la UI o datos con una versión previamente aprob
 
 ### 💻 Ejemplo (Jest Snapshot)
 
+{% raw %}
 ```js
 expect(render(<Header title="Dashboard" />)).toMatchSnapshot();
 ```
+{% endraw %}
 
 ### 💻 Ejemplo (Visual con Percy)
 
+{% raw %}
 ```bash
 percy snapshot ./screenshots
 ```
+{% endraw %}
 
 ✅ **Útil para**
 
@@ -707,6 +749,7 @@ Antes de ejecutar tests, validar la estructura, tipos y contratos de la API o de
 
 ✅ **Ejemplo (Zod + Vitest)**
 
+{% raw %}
 ```ts
 import { z } from 'zod';
 const User = z.object({ id: z.string(), name: z.string() });
@@ -715,6 +758,7 @@ test('el contrato de usuario es válido', () => {
   expect(User.safeParse({ id: '1', name: 'Eduardo' }).success).toBe(true);
 });
 ```
+{% endraw %}
 
 ✅ **Beneficio**  
 Evita fallos de tipado o contratos rotos antes incluso de ejecutar las pruebas principales.
@@ -747,6 +791,7 @@ Reducir tiempos de test en pipelines grandes y optimizar recursos en CI/CD.
 
 ### 💻 Ejemplo (pytest + parametrize)
 
+{% raw %}
 ```python
 import pytest
 
@@ -754,6 +799,7 @@ import pytest
 def test_sum(a, b, result):
     assert a + b == result
 ```
+{% endraw %}
 
 ✅ **Beneficio**  
 Permite probar múltiples casos con una sola definición de test, aumentando la cobertura semántica sin duplicar código.
@@ -825,6 +871,7 @@ Pruebas enfocadas en validar **modelos de machine learning** y **pipelines de da
 
 ### 💻 Ejemplo (Python + Great Expectations)
 
+{% raw %}
 ```python
 from great_expectations.dataset import PandasDataset
 import pandas as pd
@@ -834,7 +881,8 @@ dataset = PandasDataset(df)
 
 dataset.expect_column_values_to_not_be_null("age")
 dataset.expect_column_values_to_be_between("age", 0, 100)
-````
+```
+{% endraw %}`
 
 ✅ **Herramientas**
 
@@ -868,6 +916,7 @@ Integración de **pruebas de seguridad automatizadas** dentro del pipeline DevOp
 
 ### 💻 Ejemplo (GitHub Advanced Security)
 
+{% raw %}
 ```yaml
 name: Security Scan
 
@@ -883,6 +932,7 @@ jobs:
           languages: javascript
       - uses: github/codeql-action/analyze@v3
 ```
+{% endraw %}
 
 ✅ **Herramientas 2025**  
 CodeQL · Snyk · Trivy · SonarCloud · OWASP Dependency-Check
@@ -897,6 +947,7 @@ Inyecta entradas aleatorias o malformadas de manera continua para descubrir vuln
 
 ### 💻 Ejemplo (Go + go-fuzz)
 
+{% raw %}
 ```go
 func FuzzParse(f *testing.F) {
     f.Add("valid_input")
@@ -905,6 +956,7 @@ func FuzzParse(f *testing.F) {
     })
 }
 ```
+{% endraw %}
 
 ✅ **Beneficio**  
 Descubre fallos ocultos imposibles de detectar con tests deterministas.
@@ -928,6 +980,7 @@ Evalúa **la experiencia del usuario** de forma empírica, midiendo facilidad de
 
 ### 💻 Ejemplo (Playwright + User Flows)
 
+{% raw %}
 ```ts
 import { test, expect } from '@playwright/test';
 
@@ -938,6 +991,7 @@ test('flujo UX principal', async ({ page }) => {
   expect(page.locator('h1')).toHaveText('Gracias por tu compra');
 });
 ```
+{% endraw %}
 
 ✅ **Herramientas**  
 UXtweak · Maze · Playwright Trace Viewer · Chrome UX Report
@@ -952,6 +1006,7 @@ Pruebas aplicadas a **infraestructura automatizada** (Terraform, Ansible, CloudF
 
 ### 💻 Ejemplo (Terraform + Terratest)
 
+{% raw %}
 ```go
 func TestInfrastructure(t *testing.T) {
   terraformOptions := terraform.WithDefaultRetryableErrors(t, &terraform.Options{
@@ -961,6 +1016,7 @@ func TestInfrastructure(t *testing.T) {
   terraform.InitAndApply(t, terraformOptions)
 }
 ```
+{% endraw %}
 
 ✅ **Objetivos**
 
@@ -981,6 +1037,7 @@ Validación de **contratos inteligentes**, **transacciones** y **eventos en bloc
 
 ### 💻 Ejemplo (Hardhat + Chai)
 
+{% raw %}
 ```js
 const { expect } = require('chai');
 
@@ -994,6 +1051,7 @@ describe('Token', function () {
   });
 });
 ```
+{% endraw %}
 
 ✅ **Herramientas**  
 Hardhat · Foundry · Truffle · Ganache · Anvil
@@ -1017,6 +1075,7 @@ Asegura que el software funcione correctamente en **múltiples idiomas, formatos
 
 ### 💻 Ejemplo (Cypress + I18n)
 
+{% raw %}
 ```js
 cy.visit('/es');
 cy.get('h1').should('contain', 'Bienvenido');
@@ -1024,6 +1083,7 @@ cy.get('h1').should('contain', 'Bienvenido');
 cy.visit('/en');
 cy.get('h1').should('contain', 'Welcome');
 ```
+{% endraw %}
 
 ✅ **Checks comunes**
 
@@ -1115,6 +1175,7 @@ Validación silenciosa o comparativa de nuevas funcionalidades en producción.
 
 ### 💻 Ejemplo (Feature Flags + A/B)
 
+{% raw %}
 ```js
 if (featureFlag('newCheckout')) {
   render(<NewCheckout />);
@@ -1122,6 +1183,7 @@ if (featureFlag('newCheckout')) {
   render(<OldCheckout />);
 }
 ```
+{% endraw %}
 
 ✅ **Herramientas**  
 LaunchDarkly · Split.io · Optimizely · Google Optimize (sunset → GA4 Experiments)

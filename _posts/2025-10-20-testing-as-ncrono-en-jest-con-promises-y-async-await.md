@@ -39,18 +39,21 @@ category: Testing
 
 ### 1. Devolviendo una Promise
 El test finaliza cuando la Promise se resuelve o rechaza.
+{% raw %}
 ```javascript
 test('devuelve datos del usuario', () => {
 	return fetchUser().then(user => {
 		expect(user.name).toBe('Eduardo')
 	})
 })
-````
+```
+{% endraw %}`
 
 ### 2. Usando el callback `done`
 
 El método más antiguo, útil en casos con múltiples callbacks.
 
+{% raw %}
 ```javascript
 test('usa done para esperar finalización', done => {
 	getData(data => {
@@ -59,23 +62,27 @@ test('usa done para esperar finalización', done => {
 	})
 })
 ```
+{% endraw %}
 
 ### 3. Con `async/await` (recomendado)
 
 Ofrece la sintaxis más clara y moderna.
 
+{% raw %}
 ```javascript
 test('resuelve correctamente con async/await', async () => {
 	const data = await fetchUser()
 	expect(data.id).toBe(1)
 })
 ```
+{% endraw %}
 
 ## 🚫 Manejo de errores y rechazos
 
 Jest necesita saber cuándo una promesa **falla correctamente**.  
 Puedes testear rechazos de varias formas:
 
+{% raw %}
 ```javascript
 // con async/await
 test('rechaza con error', async () => {
@@ -89,11 +96,13 @@ test('rechaza usando then/catch', () => {
 	})
 })
 ```
+{% endraw %}
 
 ## 🧩 Combinando async y mocks
 
 Puedes usar `jest.fn()` o `jest.mock()` para simular funciones asíncronas.
 
+{% raw %}
 ```javascript
 const getUser = jest.fn(async id => ({ id, name: 'TestUser' }))
 
@@ -103,9 +112,11 @@ test('usa mock async', async () => {
 	expect(getUser).toHaveBeenCalledWith(5)
 })
 ```
+{% endraw %}
 
 También se puede usar `mockResolvedValue()` o `mockRejectedValue()`:
 
+{% raw %}
 ```javascript
 import axios from 'axios'
 jest.mock('axios')
@@ -116,11 +127,13 @@ test('llamada HTTP mockeada', async () => {
 	expect(res.data.name).toBe('Edu')
 })
 ```
+{% endraw %}
 
 ## 🕒 Testing de temporizadores asíncronos
 
 Jest permite simular tiempo para tests que dependen de `setTimeout` o `setInterval`.
 
+{% raw %}
 ```javascript
 jest.useFakeTimers()
 test('simula timeout', () => {
@@ -130,11 +143,13 @@ test('simula timeout', () => {
 	expect(callback).toHaveBeenCalled()
 })
 ```
+{% endraw %}
 
 Esto evita esperas reales y mantiene los tests deterministas.
 
 ## 🧱 Ejemplo práctico de test asíncrono real
 
+{% raw %}
 ```javascript
 // api.js
 export const fetchUser = async (id) => {
@@ -143,7 +158,9 @@ export const fetchUser = async (id) => {
 	return response.json()
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```javascript
 // api.test.js
 global.fetch = jest.fn()
@@ -163,6 +180,7 @@ test('lanza error si no se encuentra el usuario', async () => {
 	await expect(fetchUser(2)).rejects.toThrow('User not found')
 })
 ```
+{% endraw %}
 
 ## 🔄 Tests asíncronos en integration test
 
@@ -171,6 +189,7 @@ test('lanza error si no se encuentra el usuario', async () => {
 - Usa `beforeAll` y `afterAll` para preparar y limpiar datos.
     
 
+{% raw %}
 ```javascript
 beforeAll(async () => await connectDB())
 afterAll(async () => await disconnectDB())
@@ -181,6 +200,7 @@ test('inserta y lee un registro', async () => {
 	expect(user.name).toBe('Ana')
 })
 ```
+{% endraw %}
 
 ## 💡 Buenas prácticas
 
@@ -206,8 +226,10 @@ test('inserta y lee un registro', async () => {
 - integration test en entornos con datos reales.
     
 
+{% raw %}
 ```
 
 ¿Quieres que la próxima nota sea **[Cobertura de código en Jest y análisis con SonarQube](/testing/cobertura-de-c-digo-en-jest-y-an-lisis-con-sonarqube/)**?  
 Puedo generarla siguiendo el mismo formato ampliado, centrado en cobertura, reportes y análisis de calidad.
 ```
+{% endraw %}

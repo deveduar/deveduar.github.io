@@ -79,6 +79,7 @@ category: Testing
 
 ## 🧩 Ejemplo de uso en proyecto
 
+{% raw %}
 ```js
 // utils/math.js
 export function sum(a,b){ return a+b; }
@@ -101,9 +102,11 @@ QUnit.module("Math Utils", hooks => {
   });
 });
 ```
+{% endraw %}
 
 *Integración con pipeline CI/CD y cobertura:*
 
+{% raw %}
 ```json
 // package.json scripts
 {
@@ -117,9 +120,11 @@ QUnit.module("Math Utils", hooks => {
   }
 }
 ```
+{% endraw %}
 
 *Pipeline GitHub Actions:*
 
+{% raw %}
 ```yaml
 name: QUnit CI
 on: [push, pull_request]
@@ -136,6 +141,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with: { name: coverage-report, path: coverage }
 ```
+{% endraw %}
 
 ## 💡 Experiencia de uso en empresa
 

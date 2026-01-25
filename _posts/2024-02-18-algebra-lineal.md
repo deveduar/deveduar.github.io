@@ -88,6 +88,7 @@ donde:
 - Es útil en reducción de dimensiones, PCA, filtrado de ruido y compresión de datos.
 
 ### Código (Ejemplo en Python)
+{% raw %}
 ```python
 import numpy as np
 
@@ -97,7 +98,8 @@ U, S, Vt = np.linalg.svd(A)
 print("U =", U)
 print("Valores singulares =", S)
 print("Vt =", Vt)
-````
+```
+{% endraw %}`
 
 ---
 
@@ -126,6 +128,7 @@ donde $\Sigma^{+}$  se obtiene invirtiendo los valores singulares distintos de c
 
 ### Código
 
+{% raw %}
 ```python
 import numpy as np
 
@@ -133,6 +136,7 @@ A = np.array([[1, 2], [3, 4], [5, 6]])
 A_pinv = np.linalg.pinv(A)
 print(A_pinv)
 ```
+{% endraw %}
 
 ---
 
@@ -171,6 +175,7 @@ El **determinante** de una matriz cuadrada ( A ) mide el **factor de escala** de
 
 ### Código
 
+{% raw %}
 ```python
 import numpy as np
 
@@ -178,6 +183,7 @@ A = np.array([[2, 3], [1, 4]])
 detA = np.linalg.det(A)
 print(detA)
 ```
+{% endraw %}
 
 ---
 
@@ -195,6 +201,7 @@ El **PCA** es una aplicación directa de la SVD y la descomposición propia. Su 
 
 ### Código
 
+{% raw %}
 ```python
 import numpy as np
 
@@ -208,6 +215,7 @@ print("Autovalores:", eigvals)
 print("Autovectores:", eigvecs)
 print("Datos proyectados:", X_pca)
 ```
+{% endraw %}
 
 ### Interpretación
 
@@ -318,6 +326,7 @@ $$T(\vec{v}) = A\vec{v}$$
 - Sus efectos geométricos pueden analizarse a través de los **autovalores y autovectores** de la matriz asociada.
 
 ### Código (Ejemplo de transformación lineal)
+{% raw %}
 ```python
 import numpy as np
 
@@ -326,7 +335,8 @@ v = np.array([1, 2])
 T_v = A @ v
 
 print("Vector transformado:", T_v)
-````
+```
+{% endraw %}`
 
 ---
 
@@ -554,6 +564,7 @@ $$\vec{u} = (2, -1, 3), \quad \vec{v} = (1, 4, -2)$$
    $$= (4, -2, 6) - (3, 12, -6) = (1, -14, 12)$$
 
 ### Representación Mermaid
+{% raw %}
 ```mermaid
 graph LR
 	A["2u = (4, -2, 6)"]
@@ -561,7 +572,8 @@ graph LR
 	C["2u - 3v = (1, -14, 12)"]
 	A --> C
 	B --> C
-````
+```
+{% endraw %}`
 
 ---
 
@@ -611,15 +623,18 @@ El ángulo pequeño indica que los vectores $\vec{a}$ y $\vec{b}$ apuntan en dir
 
 Puedes visualizar la relación entre ellos con el siguiente diagrama (opcional, si usas Mermaid):
 
+{% raw %}
 ```mermaid
 graph TD
 	A["(0,0)"] --> B["(2,1)  →  𝒂"]
 	A --> C["(3,4)  →  𝒃"]
-````
+```
+{% endraw %}`
 
 
 ### Representación Mermaid
 
+{% raw %}
 ```mermaid
 graph TD
 	A["a = (2,1)"]
@@ -630,6 +645,7 @@ graph TD
 	B --> C
 	C --> D
 ```
+{% endraw %}
 
 ---
 
@@ -710,13 +726,15 @@ $$
 
 ### 📊 Representación Mermaid
 
+{% raw %}
 ```mermaid
 graph TD
 	A["Sistema lineal A·x = b"]
 	B["A invertible → A⁻¹ existe"]
 	C["x = A⁻¹·b"]
 	A --> B --> C
-````
+```
+{% endraw %}`
 
 ---
 
@@ -766,6 +784,7 @@ $$
 
 ### 🧭 Representación Mermaid
 
+{% raw %}
 ```mermaid
 graph LR
 	X["(x, y)"]
@@ -773,6 +792,7 @@ graph LR
 	Z["Transformación: escala + rotación"]
 	X --> Y --> Z
 ```
+{% endraw %}
 
 ---
 
@@ -845,6 +865,7 @@ $$
 $$
 ### Representación Mermaid
 
+{% raw %}
 ```mermaid
 graph TD
 	A["A"]
@@ -853,6 +874,7 @@ graph TD
 	D["Vectores propios v₁ = (1,1), v₂ = (1,-2)"]
 	A --> B --> C --> D
 ```
+{% endraw %}
 
 ---
 

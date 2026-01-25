@@ -33,7 +33,8 @@ La POO se basa en cuatro pilares esenciales:
 	Consiste en agrupar datos y métodos relacionados dentro de una misma entidad (objeto), ocultando los detalles internos al exterior mediante modificadores de acceso (por ejemplo, `private`, `protected`, `public`).  
 	Permite controlar la interacción y proteger la integridad de los datos.
 
-	```js
+	{% raw %}
+```js
 	class Usuario {
 		#password;
 		constructor(nombre, password) {
@@ -45,12 +46,14 @@ La POO se basa en cuatro pilares esenciales:
 		}
 	}
 	```
+{% endraw %}
 
 2. **Abstracción**  
 	Reduce la complejidad del código mostrando solo lo necesario.  
 	Se centra en lo *qué hace* un objeto, no en *cómo lo hace*.
 
-	```js
+	{% raw %}
+```js
 	class Envio {
 		constructor(destinatario, paquete) {
 			this.destinatario = destinatario;
@@ -61,12 +64,14 @@ La POO se basa en cuatro pilares esenciales:
 		}
 	}
 	```
+{% endraw %}
 
 3. **Herencia**  
 	Permite crear nuevas clases basadas en otras, heredando propiedades y métodos.  
 	Favorece la reutilización del código y la extensión de comportamientos.
 
-	```js
+	{% raw %}
+```js
 	class Animal {
 		constructor(nombre) {
 			this.nombre = nombre;
@@ -82,15 +87,18 @@ La POO se basa en cuatro pilares esenciales:
 		}
 	}
 	```
+{% endraw %}
 
 4. **Polimorfismo**  
 	Facilita usar una misma interfaz o método con diferentes implementaciones.  
 	El objeto decide su comportamiento en tiempo de ejecución.
 
-	```js
+	{% raw %}
+```js
 	const animales = [new Animal("Genérico"), new Perro("Rex")];
 	animales.forEach(a => a.hablar());
 	```
+{% endraw %}
 
 ---
 
@@ -116,7 +124,8 @@ JavaScript implementa la POO mediante dos enfoques principales:
 1. **Composición sobre herencia**  
 	Es preferible crear objetos que *contienen* otros objetos con funcionalidades específicas, en lugar de depender únicamente de jerarquías complejas.
 
-	```js
+	{% raw %}
+```js
 	function logger(obj) {
 		obj.log = (msg) => console.log(`[${obj.nombre}] ${msg}`);
 		return obj;
@@ -125,11 +134,13 @@ JavaScript implementa la POO mediante dos enfoques principales:
 	const usuario = logger({ nombre: "Eduardo" });
 	usuario.log("Inició sesión");
 	```
+{% endraw %}
 
 2. **Interfaces implícitas y contratos**  
 	JavaScript no tiene interfaces nativas, pero se pueden definir contratos mediante documentación o patrones (por ejemplo, *duck typing*).
 
-	```js
+	{% raw %}
+```js
 	function ejecutar(objeto) {
 		if (typeof objeto.ejecutar !== "function") {
 			throw new Error("El objeto no cumple el contrato ejecutar()");
@@ -137,11 +148,13 @@ JavaScript implementa la POO mediante dos enfoques principales:
 		objeto.ejecutar();
 	}
 	```
+{% endraw %}
 
 3. **Encadenamiento de métodos (Fluent API)**  
 	Permite construir interfaces expresivas retornando `this` en cada método.
 
-	```js
+	{% raw %}
+```js
 	class Consulta {
 		constructor() {
 			this.filtros = [];
@@ -157,6 +170,7 @@ JavaScript implementa la POO mediante dos enfoques principales:
 
 	new Consulta().filtrarPor("nombre", "Eduardo").filtrarPor("activo", true).ejecutar();
 	```
+{% endraw %}
 
 4. **Aplicaciones prácticas**
 	- Modelado de entidades de negocio: usuarios, productos, pedidos.
@@ -202,7 +216,8 @@ Los **principios SOLID** guían la escritura de código mantenible y escalable.
 5. **D — Dependency Inversion Principle (DIP)**  
 	El código de alto nivel no debe depender de implementaciones concretas, sino de abstracciones.
 
-	```js
+	{% raw %}
+```js
 	class Notificador {
 		enviar(mensaje) {
 			throw new Error("Método no implementado");
@@ -228,6 +243,7 @@ Los **principios SOLID** guían la escritura de código mantenible y escalable.
 	const usuario = new Usuario(email);
 	usuario.notificar("Bienvenido al sistema");
 	```
+{% endraw %}
 
 ---
 
@@ -240,7 +256,8 @@ Los **patrones de diseño** son soluciones reutilizables a problemas comunes en 
 	- *Factory Method*: delega la creación de objetos a subclases.  
 	- *Builder*: facilita la creación de objetos complejos paso a paso.
 
-	```js
+	{% raw %}
+```js
 	class Configuracion {
 		static instancia;
 		constructor() {
@@ -260,6 +277,7 @@ Los **patrones de diseño** son soluciones reutilizables a problemas comunes en 
 	const conf2 = new Configuracion();
 	console.log(conf1 === conf2); // true
 	```
+{% endraw %}
 
 2. **Estructurales**
 	- *Adapter*: adapta una interfaz existente a otra esperada.  
@@ -273,7 +291,8 @@ Los **patrones de diseño** son soluciones reutilizables a problemas comunes en 
 	- *Command*: encapsula una operación como objeto.  
 	- *State*: cambia el comportamiento de un objeto según su estado interno.
 
-	```js
+	{% raw %}
+```js
 	class Observador {
 		actualizar(mensaje) {
 			console.log("Mensaje recibido:", mensaje);
@@ -296,6 +315,7 @@ Los **patrones de diseño** son soluciones reutilizables a problemas comunes en 
 	s.suscribir(new Observador());
 	s.notificar("Nuevo evento");
 	```
+{% endraw %}
 
 ---
 
@@ -306,7 +326,8 @@ La **metaprogramación** permite modificar o extender el comportamiento de objet
 1. **Uso de `Proxy`**
 	Permite interceptar operaciones sobre objetos (lectura, escritura, invocación, etc.).
 
-	```js
+	{% raw %}
+```js
 	const objeto = { nombre: "Eduardo" };
 	const proxy = new Proxy(objeto, {
 		get(target, prop) {
@@ -317,20 +338,24 @@ La **metaprogramación** permite modificar o extender el comportamiento de objet
 
 	console.log(proxy.nombre);
 	```
+{% endraw %}
 
 2. **Reflexión (`Reflect`)**
 	Permite manipular objetos de forma controlada, accediendo a propiedades y métodos internos del lenguaje.
 
-	```js
+	{% raw %}
+```js
 	const usuario = { nombre: "Ana" };
 	Reflect.set(usuario, "rol", "admin");
 	console.log(Reflect.get(usuario, "rol"));
 	```
+{% endraw %}
 
 3. **Mixins**
 	Combina comportamientos de múltiples fuentes sin herencia múltiple.
 
-	```js
+	{% raw %}
+```js
 	const Loggable = Base => class extends Base {
 		log(msg) {
 			console.log(`[LOG]: ${msg}`);
@@ -343,6 +368,7 @@ La **metaprogramación** permite modificar o extender el comportamiento de objet
 	const s1 = new ServicioLog();
 	s1.log("Servicio iniciado");
 	```
+{% endraw %}
 
 ---
 
@@ -365,6 +391,7 @@ La **metaprogramación** permite modificar o extender el comportamiento de objet
 
 ## Ejemplo práctico: sistema modular de pagos
 
+{% raw %}
 ```js
 class MetodoPago {
 	pagar(monto) {
@@ -396,7 +423,8 @@ class ProcesadorPagos {
 const paypal = new PagoPayPal();
 const procesador = new ProcesadorPagos(paypal);
 procesador.procesar(100);
-````
+```
+{% endraw %}`
 
 Este ejemplo combina **polimorfismo**, **inyección de dependencias** y el **principio abierto/cerrado**, mostrando una POO aplicada y extensible.
 
@@ -435,7 +463,8 @@ Un diseño orientado a objetos eficaz surge cuando las clases y objetos reflejan
 	- **Colaboradores**
 
 	Ejemplo:
-	```
+	{% raw %}
+```
 	Clase: Pedido
 	Responsabilidades:
 	- Calcular total
@@ -444,12 +473,14 @@ Un diseño orientado a objetos eficaz surge cuando las clases y objetos reflejan
 	- Producto
 	- Cliente
 	```
+{% endraw %}
 
 3. **Modelado con objetos de valor (Value Objects)**  
 	Representan conceptos inmutables y equivalentes por su valor, no por identidad.  
 	Ejemplo: `Dinero`, `Email`, `Coordenada`.
 
-	```js
+	{% raw %}
+```js
 	class Dinero {
 		constructor(cantidad, moneda) {
 			Object.freeze(this);
@@ -464,6 +495,7 @@ Un diseño orientado a objetos eficaz surge cuando las clases y objetos reflejan
 		}
 	}
 	```
+{% endraw %}
 
 ---
 
@@ -474,7 +506,8 @@ La POO facilita la **testabilidad** al aislar responsabilidades.
 1. **Mocks y Stubs**
 	Simulan dependencias externas para probar clases de forma independiente.
 
-	```js
+	{% raw %}
+```js
 	class EmailService {
 		enviar() {
 			return "email enviado";
@@ -495,6 +528,7 @@ La POO facilita la **testabilidad** al aislar responsabilidades.
 	const notificador = new Notificador(mockServicio);
 	console.log(notificador.notificar()); // "simulado"
 	```
+{% endraw %}
 
 2. **Inyección de dependencias para pruebas**
 	Permite sustituir comportamientos sin modificar la clase.
@@ -513,11 +547,13 @@ La POO facilita la **testabilidad** al aislar responsabilidades.
 2. **Uso de `Object.create` para instancias ligeras**
 	Cuando no se requieren clases completas, `Object.create` permite crear objetos con delegación directa.
 
-	```js
+	{% raw %}
+```js
 	const animal = { tipo: "genérico" };
 	const perro = Object.create(animal);
 	perro.tipo = "perro";
 	```
+{% endraw %}
 
 3. **Evitar sobreuso de herencia**
 	Las jerarquías profundas generan sobrecarga cognitiva y dificultan la optimización del motor de ejecución.
@@ -535,10 +571,12 @@ Busca objetos **inmutables**, métodos **puros**, y un flujo **predecible**.
 1. **Objetos inmutables**
 	Los estados no cambian, sino que se crean nuevas versiones del objeto.
 
-	```js
+	{% raw %}
+```js
 	const usuario = { nombre: "Ana", edad: 25 };
 	const usuarioActualizado = { ...usuario, edad: 26 };
 	```
+{% endraw %}
 
 2. **Métodos puros**
 	Un método puro no modifica el estado del objeto ni depende de variables externas.
@@ -546,12 +584,14 @@ Busca objetos **inmutables**, métodos **puros**, y un flujo **predecible**.
 3. **Composición de comportamientos**
 	Se pueden combinar funciones que operan sobre objetos, creando transformaciones encadenadas.
 
-	```js
+	{% raw %}
+```js
 	const aumentarEdad = (u) => ({ ...u, edad: u.edad + 1 });
 	const cambiarNombre = (u, n) => ({ ...u, nombre: n });
 
 	const procesarUsuario = (u) => cambiarNombre(aumentarEdad(u), "Carlos");
 	```
+{% endraw %}
 
 4. **Objetos como flujos de datos**
 	El objeto se convierte en una entidad procesada mediante funciones puras, facilitando la depuración y paralelización.
@@ -573,7 +613,8 @@ Busca objetos **inmutables**, métodos **puros**, y un flujo **predecible**.
 3. **Patrón Repositorio**
 	Aísla la lógica de persistencia de la lógica de dominio.
 
-	```js
+	{% raw %}
+```js
 	class UsuarioRepositorio {
 		constructor(db) {
 			this.db = db;
@@ -583,6 +624,7 @@ Busca objetos **inmutables**, métodos **puros**, y un flujo **predecible**.
 		}
 	}
 	```
+{% endraw %}
 
 4. **Entity-Component-System (ECS)**
 	Usado en motores de videojuegos.  
@@ -631,6 +673,7 @@ Esta nota extiende los principios de la POO aplicada: principios de diseño, pru
 	- Se emplean **interfaces y contratos** para garantizar la comunicación entre servicios.  
 	- Los objetos de dominio se serializan/deserializan en DTOs (*Data Transfer Objects*) para transportar datos entre procesos.
 
+{% raw %}
 ```js
 class PedidoDTO {
 	constructor({ id, total, cliente }) {
@@ -643,6 +686,7 @@ class PedidoDTO {
 	}
 }
 ```
+{% endraw %}
 
 2. **POO en APIs REST y GraphQL**  
 	La POO ayuda a estructurar controladores, modelos y servicios.  
@@ -678,6 +722,7 @@ class PedidoDTO {
 	Combina la orientación a objetos con flujos de datos y eventos.  
 	Cada objeto puede ser una fuente de eventos o un observador.
 
+{% raw %}
 ```js
 import { Subject } from "rxjs";
 
@@ -695,11 +740,13 @@ const temp = new Sensor("Temperatura");
 temp.eventos.subscribe(d => console.log(`${d.nombre}: ${d.valor}°C`));
 temp.emitir(22);
 ```
+{% endraw %}
 
 2. **Uso de objetos asíncronos**
 	Los objetos pueden contener métodos `async`, y los patrones de diseño deben contemplar estados *pendientes* o *resueltos*.
 
-	```js
+	{% raw %}
+```js
 	class APICliente {
 		async obtenerDatos() {
 			const res = await fetch("https://api.ejemplo.com/data");
@@ -707,6 +754,7 @@ temp.emitir(22);
 		}
 	}
 	```
+{% endraw %}
 
 3. **Patrones reactivos con objetos**
 	- *Observer* → suscripción a eventos.  
@@ -728,7 +776,8 @@ temp.emitir(22);
 	- Se recomienda mantener **compatibilidad hacia atrás** en constructores y métodos.  
 	- Usar *factories* para abstraer la creación y facilitar la migración de versiones.
 
-	```js
+	{% raw %}
+```js
 	class UsuarioFactory {
 		static crearDesdeDatos(datos) {
 			if (datos.version === 2) {
@@ -738,6 +787,7 @@ temp.emitir(22);
 		}
 	}
 	```
+{% endraw %}
 
 3. **Deuda técnica y diseño adaptable**
 	El diseño orientado a objetos no debe ser rígido: las clases deben poder crecer o dividirse con facilidad sin romper el sistema.
@@ -764,7 +814,8 @@ temp.emitir(22);
 1. **React y componentes como objetos**
 	Aunque React se basa en funciones, los componentes de clase siguen siendo un ejemplo de POO aplicada al ciclo de vida y estado.
 
-	```jsx
+	{% raw %}
+```jsx
 	class Contador extends React.Component {
 		state = { valor: 0 };
 		incrementar = () => this.setState({ valor: this.state.valor + 1 });
@@ -773,6 +824,7 @@ temp.emitir(22);
 		}
 	}
 	```
+{% endraw %}
 
 2. **Vue y composición orientada a objetos**
 	Vue 3 permite organizar código con clases decoradas o patrones composables que encapsulan comportamientos similares a objetos.
@@ -780,7 +832,8 @@ temp.emitir(22);
 3. **POO y Web Components**
 	Los componentes personalizados (`Custom Elements`) son objetos extendidos del DOM, con métodos y propiedades encapsulados.
 
-	```js
+	{% raw %}
+```js
 	class MiBoton extends HTMLElement {
 		connectedCallback() {
 			this.innerHTML = "<button>Haz clic</button>";
@@ -788,6 +841,7 @@ temp.emitir(22);
 	}
 	customElements.define("mi-boton", MiBoton);
 	```
+{% endraw %}
 
 ---
 
@@ -827,7 +881,8 @@ Esta nota complementa la serie de POO en contextos reales y diseño evolutivo ab
 1. **Serialización y deserialización de objetos**
 	Los objetos deben poder convertirse a formatos de intercambio (JSON, XML, BSON) para persistencia o transporte entre servicios.
 
-	```js
+	{% raw %}
+```js
 	class Producto {
 		constructor(id, nombre, precio) {
 			this.id = id;
@@ -842,6 +897,7 @@ Esta nota complementa la serie de POO en contextos reales y diseño evolutivo ab
 		}
 	}
 	```
+{% endraw %}
 
 2. **Interfaces entre lenguajes**
 	- En sistemas poliglota (Java, Python, Node.js), se usa **IDL (Interface Definition Language)** o formatos como **Protocol Buffers** o **Avro**.  
@@ -870,13 +926,15 @@ Esta nota complementa la serie de POO en contextos reales y diseño evolutivo ab
 5. **Auditoría y trazabilidad**
 	La POO permite integrar sistemas de registro (logging) y auditoría por objeto, con trazabilidad interna por cada acción o evento.
 
-	```js
+	{% raw %}
+```js
 	class Auditoria {
 		static registrar(objeto, accion) {
 			console.log(`[AUDITORÍA] ${objeto.constructor.name}: ${accion}`);
 		}
 	}
 	```
+{% endraw %}
 
 ---
 
@@ -885,7 +943,8 @@ Esta nota complementa la serie de POO en contextos reales y diseño evolutivo ab
 1. **Anotaciones y metadatos**
 	Los metadatos describen clases, métodos o propiedades. En JavaScript moderno, se pueden implementar usando *decoradores*.
 
-	```js
+	{% raw %}
+```js
 	function Log(target, key, descriptor) {
 		const original = descriptor.value;
 		descriptor.value = function (...args) {
@@ -902,6 +961,7 @@ Esta nota complementa la serie de POO en contextos reales y diseño evolutivo ab
 		}
 	}
 	```
+{% endraw %}
 
 2. **Reflexión estructural**
 	Mediante `Reflect`, `Proxy` o `Object.getOwnPropertyDescriptors`, se pueden inspeccionar y modificar clases o instancias dinámicamente.
@@ -912,11 +972,13 @@ Esta nota complementa la serie de POO en contextos reales y diseño evolutivo ab
 4. **Auto-documentación**
 	Los objetos pueden autodescribir su estructura y capacidades mediante introspección.
 
-	```js
+	{% raw %}
+```js
 	function describir(obj) {
 		return Object.getOwnPropertyNames(Object.getPrototypeOf(obj));
 	}
 	```
+{% endraw %}
 
 ---
 
@@ -980,6 +1042,7 @@ Esta nota complementa la serie de POO en contextos reales y diseño evolutivo ab
 
 ## Ejemplo: sistema extensible basado en plugins
 
+{% raw %}
 ```js
 class Plugin {
 	constructor(nombre) {
@@ -1012,7 +1075,8 @@ const sistema = new Sistema();
 sistema.registrar(new PluginSaludo("Plugin1"));
 sistema.registrar(new PluginSaludo("Plugin2"));
 sistema.ejecutarTodos();
-````
+```
+{% endraw %}`
 
 Este ejemplo muestra un diseño **modular**, **extensible**, y **orientado a objetos**, donde el sistema puede crecer sin modificarse directamente.
 
@@ -1049,7 +1113,8 @@ En este enfoque, los **objetos** no son simples estructuras de datos, sino **rep
 1. **Entidades**
 	- Tienen identidad propia (ID) y ciclo de vida definido.  
 	- Su igualdad se basa en la identidad, no en sus atributos.  
-	```js
+	{% raw %}
+```js
 	class Pedido {
 		constructor(id, cliente) {
 			this.id = id;
@@ -1061,11 +1126,13 @@ En este enfoque, los **objetos** no son simples estructuras de datos, sino **rep
 		}
 	}
 	```
+{% endraw %}
 
 2. **Value Objects**
 	- Son inmutables y definidos solo por sus atributos.  
 	- Representan conceptos medibles o valores del dominio (ej. `Dinero`, `Distancia`).  
-	```js
+	{% raw %}
+```js
 	class Dinero {
 		constructor(valor, moneda) {
 			this.valor = valor;
@@ -1077,6 +1144,7 @@ En este enfoque, los **objetos** no son simples estructuras de datos, sino **rep
 		}
 	}
 	```
+{% endraw %}
 
 3. **Agregados**
 	- Agrupan entidades relacionadas que deben mantenerse consistentes.  
@@ -1122,6 +1190,7 @@ El paradigma OO sigue evolucionando en los lenguajes modernos, adaptándose a mo
 - Usa *interfaces*, *decoradores* y *mixins* para composición flexible.  
 - Soporta **inmutabilidad** y **tipado genérico**.
 
+{% raw %}
 ```ts
 interface Repositorio<T> {
 	guardar(item: T): void;
@@ -1133,7 +1202,8 @@ class RepositorioMemoria<T extends { id: string }> implements Repositorio<T> {
 	guardar(item: T) { this.items.set(item.id, item); }
 	buscar(id: string) { return this.items.get(id); }
 }
-````
+```
+{% endraw %}`
 
 ### Kotlin
 
@@ -1147,6 +1217,7 @@ class RepositorioMemoria<T extends { id: string }> implements Repositorio<T> {
 * Los *protocols* reemplazan gran parte de la herencia clásica.
 * La composición de comportamientos se logra implementando múltiples protocolos.
 
+{% raw %}
 ```swift
 protocol Movible {
 	func mover(distancia: Int)
@@ -1158,6 +1229,7 @@ struct Coche: Movible {
 	}
 }
 ```
+{% endraw %}
 
 ### Rust
 
@@ -1165,6 +1237,7 @@ struct Coche: Movible {
 * Los *traits* definen comportamiento compartido sin jerarquía rígida.
 * Proporciona seguridad de memoria sin recolector de basura.
 
+{% raw %}
 ```rust
 trait Dibujable {
 	fn dibujar(&self);
@@ -1177,6 +1250,7 @@ impl Dibujable for Circulo {
 	}
 }
 ```
+{% endraw %}
 
 ---
 
@@ -1201,7 +1275,8 @@ En el contexto de IA, los objetos sirven como **unidades semánticas** que repre
    * Los modelos ML se encapsulan en objetos que exponen interfaces de entrenamiento o predicción.
    * Permite desacoplar la lógica de IA del resto del sistema.
 
-   ```python
+   {% raw %}
+```python
    class Clasificador:
    	def __init__(self, modelo):
    		self.modelo = modelo
@@ -1210,6 +1285,7 @@ En el contexto de IA, los objetos sirven como **unidades semánticas** que repre
    	def predecir(self, X):
    		return self.modelo.predict(X)
    ```
+{% endraw %}
 
 4. **Objetos simbólicos y aprendizaje híbrido**
 
@@ -1260,6 +1336,7 @@ Cada clase debe tener **una única responsabilidad** o motivo para cambiar.
 - Evita clases “Dios” que gestionan múltiples tareas.  
 - Favorece la separación en componentes pequeños y cohesivos.
 
+{% raw %}
 ```js
 class Reporte {
 	constructor(datos) { this.datos = datos; }
@@ -1269,7 +1346,8 @@ class Reporte {
 class ReportePDF {
 	exportar(reporte) { /* genera PDF */ }
 }
-````
+```
+{% endraw %}`
 
 > Cada clase cumple una función clara: una genera datos, otra se encarga del formato.
 
@@ -1282,6 +1360,7 @@ Las clases deben estar **abiertas a extensión pero cerradas a modificación**.
 * Se logra mediante herencia, interfaces o composición.
 * Permite agregar nuevas funcionalidades sin alterar el código existente.
 
+{% raw %}
 ```js
 class Envio {
 	calcularCosto() { return 10; }
@@ -1291,6 +1370,7 @@ class EnvioExpress extends Envio {
 	calcularCosto() { return 20; }
 }
 ```
+{% endraw %}
 
 > Nuevos comportamientos se añaden extendiendo la clase base.
 
@@ -1303,6 +1383,7 @@ Los objetos derivados deben poder sustituir a sus padres sin alterar el funciona
 * Las subclases deben cumplir las expectativas del tipo base.
 * Evita redefinir métodos que cambien el comportamiento esperado.
 
+{% raw %}
 ```js
 class Ave {
 	volar() { console.log("Volando..."); }
@@ -1312,6 +1393,7 @@ class Pinguino extends Ave {
 	volar() { throw new Error("Los pingüinos no vuelan"); }
 }
 ```
+{% endraw %}
 
 > ❌ Viola LSP: el contrato del tipo base se rompe.
 > ✅ Solución: redefinir la jerarquía o usar interfaces más específicas.
@@ -1325,6 +1407,7 @@ Una clase no debe depender de interfaces que no usa.
 * Divide interfaces grandes en conjuntos más pequeños y específicos.
 * Reduce la complejidad y el acoplamiento innecesario.
 
+{% raw %}
 ```ts
 interface Imprimible {
 	imprimir(): void;
@@ -1338,6 +1421,7 @@ class Impresora implements Imprimible {
 	imprimir() { console.log("Imprimiendo..."); }
 }
 ```
+{% endraw %}
 
 ---
 
@@ -1348,6 +1432,7 @@ Los módulos de alto nivel no deben depender de módulos de bajo nivel, sino de 
 * Usa interfaces o inyección de dependencias.
 * Facilita el testeo y la flexibilidad de implementación.
 
+{% raw %}
 ```js
 class Notificador {
 	constructor(servicio) { this.servicio = servicio; }
@@ -1361,6 +1446,7 @@ class EmailServicio {
 const email = new Notificador(new EmailServicio());
 email.enviar("Hola mundo");
 ```
+{% endraw %}
 
 ---
 
@@ -1407,6 +1493,7 @@ email.enviar("Hola mundo");
 * **Bajo acoplamiento:** evita dependencias directas entre componentes.
 * **Interfaces claras:** la comunicación debe ser mínima y explícita.
 
+{% raw %}
 ```js
 class Motor {
 	encender() { console.log("Motor encendido"); }
@@ -1417,6 +1504,7 @@ class Coche {
 	arrancar() { this.motor.encender(); }
 }
 ```
+{% endraw %}
 
 ---
 
@@ -1425,6 +1513,7 @@ class Coche {
 * Prefiere **componer objetos** en lugar de extender clases cuando sea posible.
 * La composición favorece la reutilización sin acoplar jerarquías rígidas.
 
+{% raw %}
 ```js
 class Volador {
 	volar() { console.log("Volando"); }
@@ -1435,6 +1524,7 @@ class Ave {
 	mover() { this.volador.volar(); }
 }
 ```
+{% endraw %}
 
 ---
 
@@ -1443,6 +1533,7 @@ class Ave {
 * Expón solo lo necesario (usa `private`, `protected` o convenciones).
 * Separa el *qué* hace una clase del *cómo* lo hace.
 
+{% raw %}
 ```js
 class Cuenta {
 	#saldo = 0;
@@ -1450,6 +1541,7 @@ class Cuenta {
 	obtenerSaldo() { return this.#saldo; }
 }
 ```
+{% endraw %}
 
 ---
 
@@ -1458,6 +1550,7 @@ class Cuenta {
 * Reduce efectos colaterales usando **objetos inmutables**.
 * Aumenta la seguridad y previsibilidad en sistemas concurrentes.
 
+{% raw %}
 ```js
 class Punto {
 	constructor(x, y) {
@@ -1467,6 +1560,7 @@ class Punto {
 	}
 }
 ```
+{% endraw %}
 
 ---
 
@@ -1474,6 +1568,7 @@ class Punto {
 
 Define expectativas claras entre clases mediante **precondiciones**, **postcondiciones** e **invariantes**.
 
+{% raw %}
 ```js
 class Rectangulo {
 	constructor(ancho, alto) {
@@ -1487,6 +1582,7 @@ class Rectangulo {
 	}
 }
 ```
+{% endraw %}
 
 ---
 
@@ -1515,6 +1611,7 @@ class Rectangulo {
 * Usa **mocking** e **interfaces** para simular dependencias.
 * El diseño OO testable tiende a producir arquitecturas más limpias y mantenibles.
 
+{% raw %}
 ```js
 class Calculadora {
 	sumar(a, b) { return a + b; }
@@ -1525,6 +1622,7 @@ test('suma dos números', () => {
 	expect(calc.sumar(2, 3)).toBe(5);
 });
 ```
+{% endraw %}
 
 ---
 
@@ -1605,13 +1703,15 @@ Cada definición está optimizada para consulta rápida en Obsidian y enlazada c
 	Mecanismo que oculta los detalles internos de un objeto y expone solo una interfaz pública.  
 	Aumenta la seguridad, el control y la coherencia de los datos.
 
-	```js
+	{% raw %}
+```js
 	class Cuenta {
 		#saldo = 0;
 		depositar(monto) { this.#saldo += monto; }
 		obtenerSaldo() { return this.#saldo; }
 	}
 	```
+{% endraw %}
 
 - **Abstracción**  
 	Proceso de simplificar la realidad destacando los elementos esenciales y omitiendo los irrelevantes.  
@@ -1669,13 +1769,15 @@ Cada definición está optimizada para consulta rápida en Obsidian y enlazada c
 - **Constructor**  
 	Método especial que se ejecuta al crear una instancia de clase. Inicializa sus valores.
 
-	```js
+	{% raw %}
+```js
 	class Usuario {
 		constructor(nombre) {
 			this.nombre = nombre;
 		}
 	}
 	```
+{% endraw %}
 
 - **Destructor**  
 	Método que se ejecuta cuando el objeto deja de usarse o se elimina (automático o controlado).
@@ -1872,7 +1974,8 @@ Esta sección del glosario aborda los **principios de diseño orientado a objeto
 	Usar objetos dentro de objetos en lugar de jerarquías profundas.  
 	Aumenta la flexibilidad, reduce los efectos colaterales y mejora el desacoplamiento.
 
-	```js
+	{% raw %}
+```js
 	class Motor {
 		arrancar() { console.log("Motor en marcha"); }
 	}
@@ -1884,6 +1987,7 @@ Esta sección del glosario aborda los **principios de diseño orientado a objeto
 		encender() { this.motor.arrancar(); }
 	}
 	```
+{% endraw %}
 
 - **Encapsular lo que varía**  
 	Identificar las partes cambiantes del sistema y aislarlas.  
@@ -1908,7 +2012,8 @@ Esta sección del glosario aborda los **principios de diseño orientado a objeto
 - **Programar contra interfaces, no implementaciones**  
 	Usar abstracciones en lugar de clases concretas.  
 	Ejemplo en JavaScript:
-	```js
+	{% raw %}
+```js
 	class BaseDeDatos {
 		conectar() {}
 	}
@@ -1917,6 +2022,7 @@ Esta sección del glosario aborda los **principios de diseño orientado a objeto
 		constructor(db) { this.db = db; }
 	}
 	```
+{% endraw %}
 
 - **Inyección de dependencias**  
 	Patrón que permite pasar las dependencias desde el exterior en lugar de crearlas internamente.  
@@ -2017,7 +2123,8 @@ Se agrupan según las categorías clásicas de la GoF (Gang of Four): **creacion
 - **Patrón Singleton**  
 	Garantiza que solo exista una instancia de una clase y proporciona un punto global de acceso.  
 	👉 Útil para controladores de configuración, logs o recursos compartidos.  
-	```js
+	{% raw %}
+```js
 	class Config {
 		static instancia;
 		constructor() {
@@ -2026,6 +2133,7 @@ Se agrupan según las categorías clásicas de la GoF (Gang of Four): **creacion
 		}
 	}
 	```
+{% endraw %}
 
 - **Factory Method (Método fábrica)**  
 	Define una interfaz para crear objetos, permitiendo que las subclases decidan qué clase instanciar.  
@@ -2051,12 +2159,14 @@ Se agrupan según las categorías clásicas de la GoF (Gang of Four): **creacion
 - **Adapter (Adaptador)**  
 	Convierte la interfaz de una clase en otra que el cliente espera.  
 	👉 Facilita la compatibilidad entre componentes incompatibles.  
-	```js
+	{% raw %}
+```js
 	class Adaptador {
 		constructor(obj) { this.obj = obj; }
 		request() { return this.obj.operacionEspecifica(); }
 	}
 	```
+{% endraw %}
 
 - **Bridge (Puente)**  
 	Desacopla una abstracción de su implementación, permitiendo que ambas evolucionen por separado.  
@@ -2070,7 +2180,8 @@ Se agrupan según las categorías clásicas de la GoF (Gang of Four): **creacion
 - **Decorator (Decorador)**  
 	Añade responsabilidades adicionales a un objeto **dinámicamente**, sin modificar su clase.  
 	👉 Excelente para extender comportamiento sin herencia.  
-	```js
+	{% raw %}
+```js
 	class Notificador {
 		enviar(mensaje) { console.log("Enviando:", mensaje); }
 	}
@@ -2082,6 +2193,7 @@ Se agrupan según las categorías clásicas de la GoF (Gang of Four): **creacion
 		}
 	}
 	```
+{% endraw %}
 
 - **Facade (Fachada)**  
 	Proporciona una interfaz simplificada a un subsistema complejo.  
@@ -2103,7 +2215,8 @@ Se agrupan según las categorías clásicas de la GoF (Gang of Four): **creacion
 	Define una familia de algoritmos intercambiables que se pueden seleccionar dinámicamente.  
 	👉 Basado en el principio “Encapsular lo que varía”.
 
-	```js
+	{% raw %}
+```js
 	class EstrategiaPagoTarjeta { pagar() { console.log("Pago con tarjeta"); } }
 	class EstrategiaPagoPaypal { pagar() { console.log("Pago con PayPal"); } }
 	class ContextoPago {
@@ -2111,6 +2224,7 @@ Se agrupan según las categorías clásicas de la GoF (Gang of Four): **creacion
 		ejecutarPago() { this.estrategia.pagar(); }
 	}
 	```
+{% endraw %}
 
 - **Observer (Observador / Publicador-Suscriptor)**  
 	Define una dependencia uno-a-muchos entre objetos para que, cuando uno cambie de estado, todos los demás sean notificados.  
@@ -2314,11 +2428,13 @@ Incluye la integración con la Programación funcional, la Programación reactiv
 - **Metaprogramación**  
 	Capacidad de escribir código que genera o modifica código.  
 	👉 En JavaScript: uso de `Proxy`, `Reflect`, `eval` o decoradores.  
-	```js
+	{% raw %}
+```js
 	const proxy = new Proxy({}, {
 		get(target, prop) { console.log(`Acceso a ${prop}`); return target[prop]; }
 	});
 	```
+{% endraw %}
 
 - **Reflexión (Reflection)**  
 	Permite inspeccionar y manipular la estructura del programa en tiempo de ejecución.  
@@ -2331,9 +2447,11 @@ Incluye la integración con la Programación funcional, la Programación reactiv
 - **Generics (Plantillas o genéricos)**  
 	Permiten definir clases o métodos que trabajan con tipos desconocidos hasta el momento de uso.  
 	👉 Mejora la reutilización y la seguridad de tipos.  
-	```ts
+	{% raw %}
+```ts
 	function identidad<T>(valor: T): T { return valor; }
 	```
+{% endraw %}
 
 - **Duck Typing (Tipado por comportamiento)**  
 	Si un objeto “camina como un pato y suena como un pato”, se trata como un pato.  
@@ -2343,13 +2461,15 @@ Incluye la integración con la Programación funcional, la Programación reactiv
 	Mecanismo para combinar comportamientos de múltiples clases sin herencia múltiple.  
 	👉 Permite modularidad y reutilización flexible.
 
-	```js
+	{% raw %}
+```js
 	const Volador = Base => class extends Base {
 		volar() { console.log("Volando..."); }
 	};
 	class Ave {}
 	class Gaviota extends Volador(Ave) {}
 	```
+{% endraw %}
 
 - **Traits**  
 	Similares a los mixins, pero con mayor control sobre conflictos de métodos.  
@@ -2379,13 +2499,15 @@ Incluye la integración con la Programación funcional, la Programación reactiv
 	Integra conceptos de concurrencia, promesas y tareas en la estructura orientada a objetos.  
 	👉 Patrón esencial en aplicaciones web modernas.
 
-	```js
+	{% raw %}
+```js
 	class Usuario {
 		async cargarDatos() {
 			this.datos = await fetch("/api/usuario").then(r => r.json());
 		}
 	}
 	```
+{% endraw %}
 
 ---
 

@@ -49,6 +49,7 @@ El análisis de código en DevSecOps abarca **evaluaciones estáticas, dinámica
 DevSecOps introduce **controles de seguridad en pipelines CI/CD**, permitiendo validar políticas de compliance, escanear imágenes y monitorear configuraciones.
 
 #### Ejemplo: Pipeline con Jenkins y SonarQube
+{% raw %}
 ```groovy
 pipeline {
 	stage('Code Analysis') {
@@ -64,7 +65,8 @@ pipeline {
 		}
 	}
 }
-````
+```
+{% endraw %}`
 
 ### 🧱 Contenedores y Orquestación Segura
 
@@ -73,6 +75,7 @@ pipeline {
 
 #### Ejemplo: Política de Seguridad en Kubernetes (PSP o PodSecurity)
 
+{% raw %}
 ```yaml
 apiVersion: policy/v1beta1
 kind: PodSecurityPolicy
@@ -85,6 +88,7 @@ spec:
   seLinux:
     rule: RunAsAny
 ```
+{% endraw %}
 
 ### 📊 Monitoreo, Auditoría y Observabilidad
 
@@ -99,6 +103,7 @@ spec:
 
 #### Ejemplo: Test de Seguridad API en Postman (Pre-request Script)
 
+{% raw %}
 ```javascript
 pm.sendRequest({
 	url: pm.environment.get("API_URL") + "/auth",
@@ -108,6 +113,7 @@ pm.sendRequest({
 	console.log(res.json());
 });
 ```
+{% endraw %}
 
 ## 🧠 Estrategias y Prácticas Recomendadas
 

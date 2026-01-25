@@ -101,6 +101,7 @@ Sequelize es un **ORM para Node.js** que facilita la interacción con **bases de
 ---
 
 ## Definición de Modelo (Ejemplo)
+{% raw %}
 ```ts
 import { Model, DataTypes } from "sequelize";
 
@@ -120,26 +121,32 @@ username: {
 },
 { sequelize, modelName: "User" }
 );
-````
+```
+{% endraw %}`
 
 ## Relaciones (Ejemplo)
 
+{% raw %}
 ```ts
 User.hasMany(Post, { foreignKey: "userId" });
 Post.belongsTo(User);
 ```
+{% endraw %}
 
 ## Consulta Filtrada (Ejemplo)
 
+{% raw %}
 ```ts
 const users = await User.findAll({
 where: { username: { [Op.like]: "%admin%" } },
 limit: 10
 });
 ```
+{% endraw %}
 
 ## Transacción (Ejemplo)
 
+{% raw %}
 ```ts
 const result = await sequelize.transaction(async (t) => {
 const user = await User.create({ username: "test" }, { transaction: t });
@@ -147,6 +154,7 @@ await Profile.create({ userId: user.id }, { transaction: t });
 return user;
 });
 ```
+{% endraw %}
 
 ---
 
@@ -172,6 +180,7 @@ return user;
 ### Inicialización del ORM
 Creación de instancia de Sequelize con configuración de conexión:
 
+{% raw %}
 ```javascript
 const { Sequelize } = require('sequelize');
 
@@ -184,10 +193,12 @@ const sequelize = new Sequelize({
   logging: false
 });
 ```
+{% endraw %}
 
 ### Definición de Modelos
 Estructuración de entidades mediante clases o `sequelize.define()`:
 
+{% raw %}
 ```javascript
 // Método con clases
 const { Model, DataTypes } = require('sequelize');
@@ -206,10 +217,12 @@ const Product = sequelize.define('Product', {
   stock: DataTypes.INTEGER
 });
 ```
+{% endraw %}
 
 ### Asociaciones entre Modelos
 Definición de relaciones y vínculos entre entidades:
 
+{% raw %}
 ```javascript
 // Relaciones uno a uno
 User.hasOne(Profile);
@@ -223,12 +236,14 @@ Post.belongsTo(User);
 Project.belongsToMany(User, { through: 'ProjectUsers' });
 User.belongsToMany(Project, { through: 'ProjectUsers' });
 ```
+{% endraw %}
 
 ## Flujo de Migraciones
 
 ### Configuración de Migraciones
 Inicialización del sistema de migraciones:
 
+{% raw %}
 ```bash
 # Inicializar estructura de migraciones
 npx sequelize-cli init
@@ -236,10 +251,12 @@ npx sequelize-cli init
 # Crear nueva migración
 npx sequelize-cli migration:generate --name create-users-table
 ```
+{% endraw %}
 
 ### Estructura de Migraciones
 Archivos de migración con métodos `up` y `down`:
 
+{% raw %}
 ```javascript
 module.exports = {
   async up(queryInterface, Sequelize) {
@@ -278,10 +295,12 @@ module.exports = {
   }
 };
 ```
+{% endraw %}
 
 ### Tipos de Operaciones en Migraciones
 
 #### Modificación de Estructura
+{% raw %}
 ```javascript
 // Añadir columna
 await queryInterface.addColumn('Users', 'age', {
@@ -299,8 +318,10 @@ await queryInterface.changeColumn('Users', 'email', {
 // Eliminar columna
 await queryInterface.removeColumn('Users', 'age');
 ```
+{% endraw %}
 
 #### Gestión de Constraints
+{% raw %}
 ```javascript
 // Añadir clave foránea
 await queryInterface.addConstraint('Posts', {
@@ -318,10 +339,12 @@ await queryInterface.addConstraint('Posts', {
 // Eliminar constraint
 await queryInterface.removeConstraint('Posts', 'fk_user_id');
 ```
+{% endraw %}
 
 ### Ejecución de Migraciones
 
 #### Comandos de Gestión
+{% raw %}
 ```bash
 # Ejecutar migraciones pendientes
 npx sequelize-cli db:migrate
@@ -335,8 +358,10 @@ npx sequelize-cli db:migrate:undo:all
 # Ver estado de migraciones
 npx sequelize-cli db:migrate:status
 ```
+{% endraw %}
 
 #### Migraciones en Entorno de Producción
+{% raw %}
 ```javascript
 // Script seguro para producción
 const runMigrations = async () => {
@@ -351,18 +376,22 @@ const runMigrations = async () => {
   }
 };
 ```
+{% endraw %}
 
 ## Flujo de Seeders
 
 ### Creación de Datos Iniciales
 Generación de datos de prueba y configuración:
 
+{% raw %}
 ```bash
 # Crear seeder
 npx sequelize-cli seed:generate --name demo-users
 ```
+{% endraw %}
 
 ### Implementación de Seeders
+{% raw %}
 ```javascript
 module.exports = {
   async up(queryInterface, Sequelize) {
@@ -391,8 +420,10 @@ module.exports = {
   }
 };
 ```
+{% endraw %}
 
 ### Gestión de Seeders
+{% raw %}
 ```bash
 # Ejecutar todos los seeders
 npx sequelize-cli db:seed:all
@@ -406,10 +437,12 @@ npx sequelize-cli db:seed:undo --seed name-of-seeder
 # Revertir todos los seeders
 npx sequelize-cli db:seed:undo:all
 ```
+{% endraw %}
 
 ## Flujo de Consultas y Operaciones
 
 ### Operaciones CRUD Básicas
+{% raw %}
 ```javascript
 // CREATE
 const user = await User.create({
@@ -435,8 +468,10 @@ await User.destroy({
   where: { username: 'john_doe' }
 });
 ```
+{% endraw %}
 
 ### Consultas Avanzadas con Joins
+{% raw %}
 ```javascript
 // Incluir asociaciones
 const usersWithPosts = await User.findAll({
@@ -463,8 +498,10 @@ const userStats = await User.findAll({
   having: sequelize.literal('COUNT(id) > 1')
 });
 ```
+{% endraw %}
 
 ### Gestión de Transacciones
+{% raw %}
 ```javascript
 // Transacción manual
 const transaction = await sequelize.transaction();
@@ -487,18 +524,22 @@ try {
   console.error('Transacción fallida:', error);
 }
 ```
+{% endraw %}
 
 ## Flujo de Sincronización
 
 ### Sincronización Automática
+{% raw %}
 ```javascript
 // Sincronizar modelos con la base de datos
 await sequelize.sync({ force: false }); // No eliminar datos existentes
 await sequelize.sync({ force: true });  // Eliminar y recrear tablas
 await sequelize.sync({ alter: true });  // Alterar tablas existentes
 ```
+{% endraw %}
 
 ### Estrategias de Sincronización
+{% raw %}
 ```javascript
 // Sincronización segura para producción
 const syncDatabase = async () => {
@@ -515,10 +556,12 @@ const syncDatabase = async () => {
   }
 };
 ```
+{% endraw %}
 
 ## Mejores Prácticas del Flujo
 
 ### Organización del Proyecto
+{% raw %}
 ```
 project/
 ├── models/
@@ -533,8 +576,10 @@ project/
 └── config/
     └── config.json
 ```
+{% endraw %}
 
 ### Gestión de Versiones
+{% raw %}
 ```javascript
 // Control de versiones de esquema en migraciones
 module.exports = {
@@ -550,8 +595,10 @@ module.exports = {
   }
 };
 ```
+{% endraw %}
 
 ### Validación y Rollback Seguro
+{% raw %}
 ```javascript
 // Estrategia de rollback automático en errores
 const safeMigration = async (migrationFunction) => {
@@ -566,6 +613,7 @@ const safeMigration = async (migrationFunction) => {
   }
 };
 ```
+{% endraw %}
 
 
 # Flujos de Trabajo de Migraciones en Sequelize

@@ -175,6 +175,7 @@ Consulta la nota:
 
 ## Código (ejemplo básico Module Federation)
 ### Configuración del host (webpack.config.js)
+{% raw %}
 ```javascript
 module.exports = {
 	name: "host",
@@ -183,10 +184,12 @@ module.exports = {
 	},
 	shared: ["react", "react-dom"]
 };
-````
+```
+{% endraw %}`
 
 ### Configuración del remote (webpack.config.js)
 
+{% raw %}
 ```javascript
 module.exports = {
 	name: "remoteApp",
@@ -196,6 +199,7 @@ module.exports = {
 	shared: ["react", "react-dom"]
 };
 ```
+{% endraw %}
 
 ---
 

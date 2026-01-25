@@ -55,6 +55,7 @@ Este patrón es ideal para representar **estructuras jerárquicas** como árbole
 !patron-composite.png
 
 ### Código TypeScript / JavaScript
+{% raw %}
 ````js
 class BigOctopusEnemy implements Entity {
 	enemyParts: Entity[];
@@ -79,10 +80,12 @@ function mainLogic() {
 	// Procesa la lógica de todos los enemigos
 	mainOctopusEnemy.logic();
 }
-`````
+```
+{% endraw %}``
 
 ### Código C++ (cFireball.h)
 
+{% raw %}
 ```c++
 #pragma once
 #include "cBicho.h"
@@ -99,6 +102,7 @@ public:
 	float angle;
 };
 ```
+{% endraw %}
 
 ## Patrones Relacionados
 
@@ -114,12 +118,14 @@ public:
 
 ## Ejemplo Conceptual de Jerarquía
 
+{% raw %}
 ```
 Enemy (Composite)
 ├─ FireLeftLeg (Leaf)
 ├─ WaterRightLeg (Leaf)
 └─ OctopusMainBody (Leaf)
 ```
+{% endraw %}
 
 - Cada **Leaf** implementa la misma interfaz que el Composite.
 - El **Composite** delega llamadas a todos sus hijos.

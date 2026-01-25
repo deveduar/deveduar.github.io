@@ -68,6 +68,7 @@ category: Frontend
 ## Bloques de Código
 
 ### Ejemplo: Componente con ARIA
+{% raw %}
 ```html
 <button aria-expanded="false" aria-controls="panel-info">
 	Información
@@ -76,16 +77,20 @@ category: Frontend
 <div id="panel-info" role="region" hidden>
 	Contenido accesible
 </div>
-````
+```
+{% endraw %}`
 
 ### Ejemplo: Imagen con texto alternativo
 
+{% raw %}
 ```html
 <img src="producto.jpg" alt="Zapato deportivo azul con suela blanca" />
 ```
+{% endraw %}
 
 ### Ejemplo: Uso básico de landmarks
 
+{% raw %}
 ```html
 <header>
 	<nav aria-label="Menú principal"></nav>
@@ -97,6 +102,7 @@ category: Frontend
 
 <footer></footer>
 ```
+{% endraw %}
 
 # Accesibilidad (Extensión de conceptos no cubiertos)
 
@@ -214,6 +220,7 @@ category: Frontend
 ## Bloques de Código
 
 ### Live Region para contenido dinámico
+{% raw %}
 ```html
 <div aria-live="polite" id="status-message"></div>
 
@@ -222,10 +229,12 @@ category: Frontend
 		document.getElementById("status-message").textContent = text;
 	}
 </script>
-````
+```
+{% endraw %}`
 
 ### Trap de foco correcto en un modal
 
+{% raw %}
 ```js
 const modal = document.getElementById("modal");
 const focusable = modal.querySelectorAll("button, a, input");
@@ -239,9 +248,11 @@ modal.addEventListener("keydown", e => {
 	}
 });
 ```
+{% endraw %}
 
 ### Control accesible para pausar animaciones
 
+{% raw %}
 ```html
 <button id="toggle-anim" aria-pressed="false">Pausar animaciones</button>
 
@@ -254,6 +265,7 @@ modal.addEventListener("keydown", e => {
 	});
 </script>
 ```
+{% endraw %}
 
 # Glosario de Accesibilidad Web
 

@@ -56,6 +56,7 @@ WebSockets es un protocolo de comunicación que permite la interacción bidirecc
 
 ## Ejemplo de implementación en JavaScript (Cliente)
 ### Cliente
+{% raw %}
 ```javascript
 const socket = new WebSocket("ws://localhost:8080");
 
@@ -75,10 +76,12 @@ socket.onclose = () => {
 socket.onerror = (error) => {
 	console.error("Error en WebSocket:", error);
 };
-````
+```
+{% endraw %}`
 
 ### Servidor Node.js
 
+{% raw %}
 ```javascript
 const WebSocket = require("ws");
 const server = new WebSocket.Server({ port: 8080 });
@@ -96,6 +99,7 @@ server.on("connection", (socket) => {
 	});
 });
 ```
+{% endraw %}
 
 ## Buenas prácticas
 
@@ -182,6 +186,7 @@ WebSockets se combina con:
 
 ## Ejemplo: implementación con autenticación JWT
 ### Servidor Node.js — handshake validado
+{% raw %}
 ```javascript
 const WebSocket = require("ws");
 const jwt = require("jsonwebtoken");
@@ -197,14 +202,17 @@ const server = new WebSocket.Server({
 		}
 	}
 });
-````
+```
+{% endraw %}`
 
 ### Cliente
 
+{% raw %}
 ```javascript
 const token = "mi.jwt.token";
 const socket = new WebSocket("wss://miapp.com", token);
 ```
+{% endraw %}
 
 ## Monitoreo y logging
 

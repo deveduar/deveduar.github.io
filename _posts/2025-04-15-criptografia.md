@@ -85,10 +85,12 @@ Ventajas: rápido y eficiente para grandes volúmenes de datos.
 Desventajas: requiere un canal seguro para compartir la clave.  
 Ejemplos: **AES**, **DES**, **ChaCha20**.
 
+{% raw %}
 ```text
 Cifrado simétrico:
 Clave → Cifrado → Descifrado → Mismo secreto
-````
+```
+{% endraw %}`
 
 ### Cifrado asimétrico
 
@@ -97,11 +99,13 @@ Ventajas: no necesita compartir la clave privada.
 Desventajas: más lento computacionalmente.  
 Ejemplos: **RSA**, **ECC**, **Diffie-Hellman**.
 
+{% raw %}
 ```text
 Cifrado asimétrico:
 Clave pública → Cifrado
 Clave privada → Descifrado
 ```
+{% endraw %}
 
 ---
 

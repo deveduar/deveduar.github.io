@@ -118,6 +118,7 @@ Un VDC se compone de varias **capas interconectadas**:
 
 ## Ejemplo de Infraestructura VDC
 
+{% raw %}
 ```bash
 # Ejemplo de despliegue de VDC usando Terraform y vSphere
 provider "vsphere" {
@@ -142,7 +143,8 @@ resource "vsphere_virtual_machine" "vm_example" {
     size  = 50
   }
 }
-````
+```
+{% endraw %}`
 
 ---
 
@@ -279,6 +281,7 @@ Esto garantiza **reproducibilidad**, **control de versiones** y **automatizació
 
 Ejemplo con **Ansible**:
 
+{% raw %}
 ```yaml
 - name: Desplegar red y VM en VDC
   hosts: localhost
@@ -302,7 +305,8 @@ Ejemplo con **Ansible**:
         template: ubuntu-template
         datacenter: VDC-1
         cluster: Cluster-Prod
-````
+```
+{% endraw %}`
 
 ---
 

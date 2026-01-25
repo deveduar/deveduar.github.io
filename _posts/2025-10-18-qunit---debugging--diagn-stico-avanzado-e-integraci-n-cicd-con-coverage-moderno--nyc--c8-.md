@@ -47,10 +47,13 @@ Integrar **QUnit** en pipelines de **CI/CD** y aplicar técnicas modernas de **d
 ## ⚙️ Configuración Base con nyc
 ### Ejemplo: Configuración básica NYC
 
+{% raw %}
 ```bash
 npm install --save-dev nyc
 ```
+{% endraw %}
 
+{% raw %}
 ```json
 {
   "scripts": {
@@ -63,6 +66,7 @@ npm install --save-dev nyc
   }
 }
 ```
+{% endraw %}
 
 💡 *`nyc` instrumenta automáticamente el código ejecutado por QUnit y genera reportes detallados.*
 
@@ -73,10 +77,13 @@ Desde Node 18+, `c8` aprovecha la cobertura nativa del motor V8, más rápida y 
 
 ### Ejemplo: Configuración con C8
 
+{% raw %}
 ```bash
 npm install --save-dev c8
 ```
+{% endraw %}
 
+{% raw %}
 ```json
 {
   "scripts": {
@@ -88,6 +95,7 @@ npm install --save-dev c8
   }
 }
 ```
+{% endraw %}
 
 ✅ *Ideal para entornos modernos con ESM y pipelines rápidas.*
 
@@ -98,6 +106,7 @@ Ejemplo completo en GitHub Actions
 
 ### Ejemplo: Pipeline GitHub Actions con Coverage
 
+{% raw %}
 ```yaml
 name: QUnit CI with Coverage
 on: [push, pull_request]
@@ -117,6 +126,7 @@ jobs:
           name: coverage-report
           path: coverage
 ```
+{% endraw %}
 
 📦 *Guarda los reportes para revisión o análisis externo (Codecov, Coveralls, SonarCloud).*
 
@@ -131,9 +141,11 @@ En entornos CI/CD el debugging requiere capturar salidas detalladas, logs y resu
 
 ### Ejemplo de Comando Debugging Avanzado
 
+{% raw %}
 ```bash
 DEBUG=qunit:* npx qunit --reporter=dot --fail-fast
 ```
+{% endraw %}
 
 🔍 *Permite detectar dependencias rotas, rutas inválidas o efectos colaterales entre tests.*
 
@@ -151,6 +163,7 @@ DEBUG=qunit:* npx qunit --reporter=dot --fail-fast
 * **lcov:** compatible con Codecov o SonarCloud
 * **Thresholds:** define mínimos aceptables de cobertura
 
+{% raw %}
 ```json
 "nyc": {
   "check-coverage": true,
@@ -160,11 +173,13 @@ DEBUG=qunit:* npx qunit --reporter=dot --fail-fast
   "statements": 85
 }
 ```
+{% endraw %}
 
 💬 *Si no se alcanzan los umbrales, la pipeline falla automáticamente.*
 
 ## 🧩 Ejemplo de Reporte Consolidado
 
+{% raw %}
 ```
 ----------------------|---------|----------|---------|---------|-------------------
 File                  | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
@@ -174,6 +189,7 @@ All files             |   92.31 |    88.46 |   91.66 |   92.30 |
  src/services/auth.js |    85.7 |    80.0  |   83.3  |   85.7  | 34-36
 ----------------------|---------|----------|---------|---------|-------------------
 ```
+{% endraw %}
 
 📊 *Identifica funciones o ramas no cubiertas por los tests.*
 

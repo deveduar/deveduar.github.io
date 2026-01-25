@@ -328,23 +328,28 @@ Con estos bloques, se completa una visión **end-to-end** de OpenShift como **pl
 ## 🧠 Comandos básicos (`oc` CLI)
 
 ### Autenticación y contexto
+{% raw %}
 ```bash
 oc login https://api.openshift.example.com:6443 --token=<TOKEN>
 oc whoami
 oc project <nombre>
 oc status
-````
+```
+{% endraw %}`
 
 ### Gestión de proyectos y recursos
 
+{% raw %}
 ```bash
 oc new-project mi-app
 oc get projects
 oc delete project mi-app
 ```
+{% endraw %}
 
 ### Pods, deployments y servicios
 
+{% raw %}
 ```bash
 oc get pods
 oc describe pod <pod>
@@ -352,23 +357,28 @@ oc logs <pod>
 oc get svc
 oc get routes
 ```
+{% endraw %}
 
 ### Creación rápida de recursos
 
+{% raw %}
 ```bash
 oc new-app <imagen> --name=mi-app
 oc expose svc/mi-app
 oc get route mi-app
 ```
+{% endraw %}
 
 ### Builds e imágenes
 
+{% raw %}
 ```bash
 oc new-build <repo-git> --strategy=docker --name=mi-build
 oc start-build mi-build --follow
 oc get build
 oc get imagestreams
 ```
+{% endraw %}
 
 ---
 
@@ -376,30 +386,38 @@ oc get imagestreams
 
 ### Escalado
 
+{% raw %}
 ```bash
 oc scale deployment/mi-app --replicas=3
 oc autoscale dc/mi-app --min=2 --max=5 --cpu-percent=80
 ```
+{% endraw %}
 
 ### Actualizaciones y rollback
 
+{% raw %}
 ```bash
 oc rollout status dc/mi-app
 oc rollout undo dc/mi-app
 ```
+{% endraw %}
 
 ### Variables de entorno
 
+{% raw %}
 ```bash
 oc set env deployment/mi-app VAR1=valor
 oc set env dc/mi-app --list
 ```
+{% endraw %}
 
 ### Montaje de volúmenes
 
+{% raw %}
 ```bash
 oc set volume dc/mi-app --add --name=vol1 --type=persistentVolumeClaim --claim-name=mi-pvc --mount-path=/data
 ```
+{% endraw %}
 
 ---
 
@@ -407,37 +425,45 @@ oc set volume dc/mi-app --add --name=vol1 --type=persistentVolumeClaim --claim-n
 
 ### RBAC
 
+{% raw %}
 ```bash
 oc get rolebindings
 oc adm policy add-role-to-user edit usuario -n mi-app
 oc adm policy add-cluster-role-to-user cluster-admin admin
 ```
+{% endraw %}
 
 ### Seguridad (SCC)
 
+{% raw %}
 ```bash
 oc get scc
 oc describe scc restricted
 oc adm policy add-scc-to-user anyuid usuario
 ```
+{% endraw %}
 
 ### Networking
 
+{% raw %}
 ```bash
 oc get routes
 oc expose svc/mi-servicio
 oc get networkpolicy
 oc describe networkpolicy
 ```
+{% endraw %}
 
 ### Logs y depuración
 
+{% raw %}
 ```bash
 oc logs -f deployment/mi-app
 oc rsh <pod>
 oc exec <pod> -- ls /app
 oc debug node/<nodo>
 ```
+{% endraw %}
 
 ---
 
@@ -445,19 +471,23 @@ oc debug node/<nodo>
 
 ### Helm
 
+{% raw %}
 ```bash
 helm repo add openshift https://charts.openshift.io/
 helm install mi-chart openshift/mi-app
 helm list
 helm uninstall mi-chart
 ```
+{% endraw %}
 
 ### Templates
 
+{% raw %}
 ```bash
 oc get templates -n openshift
 oc process -f template.yaml -p NOMBRE=valor | oc apply -f -
 ```
+{% endraw %}
 
 ---
 
@@ -465,36 +495,44 @@ oc process -f template.yaml -p NOMBRE=valor | oc apply -f -
 
 ### Tekton
 
+{% raw %}
 ```bash
 oc get pipelines
 oc get pipelineruns
 oc logs -f pipelinerun/<nombre>
 ```
+{% endraw %}
 
 ### Argo CD
 
+{% raw %}
 ```bash
 argocd login <server>
 argocd app list
 argocd app sync mi-app
 ```
+{% endraw %}
 
 ### Jenkins
 
+{% raw %}
 ```bash
 oc new-app jenkins-ephemeral
 oc logs dc/jenkins
 ```
+{% endraw %}
 
 ---
 
 ## 📈 Observabilidad y Monitoreo
 
+{% raw %}
 ```bash
 oc get pods -n openshift-monitoring
 oc logs prometheus-k8s-0 -n openshift-monitoring
 oc get routes -n openshift-monitoring
 ```
+{% endraw %}
 
 * **Prometheus:** métricas de clúster y aplicaciones.
 * **Grafana:** dashboards de visualización.
@@ -515,6 +553,7 @@ oc get routes -n openshift-monitoring
 
 ## 🧱 Infraestructura como Código
 
+{% raw %}
 ```bash
 # Aplicar configuración declarativa
 oc apply -f deployment.yaml
@@ -525,6 +564,7 @@ oc diff -f deployment.yaml
 # Eliminar recurso
 oc delete -f deployment.yaml
 ```
+{% endraw %}
 
 * Integración con GitOps (Argo CD / Flux).
 * Declarar infra con [Terraform](/devops/terraform/), Ansible o Kustomize.
@@ -592,6 +632,7 @@ oc delete -f deployment.yaml
 - OpenShift puede integrarse con **OPA (Open Policy Agent)** y **Gatekeeper** para validar configuraciones mediante políticas declarativas.
 - Ejemplo: evitar despliegues que usen contenedores privilegiados o sin límites de recursos.
 
+{% raw %}
 ```yaml
 apiVersion: constraints.gatekeeper.sh/v1beta1
 kind: K8sPSPPrivilegedContainer
@@ -602,7 +643,8 @@ spec:
     kinds:
       - apiGroups: [""]
         kinds: ["Pod"]
-````
+```
+{% endraw %}`
 
 ---
 
@@ -619,10 +661,12 @@ spec:
 * Integración con eventos (Kafka, CloudEvents, HTTP triggers).
 * Compatible con pipelines CI/CD.
 
+{% raw %}
 ```bash
 oc get ksvc
 oc describe ksvc mi-funcion
 ```
+{% endraw %}
 
 ---
 
@@ -643,11 +687,13 @@ oc describe ksvc mi-funcion
 
 * Base de datos PostgreSQL con operator que gestiona backups, escalado y actualizaciones.
 
+{% raw %}
 ```bash
 oc get operators
 oc get crd | grep postgres
 oc describe csv postgresql-operator.v5.3.0
 ```
+{% endraw %}
 
 ---
 
@@ -662,10 +708,12 @@ oc describe csv postgresql-operator.v5.3.0
   * PCI-DSS
 * Genera reportes automáticos con hallazgos y recomendaciones.
 
+{% raw %}
 ```bash
 oc get compliancescans
 oc describe compliancesuite nist-suite
 ```
+{% endraw %}
 
 ### Auditoría de eventos
 
@@ -689,10 +737,12 @@ oc describe compliancesuite nist-suite
 
 #### Ejemplo de integración
 
+{% raw %}
 ```bash
 oc get apiproducts
 oc describe apiproduct mi-api
 ```
+{% endraw %}
 
 ---
 
@@ -708,19 +758,23 @@ oc describe apiproduct mi-api
 
 #### Comandos clave
 
+{% raw %}
 ```bash
 oc get backupstoragelocations
 oc get backups
 oc get restores
 ```
+{% endraw %}
 
 #### Ejemplo
 
+{% raw %}
 ```bash
 oc create -f backup.yaml
 oc get backup -w
 oc create -f restore.yaml
 ```
+{% endraw %}
 
 ---
 
@@ -732,11 +786,13 @@ oc create -f restore.yaml
 * Implementar **ResourceQuotas** y **LimitRanges** para evitar desperdicio de CPU/RAM.
 * Monitorizar consumo con Prometheus y métricas de proyecto.
 
+{% raw %}
 ```bash
 oc describe resourcequota
 oc adm top pods -n mi-proyecto
 oc adm top nodes
 ```
+{% endraw %}
 
 ### Estrategias
 
@@ -766,10 +822,12 @@ oc adm top nodes
 
 ### Logs de Auditoría Avanzados
 
+{% raw %}
 ```bash
 oc get pods -n openshift-logging
 oc logs elasticsearch-<id> -n openshift-logging
 ```
+{% endraw %}
 
 * Integración con **CloudWatch**, **Stackdriver** o **Azure Monitor** para entornos híbridos.
 
@@ -782,22 +840,26 @@ oc logs elasticsearch-<id> -n openshift-logging
 * Ajustes mediante el **Node Tuning Operator** para cargas sensibles a latencia o rendimiento.
 * Permite definir perfiles de CPU pinning, HugePages o IRQ balancing.
 
+{% raw %}
 ```bash
 oc get tunedprofiles
 oc describe tuned
 ```
+{% endraw %}
 
 ### Scheduler y afinidad
 
 * Uso de **affinity/anti-affinity** y **tolerations** para distribuir pods según tipo de carga o hardware.
 * Ejemplo: separar cargas críticas de pods de desarrollo.
 
+{% raw %}
 ```yaml
 affinity:
   podAntiAffinity:
     requiredDuringSchedulingIgnoredDuringExecution:
       - topologyKey: "kubernetes.io/hostname"
 ```
+{% endraw %}
 
 ---
 

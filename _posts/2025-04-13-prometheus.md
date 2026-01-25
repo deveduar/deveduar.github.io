@@ -89,21 +89,27 @@ PromQL es un lenguaje muy expresivo para consultas de series temporales.
 
 ### Ejemplos
 #### Peticiones por segundo
+{% raw %}
 ```promql
 rate(http_requests_total[1m])
-````
+```
+{% endraw %}`
 
 #### Latencia P95 desde histogram
 
+{% raw %}
 ```promql
 histogram_quantile(0.95, sum(rate(http_request_duration_seconds_bucket[5m])) by (le))
 ```
+{% endraw %}
 
 #### Uso de CPU por job
 
+{% raw %}
 ```promql
 sum by (job) (rate(process_cpu_seconds_total[5m]))
 ```
+{% endraw %}
 
 ## Alertas con Prometheus y Alertmanager
 
@@ -146,6 +152,7 @@ Imagen recomendada:
   * [https://hub.docker.com/r/bitnami/prometheus](https://hub.docker.com/r/bitnami/prometheus)
 ### Ejemplo de `docker-compose.yml`
 
+{% raw %}
 ```yaml
 services:
   prometheus:
@@ -156,6 +163,7 @@ services:
     volumes:
       - ./prometheus.yml:/opt/bitnami/prometheus/conf/prometheus.yml
 ```
+{% endraw %}
 
 # prometheus (avanzado)
 `$= dv.current().file.tags.join(" ")`
@@ -210,24 +218,28 @@ Permite detectar dinámicamente instancias sin configuración estática.
 ## Relabeling Detallado
 ### `relabel_configs`
 Aplicado a targets antes del scrape.
+{% raw %}
 ```yaml
 relabel_configs:
   - source_labels: [__address__]
     regex: "(.+):80"
     replacement: "$1:9100"
     target_label: __address__
-````
+```
+{% endraw %}`
 
 ### `metric_relabel_configs`
 
 Perfecto para reducir cardinalidad tras el scrape.
 
+{% raw %}
 ```yaml
 metric_relabel_configs:
   - source_labels: [pod]
     regex: "test-.*"
     action: drop
 ```
+{% endraw %}
 
 ## Federation
 
@@ -275,6 +287,7 @@ Facilita despliegues complejos con CRDs.
 - Alertmanager configurado dinámicamente.
 ### Ejemplo de ServiceMonitor
 
+{% raw %}
 ```yaml
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
@@ -288,6 +301,7 @@ spec:
     - port: http
       interval: 15s
 ```
+{% endraw %}
 
 ## Alertas Avanzadas
 
@@ -295,6 +309,7 @@ spec:
 
 Permiten precalcular series para mejorar performance.
 
+{% raw %}
 ```yaml
 groups:
 - name: recording
@@ -302,17 +317,20 @@ groups:
   - record: job:http_requests:rate1m
     expr: rate(http_requests_total[1m])
 ```
+{% endraw %}
 
 ### SLOs / SLIs
 
 Alertas basadas en fiabilidad a nivel de servicio.
 
+{% raw %}
 ```promql
 sum(rate(http_request_errors_total[5m]))
 /
 sum(rate(http_requests_total[5m]))
 > 0.01
 ```
+{% endraw %}
 
 ### Alertas multi-etapa
 
@@ -356,9 +374,11 @@ Esta guía reúne **casos de uso reales** y patrones prácticos para aplicar Pro
 	- Usar *Node Exporter* en cada nodo.
 	- Crear recording rules para CPU y discos.
 - **Ejemplo de métrica**
-	```promql
+	{% raw %}
+```promql
 	node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes
 	```
+{% endraw %}
 
 ### Máquinas Virtuales / Bare Metal
 - **Objetivo**
@@ -374,9 +394,11 @@ Esta guía reúne **casos de uso reales** y patrones prácticos para aplicar Pro
 	- Usar *client libraries* (Go, Python, Java, Node.js).
 	- Exponer `/metrics` con histogramas.
 - **Ejemplo**
-	```promql
+	{% raw %}
+```promql
 	histogram_quantile(0.95, sum(rate(http_server_requests_seconds_bucket[5m])) by (le))
 	```
+{% endraw %}
 
 ### Microservicios
 - **Objetivo**
@@ -395,9 +417,11 @@ Esta guía reúne **casos de uso reales** y patrones prácticos para aplicar Pro
 - **Enfoque**
 	- `ServiceMonitor` y `PodMonitor` con el Operator.
 - **Ejemplo de query**
-	```promql
+	{% raw %}
+```promql
 	sum by (namespace) (kube_pod_container_resource_limits_cpu_cores)
 	```
+{% endraw %}
 
 ### Estado del Clúster
 - **Objetivo**
@@ -419,9 +443,11 @@ Esta guía reúne **casos de uso reales** y patrones prácticos para aplicar Pro
 	- postgres_exporter
 	- mysqld_exporter
 - **Ejemplo**
-	```promql
+	{% raw %}
+```promql
 	rate(pg_stat_activity_total[5m])
 	```
+{% endraw %}
 
 ### Redis
 - **Objetivo**
@@ -436,9 +462,11 @@ Esta guía reúne **casos de uso reales** y patrones prácticos para aplicar Pro
 - **Enfoque**
 	- Usar snmp_exporter con targets generados.
 - **Ejemplo**
-	```promql
+	{% raw %}
+```promql
 	rate(if_in_octets[1m])
 	```
+{% endraw %}
 
 ### Proxies y Gateways (Nginx / Traefik)
 - **Objetivo**
@@ -454,9 +482,11 @@ Esta guía reúne **casos de uso reales** y patrones prácticos para aplicar Pro
 - **Enfoque**
 	- Usar *Pushgateway*.
 - **Ejemplo**
-	```promql
+	{% raw %}
+```promql
 	sum by (job) (push_time_seconds)
 	```
+{% endraw %}
 
 ## Observabilidad de Contenedores
 ### Docker
@@ -465,17 +495,21 @@ Esta guía reúne **casos de uso reales** y patrones prácticos para aplicar Pro
 - **Enfoque**
 	- cadvisor en nodos.
 - **Ejemplo**
-	```promql
+	{% raw %}
+```promql
 	rate(container_cpu_usage_seconds_total[1m])
 	```
+{% endraw %}
 
 ### Críticas por Saturación
 - **Objetivo**
 	- Detectar contenedores en throttling.
 - **Ejemplo**
-	```promql
+	{% raw %}
+```promql
 	rate(container_cpu_cfs_throttled_seconds_total[5m])
 	```
+{% endraw %}
 
 ## SLOs y SLIs
 ### Error Budget
@@ -484,9 +518,11 @@ Esta guía reúne **casos de uso reales** y patrones prácticos para aplicar Pro
 - **Enfoque**
 	- recording rules con windows largos (30d).
 - **Ejemplo**
-	```promql
+	{% raw %}
+```promql
 	1 - (sum(rate(http_request_errors_total[30d])) / sum(rate(http_requests_total[30d])))
 	```
+{% endraw %}
 
 ## Capacidad y Rendimiento
 ### Predicción de Crecimiento
@@ -495,27 +531,35 @@ Esta guía reúne **casos de uso reales** y patrones prácticos para aplicar Pro
 - **Enfoque**
 	- `predict_linear()`
 - **Ejemplo**
-	```promql
+	{% raw %}
+```promql
 	predict_linear(node_filesystem_free_bytes[1h], 4*3600)
 	```
+{% endraw %}
 
 ## Alertas Reales Usadas en Producción
 ### CPU Alta
+{% raw %}
 ```promql
 sum by (instance) (rate(process_cpu_seconds_total[5m])) > 0.8
-````
+```
+{% endraw %}`
 
 ### Memoria Faltante
 
+{% raw %}
 ```promql
 node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes < 0.15
 ```
+{% endraw %}
 
 ### Latencia Web Elevada
 
+{% raw %}
 ```promql
 histogram_quantile(0.95, rate(http_request_duration_seconds_bucket[5m])) > 0.5
 ```
+{% endraw %}
 
 ## Integraciones con el Ecosistema
 

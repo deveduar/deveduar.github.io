@@ -108,12 +108,14 @@ El análisis se realiza mediante **SonarScanner**, disponible en varias formas:
 - Integraciones nativas con build tools (Maven, Gradle, npm)
 
 ### Ejecución básica con Docker
+{% raw %}
 ```bash
 docker run -d \
 	--name sonarqube \
 	-p 9000:9000 \
 	sonarqube
-````
+```
+{% endraw %}`
 
 ## Despliegue y arquitectura
 
@@ -343,8 +345,8 @@ jobs:
 				env:
 					SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
 					SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-````
-{% endraw %}
+```
+{% endraw %}`
 
 ## Caso de uso 2: Quality Gate como bloqueo de despliegue
 
@@ -359,11 +361,13 @@ Evita que código con problemas críticos llegue a producción.
 
 ### Evaluación automática en CI
 
+{% raw %}
 ```bash
 sonar-scanner \
 	-Dsonar.projectKey=app-backend \
 	-Dsonar.qualitygate.wait=true
 ```
+{% endraw %}
 
 ## Caso de uso 3: Análisis de Pull Requests
 
@@ -371,12 +375,14 @@ Feedback inmediato para revisores.
 
 ### Configuración PR decoration
 
+{% raw %}
 ```properties
 sonar.pullrequest.key=123
 sonar.pullrequest.branch=feature/login
 sonar.pullrequest.base=main
 sonar.pullrequest.github.repository=org/repo
 ```
+{% endraw %}
 
 Resultados:
 
@@ -390,6 +396,7 @@ Integración nativa con herramientas de build.
 
 ### pom.xml
 
+{% raw %}
 ```xml
 <plugin>
 	<groupId>org.sonarsource.scanner.maven</groupId>
@@ -397,15 +404,18 @@ Integración nativa con herramientas de build.
 	<version>3.10.0.2594</version>
 </plugin>
 ```
+{% endraw %}
 
 ### Ejecución
 
+{% raw %}
 ```bash
 mvn clean verify sonar:sonar \
 	-Dsonar.projectKey=java-app \
 	-Dsonar.host.url=http://localhost:9000 \
 	-Dsonar.login=$SONAR_TOKEN
 ```
+{% endraw %}
 
 ## Caso de uso 5: Proyecto JavaScript / TypeScript
 
@@ -413,6 +423,7 @@ Análisis de frontend con cobertura de tests.
 
 ### sonar-project.properties
 
+{% raw %}
 ```properties
 sonar.projectKey=frontend-app
 sonar.sources=src
@@ -420,12 +431,15 @@ sonar.tests=src
 sonar.test.inclusions=**/*.spec.ts
 sonar.javascript.lcov.reportPaths=coverage/lcov.info
 ```
+{% endraw %}
 
 ### Ejecución
 
+{% raw %}
 ```bash
 sonar-scanner
 ```
+{% endraw %}
 
 ## Caso de uso 6: Análisis de infraestructura como código
 
@@ -433,12 +447,14 @@ Control de seguridad en definiciones de infraestructura.
 
 ### Terraform inseguro
 
+{% raw %}
 ```hcl
 resource "aws_s3_bucket" "public_bucket" {
 	bucket = "example-bucket"
 	acl    = "public-read"
 }
 ```
+{% endraw %}
 
 ### Issue detectado
 
@@ -452,11 +468,13 @@ Detección de malas prácticas en contenedores.
 
 ### Dockerfile analizado
 
+{% raw %}
 ```dockerfile
 FROM ubuntu:latest
 RUN apt-get update && apt-get install -y curl
 USER root
 ```
+{% endraw %}
 
 ### Problemas detectados
 
@@ -470,9 +488,11 @@ Mejora progresiva sin refactorización masiva.
 
 ### New Code Period
 
+{% raw %}
 ```properties
 sonar.newCode.referenceBranch=main
 ```
+{% endraw %}
 
 Resultados:
 
@@ -486,9 +506,11 @@ Revisión manual de código sensible.
 
 ### Ejemplo Java
 
+{% raw %}
 ```java
 MessageDigest md = MessageDigest.getInstance("MD5");
 ```
+{% endraw %}
 
 Detección:
 
@@ -502,10 +524,12 @@ Consulta de métricas desde sistemas externos.
 
 ### Consulta de issues críticos
 
+{% raw %}
 ```bash
 curl -u $SONAR_TOKEN: \
 	"http://localhost:9000/api/issues/search?severities=CRITICAL"
 ```
+{% endraw %}
 
 ## Caso de uso 11: Gobierno de múltiples proyectos
 

@@ -74,6 +74,7 @@ A diferencia de enfoques híbridos basados en WebView, NativeScript accede direc
 
 ## Ejemplo de componente Angular
 ### Componente básico
+{% raw %}
 ```ts
 import { Component } from "@angular/core";
 
@@ -91,7 +92,8 @@ export class HomeComponent {
 		console.log("Botón pulsado");
 	}
 }
-````
+```
+{% endraw %}`
 
 ## Sistema de UI
 
@@ -122,12 +124,14 @@ export class HomeComponent {
 
 ### Acceso a dispositivo
 
+{% raw %}
 ```ts
 import { Device } from "@nativescript/core";
 
 console.log(Device.model);
 console.log(Device.osVersion);
 ```
+{% endraw %}
 
 ## Build y herramientas
 
@@ -332,6 +336,7 @@ console.log(Device.osVersion);
 - Persistencia local para modo offline.
 
 ### Servicio de datos REST
+{% raw %}
 ```ts
 import { Http } from "@nativescript/core";
 
@@ -346,10 +351,12 @@ export class ApiService {
 		});
 	}
 }
-````
+```
+{% endraw %}`
 
 ### Componente con listado
 
+{% raw %}
 ```ts
 import { Component, OnInit } from "@angular/core";
 import { ApiService } from "./api.service";
@@ -376,6 +383,7 @@ export class ClientesComponent implements OnInit {
 	}
 }
 ```
+{% endraw %}
 
 ## Caso de uso: Acceso a hardware del dispositivo
 
@@ -384,6 +392,7 @@ export class ClientesComponent implements OnInit {
 
 ### Información del dispositivo
 
+{% raw %}
 ```ts
 import { Device } from "@nativescript/core";
 
@@ -391,9 +400,11 @@ console.log(Device.model);
 console.log(Device.os);
 console.log(Device.manufacturer);
 ```
+{% endraw %}
 
 ### Uso de geolocalización
 
+{% raw %}
 ```ts
 import { getCurrentLocation } from "@nativescript/geolocation";
 
@@ -405,6 +416,7 @@ getCurrentLocation({
 	console.log(location.latitude, location.longitude);
 });
 ```
+{% endraw %}
 
 ## Caso de uso: Autenticación de usuarios
 
@@ -414,6 +426,7 @@ getCurrentLocation({
 
 ### Servicio de autenticación
 
+{% raw %}
 ```ts
 import { Http, ApplicationSettings } from "@nativescript/core";
 
@@ -434,6 +447,7 @@ export class AuthService {
 	}
 }
 ```
+{% endraw %}
 
 ## Caso de uso: Almacenamiento local y modo offline
 
@@ -442,12 +456,14 @@ export class AuthService {
 
 ### Uso de ApplicationSettings
 
+{% raw %}
 ```ts
 import { ApplicationSettings } from "@nativescript/core";
 
 ApplicationSettings.setString("usuario", "admin");
 const usuario = ApplicationSettings.getString("usuario");
 ```
+{% endraw %}
 
 ### Estrategia offline-first
 
@@ -462,6 +478,7 @@ const usuario = ApplicationSettings.getString("usuario");
 
 ### Navegación simple
 
+{% raw %}
 ```ts
 import { RouterExtensions } from "@nativescript/angular";
 
@@ -471,6 +488,7 @@ irADetalle(id: number) {
 	this.router.navigate(["/detalle", id]);
 }
 ```
+{% endraw %}
 
 ## Caso de uso: Notificaciones locales
 
@@ -479,6 +497,7 @@ irADetalle(id: number) {
 
 ### Notificación local
 
+{% raw %}
 ```ts
 import { LocalNotifications } from "@nativescript/local-notifications";
 
@@ -489,6 +508,7 @@ LocalNotifications.schedule([{
 	at: new Date(new Date().getTime() + 60000)
 }]);
 ```
+{% endraw %}
 
 ## Caso de uso: Diseño adaptable por plataforma
 
@@ -497,6 +517,7 @@ LocalNotifications.schedule([{
 
 ### Detección de plataforma
 
+{% raw %}
 ```ts
 import { isAndroid, isIOS } from "@nativescript/core";
 
@@ -508,6 +529,7 @@ if (isIOS) {
 	console.log("iOS específico");
 }
 ```
+{% endraw %}
 
 ## Caso de uso: Estilos y tematización
 
@@ -516,6 +538,7 @@ if (isIOS) {
 
 ### Estilos básicos
 
+{% raw %}
 ```css
 Button {
 	background-color: #3f51b5;
@@ -523,9 +546,11 @@ Button {
 	border-radius: 4;
 }
 ```
+{% endraw %}
 
 ### Estilos por plataforma
 
+{% raw %}
 ```css
 Button.android {
 	font-size: 14;
@@ -535,6 +560,7 @@ Button.ios {
 	font-size: 16;
 }
 ```
+{% endraw %}
 
 ## Caso de uso: Arquitectura escalable
 
@@ -559,15 +585,19 @@ Button.ios {
 
 ### Build Android
 
+{% raw %}
 ```bash
 ns build android --release
 ```
+{% endraw %}
 
 ### Build iOS
 
+{% raw %}
 ```bash
 ns build ios --release
 ```
+{% endraw %}
 
 ## Caso de uso: Integración con ingeniería de software
 

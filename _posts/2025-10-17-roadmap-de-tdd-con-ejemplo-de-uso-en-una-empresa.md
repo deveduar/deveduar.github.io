@@ -29,6 +29,7 @@ category: Testing
 ## 3. Ciclo TDD (Red-Green-Refactor)
 ### Red
 - Escribir un test **que falle** para la funcionalidad nueva.
+{% raw %}
 ```ts
 // Ejemplo Red: Login fallido (TypeScript + Vitest)
 import { login } from '../services/auth';
@@ -37,13 +38,15 @@ test('should return error for invalid credentials', () => {
   const result = login('wrong@user.com', '1234');
   expect(result.success).toBe(false);
 });
-````
+```
+{% endraw %}`
 
 ### Green
 
 - Implementar **el código mínimo** que haga pasar el test.
     
 
+{% raw %}
 ```ts
 function login(email: string, password: string) {
   if(email === 'user@test.com' && password === '1234') {
@@ -52,12 +55,14 @@ function login(email: string, password: string) {
   return { success: false };
 }
 ```
+{% endraw %}
 
 ### Refactor
 
 - Mejorar la estructura, eliminar duplicación y mantener los tests verdes.
     
 
+{% raw %}
 ```ts
 function login(email: string, password: string) {
   const validUser = { email: 'user@test.com', password: '1234' };
@@ -66,6 +71,7 @@ function login(email: string, password: string) {
     : { success: false };
 }
 ```
+{% endraw %}
 
 ## 4. Integración de Tests
 
@@ -83,12 +89,14 @@ function login(email: string, password: string) {
 - Evitar tests frágiles y lentos usando mocks/stubs.
     
 
+{% raw %}
 ```ts
 // Mock ejemplo con Jest
 import axios from 'axios';
 jest.mock('axios');
 axios.get.mockResolvedValue({ data: { name: 'Empresa ABC' } });
 ```
+{% endraw %}
 
 ## 6. Cobertura y Métricas
 
@@ -106,6 +114,7 @@ axios.get.mockResolvedValue({ data: { name: 'Empresa ABC' } });
 - Escenarios [BDD](/testing/bdd/) sirven como referencia para Product Owners y QA.
     
 
+{% raw %}
 ```gherkin
 Feature: Login de empleado
   Scenario: Acceso válido
@@ -113,6 +122,7 @@ Feature: Login de empleado
     When intenta iniciar sesión
     Then recibe un token JWT y accede al dashboard
 ```
+{% endraw %}
 
 ## 8. Mejora Continua
 

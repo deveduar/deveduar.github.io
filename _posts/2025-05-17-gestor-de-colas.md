@@ -143,6 +143,7 @@ Ideal para:
 ## Ejemplos de Código
 
 ### Publicar Mensaje en RabbitMQ (Node.js)
+{% raw %}
 ```javascript
 const amqp = require("amqplib");
 
@@ -157,10 +158,12 @@ async function publish() {
 	console.log("Mensaje enviado");
 }
 publish();
-````
+```
+{% endraw %}`
 
 ### Consumidor de Cola en Redis Streams (Node.js)
 
+{% raw %}
 ```javascript
 import { createClient } from "redis";
 
@@ -182,6 +185,7 @@ async function consume() {
 }
 consume();
 ```
+{% endraw %}
 
 ---
 

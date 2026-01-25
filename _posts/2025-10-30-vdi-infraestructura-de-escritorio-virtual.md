@@ -150,6 +150,7 @@ Cada protocolo optimiza la compresión, el uso de ancho de banda y la latencia s
 
 ## Ejemplo de Configuración Básica en PowerShell (AVD)
 
+{% raw %}
 ```powershell
 # Crear un host pool en Azure Virtual Desktop
 New-AzWvdHostPool -Name "VDI-Pool" -ResourceGroupName "VDI-Group" `
@@ -162,7 +163,8 @@ New-AzWvdApplicationGroup -Name "VDI-AppGroup" -ResourceGroupName "VDI-Group" `
 # Asignar usuarios
 Add-AzWvdAppGroupUser -ResourceGroupName "VDI-Group" -ApplicationGroupName "VDI-AppGroup" `
   -UserPrincipalName "usuario@empresa.com"
-````
+```
+{% endraw %}`
 
 ---
 

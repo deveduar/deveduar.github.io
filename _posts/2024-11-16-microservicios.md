@@ -118,16 +118,19 @@ category: Backend
 ## Bloques de código ejemplos basicos
 
 ### Ejemplo API mínima en .NET
+{% raw %}
 ```csharp
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
 app.MapGet("/ping", () => "pong");
 app.Run();
-````
+```
+{% endraw %}`
 
 ### Ejemplo controlador básico en Spring Boot
 
+{% raw %}
 ```java
 @RestController
 @RequestMapping("/orders")
@@ -139,9 +142,11 @@ public class OrderController {
 	}
 }
 ```
+{% endraw %}
 
 ### Ejemplo de servicio en FastAPI
 
+{% raw %}
 ```python
 from fastapi import FastAPI
 
@@ -151,6 +156,7 @@ app = FastAPI()
 async def ping():
 	return {"status": "ok"}
 ```
+{% endraw %}
 
 # microservicios – conceptos adicionales 
 

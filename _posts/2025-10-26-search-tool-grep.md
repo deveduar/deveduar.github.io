@@ -112,177 +112,229 @@ BurntSushiripgrep ripgrep recursively searches directories
 
 ## Búsqueda básica
 ### Buscar una palabra en un archivo
+{% raw %}
 ```bash
 grep "error" archivo.log
-````
+```
+{% endraw %}`
 
 ### Buscar ignorando mayúsculas y minúsculas
 
+{% raw %}
 ```bash
 grep -i "error" archivo.log
 ```
+{% endraw %}
 
 ## Búsqueda recursiva
 
 ### Buscar en todos los archivos de un directorio
 
+{% raw %}
 ```bash
 grep -r "TODO" .
 ```
+{% endraw %}
 
 ### Buscar recursivamente mostrando número de línea
 
+{% raw %}
 ```bash
 grep -rn "config" .
 ```
+{% endraw %}
 
 ## Información del resultado
 
 ### Mostrar solo nombres de archivos con coincidencias
 
+{% raw %}
 ```bash
 grep -rl "password" .
 ```
+{% endraw %}
 
 ### Mostrar líneas que NO coinciden
 
+{% raw %}
 ```bash
 grep -v "debug" app.log
 ```
+{% endraw %}
 
 ### Contar coincidencias
 
+{% raw %}
 ```bash
 grep -c "WARN" app.log
 ```
+{% endraw %}
 
 ## Expresiones regulares
 
 ### Regex extendidas
 
+{% raw %}
 ```bash
 grep -E "error|fail|fatal" system.log
 ```
+{% endraw %}
 
 ### Coincidencia al inicio de línea
 
+{% raw %}
 ```bash
 grep "^ERROR" system.log
 ```
+{% endraw %}
 
 ### Coincidencia al final de línea
 
+{% raw %}
 ```bash
 grep "completed$" system.log
 ```
+{% endraw %}
 
 ### Coincidencia de palabras completas
 
+{% raw %}
 ```bash
 grep -w "root" /etc/passwd
 ```
+{% endraw %}
 
 ## Contexto de líneas
 
 ### Mostrar líneas antes y después
 
+{% raw %}
 ```bash
 grep -C 3 "exception" app.log
 ```
+{% endraw %}
 
 ### Mostrar solo líneas anteriores
 
+{% raw %}
 ```bash
 grep -B 2 "timeout" app.log
 ```
+{% endraw %}
 
 ### Mostrar solo líneas posteriores
 
+{% raw %}
 ```bash
 grep -A 4 "startup" app.log
 ```
+{% endraw %}
 
 ## Archivos y formatos
 
 ### Buscar solo en archivos con extensión específica
 
+{% raw %}
 ```bash
 grep -r "SELECT" --include="*.sql" .
 ```
+{% endraw %}
 
 ### Excluir extensiones
 
+{% raw %}
 ```bash
 grep -r "token" --exclude="*.min.js" .
 ```
+{% endraw %}
 
 ### Excluir directorios
 
+{% raw %}
 ```bash
 grep -r "secret" --exclude-dir=node_modules .
 ```
+{% endraw %}
 
 ## Uso con pipes
 
 ### Filtrar salida de otro comando
 
+{% raw %}
 ```bash
 ps aux | grep "python"
 ```
+{% endraw %}
 
 ### Excluir el propio proceso grep
 
+{% raw %}
 ```bash
 ps aux | grep "nginx" | grep -v grep
 ```
+{% endraw %}
 
 ## Logs y sistemas
 
 ### Buscar múltiples patrones desde un archivo
 
+{% raw %}
 ```bash
 grep -f patrones.txt app.log
 ```
+{% endraw %}
 
 ### Seguimiento de logs (combinado con tail)
 
+{% raw %}
 ```bash
 tail -f app.log | grep "ERROR"
 ```
+{% endraw %}
 
 ## Rendimiento
 
 ### Limitar número de coincidencias
 
+{% raw %}
 ```bash
 grep -m 5 "failure" system.log
 ```
+{% endraw %}
 
 ### Forzar tratamiento de binarios como texto
 
+{% raw %}
 ```bash
 grep -a "version" archivo.bin
 ```
+{% endraw %}
 
 ## Integración con [Sistemas](/uncategorized/sistemas/)
 
 ### Auditar configuraciones sensibles
 
+{% raw %}
 ```bash
 grep -r "password" /etc
 ```
+{% endraw %}
 
 ### Buscar referencias cruzadas en notas
 
+{% raw %}
 ```bash
 grep -r "\[\[.*Sistemas.*\]\]" .
 ```
+{% endraw %}
 
 ## Alternativas modernas
 
 ### Equivalente rápido usando ripgrep
 
+{% raw %}
 ```bash
 rg "error"
 ```
+{% endraw %}
 

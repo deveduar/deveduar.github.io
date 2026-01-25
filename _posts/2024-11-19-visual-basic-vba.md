@@ -68,24 +68,29 @@ category: Software engineering
 
 ## Funciones y procedimientos
 - **Subrutinas (`Sub`)**: Ejecutan tareas pero no devuelven valor.
-	```vba
+	{% raw %}
+```vba
 	Sub Saludar()
 		MsgBox "Hola Mundo"
 	End Sub
 	```
+{% endraw %}
 - **Funciones (`Function`)**: Ejecutan tareas y devuelven un valor.
-	```vba
+	{% raw %}
+```vba
 	Function Sumar(a As Integer, b As Integer) As Integer
 		Sumar = a + b
 	End Function
 	```
+{% endraw %}
 - **Parámetros opcionales y por referencia**:
 	- `Optional parametro As Tipo = valorPorDefecto`
 	- `ByRef` y `ByVal` controlan si la variable se pasa por referencia o valor.
 
 ## Integración con Excel
 - **Manipulación de celdas y rangos**:
-	```vba
+	{% raw %}
+```vba
 	Sub EjemploRango()
 		Dim ws As Worksheet
 		Set ws = ThisWorkbook.Sheets("Hoja1")
@@ -93,11 +98,14 @@ category: Software engineering
 		ws.Range("B1:B10").ClearContents
 	End Sub
 	```
+{% endraw %}
 - **Formateo de celdas**:
-	```vba
+	{% raw %}
+```vba
 	ws.Range("A1").Font.Bold = True
 	ws.Range("A1").Interior.Color = RGB(255, 255, 0)
 	```
+{% endraw %}
 - **Automatización de gráficos y tablas dinámicas**.
 - **Conexión con bases de datos** (ADO, DAO) para importar/exportar datos.
 
@@ -125,7 +133,8 @@ category: Software engineering
 - **Modularización**: Dividir macros en subrutinas y funciones pequeñas y reutilizables.
 - **Singleton VBA**: Usar un módulo con variables públicas para compartir información entre macros.
 - **Gestión de errores centralizada**: Crear procedimientos de manejo de errores genéricos reutilizables.
-	```vba
+	{% raw %}
+```vba
 	Sub ManejarError()
 		On Error GoTo ErrorHandler
 		' Código principal
@@ -134,6 +143,7 @@ category: Software engineering
 		MsgBox "Error: " & Err.Description
 	End Sub
 	```
+{% endraw %}
 - **Automatización basada en eventos**:
 	- `Workbook_Open` → Ejecuta tareas al abrir el archivo.
 	- `Worksheet_Change` → Detecta cambios en celdas específicas.
@@ -141,7 +151,8 @@ category: Software engineering
 
 ## Integración con otras aplicaciones y tecnologías
 - **Outlook**: Enviar emails desde Excel.
-	```vba
+	{% raw %}
+```vba
 	Sub EnviarCorreo()
 		Dim OutlookApp As Object
 		Dim MailItem As Object
@@ -155,15 +166,18 @@ category: Software engineering
 		End With
 	End Sub
 	```
+{% endraw %}
 - **Word**: Crear documentos o plantillas desde Excel.
 - **Access y SQL**: Ejecutar consultas SQL desde VBA usando ADO/DAO.
-	```vba
+	{% raw %}
+```vba
 	Dim conn As Object
 	Dim rs As Object
 	Set conn = CreateObject("ADODB.Connection")
 	conn.Open "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\DB.accdb"
 	Set rs = conn.Execute("SELECT * FROM Clientes")
 	```
+{% endraw %}
 - **APIs externas y JSON**: Conectar VBA a servicios web mediante `MSXML2.XMLHTTP`.
 
 ## Formularios y controles personalizados
@@ -183,7 +197,8 @@ category: Software engineering
 
 ## Automatización de Excel avanzada
 - **Tablas dinámicas**:
-	```vba
+	{% raw %}
+```vba
 	Sub CrearTablaDinamica()
 		Dim pt As PivotTable
 		Set pt = Sheets("Hoja1").PivotTables.Add(PivotCache:=ThisWorkbook.PivotCaches.Create( _
@@ -191,22 +206,26 @@ category: Software engineering
 			TableDestination:=Sheets("Hoja1").Range("E3"))
 	End Sub
 	```
+{% endraw %}
 - **Gráficos dinámicos**: Crear y actualizar gráficos mediante VBA.
 - **Protección y auditoría**: Bloquear hojas y realizar seguimiento de cambios automáticamente.
 
 ## Conceptos avanzados de objetos y colecciones
 - **Colecciones**:
 	- Guardan conjuntos de objetos de forma dinámica.
-	```vba
+	{% raw %}
+```vba
 	Dim Clientes As Collection
 	Set Clientes = New Collection
 	Clientes.Add "Juan"
 	Clientes.Add "Ana"
 	```
+{% endraw %}
 - **Diccionarios** (`Scripting.Dictionary`):
 	- Clave-valor, ideal para búsquedas rápidas.
 - **Clases personalizadas**: Definir objetos propios con propiedades y métodos.
-	```vba
+	{% raw %}
+```vba
 	Class Cliente
 		Public Nombre As String
 		Public Edad As Integer
@@ -215,6 +234,7 @@ category: Software engineering
 		End Sub
 	End Class
 	```
+{% endraw %}
 
 ## Seguridad y despliegue
 - Protección de proyectos VBA con contraseña.
@@ -228,7 +248,8 @@ category: Software engineering
 ### 1. Generación de reportes automáticos en Excel
 - Escenario: Un departamento de ventas necesita consolidar datos diarios de múltiples hojas y generar un reporte mensual.
 - Ejemplo VBA:
-	```vba
+	{% raw %}
+```vba
 	Sub ConsolidarVentas()
 		Dim wsReporte As Worksheet, wsDatos As Worksheet
 		Dim ultimaFila As Long, i As Long, filaReporte As Long
@@ -246,11 +267,13 @@ category: Software engineering
 		Next wsDatos
 	End Sub
 	```
+{% endraw %}
 
 ### 2. Envío automático de correos con Outlook
 - Escenario: Enviar alertas a clientes o empleados cuando se actualizan ciertos datos.
 - Ejemplo VBA:
-	```vba
+	{% raw %}
+```vba
 	Sub EnviarAlertas()
 		Dim OutlookApp As Object, Mail As Object
 		Dim ws As Worksheet, ultimaFila As Long, i As Long
@@ -270,11 +293,13 @@ category: Software engineering
 		Next i
 	End Sub
 	```
+{% endraw %}
 
 ### 3. Integración con Access para análisis de datos
 - Escenario: Extraer información de una base de datos de clientes para análisis y reporting.
 - Ejemplo VBA:
-	```vba
+	{% raw %}
+```vba
 	Sub ImportarClientesAccess()
 		Dim conn As Object, rs As Object, ws As Worksheet, fila As Long
 		Set conn = CreateObject("ADODB.Connection")
@@ -293,11 +318,13 @@ category: Software engineering
 		conn.Close
 	End Sub
 	```
+{% endraw %}
 
 ### 4. Consumo de APIs externas
 - Escenario: Obtener cotizaciones de monedas o datos financieros desde un servicio web.
 - Ejemplo VBA:
-	```vba
+	{% raw %}
+```vba
 	Sub ObtenerCotizacionDolar()
 		Dim http As Object, JSON As Object, ws As Worksheet
 		Set http = CreateObject("MSXML2.XMLHTTP")
@@ -309,6 +336,7 @@ category: Software engineering
 		ws.Range("B1").Value = JSON("rates")("EUR")
 	End Sub
 	```
+{% endraw %}
 
 ### 5. Automatización de tareas combinadas
 - Escenario: Al actualizar un archivo de ventas:
@@ -316,13 +344,15 @@ category: Software engineering
 	2. Actualizar base de datos en Access.
 	3. Enviar un resumen por correo.
 - Patrón VBA:
-	```vba
+	{% raw %}
+```vba
 	Sub AutomatizacionCompleta()
 		Call ConsolidarVentas
 		Call ActualizarBaseAccess
 		Call EnviarAlertas
 	End Sub
 	```
+{% endraw %}
 
 ## Buenas prácticas en escenarios empresariales
 - Validar datos antes de enviar correos o actualizar bases.
@@ -333,12 +363,14 @@ category: Software engineering
 
 ## Optimización de rendimiento
 - Desactivar actualizaciones de pantalla y eventos durante ejecución:
-	```vba
+	{% raw %}
+```vba
 	Application.ScreenUpdating = False
 	Application.EnableEvents = False
 	' Código pesado
 	Application.ScreenUpdating = True
 	Application.EnableEvents = True
 	```
+{% endraw %}
 - Uso de arrays para manipular grandes volúmenes de datos.
 - Minimizar iteraciones en hojas grandes con `Find` y filtros avanzados.

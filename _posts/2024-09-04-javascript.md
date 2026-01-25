@@ -165,16 +165,22 @@ category: Desarrollo web
 - [3D Portfolio Website Three.js](https://www.youtube.com/watch?v=Q7AOvWpIVHU)
 - [Three.js Creating a scene](https://threejs.org/docs/index.html#manual/en/introduction/Creating-a-scene)
 - **Comandos básicos**
+{% raw %}
 ```bash
 npm run dev
 ```
+{% endraw %}
+{% raw %}
 ```bash
 npm init @vitejs/app
 ```
+{% endraw %}
 - Plantilla recomendada: *vanilla js*
+{% raw %}
 ```bash
 npm install three
 ```
+{% endraw %}
 
 ---
 
@@ -210,13 +216,15 @@ Su flujo principal combina:
 **Prioridad:** las *microtareas* siempre se ejecutan antes de procesar nuevas *tareas*.  
 Esto explica por qué `Promise.resolve().then()` se ejecuta antes que un `setTimeout(...)`.
 
+{% raw %}
 ```js
 console.log("1");
 setTimeout(() => console.log("2"), 0);
 Promise.resolve().then(() => console.log("3"));
 console.log("4");
 // Salida: 1, 4, 3, 2
-````
+```
+{% endraw %}`
 
 ---
 
@@ -256,17 +264,20 @@ Los Patterns JS ayudan a mantener un código escalable y expresivo.
 
 Crea objetos sin especificar la clase exacta:
 
+{% raw %}
 ```js
 function createUser(type) {
 	if (type === "admin") return { role: "admin", permissions: ["*"] };
 	return { role: "user", permissions: ["read"] };
 }
 ```
+{% endraw %}
 
 ### Module Pattern
 
 Encapsula lógica privada usando closures:
 
+{% raw %}
 ```js
 const Counter = (() => {
 	let count = 0;
@@ -277,11 +288,13 @@ const Counter = (() => {
 	};
 })();
 ```
+{% endraw %}
 
 ### Observer Pattern
 
 Permite la suscripción a cambios:
 
+{% raw %}
 ```js
 class Observable {
 	constructor() { this.subs = []; }
@@ -289,11 +302,13 @@ class Observable {
 	notify(data) { this.subs.forEach(fn => fn(data)); }
 }
 ```
+{% endraw %}
 
 ### Decorator Pattern
 
 Agrega funcionalidad sin modificar la estructura original:
 
+{% raw %}
 ```js
 function withLogging(fn) {
 	return (...args) => {
@@ -302,6 +317,7 @@ function withLogging(fn) {
 	};
 }
 ```
+{% endraw %}
 
 ---
 
@@ -312,6 +328,7 @@ function withLogging(fn) {
 `async/await` se construye sobre promesas y *microtasks*.
 Internamente, `await` pausa la función hasta que la promesa se resuelve, permitiendo escribir código secuencial sin bloquear el hilo principal.
 
+{% raw %}
 ```js
 async function fetchData() {
 	const res = await fetch("/api");
@@ -319,11 +336,13 @@ async function fetchData() {
 	return json;
 }
 ```
+{% endraw %}
 
 ### Generadores Asíncronos
 
 Los generadores `async function*` permiten flujos de datos asíncronos iterables (por ejemplo, streaming o paginación):
 
+{% raw %}
 ```js
 async function* fetchPaginated(urls) {
 	for (const url of urls) {
@@ -332,6 +351,7 @@ async function* fetchPaginated(urls) {
 	}
 }
 ```
+{% endraw %}
 
 ---
 
@@ -343,6 +363,7 @@ JavaScript permite modificar su propio comportamiento a través de Proxy y Refle
 
 Permite interceptar operaciones sobre objetos:
 
+{% raw %}
 ```js
 const person = { name: "Ada", age: 30 };
 const proxy = new Proxy(person, {
@@ -353,15 +374,18 @@ const proxy = new Proxy(person, {
 });
 proxy.name; // Accessed name
 ```
+{% endraw %}
 
 ### Reflect
 
 API que ofrece acceso controlado a las operaciones del lenguaje (análoga a meta-operadores en otros lenguajes):
 
+{% raw %}
 ```js
 Reflect.set(person, "age", 31);
 console.log(Reflect.get(person, "age"));
 ```
+{% endraw %}
 
 ---
 
@@ -377,11 +401,13 @@ Herramientas como **Jest**, **Vitest** o **Mocha** facilitan testing de:
 
 Ejemplo:
 
+{% raw %}
 ```js
 test("suma básica", () => {
 	expect(1 + 2).toBe(3);
 });
 ```
+{% endraw %}
 
 ### Clean Code JS
 
@@ -401,10 +427,12 @@ Buenas prácticas recomendadas:
 
 Evita inyecciones en DOM:
 
+{% raw %}
 ```js
 element.innerHTML = userInput; // ❌ peligroso
 element.textContent = userInput; // ✅ seguro
 ```
+{% endraw %}
 
 ### CSRF y Autenticación
 
@@ -470,12 +498,14 @@ Componentes principales:
 	- `nextTick()` → antes del siguiente ciclo del loop (microtask).
 	- `setImmediate()` → en la fase de *check* del loop (macrotask).
 
+{% raw %}
 ```js
 setImmediate(() => console.log("Immediate"));
 process.nextTick(() => console.log("Next tick"));
 console.log("Start");
 // Salida: Start → Next tick → Immediate
-````
+```
+{% endraw %}`
 
 ---
 
@@ -511,6 +541,7 @@ El JavaScript moderno se ejecuta cada vez más en el *edge*:
 
 Ejemplo básico en Cloudflare Worker:
 
+{% raw %}
 ```js
 export default {
 	async fetch(request) {
@@ -518,6 +549,7 @@ export default {
 	}
 };
 ```
+{% endraw %}
 
 ### Microservicios con JavaScript
 
@@ -545,10 +577,12 @@ Reactive Programming trata los valores como *flujos de datos* que pueden ser obs
 * Operadores (`map`, `filter`, `mergeMap`, `switchMap`).
 * Ideal para UI reactivas, sockets y streams en tiempo real.
 
+{% raw %}
 ```js
 import { fromEvent } from "rxjs";
 fromEvent(document, "click").subscribe(() => console.log("Click detectado"));
 ```
+{% endraw %}
 
 ### Functional Reactive Systems
 
@@ -568,11 +602,13 @@ Combinan programación funcional + reactiva:
 
 Ejemplo de currificación:
 
+{% raw %}
 ```js
 const add = a => b => a + b;
 const inc = add(1);
 console.log(inc(5)); // 6
 ```
+{% endraw %}
 
 ---
 
@@ -596,12 +632,14 @@ El comité TC39 desarrolla nuevas propuestas de ECMAScript en 5 etapas:
 
 Ejemplo de *Pattern Matching* propuesto:
 
+{% raw %}
 ```js
 match (user.role) {
 	when ("admin") { console.log("Permisos totales") }
 	when ("guest") { console.log("Acceso limitado") }
 }
 ```
+{% endraw %}
 
 ---
 
@@ -611,6 +649,7 @@ match (user.role) {
 
 Permiten referencias *débiles* a objetos sin evitar su recolección:
 
+{% raw %}
 ```js
 const cache = new WeakMap();
 function memo(fn) {
@@ -622,11 +661,13 @@ function memo(fn) {
 	};
 }
 ```
+{% endraw %}
 
 ### Iteradores Personalizados
 
 Los objetos pueden definir su propio protocolo de iteración:
 
+{% raw %}
 ```js
 const contador = {
 	current: 0,
@@ -642,6 +683,7 @@ const contador = {
 };
 for (const n of contador) console.log(n);
 ```
+{% endraw %}
 
 ---
 
@@ -650,10 +692,12 @@ for (const n of contador) console.log(n);
 WebAssembly permite ejecutar código compilado (C, Rust, Go) dentro del navegador a velocidad casi nativa.
 JS puede interoperar con módulos WASM para tareas intensivas:
 
+{% raw %}
 ```js
 const wasmModule = await WebAssembly.instantiateStreaming(fetch("math.wasm"));
 wasmModule.instance.exports.add(2, 3);
 ```
+{% endraw %}
 
 Usos comunes:
 
@@ -675,6 +719,7 @@ Usos comunes:
 
 Ejemplo básico:
 
+{% raw %}
 ```js
 // worker.js
 onmessage = e => postMessage(e.data * 2);
@@ -684,6 +729,7 @@ const worker = new Worker("worker.js");
 worker.onmessage = e => console.log("Resultado:", e.data);
 worker.postMessage(10);
 ```
+{% endraw %}
 
 ---
 
@@ -726,10 +772,12 @@ Temas avanzados:
 
 Ejemplo:
 
+{% raw %}
 ```ts
 type Awaited<T> = T extends Promise<infer U> ? U : T;
 type Result = Awaited<Promise<number>>; // number
 ```
+{% endraw %}
 
 ---
 

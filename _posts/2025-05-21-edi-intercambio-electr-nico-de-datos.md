@@ -213,6 +213,7 @@ category: Gestion de Negocio
 
 ## Ejemplo de mensaje EDI X12 850
 ### Archivo: `purchase_order.edi`
+{% raw %}
 ```edi
 ISA*00*          *00*          *ZZ*BUYERID       *ZZ*SUPPLIERID    *250101*1200*U*00401*000000001*0*P*>~
 GS*PO*BUYER*SUPPLIER*20250101*1200*1*X*004010~
@@ -225,12 +226,14 @@ CTT*1~
 SE*8*0001~
 GE*1*1~
 IEA*1*000000001~
-````
+```
+{% endraw %}`
 
 ## Implementación del parser EDI en Python
 
 ### Script: `parse_edi.py`
 
+{% raw %}
 ```python
 from x12_edi_tools import X12Reader
 import json
@@ -265,11 +268,13 @@ with open(output_file, "w") as json_file:
 
 print("EDI procesado y convertido a JSON")
 ```
+{% endraw %}
 
 ## Resultado transformado a JSON
 
 ### Archivo: `purchase_order.json`
 
+{% raw %}
 ```json
 [
 	{
@@ -286,6 +291,7 @@ print("EDI procesado y convertido a JSON")
 	}
 ]
 ```
+{% endraw %}
 
 ## Integración con ERP
 
@@ -377,6 +383,7 @@ print("EDI procesado y convertido a JSON")
 
 ## Ejemplo de transformación EDI → JSON en MuleSoft
 ### DataWeave (transformación)
+{% raw %}
 ```dw
 %dw 2.0
 output application/json
@@ -392,12 +399,14 @@ output application/json
 		sku: $.PO107
 	}
 }
-````
+```
+{% endraw %}`
 
 ## Ejemplo de regla avanzada (validación)
 
 ### Regla de negocio
 
+{% raw %}
 ```yaml
 rule: quantity_threshold
 condition: item.quantity > 1000
@@ -405,11 +414,13 @@ action:
 	type: flag
 	reason: "Cantidad fuera de patrón histórico"
 ```
+{% endraw %}
 
 ## Respuesta EDI automática
 
 ### X12 997 (fragmento)
 
+{% raw %}
 ```edi
 ST*997*0001~
 AK1*PO*1~
@@ -418,6 +429,7 @@ AK5*A~
 AK9*A*1*1*1~
 SE*6*0001~
 ```
+{% endraw %}
 
 ## Beneficios del enfoque avanzado
 

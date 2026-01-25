@@ -147,6 +147,7 @@ Un juego se puede representar mediante una **matriz de pagos**, donde las filas 
 
 ### Ejemplo en Python
 
+{% raw %}
 ```python
 # Matriz de pagos del Dilema del Prisionero
 # Cada tupla es (pago_jugador_A, pago_jugador_B)
@@ -162,7 +163,8 @@ def resultado(jugador_A, jugador_B):
 	return payoffs[(jugador_A, jugador_B)]
 
 print(resultado('Cooperar', 'Traicionar'))  # (0, 5)
-````
+```
+{% endraw %}`
 
 Este tipo de representación es la base para modelar y simular estrategias iterativas o probabilísticas.
 
@@ -174,6 +176,7 @@ Un **equilibrio de Nash** puede encontrarse comparando las mejores respuestas de
 
 ### Ejemplo usando `nashpy`
 
+{% raw %}
 ```python
 import nashpy as nash
 import numpy as np
@@ -194,6 +197,7 @@ equilibrios = list(juego.support_enumeration())
 for eq in equilibrios:
 	print("Estrategias mixtas (A, B):", eq)
 ```
+{% endraw %}
 
 Este código utiliza la librería `nashpy` para buscar estrategias mixtas (probabilidades sobre acciones) que constituyen un equilibrio.
 
@@ -205,6 +209,7 @@ En juegos repetidos, los jugadores ajustan su comportamiento según los resultad
 
 ### Estrategia Tit-for-Tat (Ojo por ojo)
 
+{% raw %}
 ```python
 def tit_for_tat(historial_oponente):
 	if not historial_oponente:
@@ -215,6 +220,7 @@ def tit_for_tat(historial_oponente):
 historial_B = ['Cooperar', 'Traicionar', 'Traicionar']
 print(tit_for_tat(historial_B))  # Traicionar
 ```
+{% endraw %}
 
 **Tit-for-Tat** coopera al inicio y luego imita la jugada del oponente, fomentando la reciprocidad. Es una estrategia que suele estabilizar el equilibrio cooperativo en juegos iterados.
 
@@ -226,6 +232,7 @@ En escenarios complejos, como mercados financieros o entornos de videojuegos, el
 
 ### Simulación de agentes adaptativos
 
+{% raw %}
 ```python
 import random
 
@@ -244,6 +251,7 @@ for ronda in range(5):
 	pagos = juego(A, B)
 	print(f"Ronda {ronda+1}: A={A}, B={B}, pagos={pagos}")
 ```
+{% endraw %}
 
 Esto permite estudiar **tendencias de comportamiento**, **equilibrios emergentes** y **estabilidad evolutiva** dentro de un sistema dinámico.
 
@@ -255,6 +263,7 @@ Para analizar la **eficiencia de Pareto**, se puede representar la frontera de s
 
 ### Visualización en Python
 
+{% raw %}
 ```python
 import matplotlib.pyplot as plt
 
@@ -274,6 +283,7 @@ plt.ylabel("Utilidad Jugador B")
 plt.legend()
 plt.show()
 ```
+{% endraw %}
 
 El gráfico muestra las combinaciones posibles de resultados y la **frontera de Pareto**, donde ambos obtienen resultados óptimos según sus intereses.
 
@@ -322,13 +332,15 @@ Las empresas en un mercado actúan como jugadores en un juego no cooperativo, aj
 - Los modelos de **subastas de Vickrey**, **inglesas** o **holandesas** se estudian como juegos con información incompleta.
 - Permiten diseñar **sistemas de asignación eficientes**, como los usados por Google Ads o eBay.
 
+{% raw %}
 ```python
 # Ejemplo simplificado de subasta de segundo precio (Vickrey)
 ofertas = {'A': 50, 'B': 65, 'C': 60}
 ganador = max(ofertas, key=ofertas.get)
 precio = sorted(ofertas.values())[-2]  # Segundo precio más alto
 print(f"Ganador: {ganador}, paga: {precio}")
-````
+```
+{% endraw %}`
 
 ---
 
@@ -337,6 +349,7 @@ print(f"Ganador: {ganador}, paga: {precio}")
 * **Modelos de disuasión nuclear**, **negociación diplomática** o **acuerdos comerciales** se analizan como juegos estratégicos donde los países eligen entre cooperar o confrontar.
 * Ejemplo: el **dilema del prisionero iterado** describe las dinámicas de confianza y traición entre estados.
 
+{% raw %}
 ```python
 # Ejemplo: simulación de estrategias diplomáticas
 import random
@@ -358,6 +371,7 @@ for i in range(5):
 	B = random.choice(estrategias)
 	print(f"Ronda {i+1}: A={A}, B={B}, pago={ronda(A,B)}")
 ```
+{% endraw %}
 
 ---
 
@@ -370,6 +384,7 @@ for i in range(5):
 
 Ejemplo: algoritmos como **Q-Learning** o **Deep Q-Networks** incorporan principios de teoría de juegos en entornos donde múltiples agentes aprenden simultáneamente.
 
+{% raw %}
 ```python
 # Ejemplo básico de agente con política epsilon-greedy
 import random
@@ -383,6 +398,7 @@ def elegir_accion():
 		return random.choice(acciones)
 	return max(Q, key=Q.get)
 ```
+{% endraw %}
 
 ### Generative Adversarial Networks (GANs)
 
@@ -398,6 +414,7 @@ def elegir_accion():
 
 Ejemplo: elección estratégica de nodos críticos para proteger en una red.
 
+{% raw %}
 ```python
 # Juego de seguridad simplificado
 import random
@@ -408,6 +425,7 @@ atacante = random.choice(nodos)
 print(f"Defensor protege {defensor}, atacante ataca {atacante}")
 print("Ataque exitoso:", defensor != atacante)
 ```
+{% endraw %}
 
 ---
 
@@ -428,6 +446,7 @@ print("Ataque exitoso:", defensor != atacante)
 
 Ejemplo: mecanismo de consenso inspirado en la teoría de juegos (similar a Proof-of-Stake).
 
+{% raw %}
 ```python
 # Ejemplo: selección probabilística de validador
 import random
@@ -436,6 +455,7 @@ nodos = {'A': 100, 'B': 200, 'C': 700}  # Poder de participación
 validador = random.choices(list(nodos.keys()), weights=nodos.values())[0]
 print(f"Validador elegido: {validador}")
 ```
+{% endraw %}
 
 ### Diseño de APIs Competitivas
 
@@ -458,6 +478,7 @@ print(f"Validador elegido: {validador}")
 * El **metajuego** define qué estrategias dominan en un entorno dado.
 * Los diseñadores usan modelos de equilibrio para **balancear personajes o armas**, evitando ventajas sistemáticas.
 
+{% raw %}
 ```python
 # Ejemplo: ajuste de balance basado en tasa de victoria
 personajes = {'Mago': 0.55, 'Guerrero': 0.48, 'Arquero': 0.60}
@@ -467,6 +488,7 @@ for p, winrate in personajes.items():
 	elif winrate < 0.45:
 		print(f"Aumentar poder de {p}")
 ```
+{% endraw %}
 
 ---
 

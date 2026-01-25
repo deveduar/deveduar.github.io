@@ -40,35 +40,43 @@ Linux soporta varios shells, los más comunes son:
 ### Estructura básica de un script
 Un script de shell tiene:
 - **Shebang**: Línea inicial que indica qué shell ejecutar.
+{% raw %}
 ```bash
 #!/bin/bash
-````
+```
+{% endraw %}`
 
 * **Comentarios**: Líneas que comienzan con `#`.
 * **Comandos y lógica**: Comandos Linux, condicionales, bucles y funciones.
 
 Ejemplo mínimo:
 
+{% raw %}
 ```bash
 #!/bin/bash
 # Este script imprime un mensaje
 echo "Hola, mundo"
 ```
+{% endraw %}
 
 ## Variables y Tipos de Datos
 
 * Variables simples:
 
+{% raw %}
 ```bash
 nombre="Eduardo"
 echo $nombre
 ```
+{% endraw %}
 
 * Variables de entorno:
 
+{% raw %}
 ```bash
 export PATH=$PATH:/mi/ruta
 ```
+{% endraw %}
 
 * Variables especiales:
 
@@ -85,16 +93,19 @@ export PATH=$PATH:/mi/ruta
 * **Condicionales**: `&&`, `||`
 * **Cadenas**:
 
+{% raw %}
 ```bash
 if [ "$var1" = "$var2" ]; then
 	echo "Iguales"
 fi
 ```
+{% endraw %}
 
 ## Estructuras de Control
 
 ### Condicionales
 
+{% raw %}
 ```bash
 if [ condición ]; then
 	comandos
@@ -104,61 +115,74 @@ else
 	comandos
 fi
 ```
+{% endraw %}
 
 ### Bucles
 
 * **for**:
 
+{% raw %}
 ```bash
 for i in 1 2 3; do
 	echo $i
 done
 ```
+{% endraw %}
 
 * **while**:
 
+{% raw %}
 ```bash
 while [ condición ]; do
 	comandos
 done
 ```
+{% endraw %}
 
 * **until**:
 
+{% raw %}
 ```bash
 until [ condición ]; do
 	comandos
 done
 ```
+{% endraw %}
 
 ## Funciones
 
 Definir y llamar funciones:
 
+{% raw %}
 ```bash
 mi_funcion() {
 	echo "Esto es una función"
 }
 mi_funcion
 ```
+{% endraw %}
 
 ## Manejo de Archivos y Directorios
 
 * Crear, mover y eliminar:
 
+{% raw %}
 ```bash
 mkdir directorio
 mv archivo1 archivo2
 rm archivo
 ```
+{% endraw %}
 
 * Leer archivos:
 
+{% raw %}
 ```bash
 while read linea; do
 	echo $linea
 done < archivo.txt
 ```
+{% endraw %}
 
 * Redirecciones:
 
@@ -171,48 +195,60 @@ done < archivo.txt
 
 * **Lectura de usuario**:
 
+{% raw %}
 ```bash
 read -p "Ingrese su nombre: " nombre
 echo "Hola $nombre"
 ```
+{% endraw %}
 
 * **Redirecciones y pipes**:
 
+{% raw %}
 ```bash
 ls -l > listado.txt
 cat listado.txt | grep "doc"
 ```
+{% endraw %}
 
 ## Expresiones Regulares y Grep
 
 * Buscar patrones en archivos:
 
+{% raw %}
 ```bash
 grep "patrón" archivo.txt
 grep -i "patrón" archivo.txt  # Ignora mayúsculas/minúsculas
 ```
+{% endraw %}
 
 * Uso con sed y awk para manipulación avanzada:
 
+{% raw %}
 ```bash
 sed 's/viejo/nuevo/g' archivo.txt
 awk '{print $1, $3}' archivo.txt
 ```
+{% endraw %}
 
 ## Depuración de Scripts
 
 * Comprobar errores:
 
+{% raw %}
 ```bash
 bash -n script.sh  # Sintaxis
 bash -x script.sh  # Ejecución paso a paso
 ```
+{% endraw %}
 
 * Manejo de errores:
 
+{% raw %}
 ```bash
 comando || echo "Falló el comando"
 ```
+{% endraw %}
 
 ## Buenas Prácticas
 
@@ -224,6 +260,7 @@ comando || echo "Falló el comando"
 
 ## Argumentos Avanzados y Opciones de Scripts
 - Parseo de opciones con `getopts`:
+{% raw %}
 ```bash
 #!/bin/bash
 while getopts "f:v" opt; do
@@ -234,106 +271,129 @@ while getopts "f:v" opt; do
 	esac
 done
 echo "Archivo: $archivo, Verbose: $verbose"
-````
+```
+{% endraw %}`
 
 - Parámetros posicionales y valores por defecto:
     
 
+{% raw %}
 ```bash
 nombre=${1:-"Usuario"}
 echo "Hola $nombre"
 ```
+{% endraw %}
 
 ## Arrays y Manejo Avanzado de Variables
 
 - Arrays unidimensionales:
     
 
+{% raw %}
 ```bash
 frutas=("manzana" "banana" "cereza")
 echo ${frutas[1]}  # banana
 ```
+{% endraw %}
 
 - Arrays asociativos:
     
 
+{% raw %}
 ```bash
 declare -A edades
 edades=(["Juan"]=30 ["Ana"]=25)
 echo ${edades["Ana"]}
 ```
+{% endraw %}
 
 - Iteración sobre arrays:
     
 
+{% raw %}
 ```bash
 for fruta in "${frutas[@]}"; do
 	echo $fruta
 done
 ```
+{% endraw %}
 
 - Expansión de variables y manipulación de strings:
     
 
+{% raw %}
 ```bash
 texto="Hola Mundo"
 echo ${texto:0:4}   # Hola
 echo ${texto//o/0}  # H0la Mund0
 ```
+{% endraw %}
 
 ## Trap y Manejo de Señales
 
 - Capturar señales y ejecutar limpieza:
     
 
+{% raw %}
 ```bash
 trap "echo 'Script interrumpido'; exit" SIGINT SIGTERM
 ```
+{% endraw %}
 
 - Uso en scripts largos para liberar recursos:
     
 
+{% raw %}
 ```bash
 trap "rm /tmp/archivo_tmp; exit" EXIT
 ```
+{% endraw %}
 
 ## Subshells y Procesos en Segundo Plano
 
 - Ejecutar comandos en segundo plano:
     
 
+{% raw %}
 ```bash
 comando &
 pid=$!
 wait $pid
 echo "Proceso $pid finalizado"
 ```
+{% endraw %}
 
 - Diferencia entre subshell y shell actual:
     
 
+{% raw %}
 ```bash
 ( cd /tmp; ls )  # subshell, directorio no cambia fuera del paréntesis
 cd /tmp          # shell actual
 ```
+{% endraw %}
 
 - Redirecciones avanzadas:
     
 
+{% raw %}
 ```bash
 comando > salida.txt 2> errores.txt
 comando &> todo.txt
 ```
+{% endraw %}
 
 ## Scripting Modular y Librerías
 
 - Reutilizar scripts con `source`:
     
 
+{% raw %}
 ```bash
 source funciones.sh
 mi_funcion
 ```
+{% endraw %}
 
 - Modularización permite mantener código limpio y organizado.
     
@@ -343,58 +403,72 @@ mi_funcion
 - Programar tareas con cron:
     
 
+{% raw %}
 ```bash
 crontab -e
 # Ejemplo: Ejecutar script.sh cada día a las 2am
 0 2 * * * /ruta/script.sh
 ```
+{% endraw %}
 
 - Usar `at` para tareas puntuales:
     
 
+{% raw %}
 ```bash
 echo "/ruta/script.sh" | at now + 1 minute
 ```
+{% endraw %}
 
 - Logging de tareas automatizadas:
     
 
+{% raw %}
 ```bash
 ./script.sh >> /var/log/script.log 2>&1
 ```
+{% endraw %}
 
 ## Seguridad y Permisos en Scripts
 
 - Cambiar permisos de ejecución:
     
 
+{% raw %}
 ```bash
 chmod +x script.sh
 ```
+{% endraw %}
 
 - Ejecutar comandos con sudo dentro de scripts:
     
 
+{% raw %}
 ```bash
 sudo apt update
 ```
+{% endraw %}
 
 - Validación de usuario y permisos:
     
 
+{% raw %}
 ```bash
 if [ "$EUID" -ne 0 ]; then
 	echo "Ejecute como root"
 	exit 1
 fi
 ```
+{% endraw %}
 
 - Evitar inyección de comandos:
     
 
+{% raw %}
 ```bash
 usuario=$(echo "$1" | tr -cd '[:alnum:]')
 ```
+{% endraw %}
 
 
 # libro Linux Command Line and Shell Scripting Bible, 3rd Edition - 2015 (hasta el 10)
@@ -472,13 +546,15 @@ usuario=$(echo "$1" | tr -cd '[:alnum:]')
 - Commands executed directly on the system.
 - **Virtual consoles (tty)**: switch with `Ctrl+Alt+F1` ... `F7`.
 - Terminal customization with `setterm`:
+{% raw %}
 ```bash
 setterm -inversescreen on
 setterm -background white
 setterm -foreground black
 setterm -reset
 setterm -store
-````
+```
+{% endraw %}`
 
 ### Accessing CLI via Graphical Terminal Emulation
 
@@ -565,6 +641,7 @@ setterm -store
 - Absolute paths: `/usr/bin`
 - Relative paths: `Documents/`
 - Commands:
+{% raw %}
 ```bash
 cd /var/log
 cd .
@@ -572,7 +649,8 @@ cd ..
 cd ../Downloads
 cd ../../etc
 pwd
-````
+```
+{% endraw %}`
 
 ## Listing Files and Directories
 
@@ -589,38 +667,46 @@ pwd
   * `[a-i]`: character range
   * `[!a]`: exclude character
 
+{% raw %}
 ```bash
 ls -l my_scr?pt
 ls -l my*
 ls -l f[a-i]ll
 ls -l f[!a]ll
 ```
+{% endraw %}
 
 ## Handling Files
 
 ### Creating Files
 
+{% raw %}
 ```bash
 touch test_one
 touch -a test_one
 ls -l --time=atime test_one
 ```
+{% endraw %}
 
 ### Copying Files
 
+{% raw %}
 ```bash
 cp source destination
 cp -i test_one test_two
 cp -R Scripts/ Mod_Scripts
 cp *script Mod_Scripts/
 ```
+{% endraw %}
 
 ### Tab Auto-Complete
 
+{% raw %}
 ```bash
 ls really*
 cp really_ridiculously_long_file_name Mod_Scripts/
 ```
+{% endraw %}
 
 ### Linking Files
 
@@ -630,58 +716,70 @@ cp really_ridiculously_long_file_name Mod_Scripts/
 
 ### Renaming/Moving Files
 
+{% raw %}
 ```bash
 mv fall fzll
 mv fzll Pictures/
 mv Mod_Scripts Old_Scripts
 ```
+{% endraw %}
 
 * Options: `-i` to prompt before overwrite
 
 ### Deleting Files
 
+{% raw %}
 ```bash
 rm -i fall
 rm -i f?ll
 rm -f file
 ```
+{% endraw %}
 
 ## Managing Directories
 
 * Create directories:
 
+{% raw %}
 ```bash
 mkdir New_Dir
 mkdir -p New_Dir/Sub_Dir/Under_Dir
 ```
+{% endraw %}
 
 * Delete directories:
 
+{% raw %}
 ```bash
 rmdir New_Dir        # empty only
 rm -ri My_Dir
 rm -rf Small_Dir
 tree Small_Dir
 ```
+{% endraw %}
 
 ## Viewing File Contents
 
 ### File Type
 
+{% raw %}
 ```bash
 file my_file
 file sl_data_file
 file /bin/ls
 ```
+{% endraw %}
 
 ### View Entire File
 
+{% raw %}
 ```bash
 cat test1
 cat -n test1    # number lines
 cat -b test1
 cat -T test1    # show tabs
 ```
+{% endraw %}
 
 ### Paginated Viewing
 
@@ -692,21 +790,27 @@ cat -T test1    # show tabs
 
 * Tail:
 
+{% raw %}
 ```bash
 tail log_file        # last 10 lines
 tail -n 2 log_file
 tail -f log_file     # real-time monitoring
 ```
+{% endraw %}
 
 * Head:
 
+{% raw %}
 ```bash
 head log_file        # first 10 lines
 head -5 log_file
 ```
+{% endraw %}
 
+{% raw %}
 ```
 ```
+{% endraw %}
 
 ## More Bash Shell Commands
 
@@ -785,10 +889,12 @@ Processes communicate using **signals**:
 ### kill Command
 - Sends signals to processes by PID.
 - Default signal: `TERM`
+{% raw %}
 ```bash
 kill 3940
 kill -s HUP 3940   # specify another signal
-````
+```
+{% endraw %}`
 
 * Must be owner of the process or root.
 * Use `ps` or `top` to verify results.
@@ -798,9 +904,11 @@ kill -s HUP 3940   # specify another signal
 * Sends signals by **process name** instead of PID.
 * Supports wildcards:
 
+{% raw %}
 ```bash
 killall http*   # kills all processes starting with 'http'
 ```
+{% endraw %}
 
 * Use with caution; may terminate multiple critical processes.
 
@@ -810,10 +918,12 @@ killall http*   # kills all processes starting with 'http'
 
 * Mount removable media:
 
+{% raw %}
 ```bash
 mount
 mount -t vfat /dev/sdb1 /media/disk
 ```
+{% endraw %}
 
 * Parameters:
 
@@ -830,19 +940,23 @@ mount -t vfat /dev/sdb1 /media/disk
 
 * Remove mounted media:
 
+{% raw %}
 ```bash
 umount [directory | device]
 umount /home/rich/mnt
 ```
+{% endraw %}
 
 ### df Command
 
 * Show disk space usage per filesystem:
 
+{% raw %}
 ```bash
 df
 df -h   # human-readable (M, G)
 ```
+{% endraw %}
 
 * Displays: device, total blocks, used, available, usage %, mount point.
 
@@ -850,17 +964,21 @@ df -h   # human-readable (M, G)
 
 * Show disk usage per directory:
 
+{% raw %}
 ```bash
 du
 du -c   # grand total
 du -h   # human-readable
 du -s   # summary per argument
 ```
+{% endraw %}
 
 * Lists all files, directories, subdirectories with block usage.
 
+{% raw %}
 ```
 ```
+{% endraw %}
 
 ## Working with Data Files
 
@@ -894,20 +1012,25 @@ du -s   # summary per argument
 	- `-z` : zero-terminated lines
 
 - **Example**: Sort `/etc/passwd` numerically by UID:
+{% raw %}
 ```bash
 sort -t ':' -k 3 -n /etc/passwd
-````
+```
+{% endraw %}`
 
 * Reverse numerical sort of directory sizes:
 
+{% raw %}
 ```bash
 du -sh * | sort -nr
 ```
+{% endraw %}
 
 ### Searching for Data with grep
 
 * Syntax: `grep [options] pattern [file]`
 
+{% raw %}
 ```bash
 grep three file1          # search for "three"
 grep t file1              # search for "t"
@@ -917,6 +1040,7 @@ grep -c t file1           # count matching lines
 grep -e t -e f file1      # multiple patterns
 grep [tf] file1           # regex character class
 ```
+{% endraw %}
 
 * **Variants**:
 
@@ -930,12 +1054,14 @@ grep [tf] file1           # regex character class
   * `bzip2` (.bz2), `compress` (.Z), `gzip` (.gz), `zip` (.zip)
 * Example:
 
+{% raw %}
 ```bash
 gzip myprog
 gzcat myprog.gz
 gunzip myprog.gz
 gzip my*
 ```
+{% endraw %}
 
 ### Archiving Data with tar
 
@@ -963,24 +1089,30 @@ gzip my*
 
 * **Examples**:
 
+{% raw %}
 ```bash
 tar -cvf test.tar test/ test2/   # create archive
 tar -tf test.tar                 # list contents
 tar -xvf test.tar                # extract archive
 tar -zxvf filename.tgz           # extract gzipped tar file
 ```
+{% endraw %}
 
+{% raw %}
 ```
 ```
+{% endraw %}
 
 ## Understanding the Shell
 
 ### Shell Types
 - User default shell is defined in `/etc/passwd` field #7.
+{% raw %}
 ```bash
 cat /etc/passwd
 Christine:x:501:501:Christine B:/home/Christine:/bin/bash
-````
+```
+{% endraw %}`
 
 * Common shells:
 
@@ -996,10 +1128,12 @@ Christine:x:501:501:Christine B:/home/Christine:/bin/bash
 * Child shell inherits some parent environment variables.
 * Subshell creation:
 
+{% raw %}
 ```bash
 bash          # new shell instance
 (ps --forest) # view nested shells
 ```
+{% endraw %}
 
 * `$BASH_SUBSHELL` indicates subshell depth:
 
@@ -1024,28 +1158,34 @@ bash          # new shell instance
 
 * Execute without blocking CLI:
 
+{% raw %}
 ```bash
 sleep 3000 &
 jobs
 jobs -l
 ```
+{% endraw %}
 
 * Background process info: job number, PID, status, command.
 * Process lists can also run in background:
 
+{% raw %}
 ```bash
 (sleep 2; echo $BASH_SUBSHELL; sleep 2)&
 ```
+{% endraw %}
 
 ### Co-Processing
 
 * `coproc` spawns a background subshell:
 
+{% raw %}
 ```bash
 coproc sleep 10
 coproc My_Job { sleep 10; }
 coproc (sleep 10; sleep 2)
 ```
+{% endraw %}
 
 * Check with `jobs` and `ps --forest`.
 
@@ -1053,21 +1193,25 @@ coproc (sleep 10; sleep 2)
 
 * **External commands**: reside outside shell, create child process on execution.
 
+{% raw %}
 ```bash
 ps -f
 which ps
 type -a ps
 ls -l /bin/ps
 ```
+{% endraw %}
 
 * **Built-in commands**: part of the shell, no child process needed.
 
+{% raw %}
 ```bash
 type -a echo
 which echo
 type -a pwd
 which pwd
 ```
+{% endraw %}
 
 * Built-ins improve efficiency for frequent operations.
 
@@ -1075,6 +1219,7 @@ which pwd
 
 * View and recall previous commands:
 
+{% raw %}
 ```bash
 history
 !!          # last command
@@ -1083,6 +1228,7 @@ history -a  # append session history
 history -n  # read new history
 cat ~/.bash_history
 ```
+{% endraw %}
 
 * Control number of commands saved: `HISTSIZE`.
 
@@ -1090,15 +1236,19 @@ cat ~/.bash_history
 
 * Create shortcuts for frequently used commands:
 
+{% raw %}
 ```bash
 alias li='ls -li'
 alias -p         # list active aliases
 ```
+{% endraw %}
 
 * Aliases last only for the current shell session.
 
+{% raw %}
 ```
 ```
+{% endraw %}
 
 ## Environment Variables
 
@@ -1109,19 +1259,23 @@ alias -p         # list active aliases
 
 ### Viewing Environment Variables
 - Show all variables: 
+{% raw %}
 ```bash
 env
 printenv
 set   # includes local and global variables
-````
+```
+{% endraw %}`
 
 * Show specific variable:
 
+{% raw %}
 ```bash
 printenv HOME
 echo $HOME
 ls $HOME
 ```
+{% endraw %}
 
 ### Global Variables
 
@@ -1129,12 +1283,14 @@ ls $HOME
 * Examples: `PATH`, `HOME`, `USER`, `SHELL`.
 * Example usage:
 
+{% raw %}
 ```bash
 echo $PATH
 export MYVAR="Hello World"
 bash          # child shell inherits MYVAR
 echo $MYVAR
 ```
+{% endraw %}
 
 ### Local Variables
 
@@ -1142,35 +1298,43 @@ echo $MYVAR
 * Do not propagate to child processes or subshells.
 * Define a local variable:
 
+{% raw %}
 ```bash
 MYLOCAL="Temporary Value"
 echo $MYLOCAL
 ```
+{% endraw %}
 
 ### Using Environment Variables in Scripts
 
 * Access variables:
 
+{% raw %}
 ```bash
 echo "Home directory is $HOME"
 echo "Script running as $USER"
 ```
+{% endraw %}
 
 * Modify variables for session:
 
+{% raw %}
 ```bash
 export PATH=$PATH:/custom/bin
 ```
+{% endraw %}
 
 ### Variable Arrays
 
 * Bash supports arrays for storing multiple values:
 
+{% raw %}
 ```bash
 myarray=(one two three)
 echo ${myarray[0]}    # output: one
 echo ${myarray[@]}    # output all elements
 ```
+{% endraw %}
 
 ### Environment Files
 
@@ -1185,24 +1349,30 @@ echo ${myarray[@]}    # output all elements
   * `~/.profile`
 * Files are sourced at shell startup to set environment variables.
 
+{% raw %}
 ```
 ```
+{% endraw %}
 
 ## User-Defined Environment Variables
 
 ### Creating Local Variables
 - Assign a value:
+{% raw %}
 ```bash
 my_variable=Hello
 echo $my_variable        # Hello
-````
+```
+{% endraw %}`
 
 * For values with spaces, enclose in quotes:
 
+{% raw %}
 ```bash
 my_variable="Hello World"
 echo $my_variable        # Hello World
 ```
+{% endraw %}
 
 * **Important:** No spaces around `=` when defining variables.
 
@@ -1211,6 +1381,7 @@ echo $my_variable        # Hello World
 * Local variables are **available only in the shell process where they are defined**.
 * They do not propagate to child shells:
 
+{% raw %}
 ```bash
 my_variable="Hello World"
 bash                     # start a child shell
@@ -1218,11 +1389,13 @@ echo $my_variable         # no output
 exit
 echo $my_variable         # Hello World
 ```
+{% endraw %}
 
 ### Creating Global Environment Variables
 
 * Export a variable to make it **visible to child processes**:
 
+{% raw %}
 ```bash
 my_variable="I am Global now"
 export my_variable
@@ -1231,9 +1404,11 @@ echo $my_variable         # I am Global now
 bash                      # child shell
 echo $my_variable         # I am Global now
 ```
+{% endraw %}
 
 * Changing a global variable in a child shell does **not** affect the parent shell:
 
+{% raw %}
 ```bash
 my_variable="I am Global now"
 export my_variable
@@ -1243,25 +1418,30 @@ export my_variable
 exit
 echo $my_variable         # I am Global now
 ```
+{% endraw %}
 
 ### Removing Variables
 
 * Use `unset` to remove variables:
 
+{% raw %}
 ```bash
 echo $my_variable
 unset my_variable
 echo $my_variable         # no output
 ```
+{% endraw %}
 
 * Unsetting in a child shell does **not** affect the parent shell:
 
+{% raw %}
 ```bash
 bash
 unset my_variable
 exit
 echo $my_variable         # remains set in parent shell
 ```
+{% endraw %}
 
 ### Default Bash Shell Environment Variables
 
@@ -1305,30 +1485,38 @@ echo $my_variable         # remains set in parent shell
 
 ### PATH Environment Variable
 - Defines directories the shell searches for commands and programs.
+{% raw %}
 ```bash
 echo $PATH
-````
+```
+{% endraw %}`
 
 * If a program is not in `$PATH`, you must provide its absolute path.
 * Adding a directory to `$PATH`:
 
+{% raw %}
 ```bash
 PATH=$PATH:/home/christine/Scripts
 export PATH
 ```
+{% endraw %}
 
 * Execute programs from anywhere:
 
+{% raw %}
 ```bash
 myprog
 ```
+{% endraw %}
 
 * Adding the current directory:
 
+{% raw %}
 ```bash
 PATH=$PATH:.
 export PATH
 ```
+{% endraw %}
 
 * **Note:** Changes are temporary and last only until you log out or reboot.
 
@@ -1371,6 +1559,7 @@ export PATH
 * Does **not** process `/etc/profile`.
 * Checks for `$HOME/.bashrc`:
 
+{% raw %}
 ```bash
 # .bashrc example
 if [ -f /etc/bashrc ]; then
@@ -1378,6 +1567,7 @@ if [ -f /etc/bashrc ]; then
 fi
 # User-specific aliases and functions
 ```
+{% endraw %}
 
 * `.bashrc` provides a place for:
 
@@ -1410,9 +1600,11 @@ fi
 
   * Define them in `$HOME/.bashrc`:
 
+{% raw %}
 ```bash
 alias ll='ls -alF'
 ```
+{% endraw %}
 
 ---
 
@@ -1424,48 +1616,62 @@ alias ll='ls -alF'
 * Non-interactive shells inherit **exported** variables only.
 * Use `/etc/profile.d/*.sh` or `$HOME/.bashrc` for persistent global and user-specific environment variables.
 
+{% raw %}
 ```
 ```
+{% endraw %}
 
 ## Working with Variable Arrays
 
 ### Creating and Accessing Arrays
 - Define an array:
+{% raw %}
 ```bash
 mytest=(one two three four five)
-````
+```
+{% endraw %}`
 
 * Access an individual element:
 
+{% raw %}
 ```bash
 echo ${mytest[2]}  # Outputs: three
 ```
+{% endraw %}
 
 * Access all elements:
 
+{% raw %}
 ```bash
 echo ${mytest[*]}  # Outputs: one two three four five
 ```
+{% endraw %}
 
 ### Modifying Arrays
 
 * Change an element at a specific index:
 
+{% raw %}
 ```bash
 mytest[2]=seven
 ```
+{% endraw %}
 
 * Remove an individual element (leaves an empty slot):
 
+{% raw %}
 ```bash
 unset mytest[2]
 ```
+{% endraw %}
 
 * Remove the entire array:
 
+{% raw %}
 ```bash
 unset mytest
 ```
+{% endraw %}
 
 **Note:** Arrays in bash are **not portable** to all shells; use with caution in scripts that need cross-shell compatibility.
 
@@ -1508,22 +1714,28 @@ unset mytest
 * Can be used to store multiple values in a single variable.
 * Example:
 
+{% raw %}
 ```bash
 mytest=(one two three four five)
 echo ${mytest[0]}  # first element
 echo ${mytest[*]}  # all elements
 ```
+{% endraw %}
 
 * Modify or unset elements as needed; whole array can be unset with:
 
+{% raw %}
 ```bash
 unset mytest
 ```
+{% endraw %}
 
 * Useful for managing lists of items, but keep portability in mind.
 
+{% raw %}
 ```
 ```
+{% endraw %}
 
 ## 07 File Permissions and User Accounts
 
@@ -1532,9 +1744,11 @@ unset mytest
 ### /etc/passwd
 - Maps login names to UIDs (user IDs).
 - Example entry:
+{% raw %}
 ```bash
 rich:x:500:500:Rich Blum:/home/rich:/bin/bash
-````
+```
+{% endraw %}`
 
 Fields in `/etc/passwd`:
 
@@ -1571,12 +1785,15 @@ Fields in `/etc/passwd`:
 
 * `useradd` creates a new user and optionally their home directory.
 
+{% raw %}
 ```bash
 useradd -m test
 ```
+{% endraw %}
 
 * Default user creation values:
 
+{% raw %}
 ```bash
 GROUP=100
 HOME=/home
@@ -1586,6 +1803,7 @@ SHELL=/bin/bash
 SKEL=/etc/skel
 CREATE_MAIL_SPOOL=yes
 ```
+{% endraw %}
 
 * Command-line parameters:
 
@@ -1606,9 +1824,11 @@ CREATE_MAIL_SPOOL=yes
 
 * Modify default new user values with `useradd -D`, e.g.:
 
+{% raw %}
 ```bash
 useradd -D -s /bin/tsch
 ```
+{% endraw %}
 
 ---
 
@@ -1638,9 +1858,11 @@ useradd -D -s /bin/tsch
 * `passwd test` — change user password
 * `chpasswd` — batch password update from file
 
+{% raw %}
 ```bash
 chpasswd < users.txt
 ```
+{% endraw %}
 
 ### chsh, chfn, chage
 
@@ -1666,8 +1888,10 @@ chpasswd < users.txt
 * `usermod`, `passwd`, `chfn`, `chsh`, and `chage` allow modification of existing user accounts.
 * Proper management ensures system security and controlled access.
 
+{% raw %}
 ```
 ```
+{% endraw %}
 
 ## 08 Linux Groups and File Permissions
 
@@ -1681,15 +1905,19 @@ chpasswd < users.txt
 
 ### /etc/group
 - Structure:
+{% raw %}
 ```bash
 group_name:group_password:GID:user_list
-````
+```
+{% endraw %}`
 
 Example:
 
+{% raw %}
 ```bash
 rich:x:500:
 ```
+{% endraw %}
 
 * Group password allows temporary membership (rarely used).
 * Users should **not manually edit `/etc/group`**; use `usermod`.
@@ -1698,11 +1926,13 @@ rich:x:500:
 
 ### Creating Groups
 
+{% raw %}
 ```bash
 groupadd shared
 usermod -G shared rich
 usermod -G shared test
 ```
+{% endraw %}
 
 * `-G` appends the group to the user's supplementary group list.
 * `-g` replaces the user's default primary group.
@@ -1721,9 +1951,11 @@ usermod -G shared test
 
 Example:
 
+{% raw %}
 ```bash
 -rwxrwxr-x 1 rich rich 4882 2010-09-18 13:58 myprog
 ```
+{% endraw %}
 
 * First character: object type
 
@@ -1741,9 +1973,11 @@ Example:
 
 ### Example Permission Breakdown
 
+{% raw %}
 ```bash
 -rwxrwxr-x 1 rich rich 4882 myprog
 ```
+{% endraw %}
 
 * Owner (`rich`): `rwx` — read, write, execute
 * Group (`rich`): `rwx` — read, write, execute
@@ -1760,32 +1994,39 @@ Example:
   * Directory: `777` (rwxrwxrwx)
 * `umask` subtracts permissions from full default:
 
+{% raw %}
 ```bash
 $ umask
 0022
 ```
+{% endraw %}
 
 * Example:
 
+{% raw %}
 ```bash
 umask 022
 touch newfile
 ls -l newfile
 # -rw-r--r-- (644)
 ```
+{% endraw %}
 
 * For directories:
 
+{% raw %}
 ```bash
 mkdir newdir
 ls -l newdir
 # drwxr-x--x (751)
 ```
+{% endraw %}
 
 ### Octal Representation of Permissions
 
 * Permissions are represented as a 3-digit octal number:
 
+{% raw %}
 ```
 rwx = 111 = 7
 rw- = 110 = 6
@@ -1794,6 +2035,7 @@ r-- = 100 = 4
 --x = 001 = 1
 --- = 000 = 0
 ```
+{% endraw %}
 
 * Example: `rw-r-----` = `640`
 
@@ -1803,22 +2045,28 @@ r-- = 100 = 4
 
 * `chmod` command sets permissions explicitly:
 
+{% raw %}
 ```bash
 chmod 755 myprog
 chmod u+x,g-w,o-r file
 ```
+{% endraw %}
 
 * `chown` changes ownership (user and group):
 
+{% raw %}
 ```bash
 chown rich:sharing myprog
 ```
+{% endraw %}
 
 * `chgrp` changes group ownership:
 
+{% raw %}
 ```bash
 chgrp sharing myprog
 ```
+{% endraw %}
 
 ---
 
@@ -1831,8 +2079,10 @@ chgrp sharing myprog
 * Octal values provide a concise way to represent permissions.
 * Ownership and permissions combined control access securely.
 
+{% raw %}
 ```
 ```
+{% endraw %}
 
 ## 10 Working with Editors — [VIM](/sistemas/vim/)
 
@@ -1844,6 +2094,7 @@ chgrp sharing myprog
 - Vim may be linked to a smaller feature set editor, like `vim.tiny`.
 
 ### Example: Ubuntu File Links
+{% raw %}
 ```bash
 $ which vi
 /usr/bin/vi
@@ -1855,15 +2106,18 @@ $ ls -l /usr/bin/vim.tiny
 -rwxr-xr-x 1 root root 884360 Jan 2 14:40 /usr/bin/vim.tiny
 $ readlink -f /usr/bin/vi
 /usr/bin/vim.tiny
-````
+```
+{% endraw %}`
 
 * Installing full Vim package:
 
+{% raw %}
 ```bash
 sudo apt-get install vim
 readlink -f /usr/bin/vi
 # /usr/bin/vi now points to /usr/bin/vim.basic
 ```
+{% endraw %}
 
 ---
 
@@ -1872,10 +2126,12 @@ readlink -f /usr/bin/vi
 * Vim operates on a **memory buffer**.
 * Start Vim:
 
+{% raw %}
 ```bash
 vim myprog.c      # edit existing file
 vim               # new buffer
 ```
+{% endraw %}
 
 #### Modes of Operation
 

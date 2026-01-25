@@ -145,11 +145,13 @@ category: Backend
 - [Docker](/software%20engineering/docker/)
 	- [Spring Boot con Docker](https://spring.io/guides/gs/spring-boot-docker)
 	- Dockerfile básico:
-		```dockerfile
+		{% raw %}
+```dockerfile
 		FROM openjdk:17-jdk-slim
 		COPY target/app.jar app.jar
 		ENTRYPOINT ["java","-jar","/app.jar"]
 		```
+{% endraw %}
 - Integración con CI/CD:
 	- GitHub Actions, Jenkins o GitLab CI
 - Cloud:
@@ -194,12 +196,14 @@ category: Backend
 	- `@RestController` → puede devolver `Mono` o `Flux`
 	- `WebClient` → cliente HTTP reactivo
 - Ejemplo:
-	```java
+	{% raw %}
+```java
 	@GetMapping("/users")
 	public Flux<User> getUsers() {
 		return userService.findAllReactive();
 	}
 	```
+{% endraw %}
 
 ---
 
@@ -227,10 +231,12 @@ category: Backend
 - **Backends compatibles**:
 	- Ehcache, Caffeine, Redis
 - Ejemplo:
-	```java
+	{% raw %}
+```java
 	@Cacheable("users")
 	public List<User> getAllUsers() { ... }
 	```
+{% endraw %}
 - **Optimización de performance**:
 	- Pool de conexiones (HikariCP)
 	- Lazy initialization de beans
@@ -260,7 +266,8 @@ category: Backend
 	- Spring Cloud Sleuth (añade IDs de trazas a logs)
 	- Zipkin / OpenTelemetry para trazabilidad de microservicios
 - **Métricas personalizadas**:
-	```java
+	{% raw %}
+```java
 	@Autowired
 	MeterRegistry registry;
 	
@@ -268,6 +275,7 @@ category: Backend
 		registry.counter("api.requests.total").increment();
 	}
 	```
+{% endraw %}
 
 ---
 
@@ -279,10 +287,12 @@ category: Backend
 - **Tareas programadas**
 	- `@EnableScheduling` + `@Scheduled`
 	- Ejemplo:
-		```java
+		{% raw %}
+```java
 		@Scheduled(fixedRate = 5000)
 		public void logStatus() { ... }
 		```
+{% endraw %}
 - Uso en limpieza de logs, sincronización, o envío de notificaciones
 
 ---
@@ -290,9 +300,11 @@ category: Backend
 ## 8. CI/CD y Contenedorización Avanzada
 - **Buildpacks** (desde Spring Boot 2.3+):
 	- Crear imágenes Docker sin Dockerfile:
-		```bash
+		{% raw %}
+```bash
 		./mvnw spring-boot:build-image
 		```
+{% endraw %}
 	- Usa Cloud Native Buildpacks (Paketo)
 - **Kubernetes Deployment**
 	- ConfigMaps y Secrets para configuración
@@ -300,7 +312,8 @@ category: Backend
 - **Integración continua**
 	- Pipelines con GitHub Actions o Jenkins
 	- Ejemplo de workflow YAML:
-		```yaml
+		{% raw %}
+```yaml
 		name: Spring CI
 		on: [push]
 		jobs:
@@ -313,6 +326,7 @@ category: Backend
 		          java-version: 17
 		      - run: mvn clean package
 		```
+{% endraw %}
 
 ---
 
@@ -426,9 +440,11 @@ category: Backend
 - Utilizar Java 21 con GraalVM CE para despliegues cloud-ready.  
 - Activar perfiles de observabilidad (`management.metrics.export.*`).  
 - Revisar dependencias en `pom.xml` con:
-	```bash
+	{% raw %}
+```bash
 	./mvnw dependency:tree -Dincludes=org.springframework.boot
 	```
+{% endraw %}
 - Adoptar arquitectura **modular y reactiva** con WebFlux o Kotlin Coroutines.  
 - Externalizar configuración mediante Spring Config Server o Vault.  
 

@@ -61,6 +61,7 @@ Ventajas:
 - Facilita el debugging y reduce la deuda técnica.
 
 ### 💻 Ejemplo (JavaScript + Jest)
+{% raw %}
 ```js
 // test/login.test.js
 import { login } from '../login';
@@ -69,7 +70,8 @@ test('debería retornar token válido con credenciales correctas', () => {
 	const result = login('user', 'password');
 	expect(result).toMatch(/^[A-Za-z0-9]{10,}$/);
 });
-````
+```
+{% endraw %}`
 
 Primero se crea el test (falla). Luego se implementa el código necesario para hacerlo pasar.
 
@@ -92,22 +94,28 @@ Beneficios:
 
 ### 💻 Ejemplo incremental (Python)
 
+{% raw %}
 ```python
 def suma(a, b):
 	return a + b
 ```
+{% endraw %}
 
+{% raw %}
 ```python
 def test_suma():
 	assert suma(2, 3) == 5
 ```
+{% endraw %}
 
 Luego se agregan más tests:
 
+{% raw %}
 ```python
 def test_suma_negativos():
 	assert suma(-1, -4) == -5
 ```
+{% endraw %}
 
 ---
 
@@ -127,6 +135,7 @@ Ventajas:
 
 ### 💻 Ejemplo (PHPUnit)
 
+{% raw %}
 ```php
 <?php
 use PHPUnit\Framework\TestCase;
@@ -138,6 +147,7 @@ class CalculatorTest extends TestCase {
 	}
 }
 ```
+{% endraw %}
 
 ---
 
@@ -155,19 +165,23 @@ Ambos utilizan ciclos iterativos y refactoring continuo.
 
 ### 💻 Ejemplo (JavaScript)
 
+{% raw %}
 ```js
 // refactorización después de pasar tests
 function isAdult(age) {
 	return age >= 18;
 }
 ```
+{% endraw %}
 
+{% raw %}
 ```js
 test('verifica si el usuario es adulto', () => {
 	expect(isAdult(20)).toBe(true);
 	expect(isAdult(17)).toBe(false);
 });
 ```
+{% endraw %}
 
 ---
 
@@ -187,9 +201,11 @@ Características principales:
 
 ### 💻 Ejemplo CLI
 
+{% raw %}
 ```bash
 vendor/bin/phpunit --testdox
 ```
+{% endraw %}
 
 ---
 
@@ -206,6 +222,7 @@ Formato:
 
 ### 💻 Ejemplo adaptado (pseudo BDD)
 
+{% raw %}
 ```js
 // Given un usuario registrado
 const user = { username: 'edu', password: '1234' };
@@ -216,6 +233,7 @@ const result = login(user.username, user.password);
 // Then debe obtener un token válido
 expect(result.token).not.toBeNull();
 ```
+{% endraw %}
 
 ---
 
@@ -227,6 +245,7 @@ y crece hasta cubrir escenarios más amplios (como la existencia del dashboard t
 
 ### 💻 Ejemplo (E2E simulado)
 
+{% raw %}
 ```js
 test('login exitoso muestra dashboard', async () => {
 	await page.goto('/login');
@@ -236,6 +255,7 @@ test('login exitoso muestra dashboard', async () => {
 	await expect(page).toHaveURL('/dashboard');
 });
 ```
+{% endraw %}
 
 ---
 
@@ -267,6 +287,7 @@ Los tests TDD se ejecutan automáticamente en cada commit o _pull request_, aseg
 
 ### 💻 Ejemplo de flujo simplificado
 
+{% raw %}
 ```bash
 # Paso 1: ejecutar test (falla)
 npm test
@@ -277,6 +298,7 @@ npm test
 # Paso 3: refactorizar
 npm run lint && npm test
 ```
+{% endraw %}
 
 ---
 

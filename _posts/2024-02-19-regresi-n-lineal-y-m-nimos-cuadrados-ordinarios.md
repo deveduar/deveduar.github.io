@@ -85,11 +85,13 @@ category: Data Science
 - Usar matrices para representar datos de entrada y salida y calcular los parámetros de la recta.
 
 ### Librerías principales
+{% raw %}
 ```python
 import numpy as np       # Cálculos numéricos: arrays, matrices, operaciones lineales.
 import scipy as sc       # Extiende numpy con funciones avanzadas y procesamiento de datos.
 import matplotlib.pyplot as plt  # Visualización gráfica.
-````
+```
+{% endraw %}`
 
 - **numpy**: manejo eficiente de arrays y matrices, operaciones algebraicas.
 - **scipy**: funciones matemáticas avanzadas, estadísticas, optimización, procesamiento de imágenes y señales.
@@ -98,6 +100,7 @@ import matplotlib.pyplot as plt  # Visualización gráfica.
 
 ### Dataset Boston Housing
 
+{% raw %}
 ```python
 from sklearn.datasets import load_boston
 
@@ -107,6 +110,7 @@ boston = load_boston()
 # Explorar funciones disponibles
 boston.  # presionar TAB para autocompletar
 ```
+{% endraw %}
 
 - `sklearn.datasets` incluye conjuntos de datos de ejemplo, como Boston Housing.
     
@@ -201,6 +205,7 @@ boston.  # presionar TAB para autocompletar
 	- Deepfakes y modelos de voz sintética en medios creativos.
 
 ## Ejemplo de Flujo General de Aplicación de ML/DL
+{% raw %}
 ```mermaid
 graph TD
     Datos[Recolección de datos] --> Preprocesamiento[Preprocesamiento y limpieza]
@@ -208,4 +213,5 @@ graph TD
     Modelo --> Evaluacion[Evaluación y ajuste de parámetros]
     Evaluacion --> Prediccion[Predicción / Clasificación / Recomendación]
     Prediccion --> Aplicacion[Integración en producto o servicio]
-````
+```
+{% endraw %}`

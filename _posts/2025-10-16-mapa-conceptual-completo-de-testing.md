@@ -19,6 +19,7 @@ category: Testing
 # 🧠 Mapa Conceptual de Testing (modular)
 
 ## 🧩 Fundamentos y Tipos de Pruebas
+{% raw %}
 ```mermaid
 mindmap
   root((🧩 Fundamentos y Tipos de Pruebas))
@@ -39,12 +40,14 @@ mindmap
       Usabilidad
       Compatibilidad
       Accesibilidad
-````
+```
+{% endraw %}`
 
 ---
 
 ## 🧪 Estrategias y Metodologías
 
+{% raw %}
 ```mermaid
 mindmap
   root((🧪 Estrategias y Metodologías))
@@ -63,11 +66,13 @@ mindmap
       Snapshot Testing
       Smoke y Sanity Tests
 ```
+{% endraw %}
 
 ---
 
 ## 🧰 Herramientas y Ecosistema
 
+{% raw %}
 ```mermaid
 mindmap
   root((🧰 Herramientas y Ecosistema))
@@ -93,11 +98,13 @@ mindmap
       k6
       Gatling
 ```
+{% endraw %}
 
 ---
 
 ## 🔄 Automatización y CI/CD
 
+{% raw %}
 ```mermaid
 mindmap
   root((🔄 Automatización y CI/CD))
@@ -117,11 +124,13 @@ mindmap
       Canary
       Rollouts Graduales
 ```
+{% endraw %}
 
 ---
 
 ## 🌐 API, Frontend y Mobile Testing
 
+{% raw %}
 ```mermaid
 mindmap
   root((🌐 API, Frontend y Mobile Testing))
@@ -141,11 +150,13 @@ mindmap
       Espresso
       Detox
 ```
+{% endraw %}
 
 ---
 
 ## ⚙️ Simulación y Dobles de Test
 
+{% raw %}
 ```mermaid
 mindmap
   root((⚙️ Simulación y Dobles de Test))
@@ -161,11 +172,13 @@ mindmap
       Faker
       Mockaroo
 ```
+{% endraw %}
 
 ---
 
 ## 📈 QA, Reporting y Métricas
 
+{% raw %}
 ```mermaid
 mindmap
   root((📈 QA, Reporting y Métricas))
@@ -185,11 +198,13 @@ mindmap
       OpenAPI
       Docs Automáticas
 ```
+{% endraw %}
 
 ---
 
 ## 🧭 Futuro del Testing
 
+{% raw %}
 ```mermaid
 mindmap
   root((🧭 Futuro del Testing))
@@ -203,6 +218,7 @@ mindmap
     TestOps
       QA + DevOps + Observabilidad
 ```
+{% endraw %}
 
 Perfecto 💪 Aquí tienes el **mapa conceptual completo y modular de Testing**,  
 con **todos los módulos** (los originales + los nuevos complementarios)  
@@ -230,6 +246,7 @@ en un **bloque de código Markdown listo para Obsidian**:
 ---
 
 ## 🧩 Fundamentos y Tipos de Pruebas
+{% raw %}
 ```mermaid
 mindmap
   root((🧩 Fundamentos y Tipos de Pruebas))
@@ -250,12 +267,14 @@ mindmap
       Usabilidad
       Compatibilidad
       Accesibilidad
-````
+```
+{% endraw %}`
 
 ---
 
 ## 🧪 Estrategias y Metodologías
 
+{% raw %}
 ```mermaid
 mindmap
   root((🧪 Estrategias y Metodologías))
@@ -274,11 +293,13 @@ mindmap
       Snapshot Testing
       Smoke y Sanity Tests
 ```
+{% endraw %}
 
 ---
 
 ## 🧰 Herramientas y Ecosistema
 
+{% raw %}
 ```mermaid
 mindmap
   root((🧰 Herramientas y Ecosistema))
@@ -304,11 +325,13 @@ mindmap
       k6
       Gatling
 ```
+{% endraw %}
 
 ---
 
 ## 🔄 Automatización y CI/CD
 
+{% raw %}
 ```mermaid
 mindmap
   root((🔄 Automatización y CI/CD))
@@ -328,11 +351,13 @@ mindmap
       Canary
       Rollouts Graduales
 ```
+{% endraw %}
 
 ---
 
 ## 🌐 API, Frontend y Mobile Testing
 
+{% raw %}
 ```mermaid
 mindmap
   root((🌐 API, Frontend y Mobile Testing))
@@ -352,11 +377,13 @@ mindmap
       Espresso
       Detox
 ```
+{% endraw %}
 
 ---
 
 ## ⚙️ Simulación y Dobles de Test
 
+{% raw %}
 ```mermaid
 mindmap
   root((⚙️ Simulación y Dobles de Test))
@@ -372,11 +399,13 @@ mindmap
       Faker
       Mockaroo
 ```
+{% endraw %}
 
 ---
 
 ## 📈 QA, Reporting y Métricas
 
+{% raw %}
 ```mermaid
 mindmap
   root((📈 QA, Reporting y Métricas))
@@ -396,11 +425,13 @@ mindmap
       OpenAPI
       Docs Automáticas
 ```
+{% endraw %}
 
 ---
 
 ## 🧭 Futuro del Testing
 
+{% raw %}
 ```mermaid
 mindmap
   root((🧭 Futuro del Testing))
@@ -414,11 +445,13 @@ mindmap
     TestOps
       QA + DevOps + Observabilidad
 ```
+{% endraw %}
 
 ---
 
 ## 🧱 Arquitectura, Diseño y Entorno de Pruebas
 
+{% raw %}
 ```mermaid
 mindmap
   root((🧱 Arquitectura, Diseño y Entorno de Pruebas))
@@ -441,11 +474,13 @@ mindmap
       Entornos efímeros (Ephemeral Envs)
       Test Environments on Demand
 ```
+{% endraw %}
 
 ---
 
 ## 🧮 Calidad de Software y Gestión del Riesgo
 
+{% raw %}
 ```mermaid
 mindmap
   root((🧮 Calidad de Software y Gestión del Riesgo))
@@ -468,11 +503,13 @@ mindmap
       Pair Testing
       Postmortems de Fallos
 ```
+{% endraw %}
 
 ---
 
 ## 🧠 Cultura, Roles y Procesos en el Testing
 
+{% raw %}
 ```mermaid
 mindmap
   root((🧠 Cultura, Roles y Procesos en el Testing))
@@ -495,4 +532,5 @@ mindmap
       Bug Tracking (Jira, Linear)
       Test Reviews
 ```
+{% endraw %}
 

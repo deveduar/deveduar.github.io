@@ -84,6 +84,7 @@ category: mates
 
 ## Álgebra Lineal con Python
 ### Sumar y Restar Matrices
+{% raw %}
 ```python
 import numpy as np
 
@@ -91,32 +92,41 @@ A = np.array([[1, 2], [3, 4]])
 B = np.array([[5, 6], [7, 8]])
 C = A + B
 D = A - B
-````
+```
+{% endraw %}`
 
 ### Transponer una Matriz
 
+{% raw %}
 ```python
 A_T = A.T
 ```
+{% endraw %}
 
 ### Transpuesta en un Vector
 
+{% raw %}
 ```python
 v = np.array([1, 2, 3])
 v_T = v.reshape(-1, 1)  # convierte en columna
 ```
+{% endraw %}
 
 ### Multiplicación Escalar por un Vector
 
+{% raw %}
 ```python
 v_scaled = 3 * v
 ```
+{% endraw %}
 
 ### Multiplicar Dos Matrices (Producto Punto)
 
+{% raw %}
 ```python
 result = np.dot(A, B)
 ```
+{% endraw %}
 
 # Álgebra Lineal y ML: Conceptos Avanzados
 

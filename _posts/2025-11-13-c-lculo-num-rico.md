@@ -98,6 +98,7 @@ donde:
 - El gradiente indica la **dirección de mayor aumento**, por lo que se desciende en la dirección opuesta.
 
 ### 🔹 Ejemplo (Código)
+{% raw %}
 ```python
 # Método de descenso del gradiente
 import numpy as np
@@ -109,7 +110,8 @@ def gradiente(f_grad, x0, alpha=0.01, tol=1e-6, max_iter=1000):
 			break
 		x0 = x0 - alpha * grad
 	return x0
-````
+```
+{% endraw %}`
 
 ---
 

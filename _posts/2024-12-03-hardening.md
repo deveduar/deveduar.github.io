@@ -128,26 +128,32 @@ category: ciberseguridad
 ## Ejemplos de Configuración / Comandos
 
 ### Auditoría de Puertos
+{% raw %}
 ```bash
 nmap -sV -Pn <IP>
 ss -tulpen
-````
+```
+{% endraw %}`
 
 ### Asegurar Kernel (Linux)
 
+{% raw %}
 ```bash
 cat /etc/sysctl.conf
 net.ipv4.conf.all.rp_filter = 1
 kernel.kptr_restrict = 2
 kernel.dmesg_restrict = 1
 ```
+{% endraw %}
 
 ### Verificación de Integridad
 
+{% raw %}
 ```bash
 aide --init
 aide --check
 ```
+{% endraw %}
 
 
 
@@ -395,6 +401,7 @@ Guía práctica para aplicar hardening **directamente en el código**, sin repet
 - Rechazar por defecto; aceptar sólo lo esperado (whitelist).
 
 ## Ejemplo — Validación estricta (Python)
+{% raw %}
 ```python
 import re
 
@@ -402,7 +409,8 @@ def validar_usuario(u):
 if not re.fullmatch(r"[A-Za-z0-9_]{4,20}", u):
 	raise ValueError("Usuario inválido")
 return True
-````
+```
+{% endraw %}`
 
 ---
 
@@ -417,6 +425,7 @@ return True
 
 ## Ejemplo — Configuración segura de cookie de sesión (Node.js)
 
+{% raw %}
 ```javascript
 app.use(session({
 secret: process.env.SESSION_KEY,
@@ -428,6 +437,7 @@ cookie: {
 }
 }));
 ```
+{% endraw %}
 
 ---
 
@@ -440,9 +450,11 @@ cookie: {
 
 ## Ejemplo — SQL parametrizado (Go)
 
+{% raw %}
 ```go
 err := db.QueryRow("SELECT id FROM usuarios WHERE email = ?", email).Scan(&id)
 ```
+{% endraw %}
 
 ---
 
@@ -457,12 +469,14 @@ err := db.QueryRow("SELECT id FROM usuarios WHERE email = ?", email).Scan(&id)
 
 ## Ejemplo — JSON seguro (JavaScript)
 
+{% raw %}
 ```javascript
 const payload = JSON.parse(input, (_, v) => {
 if (typeof v === "string" && v.length > 500) throw new Error("Exceso de tamaño");
 return v;
 });
 ```
+{% endraw %}
 
 ---
 
@@ -475,12 +489,14 @@ return v;
 
 ## Ejemplo — Respuesta segura (Python Flask)
 
+{% raw %}
 ```python
 @app.errorhandler(Exception)
 def error(e):
 app.logger.error("Error: %s", str(e))
 return {"error": "Ocurrió un problema"}, 500
 ```
+{% endraw %}
 
 ---
 
@@ -493,6 +509,7 @@ return {"error": "Ocurrió un problema"}, 500
 
 ## Ejemplo — Prevención de Path Traversal (Python)
 
+{% raw %}
 ```python
 from pathlib import Path
 
@@ -504,6 +521,7 @@ if BASE not in target.parents:
 	raise PermissionError("Acceso no permitido")
 return open(target)
 ```
+{% endraw %}
 
 ---
 
@@ -516,6 +534,7 @@ return open(target)
 
 ## Ejemplo — Cifrado autenticado (Python)
 
+{% raw %}
 ```python
 from cryptography.fernet import Fernet
 
@@ -524,6 +543,7 @@ f = Fernet(key)
 token = f.encrypt(b"datos")
 original = f.decrypt(token)
 ```
+{% endraw %}
 
 ---
 
@@ -537,6 +557,7 @@ original = f.decrypt(token)
 
 ## Ejemplo — Validación JSON Schema (Node)
 
+{% raw %}
 ```javascript
 import { Validator } from 'jsonschema';
 const v = new Validator();
@@ -550,6 +571,7 @@ additionalProperties: false
 
 v.validate(data, schema);
 ```
+{% endraw %}
 
 ---
 
@@ -562,6 +584,7 @@ v.validate(data, schema);
 
 ## Ejemplo — Sección crítica sincronizada (Rust)
 
+{% raw %}
 ```rust
 use std::sync::{Mutex, Arc};
 
@@ -571,6 +594,7 @@ let mut c = contador.lock().unwrap();
 *c += 1;
 }
 ```
+{% endraw %}
 
 ---
 
@@ -584,6 +608,7 @@ let mut c = contador.lock().unwrap();
 
 ## Ejemplo — Circuit Breaker (Python)
 
+{% raw %}
 ```python
 import pybreaker
 
@@ -593,6 +618,7 @@ breaker = pybreaker.CircuitBreaker(fail_max=3, reset_timeout=30)
 def llamar_servicio():
 ...
 ```
+{% endraw %}
 
 ---
 
@@ -605,6 +631,7 @@ def llamar_servicio():
 
 ## Ejemplo — Objeto inmutable (Java)
 
+{% raw %}
 ```java
 public final class Token {
 private final String valor;
@@ -612,6 +639,7 @@ public Token(String v){ this.valor = v; }
 public String get(){ return valor; }
 }
 ```
+{% endraw %}
 
 ---
 

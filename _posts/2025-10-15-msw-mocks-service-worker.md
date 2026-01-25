@@ -46,6 +46,7 @@ category: Testing
 	- **Context (ctx)**: Proporciona utilidades para crear respuestas HTTP simuladas (status, delay, JSON, etc.).
 
 ## Ejemplo: Mock de API REST con MSW
+{% raw %}
 ```ts
 // src/mocks/handlers.ts
 import { rest } from 'msw';
@@ -58,10 +59,12 @@ export const handlers = [
 		);
 	}),
 ];
-````
+```
+{% endraw %}`
 
 ## Ejemplo: Configuración del servidor en entorno de test
 
+{% raw %}
 ```ts
 // src/mocks/server.ts
 import { setupServer } from 'msw/node';
@@ -74,9 +77,11 @@ beforeAll(() => server.listen());
 afterEach(() => server.resetHandlers());
 afterAll(() => server.close());
 ```
+{% endraw %}
 
 ## Ejemplo: Test real usando el mock
 
+{% raw %}
 ```ts
 import { fetchUsers } from '../api';
 import { server } from '../mocks/server';
@@ -88,9 +93,11 @@ test('debería devolver lista de usuarios', async () => {
 	expect(users[0].name).toBe('Eduardo');
 });
 ```
+{% endraw %}
 
 ## Ejemplo: Sobrescribir respuesta temporalmente
 
+{% raw %}
 ```ts
 server.use(
 	rest.get('/api/users', (req, res, ctx) => {
@@ -98,6 +105,7 @@ server.use(
 	})
 );
 ```
+{% endraw %}
 
 - integración con frameworks
     - React Testing Library: MSW intercepta las llamadas `fetch` dentro de componentes sin necesidad de mocks manuales.
@@ -114,15 +122,18 @@ server.use(
 
 ## Ejemplo: Mock dinámico con parámetros
 
+{% raw %}
 ```ts
 rest.get('/api/user/:id', (req, res, ctx) => {
 	const { id } = req.params;
 	return res(ctx.status(200), ctx.json({ id, name: `Usuario ${id}` }));
 });
 ```
+{% endraw %}
 
 ## Ejemplo: Mock de GraphQL
 
+{% raw %}
 ```ts
 import { graphql } from 'msw';
 
@@ -132,15 +143,18 @@ export const handlers = [
 	}),
 ];
 ```
+{% endraw %}
 
 ## Ejemplo: Uso en entorno de desarrollo (frontend)
 
+{% raw %}
 ```ts
 if (process.env.NODE_ENV === 'development') {
 	const { worker } = await import('./mocks/browser');
 	worker.start();
 }
 ```
+{% endraw %}
 
 - relación con otras técnicas
     

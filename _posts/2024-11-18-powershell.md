@@ -65,15 +65,19 @@ category: Sistemas
 	- `$PROFILE`
 
 #### Crear perfil si no existe
+{% raw %}
 ```powershell
 New-Item -Path $PROFILE -Type File -Force
-````
+```
+{% endraw %}`
 
 #### Editar perfil
 
+{% raw %}
 ```powershell
 code $PROFILE
 ```
+{% endraw %}
 
 ### Configuración de tema Oh My Posh
 
@@ -96,9 +100,11 @@ code $PROFILE
 
 #### Importar módulo
 
+{% raw %}
 ```powershell
 Import-Module Terminal-Icons
 ```
+{% endraw %}
 
 * Se recomienda añadir la importación al perfil para carga automática
 
@@ -113,9 +119,11 @@ Import-Module Terminal-Icons
 
 #### Activar predicción en modo lista
 
+{% raw %}
 ```powershell
 Set-PSReadLineOption -PredictionViewStyle ListView
 ```
+{% endraw %}
 
 * Puede combinarse con colores personalizados
 
@@ -126,9 +134,11 @@ Set-PSReadLineOption -PredictionViewStyle ListView
 
 #### Ajuste recomendado
 
+{% raw %}
 ```json
 "editor.fontFamily": "FiraCode Nerd Font Mono"
 ```
+{% endraw %}
 
 
 ## PowerShell y Git Bash
@@ -257,17 +267,23 @@ Set-PSReadLineOption -PredictionViewStyle ListView
 - `Measure-Object` → Medidas
 
 ### Ejemplos de pipeline
+{% raw %}
 ```powershell
 Get-Process | Where-Object CPU -gt 100
-````
+```
+{% endraw %}`
 
+{% raw %}
 ```powershell
 Get-Service | Select-Object Name, Status
 ```
+{% endraw %}
 
+{% raw %}
 ```powershell
 Get-ChildItem | Sort-Object Length -Descending
 ```
+{% endraw %}
 
 ## Gestión de procesos
 
@@ -328,17 +344,21 @@ Get-ChildItem | Sort-Object Length -Descending
 
 ### Definir función
 
+{% raw %}
 ```powershell
 function Get-Hello {
 	Write-Output "Hola PowerShell"
 }
 ```
+{% endraw %}
 
 ### Ejecutar función
 
+{% raw %}
 ```powershell
 Get-Hello
 ```
+{% endraw %}
 
 ## Manejo de errores
 
@@ -349,6 +369,7 @@ Get-Hello
 
 ### Ejemplo
 
+{% raw %}
 ```powershell
 try {
 	Get-Item archivo.txt
@@ -356,6 +377,7 @@ try {
 	Write-Error "Archivo no encontrado"
 }
 ```
+{% endraw %}
 
 ## Módulos
 
@@ -404,13 +426,17 @@ try {
 	- Uso de métodos nativos
 
 ### Uso de tipos .NET
+{% raw %}
 ```powershell
 [datetime]::Now
-````
+```
+{% endraw %}`
 
+{% raw %}
 ```powershell
 [System.IO.File]::ReadAllText("archivo.txt")
 ```
+{% endraw %}
 
 ## Clases en PowerShell
 
@@ -423,6 +449,7 @@ try {
 
 ### Definición de clase
 
+{% raw %}
 ```powershell
 class Server {
 	[string]$Name
@@ -434,12 +461,14 @@ class Server {
 	}
 }
 ```
+{% endraw %}
 
 ## Enumeraciones (Enums)
 
 * Definen valores constantes legibles
 * Mejoran claridad y validación
 
+{% raw %}
 ```powershell
 enum EnvironmentType {
 	Dev
@@ -447,6 +476,7 @@ enum EnvironmentType {
 	Prod
 }
 ```
+{% endraw %}
 
 ## Parámetros avanzados
 
@@ -459,6 +489,7 @@ enum EnvironmentType {
 
 ### Ejemplo
 
+{% raw %}
 ```powershell
 param (
 	[Parameter(Mandatory)]
@@ -468,6 +499,7 @@ param (
 	[string]$Action
 )
 ```
+{% endraw %}
 
 ## Cmdlets avanzados y Common Parameters
 
@@ -479,9 +511,11 @@ param (
   * `-Confirm`
 * Permiten pruebas seguras y debugging
 
+{% raw %}
 ```powershell
 Stop-Service Spooler -WhatIf
 ```
+{% endraw %}
 
 ## Background Jobs
 
@@ -493,33 +527,41 @@ Stop-Service Spooler -WhatIf
 
 ### Jobs
 
+{% raw %}
 ```powershell
 Start-Job { Get-Process }
 ```
+{% endraw %}
 
+{% raw %}
 ```powershell
 Get-Job | Receive-Job
 ```
+{% endraw %}
 
 ## Parallelismo (ForEach-Object -Parallel)
 
 * Disponible en PowerShell 7+
 * Permite ejecución concurrente
 
+{% raw %}
 ```powershell
 1..10 | ForEach-Object -Parallel {
 	Start-Sleep 1
 }
 ```
+{% endraw %}
 
 ## Acceso a APIs REST
 
 * PowerShell es ideal para automatizar APIs
 * Soporta JSON de forma nativa
 
+{% raw %}
 ```powershell
 Invoke-RestMethod -Uri https://api.github.com
 ```
+{% endraw %}
 
 ## Seguridad y hardening en PowerShell
 
@@ -529,18 +571,22 @@ Invoke-RestMethod -Uri https://api.github.com
 
 ### Firmado de scripts
 
+{% raw %}
 ```powershell
 Set-AuthenticodeSignature script.ps1 $cert
 ```
+{% endraw %}
 
 ## Gestión segura de credenciales
 
 * Evitar credenciales en texto plano
 * Uso de SecureString y Credential Objects
 
+{% raw %}
 ```powershell
 $cred = Get-Credential
 ```
+{% endraw %}
 
 ## PowerShell y CI/CD
 
@@ -588,9 +634,11 @@ $cred = Get-Credential
   * CSV
   * Event Viewer
 
+{% raw %}
 ```powershell
 Write-EventLog -LogName Application -Source PowerShell -EntryType Error -Message "Error crítico"
 ```
+{% endraw %}
 
 ## Testing con Pester
 
@@ -601,6 +649,7 @@ Write-EventLog -LogName Application -Source PowerShell -EntryType Error -Message
   * Validación de scripts
   * Control de regresiones
 
+{% raw %}
 ```powershell
 Describe "Test básico" {
 	It "Debe ser verdadero" {
@@ -608,14 +657,17 @@ Describe "Test básico" {
 	}
 }
 ```
+{% endraw %}
 
 ## Gestión de versiones y compatibilidad
 
 * Detección de versión activa
 
+{% raw %}
 ```powershell
 $PSVersionTable
 ```
+{% endraw %}
 
 * Scripts compatibles:
 

@@ -45,6 +45,7 @@ category: Testing
 	- Mejora la mantenibilidad y reduce duplicación.
 	- Ejemplo:
 
+{% raw %}
 ```js
 class LoginPage {
 	constructor(page) { this.page = page }
@@ -54,7 +55,8 @@ class LoginPage {
 		await this.page.click('button[type="submit"]')
 	}
 }
-````
+```
+{% endraw %}`
 
 ## 🚀 Estrategias de Ejecución y Escalabilidad
 

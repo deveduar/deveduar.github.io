@@ -598,6 +598,7 @@ Donde Aᵢ es la matriz A sustituyendo la columna i por B.
 ### Extensión práctica
 **Ejemplo de rotación 2D con matrices:**
 
+{% raw %}
 ```python
 import numpy as np
 
@@ -614,7 +615,8 @@ R = np.array([[np.cos(theta), -np.sin(theta)],
 # Resultado
 p_rotado = R @ p
 print(p_rotado)
-````
+```
+{% endraw %}`
 
 Este ejemplo muestra cómo usar una matriz para rotar un punto en el plano.
 
@@ -629,6 +631,7 @@ En Python o NumPy:
 
 **Ejemplo:**
 
+{% raw %}
 ```python
 import numpy as np
 
@@ -641,6 +644,7 @@ B = np.array([[2, 0],
 C = np.dot(A, B)
 print(C)
 ```
+{% endraw %}
 
 ---
 
@@ -777,6 +781,7 @@ Podría ampliarse en una futura nota:
 - **Funciones vectorizadas:** aplicar funciones a todos los elementos simultáneamente
 
 **Ejemplo: multiplicación vectorizada en NumPy**
+{% raw %}
 ```python
 import numpy as np
 
@@ -788,7 +793,8 @@ C = A * B
 
 # Producto matricial
 D = A @ B
-````
+```
+{% endraw %}`
 
 ---
 

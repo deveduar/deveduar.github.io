@@ -413,6 +413,7 @@ La integración IaC con observabilidad permite vincular **infraestructura, logs,
 - Correlación de versiones IaC con incidentes (SRE postmortems codificados).  
 
 Ejemplo:
+{% raw %}
 ```yaml
 # Terraform module: provision + observability
 resource "aws_cloudwatch_metric_alarm" "cpu_high" {
@@ -423,7 +424,8 @@ resource "aws_cloudwatch_metric_alarm" "cpu_high" {
 	evaluation_periods = 2
 	alarm_actions = [aws_sns_topic.alerts.arn]
 }
-````
+```
+{% endraw %}`
 
 ---
 
@@ -628,6 +630,7 @@ IaC moderna puede interactuar directamente con sistemas de entrega:
 - Aplicar rollbacks automáticos al detectar errores.  
 
 Ejemplo:
+{% raw %}
 ```yaml
 # Ejemplo GitLab CI integrando Terraform y aplicación
 stages:
@@ -645,7 +648,8 @@ deploy:
     - kubectl apply -f k8s/
   needs:
     - infra
-````
+```
+{% endraw %}`
 
 ---
 
@@ -771,6 +775,7 @@ El siguiente paso en madurez IaC es la **verificación formal**, que busca garan
 - Verificación de redundancia en infraestructuras críticas.
 
 Ejemplo conceptual:
+{% raw %}
 ```rego
 # Rego - Open Policy Agent
 package security
@@ -779,7 +784,8 @@ deny[msg] {
 	input.resource.public == true
 	msg := sprintf("Bucket público no permitido: %s", [input.resource.name])
 }
-````
+```
+{% endraw %}`
 
 ---
 

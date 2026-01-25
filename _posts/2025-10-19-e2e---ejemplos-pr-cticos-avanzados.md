@@ -26,6 +26,7 @@ Se utilizan principalmente [Playwright](/testing/playwright/) y Cypress como bas
 
 Guardar la sesión de un usuario autenticado para evitar logins repetitivos y acelerar la suite E2E.
 
+{% raw %}
 ```ts
 // tests/auth.setup.ts
 import { test as setup, expect } from '@playwright/test'
@@ -41,14 +42,17 @@ setup('guardar sesión autenticada', async ({ page }) => {
 	await expect(page).toHaveURL(/dashboard/)
 	await page.context().storageState({ path: STORAGE_STATE })
 })
-````
+```
+{% endraw %}`
 
+{% raw %}
 ```ts
 // playwright.config.ts
 use: {
 	storageState: 'playwright/.auth/user.json'
 }
 ```
+{% endraw %}
 
 Ahora todas las pruebas posteriores reutilizan la sesión, evitando autenticarse en cada ejecución.
 
@@ -58,6 +62,7 @@ Ahora todas las pruebas posteriores reutilizan la sesión, evitando autenticarse
 
 Simular respuestas dinámicas del backend sin alterar el servidor.
 
+{% raw %}
 ```ts
 import { test, expect } from '@playwright/test'
 
@@ -78,6 +83,7 @@ test('interceptar respuesta del servidor', async ({ page }) => {
 	expect(productos).toContain('Producto Falso A')
 })
 ```
+{% endraw %}
 
 Ideal para aislar pruebas de la infraestructura backend o validar comportamiento ante respuestas personalizadas.
 
@@ -87,6 +93,7 @@ Ideal para aislar pruebas de la infraestructura backend o validar comportamiento
 
 Ejemplo de cómo verificar que el estado global del frontend cambie correctamente tras una acción del usuario.
 
+{% raw %}
 ```js
 describe('Gestión de estado global (Redux)', () => {
 	it('Verifica que el carrito se actualiza en el store', () => {
@@ -101,6 +108,7 @@ describe('Gestión de estado global (Redux)', () => {
 	})
 })
 ```
+{% endraw %}
 
 Permite probar la lógica interna de la aplicación sin depender únicamente del DOM.
 
@@ -110,6 +118,7 @@ Permite probar la lógica interna de la aplicación sin depender únicamente del
 
 Ejecutar flujos diferentes según el entorno o rol del usuario.
 
+{% raw %}
 ```ts
 import { test, expect } from '@playwright/test'
 
@@ -124,6 +133,7 @@ test('acceso según rol de usuario', async ({ page }) => {
 	}
 })
 ```
+{% endraw %}
 
 Permite validar permisos y comportamientos adaptados a distintos contextos de despliegue (QA, staging, producción).
 
@@ -133,6 +143,7 @@ Permite validar permisos y comportamientos adaptados a distintos contextos de de
 
 Simular interacciones entre pestañas, útil en flujos como notificaciones o webs colaborativas.
 
+{% raw %}
 ```ts
 test('sincronización entre pestañas', async ({ browser }) => {
 	const contexto = await browser.newContext()
@@ -150,6 +161,7 @@ test('sincronización entre pestañas', async ({ browser }) => {
 	expect(titulo).toBe('Documento E2E')
 })
 ```
+{% endraw %}
 
 Demuestra control avanzado del entorno multi-pestaña y sincronización de estados.
 
@@ -159,6 +171,7 @@ Demuestra control avanzado del entorno multi-pestaña y sincronización de estad
 
 Comparar capturas de pantalla actuales con imágenes base para detectar cambios visuales no deseados.
 
+{% raw %}
 ```ts
 import { test, expect } from '@playwright/test'
 
@@ -170,6 +183,7 @@ test('comparación visual del dashboard', async ({ page }) => {
 	})
 })
 ```
+{% endraw %}
 
 Detecta regresiones visuales provocadas por cambios de CSS, layout o componentes UI.
 
@@ -179,6 +193,7 @@ Detecta regresiones visuales provocadas por cambios de CSS, layout o componentes
 
 Generar datos aleatorios pero coherentes para evitar dependencias de datos fijos.
 
+{% raw %}
 ```ts
 import { test, expect } from '@playwright/test'
 import { faker } from '@faker-js/faker'
@@ -197,6 +212,7 @@ test('crear usuario dinámico', async ({ page }) => {
 	await expect(page.locator('.mensaje-exito')).toHaveText(/cuenta creada/i)
 })
 ```
+{% endraw %}
 
 Los factories permiten tests más realistas y resistentes a cambios de datos.
 
@@ -206,6 +222,7 @@ Los factories permiten tests más realistas y resistentes a cambios de datos.
 
 Simular respuestas lentas o errores de red para probar la resiliencia del frontend.
 
+{% raw %}
 ```js
 describe('Simulación de red lenta y error 500', () => {
 	it('Muestra mensaje de error cuando el servidor falla', () => {
@@ -221,6 +238,7 @@ describe('Simulación de red lenta y error 500', () => {
 	})
 })
 ```
+{% endraw %}
 
 Útil para validar comportamiento bajo condiciones reales de latencia o caída del backend.
 
@@ -230,6 +248,7 @@ describe('Simulación de red lenta y error 500', () => {
 
 Ejecutar el mismo flujo con múltiples conjuntos de datos.
 
+{% raw %}
 ```ts
 import { test, expect } from '@playwright/test'
 
@@ -250,6 +269,7 @@ for (const caso of casos) {
 	})
 }
 ```
+{% endraw %}
 
 Cada caso se ejecuta como prueba independiente, lo que facilita cobertura de múltiples combinaciones de entrada.
 

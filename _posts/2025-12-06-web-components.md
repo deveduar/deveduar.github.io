@@ -113,6 +113,7 @@ Estos frameworks generan Web Components o trabajan bien con ellos.
 ## Código: Ejemplos esenciales
 
 ### Ejemplo: Custom Element básico
+{% raw %}
 ```javascript
 class MiElemento extends HTMLElement {
 	connectedCallback() {
@@ -120,10 +121,12 @@ class MiElemento extends HTMLElement {
 	}
 }
 customElements.define('mi-elemento', MiElemento);
-````
+```
+{% endraw %}`
 
 ### Ejemplo: Shadow DOM + estilos encapsulados
 
+{% raw %}
 ```javascript
 class CajaInfo extends HTMLElement {
 	constructor() {
@@ -141,9 +144,11 @@ class CajaInfo extends HTMLElement {
 }
 customElements.define('caja-info', CajaInfo);
 ```
+{% endraw %}
 
 ### Ejemplo: Declarative Shadow DOM (SSR friendly)
 
+{% raw %}
 ```html
 <div>
 	<template shadowrootmode="open">
@@ -154,9 +159,11 @@ customElements.define('caja-info', CajaInfo);
 	</template>
 </div>
 ```
+{% endraw %}
 
 ### Ejemplo: Constructable Stylesheets
 
+{% raw %}
 ```javascript
 const styles = new CSSStyleSheet();
 styles.replaceSync(`:host { display: block; color: red; }`);
@@ -171,6 +178,7 @@ class BotonRojo extends HTMLElement {
 }
 customElements.define('boton-rojo', BotonRojo);
 ```
+{% endraw %}
 
 # Web Components — Expansión de conceptos pendientes  
 `$= dv.current().file.tags.join(" ")`
@@ -215,6 +223,7 @@ A continuación se amplían **temas avanzados** que no estaban en la nota anteri
 - Asegurar accesibilidad con **axe-core** sobre el árbol renderizado.
 
 ### Ejemplo: test mínimo recomendado
+{% raw %}
 ```javascript
 import { expect, fixture } from '@open-wc/testing';
 
@@ -222,7 +231,8 @@ it('renderiza contenido en el slot', async () => {
 	const el = await fixture(`<caja-info>Hola</caja-info>`);
 	expect(el.shadowRoot.textContent).to.contain('Hola');
 });
-````
+```
+{% endraw %}`
 
 ## Accesibilidad aplicada a Web Components
 
@@ -266,6 +276,7 @@ it('renderiza contenido en el slot', async () => {
 
 ### Ejemplo de estructura SSR
 
+{% raw %}
 ```html
 <card-info>
 	<template shadowrootmode="open">
@@ -277,6 +288,7 @@ it('renderiza contenido en el slot', async () => {
 	Contenido inicial del componente
 </card-info>
 ```
+{% endraw %}
 
 ## Design Systems con Web Components (expansión)
 
@@ -449,6 +461,7 @@ Patrón recomendado:
 ## Ejemplos de patrones arquitectónicos
 
 ### Patrón: Render Stateless  
+{% raw %}
 ```javascript
 class XTag extends HTMLElement {
 	set data(value) {
@@ -461,10 +474,12 @@ class XTag extends HTMLElement {
 		`;
 	}
 }
-````
+```
+{% endraw %}`
 
 ### Patrón: Componente con Controller interno
 
+{% raw %}
 ```javascript
 class ModalBox extends HTMLElement {
 	constructor() {
@@ -474,13 +489,16 @@ class ModalBox extends HTMLElement {
 	}
 }
 ```
+{% endraw %}
 
 ### Patrón: Hoja de estilos compartida
 
+{% raw %}
 ```javascript
 export const sharedStyles = new CSSStyleSheet();
 sharedStyles.replaceSync(`:host { display: block; }`);
 ```
+{% endraw %}
 
 ## Qué podrías añadir como siguientes notas
 

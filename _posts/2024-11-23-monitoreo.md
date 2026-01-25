@@ -77,12 +77,14 @@ Este documento expande y organiza los conceptos clave relacionados con el monito
 - **Soporte para múltiples protocolos** (HTTP, SNMP, JDBC, etc.)
 - **Monitorización de performance** de aplicaciones web
 - **Implementación via Docker**:
-	```bash
+	{% raw %}
+```bash
 	docker run -d --name sitescope \
 	-p 8080:8080 \
 	-e SS_ADMIN_PASSWORD=your_password \
 	microfocus/sitescope:latest
 	```
+{% endraw %}
 - **Enlace oficial**: [hub.docker.com/r/microfocus/sitescope](https://hub.docker.com/r/microfocus/sitescope)
 
 ### Uptime Kuma
@@ -92,7 +94,8 @@ Este documento expande y organiza los conceptos clave relacionados con el monito
 - **Notificaciones push** a múltiples plataformas
 - **Auto-discovery** de servicios y endpoints
 - **Implementación auto-alojada**:
-	```bash
+	{% raw %}
+```bash
 	# Usando Docker
 	docker run -d \
 	--restart=always \
@@ -100,6 +103,7 @@ Este documento expande y organiza los conceptos clave relacionados con el monito
 	-v uptime-kuma:/app/data \
 	louislam/uptime-kuma:1
 	```
+{% endraw %}
 - **Características avanzadas**:
 	- Certificados SSL/TLS monitoring
 	- Heartbeat monitoring con intervalos personalizados
@@ -230,6 +234,7 @@ La publicación especial NIST SP 800-53 (Security and Privacy Controls for Infor
 ### Best Practices en Logging y Observability
 
 #### Logging Efectivo
+{% raw %}
 ```json
 {
   "timestamp": "2024-01-15T10:30:00Z",
@@ -245,6 +250,7 @@ La publicación especial NIST SP 800-53 (Security and Privacy Controls for Infor
   }
 }
 ```
+{% endraw %}
 
 #### Implementación de Observabilidad
 - **Instrumentación consistente** across services

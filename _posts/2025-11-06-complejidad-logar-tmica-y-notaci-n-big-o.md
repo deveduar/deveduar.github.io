@@ -58,11 +58,13 @@ La complejidad logarítmica aparece cuando el tamaño del problema **se reduce p
 
 **Ejemplo clásico:**  
 En una **búsqueda binaria**, cada paso descarta la mitad del espacio de búsqueda:
+{% raw %}
 ```
 
 n → n/2 → n/4 → n/8 → ... → 1
 
 ```
+{% endraw %}
 El número de pasos necesarios es `log₂(n)`.
 
 ### **Características**
@@ -116,11 +118,13 @@ Ejemplo:
 ## ⚙️ COMPLEJIDAD COMBINADA
 
 Muchos algoritmos combinan distintas fases con diferentes complejidades:
+{% raw %}
 ```
 
 O(n) + O(log n) = O(n)
 
 ```
+{% endraw %}
 El término dominante (de mayor orden) determina la complejidad final.
 
 **Ejemplo:**
@@ -131,6 +135,7 @@ El término dominante (de mayor orden) determina la complejidad final.
 
 ## 📊 REPRESENTACIÓN GRÁFICA (Intuitiva)
 
+{% raw %}
 ```
 
 Crecimiento (tiempo)
@@ -146,6 +151,7 @@ Crecimiento (tiempo)
 └───────────────────────────> Tamaño del input (n)
 
 ```
+{% endraw %}
 
 ---
 

@@ -196,13 +196,15 @@ category: Desarrollo multiplataforma
 - Pruebas parametrizadas y barridos de condiciones
 - Integración con pipelines de CI/CD para simulación y validación
 - Ejemplo MATLAB:
+{% raw %}
 ```matlab
 for k = 1:100
 	simOut = sim('miModeloSimulink','SimulationMode','normal','StopTime','10');
 	results(k) = simOut.y(end);
 end
 plot(results)
-````
+```
+{% endraw %}`
 
 ## Documentación y trazabilidad en proyectos grandes
 

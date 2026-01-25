@@ -182,6 +182,7 @@ categories:
 
 
 # omnivore IA
+{% raw %}
 ```base
 type: list
 name: "Notas con #powershell en Omnivore"
@@ -203,8 +204,10 @@ views:
         direction: DESC
 
 ```
+{% endraw %}
 
 # omnivore data-science
+{% raw %}
 ```base
 type: list
 name: "Notas con #powershell en Omnivore"
@@ -226,6 +229,7 @@ views:
         direction: DESC
 
 ```
+{% endraw %}
 
 
 

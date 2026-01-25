@@ -46,6 +46,7 @@ Esta nota reúne **estrategias, patrones y técnicas de depuración** para entor
 Asegura que los mocks cargados sean los correctos antes de ejecutar los tests.
 
 ### Ejemplo
+{% raw %}
 ```ts
 import { server } from '@/mocks/server';
 import { handlers } from '@/mocks/handlers';
@@ -53,7 +54,8 @@ import { handlers } from '@/mocks/handlers';
 test('todos los handlers activos están registrados', () => {
 	expect(server.listHandlers().length).toBe(handlers.length);
 });
-````
+```
+{% endraw %}`
 
 ### Consejo
 
@@ -69,6 +71,7 @@ Registrar la información completa de las solicitudes interceptadas y sus respue
 
 ### Ejemplo
 
+{% raw %}
 ```ts
 import { server } from '@/mocks/server';
 
@@ -80,6 +83,7 @@ server.events.on('response:mocked', (res, req) => {
 	console.log(`🧩 [MSW] Mock response for ${req.url.href}:`, res.status);
 });
 ```
+{% endraw %}
 
 🧭 _Ideal para entornos CI/CD_ donde los logs de consola pueden ayudar a identificar mocks fallidos.
 
@@ -93,6 +97,7 @@ Sobrescribir un handler temporalmente dentro de un test sin afectar al resto.
 
 ### Ejemplo
 
+{% raw %}
 ```ts
 import { rest } from 'msw';
 import { server } from '@/mocks/server';
@@ -107,6 +112,7 @@ test('mock temporal de error 500', async () => {
 	expect(response.status).toBe(500);
 });
 ```
+{% endraw %}
 
 🧠 Usa este patrón cuando quieras simular fallos o respuestas lentas (`ctx.delay()`).
 
@@ -120,6 +126,7 @@ Define un mock por defecto para endpoints desconocidos.
 
 ### Ejemplo
 
+{% raw %}
 ```ts
 import { server } from '@/mocks/server';
 
@@ -131,6 +138,7 @@ beforeAll(() => {
 	});
 });
 ```
+{% endraw %}
 
 💡 Esto evita falsos positivos y te alerta si un endpoint no está cubierto por un handler.
 
@@ -144,6 +152,7 @@ Monitoriza la actividad de MSW con herramientas externas o dashboards personaliz
 
 ### Ejemplo Integración
 
+{% raw %}
 ```ts
 server.events.on('request:start', (req) => {
 	window.__MOCK_TRAFFIC__ = window.__MOCK_TRAFFIC__ || [];
@@ -154,6 +163,7 @@ server.events.on('request:start', (req) => {
 	});
 });
 ```
+{% endraw %}
 
 👁️ _Puedes inspeccionar `window.__MOCK_TRAFFIC__` desde la consola del navegador para ver todas las llamadas interceptadas._
 
@@ -167,6 +177,7 @@ Usa `ctx` para inyectar headers, tiempos y logs durante la simulación.
 
 ### Ejemplo
 
+{% raw %}
 ```ts
 rest.get('/api/products', (req, res, ctx) => {
 	console.info('Fetching products mock:', req.url.searchParams);
@@ -178,6 +189,7 @@ rest.get('/api/products', (req, res, ctx) => {
 	);
 });
 ```
+{% endraw %}
 
 📦 Ideal para validar cómo maneja tu frontend retrasos o cabeceras específicas.
 
@@ -191,6 +203,7 @@ Detecta errores de mocks directamente en pipelines.
 
 ### Ejemplo (Jest + GitHub Actions)
 
+{% raw %}
 ```ts
 test('no hay peticiones sin mock en CI', async () => {
 	server.events.on('request:unhandled', (req) => {
@@ -199,6 +212,7 @@ test('no hay peticiones sin mock en CI', async () => {
 	await runAppSimulation();
 });
 ```
+{% endraw %}
 
 🧩 _Esto evita fallos silenciosos cuando un test nuevo introduce endpoints sin cubrir._
 
@@ -212,12 +226,14 @@ Garantiza limpieza total del entorno de mock tras cada test suite.
 
 ### Ejemplo
 
+{% raw %}
 ```ts
 import { server } from '@/mocks/server';
 
 afterEach(() => server.resetHandlers());
 afterAll(() => server.close());
 ```
+{% endraw %}
 
 🧹 _Evita que un handler modificado persista y afecte otros tests._
 
@@ -231,6 +247,7 @@ Combina [profiler](/testing/profiler/) con MSW para medir impacto del tráfico m
 
 ### Ejemplo
 
+{% raw %}
 ```ts
 import { startProfiler, stopProfiler } from '@/utils/profiler';
 
@@ -241,6 +258,7 @@ test('performance del flujo login', async () => {
 	expect(metrics.responseTime).toBeLessThan(100);
 });
 ```
+{% endraw %}
 
 🧠 Esto permite validar no solo la respuesta funcional, sino también el tiempo de simulación.
 
@@ -252,9 +270,11 @@ test('performance del flujo login', async () => {
 
 En modo browser, puedes activar `window.msw` para depurar desde consola:
 
+{% raw %}
 ```js
 window.msw.worker.printHandlers();
 ```
+{% endraw %}
 
 📘 Muestra todos los endpoints simulados y sus métodos.
 
@@ -268,12 +288,14 @@ Permite pausar la ejecución del handler para inspeccionar contexto.
 
 ### Ejemplo
 
+{% raw %}
 ```ts
 rest.get('/api/profile', (req, res, ctx) => {
 	debugger; // pausa ejecución al interceptar
 	return res(ctx.status(200), ctx.json({ user: 'debug-mode' }));
 });
 ```
+{% endraw %}
 
 🪲 Ideal cuando no sabes si el mock se ejecuta realmente.
 

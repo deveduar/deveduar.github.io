@@ -180,6 +180,7 @@ Un web service actúa como un **proveedor** de funcionalidades accesibles por un
 ## Código de Ejemplo: SOAP (Java – JAX-WS)
 
 ### Servicio
+{% raw %}
 ```java
 import javax.jws.WebMethod;
 import javax.jws.WebService;
@@ -192,10 +193,12 @@ public class HolaService {
 		return "Hola " + nombre;
 	}
 }
-````
+```
+{% endraw %}`
 
 ### Cliente
 
+{% raw %}
 ```java
 URL url = new URL("http://localhost:8080/hola?wsdl");
 QName qname = new QName("http://servicio/", "HolaService");
@@ -203,6 +206,7 @@ Service service = Service.create(url, qname);
 HolaService hola = service.getPort(HolaService.class);
 System.out.println(hola.saludar("Eduardo"));
 ```
+{% endraw %}
 
 # Web Services — Conceptos Avanzados y Temas Faltantes
 

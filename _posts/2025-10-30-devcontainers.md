@@ -47,7 +47,8 @@ Esto lo convierte en una solución clave para el desarrollo **reproducible, port
 1. **Archivo `devcontainer.json`**
 	Define la configuración del entorno, las extensiones, el contenedor base, puertos y comandos de inicialización.
 	
-	```json
+	{% raw %}
+```json
 	{
 		"name": "Mi Proyecto",
 		"image": "node:18",
@@ -62,17 +63,20 @@ Esto lo convierte en una solución clave para el desarrollo **reproducible, port
 		}
 	}
 	```
+{% endraw %}
 
 2. **Dockerfile o imagen base**
 	Define cómo se construye el entorno. Puede extender imágenes oficiales o personalizadas.
 	
-	```dockerfile
+	{% raw %}
+```dockerfile
 	FROM node:18
 	WORKDIR /workspace
 	COPY package*.json ./
 	RUN npm install
 	COPY . .
 	```
+{% endraw %}
 
 3. **Configuraciones opcionales**
 	- `docker-compose.yml`: permite definir servicios adicionales (por ejemplo, una base de datos).

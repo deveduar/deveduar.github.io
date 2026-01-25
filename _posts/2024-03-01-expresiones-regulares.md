@@ -39,12 +39,14 @@ Esta RegEx valida si una cadena cumple el formato básico de una dirección de c
 - Usa el método `.test()` para devolver `true` o `false`
 
 ### Código
+{% raw %}
 ```javascript
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const email = "usuario@example.com";
 const isValidEmail = emailRegex.test(email);
 console.log(isValidEmail); // true
-````
+```
+{% endraw %}`
 
 ### Explicación del patrón
 
@@ -66,6 +68,7 @@ En este ejemplo, convierte a mayúsculas las palabras "casa" o "calle" encontrad
 
 ### Código
 
+{% raw %}
 ```javascript
 const text = "La casa está en la calle principal";
 const replacedText = text.replace(/casa|calle/g, function(match) {
@@ -73,6 +76,7 @@ const replacedText = text.replace(/casa|calle/g, function(match) {
 });
 console.log(replacedText); // "La CASA está en la CALLE principal"
 ```
+{% endraw %}
 
 ### Explicación del patrón
 
@@ -96,6 +100,7 @@ Se usa cuando queremos obtener múltiples datos dentro de una misma cadena, como
 
 ### Código
 
+{% raw %}
 ```javascript
 const text = "La temperatura es de 20°C y la humedad es del 75%";
 const regex = /(\d+)[°%](C?)/g;
@@ -105,6 +110,7 @@ while (match != null) {
 	match = regex.exec(text);
 }
 ```
+{% endraw %}
 
 ### Explicación del patrón
 
@@ -205,11 +211,13 @@ Permiten definir conjuntos de caracteres válidos:
 Por defecto, los cuantificadores son **codiciosos** (*greedy*): capturan la mayor cantidad posible.  
 Se puede limitar su comportamiento agregando `?`:
 
+{% raw %}
 ```javascript
 const text = "<p>Uno</p><p>Dos</p>";
 console.log(text.match(/<p>.*<\/p>/));   // Greedy → captura todo
 console.log(text.match(/<p>.*?<\/p>/g)); // Lazy → captura cada par individual
-````
+```
+{% endraw %}`
 
 ---
 
@@ -232,11 +240,13 @@ Permiten validar contexto **sin consumir caracteres**:
 
 #### Ejemplo
 
+{% raw %}
 ```javascript
 // Buscar números que están seguidos de una palabra "USD"
 const regex = /\d+(?=\sUSD)/g;
 console.log("100 USD, 50 EUR".match(regex)); // ["100"]
 ```
+{% endraw %}
 
 ---
 
@@ -244,6 +254,7 @@ console.log("100 USD, 50 EUR".match(regex)); // ["100"]
 
 ### Extracción de errores en logs
 
+{% raw %}
 ```javascript
 const logs = `
 [ERROR] 2025-11-12: Disk full
@@ -254,14 +265,17 @@ const errors = logs.match(/^\[ERROR\].*$/gm);
 console.log(errors); 
 // ["[ERROR] 2025-11-12: Disk full", "[ERROR] 2025-11-13: Timeout"]
 ```
+{% endraw %}
 
 ### Filtrado por fechas y formatos
 
+{% raw %}
 ```javascript
 const text = "Eventos: 2025-11-12, 12/11/2025, 11.11.2025";
 const fechas = text.match(/\b\d{2,4}[-\/.]\d{2}[-\/.]\d{2,4}\b/g);
 console.log(fechas);
 ```
+{% endraw %}
 
 ---
 
@@ -274,10 +288,12 @@ console.log(fechas);
 
 #### Ejemplo de backtracking costoso
 
+{% raw %}
 ```javascript
 // Evitar esto: demasiadas combinaciones posibles
 /(a+)+$/;
 ```
+{% endraw %}
 
 ---
 
@@ -338,11 +354,13 @@ Expansión de las notas sobre RegEx y RegEx Avanzado, centrada en **integración
 	- `.exec()` → ejecuta RegEx con grupos de captura
 
 #### Ejemplo de split
+{% raw %}
 ```javascript
 const texto = "uno, dos; tres | cuatro";
 const partes = texto.split(/[;,|]\s*/);
 console.log(partes); // ["uno", "dos", "tres", "cuatro"]
-````
+```
+{% endraw %}`
 
 ### En Python
 
@@ -356,12 +374,14 @@ console.log(partes); // ["uno", "dos", "tres", "cuatro"]
 
 #### Ejemplo
 
+{% raw %}
 ```python
 import re
 pattern = re.compile(r"\d{4}-\d{2}-\d{2}")
 fechas = pattern.findall("Fechas: 2025-11-12, 2024-10-10")
 print(fechas)  # ['2025-11-12', '2024-10-10']
 ```
+{% endraw %}
 
 ### En Bash y grep
 
@@ -378,15 +398,19 @@ print(fechas)  # ['2025-11-12', '2024-10-10']
 
 Algunos motores (MySQL, PostgreSQL) soportan expresiones regulares:
 
+{% raw %}
 ```sql
 SELECT email FROM usuarios WHERE email REGEXP '^[^@]+@example\\.com$';
 ```
+{% endraw %}
 
 ### PostgreSQL avanzado
 
+{% raw %}
 ```sql
 SELECT regexp_replace(nombre, '\s+', ' ', 'g') FROM clientes;
 ```
+{% endraw %}
 
 Permite limpieza y normalización de texto directamente en consultas.
 
@@ -424,12 +448,14 @@ Las expresiones regulares pueden generar vulnerabilidades si no se controlan ade
 Utiliza herramientas para medir tiempos de ejecución en distintos patrones.
 Ejemplo en Node.js:
 
+{% raw %}
 ```javascript
 console.time("regex");
 const r = /^[A-Z][a-z]+$/;
 for (let i = 0; i < 1000000; i++) r.test("Palabra");
 console.timeEnd("regex");
 ```
+{% endraw %}
 
 ---
 
@@ -449,6 +475,7 @@ Aunque las RegEx son estáticas, pueden combinarse con modelos de ML:
 
 Extracción de IPs, fechas y mensajes:
 
+{% raw %}
 ```javascript
 const log = `
 192.168.1.1 - [2025-11-12 10:00] "GET /index.html"
@@ -460,6 +487,7 @@ while ((match = pattern.exec(log)) !== null) {
 	console.log(`IP: ${match[1]} | Fecha: ${match[2]} | Acción: ${match[3]}`);
 }
 ```
+{% endraw %}
 
 ### Casos reales
 
@@ -477,11 +505,13 @@ while ((match = pattern.exec(log)) !== null) {
 
 #### Ejemplo
 
+{% raw %}
 ```javascript
 const markdown = "Visita [OpenAI](https://openai.com)";
 const enlaces = [...markdown.matchAll(/\[([^\]]+)\]\(([^)]+)\)/g)];
 console.log(enlaces); // [["[OpenAI](https://openai.com)", "OpenAI", "https://openai.com"]]
 ```
+{% endraw %}
 
 ---
 
@@ -575,12 +605,14 @@ El **álgebra regular** define tres operaciones básicas sobre lenguajes:
 Donde `ε` es la **cadena vacía**.
 
 Ejemplo formal:
+{% raw %}
 ```
 
 Si L = {ab}
 → L* = {ε, ab, abab, ababab, …}
 
 ```
+{% endraw %}
 
 ---
 
@@ -614,12 +646,14 @@ Un NFA puede transformarse en un **autómata finito determinista (DFA)** equival
 - **Cierre:** cerrados bajo unión, concatenación y clausura de Kleene
 
 #### Ejemplo visual
+{% raw %}
 ```
 
 Expresión: (a|b)*abb
 → acepta cualquier cadena que termine en "abb"
 
 ```
+{% endraw %}
 
 Representa el conjunto de todas las cadenas sobre {a,b} que finalizan en "abb".
 
@@ -746,9 +780,11 @@ El uso más común de las RegEx es la manipulación y análisis de texto plano.
 - **Filtrado y extracción de datos** en logs, ficheros CSV o documentos.
 
 Ejemplo:
+{% raw %}
 ```regex
 (?<=User: )\w+
-````
+```
+{% endraw %}`
 
 → extrae el nombre de usuario tras la cadena `"User: "` en un log.
 
@@ -764,9 +800,11 @@ Integradas en múltiples lenguajes:
 
 Uso típico:
 
+{% raw %}
 ```bash
 grep -E "error|fail|critical" logs.txt
 ```
+{% endraw %}
 
 → filtra solo las líneas relevantes en registros de errores.
 
@@ -801,10 +839,12 @@ Las RegEx se usan formalmente para describir los **tokens** del lenguaje fuente:
 
 Ejemplo:
 
+{% raw %}
 ```
 IDENTIFICADOR = [a-zA-Z_][a-zA-Z0-9_]*
 NUMERO = [0-9]+(\.[0-9]+)?
 ```
+{% endraw %}
 
 ---
 
@@ -887,10 +927,12 @@ Herramientas que ofrecen **alternativas más legibles o seguras**:
 
 Ejemplo con `pyparsing`:
 
+{% raw %}
 ```python
 from pyparsing import Word, nums
 number = Word(nums)
 ```
+{% endraw %}
 
 → más legible que `\d+`
 

@@ -83,6 +83,7 @@ Teorema de Incompletitud de Gödel y la imposibilidad de abarcar toda la verdad 
 Un patrón indecible es uno cuya evolución no puede determinarse sin ejecutarlo.  
 Incluso en un sistema simple como el Juego de la Vida, existen configuraciones que actúan como máquinas de Turing completas, lo que implica que no hay algoritmo general para predecir su comportamiento sin simularlo.
 
+{% raw %}
 ```python
 # Ejemplo: simulación básica del Juego de la Vida
 import numpy as np
@@ -98,7 +99,8 @@ def life_step(board):
 			elif board[i, j] == 0 and neighbors == 3:
 				new_board[i, j] = 1
 	return new_board
-````
+```
+{% endraw %}`
 
 ---
 
@@ -188,6 +190,7 @@ El principio de que **no todo lo verdadero puede ser probado** se extiende más 
 	Representa la probabilidad de que un programa aleatorio se detenga.  
 	Es un número real bien definido pero **no computable**, y contiene una cantidad infinita de información irreductible.
 
+{% raw %}
 ```python
 # Cálculo experimental de aproximaciones a Omega de Chaitin
 # (simulación conceptual, no cálculo real)
@@ -205,7 +208,8 @@ def estimate_omega(n):
 	return count / n
 
 print("Aproximación experimental a Omega:", estimate_omega(10000))
-````
+```
+{% endraw %}`
 
 ---
 

@@ -112,6 +112,7 @@ Cassandra Query Language es similar a SQL, pero:
 - Las consultas deben respetar índices y claves de partición.
 
 ### DDL Básico
+{% raw %}
 ```sql
 CREATE KEYSPACE mi_keyspace
 WITH replication = {
@@ -125,16 +126,19 @@ CREATE TABLE usuarios (
 	email TEXT,
 	PRIMARY KEY (id)
 );
-````
+```
+{% endraw %}`
 
 ### DML Básico
 
+{% raw %}
 ```sql
 INSERT INTO usuarios (id, nombre, email)
 VALUES (uuid(), 'Ana', 'ana@example.com');
 
 SELECT * FROM usuarios WHERE id = 1234;
 ```
+{% endraw %}
 
 
 ## Casos de Uso
@@ -150,6 +154,7 @@ SELECT * FROM usuarios WHERE id = 1234;
 
 ### Ejemplo de docker-compose
 
+{% raw %}
 ```yaml
 version: '3'
 services:
@@ -164,6 +169,7 @@ services:
 		volumes:
 			- ./data:/var/lib/cassandra
 ```
+{% endraw %}
 
 ## Comparación con Otros Sistemas
 
@@ -209,12 +215,14 @@ En Cassandra, forma parte del conjunto de comandos disponibles dentro de CQL.
 	- Índices
 	- Tipos (UDTs)
 - Ejemplos:
+{% raw %}
 ```sql
 CREATE KEYSPACE demo WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 3};
 CREATE TABLE usuarios (id UUID PRIMARY KEY, nombre TEXT);
 ALTER TABLE usuarios ADD email TEXT;
 DROP TABLE usuarios;
 ```
+{% endraw %}
 
 ### DML (Data Manipulation Language)
 Lenguaje para **manipular los datos dentro de las tablas**.  
@@ -226,12 +234,14 @@ Incluye operaciones de inserción, actualización, eliminación y lectura.
 	- DELETE
 	- SELECT
 - Ejemplos:
+{% raw %}
 ```sql
 INSERT INTO usuarios (id, nombre) VALUES (uuid(), 'Ana');
 SELECT * FROM usuarios WHERE id = 1234;
 UPDATE usuarios SET nombre = 'Ana María' WHERE id = 1234;
 DELETE FROM usuarios WHERE id = 1234;
 ```
+{% endraw %}
 
 ### CQL (Cassandra Query Language)
 Lenguaje de consulta propio de Cassandra, inspirado en SQL pero adaptado al **modelo distribuido y orientado a columnas**.
@@ -242,6 +252,7 @@ Lenguaje de consulta propio de Cassandra, inspirado en SQL pero adaptado al **mo
 	- No hay subconsultas complejas.
 	- Las consultas deben seguir el modelo de datos (clave de partición + clustering).
 - Ejemplo general:
+{% raw %}
 ```sql
 CREATE TABLE sensores (
 	device_id TEXT,
@@ -252,6 +263,7 @@ CREATE TABLE sensores (
 
 SELECT * FROM sensores WHERE device_id = 'A1' AND ts > '2025-01-01';
 ```
+{% endraw %}
 
 ### Resumen Comparativo
 - **DDL**: define la estructura de la base de datos.  
@@ -269,6 +281,7 @@ En Cassandra **no existe DCL como tal**, pero sí hay comandos para gestionar **
 - **LIST ROLES**
 
 ### Ejemplo
+{% raw %}
 ```sql
 CREATE ROLE admin WITH PASSWORD = '1234' AND SUPERUSER = true AND LOGIN = true;
 
@@ -277,7 +290,8 @@ GRANT SELECT ON KEYSPACE demo TO usuario1;
 REVOKE MODIFY ON KEYSPACE demo FROM usuario1;
 
 DROP ROLE usuario1;
-````
+```
+{% endraw %}`
 
 ---
 
@@ -294,18 +308,22 @@ Sin embargo, sí hay un mecanismo parcial: **Lightweight Transactions (LWT)**.
 
 ### Ejemplo (IF EXISTS / IF NOT EXISTS)
 
+{% raw %}
 ```sql
 INSERT INTO usuarios (id, email)
 VALUES (1, 'a@a.com')
 IF NOT EXISTS;
 ```
+{% endraw %}
 
+{% raw %}
 ```sql
 UPDATE usuarios
 SET email = 'nuevo@a.com'
 WHERE id = 1
 IF email = 'a@a.com';
 ```
+{% endraw %}
 
 ---
 
@@ -316,11 +334,13 @@ En Cassandra **SELECT** forma parte de DML, pero conceptualmente puede separarse
 
 ### Ejemplo
 
+{% raw %}
 ```sql
 SELECT nombre, email
 FROM usuarios
 WHERE id = 1;
 ```
+{% endraw %}
 
 ---
 
@@ -344,20 +364,25 @@ No son DDL/DML pero forman parte del ecosistema:
 
 #### Consultas al *schema*
 
+{% raw %}
 ```sql
 DESCRIBE KEYSPACE demo;
 DESCRIBE TABLE demo.usuarios;
 ```
+{% endraw %}
 
 #### Gestión de índices
 
+{% raw %}
 ```sql
 CREATE INDEX idx_email ON usuarios(email);
 DROP INDEX idx_email;
 ```
+{% endraw %}
 
 #### User Defined Types (UDT)
 
+{% raw %}
 ```sql
 CREATE TYPE direccion (
 	calle TEXT,
@@ -366,11 +391,13 @@ CREATE TYPE direccion (
 
 ALTER TYPE direccion ADD codigo_postal INT;
 ```
+{% endraw %}
 
 #### User Defined Functions (UDF) y Aggregates
 
 * Permiten lógica en el servidor (no recomendadas para cargas críticas).
 
+{% raw %}
 ```sql
 CREATE FUNCTION sumar(a int, b int)
 RETURNS NULL ON NULL INPUT
@@ -378,6 +405,7 @@ RETURNS int
 LANGUAGE java
 AS 'return Integer.valueOf(a + b);';
 ```
+{% endraw %}
 
 ---
 

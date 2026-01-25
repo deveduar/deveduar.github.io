@@ -32,6 +32,7 @@ category: Testing
 
 Usa los valores del request (`req.params`, `req.url.searchParams`, `req.body`) para devolver respuestas personalizadas.
 
+{% raw %}
 ```ts
 rest.get('/api/user/:id', (req, res, ctx) => {
 	const { id } = req.params;
@@ -42,7 +43,8 @@ rest.get('/api/user/:id', (req, res, ctx) => {
 
 	return res(ctx.status(200), ctx.json(data));
 });
-````
+```
+{% endraw %}`
 
 🧭 Ideal cuando:
 
@@ -57,6 +59,7 @@ rest.get('/api/user/:id', (req, res, ctx) => {
 
 Útil para pruebas de seguridad o de comportamiento según autenticación.
 
+{% raw %}
 ```ts
 rest.get('/api/secure', (req, res, ctx) => {
 	const token = req.headers.get('Authorization');
@@ -66,6 +69,7 @@ rest.get('/api/secure', (req, res, ctx) => {
 	return res(ctx.status(200), ctx.json({ message: 'Access granted' }));
 });
 ```
+{% endraw %}
 
 🧩 Caso real:
 
@@ -80,18 +84,22 @@ rest.get('/api/secure', (req, res, ctx) => {
 
 Simula condiciones reales de red o tests de UX (spinners, loaders, timeouts).
 
+{% raw %}
 ```ts
 rest.get('/api/data', (req, res, ctx) => {
 	return res(ctx.delay(1500), ctx.status(200), ctx.json({ data: 'ok' }));
 });
 ```
+{% endraw %}
 
 🔄 También puedes usar:
 
+{% raw %}
 ```ts
 ctx.delay('infinite'); // bloquea hasta que se cancele manualmente
 ctx.delay(0); // sin delay
 ```
+{% endraw %}
 
 ---
 
@@ -99,6 +107,7 @@ ctx.delay(0); // sin delay
 
 Permite reemplazar respuestas temporalmente en un test específico sin alterar los mocks globales.
 
+{% raw %}
 ```ts
 server.use(
 	rest.get('/api/user/1', (req, res, ctx) => {
@@ -106,6 +115,7 @@ server.use(
 	})
 );
 ```
+{% endraw %}
 
 ✅ Esto es útil para:
 
@@ -120,6 +130,7 @@ server.use(
 
 Define respuestas HTTP personalizadas con headers y mensajes de error.
 
+{% raw %}
 ```ts
 rest.post('/api/login', (req, res, ctx) => {
 	const { username } = req.body;
@@ -133,6 +144,7 @@ rest.post('/api/login', (req, res, ctx) => {
 	return res(ctx.status(200), ctx.json({ token: 'jwt-token' }));
 });
 ```
+{% endraw %}
 
 🧠 Este patrón refuerza tests de UI para mostrar mensajes claros y manejar headers HTTP.
 
@@ -142,20 +154,24 @@ rest.post('/api/login', (req, res, ctx) => {
 
 Puedes usar **configuración condicional** para iniciar MSW solo en los contextos adecuados.
 
+{% raw %}
 ```ts
 if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
 	const { worker } = await import('./mocks/browser');
 	await worker.start({ onUnhandledRequest: 'bypass' });
 }
 ```
+{% endraw %}
 
 🔹 `onUnhandledRequest: 'bypass'` permite que peticiones reales pasen cuando no hay handler definido.
 
 🔹 En CI:
 
+{% raw %}
 ```ts
 beforeAll(() => server.listen({ onUnhandledRequest: 'error' }));
 ```
+{% endraw %}
 
 Así los tests fallan si haces una request sin definir su mock explícitamente.
 
@@ -165,6 +181,7 @@ Así los tests fallan si haces una request sin definir su mock explícitamente.
 
 Organiza tus mocks modularmente por dominio.
 
+{% raw %}
 ```ts
 // src/mocks/handlers/index.ts
 import { userHandlers } from './user';
@@ -172,6 +189,7 @@ import { productHandlers } from './product';
 
 export const handlers = [...userHandlers, ...productHandlers];
 ```
+{% endraw %}
 
 📦 Ventajas:
 
@@ -188,6 +206,7 @@ export const handlers = [...userHandlers, ...productHandlers];
 
 Ejemplo de cómo devolver diferentes respuestas en sucesivas llamadas (useful para reintentos o paginación).
 
+{% raw %}
 ```ts
 let callCount = 0;
 
@@ -197,6 +216,7 @@ rest.get('/api/status', (req, res, ctx) => {
 	return res(ctx.status(200), ctx.json({ ok: true }));
 });
 ```
+{% endraw %}
 
 🔁 Reproduce fallos intermitentes y prueba resiliencia del cliente.
 
@@ -206,6 +226,7 @@ rest.get('/api/status', (req, res, ctx) => {
 
 Verifica que los mocks se invocan correctamente, asegurando que el cliente usa la API esperada.
 
+{% raw %}
 ```ts
 import { fetchUser } from '../api';
 import { server } from '../mocks/server';
@@ -224,6 +245,7 @@ test('debería llamar a /api/user con método GET', async () => {
 	expect(spy).toHaveBeenCalledWith('GET');
 });
 ```
+{% endraw %}
 
 🧪 Este patrón es especialmente útil para validar integración cliente–API.
 
@@ -235,6 +257,7 @@ Simula un backend completo local para desarrollo offline o demos.
 
 Estructura:
 
+{% raw %}
 ```
 /mocks
  ├── browser.ts
@@ -244,21 +267,26 @@ Estructura:
  │   ├── product.ts
  │   └── order.ts
 ```
+{% endraw %}
 
 Ejemplo de `browser.ts`:
 
+{% raw %}
 ```ts
 import { setupWorker } from 'msw';
 import { handlers } from './handlers';
 export const worker = setupWorker(...handlers);
 ```
+{% endraw %}
 
 🚀 Con esto puedes iniciar tu app frontend sin un backend real:
 
+{% raw %}
 ```bash
 npm run dev
 # y MSW interceptará todas las llamadas API
 ```
+{% endraw %}
 
 ---
 

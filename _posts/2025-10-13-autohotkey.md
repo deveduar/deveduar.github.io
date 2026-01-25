@@ -291,23 +291,28 @@ Está diseñado para ser:
 ## Ejemplos de código
 
 ### Hotkeys básicos
+{% raw %}
 ```ahk
 ; Abrir calculadora con Ctrl+Alt+C
 ^!c::Run calc.exe
 
 ; Minimizar todas las ventanas con Win+M
 #M::WinMinimizeAll
-````
+```
+{% endraw %}`
 
 ### Hotstrings (expansión de texto)
 
+{% raw %}
 ```ahk
 ::fecha::%A_YYYY%-%A_MM%-%A_DD%
 ::addr::123 Calle Principal, Ciudad, País
 ```
+{% endraw %}
 
 ### Automatización de ventanas
 
+{% raw %}
 ```ahk
 ; Mover la ventana activa a la esquina superior izquierda
 ^!Left::
@@ -315,9 +320,11 @@ Está diseñado para ser:
 	WinMove, A, , 0, 0, Width, Height
 return
 ```
+{% endraw %}
 
 ### Uso de temporizadores
 
+{% raw %}
 ```ahk
 ; Mostrar mensaje cada 10 segundos
 SetTimer, Aviso, 10000
@@ -327,9 +334,11 @@ Aviso:
 	ToolTip, ¡No olvides tomar un descanso!
 return
 ```
+{% endraw %}
 
 ### Automatización de Obsidian
 
+{% raw %}
 ```ahk
 ; Crear nueva nota con plantilla
 ^!n::
@@ -338,9 +347,11 @@ return
 	Send, Nueva Nota{Enter}
 return
 ```
+{% endraw %}
 
 ### Integración con Python
 
+{% raw %}
 ```ahk
 ; Ejecutar script Python y mostrar resultado
 ^!p::
@@ -348,9 +359,11 @@ return
 	MsgBox, Script Python ejecutado correctamente
 return
 ```
+{% endraw %}
 
 ### GUI básica
 
+{% raw %}
 ```ahk
 ; Crear ventana con botones
 Gui, Add, Text,, Selecciona una acción:
@@ -370,6 +383,7 @@ return
 GuiClose:
 	ExitApp
 ```
+{% endraw %}
 
 ## Automatización avanzada
 
