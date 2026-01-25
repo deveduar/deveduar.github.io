@@ -121,16 +121,6 @@
       "url": "/uncategorized/2024-05-06---my-favourite-plugins-for-obsidian"
     },
     {
-      "id": "2024-04-30-my-css-snnipets-for-obsidian",
-      "title": "My CSS snnipets for obsidian",
-      "slug": "2024-04-30-my-css-snnipets-for-obsidian",
-      "date": "2024-04-30",
-      "categories": [
-        "uncategorized"
-      ],
-      "url": "/uncategorized/2024-04-30-my-css-snnipets-for-obsidian"
-    },
-    {
       "id": "2024-05-02-my-personal-blog",
       "title": "My personal Blog",
       "slug": "2024-05-02-my-personal-blog",
@@ -139,6 +129,16 @@
         "uncategorized"
       ],
       "url": "/uncategorized/2024-05-02-my-personal-blog"
+    },
+    {
+      "id": "2024-04-30-my-css-snnipets-for-obsidian",
+      "title": "My CSS snnipets for obsidian",
+      "slug": "2024-04-30-my-css-snnipets-for-obsidian",
+      "date": "2024-04-30",
+      "categories": [
+        "uncategorized"
+      ],
+      "url": "/uncategorized/2024-04-30-my-css-snnipets-for-obsidian"
     },
     {
       "id": "2024-04-30-desarrollo-de-mi-primer-juego",
@@ -2848,6 +2848,16 @@
       "url": "/desarrollo%20web/cms"
     },
     {
+      "id": "desarrollo-multiplataforma",
+      "title": "Desarrollo multiplataforma",
+      "slug": "desarrollo-multiplataforma",
+      "date": "2025-05-22 04:26",
+      "categories": [
+        "uncategorized"
+      ],
+      "url": "/uncategorized/desarrollo-multiplataforma"
+    },
+    {
       "id": "xamarin",
       "title": "xamarin",
       "slug": "xamarin",
@@ -2976,16 +2986,6 @@
         "Desarrollo multiplataforma"
       ],
       "url": "/desarrollo%20multiplataforma/bash"
-    },
-    {
-      "id": "desarrollo-multiplataforma",
-      "title": "Desarrollo multiplataforma",
-      "slug": "desarrollo-multiplataforma",
-      "date": "2025-05-22 04:26",
-      "categories": [
-        "uncategorized"
-      ],
-      "url": "/uncategorized/desarrollo-multiplataforma"
     },
     {
       "id": "databases",
@@ -3418,16 +3418,6 @@
       "url": "/uncategorized/cloud"
     },
     {
-      "id": "cicd",
-      "title": "CICD",
-      "slug": "cicd",
-      "date": "2024-11-23 17:04",
-      "categories": [
-        "devops"
-      ],
-      "url": "/devops/cicd"
-    },
-    {
       "id": "vercel",
       "title": "Vercel",
       "slug": "vercel",
@@ -3586,6 +3576,16 @@
         "cloud"
       ],
       "url": "/cloud/akamai"
+    },
+    {
+      "id": "cicd",
+      "title": "CICD",
+      "slug": "cicd",
+      "date": "2024-11-23 17:04",
+      "categories": [
+        "devops"
+      ],
+      "url": "/devops/cicd"
     },
     {
       "id": "ciberseguridad",
@@ -4638,6 +4638,16 @@
       "url": "/backend/apache-flink"
     },
     {
+      "id": "automatizacion-y-build",
+      "title": "Automatizacion y Build",
+      "slug": "automatizacion-y-build",
+      "date": "2024-11-20 17:53",
+      "categories": [
+        "uncategorized"
+      ],
+      "url": "/uncategorized/automatizacion-y-build"
+    },
+    {
       "id": "yeoman",
       "title": "yeoman",
       "slug": "yeoman",
@@ -4788,26 +4798,6 @@
       "url": "/uncategorized/celery-conceptos-avanzados-y-configuraci-n-profesional"
     },
     {
-      "id": "automatizacion-y-build",
-      "title": "Automatizacion y Build",
-      "slug": "automatizacion-y-build",
-      "date": "2024-11-20 17:53",
-      "categories": [
-        "uncategorized"
-      ],
-      "url": "/uncategorized/automatizacion-y-build"
-    },
-    {
-      "id": "autenticacion",
-      "title": "autenticacion",
-      "slug": "autenticacion",
-      "date": "2025-04-15 19:15",
-      "categories": [
-        "uncategorized"
-      ],
-      "url": "/uncategorized/autenticacion"
-    },
-    {
       "id": "tacacs",
       "title": "TACACS",
       "slug": "tacacs",
@@ -4936,6 +4926,16 @@
         "autenticacion"
       ],
       "url": "/autenticacion/abac"
+    },
+    {
+      "id": "autenticacion",
+      "title": "autenticacion",
+      "slug": "autenticacion",
+      "date": "2025-04-15 19:15",
+      "categories": [
+        "uncategorized"
+      ],
+      "url": "/uncategorized/autenticacion"
     },
     {
       "id": "administracion-de-sistemas",
@@ -13494,6 +13494,74 @@
       "target": "/backend/firebase/"
     },
     {
+      "source": "/uncategorized/desarrollo-multiplataforma",
+      "target": "/uncategorized/software-engineering/"
+    },
+    {
+      "source": "/uncategorized/desarrollo-multiplataforma",
+      "target": "/desarrollo%20multiplataforma/react-native/"
+    },
+    {
+      "source": "/uncategorized/desarrollo-multiplataforma",
+      "target": "/desarrollo%20multiplataforma/flutter/"
+    },
+    {
+      "source": "/uncategorized/desarrollo-multiplataforma",
+      "target": "/desarrollo%20multiplataforma/kotlin/"
+    },
+    {
+      "source": "/uncategorized/desarrollo-multiplataforma",
+      "target": "/desarrollo%20multiplataforma/rust/"
+    },
+    {
+      "source": "/uncategorized/desarrollo-multiplataforma",
+      "target": "/frontend/pwa/"
+    },
+    {
+      "source": "/uncategorized/desarrollo-multiplataforma",
+      "target": "/desarrollo%20multiplataforma/ionic/"
+    },
+    {
+      "source": "/uncategorized/desarrollo-multiplataforma",
+      "target": "/desarrollo%20multiplataforma/native-script/"
+    },
+    {
+      "source": "/uncategorized/desarrollo-multiplataforma",
+      "target": "/desarrollo%20multiplataforma/capacitor/"
+    },
+    {
+      "source": "/uncategorized/desarrollo-multiplataforma",
+      "target": "/desarrollo%20multiplataforma/react-native/"
+    },
+    {
+      "source": "/uncategorized/desarrollo-multiplataforma",
+      "target": "/desarrollo%20multiplataforma/power-apps/"
+    },
+    {
+      "source": "/uncategorized/desarrollo-multiplataforma",
+      "target": "/desarrollo%20multiplataforma/electron/"
+    },
+    {
+      "source": "/uncategorized/desarrollo-multiplataforma",
+      "target": "/desarrollo%20multiplataforma/maui-net/"
+    },
+    {
+      "source": "/uncategorized/desarrollo-multiplataforma",
+      "target": "/software%20engineering/net/"
+    },
+    {
+      "source": "/uncategorized/desarrollo-multiplataforma",
+      "target": "/software%20engineering/csharp/"
+    },
+    {
+      "source": "/uncategorized/desarrollo-multiplataforma",
+      "target": "/software%20engineering/cpp/"
+    },
+    {
+      "source": "/uncategorized/desarrollo-multiplataforma",
+      "target": "/desarrollo%20multiplataforma/simulaciones/"
+    },
+    {
       "source": "/desarrollo%20multiplataforma/xamarin",
       "target": "/software%20engineering/net/"
     },
@@ -13780,74 +13848,6 @@
     {
       "source": "/desarrollo%20multiplataforma/capacitor",
       "target": "/frontend/angular/"
-    },
-    {
-      "source": "/uncategorized/desarrollo-multiplataforma",
-      "target": "/uncategorized/software-engineering/"
-    },
-    {
-      "source": "/uncategorized/desarrollo-multiplataforma",
-      "target": "/desarrollo%20multiplataforma/react-native/"
-    },
-    {
-      "source": "/uncategorized/desarrollo-multiplataforma",
-      "target": "/desarrollo%20multiplataforma/flutter/"
-    },
-    {
-      "source": "/uncategorized/desarrollo-multiplataforma",
-      "target": "/desarrollo%20multiplataforma/kotlin/"
-    },
-    {
-      "source": "/uncategorized/desarrollo-multiplataforma",
-      "target": "/desarrollo%20multiplataforma/rust/"
-    },
-    {
-      "source": "/uncategorized/desarrollo-multiplataforma",
-      "target": "/frontend/pwa/"
-    },
-    {
-      "source": "/uncategorized/desarrollo-multiplataforma",
-      "target": "/desarrollo%20multiplataforma/ionic/"
-    },
-    {
-      "source": "/uncategorized/desarrollo-multiplataforma",
-      "target": "/desarrollo%20multiplataforma/native-script/"
-    },
-    {
-      "source": "/uncategorized/desarrollo-multiplataforma",
-      "target": "/desarrollo%20multiplataforma/capacitor/"
-    },
-    {
-      "source": "/uncategorized/desarrollo-multiplataforma",
-      "target": "/desarrollo%20multiplataforma/react-native/"
-    },
-    {
-      "source": "/uncategorized/desarrollo-multiplataforma",
-      "target": "/desarrollo%20multiplataforma/power-apps/"
-    },
-    {
-      "source": "/uncategorized/desarrollo-multiplataforma",
-      "target": "/desarrollo%20multiplataforma/electron/"
-    },
-    {
-      "source": "/uncategorized/desarrollo-multiplataforma",
-      "target": "/desarrollo%20multiplataforma/maui-net/"
-    },
-    {
-      "source": "/uncategorized/desarrollo-multiplataforma",
-      "target": "/software%20engineering/net/"
-    },
-    {
-      "source": "/uncategorized/desarrollo-multiplataforma",
-      "target": "/software%20engineering/csharp/"
-    },
-    {
-      "source": "/uncategorized/desarrollo-multiplataforma",
-      "target": "/software%20engineering/cpp/"
-    },
-    {
-      "source": "/uncategorized/desarrollo-multiplataforma",
-      "target": "/desarrollo%20multiplataforma/simulaciones/"
     },
     {
       "source": "/uncategorized/databases",
@@ -15142,30 +15142,6 @@
       "target": "/cloud/auto-scaling/"
     },
     {
-      "source": "/devops/cicd",
-      "target": "/uncategorized/devops/"
-    },
-    {
-      "source": "/devops/cicd",
-      "target": "/testing/testing/"
-    },
-    {
-      "source": "/devops/cicd",
-      "target": "/uncategorized/monitoreo/"
-    },
-    {
-      "source": "/devops/cicd",
-      "target": "/devops/jenkins/"
-    },
-    {
-      "source": "/devops/cicd",
-      "target": "/cloud/gitlab/"
-    },
-    {
-      "source": "/devops/cicd",
-      "target": "/software%20engineering/git/"
-    },
-    {
       "source": "/cloud/vercel",
       "target": "/uncategorized/devops/"
     },
@@ -15612,6 +15588,30 @@
     {
       "source": "/cloud/akamai",
       "target": "/virtualizacion/openshift/"
+    },
+    {
+      "source": "/devops/cicd",
+      "target": "/uncategorized/devops/"
+    },
+    {
+      "source": "/devops/cicd",
+      "target": "/testing/testing/"
+    },
+    {
+      "source": "/devops/cicd",
+      "target": "/uncategorized/monitoreo/"
+    },
+    {
+      "source": "/devops/cicd",
+      "target": "/devops/jenkins/"
+    },
+    {
+      "source": "/devops/cicd",
+      "target": "/cloud/gitlab/"
+    },
+    {
+      "source": "/devops/cicd",
+      "target": "/software%20engineering/git/"
     },
     {
       "source": "/uncategorized/ciberseguridad",
@@ -20426,6 +20426,106 @@
       "target": "/backend/apache-flink/"
     },
     {
+      "source": "/uncategorized/automatizacion-y-build",
+      "target": "/testing/testing/"
+    },
+    {
+      "source": "/uncategorized/automatizacion-y-build",
+      "target": "/testing/linters/"
+    },
+    {
+      "source": "/uncategorized/automatizacion-y-build",
+      "target": "/desarrollo%20multiplataforma/power-apps/"
+    },
+    {
+      "source": "/uncategorized/automatizacion-y-build",
+      "target": "/uncategorized/devops/"
+    },
+    {
+      "source": "/uncategorized/automatizacion-y-build",
+      "target": "/uncategorized/cloud/"
+    },
+    {
+      "source": "/uncategorized/automatizacion-y-build",
+      "target": "/backend/cron-jobs/"
+    },
+    {
+      "source": "/uncategorized/automatizacion-y-build",
+      "target": "/devops/cicd/"
+    },
+    {
+      "source": "/uncategorized/automatizacion-y-build",
+      "target": "/devops/iinfraestructura-como-codigo/"
+    },
+    {
+      "source": "/uncategorized/automatizacion-y-build",
+      "target": "/backend/webhooks/"
+    },
+    {
+      "source": "/uncategorized/automatizacion-y-build",
+      "target": "/devops/sdlc/"
+    },
+    {
+      "source": "/uncategorized/automatizacion-y-build",
+      "target": "/automatizacion%20y%20build/gulp/"
+    },
+    {
+      "source": "/uncategorized/automatizacion-y-build",
+      "target": "/backend/node-js/"
+    },
+    {
+      "source": "/uncategorized/automatizacion-y-build",
+      "target": "/automatizacion%20y%20build/celery/"
+    },
+    {
+      "source": "/uncategorized/automatizacion-y-build",
+      "target": "/automatizacion%20y%20build/gradle/"
+    },
+    {
+      "source": "/uncategorized/automatizacion-y-build",
+      "target": "/automatizacion%20y%20build/maven/"
+    },
+    {
+      "source": "/uncategorized/automatizacion-y-build",
+      "target": "/automatizacion%20y%20build/webpack/"
+    },
+    {
+      "source": "/uncategorized/automatizacion-y-build",
+      "target": "/automatizacion%20y%20build/vite/"
+    },
+    {
+      "source": "/uncategorized/automatizacion-y-build",
+      "target": "/automatizacion%20y%20build/nx/"
+    },
+    {
+      "source": "/uncategorized/automatizacion-y-build",
+      "target": "/automatizacion%20y%20build/yeoman/"
+    },
+    {
+      "source": "/uncategorized/automatizacion-y-build",
+      "target": "/automatizacion%20y%20build/nx/"
+    },
+    {
+      "source": "/uncategorized/automatizacion-y-build",
+      "target": "/automatizacion%20y%20build/jhipster/"
+    },
+    {
+      "source": "/uncategorized/automatizacion-y-build",
+      "target": "/software%20engineering/docker/"
+    },
+    {
+      "source": "/uncategorized/automatizacion-y-build",
+      "target": "/backend/cron-jobs/"
+    },
+    {
+      "source": "/uncategorized/automatizacion-y-build",
+      "target": "/automatizacion%20y%20build/agentes-ia/"
+    },
+    {
+      "source": "/uncategorized/automatizacion-y-build",
+      "target": "/automatizacion%20y%20build/scraping/"
+    },
+    {
       "source": "/automatizacion%20y%20build/yeoman",
       "target": "/uncategorized/automatizacion-y-build/"
     },
@@ -20890,334 +20990,6 @@
       "target": "/uncategorized/automatizacion-y-build/"
     },
     {
-      "source": "/uncategorized/automatizacion-y-build",
-      "target": "/testing/testing/"
-    },
-    {
-      "source": "/uncategorized/automatizacion-y-build",
-      "target": "/testing/linters/"
-    },
-    {
-      "source": "/uncategorized/automatizacion-y-build",
-      "target": "/desarrollo%20multiplataforma/power-apps/"
-    },
-    {
-      "source": "/uncategorized/automatizacion-y-build",
-      "target": "/uncategorized/devops/"
-    },
-    {
-      "source": "/uncategorized/automatizacion-y-build",
-      "target": "/uncategorized/cloud/"
-    },
-    {
-      "source": "/uncategorized/automatizacion-y-build",
-      "target": "/backend/cron-jobs/"
-    },
-    {
-      "source": "/uncategorized/automatizacion-y-build",
-      "target": "/devops/cicd/"
-    },
-    {
-      "source": "/uncategorized/automatizacion-y-build",
-      "target": "/devops/iinfraestructura-como-codigo/"
-    },
-    {
-      "source": "/uncategorized/automatizacion-y-build",
-      "target": "/backend/webhooks/"
-    },
-    {
-      "source": "/uncategorized/automatizacion-y-build",
-      "target": "/devops/sdlc/"
-    },
-    {
-      "source": "/uncategorized/automatizacion-y-build",
-      "target": "/automatizacion%20y%20build/gulp/"
-    },
-    {
-      "source": "/uncategorized/automatizacion-y-build",
-      "target": "/backend/node-js/"
-    },
-    {
-      "source": "/uncategorized/automatizacion-y-build",
-      "target": "/automatizacion%20y%20build/celery/"
-    },
-    {
-      "source": "/uncategorized/automatizacion-y-build",
-      "target": "/automatizacion%20y%20build/gradle/"
-    },
-    {
-      "source": "/uncategorized/automatizacion-y-build",
-      "target": "/automatizacion%20y%20build/maven/"
-    },
-    {
-      "source": "/uncategorized/automatizacion-y-build",
-      "target": "/automatizacion%20y%20build/webpack/"
-    },
-    {
-      "source": "/uncategorized/automatizacion-y-build",
-      "target": "/automatizacion%20y%20build/vite/"
-    },
-    {
-      "source": "/uncategorized/automatizacion-y-build",
-      "target": "/automatizacion%20y%20build/nx/"
-    },
-    {
-      "source": "/uncategorized/automatizacion-y-build",
-      "target": "/automatizacion%20y%20build/yeoman/"
-    },
-    {
-      "source": "/uncategorized/automatizacion-y-build",
-      "target": "/automatizacion%20y%20build/nx/"
-    },
-    {
-      "source": "/uncategorized/automatizacion-y-build",
-      "target": "/automatizacion%20y%20build/jhipster/"
-    },
-    {
-      "source": "/uncategorized/automatizacion-y-build",
-      "target": "/software%20engineering/docker/"
-    },
-    {
-      "source": "/uncategorized/automatizacion-y-build",
-      "target": "/backend/cron-jobs/"
-    },
-    {
-      "source": "/uncategorized/automatizacion-y-build",
-      "target": "/automatizacion%20y%20build/agentes-ia/"
-    },
-    {
-      "source": "/uncategorized/automatizacion-y-build",
-      "target": "/automatizacion%20y%20build/scraping/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/autenticacion/criptografia/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/autenticacion/pki-infraestructura-de-clave-p-blica/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/uncategorized/ciberseguridad/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/ciberseguridad/control-de-datos/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/uncategorized/backend/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/autenticacion/sso-single-sign-on/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/autenticacion/better-auth/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/autenticacion/jwt/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/autenticacion/oauth/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/autenticacion/saml/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/autenticacion/iam-gesti-n-de-identidades-y-acceso/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/autenticacion/rbac/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/autenticacion/abac/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/autenticacion/ldap/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/devops/windows-server/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/autenticacion/saml/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/autenticacion/tacacs/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/autenticacion/radius/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/autenticacion/oauth/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/autenticacion/jwt/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/backend/firebase/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/autenticacion/sso-single-sign-on/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/autenticacion/oauth/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/autenticacion/jwt/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/autenticacion/oauth/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/autenticacion/jwt/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/autenticacion/sso-single-sign-on/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/uncategorized/ciberseguridad/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/autenticacion/sso-single-sign-on/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/autenticacion/saml/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/autenticacion/oauth/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/backend/firebase/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/autenticacion/rbac/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/autenticacion/abac/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/autenticacion/oauth/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/autenticacion/jwt/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/autenticacion/oauth/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/uncategorized/ciberseguridad/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/autenticacion/oauth/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/autenticacion/jwt/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/autenticacion/sso-single-sign-on/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/autenticacion/oauth/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/autenticacion/jwt/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/autenticacion/sso-single-sign-on/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/uncategorized/ciberseguridad/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/uncategorized/ciberseguridad/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/autenticacion/iam-gesti-n-de-identidades-y-acceso/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/autenticacion/saml/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/autenticacion/oauth/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/autenticacion/oauth/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/autenticacion/jwt/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/autenticacion/sso-single-sign-on/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/backend/firebase/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/autenticacion/oauth/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/autenticacion/jwt/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/autenticacion/sso-single-sign-on/"
-    },
-    {
-      "source": "/uncategorized/autenticacion",
-      "target": "/backend/firebase/"
-    },
-    {
       "source": "/autenticacion/tacacs",
       "target": "/autenticacion/iam-gesti-n-de-identidades-y-acceso/"
     },
@@ -21540,6 +21312,234 @@
     {
       "source": "/autenticacion/abac",
       "target": "/autenticacion/iam-gesti-n-de-identidades-y-acceso/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/autenticacion/criptografia/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/autenticacion/pki-infraestructura-de-clave-p-blica/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/uncategorized/ciberseguridad/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/ciberseguridad/control-de-datos/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/uncategorized/backend/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/autenticacion/sso-single-sign-on/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/autenticacion/better-auth/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/autenticacion/jwt/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/autenticacion/oauth/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/autenticacion/saml/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/autenticacion/iam-gesti-n-de-identidades-y-acceso/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/autenticacion/rbac/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/autenticacion/abac/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/autenticacion/ldap/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/devops/windows-server/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/autenticacion/saml/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/autenticacion/tacacs/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/autenticacion/radius/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/autenticacion/oauth/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/autenticacion/jwt/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/backend/firebase/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/autenticacion/sso-single-sign-on/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/autenticacion/oauth/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/autenticacion/jwt/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/autenticacion/oauth/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/autenticacion/jwt/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/autenticacion/sso-single-sign-on/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/uncategorized/ciberseguridad/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/autenticacion/sso-single-sign-on/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/autenticacion/saml/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/autenticacion/oauth/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/backend/firebase/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/autenticacion/rbac/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/autenticacion/abac/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/autenticacion/oauth/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/autenticacion/jwt/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/autenticacion/oauth/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/uncategorized/ciberseguridad/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/autenticacion/oauth/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/autenticacion/jwt/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/autenticacion/sso-single-sign-on/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/autenticacion/oauth/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/autenticacion/jwt/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/autenticacion/sso-single-sign-on/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/uncategorized/ciberseguridad/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/uncategorized/ciberseguridad/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/autenticacion/iam-gesti-n-de-identidades-y-acceso/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/autenticacion/saml/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/autenticacion/oauth/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/autenticacion/oauth/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/autenticacion/jwt/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/autenticacion/sso-single-sign-on/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/backend/firebase/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/autenticacion/oauth/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/autenticacion/jwt/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/autenticacion/sso-single-sign-on/"
+    },
+    {
+      "source": "/uncategorized/autenticacion",
+      "target": "/backend/firebase/"
     },
     {
       "source": "/uncategorized/administracion-de-sistemas",
