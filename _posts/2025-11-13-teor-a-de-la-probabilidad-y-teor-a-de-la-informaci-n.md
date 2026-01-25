@@ -134,10 +134,10 @@ Algunas distribuciones fundamentales:
 
 - **Bernoulli:** $P(X=1)=p, \, P(X=0)=1-p$
 - **Binomial:** $P(X=k)=\binom{n}{k}p^k(1-p)^{n-k}$
-- **Poisson:** $P(X=k)=\frac{\lambda^k e^{-\lambda}}{k!}$
+- **Poisson:** $P(X=k)=\frac{\lambda^k e^{-\lambda{{ "}}" }}{k!}$
 - **Uniforme continua:** $f(x)=\frac{1}{b-a}$ para $a \le x \le b$
 - **Normal (Gaussiana):**
-  $$f(x)=\frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}$$
+  $$f(x)=\frac{1}{\sqrt{2\pi\sigma^2{{ "}}" }} e^{-\frac{(x-\mu)^2}{2\sigma^2{{ "}}" }}$$
 - **Exponencial:** $f(x)=\lambda e^{-\lambda x}, \, x \ge 0$
 
 ---
@@ -555,7 +555,7 @@ $$
 - **Correlación:**
 
 $$
-\rho_{X,Y} = \frac{\operatorname{Cov}(X,Y)}{\sqrt{\operatorname{Var}(X)\operatorname{Var}(Y)}}
+\rho_{X,Y} = \frac{\operatorname{Cov}(X,Y)}{\sqrt{\operatorname{Var}(X)\operatorname{Var}(Y){{ "}}" }}
 $$
 
 ---
@@ -577,13 +577,13 @@ $$
 - **Poisson:**  
 
 $$
-P(X=k) = \frac{\lambda^k e^{-\lambda}}{k!}, \quad k=0,1,2,\dots
+P(X=k) = \frac{\lambda^k e^{-\lambda{{ "}}" }}{k!}, \quad k=0,1,2,\dots
 $$
 
 - **Normal (Gaussiana):**  
 
 $$
-f_X(x) = \frac{1}{\sqrt{2 \pi \sigma^2}} \exp\Big(-\frac{(x-\mu)^2}{2\sigma^2}\Big)
+f_X(x) = \frac{1}{\sqrt{2 \pi \sigma^2{{ "}}" }} \exp\Big(-\frac{(x-\mu)^2}{2\sigma^2}\Big)
 $$
 
 ---

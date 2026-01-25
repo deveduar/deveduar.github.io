@@ -271,16 +271,6 @@
       "url": "/testing/roadmap-de-tdd-con-ejemplo-de-uso-en-una-empresa"
     },
     {
-      "id": "qunit",
-      "title": "QUnit",
-      "slug": "qunit",
-      "date": "2025-10-15 17:38",
-      "categories": [
-        "Testing"
-      ],
-      "url": "/testing/qunit"
-    },
-    {
       "id": "qunit-guia-para-entrevistas",
       "title": "qunit guia para entrevistas",
       "slug": "qunit-guia-para-entrevistas",
@@ -289,6 +279,16 @@
         "Testing"
       ],
       "url": "/testing/qunit-guia-para-entrevistas"
+    },
+    {
+      "id": "qunit",
+      "title": "QUnit",
+      "slug": "qunit",
+      "date": "2025-10-15 17:38",
+      "categories": [
+        "Testing"
+      ],
+      "url": "/testing/qunit"
     },
     {
       "id": "qunit---debugging--diagn-stico-avanzado-e-integraci-n-cicd-con-coverage-moderno--nyc--c8-",
@@ -375,16 +375,6 @@
       "url": "/testing/practicas-y-ejemplos-codigo-comunes-de-testing-a-2025-extenso"
     },
     {
-      "id": "playwright",
-      "title": "Playwright",
-      "slug": "playwright",
-      "date": "2025-01-29 18:46",
-      "categories": [
-        "Testing"
-      ],
-      "url": "/testing/playwright"
-    },
-    {
       "id": "playwright---temas-avanzados-y-casos-especiales",
       "title": "Playwright - Temas Avanzados y Casos Especiales",
       "slug": "playwright---temas-avanzados-y-casos-especiales",
@@ -393,6 +383,16 @@
         "Testing"
       ],
       "url": "/testing/playwright---temas-avanzados-y-casos-especiales"
+    },
+    {
+      "id": "playwright",
+      "title": "Playwright",
+      "slug": "playwright",
+      "date": "2025-01-29 18:46",
+      "categories": [
+        "Testing"
+      ],
+      "url": "/testing/playwright"
     },
     {
       "id": "phpunit",
@@ -425,16 +425,6 @@
       "url": "/testing/mocks-msw---patrones-y-casos-reales"
     },
     {
-      "id": "mocks-msw---patrones-de-validaci-n-y-depuraci-n",
-      "title": "Mocks MSW - patrones de validación y depuración",
-      "slug": "mocks-msw---patrones-de-validaci-n-y-depuraci-n",
-      "date": "2025-10-17 18:38",
-      "categories": [
-        "Testing"
-      ],
-      "url": "/testing/mocks-msw---patrones-de-validaci-n-y-depuraci-n"
-    },
-    {
       "id": "mocks-msw---patrones-de-dise-o-y-arquitectura-de-mocks",
       "title": "Mocks MSW - patrones de diseño y arquitectura de mocks",
       "slug": "mocks-msw---patrones-de-dise-o-y-arquitectura-de-mocks",
@@ -443,6 +433,16 @@
         "Testing"
       ],
       "url": "/testing/mocks-msw---patrones-de-dise-o-y-arquitectura-de-mocks"
+    },
+    {
+      "id": "mocks-msw---patrones-de-validaci-n-y-depuraci-n",
+      "title": "Mocks MSW - patrones de validación y depuración",
+      "slug": "mocks-msw---patrones-de-validaci-n-y-depuraci-n",
+      "date": "2025-10-17 18:38",
+      "categories": [
+        "Testing"
+      ],
+      "url": "/testing/mocks-msw---patrones-de-validaci-n-y-depuraci-n"
     },
     {
       "id": "mocks-msw---integraci-n-avanzada-con-jest--vitest-y-playwright",
@@ -1568,16 +1568,6 @@
       "url": "/management/ticketing"
     },
     {
-      "id": "project-management",
-      "title": "Project Management",
-      "slug": "project-management",
-      "date": "2025-05-21 20:08",
-      "categories": [
-        "Management"
-      ],
-      "url": "/management/project-management"
-    },
-    {
       "id": "sap",
       "title": "SAP",
       "slug": "sap",
@@ -1588,14 +1578,14 @@
       "url": "/management/sap"
     },
     {
-      "id": "product-management",
-      "title": "Product Management",
-      "slug": "product-management",
-      "date": "2025-05-21 20:07",
+      "id": "project-management",
+      "title": "Project Management",
+      "slug": "project-management",
+      "date": "2025-05-21 20:08",
       "categories": [
         "Management"
       ],
-      "url": "/management/product-management"
+      "url": "/management/project-management"
     },
     {
       "id": "jira",
@@ -1606,6 +1596,16 @@
         "Management"
       ],
       "url": "/management/jira"
+    },
+    {
+      "id": "product-management",
+      "title": "Product Management",
+      "slug": "product-management",
+      "date": "2025-05-21 20:07",
+      "categories": [
+        "Management"
+      ],
+      "url": "/management/product-management"
     },
     {
       "id": "erp",
@@ -1698,16 +1698,6 @@
       "url": "/software%20engineering/ruby"
     },
     {
-      "id": "python",
-      "title": "python",
-      "slug": "python",
-      "date": "2024-03-24 22:03",
-      "categories": [
-        "Software engineering"
-      ],
-      "url": "/software%20engineering/python"
-    },
-    {
       "id": "net",
       "title": "net",
       "slug": "net",
@@ -1716,6 +1706,16 @@
         "Software engineering"
       ],
       "url": "/software%20engineering/net"
+    },
+    {
+      "id": "python",
+      "title": "python",
+      "slug": "python",
+      "date": "2024-03-24 22:03",
+      "categories": [
+        "Software engineering"
+      ],
+      "url": "/software%20engineering/python"
     },
     {
       "id": "javascript",
@@ -1828,16 +1828,6 @@
       "url": "/uncategorized/infraestructura-it"
     },
     {
-      "id": "soporte-tecnico",
-      "title": "soporte tecnico",
-      "slug": "soporte-tecnico",
-      "date": "2024-11-19 02:46",
-      "categories": [
-        "infraestructura IT"
-      ],
-      "url": "/infraestructura%20it/soporte-tecnico"
-    },
-    {
       "id": "soa",
       "title": "SOA",
       "slug": "soa",
@@ -1846,6 +1836,16 @@
         "infraestructura IT"
       ],
       "url": "/infraestructura%20it/soa"
+    },
+    {
+      "id": "soporte-tecnico",
+      "title": "soporte tecnico",
+      "slug": "soporte-tecnico",
+      "date": "2024-11-19 02:46",
+      "categories": [
+        "infraestructura IT"
+      ],
+      "url": "/infraestructura%20it/soporte-tecnico"
     },
     {
       "id": "si-sistema-de-informaci-n",
@@ -1918,6 +1918,16 @@
       "url": "/infraestructura%20it/itsm"
     },
     {
+      "id": "iso-31010",
+      "title": "ISO 31010",
+      "slug": "iso-31010",
+      "date": "2025-05-21 17:37",
+      "categories": [
+        "infraestructura IT"
+      ],
+      "url": "/infraestructura%20it/iso-31010"
+    },
+    {
       "id": "itil",
       "title": "ITIL",
       "slug": "itil",
@@ -1936,16 +1946,6 @@
         "infraestructura IT"
       ],
       "url": "/infraestructura%20it/iso-22301"
-    },
-    {
-      "id": "iso-31010",
-      "title": "ISO 31010",
-      "slug": "iso-31010",
-      "date": "2025-05-21 17:37",
-      "categories": [
-        "infraestructura IT"
-      ],
-      "url": "/infraestructura%20it/iso-31010"
     },
     {
       "id": "iso-20000",
@@ -2248,16 +2248,6 @@
       "url": "/gamedev/unity"
     },
     {
-      "id": "shaders",
-      "title": "shaders",
-      "slug": "shaders",
-      "date": "2024-11-28 02:26",
-      "categories": [
-        "GameDev"
-      ],
-      "url": "/gamedev/shaders"
-    },
-    {
       "id": "threejs",
       "title": "threejs",
       "slug": "threejs",
@@ -2266,6 +2256,16 @@
         "GameDev"
       ],
       "url": "/gamedev/threejs"
+    },
+    {
+      "id": "shaders",
+      "title": "shaders",
+      "slug": "shaders",
+      "date": "2024-11-28 02:26",
+      "categories": [
+        "GameDev"
+      ],
+      "url": "/gamedev/shaders"
     },
     {
       "id": "p5js",
@@ -3908,16 +3908,6 @@
       "url": "/ciberseguridad/ingenieria-inversa"
     },
     {
-      "id": "gesti-n-de-activos-digitales--dam-",
-      "title": "Gestión de Activos Digitales (DAM)",
-      "slug": "gesti-n-de-activos-digitales--dam-",
-      "date": "2025-04-14 18:17",
-      "categories": [
-        "ciberseguridad"
-      ],
-      "url": "/ciberseguridad/gesti-n-de-activos-digitales--dam-"
-    },
-    {
       "id": "hardening",
       "title": "hardening",
       "slug": "hardening",
@@ -3926,6 +3916,16 @@
         "ciberseguridad"
       ],
       "url": "/ciberseguridad/hardening"
+    },
+    {
+      "id": "gesti-n-de-activos-digitales--dam-",
+      "title": "Gestión de Activos Digitales (DAM)",
+      "slug": "gesti-n-de-activos-digitales--dam-",
+      "date": "2025-04-14 18:17",
+      "categories": [
+        "ciberseguridad"
+      ],
+      "url": "/ciberseguridad/gesti-n-de-activos-digitales--dam-"
     },
     {
       "id": "firewall",
@@ -4178,6 +4178,156 @@
       "url": "/uncategorized/backend"
     },
     {
+      "id": "yeoman",
+      "title": "yeoman",
+      "slug": "yeoman",
+      "date": "2025-02-19 17:14",
+      "categories": [
+        "Automatizacion y Build"
+      ],
+      "url": "/automatizacion%20y%20build/yeoman"
+    },
+    {
+      "id": "webpack",
+      "title": "webpack",
+      "slug": "webpack",
+      "date": "2025-01-29 01:58",
+      "categories": [
+        "Automatizacion y Build"
+      ],
+      "url": "/automatizacion%20y%20build/webpack"
+    },
+    {
+      "id": "vite",
+      "title": "vite",
+      "slug": "vite",
+      "date": "2025-01-29 01:21",
+      "categories": [
+        "Automatizacion y Build"
+      ],
+      "url": "/automatizacion%20y%20build/vite"
+    },
+    {
+      "id": "scraping",
+      "title": "scraping",
+      "slug": "scraping",
+      "date": "2025-06-09 14:21",
+      "categories": [
+        "Automatizacion y Build"
+      ],
+      "url": "/automatizacion%20y%20build/scraping"
+    },
+    {
+      "id": "nx",
+      "title": "nx",
+      "slug": "nx",
+      "date": "2025-05-12 22:51",
+      "categories": [
+        "Automatizacion y Build"
+      ],
+      "url": "/automatizacion%20y%20build/nx"
+    },
+    {
+      "id": "maven",
+      "title": "maven",
+      "slug": "maven",
+      "date": "2024-11-22 21:17",
+      "categories": [
+        "Automatizacion y Build"
+      ],
+      "url": "/automatizacion%20y%20build/maven"
+    },
+    {
+      "id": "jhipster",
+      "title": "JHipster",
+      "slug": "jhipster",
+      "date": "2025-02-19 16:44",
+      "categories": [
+        "Automatizacion y Build"
+      ],
+      "url": "/automatizacion%20y%20build/jhipster"
+    },
+    {
+      "id": "husky",
+      "title": "husky",
+      "slug": "husky",
+      "date": "2025-10-09 13:49",
+      "categories": [
+        "Automatizacion y Build"
+      ],
+      "url": "/automatizacion%20y%20build/husky"
+    },
+    {
+      "id": "gu-a-pr-ctica-completa-de-celery",
+      "title": "Guía Práctica Completa de Celery",
+      "slug": "gu-a-pr-ctica-completa-de-celery",
+      "date": "",
+      "categories": [
+        "uncategorized"
+      ],
+      "url": "/uncategorized/gu-a-pr-ctica-completa-de-celery"
+    },
+    {
+      "id": "gulp",
+      "title": "gulp",
+      "slug": "gulp",
+      "date": "2025-04-17 18:43",
+      "categories": [
+        "Automatizacion y Build"
+      ],
+      "url": "/automatizacion%20y%20build/gulp"
+    },
+    {
+      "id": "gradle",
+      "title": "Gradle",
+      "slug": "gradle",
+      "date": "2024-12-17 16:43",
+      "categories": [
+        "Automatizacion y Build"
+      ],
+      "url": "/automatizacion%20y%20build/gradle"
+    },
+    {
+      "id": "git-hooks",
+      "title": "git hooks",
+      "slug": "git-hooks",
+      "date": "2025-10-13 15:24",
+      "categories": [
+        "Automatizacion y Build"
+      ],
+      "url": "/automatizacion%20y%20build/git-hooks"
+    },
+    {
+      "id": "celery",
+      "title": "Celery",
+      "slug": "celery",
+      "date": "2024-11-23 02:21",
+      "categories": [
+        "Automatizacion y Build"
+      ],
+      "url": "/automatizacion%20y%20build/celery"
+    },
+    {
+      "id": "celery-temas-avanzados-varios",
+      "title": "Celery Temas Avanzados Varios",
+      "slug": "celery-temas-avanzados-varios",
+      "date": "",
+      "categories": [
+        "uncategorized"
+      ],
+      "url": "/uncategorized/celery-temas-avanzados-varios"
+    },
+    {
+      "id": "celery-conceptos-avanzados-y-configuraci-n-profesional",
+      "title": "Celery Conceptos Avanzados y Configuración Profesional",
+      "slug": "celery-conceptos-avanzados-y-configuraci-n-profesional",
+      "date": "",
+      "categories": [
+        "uncategorized"
+      ],
+      "url": "/uncategorized/celery-conceptos-avanzados-y-configuraci-n-profesional"
+    },
+    {
       "id": "websockets",
       "title": "websockets",
       "slug": "websockets",
@@ -4278,16 +4428,6 @@
       "url": "/backend/sockets"
     },
     {
-      "id": "server-actions",
-      "title": "server actions",
-      "slug": "server-actions",
-      "date": "2025-05-18 04:01",
-      "categories": [
-        "Backend"
-      ],
-      "url": "/backend/server-actions"
-    },
-    {
       "id": "serverless",
       "title": "serverless",
       "slug": "serverless",
@@ -4296,6 +4436,16 @@
         "Backend"
       ],
       "url": "/backend/serverless"
+    },
+    {
+      "id": "server-actions",
+      "title": "server actions",
+      "slug": "server-actions",
+      "date": "2025-05-18 04:01",
+      "categories": [
+        "Backend"
+      ],
+      "url": "/backend/server-actions"
     },
     {
       "id": "sequelize",
@@ -4358,16 +4508,6 @@
       "url": "/backend/php"
     },
     {
-      "id": "node-js",
-      "title": "node.js",
-      "slug": "node-js",
-      "date": "2024-11-07 03:13",
-      "categories": [
-        "Backend"
-      ],
-      "url": "/backend/node-js"
-    },
-    {
       "id": "openapi",
       "title": "OpenAPI",
       "slug": "openapi",
@@ -4376,6 +4516,16 @@
         "Backend"
       ],
       "url": "/backend/openapi"
+    },
+    {
+      "id": "node-js",
+      "title": "node.js",
+      "slug": "node-js",
+      "date": "2024-11-07 03:13",
+      "categories": [
+        "Backend"
+      ],
+      "url": "/backend/node-js"
     },
     {
       "id": "ngrok",
@@ -4598,16 +4748,6 @@
       "url": "/backend/appwrite"
     },
     {
-      "id": "apache",
-      "title": "apache",
-      "slug": "apache",
-      "date": "2024-11-22 21:03",
-      "categories": [
-        "Backend"
-      ],
-      "url": "/backend/apache"
-    },
-    {
       "id": "api",
       "title": "api",
       "slug": "api",
@@ -4616,6 +4756,16 @@
         "Backend"
       ],
       "url": "/backend/api"
+    },
+    {
+      "id": "apache",
+      "title": "apache",
+      "slug": "apache",
+      "date": "2024-11-22 21:03",
+      "categories": [
+        "Backend"
+      ],
+      "url": "/backend/apache"
     },
     {
       "id": "apache-kafka",
@@ -4638,156 +4788,6 @@
       "url": "/backend/apache-flink"
     },
     {
-      "id": "yeoman",
-      "title": "yeoman",
-      "slug": "yeoman",
-      "date": "2025-02-19 17:14",
-      "categories": [
-        "Automatizacion y Build"
-      ],
-      "url": "/automatizacion%20y%20build/yeoman"
-    },
-    {
-      "id": "webpack",
-      "title": "webpack",
-      "slug": "webpack",
-      "date": "2025-01-29 01:58",
-      "categories": [
-        "Automatizacion y Build"
-      ],
-      "url": "/automatizacion%20y%20build/webpack"
-    },
-    {
-      "id": "vite",
-      "title": "vite",
-      "slug": "vite",
-      "date": "2025-01-29 01:21",
-      "categories": [
-        "Automatizacion y Build"
-      ],
-      "url": "/automatizacion%20y%20build/vite"
-    },
-    {
-      "id": "scraping",
-      "title": "scraping",
-      "slug": "scraping",
-      "date": "2025-06-09 14:21",
-      "categories": [
-        "Automatizacion y Build"
-      ],
-      "url": "/automatizacion%20y%20build/scraping"
-    },
-    {
-      "id": "nx",
-      "title": "nx",
-      "slug": "nx",
-      "date": "2025-05-12 22:51",
-      "categories": [
-        "Automatizacion y Build"
-      ],
-      "url": "/automatizacion%20y%20build/nx"
-    },
-    {
-      "id": "maven",
-      "title": "maven",
-      "slug": "maven",
-      "date": "2024-11-22 21:17",
-      "categories": [
-        "Automatizacion y Build"
-      ],
-      "url": "/automatizacion%20y%20build/maven"
-    },
-    {
-      "id": "jhipster",
-      "title": "JHipster",
-      "slug": "jhipster",
-      "date": "2025-02-19 16:44",
-      "categories": [
-        "Automatizacion y Build"
-      ],
-      "url": "/automatizacion%20y%20build/jhipster"
-    },
-    {
-      "id": "husky",
-      "title": "husky",
-      "slug": "husky",
-      "date": "2025-10-09 13:49",
-      "categories": [
-        "Automatizacion y Build"
-      ],
-      "url": "/automatizacion%20y%20build/husky"
-    },
-    {
-      "id": "gu-a-pr-ctica-completa-de-celery",
-      "title": "Guía Práctica Completa de Celery",
-      "slug": "gu-a-pr-ctica-completa-de-celery",
-      "date": "",
-      "categories": [
-        "uncategorized"
-      ],
-      "url": "/uncategorized/gu-a-pr-ctica-completa-de-celery"
-    },
-    {
-      "id": "gulp",
-      "title": "gulp",
-      "slug": "gulp",
-      "date": "2025-04-17 18:43",
-      "categories": [
-        "Automatizacion y Build"
-      ],
-      "url": "/automatizacion%20y%20build/gulp"
-    },
-    {
-      "id": "git-hooks",
-      "title": "git hooks",
-      "slug": "git-hooks",
-      "date": "2025-10-13 15:24",
-      "categories": [
-        "Automatizacion y Build"
-      ],
-      "url": "/automatizacion%20y%20build/git-hooks"
-    },
-    {
-      "id": "gradle",
-      "title": "Gradle",
-      "slug": "gradle",
-      "date": "2024-12-17 16:43",
-      "categories": [
-        "Automatizacion y Build"
-      ],
-      "url": "/automatizacion%20y%20build/gradle"
-    },
-    {
-      "id": "celery",
-      "title": "Celery",
-      "slug": "celery",
-      "date": "2024-11-23 02:21",
-      "categories": [
-        "Automatizacion y Build"
-      ],
-      "url": "/automatizacion%20y%20build/celery"
-    },
-    {
-      "id": "celery-temas-avanzados-varios",
-      "title": "Celery Temas Avanzados Varios",
-      "slug": "celery-temas-avanzados-varios",
-      "date": "",
-      "categories": [
-        "uncategorized"
-      ],
-      "url": "/uncategorized/celery-temas-avanzados-varios"
-    },
-    {
-      "id": "celery-conceptos-avanzados-y-configuraci-n-profesional",
-      "title": "Celery Conceptos Avanzados y Configuración Profesional",
-      "slug": "celery-conceptos-avanzados-y-configuraci-n-profesional",
-      "date": "",
-      "categories": [
-        "uncategorized"
-      ],
-      "url": "/uncategorized/celery-conceptos-avanzados-y-configuraci-n-profesional"
-    },
-    {
       "id": "automatizacion-y-build",
       "title": "Automatizacion y Build",
       "slug": "automatizacion-y-build",
@@ -4808,16 +4808,6 @@
       "url": "/uncategorized/autenticacion"
     },
     {
-      "id": "tacacs",
-      "title": "TACACS",
-      "slug": "tacacs",
-      "date": "2025-04-14 18:48",
-      "categories": [
-        "autenticacion"
-      ],
-      "url": "/autenticacion/tacacs"
-    },
-    {
       "id": "sso-single-sign-on",
       "title": "SSO Single Sign-On",
       "slug": "sso-single-sign-on",
@@ -4826,6 +4816,16 @@
         "autenticacion"
       ],
       "url": "/autenticacion/sso-single-sign-on"
+    },
+    {
+      "id": "tacacs",
+      "title": "TACACS",
+      "slug": "tacacs",
+      "date": "2025-04-14 18:48",
+      "categories": [
+        "autenticacion"
+      ],
+      "url": "/autenticacion/tacacs"
     },
     {
       "id": "saml",
@@ -4858,16 +4858,6 @@
       "url": "/autenticacion/radius"
     },
     {
-      "id": "pki-infraestructura-de-clave-p-blica",
-      "title": "PKI infraestructura de clave pública",
-      "slug": "pki-infraestructura-de-clave-p-blica",
-      "date": "2025-04-14 19:57",
-      "categories": [
-        "autenticacion"
-      ],
-      "url": "/autenticacion/pki-infraestructura-de-clave-p-blica"
-    },
-    {
       "id": "oauth",
       "title": "OAuth",
       "slug": "oauth",
@@ -4876,6 +4866,16 @@
         "autenticacion"
       ],
       "url": "/autenticacion/oauth"
+    },
+    {
+      "id": "pki-infraestructura-de-clave-p-blica",
+      "title": "PKI infraestructura de clave pública",
+      "slug": "pki-infraestructura-de-clave-p-blica",
+      "date": "2025-04-14 19:57",
+      "categories": [
+        "autenticacion"
+      ],
+      "url": "/autenticacion/pki-infraestructura-de-clave-p-blica"
     },
     {
       "id": "ldap",
@@ -5582,6 +5582,58 @@
       "target": "/testing/bdd/"
     },
     {
+      "source": "/testing/qunit-guia-para-entrevistas",
+      "target": "/testing/qunit/"
+    },
+    {
+      "source": "/testing/qunit-guia-para-entrevistas",
+      "target": "/testing/testing/"
+    },
+    {
+      "source": "/testing/qunit-guia-para-entrevistas",
+      "target": "/testing/tdd---test-driven-development/"
+    },
+    {
+      "source": "/testing/qunit-guia-para-entrevistas",
+      "target": "/desarrollo%20web/javascript/"
+    },
+    {
+      "source": "/testing/qunit-guia-para-entrevistas",
+      "target": "/backend/node-js/"
+    },
+    {
+      "source": "/testing/qunit-guia-para-entrevistas",
+      "target": "/testing/msw-mocks-service-worker/"
+    },
+    {
+      "source": "/testing/qunit-guia-para-entrevistas",
+      "target": "/desarrollo%20web/javascript/"
+    },
+    {
+      "source": "/testing/qunit-guia-para-entrevistas",
+      "target": "/backend/node-js/"
+    },
+    {
+      "source": "/testing/qunit-guia-para-entrevistas",
+      "target": "/testing/msw-mocks-service-worker/"
+    },
+    {
+      "source": "/testing/qunit-guia-para-entrevistas",
+      "target": "/testing/msw-mocks-service-worker/"
+    },
+    {
+      "source": "/testing/qunit-guia-para-entrevistas",
+      "target": "/desarrollo%20web/javascript/"
+    },
+    {
+      "source": "/testing/qunit-guia-para-entrevistas",
+      "target": "/backend/node-js/"
+    },
+    {
+      "source": "/testing/qunit-guia-para-entrevistas",
+      "target": "/testing/msw-mocks-service-worker/"
+    },
+    {
       "source": "/testing/qunit",
       "target": "/testing/testing/"
     },
@@ -5652,58 +5704,6 @@
     {
       "source": "/testing/qunit",
       "target": "/backend/node-js/"
-    },
-    {
-      "source": "/testing/qunit-guia-para-entrevistas",
-      "target": "/testing/qunit/"
-    },
-    {
-      "source": "/testing/qunit-guia-para-entrevistas",
-      "target": "/testing/testing/"
-    },
-    {
-      "source": "/testing/qunit-guia-para-entrevistas",
-      "target": "/testing/tdd---test-driven-development/"
-    },
-    {
-      "source": "/testing/qunit-guia-para-entrevistas",
-      "target": "/desarrollo%20web/javascript/"
-    },
-    {
-      "source": "/testing/qunit-guia-para-entrevistas",
-      "target": "/backend/node-js/"
-    },
-    {
-      "source": "/testing/qunit-guia-para-entrevistas",
-      "target": "/testing/msw-mocks-service-worker/"
-    },
-    {
-      "source": "/testing/qunit-guia-para-entrevistas",
-      "target": "/desarrollo%20web/javascript/"
-    },
-    {
-      "source": "/testing/qunit-guia-para-entrevistas",
-      "target": "/backend/node-js/"
-    },
-    {
-      "source": "/testing/qunit-guia-para-entrevistas",
-      "target": "/testing/msw-mocks-service-worker/"
-    },
-    {
-      "source": "/testing/qunit-guia-para-entrevistas",
-      "target": "/testing/msw-mocks-service-worker/"
-    },
-    {
-      "source": "/testing/qunit-guia-para-entrevistas",
-      "target": "/desarrollo%20web/javascript/"
-    },
-    {
-      "source": "/testing/qunit-guia-para-entrevistas",
-      "target": "/backend/node-js/"
-    },
-    {
-      "source": "/testing/qunit-guia-para-entrevistas",
-      "target": "/testing/msw-mocks-service-worker/"
     },
     {
       "source": "/testing/qunit---debugging--diagn-stico-avanzado-e-integraci-n-cicd-con-coverage-moderno--nyc--c8-",
@@ -5834,6 +5834,30 @@
       "target": "/uncategorized/monitoreo/"
     },
     {
+      "source": "/testing/playwright---temas-avanzados-y-casos-especiales",
+      "target": "/testing/testing/"
+    },
+    {
+      "source": "/testing/playwright---temas-avanzados-y-casos-especiales",
+      "target": "/testing/qa/"
+    },
+    {
+      "source": "/testing/playwright---temas-avanzados-y-casos-especiales",
+      "target": "/testing/e2e---end-to-end-testing/"
+    },
+    {
+      "source": "/testing/playwright---temas-avanzados-y-casos-especiales",
+      "target": "/testing/testing/"
+    },
+    {
+      "source": "/testing/playwright---temas-avanzados-y-casos-especiales",
+      "target": "/testing/qa/"
+    },
+    {
+      "source": "/testing/playwright---temas-avanzados-y-casos-especiales",
+      "target": "/testing/e2e---end-to-end-testing/"
+    },
+    {
       "source": "/testing/playwright",
       "target": "/testing/testing/"
     },
@@ -5851,30 +5875,6 @@
     },
     {
       "source": "/testing/playwright",
-      "target": "/testing/e2e---end-to-end-testing/"
-    },
-    {
-      "source": "/testing/playwright---temas-avanzados-y-casos-especiales",
-      "target": "/testing/testing/"
-    },
-    {
-      "source": "/testing/playwright---temas-avanzados-y-casos-especiales",
-      "target": "/testing/qa/"
-    },
-    {
-      "source": "/testing/playwright---temas-avanzados-y-casos-especiales",
-      "target": "/testing/e2e---end-to-end-testing/"
-    },
-    {
-      "source": "/testing/playwright---temas-avanzados-y-casos-especiales",
-      "target": "/testing/testing/"
-    },
-    {
-      "source": "/testing/playwright---temas-avanzados-y-casos-especiales",
-      "target": "/testing/qa/"
-    },
-    {
-      "source": "/testing/playwright---temas-avanzados-y-casos-especiales",
       "target": "/testing/e2e---end-to-end-testing/"
     },
     {
@@ -5962,34 +5962,6 @@
       "target": "/testing/tdd-patterns/"
     },
     {
-      "source": "/testing/mocks-msw---patrones-de-validaci-n-y-depuraci-n",
-      "target": "/testing/testing/"
-    },
-    {
-      "source": "/testing/mocks-msw---patrones-de-validaci-n-y-depuraci-n",
-      "target": "/testing/tdd---test-driven-development/"
-    },
-    {
-      "source": "/testing/mocks-msw---patrones-de-validaci-n-y-depuraci-n",
-      "target": "/testing/profiler/"
-    },
-    {
-      "source": "/testing/mocks-msw---patrones-de-validaci-n-y-depuraci-n",
-      "target": "/testing/profiler/"
-    },
-    {
-      "source": "/testing/mocks-msw---patrones-de-validaci-n-y-depuraci-n",
-      "target": "/testing/mocks-msw---integraci-n-avanzada-con-jest--vitest-y-playwright/"
-    },
-    {
-      "source": "/testing/mocks-msw---patrones-de-validaci-n-y-depuraci-n",
-      "target": "/testing/tdd-patterns/"
-    },
-    {
-      "source": "/testing/mocks-msw---patrones-de-validaci-n-y-depuraci-n",
-      "target": "/testing/profiler/"
-    },
-    {
       "source": "/testing/mocks-msw---patrones-de-dise-o-y-arquitectura-de-mocks",
       "target": "/testing/msw-mocks-service-worker/"
     },
@@ -6023,6 +5995,34 @@
     },
     {
       "source": "/testing/mocks-msw---patrones-de-dise-o-y-arquitectura-de-mocks",
+      "target": "/testing/profiler/"
+    },
+    {
+      "source": "/testing/mocks-msw---patrones-de-validaci-n-y-depuraci-n",
+      "target": "/testing/testing/"
+    },
+    {
+      "source": "/testing/mocks-msw---patrones-de-validaci-n-y-depuraci-n",
+      "target": "/testing/tdd---test-driven-development/"
+    },
+    {
+      "source": "/testing/mocks-msw---patrones-de-validaci-n-y-depuraci-n",
+      "target": "/testing/profiler/"
+    },
+    {
+      "source": "/testing/mocks-msw---patrones-de-validaci-n-y-depuraci-n",
+      "target": "/testing/profiler/"
+    },
+    {
+      "source": "/testing/mocks-msw---patrones-de-validaci-n-y-depuraci-n",
+      "target": "/testing/mocks-msw---integraci-n-avanzada-con-jest--vitest-y-playwright/"
+    },
+    {
+      "source": "/testing/mocks-msw---patrones-de-validaci-n-y-depuraci-n",
+      "target": "/testing/tdd-patterns/"
+    },
+    {
+      "source": "/testing/mocks-msw---patrones-de-validaci-n-y-depuraci-n",
       "target": "/testing/profiler/"
     },
     {
@@ -8782,26 +8782,6 @@
       "target": "/uncategorized/monitoreo/"
     },
     {
-      "source": "/management/project-management",
-      "target": "/uncategorized/monitoreo/"
-    },
-    {
-      "source": "/management/project-management",
-      "target": "/uncategorized/management/"
-    },
-    {
-      "source": "/management/project-management",
-      "target": "/management/jira/"
-    },
-    {
-      "source": "/management/project-management",
-      "target": "/management/jira/"
-    },
-    {
-      "source": "/management/project-management",
-      "target": "/uncategorized/monitoreo/"
-    },
-    {
       "source": "/management/sap",
       "target": "/uncategorized/databases/"
     },
@@ -8818,60 +8798,24 @@
       "target": "/software%20engineering/excel/"
     },
     {
-      "source": "/management/product-management",
-      "target": "/uncategorized/gestion-de-negocio/"
+      "source": "/management/project-management",
+      "target": "/uncategorized/monitoreo/"
     },
     {
-      "source": "/management/product-management",
-      "target": "/management/sap/"
+      "source": "/management/project-management",
+      "target": "/uncategorized/management/"
     },
     {
-      "source": "/management/product-management",
-      "target": "/management/crm/"
+      "source": "/management/project-management",
+      "target": "/management/jira/"
     },
     {
-      "source": "/management/product-management",
-      "target": "/management/erp/"
+      "source": "/management/project-management",
+      "target": "/management/jira/"
     },
     {
-      "source": "/management/product-management",
-      "target": "/management/sap/"
-    },
-    {
-      "source": "/management/product-management",
-      "target": "/gestion%20de%20negocio/business-intelligence/"
-    },
-    {
-      "source": "/management/product-management",
-      "target": "/gestion%20de%20negocio/business-intelligence/"
-    },
-    {
-      "source": "/management/product-management",
-      "target": "/management/sap/"
-    },
-    {
-      "source": "/management/product-management",
-      "target": "/management/crm/"
-    },
-    {
-      "source": "/management/product-management",
-      "target": "/management/erp/"
-    },
-    {
-      "source": "/management/product-management",
-      "target": "/uncategorized/gestion-de-negocio/"
-    },
-    {
-      "source": "/management/product-management",
-      "target": "/management/sap/"
-    },
-    {
-      "source": "/management/product-management",
-      "target": "/management/crm/"
-    },
-    {
-      "source": "/management/product-management",
-      "target": "/management/erp/"
+      "source": "/management/project-management",
+      "target": "/uncategorized/monitoreo/"
     },
     {
       "source": "/management/jira",
@@ -8880,6 +8824,62 @@
     {
       "source": "/management/jira",
       "target": "/uncategorized/devops/"
+    },
+    {
+      "source": "/management/product-management",
+      "target": "/uncategorized/gestion-de-negocio/"
+    },
+    {
+      "source": "/management/product-management",
+      "target": "/management/sap/"
+    },
+    {
+      "source": "/management/product-management",
+      "target": "/management/crm/"
+    },
+    {
+      "source": "/management/product-management",
+      "target": "/management/erp/"
+    },
+    {
+      "source": "/management/product-management",
+      "target": "/management/sap/"
+    },
+    {
+      "source": "/management/product-management",
+      "target": "/gestion%20de%20negocio/business-intelligence/"
+    },
+    {
+      "source": "/management/product-management",
+      "target": "/gestion%20de%20negocio/business-intelligence/"
+    },
+    {
+      "source": "/management/product-management",
+      "target": "/management/sap/"
+    },
+    {
+      "source": "/management/product-management",
+      "target": "/management/crm/"
+    },
+    {
+      "source": "/management/product-management",
+      "target": "/management/erp/"
+    },
+    {
+      "source": "/management/product-management",
+      "target": "/uncategorized/gestion-de-negocio/"
+    },
+    {
+      "source": "/management/product-management",
+      "target": "/management/sap/"
+    },
+    {
+      "source": "/management/product-management",
+      "target": "/management/crm/"
+    },
+    {
+      "source": "/management/product-management",
+      "target": "/management/erp/"
     },
     {
       "source": "/management/erp",
@@ -9098,62 +9098,6 @@
       "target": "/backend/graphql/"
     },
     {
-      "source": "/software%20engineering/python",
-      "target": "/uncategorized/data-science/"
-    },
-    {
-      "source": "/software%20engineering/python",
-      "target": "/uncategorized/computer-science/"
-    },
-    {
-      "source": "/software%20engineering/python",
-      "target": "/uncategorized/software-engineering/"
-    },
-    {
-      "source": "/software%20engineering/python",
-      "target": "/uncategorized/automatizacion-y-build/"
-    },
-    {
-      "source": "/software%20engineering/python",
-      "target": "/backend/supervisor/"
-    },
-    {
-      "source": "/software%20engineering/python",
-      "target": "/automatizacion%20y%20build/celery/"
-    },
-    {
-      "source": "/software%20engineering/python",
-      "target": "/python/curso-python-avanzado/"
-    },
-    {
-      "source": "/software%20engineering/python",
-      "target": "/uncategorized/data-science/"
-    },
-    {
-      "source": "/software%20engineering/python",
-      "target": "/software%20engineering/python/#todo-app"
-    },
-    {
-      "source": "/software%20engineering/python",
-      "target": "/databases/json/"
-    },
-    {
-      "source": "/software%20engineering/python",
-      "target": "/sistemas/problema-executionpolicy-en-powershell/"
-    },
-    {
-      "source": "/software%20engineering/python",
-      "target": "/software%20engineering/git/"
-    },
-    {
-      "source": "/software%20engineering/python",
-      "target": "/frontend/ux-ui/"
-    },
-    {
-      "source": "/software%20engineering/python",
-      "target": "/uncategorized/software-engineering/"
-    },
-    {
       "source": "/software%20engineering/net",
       "target": "/uncategorized/desarrollo-multiplataforma/"
     },
@@ -9328,6 +9272,62 @@
     {
       "source": "/software%20engineering/net",
       "target": "/software%20engineering/cpp/"
+    },
+    {
+      "source": "/software%20engineering/python",
+      "target": "/uncategorized/data-science/"
+    },
+    {
+      "source": "/software%20engineering/python",
+      "target": "/uncategorized/computer-science/"
+    },
+    {
+      "source": "/software%20engineering/python",
+      "target": "/uncategorized/software-engineering/"
+    },
+    {
+      "source": "/software%20engineering/python",
+      "target": "/uncategorized/automatizacion-y-build/"
+    },
+    {
+      "source": "/software%20engineering/python",
+      "target": "/backend/supervisor/"
+    },
+    {
+      "source": "/software%20engineering/python",
+      "target": "/automatizacion%20y%20build/celery/"
+    },
+    {
+      "source": "/software%20engineering/python",
+      "target": "/python/curso-python-avanzado/"
+    },
+    {
+      "source": "/software%20engineering/python",
+      "target": "/uncategorized/data-science/"
+    },
+    {
+      "source": "/software%20engineering/python",
+      "target": "/software%20engineering/python/#todo-app"
+    },
+    {
+      "source": "/software%20engineering/python",
+      "target": "/databases/json/"
+    },
+    {
+      "source": "/software%20engineering/python",
+      "target": "/sistemas/problema-executionpolicy-en-powershell/"
+    },
+    {
+      "source": "/software%20engineering/python",
+      "target": "/software%20engineering/git/"
+    },
+    {
+      "source": "/software%20engineering/python",
+      "target": "/frontend/ux-ui/"
+    },
+    {
+      "source": "/software%20engineering/python",
+      "target": "/uncategorized/software-engineering/"
     },
     {
       "source": "/desarrollo%20web/javascript",
@@ -9958,6 +9958,18 @@
       "target": "/infraestructura%20it/iso-31010/"
     },
     {
+      "source": "/infraestructura%20it/soa",
+      "target": "/uncategorized/infraestructura-it/"
+    },
+    {
+      "source": "/infraestructura%20it/soa",
+      "target": "/management/erp/"
+    },
+    {
+      "source": "/infraestructura%20it/soa",
+      "target": "/management/crm/"
+    },
+    {
       "source": "/infraestructura%20it/soporte-tecnico",
       "target": "/uncategorized/infraestructura-it/"
     },
@@ -10008,18 +10020,6 @@
     {
       "source": "/infraestructura%20it/soporte-tecnico",
       "target": "/management/ticketing/"
-    },
-    {
-      "source": "/infraestructura%20it/soa",
-      "target": "/uncategorized/infraestructura-it/"
-    },
-    {
-      "source": "/infraestructura%20it/soa",
-      "target": "/management/erp/"
-    },
-    {
-      "source": "/infraestructura%20it/soa",
-      "target": "/management/crm/"
     },
     {
       "source": "/infraestructura%20it/si-sistema-de-informaci-n",
@@ -10126,6 +10126,14 @@
       "target": "/infraestructura%20it/glpi/"
     },
     {
+      "source": "/infraestructura%20it/iso-31010",
+      "target": "/infraestructura%20it/iso-22301/"
+    },
+    {
+      "source": "/infraestructura%20it/iso-31010",
+      "target": "/infraestructura%20it/iso-31010/"
+    },
+    {
       "source": "/infraestructura%20it/itil",
       "target": "/infraestructura%20it/itsm/"
     },
@@ -10168,14 +10176,6 @@
     {
       "source": "/infraestructura%20it/itil",
       "target": "/infraestructura%20it/iso-20000/"
-    },
-    {
-      "source": "/infraestructura%20it/iso-31010",
-      "target": "/infraestructura%20it/iso-22301/"
-    },
-    {
-      "source": "/infraestructura%20it/iso-31010",
-      "target": "/infraestructura%20it/iso-31010/"
     },
     {
       "source": "/infraestructura%20it/isms",
@@ -10958,27 +10958,27 @@
       "target": "/software%20engineering/net/"
     },
     {
-      "source": "/gamedev/shaders",
-      "target": "/gamedev/threejs/"
-    },
-    {
-      "source": "/gamedev/shaders",
-      "target": "/gamedev/p5js/"
-    },
-    {
-      "source": "/gamedev/shaders",
-      "target": "/gamedev/threejs/"
-    },
-    {
-      "source": "/gamedev/shaders",
-      "target": "/gamedev/p5js/"
-    },
-    {
       "source": "/gamedev/threejs",
       "target": "/gamedev/shaders/"
     },
     {
       "source": "/gamedev/threejs",
+      "target": "/gamedev/p5js/"
+    },
+    {
+      "source": "/gamedev/shaders",
+      "target": "/gamedev/threejs/"
+    },
+    {
+      "source": "/gamedev/shaders",
+      "target": "/gamedev/p5js/"
+    },
+    {
+      "source": "/gamedev/shaders",
+      "target": "/gamedev/threejs/"
+    },
+    {
+      "source": "/gamedev/shaders",
       "target": "/gamedev/p5js/"
     },
     {
@@ -17138,24 +17138,24 @@
       "target": "/uncategorized/ciberseguridad/"
     },
     {
-      "source": "/ciberseguridad/gesti-n-de-activos-digitales--dam-",
-      "target": "/ciberseguridad/hardening/"
-    },
-    {
-      "source": "/ciberseguridad/gesti-n-de-activos-digitales--dam-",
-      "target": "/ciberseguridad/hardening/"
-    },
-    {
-      "source": "/ciberseguridad/gesti-n-de-activos-digitales--dam-",
-      "target": "/ciberseguridad/hardening/"
-    },
-    {
-      "source": "/ciberseguridad/gesti-n-de-activos-digitales--dam-",
-      "target": "/ciberseguridad/hardening/"
-    },
-    {
       "source": "/ciberseguridad/hardening",
       "target": "/uncategorized/ciberseguridad/"
+    },
+    {
+      "source": "/ciberseguridad/gesti-n-de-activos-digitales--dam-",
+      "target": "/ciberseguridad/hardening/"
+    },
+    {
+      "source": "/ciberseguridad/gesti-n-de-activos-digitales--dam-",
+      "target": "/ciberseguridad/hardening/"
+    },
+    {
+      "source": "/ciberseguridad/gesti-n-de-activos-digitales--dam-",
+      "target": "/ciberseguridad/hardening/"
+    },
+    {
+      "source": "/ciberseguridad/gesti-n-de-activos-digitales--dam-",
+      "target": "/ciberseguridad/hardening/"
     },
     {
       "source": "/ciberseguridad/firewall",
@@ -18122,6 +18122,470 @@
       "target": "/virtualizacion/kubernetes/"
     },
     {
+      "source": "/automatizacion%20y%20build/yeoman",
+      "target": "/uncategorized/automatizacion-y-build/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/yeoman",
+      "target": "/automatizacion%20y%20build/jhipster/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/yeoman",
+      "target": "/backend/node-js/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/yeoman",
+      "target": "/automatizacion%20y%20build/gulp/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/yeoman",
+      "target": "/uncategorized/automatizacion-y-build/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/yeoman",
+      "target": "/automatizacion%20y%20build/gulp/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/yeoman",
+      "target": "/automatizacion%20y%20build/jhipster/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/yeoman",
+      "target": "/software%20engineering/visual-basic-vba/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/yeoman",
+      "target": "/backend/node-js/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/yeoman",
+      "target": "/automatizacion%20y%20build/gulp/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/yeoman",
+      "target": "/uncategorized/automatizacion-y-build/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/yeoman",
+      "target": "/automatizacion%20y%20build/jhipster/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/webpack",
+      "target": "/uncategorized/automatizacion-y-build/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/vite",
+      "target": "/uncategorized/automatizacion-y-build/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/vite",
+      "target": "/uncategorized/software-engineering/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/vite",
+      "target": "/automatizacion%20y%20build/celery/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/scraping",
+      "target": "/uncategorized/automatizacion-y-build/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/scraping",
+      "target": "/testing/testing/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/scraping",
+      "target": "/uncategorized/data-science/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/scraping",
+      "target": "/devops/cicd/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/scraping",
+      "target": "/testing/e2e---end-to-end-testing/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/scraping",
+      "target": "/testing/playwright/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/scraping",
+      "target": "/uncategorized/automatizacion-y-build/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/scraping",
+      "target": "/testing/testing/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/scraping",
+      "target": "/testing/playwright/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/scraping",
+      "target": "/testing/e2e---end-to-end-testing/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/scraping",
+      "target": "/uncategorized/data-science/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/scraping",
+      "target": "/backend/axios/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/scraping",
+      "target": "/backend/etl/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/scraping",
+      "target": "/testing/playwright/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/scraping",
+      "target": "/testing/e2e---end-to-end-testing/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/nx",
+      "target": "/backend/monorepo/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/nx",
+      "target": "/devops/cicd/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/nx",
+      "target": "/backend/monorepo/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/nx",
+      "target": "/devops/cicd/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/nx",
+      "target": "/uncategorized/automatizacion-y-build/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/nx",
+      "target": "/testing/testing/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/nx",
+      "target": "/devops/cicd/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/nx",
+      "target": "/devops/cicd/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/nx",
+      "target": "/devops/cicd/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/nx",
+      "target": "/testing/testing/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/nx",
+      "target": "/uncategorized/automatizacion-y-build/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/nx",
+      "target": "/devops/cicd/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/maven",
+      "target": "/uncategorized/automatizacion-y-build/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/maven",
+      "target": "/uncategorized/sistemas/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/maven",
+      "target": "/software%20engineering/java/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/maven",
+      "target": "/uncategorized/devops/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/maven",
+      "target": "/backend/apache/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/maven",
+      "target": "/devops/cicd/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/maven",
+      "target": "/backend/php/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/maven",
+      "target": "/databases/xml/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/maven",
+      "target": "/software%20engineering/java/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/maven",
+      "target": "/uncategorized/devops/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/maven",
+      "target": "/devops/cicd/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/maven",
+      "target": "/databases/xml/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/maven",
+      "target": "/backend/php/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/maven",
+      "target": "/devops/cicd/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/maven",
+      "target": "/devops/cicd/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/maven",
+      "target": "/devops/cicd/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/maven",
+      "target": "/uncategorized/devops/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/maven",
+      "target": "/uncategorized/automatizacion-y-build/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/maven",
+      "target": "/uncategorized/sistemas/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/jhipster",
+      "target": "/software%20engineering/java/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/jhipster",
+      "target": "/uncategorized/devops/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/jhipster",
+      "target": "/automatizacion%20y%20build/yeoman/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/jhipster",
+      "target": "/uncategorized/databases/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/jhipster",
+      "target": "/software%20engineering/docker/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/jhipster",
+      "target": "/software%20engineering/java/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/jhipster",
+      "target": "/automatizacion%20y%20build/yeoman/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/jhipster",
+      "target": "/uncategorized/devops/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/jhipster",
+      "target": "/uncategorized/databases/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/jhipster",
+      "target": "/automatizacion%20y%20build/gradle/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/jhipster",
+      "target": "/uncategorized/databases/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/jhipster",
+      "target": "/automatizacion%20y%20build/yeoman/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/jhipster",
+      "target": "/uncategorized/databases/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/jhipster",
+      "target": "/software%20engineering/docker/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/husky",
+      "target": "/backend/monorepo/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/husky",
+      "target": "/uncategorized/automatizacion-y-build/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/husky",
+      "target": "/software%20engineering/git/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/husky",
+      "target": "/software%20engineering/git/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/husky",
+      "target": "/uncategorized/automatizacion-y-build/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/husky",
+      "target": "/uncategorized/automatizacion-y-build/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/husky",
+      "target": "/software%20engineering/git/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/husky",
+      "target": "/software%20engineering/git/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/husky",
+      "target": "/uncategorized/automatizacion-y-build/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/gulp",
+      "target": "/uncategorized/automatizacion-y-build/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/gulp",
+      "target": "/desarrollo%20web/javascript/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/gulp",
+      "target": "/uncategorized/automatizacion-y-build/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/gulp",
+      "target": "/desarrollo%20web/javascript/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/gulp",
+      "target": "/uncategorized/automatizacion-y-build/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/gradle",
+      "target": "/software%20engineering/java/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/gradle",
+      "target": "/devops/cicd/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/gradle",
+      "target": "/uncategorized/automatizacion-y-build/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/gradle",
+      "target": "/testing/testing/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/gradle",
+      "target": "/computer%20science/dsl/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/gradle",
+      "target": "/devops/cicd/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/gradle",
+      "target": "/automatizacion%20y%20build/maven/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/gradle",
+      "target": "/devops/cicd/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/git-hooks",
+      "target": "/uncategorized/software-engineering/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/git-hooks",
+      "target": "/uncategorized/automatizacion-y-build/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/git-hooks",
+      "target": "/software%20engineering/git/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/git-hooks",
+      "target": "/automatizacion%20y%20build/husky/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/celery",
+      "target": "/uncategorized/devops/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/celery",
+      "target": "/software%20engineering/python/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/celery",
+      "target": "/software%20engineering/docker/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/celery",
+      "target": "/uncategorized/backend/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/celery",
+      "target": "/uncategorized/automatizacion-y-build/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/celery",
+      "target": "/automatizacion%20y%20build/scraping/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/celery",
+      "target": "/databases/redis/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/celery",
+      "target": "/backend/rabbitmq/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/celery",
+      "target": "/uncategorized/celery-conceptos-avanzados-y-configuraci-n-profesional/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/celery",
+      "target": "/uncategorized/celery-temas-avanzados-varios/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/celery",
+      "target": "/uncategorized/gu-a-pr-ctica-completa-de-celery/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/celery",
+      "target": "/backend/rabbitmq/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/celery",
+      "target": "/software%20engineering/docker/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/celery",
+      "target": "/uncategorized/automatizacion-y-build/"
+    },
+    {
       "source": "/backend/websockets",
       "target": "/uncategorized/backend/"
     },
@@ -18406,74 +18870,6 @@
       "target": "/backend/grpc/"
     },
     {
-      "source": "/backend/server-actions",
-      "target": "/uncategorized/backend/"
-    },
-    {
-      "source": "/backend/server-actions",
-      "target": "/backend/api/"
-    },
-    {
-      "source": "/backend/server-actions",
-      "target": "/backend/graphql/"
-    },
-    {
-      "source": "/backend/server-actions",
-      "target": "/frontend/react/"
-    },
-    {
-      "source": "/backend/server-actions",
-      "target": "/frontend/nextjs/"
-    },
-    {
-      "source": "/backend/server-actions",
-      "target": "/frontend/nextjs/"
-    },
-    {
-      "source": "/backend/server-actions",
-      "target": "/backend/api/"
-    },
-    {
-      "source": "/backend/server-actions",
-      "target": "/frontend/react/"
-    },
-    {
-      "source": "/backend/server-actions",
-      "target": "/backend/api/"
-    },
-    {
-      "source": "/backend/server-actions",
-      "target": "/uncategorized/backend/"
-    },
-    {
-      "source": "/backend/server-actions",
-      "target": "/frontend/nextjs/"
-    },
-    {
-      "source": "/backend/server-actions",
-      "target": "/backend/graphql/"
-    },
-    {
-      "source": "/backend/server-actions",
-      "target": "/frontend/nextjs/"
-    },
-    {
-      "source": "/backend/server-actions",
-      "target": "/backend/api/"
-    },
-    {
-      "source": "/backend/server-actions",
-      "target": "/backend/api/"
-    },
-    {
-      "source": "/backend/server-actions",
-      "target": "/frontend/nextjs/"
-    },
-    {
-      "source": "/backend/server-actions",
-      "target": "/backend/api/"
-    },
-    {
       "source": "/backend/serverless",
       "target": "/uncategorized/backend/"
     },
@@ -18496,6 +18892,74 @@
     {
       "source": "/backend/serverless",
       "target": "/computer%20science/lambda-functions/"
+    },
+    {
+      "source": "/backend/server-actions",
+      "target": "/uncategorized/backend/"
+    },
+    {
+      "source": "/backend/server-actions",
+      "target": "/backend/api/"
+    },
+    {
+      "source": "/backend/server-actions",
+      "target": "/backend/graphql/"
+    },
+    {
+      "source": "/backend/server-actions",
+      "target": "/frontend/react/"
+    },
+    {
+      "source": "/backend/server-actions",
+      "target": "/frontend/nextjs/"
+    },
+    {
+      "source": "/backend/server-actions",
+      "target": "/frontend/nextjs/"
+    },
+    {
+      "source": "/backend/server-actions",
+      "target": "/backend/api/"
+    },
+    {
+      "source": "/backend/server-actions",
+      "target": "/frontend/react/"
+    },
+    {
+      "source": "/backend/server-actions",
+      "target": "/backend/api/"
+    },
+    {
+      "source": "/backend/server-actions",
+      "target": "/uncategorized/backend/"
+    },
+    {
+      "source": "/backend/server-actions",
+      "target": "/frontend/nextjs/"
+    },
+    {
+      "source": "/backend/server-actions",
+      "target": "/backend/graphql/"
+    },
+    {
+      "source": "/backend/server-actions",
+      "target": "/frontend/nextjs/"
+    },
+    {
+      "source": "/backend/server-actions",
+      "target": "/backend/api/"
+    },
+    {
+      "source": "/backend/server-actions",
+      "target": "/backend/api/"
+    },
+    {
+      "source": "/backend/server-actions",
+      "target": "/frontend/nextjs/"
+    },
+    {
+      "source": "/backend/server-actions",
+      "target": "/backend/api/"
     },
     {
       "source": "/backend/sequelize",
@@ -18822,6 +19286,26 @@
       "target": "/backend/laravel/"
     },
     {
+      "source": "/backend/openapi",
+      "target": "/backend/api/"
+    },
+    {
+      "source": "/backend/openapi",
+      "target": "/backend/swagger/"
+    },
+    {
+      "source": "/backend/openapi",
+      "target": "/redes/protocolos/"
+    },
+    {
+      "source": "/backend/openapi",
+      "target": "/backend/openapi/"
+    },
+    {
+      "source": "/backend/openapi",
+      "target": "/backend/swagger/"
+    },
+    {
       "source": "/backend/node-js",
       "target": "/uncategorized/backend/"
     },
@@ -18924,26 +19408,6 @@
     {
       "source": "/backend/node-js",
       "target": "/testing/testing/"
-    },
-    {
-      "source": "/backend/openapi",
-      "target": "/backend/api/"
-    },
-    {
-      "source": "/backend/openapi",
-      "target": "/backend/swagger/"
-    },
-    {
-      "source": "/backend/openapi",
-      "target": "/redes/protocolos/"
-    },
-    {
-      "source": "/backend/openapi",
-      "target": "/backend/openapi/"
-    },
-    {
-      "source": "/backend/openapi",
-      "target": "/backend/swagger/"
     },
     {
       "source": "/backend/ngrok",
@@ -20174,54 +20638,6 @@
       "target": "/backend/firebase/"
     },
     {
-      "source": "/backend/apache",
-      "target": "/uncategorized/backend/"
-    },
-    {
-      "source": "/backend/apache",
-      "target": "/backend/php/"
-    },
-    {
-      "source": "/backend/apache",
-      "target": "/backend/apache-kafka/"
-    },
-    {
-      "source": "/backend/apache",
-      "target": "/backend/apache-kafka/"
-    },
-    {
-      "source": "/backend/apache",
-      "target": "/backend/apache-kafka/"
-    },
-    {
-      "source": "/backend/apache",
-      "target": "/testing/jmeter/"
-    },
-    {
-      "source": "/backend/apache",
-      "target": "/monitoreo/opentelemetry/"
-    },
-    {
-      "source": "/backend/apache",
-      "target": "/backend/apache-kafka/"
-    },
-    {
-      "source": "/backend/apache",
-      "target": "/testing/jmeter/"
-    },
-    {
-      "source": "/backend/apache",
-      "target": "/backend/apache-kafka/"
-    },
-    {
-      "source": "/backend/apache",
-      "target": "/monitoreo/opentelemetry/"
-    },
-    {
-      "source": "/backend/apache",
-      "target": "/backend/apache-kafka/"
-    },
-    {
       "source": "/backend/api",
       "target": "/uncategorized/backend/"
     },
@@ -20346,548 +20762,132 @@
       "target": "/backend/grpc/"
     },
     {
-      "source": "/backend/apache-kafka",
-      "target": "/backend/stream-processing/"
-    },
-    {
-      "source": "/backend/apache-kafka",
-      "target": "/uncategorized/data-science/"
-    },
-    {
-      "source": "/backend/apache-kafka",
-      "target": "/backend/apache/"
-    },
-    {
-      "source": "/backend/apache-kafka",
-      "target": "/backend/apache-flink/"
-    },
-    {
-      "source": "/backend/apache-kafka",
-      "target": "/backend/apache-flink/"
-    },
-    {
-      "source": "/backend/apache-kafka",
-      "target": "/backend/apache/"
-    },
-    {
-      "source": "/backend/apache-kafka",
-      "target": "/software%20engineering/docker/"
-    },
-    {
-      "source": "/backend/apache-flink",
-      "target": "/backend/apache/"
-    },
-    {
-      "source": "/backend/apache-flink",
-      "target": "/backend/apache-kafka/"
-    },
-    {
-      "source": "/backend/apache-flink",
-      "target": "/data%20science/apache-spark/"
-    },
-    {
-      "source": "/backend/apache-flink",
-      "target": "/software%20engineering/java/"
-    },
-    {
-      "source": "/backend/apache-flink",
-      "target": "/data%20science/scala/"
-    },
-    {
-      "source": "/backend/apache-flink",
-      "target": "/backend/stream-processing/"
-    },
-    {
-      "source": "/backend/apache-flink",
-      "target": "/backend/stream-processing/"
-    },
-    {
-      "source": "/backend/apache-flink",
-      "target": "/software%20engineering/java/"
-    },
-    {
-      "source": "/backend/apache-flink",
-      "target": "/data%20science/scala/"
-    },
-    {
-      "source": "/backend/apache-flink",
-      "target": "/data%20science/apache-spark/"
-    },
-    {
-      "source": "/backend/apache-flink",
-      "target": "/backend/apache-flink/"
-    },
-    {
-      "source": "/backend/apache-flink",
-      "target": "/backend/apache-kafka/"
-    },
-    {
-      "source": "/backend/apache-flink",
-      "target": "/backend/apache-flink/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/yeoman",
-      "target": "/uncategorized/automatizacion-y-build/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/yeoman",
-      "target": "/automatizacion%20y%20build/jhipster/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/yeoman",
-      "target": "/backend/node-js/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/yeoman",
-      "target": "/automatizacion%20y%20build/gulp/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/yeoman",
-      "target": "/uncategorized/automatizacion-y-build/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/yeoman",
-      "target": "/automatizacion%20y%20build/gulp/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/yeoman",
-      "target": "/automatizacion%20y%20build/jhipster/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/yeoman",
-      "target": "/software%20engineering/visual-basic-vba/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/yeoman",
-      "target": "/backend/node-js/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/yeoman",
-      "target": "/automatizacion%20y%20build/gulp/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/yeoman",
-      "target": "/uncategorized/automatizacion-y-build/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/yeoman",
-      "target": "/automatizacion%20y%20build/jhipster/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/webpack",
-      "target": "/uncategorized/automatizacion-y-build/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/vite",
-      "target": "/uncategorized/automatizacion-y-build/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/vite",
-      "target": "/uncategorized/software-engineering/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/vite",
-      "target": "/automatizacion%20y%20build/celery/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/scraping",
-      "target": "/uncategorized/automatizacion-y-build/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/scraping",
-      "target": "/testing/testing/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/scraping",
-      "target": "/uncategorized/data-science/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/scraping",
-      "target": "/devops/cicd/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/scraping",
-      "target": "/testing/e2e---end-to-end-testing/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/scraping",
-      "target": "/testing/playwright/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/scraping",
-      "target": "/uncategorized/automatizacion-y-build/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/scraping",
-      "target": "/testing/testing/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/scraping",
-      "target": "/testing/playwright/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/scraping",
-      "target": "/testing/e2e---end-to-end-testing/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/scraping",
-      "target": "/uncategorized/data-science/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/scraping",
-      "target": "/backend/axios/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/scraping",
-      "target": "/backend/etl/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/scraping",
-      "target": "/testing/playwright/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/scraping",
-      "target": "/testing/e2e---end-to-end-testing/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/nx",
-      "target": "/backend/monorepo/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/nx",
-      "target": "/devops/cicd/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/nx",
-      "target": "/backend/monorepo/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/nx",
-      "target": "/devops/cicd/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/nx",
-      "target": "/uncategorized/automatizacion-y-build/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/nx",
-      "target": "/testing/testing/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/nx",
-      "target": "/devops/cicd/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/nx",
-      "target": "/devops/cicd/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/nx",
-      "target": "/devops/cicd/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/nx",
-      "target": "/testing/testing/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/nx",
-      "target": "/uncategorized/automatizacion-y-build/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/nx",
-      "target": "/devops/cicd/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/maven",
-      "target": "/uncategorized/automatizacion-y-build/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/maven",
-      "target": "/uncategorized/sistemas/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/maven",
-      "target": "/software%20engineering/java/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/maven",
-      "target": "/uncategorized/devops/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/maven",
-      "target": "/backend/apache/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/maven",
-      "target": "/devops/cicd/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/maven",
-      "target": "/backend/php/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/maven",
-      "target": "/databases/xml/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/maven",
-      "target": "/software%20engineering/java/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/maven",
-      "target": "/uncategorized/devops/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/maven",
-      "target": "/devops/cicd/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/maven",
-      "target": "/databases/xml/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/maven",
-      "target": "/backend/php/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/maven",
-      "target": "/devops/cicd/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/maven",
-      "target": "/devops/cicd/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/maven",
-      "target": "/devops/cicd/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/maven",
-      "target": "/uncategorized/devops/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/maven",
-      "target": "/uncategorized/automatizacion-y-build/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/maven",
-      "target": "/uncategorized/sistemas/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/jhipster",
-      "target": "/software%20engineering/java/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/jhipster",
-      "target": "/uncategorized/devops/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/jhipster",
-      "target": "/automatizacion%20y%20build/yeoman/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/jhipster",
-      "target": "/uncategorized/databases/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/jhipster",
-      "target": "/software%20engineering/docker/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/jhipster",
-      "target": "/software%20engineering/java/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/jhipster",
-      "target": "/automatizacion%20y%20build/yeoman/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/jhipster",
-      "target": "/uncategorized/devops/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/jhipster",
-      "target": "/uncategorized/databases/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/jhipster",
-      "target": "/automatizacion%20y%20build/gradle/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/jhipster",
-      "target": "/uncategorized/databases/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/jhipster",
-      "target": "/automatizacion%20y%20build/yeoman/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/jhipster",
-      "target": "/uncategorized/databases/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/jhipster",
-      "target": "/software%20engineering/docker/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/husky",
-      "target": "/backend/monorepo/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/husky",
-      "target": "/uncategorized/automatizacion-y-build/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/husky",
-      "target": "/software%20engineering/git/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/husky",
-      "target": "/software%20engineering/git/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/husky",
-      "target": "/uncategorized/automatizacion-y-build/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/husky",
-      "target": "/uncategorized/automatizacion-y-build/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/husky",
-      "target": "/software%20engineering/git/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/husky",
-      "target": "/software%20engineering/git/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/husky",
-      "target": "/uncategorized/automatizacion-y-build/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/gulp",
-      "target": "/uncategorized/automatizacion-y-build/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/gulp",
-      "target": "/desarrollo%20web/javascript/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/gulp",
-      "target": "/uncategorized/automatizacion-y-build/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/gulp",
-      "target": "/desarrollo%20web/javascript/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/gulp",
-      "target": "/uncategorized/automatizacion-y-build/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/git-hooks",
-      "target": "/uncategorized/software-engineering/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/git-hooks",
-      "target": "/uncategorized/automatizacion-y-build/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/git-hooks",
-      "target": "/software%20engineering/git/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/git-hooks",
-      "target": "/automatizacion%20y%20build/husky/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/gradle",
-      "target": "/software%20engineering/java/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/gradle",
-      "target": "/devops/cicd/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/gradle",
-      "target": "/uncategorized/automatizacion-y-build/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/gradle",
-      "target": "/testing/testing/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/gradle",
-      "target": "/computer%20science/dsl/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/gradle",
-      "target": "/devops/cicd/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/gradle",
-      "target": "/automatizacion%20y%20build/maven/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/gradle",
-      "target": "/devops/cicd/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/celery",
-      "target": "/uncategorized/devops/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/celery",
-      "target": "/software%20engineering/python/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/celery",
-      "target": "/software%20engineering/docker/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/celery",
+      "source": "/backend/apache",
       "target": "/uncategorized/backend/"
     },
     {
-      "source": "/automatizacion%20y%20build/celery",
-      "target": "/uncategorized/automatizacion-y-build/"
+      "source": "/backend/apache",
+      "target": "/backend/php/"
     },
     {
-      "source": "/automatizacion%20y%20build/celery",
-      "target": "/automatizacion%20y%20build/scraping/"
+      "source": "/backend/apache",
+      "target": "/backend/apache-kafka/"
     },
     {
-      "source": "/automatizacion%20y%20build/celery",
-      "target": "/databases/redis/"
+      "source": "/backend/apache",
+      "target": "/backend/apache-kafka/"
     },
     {
-      "source": "/automatizacion%20y%20build/celery",
-      "target": "/backend/rabbitmq/"
+      "source": "/backend/apache",
+      "target": "/backend/apache-kafka/"
     },
     {
-      "source": "/automatizacion%20y%20build/celery",
-      "target": "/uncategorized/celery-conceptos-avanzados-y-configuraci-n-profesional/"
+      "source": "/backend/apache",
+      "target": "/testing/jmeter/"
     },
     {
-      "source": "/automatizacion%20y%20build/celery",
-      "target": "/uncategorized/celery-temas-avanzados-varios/"
+      "source": "/backend/apache",
+      "target": "/monitoreo/opentelemetry/"
     },
     {
-      "source": "/automatizacion%20y%20build/celery",
-      "target": "/uncategorized/gu-a-pr-ctica-completa-de-celery/"
+      "source": "/backend/apache",
+      "target": "/backend/apache-kafka/"
     },
     {
-      "source": "/automatizacion%20y%20build/celery",
-      "target": "/backend/rabbitmq/"
+      "source": "/backend/apache",
+      "target": "/testing/jmeter/"
     },
     {
-      "source": "/automatizacion%20y%20build/celery",
+      "source": "/backend/apache",
+      "target": "/backend/apache-kafka/"
+    },
+    {
+      "source": "/backend/apache",
+      "target": "/monitoreo/opentelemetry/"
+    },
+    {
+      "source": "/backend/apache",
+      "target": "/backend/apache-kafka/"
+    },
+    {
+      "source": "/backend/apache-kafka",
+      "target": "/backend/stream-processing/"
+    },
+    {
+      "source": "/backend/apache-kafka",
+      "target": "/uncategorized/data-science/"
+    },
+    {
+      "source": "/backend/apache-kafka",
+      "target": "/backend/apache/"
+    },
+    {
+      "source": "/backend/apache-kafka",
+      "target": "/backend/apache-flink/"
+    },
+    {
+      "source": "/backend/apache-kafka",
+      "target": "/backend/apache-flink/"
+    },
+    {
+      "source": "/backend/apache-kafka",
+      "target": "/backend/apache/"
+    },
+    {
+      "source": "/backend/apache-kafka",
       "target": "/software%20engineering/docker/"
     },
     {
-      "source": "/automatizacion%20y%20build/celery",
-      "target": "/uncategorized/automatizacion-y-build/"
+      "source": "/backend/apache-flink",
+      "target": "/backend/apache/"
+    },
+    {
+      "source": "/backend/apache-flink",
+      "target": "/backend/apache-kafka/"
+    },
+    {
+      "source": "/backend/apache-flink",
+      "target": "/data%20science/apache-spark/"
+    },
+    {
+      "source": "/backend/apache-flink",
+      "target": "/software%20engineering/java/"
+    },
+    {
+      "source": "/backend/apache-flink",
+      "target": "/data%20science/scala/"
+    },
+    {
+      "source": "/backend/apache-flink",
+      "target": "/backend/stream-processing/"
+    },
+    {
+      "source": "/backend/apache-flink",
+      "target": "/backend/stream-processing/"
+    },
+    {
+      "source": "/backend/apache-flink",
+      "target": "/software%20engineering/java/"
+    },
+    {
+      "source": "/backend/apache-flink",
+      "target": "/data%20science/scala/"
+    },
+    {
+      "source": "/backend/apache-flink",
+      "target": "/data%20science/apache-spark/"
+    },
+    {
+      "source": "/backend/apache-flink",
+      "target": "/backend/apache-flink/"
+    },
+    {
+      "source": "/backend/apache-flink",
+      "target": "/backend/apache-kafka/"
+    },
+    {
+      "source": "/backend/apache-flink",
+      "target": "/backend/apache-flink/"
     },
     {
       "source": "/uncategorized/automatizacion-y-build",
@@ -21218,14 +21218,6 @@
       "target": "/backend/firebase/"
     },
     {
-      "source": "/autenticacion/tacacs",
-      "target": "/autenticacion/iam-gesti-n-de-identidades-y-acceso/"
-    },
-    {
-      "source": "/autenticacion/tacacs",
-      "target": "/uncategorized/ciberseguridad/"
-    },
-    {
       "source": "/autenticacion/sso-single-sign-on",
       "target": "/uncategorized/autenticacion/"
     },
@@ -21260,6 +21252,14 @@
     {
       "source": "/autenticacion/sso-single-sign-on",
       "target": "/autenticacion/saml/"
+    },
+    {
+      "source": "/autenticacion/tacacs",
+      "target": "/autenticacion/iam-gesti-n-de-identidades-y-acceso/"
+    },
+    {
+      "source": "/autenticacion/tacacs",
+      "target": "/uncategorized/ciberseguridad/"
     },
     {
       "source": "/autenticacion/saml",
@@ -21310,50 +21310,6 @@
       "target": "/uncategorized/ciberseguridad/"
     },
     {
-      "source": "/autenticacion/pki-infraestructura-de-clave-p-blica",
-      "target": "/autenticacion/criptografia/"
-    },
-    {
-      "source": "/autenticacion/pki-infraestructura-de-clave-p-blica",
-      "target": "/uncategorized/autenticacion/"
-    },
-    {
-      "source": "/autenticacion/pki-infraestructura-de-clave-p-blica",
-      "target": "/uncategorized/autenticacion/"
-    },
-    {
-      "source": "/autenticacion/pki-infraestructura-de-clave-p-blica",
-      "target": "/uncategorized/autenticacion/"
-    },
-    {
-      "source": "/autenticacion/pki-infraestructura-de-clave-p-blica",
-      "target": "/autenticacion/criptografia/"
-    },
-    {
-      "source": "/autenticacion/pki-infraestructura-de-clave-p-blica",
-      "target": "/autenticacion/criptografia/"
-    },
-    {
-      "source": "/autenticacion/pki-infraestructura-de-clave-p-blica",
-      "target": "/autenticacion/pki-infraestructura-de-clave-p-blica/"
-    },
-    {
-      "source": "/autenticacion/pki-infraestructura-de-clave-p-blica",
-      "target": "/uncategorized/autenticacion/"
-    },
-    {
-      "source": "/autenticacion/pki-infraestructura-de-clave-p-blica",
-      "target": "/autenticacion/pki-infraestructura-de-clave-p-blica/"
-    },
-    {
-      "source": "/autenticacion/pki-infraestructura-de-clave-p-blica",
-      "target": "/autenticacion/criptografia/"
-    },
-    {
-      "source": "/autenticacion/pki-infraestructura-de-clave-p-blica",
-      "target": "/uncategorized/autenticacion/"
-    },
-    {
       "source": "/autenticacion/oauth",
       "target": "/uncategorized/autenticacion/"
     },
@@ -21376,6 +21332,50 @@
     {
       "source": "/autenticacion/oauth",
       "target": "/autenticacion/oauth/"
+    },
+    {
+      "source": "/autenticacion/pki-infraestructura-de-clave-p-blica",
+      "target": "/autenticacion/criptografia/"
+    },
+    {
+      "source": "/autenticacion/pki-infraestructura-de-clave-p-blica",
+      "target": "/uncategorized/autenticacion/"
+    },
+    {
+      "source": "/autenticacion/pki-infraestructura-de-clave-p-blica",
+      "target": "/uncategorized/autenticacion/"
+    },
+    {
+      "source": "/autenticacion/pki-infraestructura-de-clave-p-blica",
+      "target": "/uncategorized/autenticacion/"
+    },
+    {
+      "source": "/autenticacion/pki-infraestructura-de-clave-p-blica",
+      "target": "/autenticacion/criptografia/"
+    },
+    {
+      "source": "/autenticacion/pki-infraestructura-de-clave-p-blica",
+      "target": "/autenticacion/criptografia/"
+    },
+    {
+      "source": "/autenticacion/pki-infraestructura-de-clave-p-blica",
+      "target": "/autenticacion/pki-infraestructura-de-clave-p-blica/"
+    },
+    {
+      "source": "/autenticacion/pki-infraestructura-de-clave-p-blica",
+      "target": "/uncategorized/autenticacion/"
+    },
+    {
+      "source": "/autenticacion/pki-infraestructura-de-clave-p-blica",
+      "target": "/autenticacion/pki-infraestructura-de-clave-p-blica/"
+    },
+    {
+      "source": "/autenticacion/pki-infraestructura-de-clave-p-blica",
+      "target": "/autenticacion/criptografia/"
+    },
+    {
+      "source": "/autenticacion/pki-infraestructura-de-clave-p-blica",
+      "target": "/uncategorized/autenticacion/"
     },
     {
       "source": "/autenticacion/ldap",
