@@ -2,18 +2,18 @@
 date: 2025-10-26 13:44
 title: surfing keys vim in browser
 tags:
-  - Productividad
-  - sistemas
 keywords:
 source:
 status: 📌
 Parent: "[[Area-Sistemas]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - Sistemas
 public_note: "true"
-category: Sistemas
+category: Productividad
+categories:
+  - Productividad
+  - sistemas
+  - hide-embedded-header1
+  - Sistemas
 ---
 # surfing keys vim in browser
 `$= dv.current().file.tags.join(" ")`

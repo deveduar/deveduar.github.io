@@ -2,21 +2,20 @@
 date: 2025-04-15 16:42
 title: manejo de parches
 tags:
-  - Hacking
-  - parches
-  - ciberseguridad
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - ciberseguridad
 aliases:
-  - Patch Management
 public_note: "true"
-category: ciberseguridad
+category: Hacking
+categories:
+  - Hacking
+  - parches
+  - ciberseguridad
+  - hide-embedded-header1
+  - Patch Management
 ---
 # Manejo de Parches
 `$= dv.current().file.tags.join(" ")`

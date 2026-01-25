@@ -2,20 +2,19 @@
 date: 2025-04-15 16:40
 title: ingenieria inversa
 tags:
-  - Hacking
-  - ciberseguridad
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - ciberseguridad
 aliases:
-  - Reverse engineering
 public_note: "true"
-category: ciberseguridad
+category: Hacking
+categories:
+  - Hacking
+  - ciberseguridad
+  - hide-embedded-header1
+  - Reverse engineering
 ---
 # Ingeniería inversa
 ``$= dv.current().file.tags.join(" ")``

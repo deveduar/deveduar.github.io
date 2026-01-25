@@ -2,17 +2,16 @@
 date: 2024-02-04 19:06
 title: Linux kernel
 tags:
-  - Linux
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 keywords:
 source:
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - Linux
 public_note: "true"
 category: Linux
+categories:
+  - Linux
+  - hide-embedded-header1
 ---
 # Linux kernel curso LFD103 (entorno comun)
 `$= dv.current().file.tags.join(" ")`

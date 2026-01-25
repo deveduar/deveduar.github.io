@@ -2,24 +2,24 @@
 date: 2025-04-14 18:06
 title: Ciberinteligencia TIP
 tags:
-  - Hacking
-  - pentesting
-  - ciberinteligencia
-  - servicio
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 cssclasses:
+aliases:
+public_note: "true"
+category: Hacking
+categories:
+  - Hacking
+  - pentesting
+  - ciberinteligencia
+  - servicio
   - hide-embedded-header1
   - wide
-categories:
   - ciberseguridad
-aliases:
   - Threat Intelligence
   - Ciberinteligencia
-public_note: "true"
-category: ciberseguridad
 ---
 # Ciberinteligencia TIP
 ``$= dv.current().file.tags.join(" ")``

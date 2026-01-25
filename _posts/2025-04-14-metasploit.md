@@ -2,20 +2,20 @@
 date: 2025-04-14 18:02
 title: Metasploit
 tags:
-  - metasploit
-  - vulnerabilidades
-  - pentesting
-  - Hacking
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - ciberseguridad
 public_note: "true"
-category: ciberseguridad
+category: metasploit
+categories:
+  - metasploit
+  - vulnerabilidades
+  - pentesting
+  - Hacking
+  - hide-embedded-header1
+  - ciberseguridad
 ---
 # Metasploit
 `$= dv.current().file.tags.join(" ")`

@@ -7,11 +7,10 @@ source:
 status: 📌
 Parent: "[[Area-Prog]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - uncategorized
 public_note: "true"
-category: uncategorized
+category: hide-embedded-header1
+categories:
+  - hide-embedded-header1
 ---
 # Estrategias de mocking para APIs y servicios externos con Jest
 `$= dv.current().file.tags.join(" ")`

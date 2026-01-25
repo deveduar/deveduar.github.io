@@ -2,22 +2,22 @@
 date: 2025-10-13 15:20
 title: autohotkey
 tags:
+keywords:
+source:
+status: 🌟
+Parent: "[[Area-Sistemas]]"
+cssclasses:
+public_note: "true"
+category: automation
+categories:
   - automation
   - autohotkey
   - Productividad
   - sistemas
   - Linux
   - Windows
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Sistemas]]"
-cssclasses:
   - hide-embedded-header1
-categories:
   - Automatizacion y Build
-public_note: "true"
-category: Automatizacion y Build
 ---
 # autohotkey
 `$= dv.current().file.tags.join(" ")`

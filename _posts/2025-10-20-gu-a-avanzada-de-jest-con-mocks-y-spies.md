@@ -2,18 +2,18 @@
 date: 2025-10-20 18:02
 title: Guía avanzada de Jest con mocks y spies
 tags:
-  - Codes
 keywords:
 aliases:
 source:
 status: 📌
 Parent: "[[Area-Prog]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - Testing
 public_note: "true"
-category: Testing
+category: Codes
+categories:
+  - Codes
+  - hide-embedded-header1
+  - Testing
 ---
 # Guía avanzada de Jest con mocks y spies
 `$= dv.current().file.tags.join(" ")`

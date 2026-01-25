@@ -2,20 +2,19 @@
 date: 2025-10-10 11:20
 title: better auth
 tags:
-  - autenticacion
-  - auth
-  - seguridad
-  - framework
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - autenticacion
 public_note: "true"
 category: autenticacion
+categories:
+  - autenticacion
+  - auth
+  - seguridad
+  - framework
+  - hide-embedded-header1
 ---
 # Better Auth
 `$= dv.current().file.tags.join(" ")`

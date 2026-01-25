@@ -2,19 +2,19 @@
 date: 2023-08-31 16:47
 title: Comunicación entre Procesos
 tags:
-  - CS
-  - Codes
 status: 🌟
 Parent: "[[Area-Prog]]"
 keywords:
 aliases:
 source:
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - Computer Science
 public_note: "true"
-category: Computer Science
+category: CS
+categories:
+  - CS
+  - Codes
+  - hide-embedded-header1
+  - Computer Science
 ---
 # Comunicación entre Procesos
 `$= dv.current().file.tags.join(" ")`

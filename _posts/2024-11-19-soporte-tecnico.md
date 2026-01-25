@@ -2,19 +2,19 @@
 date: 2024-11-19 02:46
 title: soporte tecnico
 tags:
-  - soporte
-  - analisis
-  - cloud
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - infraestructura IT
 public_note: "true"
-category: infraestructura IT
+category: soporte
+categories:
+  - soporte
+  - analisis
+  - cloud
+  - hide-embedded-header1
+  - infraestructura IT
 ---
 # soporte tecnico
 `$= dv.current().file.tags.join(" ")`

@@ -3,20 +3,20 @@ date: 2024-03-01 16:40
 title: Expresiones regulares
 modification date: Friday 1st March 2024 16:40:27
 tags:
-  - JS
-  - CS
-  - mates
 keywords:
 aliases: []
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - Computer Science
 public_note: "true"
-category: Computer Science
+category: JS
+categories:
+  - JS
+  - CS
+  - mates
+  - hide-embedded-header1
+  - Computer Science
 ---
 # Expresiones regulares
 `$= dv.current().file.tags.join(" ")`

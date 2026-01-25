@@ -2,6 +2,15 @@
 date: 2024-11-06 23:27
 title: Databases
 tags:
+keywords:
+source:
+status: 🚀
+Parent: "[[Area-Prog]]"
+cssclasses:
+aliases:
+public_note: "true"
+category: db
+categories:
   - db
   - MySQL
   - postgres
@@ -12,21 +21,10 @@ tags:
   - json
   - mongodb
   - backend
-keywords:
-source:
-status: 🚀
-Parent: "[[Area-Prog]]"
-cssclasses:
   - hide-embedded-header1
-aliases:
-  - db
   - bases de datos
   - databases
   - Bases de datos
-public_note: "true"
-category: uncategorized
-categories:
-  - uncategorized
 ---
 # Databases
 `$= dv.current().file.tags.join(" ")`

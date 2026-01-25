@@ -2,19 +2,19 @@
 date: 2025-12-06 18:15
 title: Web Components
 tags:
-  - webcomponents
-  - frontend
-  - webdevelopment
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - Frontend
 public_note: "true"
-category: Frontend
+category: webcomponents
+categories:
+  - webcomponents
+  - frontend
+  - webdevelopment
+  - hide-embedded-header1
+  - Frontend
 ---
 # Web Components  
 `$= dv.current().file.tags.join(" ")`

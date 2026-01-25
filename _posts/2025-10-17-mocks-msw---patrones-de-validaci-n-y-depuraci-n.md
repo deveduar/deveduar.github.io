@@ -7,11 +7,11 @@ source:
 status: 📌
 Parent: "[[Area-Prog]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - Testing
 public_note: "true"
-category: Testing
+category: hide-embedded-header1
+categories:
+  - hide-embedded-header1
+  - Testing
 ---
 
 # Mocks MSW - patrones de validación y depuración

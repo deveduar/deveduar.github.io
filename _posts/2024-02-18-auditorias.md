@@ -2,17 +2,17 @@
 date: 2024-02-18 17:50
 title: Auditorias
 tags:
-  - Hacking
 Parent: "[[Area-Sistemas]]"
 keywords:
 source:
 status: 🌟
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - ciberseguridad
 public_note: "true"
-category: ciberseguridad
+category: Hacking
+categories:
+  - Hacking
+  - hide-embedded-header1
+  - ciberseguridad
 ---
 # Auditorías
 ``$= dv.current().file.tags.join(" ")``

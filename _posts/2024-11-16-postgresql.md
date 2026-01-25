@@ -2,19 +2,19 @@
 date: 2024-11-16 17:15
 title: postgreSQL
 tags:
-  - postgres
-  - db
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 cssclasses:
+public_note: "true"
+category: postgres
+categories:
+  - postgres
+  - db
   - hide-embedded-header1
   - wide
-categories:
   - Databases
-public_note: "true"
-category: Databases
 ---
 # postgreSQL
 `$= dv.current().file.tags.join(" ")`

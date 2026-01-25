@@ -2,18 +2,18 @@
 date: 2025-06-15 11:46
 title: TDD - Test Driven Development
 tags:
-  - TDD
-  - testing
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - Testing
 public_note: "true"
-category: Testing
+category: TDD
+categories:
+  - TDD
+  - testing
+  - hide-embedded-header1
+  - Testing
 ---
 # TDD - Test Driven Development
 `$= dv.current().file.tags.join(" ")`
@@ -304,6 +304,6 @@ npm run lint && npm test
 
 ## 🧭 Resumen
 
-El [TDD - Test Driven Development](/testing/tdd---test-driven-development/) promueve una forma de desarrollo **disciplinada, incremental y segura**, donde el diseño del software se guía por pruebas automatizadas.  
+El [TDD - Test Driven Development](/tdd/tdd---test-driven-development/) promueve una forma de desarrollo **disciplinada, incremental y segura**, donde el diseño del software se guía por pruebas automatizadas.  
 Combinado con [BDD](/testing/bdd/) y frameworks como [PHPUnit](/testing/phpunit/), proporciona una base sólida para sistemas **mantenibles, testables y escalables**.  
 Su flujo de **Red → Green → Refactor** garantiza calidad constante y reduce drásticamente la aparición de errores en producción.

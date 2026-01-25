@@ -2,18 +2,18 @@
 date: 2024-09-04 19:15
 title: typescript
 tags:
-  - JS
-  - typescript
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - Software engineering
 public_note: "true"
-category: Software engineering
+category: JS
+categories:
+  - JS
+  - typescript
+  - hide-embedded-header1
+  - Software engineering
 ---
 # typescript
 `$= dv.current().file.tags.join(" ")`

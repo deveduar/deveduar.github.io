@@ -2,17 +2,16 @@
 date: 2026-01-13 15:22
 title: Cloud Computing
 tags:
-  - cloud
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - cloud
 public_note: "true"
 category: cloud
+categories:
+  - cloud
+  - hide-embedded-header1
 ---
 # Cloud Computing
 `$= dv.current().file.tags.join(" ")`

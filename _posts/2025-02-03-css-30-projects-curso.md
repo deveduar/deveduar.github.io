@@ -2,18 +2,17 @@
 date: 2025-02-03 21:05
 title: CSS 30 projects curso
 tags:
-  - CSS
 keywords:
 source:
 status: 📌
 cssclasses:
+Parent: "[[Area-Prog]]"
+public_note: "true"
+category: CSS
+categories:
+  - CSS
   - hide-embedded-header1
   - wide
-Parent: "[[Area-Prog]]"
-categories:
-  - uncategorized
-public_note: "true"
-category: uncategorized
 ---
 # curso CSS 30 projects
 `$= dv.current().file.tags.join(" ")`

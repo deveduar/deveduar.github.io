@@ -7,11 +7,11 @@ source:
 status: 🌟
 Parent: "[[Area-IA]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - mates
 public_note: "true"
-category: mates
+category: hide-embedded-header1
+categories:
+  - hide-embedded-header1
+  - mates
 ---
 # 🧮 Teoría de la probabilidad y teoría de la información
 `$= dv.current().file.tags.join(" ")`
@@ -212,7 +212,7 @@ Estos modelos permiten representar dependencias, inferir variables ocultas y rea
 
 # 🧠 Problemas y soluciones en teoría de la probabilidad e información
 
-Esta guía recopila **problemas frecuentes**, **métodos de resolución** y **estrategias prácticas** para aplicar los conceptos de [Teoría de la probabilidad y teoría de la información](/mates/teor-a-de-la-probabilidad-y-teor-a-de-la-informaci-n/).
+Esta guía recopila **problemas frecuentes**, **métodos de resolución** y **estrategias prácticas** para aplicar los conceptos de [Teoría de la probabilidad y teoría de la información](/hide-embedded-header1/teor-a-de-la-probabilidad-y-teor-a-de-la-informaci-n/).
 
 ---
 
@@ -439,7 +439,7 @@ $$
 
 ## 📘 Enlaces relacionados
 
-- [Teoría de la probabilidad y teoría de la información](/mates/teor-a-de-la-probabilidad-y-teor-a-de-la-informaci-n/)
+- [Teoría de la probabilidad y teoría de la información](/hide-embedded-header1/teor-a-de-la-probabilidad-y-teor-a-de-la-informaci-n/)
     
 - Reglas bayesianas
     

@@ -2,19 +2,19 @@
 date: 2025-06-09 14:47
 title: Agentes IA
 tags:
-  - AI
-  - agentes
-  - automatizacion
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - Automatizacion y Build
 public_note: "true"
-category: Automatizacion y Build
+category: AI
+categories:
+  - AI
+  - agentes
+  - automatizacion
+  - hide-embedded-header1
+  - Automatizacion y Build
 ---
 # Agentes IA
 `$= dv.current().file.tags.join(" ")`

@@ -2,20 +2,20 @@
 date: 2025-05-19 04:38
 title: Stream Processing
 tags:
-  - stream_processing
-  - kafka
-  - CS
 keywords:
 source:
 status: 🚀
 Parent: "[[Area-Prog]]"
 cssclasses:
+public_note: "true"
+category: stream_processing
+categories:
+  - stream_processing
+  - kafka
+  - CS
   - hide-embedded-header1
   - wide
-categories:
   - Backend
-public_note: "true"
-category: Backend
 ---
 # Stream Processing
 `$= dv.current().file.tags.join(" ")`
@@ -302,7 +302,7 @@ category: Backend
 `$= dv.current().file.tags.join(" ")`
 
 ## Conceptos Fundamentales
-- [Stream Processing](/backend/stream-processing/)
+- [Stream Processing](/stream_processing/stream-processing/)
 - Event Streaming
 - Micro-batches
 - True Streaming

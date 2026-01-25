@@ -2,20 +2,20 @@
 date: 2025-11-06 15:14
 title: Complejidad Logarítmica y Notación Big O
 tags:
-  - CS
-  - computer_Science
-  - logaritmos
-  - big_0
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - Computer Science
 public_note: "true"
-category: Computer Science
+category: CS
+categories:
+  - CS
+  - computer_Science
+  - logaritmos
+  - big_0
+  - hide-embedded-header1
+  - Computer Science
 ---
 # Complejidad Logarítmica y Notación Big O
 `$= dv.current().file.tags.join(" ")`

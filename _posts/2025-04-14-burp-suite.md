@@ -2,20 +2,20 @@
 date: 2025-04-14 17:50
 title: Burp Suite
 tags:
-  - Hacking
-  - pentesting
-  - burp-suite
-  - tool
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - ciberseguridad
 public_note: "true"
-category: ciberseguridad
+category: Hacking
+categories:
+  - Hacking
+  - pentesting
+  - burp-suite
+  - tool
+  - hide-embedded-header1
+  - ciberseguridad
 ---
 # Burp Suite
 ``$= dv.current().file.tags.join(" ")``

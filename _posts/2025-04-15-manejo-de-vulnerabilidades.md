@@ -2,20 +2,20 @@
 date: 2025-04-15 18:42
 title: manejo de vulnerabilidades
 tags:
-  - vulnerabilidades
-  - Hacking
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - ciberseguridad
 aliases:
-  - Vulnerability Management
 public_note: "true"
-category: ciberseguridad
+category: vulnerabilidades
+categories:
+  - vulnerabilidades
+  - Hacking
+  - hide-embedded-header1
+  - ciberseguridad
+  - Vulnerability Management
 ---
 # Manejo de Vulnerabilidades
 ``$= dv.current().file.tags.join(" ")``

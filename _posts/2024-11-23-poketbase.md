@@ -2,20 +2,20 @@
 date: 2024-11-23 19:31
 title: poketbase
 tags:
-  - pocketbase
-  - db
-  - backend
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 cssclasses:
+public_note: "true"
+category: pocketbase
+categories:
+  - pocketbase
+  - db
+  - backend
   - hide-embedded-header1
   - wide
-categories:
   - Backend
-public_note: "true"
-category: Backend
 ---
 # PocketBase
 `$= dv.current().file.tags.join(" ")`

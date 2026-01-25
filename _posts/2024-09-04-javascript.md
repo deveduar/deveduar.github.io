@@ -2,14 +2,14 @@
 date: 2024-09-04T03:13:00
 title: javascript
 tags:
-  - JS
-  - Scraping
 status: 🌟
 Parent: "[[Area-Prog]]"
-categories:
-  - Desarrollo web
 public_note: "true"
-category: Desarrollo web
+category: JS
+categories:
+  - JS
+  - Scraping
+  - Desarrollo web
 ---
 # JavaScript
 `$= dv.current().file.tags.join(" ")`

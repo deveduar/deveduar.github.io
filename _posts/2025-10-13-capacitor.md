@@ -2,20 +2,20 @@
 date: 2025-10-13 14:45
 title: capacitor
 tags:
-  - desktop-apps
-  - Capacitor
-  - android
-  - native_runtime
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - Desarrollo multiplataforma
 public_note: "true"
-category: Desarrollo multiplataforma
+category: desktop-apps
+categories:
+  - desktop-apps
+  - Capacitor
+  - android
+  - native_runtime
+  - hide-embedded-header1
+  - Desarrollo multiplataforma
 ---
 # Capacitor
 ``$= dv.current().file.tags.join(" ")``

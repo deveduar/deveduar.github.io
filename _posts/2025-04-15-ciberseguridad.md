@@ -2,20 +2,19 @@
 date: 2025-04-15 17:39
 title: ciberseguridad
 tags:
-  - Hacking
-  - ciberseguridad
-  - hardening
-  - pentesting
 keywords:
 source:
 status: 🚀
 Parent: "[[Area-Sistemas]]"
 cssclasses:
-  - hide-embedded-header1
 public_note: "true"
-category: uncategorized
+category: Hacking
 categories:
-  - uncategorized
+  - Hacking
+  - ciberseguridad
+  - hardening
+  - pentesting
+  - hide-embedded-header1
 ---
 # ciberseguridad
 `$= dv.current().file.tags.join(" ")`
@@ -113,7 +112,7 @@ categories:
 
 ## Servicios empresariales
 - servicios empresariales
-	- [ciberseguridad](/uncategorized/ciberseguridad/)
+	- [ciberseguridad](/hacking/ciberseguridad/)
 	- [SOC](/ciberseguridad/soc/) auditorias
 	- servicios de red y modelado
 	- [Redes](/uncategorized/redes/)

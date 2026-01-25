@@ -2,23 +2,23 @@
 date: 2025-04-14 18:09
 title: servicio MDR detección y respuesta administradas
 tags:
-  - servicio
-  - Hacking
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 cssclasses:
+aliases:
+public_note: "true"
+category: servicio
+categories:
+  - servicio
+  - Hacking
   - hide-embedded-header1
   - wide
-categories:
   - ciberseguridad
-aliases:
   - MDR
-  - detección y respuesta administradas
+  - deteccin y respuesta administradas
   - Servicio MDR
-public_note: "true"
-category: ciberseguridad
 ---
 # Servicio MDR - Detección y Respuesta Administradas
 `$= dv.current().file.tags.join(" ")`

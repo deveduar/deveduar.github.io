@@ -2,19 +2,18 @@
 date: 2025-05-21 20:07
 title: Product Management
 tags:
-  - Management
-  - product-management
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 cssclasses:
-  - hide-embedded-header1
-  - wide
-categories:
-  - Management
 public_note: "true"
 category: Management
+categories:
+  - Management
+  - product-management
+  - hide-embedded-header1
+  - wide
 ---
 # Product Management
 `$= dv.current().file.tags.join(" ")`

@@ -2,17 +2,17 @@
 date: 2023-04-01 17:39
 title: Intro Algebra lineal y ML
 tags:
-  - Mates
 status: 🌟
 Parent: "[[Area-IA]]"
 keywords:
 source:
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - mates
 public_note: "true"
-category: mates
+category: Mates
+categories:
+  - Mates
+  - hide-embedded-header1
+  - mates
 ---
 # Intro Algebra lineal y ML
 `$= dv.current().file.tags.join(" ")`

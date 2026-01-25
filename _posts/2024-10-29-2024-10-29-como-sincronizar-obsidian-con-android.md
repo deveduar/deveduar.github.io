@@ -10,8 +10,6 @@ public: true
 category: uncategorized
 categories:
   - uncategorized
-  - 
-  - uncategorized
 ---
 ## Description
 

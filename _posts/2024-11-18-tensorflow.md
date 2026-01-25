@@ -2,21 +2,21 @@
 date: 2024-11-18 19:35
 title: TensorFlow
 tags:
-  - datascience
-  - data-science
-  - IA
-  - tensorflow
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 cssclasses:
+public_note: "true"
+category: datascience
+categories:
+  - datascience
+  - data-science
+  - IA
+  - tensorflow
   - hide-embedded-header1
   - wide
-categories:
   - Data Science
-public_note: "true"
-category: Data Science
 ---
 # TensorFlow
 `$= dv.current().file.tags.join(" ")`

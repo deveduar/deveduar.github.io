@@ -2,21 +2,21 @@
 date: 2024-11-16 17:44
 title: web services
 tags:
-  - webservices
-  - devops
-  - backend
-  - microservicios
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 cssclasses:
+public_note: "true"
+category: webservices
+categories:
+  - webservices
+  - devops
+  - backend
+  - microservicios
   - hide-embedded-header1
   - wide
-categories:
   - Backend
-public_note: "true"
-category: Backend
 ---
 # Web Services
 `$= dv.current().file.tags.join(" ")`

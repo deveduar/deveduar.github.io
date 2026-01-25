@@ -2,19 +2,19 @@
 date: 2025-05-21 16:53
 title: SI Sistema de Información
 tags:
-  - ITIL
-  - SI
-  - infraestructura
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - infraestructura IT
 public_note: "true"
-category: infraestructura IT
+category: ITIL
+categories:
+  - ITIL
+  - SI
+  - infraestructura
+  - hide-embedded-header1
+  - infraestructura IT
 ---
 # SI Sistema de Información
 ``$= dv.current().file.tags.join(" ")``

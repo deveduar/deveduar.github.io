@@ -2,18 +2,17 @@
 date: 2024-03-02 01:11
 title: arch linux
 tags:
-  - Linux
-  - Sistemas
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - Linux
 public_note: "true"
 category: Linux
+categories:
+  - Linux
+  - Sistemas
+  - hide-embedded-header1
 ---
 # Arch Linux
 `$= dv.current().file.tags.join(" ")`

@@ -2,19 +2,19 @@
 date: 2025-11-01 20:19
 title: VDC Virtual Data Center
 tags:
-  - VDC
-  - virtualizacion
-  - cloud
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - Virtualizacion
 public_note: "true"
-category: Virtualizacion
+category: VDC
+categories:
+  - VDC
+  - virtualizacion
+  - cloud
+  - hide-embedded-header1
+  - Virtualizacion
 ---
 # VDC Virtual Data Center
 `$= dv.current().file.tags.join(" ")`

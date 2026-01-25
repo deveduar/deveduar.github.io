@@ -2,18 +2,18 @@
 date: 2024-11-18 22:45
 title: powershell
 tags:
-  - powershell
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 cssclasses:
+public_note: "true"
+category: powershell
+categories:
+  - powershell
   - hide-embedded-header1
   - wide
-categories:
   - Sistemas
-public_note: "true"
-category: Sistemas
 ---
 # PowerShell
 `$= dv.current().file.tags.join(" ")`

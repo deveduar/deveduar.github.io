@@ -7,11 +7,10 @@ source:
 status: 📌
 Parent: "[[Area-Prog]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - uncategorized
 public_note: "true"
-category: uncategorized
+category: hide-embedded-header1
+categories:
+  - hide-embedded-header1
 ---
 
 # Guía Fundamental de [E2E - End to End Testing](/testing/e2e---end-to-end-testing/)

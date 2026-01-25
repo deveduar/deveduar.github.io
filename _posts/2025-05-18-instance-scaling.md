@@ -2,20 +2,20 @@
 date: 2025-05-18 03:59
 title: Instance Scaling
 tags:
-  - backend
-  - devops
-  - scaling
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 cssclasses:
+public_note: "true"
+category: backend
+categories:
+  - backend
+  - devops
+  - scaling
   - hide-embedded-header1
   - wide
-categories:
   - Backend
-public_note: "true"
-category: Backend
 ---
 # Instance Scaling
 ``$= dv.current().file.tags.join(" ")``

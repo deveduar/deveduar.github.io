@@ -2,21 +2,21 @@
 date: 2025-04-14 18:01
 title: Acunetix scanner
 tags:
-  - tool
-  - Hacking
-  - pentesting
-  - vulnerabilidades
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 cssclasses:
+public_note: "true"
+category: tool
+categories:
+  - tool
+  - Hacking
+  - pentesting
+  - vulnerabilidades
   - hide-embedded-header1
   - wide
-categories:
   - monitoreo
-public_note: "true"
-category: monitoreo
 ---
 # Acunetix scanner
 `$= dv.current().file.tags.join(" ")`

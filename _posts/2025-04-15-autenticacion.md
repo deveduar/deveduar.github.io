@@ -2,19 +2,18 @@
 date: 2025-04-15 19:15
 title: autenticacion
 tags:
-  - autenticacion
-  - Hacking
-  - criptografia
 keywords:
 source:
 status: 🚀
 Parent: "[[Area-Sistemas]]"
 cssclasses:
-  - hide-embedded-header1
 public_note: "true"
-category: uncategorized
+category: autenticacion
 categories:
-  - uncategorized
+  - autenticacion
+  - Hacking
+  - criptografia
+  - hide-embedded-header1
 ---
 # Autenticación
 `$= dv.current().file.tags.join(" ")` 

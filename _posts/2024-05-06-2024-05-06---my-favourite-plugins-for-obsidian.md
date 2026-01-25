@@ -2,8 +2,6 @@
 title: ⭐ My favourite plugins for obsidian
 date: 2024-05-06
 tags:
-  - obsidian
-  - productivity
 status: 📌
 public_notes: true
 public_note: true
@@ -11,8 +9,8 @@ public_note1: true
 public: true
 category: uncategorized
 categories:
-  - uncategorized
-  - 
+  - obsidian
+  - productivity
   - uncategorized
 ---
 # My favourite plugins for Obsidian that I currently use for personal knowledge management.

@@ -2,20 +2,20 @@
 date: 2024-11-21 19:30
 title: native script
 tags:
-  - mobile-apps
-  - NativeScript
-  - angular
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 cssclasses:
+public_note: "true"
+category: mobile-apps
+categories:
+  - mobile-apps
+  - NativeScript
+  - angular
   - hide-embedded-header1
   - wide
-categories:
   - Desarrollo multiplataforma
-public_note: "true"
-category: Desarrollo multiplataforma
 ---
 # NativeScript
 `$= dv.current().file.tags.join(" ")`

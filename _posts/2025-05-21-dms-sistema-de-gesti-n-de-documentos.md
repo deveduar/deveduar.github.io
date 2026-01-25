@@ -2,21 +2,21 @@
 date: 2025-05-21 18:34
 title: DMS sistema de gestión de documentos
 tags:
-  - IT
-  - dms
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 cssclasses:
+aliases:
+public_note: "true"
+category: IT
+categories:
+  - IT
+  - dms
   - hide-embedded-header1
   - wide
-categories:
   - Gestion de Negocio
-aliases:
   - Document Management System
-public_note: "true"
-category: Gestion de Negocio
 ---
 # DMS Sistema de Gestión de Documentos
 ``$= dv.current().file.tags.join(" ")``

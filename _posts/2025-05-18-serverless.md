@@ -2,21 +2,21 @@
 date: 2025-05-18 04:04
 title: serverless
 tags:
-  - backend
-  - server_less
-  - server
-  - devops
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 cssclasses:
+public_note: "true"
+category: backend
+categories:
+  - backend
+  - server_less
+  - server
+  - devops
   - hide-embedded-header1
   - wide
-categories:
   - Backend
-public_note: "true"
-category: Backend
 ---
 # Serverless
 ``$= dv.current().file.tags.join(" ")``

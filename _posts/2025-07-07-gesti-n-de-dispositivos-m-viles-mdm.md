@@ -2,20 +2,20 @@
 date: 2025-07-07 13:18
 title: Gestión de Dispositivos Móviles MDM
 tags:
-  - MDM
-  - moviles
-  - sistemas
-  - redes
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - Sistemas
 public_note: "true"
-category: Sistemas
+category: MDM
+categories:
+  - MDM
+  - moviles
+  - sistemas
+  - redes
+  - hide-embedded-header1
+  - Sistemas
 ---
 # Gestión de Dispositivos Móviles MDM
 ``$= dv.current().file.tags.join(" ")``

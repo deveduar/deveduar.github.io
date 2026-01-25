@@ -2,18 +2,18 @@
 date: 2025-10-15 11:48
 title: E2E - End to End Testing
 tags:
-  - testing
-  - e2e
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - Testing
 public_note: "true"
-category: Testing
+category: testing
+categories:
+  - testing
+  - e2e
+  - hide-embedded-header1
+  - Testing
 ---
 # E2E - End to End Testing
 `$= dv.current().file.tags.join(" ")`

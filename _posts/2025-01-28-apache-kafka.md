@@ -2,21 +2,21 @@
 date: 2025-01-29 00:32
 title: Apache Kafka
 tags:
-  - apache
-  - kafka
-  - microservicios
-  - devops
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 cssclasses:
+public_note: "true"
+category: apache
+categories:
+  - apache
+  - kafka
+  - microservicios
+  - devops
   - hide-embedded-header1
   - wide
-categories:
   - Backend
-public_note: "true"
-category: Backend
 ---
 # Apache Kafka
 `$= dv.current().file.tags.join(" ")`

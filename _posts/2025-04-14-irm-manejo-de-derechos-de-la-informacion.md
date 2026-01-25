@@ -2,18 +2,18 @@
 date: 2025-04-14 18:18
 title: IRM manejo de derechos de la informacion
 tags:
-  - hardening
-  - Hacking
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - ciberseguridad
 public_note: "true"
-category: ciberseguridad
+category: hardening
+categories:
+  - hardening
+  - Hacking
+  - hide-embedded-header1
+  - ciberseguridad
 ---
 # IRM — Manejo de Derechos de la Información  
 ``$= dv.current().file.tags.join(" ")``

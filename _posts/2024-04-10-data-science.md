@@ -2,6 +2,13 @@
 date: 2024-04-10 21:05
 title: Data Science
 tags:
+keywords:
+source:
+status: 🚀
+Parent: "[[Area-Prog]]"
+public_note: "true"
+category: GCP
+categories:
   - GCP
   - IA
   - estadistica
@@ -10,14 +17,6 @@ tags:
   - deep-learning
   - machine-learning
   - Mates
-keywords:
-source:
-status: 🚀
-Parent: "[[Area-Prog]]"
-public_note: "true"
-category: uncategorized
-categories:
-  - uncategorized
 ---
 # Data Science
 `$= dv.current().file.tags.join(" ")`

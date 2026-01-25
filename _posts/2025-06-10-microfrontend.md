@@ -2,19 +2,19 @@
 date: 2025-06-10 02:42
 title: microfrontend
 tags:
-  - microservicios
-  - microfrontend
-  - frontend
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - Frontend
 public_note: "true"
-category: Frontend
+category: microservicios
+categories:
+  - microservicios
+  - microfrontend
+  - frontend
+  - hide-embedded-header1
+  - Frontend
 ---
 # microfrontend
 `$= dv.current().file.tags.join(" ")`

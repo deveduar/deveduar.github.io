@@ -3,20 +3,20 @@ date: 2023-09-01 15:50
 title: Patron Composite
 Hecho: false
 tags:
-  - GameDev
-  - CS
-  - computer_Science
-  - patrones_diseño
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - Computer Science
 public_note: "true"
-category: Computer Science
+category: GameDev
+categories:
+  - GameDev
+  - CS
+  - computer_Science
+  - patrones_diseo
+  - hide-embedded-header1
+  - Computer Science
 ---
 # Patron Composite
 `$= dv.current().file.tags.join(" ")`

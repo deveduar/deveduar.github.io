@@ -2,20 +2,19 @@
 date: 2025-05-20 17:32
 title: Auto Scaling
 tags:
-  - cloud
-  - backend
-  - scaling
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 cssclasses:
-  - hide-embedded-header1
-  - wide
-categories:
-  - cloud
 public_note: "true"
 category: cloud
+categories:
+  - cloud
+  - backend
+  - scaling
+  - hide-embedded-header1
+  - wide
 ---
 # Auto Scaling
 ``$= dv.current().file.tags.join(" ")``

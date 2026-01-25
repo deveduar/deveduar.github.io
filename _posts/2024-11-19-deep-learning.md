@@ -2,20 +2,20 @@
 date: 2024-11-19 23:32
 title: Deep Learning
 tags:
-  - IA
-  - datascience
-  - deep-learning
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 cssclasses:
+public_note: "true"
+category: IA
+categories:
+  - IA
+  - datascience
+  - deep-learning
   - hide-embedded-header1
   - wide
-categories:
   - Data Science
-public_note: "true"
-category: Data Science
 ---
 # Deep Learning
 ``$= dv.current().file.tags.join(" ")``

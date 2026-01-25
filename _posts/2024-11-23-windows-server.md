@@ -2,20 +2,19 @@
 date: 2024-11-23 01:59
 title: Windows Server
 tags:
-  - Windows
-  - backend
-  - devops
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 cssclasses:
+public_note: "true"
+category: Windows
+categories:
+  - Windows
+  - backend
+  - devops
   - hide-embedded-header1
   - wide
-categories:
-  - devops
-public_note: "true"
-category: devops
 ---
 # Windows Server
 `$= dv.current().file.tags.join(" ")`

@@ -2,20 +2,20 @@
 date: 2026-01-02 17:28
 title: vulnerabilidades
 tags:
-  - vulnerabilidades
-  - owasp
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - ciberseguridad
 aliases:
-  - Vulnerabilidades
 public_note: "true"
-category: ciberseguridad
+category: vulnerabilidades
+categories:
+  - vulnerabilidades
+  - owasp
+  - hide-embedded-header1
+  - ciberseguridad
+  - Vulnerabilidades
 ---
 # vulnerabilidades
 ``$= dv.current().file.tags.join(" ")``

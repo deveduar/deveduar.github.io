@@ -2,20 +2,20 @@
 date: 2024-11-18 17:46
 title: Wordpress
 tags:
-  - wordpress
-  - PHP
-  - ecomerce
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 cssclasses:
+public_note: "true"
+category: wordpress
+categories:
+  - wordpress
+  - PHP
+  - ecomerce
   - hide-embedded-header1
   - wide
-categories:
   - Desarrollo web
-public_note: "true"
-category: Desarrollo web
 ---
 # Wordpress
 `$= dv.current().file.tags.join(" ")`

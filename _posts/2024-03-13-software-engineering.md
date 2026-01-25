@@ -2,17 +2,16 @@
 date: 2024-03-13 15:51
 title: Software engineering
 tags:
-  - desarrollo
-  - programming
 keywords:
 source:
 status: 🚀
 Parent: "[[Area-Prog]]"
 cssclasses:
 public_note: "true"
-category: uncategorized
+category: desarrollo
 categories:
-  - uncategorized
+  - desarrollo
+  - programming
 ---
 # Software engineering
 `$= dv.current().file.tags.join(" ")`

@@ -2,22 +2,22 @@
 date: 2025-04-18 03:23
 title: guias de estilos
 tags:
-  - frontend
-  - desing
-  - CSS
-  - design_tokens
-  - design_systems
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 cssclasses:
+public_note: "true"
+category: frontend
+categories:
+  - frontend
+  - desing
+  - CSS
+  - design_tokens
+  - design_systems
   - hide-embedded-header1
   - wide
-categories:
   - Frontend
-public_note: "true"
-category: Frontend
 ---
 # guias de estilos
 `$= dv.current().file.tags.join(" ")`

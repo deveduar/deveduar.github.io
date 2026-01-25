@@ -2,18 +2,18 @@
 date: 2023-03-30 22:28
 title: Azure Fundamentals AZ-900 devops
 tags:
-  - Devops
-  - Azure
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 keywords:
 source:
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - cloud
 public_note: "true"
-category: cloud
+category: Devops
+categories:
+  - Devops
+  - Azure
+  - hide-embedded-header1
+  - cloud
 ---
 # Azure Fundamentals AZ-900 devops
 `$= dv.current().file.tags.join(" ")`

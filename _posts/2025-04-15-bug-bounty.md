@@ -2,17 +2,17 @@
 date: 2025-04-15 17:00
 title: bug bounty
 tags:
-  - vulnerabilidades
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - ciberseguridad
 public_note: "true"
-category: ciberseguridad
+category: vulnerabilidades
+categories:
+  - vulnerabilidades
+  - hide-embedded-header1
+  - ciberseguridad
 ---
 # Bug Bounty
 ``$= dv.current().file.tags.join(" ")``

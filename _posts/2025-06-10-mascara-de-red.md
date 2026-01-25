@@ -2,18 +2,18 @@
 date: 2025-06-10 15:20
 title: mascara de red
 tags:
-  - redes
-  - mascara_de_red
 keywords:
 source:
 status: 📌
 Parent: "[[Area-Sistemas]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - Redes
 public_note: "true"
-category: Redes
+category: redes
+categories:
+  - redes
+  - mascara_de_red
+  - hide-embedded-header1
+  - Redes
 ---
 # mascara de red
 `$= dv.current().file.tags.join(" ")`

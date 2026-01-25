@@ -2,17 +2,16 @@
 date: 2025-12-20 18:36
 title: Linux personalizacion de entorno
 tags:
-  - Linux
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - Linux
 public_note: "true"
 category: Linux
+categories:
+  - Linux
+  - hide-embedded-header1
 ---
 # Linux Personalización de Entorno 
 `$= dv.current().file.tags.join(" ")`

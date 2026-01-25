@@ -2,20 +2,20 @@
 date: 2025-10-26 13:56
 title: search tool grep
 tags:
-  - sistemas
-  - search
-  - search_tool
-  - Productividad
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - Sistemas
 public_note: "true"
-category: Sistemas
+category: sistemas
+categories:
+  - sistemas
+  - search
+  - search_tool
+  - Productividad
+  - hide-embedded-header1
+  - Sistemas
 ---
 # search tool grep
 `$= dv.current().file.tags.join(" ")`

@@ -2,21 +2,21 @@
 date: 2025-01-29 19:28
 title: Supervisor
 tags:
-  - supervisor
-  - procesos
-  - backend
-  - pythoon
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 cssclasses:
+public_note: "true"
+category: supervisor
+categories:
+  - supervisor
+  - procesos
+  - backend
+  - pythoon
   - hide-embedded-header1
   - wide
-categories:
   - Backend
-public_note: "true"
-category: Backend
 ---
 # Supervisor
 `$= dv.current().file.tags.join(" ")`

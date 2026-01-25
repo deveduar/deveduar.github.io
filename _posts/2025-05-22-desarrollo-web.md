@@ -2,18 +2,17 @@
 date: 2025-05-22 17:22
 title: Desarrollo web
 tags:
-  - desarrollo
-  - programming
 keywords:
 source:
 status: 🚀
 Parent: "[[Area-Prog]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - uncategorized
 public_note: "true"
-category: uncategorized
+category: desarrollo
+categories:
+  - desarrollo
+  - programming
+  - hide-embedded-header1
 ---
 # Desarrollo web
 ``$= dv.current().file.tags.join(" ")``

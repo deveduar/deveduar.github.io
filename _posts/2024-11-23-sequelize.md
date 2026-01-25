@@ -2,23 +2,23 @@
 date: 2024-11-23 19:47
 title: Sequelize
 tags:
+keywords:
+source:
+status: 🌟
+Parent: "[[Area-Prog]]"
+cssclasses:
+public_note: "true"
+category: sequelize
+categories:
   - sequelize
   - nodejs
   - backend
   - api
   - db
   - ORM
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Prog]]"
-cssclasses:
   - hide-embedded-header1
   - wide
-categories:
   - Backend
-public_note: "true"
-category: Backend
 ---
 # Sequelize
 `$= dv.current().file.tags.join(" ")`

@@ -2,18 +2,18 @@
 date: 2024-02-19 03:15
 title: GCP Big Data Developer y Apache Hadoop
 tags:
-  - GCP
-  - IA
 status: 🌟
 Parent: "[[Area-IA]]"
 keywords:
 source:
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - Data Science
 public_note: "true"
-category: Data Science
+category: GCP
+categories:
+  - GCP
+  - IA
+  - hide-embedded-header1
+  - Data Science
 ---
 # GCP Big Data Developer y Apache Hadoop
 `$= dv.current().file.tags.join(" ")`

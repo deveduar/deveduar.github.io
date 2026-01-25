@@ -2,19 +2,19 @@
 date: 2025-11-05 17:10
 title: Lambda Functions
 tags:
-  - CS
-  - lambda
-  - functions
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - Computer Science
 public_note: "true"
-category: Computer Science
+category: CS
+categories:
+  - CS
+  - lambda
+  - functions
+  - hide-embedded-header1
+  - Computer Science
 ---
 # Lambda Functions
 `$= dv.current().file.tags.join(" ")`  
@@ -186,7 +186,7 @@ Las **lambda functions** son una herramienta esencial para escribir código conc
 
 # Lambda Functions - Conceptos Avanzados y Expansión
 
-Esta nota amplía los conceptos fundamentales de [Lambda Functions](/computer%20science/lambda-functions/), abordando su integración con paradigmas modernos, usos avanzados, optimización y diferencias entre lenguajes.
+Esta nota amplía los conceptos fundamentales de [Lambda Functions](/cs/lambda-functions/), abordando su integración con paradigmas modernos, usos avanzados, optimización y diferencias entre lenguajes.
 
 ## Lambdas en el Paradigma Funcional
 
@@ -381,7 +381,7 @@ Su uso adecuado mejora la expresividad y reduce el ruido sintáctico, pero requi
 
 # Lambdas y su relación con AWS
 
-Aunque las **[Lambda Functions](/computer%20science/lambda-functions/)** en programación se refieren a funciones anónimas, el término **AWS Lambda** hace referencia a un **servicio de computación sin servidor (serverless)** proporcionado por Amazon Web Services.  
+Aunque las **[Lambda Functions](/cs/lambda-functions/)** en programación se refieren a funciones anónimas, el término **AWS Lambda** hace referencia a un **servicio de computación sin servidor (serverless)** proporcionado por Amazon Web Services.  
 A pesar de compartir nombre, su conexión conceptual radica en la **idea de ejecutar código de manera ligera, modular y bajo demanda**.
 
 ## Concepto de AWS Lambda
@@ -395,7 +395,7 @@ El desarrollador escribe funciones —en varios lenguajes soportados— y AWS se
 En este contexto, una *“lambda”* en AWS es una **unidad de ejecución** que sigue una filosofía muy similar a las **funciones lambda del código**:  
 realizar una tarea breve, específica y autónoma.
 
-## Analogía con las [Lambda Functions](/computer%20science/lambda-functions/) de programación
+## Analogía con las [Lambda Functions](/cs/lambda-functions/) de programación
 
 | Concepto | Función Lambda (Python, etc.) | AWS Lambda |
 |-----------|------------------------------|-------------|
@@ -445,7 +445,7 @@ def lambda_handler(event, context):
 
 # Lambda Functions - Ecosistema, Extensión y Aplicaciones Modernas
 
-Esta nota amplía los temas ya tratados sobre [Lambda Functions](/computer%20science/lambda-functions/) y AWS Lambda, explorando su papel en ecosistemas modernos, arquitecturas híbridas, frameworks y paradigmas de desarrollo contemporáneos. También cubre su influencia en lenguajes, entornos de ejecución y patrones de diseño funcional.
+Esta nota amplía los temas ya tratados sobre [Lambda Functions](/cs/lambda-functions/) y AWS Lambda, explorando su papel en ecosistemas modernos, arquitecturas híbridas, frameworks y paradigmas de desarrollo contemporáneos. También cubre su influencia en lenguajes, entornos de ejecución y patrones de diseño funcional.
 
 ---
 

@@ -1,14 +1,14 @@
 ---
 title: apache spark
 tags:
-  - GCP
-  - IA
 status: 🌟
 Parent: "[[Area-Prog]]"
-categories:
-  - Data Science
 public_note: "true"
-category: Data Science
+category: GCP
+categories:
+  - GCP
+  - IA
+  - Data Science
 ---
 # APACHE SPARK
 ``$= dv.current().file.tags.join(" ")``

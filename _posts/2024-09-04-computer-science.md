@@ -2,17 +2,16 @@
 date: 2024-09-04 19:12
 title: Computer Science
 tags:
-  - CS
 keywords:
 source:
 status: 🚀
 Parent: "[[Area-Prog]]"
 cssclasses:
-  - hide-embedded-header1
 public_note: "true"
-category: uncategorized
+category: CS
 categories:
-  - uncategorized
+  - CS
+  - hide-embedded-header1
 ---
 # Computer Science
 `$= dv.current().file.tags.join(" ")`

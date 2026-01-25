@@ -2,23 +2,21 @@
 date: 2025-02-18 15:57
 title: IInfraestructura como codigo
 tags:
-  - IaC
-  - devops
 keywords:
 source:
 status: 🚀
 Parent: "[[Area-Sistemas]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - devops
 aliases:
-  - Infraestructura como Código
-  - IaC
-  - IaC infraestructura como código
-  - infraestructura como código
 public_note: "true"
-category: devops
+category: IaC
+categories:
+  - IaC
+  - devops
+  - hide-embedded-header1
+  - Infraestructura como Cdigo
+  - IaC infraestructura como cdigo
+  - infraestructura como cdigo
 ---
 # IaC infraestructura como código
 `$= dv.current().file.tags.join(" ")`  
@@ -139,7 +137,7 @@ El enfoque IaC es clave para SRE porque:
 # IaC avanzada: prácticas, evolución y tendencias
 `$= dv.current().file.tags.join(" ")`
 
-- [IInfraestructura como codigo](/devops/iinfraestructura-como-codigo/)
+- [IInfraestructura como codigo](/iac/iinfraestructura-como-codigo/)
 - [devops](/uncategorized/devops/)
 - [CICD](/devops/cicd/)
 - Automatizacion

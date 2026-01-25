@@ -2,19 +2,19 @@
 date: 2024-11-23 01:58
 title: sql server
 tags:
-  - MySQL
-  - sql-server
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 cssclasses:
+public_note: "true"
+category: MySQL
+categories:
+  - MySQL
+  - sql-server
   - hide-embedded-header1
   - wide
-categories:
   - devops
-public_note: "true"
-category: devops
 ---
 # SQL Server
 `$= dv.current().file.tags.join(" ")`

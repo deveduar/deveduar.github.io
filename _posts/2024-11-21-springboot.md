@@ -2,21 +2,21 @@
 date: 2024-11-21 01:17
 title: Springboot
 tags:
-  - spring
-  - java
-  - api
-  - backend
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 cssclasses:
+public_note: "true"
+category: spring
+categories:
+  - spring
+  - java
+  - api
+  - backend
   - hide-embedded-header1
   - wide
-categories:
   - Backend
-public_note: "true"
-category: Backend
 ---
 # Springboot 
 `$= dv.current().file.tags.join(" ")`
@@ -168,7 +168,7 @@ category: Backend
 # Spring Boot — Conceptos Avanzados y Expansión
 `$= dv.current().file.tags.join(" ")`
 
-> Extensión complementaria de la nota base sobre [Springboot](/backend/springboot/), enfocada en temas intermedios y avanzados **no tratados anteriormente**, sin repeticiones.
+> Extensión complementaria de la nota base sobre [Springboot](/spring/springboot/), enfocada en temas intermedios y avanzados **no tratados anteriormente**, sin repeticiones.
 
 ---
 

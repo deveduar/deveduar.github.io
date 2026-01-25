@@ -2,20 +2,19 @@
 date: 2024-11-23 02:01
 title: monitoreo
 tags:
-  - devops
-  - monitoreo
-  - tools
 keywords:
 source:
 status: 🚀
 Parent: "[[Area-Sistemas]]"
 cssclasses: []
 aliases:
-  - monitorización
 public_note: "true"
-category: uncategorized
+category: devops
 categories:
-  - uncategorized
+  - devops
+  - monitoreo
+  - tools
+  - monitorizacin
 ---
 # Monitoreo
 `$= dv.current().file.tags.join(" ")`

@@ -7,11 +7,10 @@ source:
 status: 📌
 Parent: "[[Area-Prog]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - uncategorized
 public_note: "true"
-category: uncategorized
+category: hide-embedded-header1
+categories:
+  - hide-embedded-header1
 ---
 # QA Gestión Herramientas y Métricas
 `$= dv.current().file.tags.join(" ")`

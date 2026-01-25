@@ -2,19 +2,19 @@
 date: 2024-11-16 20:54
 title: power apps
 tags:
-  - powerapps
-  - Windows
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 cssclasses:
+public_note: "true"
+category: powerapps
+categories:
+  - powerapps
+  - Windows
   - hide-embedded-header1
   - wide
-categories:
   - Desarrollo multiplataforma
-public_note: "true"
-category: Desarrollo multiplataforma
 ---
 # Power Apps
 `$= dv.current().file.tags.join(" ")`

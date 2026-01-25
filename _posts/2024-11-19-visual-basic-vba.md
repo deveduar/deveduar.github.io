@@ -2,20 +2,20 @@
 date: 2024-11-19 02:08
 title: visual basic VBA
 tags:
-  - excel
-  - cpp
-  - vba
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 cssclasses:
+public_note: "true"
+category: excel
+categories:
+  - excel
+  - cpp
+  - vba
   - hide-embedded-header1
   - wide
-categories:
   - Software engineering
-public_note: "true"
-category: Software engineering
 ---
 # Visual Basic VBA
 ``$= dv.current().file.tags.join(" ")``

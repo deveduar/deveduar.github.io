@@ -2,18 +2,17 @@
 date: 2024-11-18 02:50
 title: electronica
 tags:
-  - electronica
 keywords:
 source:
 status: 📌
 Parent: "[[Area-Sistemas]]"
 cssclasses:
-  - hide-embedded-header1
-  - wide
-categories:
-  - electronica
 public_note: "true"
 category: electronica
+categories:
+  - electronica
+  - hide-embedded-header1
+  - wide
 ---
 # electronica
 `$= dv.current().file.tags.join(" ")`

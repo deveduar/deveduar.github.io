@@ -2,22 +2,22 @@
 date: 2025-02-19 17:54
 title: thymeleaf
 tags:
-  - thymeleaf
-  - java
-  - spring
-  - springboot
-  - template-engine
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 cssclasses:
+public_note: "true"
+category: thymeleaf
+categories:
+  - thymeleaf
+  - java
+  - spring
+  - springboot
+  - template-engine
   - hide-embedded-header1
   - wide
-categories:
   - Motor de plantillas
-public_note: "true"
-category: Motor de plantillas
 ---
 # thymeleaf
 `$= dv.current().file.tags.join(" ")`

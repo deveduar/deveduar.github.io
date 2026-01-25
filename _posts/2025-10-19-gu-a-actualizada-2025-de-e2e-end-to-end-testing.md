@@ -7,11 +7,11 @@ source:
 status: 📌
 Parent: "[[Area-Prog]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - Testing
 public_note: "true"
-category: Testing
+category: hide-embedded-header1
+categories:
+  - hide-embedded-header1
+  - Testing
 ---
 # Guía Actualizada 2025 de E2E – “End-to-End Testing
 `$= dv.current().file.tags.join(" ")`

@@ -7,11 +7,11 @@ source:
 status: 📌
 Parent: "[[Area-Prog]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - Testing
 public_note: "true"
-category: Testing
+category: hide-embedded-header1
+categories:
+  - hide-embedded-header1
+  - Testing
 ---
 # roadmap de TDD con ejemplo de uso en una empresa
 `$= dv.current().file.tags.join(" ")`

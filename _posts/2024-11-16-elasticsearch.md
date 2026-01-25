@@ -2,23 +2,22 @@
 date: 2024-11-16 17:21
 title: Elasticsearch
 tags:
+keywords:
+source:
+status: 🌟
+Parent: "[[Area-Sistemas]]"
+cssclasses:
+public_note: "true"
+category: db
+categories:
   - db
   - elasticsearh
   - backend
   - devops
   - ELK
-keywords:
-  - ELK
-source:
-status: 🌟
-Parent: "[[Area-Sistemas]]"
-cssclasses:
   - hide-embedded-header1
   - wide
-categories:
   - monitoreo
-public_note: "true"
-category: monitoreo
 ---
 # Elasticsearch
 `$= dv.current().file.tags.join(" ")`

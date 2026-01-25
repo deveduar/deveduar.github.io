@@ -2,19 +2,18 @@
 date: 2025-04-14 01:50
 title: prometheus
 tags:
-  - monitoreo
-  - prometheus
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 cssclasses:
-  - hide-embedded-header1
-  - wide
-categories:
-  - monitoreo
 public_note: "true"
 category: monitoreo
+categories:
+  - monitoreo
+  - prometheus
+  - hide-embedded-header1
+  - wide
 ---
 # prometheus
 `$= dv.current().file.tags.join(" ")`

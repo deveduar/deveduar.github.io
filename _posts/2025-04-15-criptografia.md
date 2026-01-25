@@ -2,19 +2,19 @@
 date: 2025-04-15 19:15
 title: criptografia
 tags:
-  - Hacking
-  - ciberseguridad
-  - criptografia
 keywords:
 source:
 status: 🚀
 Parent: "[[Area-Sistemas]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - autenticacion
 public_note: "true"
-category: autenticacion
+category: Hacking
+categories:
+  - Hacking
+  - ciberseguridad
+  - criptografia
+  - hide-embedded-header1
+  - autenticacion
 ---
 # Criptografía
 `$= dv.current().file.tags.join(" ")` 

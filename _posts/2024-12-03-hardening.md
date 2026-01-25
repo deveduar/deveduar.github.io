@@ -2,18 +2,18 @@
 date: 2024-12-03 03:34
 title: hardening
 tags:
-  - Hacking
-  - hardening
 keywords:
 source:
 status: 🚀
 Parent: "[[Area-Sistemas]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - ciberseguridad
 public_note: "true"
-category: ciberseguridad
+category: Hacking
+categories:
+  - Hacking
+  - hardening
+  - hide-embedded-header1
+  - ciberseguridad
 ---
 # Hardening  
 `$= dv.current().file.tags.join(" ")`

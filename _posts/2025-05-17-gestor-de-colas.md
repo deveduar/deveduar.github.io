@@ -2,19 +2,19 @@
 date: 2025-05-17 19:05
 title: gestor de colas
 tags:
-  - backend
-  - rabbitmq
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 cssclasses:
+public_note: "true"
+category: backend
+categories:
+  - backend
+  - rabbitmq
   - hide-embedded-header1
   - wide
-categories:
   - Backend
-public_note: "true"
-category: Backend
 ---
 # Gestor de Colas
 `$= dv.current().file.tags.join(" ")`

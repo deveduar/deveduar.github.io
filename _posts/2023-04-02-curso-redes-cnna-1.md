@@ -2,18 +2,18 @@
 date: 2023-04-02 18:24
 title: curso-redes-CNNA-1
 tags:
-  - Devops
-  - redes
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 keywords:
 source:
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - Redes
 public_note: "true"
-category: Redes
+category: Devops
+categories:
+  - Devops
+  - redes
+  - hide-embedded-header1
+  - Redes
 ---
 # curso-redes-CNNA-1
 `$= dv.current().file.tags.join(" ")`

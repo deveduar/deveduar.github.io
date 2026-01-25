@@ -2,18 +2,18 @@
 date: 2025-10-15 12:14
 title: MSW Mocks service worker
 tags:
-  - MSW
-  - testing
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - Testing
 public_note: "true"
-category: Testing
+category: MSW
+categories:
+  - MSW
+  - testing
+  - hide-embedded-header1
+  - Testing
 ---
 
 # MSW Mocks service worker 

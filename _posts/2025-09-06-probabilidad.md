@@ -2,18 +2,17 @@
 date: 2025-09-06 21:01
 title: probabilidad
 tags:
-  - probabilidad
-  - mates
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-IA]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - mates
 public_note: "true"
-category: mates
+category: probabilidad
+categories:
+  - probabilidad
+  - mates
+  - hide-embedded-header1
 ---
 # probabilidad
 `$= dv.current().file.tags.join(" ")`

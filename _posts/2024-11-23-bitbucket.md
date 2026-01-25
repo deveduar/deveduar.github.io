@@ -2,20 +2,19 @@
 date: 2024-11-23 02:15
 title: bitbucket
 tags:
-  - devops
-  - bitbucket
-  - github
 keywords:
 source:
 status: 📌
 Parent: "[[Area-Sistemas]]"
 cssclasses:
-  - hide-embedded-header1
-  - wide
-categories:
-  - devops
 public_note: "true"
 category: devops
+categories:
+  - devops
+  - bitbucket
+  - github
+  - hide-embedded-header1
+  - wide
 ---
 # bitbucket
 `$= dv.current().file.tags.join(" ")`

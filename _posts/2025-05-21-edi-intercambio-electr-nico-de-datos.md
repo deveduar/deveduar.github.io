@@ -2,19 +2,19 @@
 date: 2025-05-21 18:33
 title: EDI Intercambio Electrónico de datos
 tags:
-  - edi
-  - IT
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 cssclasses:
+public_note: "true"
+category: edi
+categories:
+  - edi
+  - IT
   - hide-embedded-header1
   - wide
-categories:
   - Gestion de Negocio
-public_note: "true"
-category: Gestion de Negocio
 ---
 # EDI Intercambio Electrónico de Datos
 `$= dv.current().file.tags.join(" ")`

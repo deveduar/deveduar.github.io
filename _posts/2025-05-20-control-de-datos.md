@@ -2,17 +2,16 @@
 date: 2025-05-20 18:10
 title: control de datos
 tags:
-  - ciberseguridad
-  - db
 keywords:
 source:
 status: 🚀
 Parent: "[[Area-Sistemas]]"
 cssclasses:
-categories:
-  - ciberseguridad
 public_note: "true"
 category: ciberseguridad
+categories:
+  - ciberseguridad
+  - db
 ---
 # control de datos
 `$= dv.current().file.tags.join(" ")` 

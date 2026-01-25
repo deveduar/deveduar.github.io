@@ -2,19 +2,19 @@
 date: 2025-04-15 16:45
 title: Antivirus
 tags:
-  - Hacking
-  - antivirus
-  - malware
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - ciberseguridad
 public_note: "true"
-category: ciberseguridad
+category: Hacking
+categories:
+  - Hacking
+  - antivirus
+  - malware
+  - hide-embedded-header1
+  - ciberseguridad
 ---
 # Antivirus
 ``$= dv.current().file.tags.join(" ")``

@@ -2,10 +2,6 @@
 title: My CSS snnipets for obsidian
 date: 2024-04-30
 tags:
-  - obsidian
-  - productivity
-  - CSS
-  - programmation
 status: 🚀
 public_notes: true
 public_note: true
@@ -13,8 +9,10 @@ public_note1: true
 public: true
 category: uncategorized
 categories:
-  - uncategorized
-  - 
+  - obsidian
+  - productivity
+  - CSS
+  - programmation
   - uncategorized
 ---
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

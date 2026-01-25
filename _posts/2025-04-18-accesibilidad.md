@@ -2,19 +2,19 @@
 date: 2025-04-18 03:20
 title: accesibilidad
 tags:
-  - frontend
-  - accesibilidad
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 cssclasses:
+public_note: "true"
+category: frontend
+categories:
+  - frontend
+  - accesibilidad
   - hide-embedded-header1
   - wide
-categories:
   - Frontend
-public_note: "true"
-category: Frontend
 ---
 # Accesibilidad
 ``$= dv.current().file.tags.join(" ")``

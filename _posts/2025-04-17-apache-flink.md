@@ -2,20 +2,20 @@
 date: 2025-04-17 22:25
 title: apache flink
 tags:
-  - apache
-  - stream_processing
-  - kafka
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 cssclasses:
+public_note: "true"
+category: apache
+categories:
+  - apache
+  - stream_processing
+  - kafka
   - hide-embedded-header1
   - wide
-categories:
   - Backend
-public_note: "true"
-category: Backend
 ---
 # apache flink
 ``$= dv.current().file.tags.join(" ")``
@@ -82,7 +82,7 @@ category: Backend
 
 ## Comparativa con Apache Spark
 ### Diferencias principales
-| Característica           | [apache spark](/data%20science/apache-spark/)                                           | [apache flink](/backend/apache-flink/)                  |
+| Característica           | [apache spark](/data%20science/apache-spark/)                                           | [apache flink](/apache/apache-flink/)                  |
 | ------------------------ | ---------------------------------------------------------- | --------------------------------- |
 | Modelo de procesamiento  | Batch processing                                           | Data streaming                    |
 | Procesamiento de eventos | Microlotes                                                 | En tiempo real                    |
@@ -97,7 +97,7 @@ category: Backend
 
 ## Comparativa con Apache Kafka
 ### Roles dentro del flujo de datos
-|                 | [Apache Kafka](/backend/apache-kafka/)                        | [apache flink](/backend/apache-flink/)                                               |
+|                 | [Apache Kafka](/backend/apache-kafka/)                        | [apache flink](/apache/apache-flink/)                                               |
 | --------------- | --------------------------------------- | -------------------------------------------------------------- |
 | Función         | Almacén de eventos distribuido          | Marco de procesamiento de flujos                               |
 | Uso             | Ideal para ingerir datos en tiempo real | Ideal para aplicaciones de streaming complejas y a gran escala |

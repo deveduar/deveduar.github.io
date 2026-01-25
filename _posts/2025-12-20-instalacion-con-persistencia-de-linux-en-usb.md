@@ -2,18 +2,17 @@
 date: 2025-12-20 18:35
 title: instalacion con persistencia de linux en usb
 tags:
-  - Linux
-  - kali
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - Linux
 public_note: "true"
 category: Linux
+categories:
+  - Linux
+  - kali
+  - hide-embedded-header1
 ---
 # Instalación con persistencia de Linux en USB
 `$= dv.current().file.tags.join(" ")`

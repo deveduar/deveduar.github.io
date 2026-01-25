@@ -2,20 +2,20 @@
 date: 2025-01-29 17:19
 title: websockets
 tags:
-  - websockets
-  - protocolo
-  - backend
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 cssclasses:
+public_note: "true"
+category: websockets
+categories:
+  - websockets
+  - protocolo
+  - backend
   - hide-embedded-header1
   - wide
-categories:
   - Backend
-public_note: "true"
-category: Backend
 ---
 # WebSockets
 `$= dv.current().file.tags.join(" ")`

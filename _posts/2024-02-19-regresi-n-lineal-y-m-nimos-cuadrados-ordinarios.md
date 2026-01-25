@@ -2,17 +2,17 @@
 date: 2024-02-19 13:01
 title: Regresión Lineal y Mínimos Cuadrados Ordinarios
 tags:
-  - IA
 status: 🌟
 Parent: "[[Area-IA]]"
 keywords:
 source:
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - Data Science
 public_note: "true"
-category: Data Science
+category: IA
+categories:
+  - IA
+  - hide-embedded-header1
+  - Data Science
 ---
 # Regresión Lineal y Mínimos Cuadrados Ordinarios
 `$= dv.current().file.tags.join(" ")`

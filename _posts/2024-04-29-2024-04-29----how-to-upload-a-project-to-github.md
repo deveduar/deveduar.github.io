@@ -2,8 +2,6 @@
 title: 🛠 how to upload a project to github
 date: 2024-04-29
 tags:
-  - github
-  - programmation
 status: 📌
 public_notes: true
 public_note: true
@@ -11,8 +9,8 @@ public_note1: true
 public: true
 category: uncategorized
 categories:
-  - uncategorized
-  - 
+  - github
+  - programmation
   - uncategorized
 ---
 

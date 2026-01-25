@@ -2,18 +2,17 @@
 date: 2025-10-29 19:55
 title: administracion de sistemas
 tags:
-  - sistemas
-  - administracion
 keywords:
 source:
 status: 📌
 Parent: "[[Area-Sistemas]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - uncategorized
 public_note: "true"
-category: uncategorized
+category: sistemas
+categories:
+  - sistemas
+  - administracion
+  - hide-embedded-header1
 ---
 # administracion de sistemas
 `$= dv.current().file.tags.join(" ")`

@@ -2,19 +2,19 @@
 date: 2025-05-17 17:40
 title: Motor de plantillas
 tags:
-  - template-engine
 keywords:
-  - template engine
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 cssclasses:
+public_note: "true"
+category: template-engine
+categories:
+  - template-engine
+  - template engine
   - hide-embedded-header1
   - wide
-categories:
   - Desarrollo web
-public_note: "true"
-category: Desarrollo web
 ---
 # Motor de plantillas
 `$= dv.current().file.tags.join(" ")`

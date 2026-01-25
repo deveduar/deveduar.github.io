@@ -2,20 +2,20 @@
 date: 2024-11-16 20:26
 title: simulaciones
 tags:
-  - simulaciones
-  - Mates
-  - cpp
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 cssclasses:
+public_note: "true"
+category: simulaciones
+categories:
+  - simulaciones
+  - Mates
+  - cpp
   - hide-embedded-header1
   - wide
-categories:
   - Desarrollo multiplataforma
-public_note: "true"
-category: Desarrollo multiplataforma
 ---
 # simulaciones
 ``$= dv.current().file.tags.join(" ")``

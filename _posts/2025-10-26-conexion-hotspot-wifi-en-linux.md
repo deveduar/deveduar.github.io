@@ -2,19 +2,19 @@
 date: 2025-10-26 13:59
 title: conexion hotspot wifi en linux
 tags:
-  - redes
-  - sistemas
-  - Linux
 keywords:
 source:
 status: 📌
 Parent: "[[Area-Sistemas]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - Sistemas
 public_note: "true"
-category: Sistemas
+category: redes
+categories:
+  - redes
+  - sistemas
+  - Linux
+  - hide-embedded-header1
+  - Sistemas
 ---
 # conexion hotspot wifi
 `$= dv.current().file.tags.join(" ")`

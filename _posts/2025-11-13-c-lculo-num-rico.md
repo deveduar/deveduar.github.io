@@ -7,11 +7,11 @@ source:
 status: 🌟
 Parent: "[[Area-IA]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - mates
 public_note: "true"
-category: mates
+category: hide-embedded-header1
+categories:
+  - hide-embedded-header1
+  - mates
 ---
 # 🧮 Cálculo numérico
 `$= dv.current().file.tags.join(" ")`

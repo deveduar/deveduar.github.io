@@ -2,19 +2,19 @@
 date: 2025-01-29 18:46
 title: Playwright
 tags:
-  - playwright
-  - testing
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 cssclasses:
+public_note: "true"
+category: playwright
+categories:
+  - playwright
+  - testing
   - hide-embedded-header1
   - wide
-categories:
   - Testing
-public_note: "true"
-category: Testing
 ---
 # Playwright  
 `$= dv.current().file.tags.join(" ")`

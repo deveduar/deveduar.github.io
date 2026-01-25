@@ -2,20 +2,20 @@
 date: 2025-05-21 17:44
 title: ENS Esquema Nacional de Seguridad
 tags:
-  - TI
-  - ITIL
-  - regulaciones
-  - normativas
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - infraestructura IT
 public_note: "true"
-category: infraestructura IT
+category: TI
+categories:
+  - TI
+  - ITIL
+  - regulaciones
+  - normativas
+  - hide-embedded-header1
+  - infraestructura IT
 ---
 # ENS Esquema Nacional de Seguridad
 `$= dv.current().file.tags.join(" ")` 

@@ -2,23 +2,23 @@
 date: 2024-11-25 17:49
 title: apache cassandra
 tags:
-  - apache
-  - apache-cassandra
-  - db
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 cssclasses:
+aliases:
+public_note: "true"
+category: apache
+categories:
+  - apache
+  - apache-cassandra
+  - db
   - hide-embedded-header1
   - wide
-categories:
   - cloud
-aliases:
   - cassandra
   - Cassandra
-public_note: "true"
-category: cloud
 ---
 # apache cassandra
 `$= dv.current().file.tags.join(" ")`

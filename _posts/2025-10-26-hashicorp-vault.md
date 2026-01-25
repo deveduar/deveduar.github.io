@@ -2,19 +2,18 @@
 date: 2025-10-26 14:13
 title: HashiCorp Vault
 tags:
-  - vault
-  - ciberseguridad
-  - sistemas
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - ciberseguridad
 public_note: "true"
-category: ciberseguridad
+category: vault
+categories:
+  - vault
+  - ciberseguridad
+  - sistemas
+  - hide-embedded-header1
 ---
 # HashiCorp Vault
 `$= dv.current().file.tags.join(" ")`

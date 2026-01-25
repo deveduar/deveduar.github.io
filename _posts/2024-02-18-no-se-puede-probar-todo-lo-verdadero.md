@@ -3,17 +3,17 @@ date: 2024-02-18 16:14
 title: No se puede probar todo lo verdadero
 Hecho: false
 tags:
-  - Mates
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-IA]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - mates
 public_note: "true"
-category: mates
+category: Mates
+categories:
+  - Mates
+  - hide-embedded-header1
+  - mates
 ---
 # No se puede probar todo lo verdadero
 `$= dv.current().file.tags.join(" ")`

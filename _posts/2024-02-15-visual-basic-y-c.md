@@ -2,20 +2,20 @@
 date: 2024-02-15 17:14
 title: Visual Basic y C
 tags:
-  - CS
-  - visual_basic
-  - cpp
-  - excel
 status: 🌟
 Parent: "[[Area-Prog]]"
 keywords:
 source:
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - Software engineering
 public_note: "true"
-category: Software engineering
+category: CS
+categories:
+  - CS
+  - visual_basic
+  - cpp
+  - excel
+  - hide-embedded-header1
+  - Software engineering
 ---
 # C y Visual Basic
 `$= dv.current().file.tags.join(" ")`

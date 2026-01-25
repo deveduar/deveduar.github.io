@@ -2,21 +2,21 @@
 date: 2024-11-19 23:34
 title: Machine Learning
 tags:
-  - IA
-  - machine-learning
-  - data-science
-  - ML
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 cssclasses:
+public_note: "true"
+category: IA
+categories:
+  - IA
+  - machine-learning
+  - data-science
+  - ML
   - hide-embedded-header1
   - wide
-categories:
   - Data Science
-public_note: "true"
-category: Data Science
 ---
 # Machine Learning
 ``$= dv.current().file.tags.join(" ")``

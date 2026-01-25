@@ -2,20 +2,20 @@
 date: 2024-11-21 18:20
 title: handlebars
 tags:
-  - PHP
-  - mustache
-  - template-engine
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 cssclasses:
+public_note: "true"
+category: PHP
+categories:
+  - PHP
+  - mustache
+  - template-engine
   - hide-embedded-header1
   - wide
-categories:
   - Motor de plantillas
-public_note: "true"
-category: Motor de plantillas
 ---
 # handlebars
 ``$= dv.current().file.tags.join(" ")``

@@ -2,20 +2,20 @@
 date: 2025-06-10 22:34
 title: Active Directory
 tags:
-  - active_directory
-  - Windows
-  - roles
-  - sistemas
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - Sistemas
 public_note: "true"
-category: Sistemas
+category: active_directory
+categories:
+  - active_directory
+  - Windows
+  - roles
+  - sistemas
+  - hide-embedded-header1
+  - Sistemas
 ---
 # Active Directory
 `$= dv.current().file.tags.join(" ")`

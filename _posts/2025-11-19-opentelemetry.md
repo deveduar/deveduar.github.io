@@ -2,19 +2,18 @@
 date: 2025-11-19 16:56
 title: OpenTelemetry
 tags:
-  - monitoreo
-  - telemetry
-  - open_telemetry
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - monitoreo
 public_note: "true"
 category: monitoreo
+categories:
+  - monitoreo
+  - telemetry
+  - open_telemetry
+  - hide-embedded-header1
 ---
 # OpenTelemetry
 `$= dv.current().file.tags.join(" ")`

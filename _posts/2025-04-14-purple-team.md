@@ -2,19 +2,19 @@
 date: 2025-04-14 20:43
 title: Purple Team
 tags:
-  - Hacking
-  - dfir
-  - forense
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - ciberseguridad
 public_note: "true"
-category: ciberseguridad
+category: Hacking
+categories:
+  - Hacking
+  - dfir
+  - forense
+  - hide-embedded-header1
+  - ciberseguridad
 ---
 # Purple Team
 `$= dv.current().file.tags.join(" ")`

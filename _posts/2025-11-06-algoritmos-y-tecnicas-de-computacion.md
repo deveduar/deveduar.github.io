@@ -2,18 +2,18 @@
 date: 2025-11-06 19:04
 title: algoritmos y tecnicas de computacion
 tags:
-  - computer_Science
-  - CS
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - Computer Science
 public_note: "true"
-category: Computer Science
+category: computer_Science
+categories:
+  - computer_Science
+  - CS
+  - hide-embedded-header1
+  - Computer Science
 ---
 # algoritmos y tecnicas de computacion
 `$= dv.current().file.tags.join(" ")`

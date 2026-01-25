@@ -2,19 +2,19 @@
 date: 2025-04-14 03:14
 title: OTRS Znuny
 tags:
-  - Znuny
-  - OTRS
-  - ITIL
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - infraestructura IT
 public_note: "true"
-category: infraestructura IT
+category: Znuny
+categories:
+  - Znuny
+  - OTRS
+  - ITIL
+  - hide-embedded-header1
+  - infraestructura IT
 ---
 # OTRS Znuny
 ``$= dv.current().file.tags.join(" ")``

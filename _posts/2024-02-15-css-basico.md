@@ -2,17 +2,16 @@
 date: 2024-02-15 16:30
 title: CSS-basico
 tags:
-  - CSS
 status: 📌
 Parent: "[[Area-Prog]]"
 keywords:
 source:
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - uncategorized
 public_note: "true"
-category: uncategorized
+category: CSS
+categories:
+  - CSS
+  - hide-embedded-header1
 ---
 # CSS-basico
 `$= dv.current().file.tags.join(" ")`

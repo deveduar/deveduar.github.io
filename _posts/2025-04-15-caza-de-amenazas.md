@@ -2,20 +2,20 @@
 date: 2025-04-15 03:34
 title: caza de amenazas
 tags:
-  - Hacking
-  - amenazas
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - ciberseguridad
 aliases:
-  - Threat Hunting
 public_note: "true"
-category: ciberseguridad
+category: Hacking
+categories:
+  - Hacking
+  - amenazas
+  - hide-embedded-header1
+  - ciberseguridad
+  - Threat Hunting
 ---
 # Caza de amenazas
 ``$= dv.current().file.tags.join(" ")``

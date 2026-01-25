@@ -2,18 +2,18 @@
 date: 2024-02-18 18:02
 title: Problema ExecutionPolicy en PowerShell
 tags:
-  - Windows
-  - powershell
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - Sistemas
 public_note: "true"
-category: Sistemas
+category: Windows
+categories:
+  - Windows
+  - powershell
+  - hide-embedded-header1
+  - Sistemas
 ---
 # Problema ExecutionPolicy en PowerShell
 `$= dv.current().file.tags.join(" ")`

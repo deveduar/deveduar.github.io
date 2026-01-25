@@ -2,20 +2,20 @@
 date: 2025-04-14 03:22
 title: OpenShift
 tags:
-  - OpenShift
-  - devops
-  - virtualizacion
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 cssclasses:
+public_note: "true"
+category: OpenShift
+categories:
+  - OpenShift
+  - devops
+  - virtualizacion
   - hide-embedded-header1
   - wide
-categories:
   - Virtualizacion
-public_note: "true"
-category: Virtualizacion
 ---
 # OpenShift
 `$= dv.current().file.tags.join(" ")`

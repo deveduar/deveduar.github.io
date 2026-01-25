@@ -2,21 +2,21 @@
 date: 2024-11-16 17:32
 title: microservicios
 tags:
-  - backend
-  - devops
-  - docker
-  - microservicios
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 cssclasses:
+public_note: "true"
+category: backend
+categories:
+  - backend
+  - devops
+  - docker
+  - microservicios
   - hide-embedded-header1
   - wide
-categories:
   - Backend
-public_note: "true"
-category: Backend
 ---
 # microservicios
 `$= dv.current().file.tags.join(" ")`

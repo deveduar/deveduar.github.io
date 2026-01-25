@@ -2,19 +2,19 @@
 date: 2025-05-19 01:12
 title: DDD Domain-Driven Design
 tags:
-  - DDD
-  - arquitectura
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 cssclasses:
+public_note: "true"
+category: DDD
+categories:
+  - DDD
+  - arquitectura
   - hide-embedded-header1
   - wide
-categories:
   - Computer Science
-public_note: "true"
-category: Computer Science
 ---
 # DDD Domain-Driven Design
 `$= dv.current().file.tags.join(" ")`
@@ -442,7 +442,7 @@ Combinado con **arquitectura hexagonal**, **CQRS**, **eventos** y **estrategias 
 
 ## Objetivo
 
-Esta nota muestra cómo aplicar los principios de [DDD Domain-Driven Design](/computer%20science/ddd-domain-driven-design/) y Arquitectura Hexagonal en un entorno real. Incluye ejemplos de código, patrones tácticos y casos de uso completos, especialmente útiles para proyectos con separación clara entre **dominio**, **aplicación** e **infraestructura**.
+Esta nota muestra cómo aplicar los principios de [DDD Domain-Driven Design](/ddd/ddd-domain-driven-design/) y Arquitectura Hexagonal en un entorno real. Incluye ejemplos de código, patrones tácticos y casos de uso completos, especialmente útiles para proyectos con separación clara entre **dominio**, **aplicación** e **infraestructura**.
 
 ---
 
@@ -740,7 +740,7 @@ DDD no se trata solo de estructura, sino de **representar el conocimiento del ne
 
 ## Recursos relacionados
 
-* [DDD Domain-Driven Design](/computer%20science/ddd-domain-driven-design/)
+* [DDD Domain-Driven Design](/ddd/ddd-domain-driven-design/)
 * Arquitectura Hexagonal
 * [GitHub - CodelyTV/typescript-ddd-example](https://github.com/CodelyTV/typescript-ddd-example)
 * [GitHub - Kamil Grzybek - Modular Monolith with DDD](https://github.com/kgrzybek/modular-monolith-with-ddd)

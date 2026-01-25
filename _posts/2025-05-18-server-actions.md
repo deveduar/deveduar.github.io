@@ -2,20 +2,20 @@
 date: 2025-05-18 04:01
 title: server actions
 tags:
-  - backend
-  - server
-  - server_actions
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 cssclasses:
+public_note: "true"
+category: backend
+categories:
+  - backend
+  - server
+  - server_actions
   - hide-embedded-header1
   - wide
-categories:
   - Backend
-public_note: "true"
-category: Backend
 ---
 # Server Actions
 `$= dv.current().file.tags.join(" ")`

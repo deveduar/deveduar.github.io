@@ -2,17 +2,17 @@
 date: 2024-02-18 18:02
 title: Crear varias carpetas con powershell
 tags:
-  - Windows
 keywords:
 source:
 status: 📌
 Parent: "[[Area-Sistemas]]"
 cssclasses:
-  - hide-embedded-header1
-categories:
-  - powershell
 public_note: "true"
-category: powershell
+category: Windows
+categories:
+  - Windows
+  - hide-embedded-header1
+  - powershell
 ---
 # Crear varias carpetas con PowerShell
 `$= dv.current().file.tags.join(" ")`

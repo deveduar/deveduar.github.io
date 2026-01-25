@@ -2,17 +2,17 @@
 date: 2023-04-01 18:49
 title: Computer science - curso de inicio CS50
 tags:
-  - CS
 status: 📌
 Parent: "[[Area-Prog]]"
-categories:
-  - Computer Science
 keywords:
 source:
 cssclasses:
-  - hide-embedded-header1
 public_note: "true"
-category: Computer Science
+category: CS
+categories:
+  - CS
+  - Computer Science
+  - hide-embedded-header1
 ---
 # Computer science - curso de inicio CS50
 `$= dv.current().file.tags.join(" ")`
