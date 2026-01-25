@@ -259,6 +259,7 @@ Cada caso se ejecuta como prueba independiente, lo que facilita cobertura de mú
 
 Ejemplo de pipeline con reportes HTML, vídeos, trazas y reintentos automáticos.
 
+{% raw %}
 ```yaml
 name: Advanced E2E Suite
 on: [push, pull_request]
@@ -284,6 +285,7 @@ jobs:
           name: playwright-report-${{ matrix.browser }}
           path: playwright-report/
 ```
+{% endraw %}
 
 Este flujo genera reportes detallados por navegador y permite análisis visual tras cada ejecución CI.
 

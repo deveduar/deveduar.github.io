@@ -391,6 +391,7 @@ export function Feed({ data }) {
 
 ### Contexto global
 
+{% raw %}
 ```tsx
 import { createContext, useContext, useState } from 'react';
 
@@ -410,6 +411,7 @@ export function useAuth() {
 	return useContext(AuthContext);
 }
 ```
+{% endraw %}
 
 ## Caso de Uso: Acceso a APIs Nativas
 
@@ -462,6 +464,7 @@ export async function loadData(key) {
 
 ### Animación básica
 
+{% raw %}
 ```tsx
 import { Animated, Button } from 'react-native';
 import { useRef } from 'react';
@@ -487,6 +490,7 @@ export function FadeIn() {
 	);
 }
 ```
+{% endraw %}
 
 ## Caso de Uso: Actualizaciones OTA
 
@@ -1216,6 +1220,7 @@ export function FadeIn() {
 	- Limpieza de código y comentarios.
 
 ## Ejemplo 1 — Contador básico
+{% raw %}
 ```tsx
 import React, { useState } from 'react';
 import { View, Text, Button } from 'react-native';
@@ -1231,10 +1236,12 @@ export default function Counter() {
 		</View>
 	);
 }
-````
+```
+{% endraw %}`
 
 ## Ejemplo 2 — Lista con FlatList
 
+{% raw %}
 ```tsx
 import React from 'react';
 import { FlatList, Text, View } from 'react-native';
@@ -1255,9 +1262,11 @@ export default function ItemList() {
 	);
 }
 ```
+{% endraw %}
 
 ## Ejemplo 3 — Formulario simple con validación
 
+{% raw %}
 ```tsx
 import React, { useState } from 'react';
 import { View, TextInput, Button, Text } from 'react-native';
@@ -1289,9 +1298,11 @@ export default function LoginForm() {
 	);
 }
 ```
+{% endraw %}
 
 ## Ejemplo 4 — Navegación básica
 
+{% raw %}
 ```tsx
 import React from 'react';
 import { Button, Text, View } from 'react-native';
@@ -1328,6 +1339,7 @@ export default function App() {
 	);
 }
 ```
+{% endraw %}
 
 ## Buenas prácticas durante pair programming
 

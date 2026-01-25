@@ -323,6 +323,7 @@ Escenario típico donde SonarQube actúa como **gatekeeper** antes de permitir u
 - Aprobación o bloqueo del pipeline
 
 ### GitHub Actions — análisis automático
+{% raw %}
 ```yaml
 name: SonarQube Analysis
 
@@ -342,7 +343,8 @@ jobs:
 				env:
 					SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
 					SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-````
+```
+{% endraw %}`
 
 ## Caso de uso 2: Quality Gate como bloqueo de despliegue
 

@@ -247,6 +247,7 @@ export default config;
 
 Puedes envolver tus componentes en el decorador `NextRouter` mockeado para simular navegación:
 
+{% raw %}
 ```tsx
 import { RouterContext } from 'next/dist/shared/lib/router-context';
 
@@ -258,6 +259,7 @@ export const decorators = [
 	),
 ];
 ```
+{% endraw %}
 
 ---
 
@@ -773,6 +775,7 @@ Cada variante del botón puede verse, probarse y modificarse en tiempo real desd
 
 ### Ejemplo: `Button.docs.mdx`
 
+{% raw %}
 ```mdx
 import { Meta, Canvas, Story } from '@storybook/blocks';
 import { Button } from './Button';
@@ -795,6 +798,7 @@ El botón es el componente básico para ejecutar acciones.
 - **Secundario:** Acción alternativa.
 - **Deshabilitado:** No interactivo, mantiene consistencia visual.
 ```
+{% endraw %}
 
 📘 Permite incluir texto, previews y props en la misma página.
 
@@ -1132,6 +1136,7 @@ export const Disabled: Story = {
 
 ### 🧠 Ejemplo con Decorators y Mock de Contexto
 
+{% raw %}
 ```tsx
 // UserCard.stories.tsx
 import { UserCard } from './UserCard';
@@ -1149,6 +1154,7 @@ export default {
 	],
 };
 ```
+{% endraw %}
 
 ---
 

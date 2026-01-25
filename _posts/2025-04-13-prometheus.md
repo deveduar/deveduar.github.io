@@ -124,6 +124,7 @@ Las alertas se definen en archivos YAML y el servidor las evalúa continuamente.
 
 ### Ejemplo de alerta
 
+{% raw %}
 ```yaml
 groups:
 - name: cpu_high
@@ -137,6 +138,7 @@ groups:
       summary: "Uso de CPU alto"
       description: "El proceso {{ $labels.instance }} está usando >80% CPU."
 ```
+{% endraw %}
 
 ## Despliegues y Docker
 Imagen recomendada:

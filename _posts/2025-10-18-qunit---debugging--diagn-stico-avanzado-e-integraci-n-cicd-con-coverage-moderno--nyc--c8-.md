@@ -197,6 +197,7 @@ Para análisis histórico y métricas visuales, integrar con Codecov.
 
 ### Ejemplo: Publicar cobertura en Codecov
 
+{% raw %}
 ```yaml
 - name: Upload coverage to Codecov
   uses: codecov/codecov-action@v5
@@ -206,6 +207,7 @@ Para análisis histórico y métricas visuales, integrar con Codecov.
     flags: unittests
     fail_ci_if_error: true
 ```
+{% endraw %}
 
 📈 *Permite rastrear evolución de cobertura por commit, módulo o autor.*
 

@@ -290,13 +290,15 @@ Ejemplo: plantillas para notificaciones, resúmenes semanales o campañas de mar
 
 ### Renderización condicional
 Los motores permiten condicionar la salida según valores recibidos:
+{% raw %}
 ```handlebars
 {{#if user.isAdmin}}
 	<p>Bienvenido administrador, {{user.name}}</p>
 {{else}}
 	<p>Hola {{user.name}}, no tienes acceso a esta sección.</p>
 {{/if}}
-````
+```
+{% endraw %}`
 
 ## Testing y mantenimiento de plantillas
 
