@@ -1598,16 +1598,6 @@
       "url": "/management/product-management"
     },
     {
-      "id": "jira",
-      "title": "Jira",
-      "slug": "jira",
-      "date": "2024-11-18 23:23",
-      "categories": [
-        "Management"
-      ],
-      "url": "/management/jira"
-    },
-    {
       "id": "erp",
       "title": "ERP",
       "slug": "erp",
@@ -1616,6 +1606,16 @@
         "Management"
       ],
       "url": "/management/erp"
+    },
+    {
+      "id": "jira",
+      "title": "Jira",
+      "slug": "jira",
+      "date": "2024-11-18 23:23",
+      "categories": [
+        "Management"
+      ],
+      "url": "/management/jira"
     },
     {
       "id": "crm",
@@ -2408,16 +2408,6 @@
       "url": "/frontend/react"
     },
     {
-      "id": "qwick",
-      "title": "qwick",
-      "slug": "qwick",
-      "date": "2025-01-29 17:45",
-      "categories": [
-        "Frontend"
-      ],
-      "url": "/frontend/qwick"
-    },
-    {
       "id": "pwa",
       "title": "pwa",
       "slug": "pwa",
@@ -2426,6 +2416,16 @@
         "Frontend"
       ],
       "url": "/frontend/pwa"
+    },
+    {
+      "id": "qwick",
+      "title": "qwick",
+      "slug": "qwick",
+      "date": "2025-01-29 17:45",
+      "categories": [
+        "Frontend"
+      ],
+      "url": "/frontend/qwick"
     },
     {
       "id": "post-css",
@@ -2548,16 +2548,6 @@
       "url": "/uncategorized/css-30-projects-curso"
     },
     {
-      "id": "astro",
-      "title": "astro",
-      "slug": "astro",
-      "date": "2025-01-29 17:53",
-      "categories": [
-        "Frontend"
-      ],
-      "url": "/frontend/astro"
-    },
-    {
       "id": "angular",
       "title": "angular",
       "slug": "angular",
@@ -2566,6 +2556,16 @@
         "Frontend"
       ],
       "url": "/frontend/angular"
+    },
+    {
+      "id": "astro",
+      "title": "astro",
+      "slug": "astro",
+      "date": "2025-01-29 17:53",
+      "categories": [
+        "Frontend"
+      ],
+      "url": "/frontend/astro"
     },
     {
       "id": "accesibilidad",
@@ -2618,16 +2618,6 @@
       "url": "/virtualizacion/vmware"
     },
     {
-      "id": "terraform",
-      "title": "Terraform",
-      "slug": "terraform",
-      "date": "2024-11-23 03:43",
-      "categories": [
-        "devops"
-      ],
-      "url": "/devops/terraform"
-    },
-    {
       "id": "sre-site-reliability-engineering",
       "title": "SRE Site Reliability Engineering",
       "slug": "sre-site-reliability-engineering",
@@ -2636,6 +2626,16 @@
         "devops"
       ],
       "url": "/devops/sre-site-reliability-engineering"
+    },
+    {
+      "id": "terraform",
+      "title": "Terraform",
+      "slug": "terraform",
+      "date": "2024-11-23 03:43",
+      "categories": [
+        "devops"
+      ],
+      "url": "/devops/terraform"
     },
     {
       "id": "sql-server",
@@ -8874,14 +8874,6 @@
       "target": "/management/erp/"
     },
     {
-      "source": "/management/jira",
-      "target": "/uncategorized/management/"
-    },
-    {
-      "source": "/management/jira",
-      "target": "/uncategorized/devops/"
-    },
-    {
       "source": "/management/erp",
       "target": "/uncategorized/devops/"
     },
@@ -8919,6 +8911,14 @@
     },
     {
       "source": "/management/erp",
+      "target": "/uncategorized/devops/"
+    },
+    {
+      "source": "/management/jira",
+      "target": "/uncategorized/management/"
+    },
+    {
+      "source": "/management/jira",
       "target": "/uncategorized/devops/"
     },
     {
@@ -11694,34 +11694,6 @@
       "target": "/frontend/css/"
     },
     {
-      "source": "/frontend/astro",
-      "target": "/uncategorized/frontend/"
-    },
-    {
-      "source": "/frontend/astro",
-      "target": "/uncategorized/backend/"
-    },
-    {
-      "source": "/frontend/astro",
-      "target": "/frontend/react/"
-    },
-    {
-      "source": "/frontend/astro",
-      "target": "/frontend/vuejs/"
-    },
-    {
-      "source": "/frontend/astro",
-      "target": "/frontend/react/"
-    },
-    {
-      "source": "/frontend/astro",
-      "target": "/frontend/vuejs/"
-    },
-    {
-      "source": "/frontend/astro",
-      "target": "/frontend/solid-js/"
-    },
-    {
       "source": "/frontend/angular",
       "target": "/uncategorized/software-engineering/"
     },
@@ -11756,6 +11728,34 @@
     {
       "source": "/frontend/angular",
       "target": "/autenticacion/jwt/"
+    },
+    {
+      "source": "/frontend/astro",
+      "target": "/uncategorized/frontend/"
+    },
+    {
+      "source": "/frontend/astro",
+      "target": "/uncategorized/backend/"
+    },
+    {
+      "source": "/frontend/astro",
+      "target": "/frontend/react/"
+    },
+    {
+      "source": "/frontend/astro",
+      "target": "/frontend/vuejs/"
+    },
+    {
+      "source": "/frontend/astro",
+      "target": "/frontend/react/"
+    },
+    {
+      "source": "/frontend/astro",
+      "target": "/frontend/vuejs/"
+    },
+    {
+      "source": "/frontend/astro",
+      "target": "/frontend/solid-js/"
     },
     {
       "source": "/frontend/accesibilidad",
@@ -12174,6 +12174,90 @@
       "target": "/uncategorized/cloud/"
     },
     {
+      "source": "/devops/sre-site-reliability-engineering",
+      "target": "/devops/iinfraestructura-como-codigo/"
+    },
+    {
+      "source": "/devops/sre-site-reliability-engineering",
+      "target": "/uncategorized/gestion-de-negocio/"
+    },
+    {
+      "source": "/devops/sre-site-reliability-engineering",
+      "target": "/uncategorized/devops/"
+    },
+    {
+      "source": "/devops/sre-site-reliability-engineering",
+      "target": "/devops/iinfraestructura-como-codigo/"
+    },
+    {
+      "source": "/devops/sre-site-reliability-engineering",
+      "target": "/uncategorized/devops/"
+    },
+    {
+      "source": "/devops/sre-site-reliability-engineering",
+      "target": "/uncategorized/gestion-de-negocio/"
+    },
+    {
+      "source": "/devops/sre-site-reliability-engineering",
+      "target": "/devops/iinfraestructura-como-codigo/"
+    },
+    {
+      "source": "/devops/sre-site-reliability-engineering",
+      "target": "/uncategorized/devops/"
+    },
+    {
+      "source": "/devops/sre-site-reliability-engineering",
+      "target": "/uncategorized/gestion-de-negocio/"
+    },
+    {
+      "source": "/devops/sre-site-reliability-engineering",
+      "target": "/devops/sre-site-reliability-engineering/"
+    },
+    {
+      "source": "/devops/sre-site-reliability-engineering",
+      "target": "/uncategorized/devops/"
+    },
+    {
+      "source": "/devops/sre-site-reliability-engineering",
+      "target": "/uncategorized/gestion-de-negocio/"
+    },
+    {
+      "source": "/devops/sre-site-reliability-engineering",
+      "target": "/uncategorized/gestion-de-negocio/"
+    },
+    {
+      "source": "/devops/sre-site-reliability-engineering",
+      "target": "/devops/sre-site-reliability-engineering/"
+    },
+    {
+      "source": "/devops/sre-site-reliability-engineering",
+      "target": "/uncategorized/devops/"
+    },
+    {
+      "source": "/devops/sre-site-reliability-engineering",
+      "target": "/uncategorized/gestion-de-negocio/"
+    },
+    {
+      "source": "/devops/sre-site-reliability-engineering",
+      "target": "/devops/iinfraestructura-como-codigo/"
+    },
+    {
+      "source": "/devops/sre-site-reliability-engineering",
+      "target": "/devops/sre-site-reliability-engineering/"
+    },
+    {
+      "source": "/devops/sre-site-reliability-engineering",
+      "target": "/uncategorized/devops/"
+    },
+    {
+      "source": "/devops/sre-site-reliability-engineering",
+      "target": "/uncategorized/gestion-de-negocio/"
+    },
+    {
+      "source": "/devops/sre-site-reliability-engineering",
+      "target": "/devops/iinfraestructura-como-codigo/"
+    },
+    {
       "source": "/devops/terraform",
       "target": "/devops/iinfraestructura-como-codigo/"
     },
@@ -12280,90 +12364,6 @@
     {
       "source": "/devops/terraform",
       "target": "/devops/cicd/"
-    },
-    {
-      "source": "/devops/sre-site-reliability-engineering",
-      "target": "/devops/iinfraestructura-como-codigo/"
-    },
-    {
-      "source": "/devops/sre-site-reliability-engineering",
-      "target": "/uncategorized/gestion-de-negocio/"
-    },
-    {
-      "source": "/devops/sre-site-reliability-engineering",
-      "target": "/uncategorized/devops/"
-    },
-    {
-      "source": "/devops/sre-site-reliability-engineering",
-      "target": "/devops/iinfraestructura-como-codigo/"
-    },
-    {
-      "source": "/devops/sre-site-reliability-engineering",
-      "target": "/uncategorized/devops/"
-    },
-    {
-      "source": "/devops/sre-site-reliability-engineering",
-      "target": "/uncategorized/gestion-de-negocio/"
-    },
-    {
-      "source": "/devops/sre-site-reliability-engineering",
-      "target": "/devops/iinfraestructura-como-codigo/"
-    },
-    {
-      "source": "/devops/sre-site-reliability-engineering",
-      "target": "/uncategorized/devops/"
-    },
-    {
-      "source": "/devops/sre-site-reliability-engineering",
-      "target": "/uncategorized/gestion-de-negocio/"
-    },
-    {
-      "source": "/devops/sre-site-reliability-engineering",
-      "target": "/devops/sre-site-reliability-engineering/"
-    },
-    {
-      "source": "/devops/sre-site-reliability-engineering",
-      "target": "/uncategorized/devops/"
-    },
-    {
-      "source": "/devops/sre-site-reliability-engineering",
-      "target": "/uncategorized/gestion-de-negocio/"
-    },
-    {
-      "source": "/devops/sre-site-reliability-engineering",
-      "target": "/uncategorized/gestion-de-negocio/"
-    },
-    {
-      "source": "/devops/sre-site-reliability-engineering",
-      "target": "/devops/sre-site-reliability-engineering/"
-    },
-    {
-      "source": "/devops/sre-site-reliability-engineering",
-      "target": "/uncategorized/devops/"
-    },
-    {
-      "source": "/devops/sre-site-reliability-engineering",
-      "target": "/uncategorized/gestion-de-negocio/"
-    },
-    {
-      "source": "/devops/sre-site-reliability-engineering",
-      "target": "/devops/iinfraestructura-como-codigo/"
-    },
-    {
-      "source": "/devops/sre-site-reliability-engineering",
-      "target": "/devops/sre-site-reliability-engineering/"
-    },
-    {
-      "source": "/devops/sre-site-reliability-engineering",
-      "target": "/uncategorized/devops/"
-    },
-    {
-      "source": "/devops/sre-site-reliability-engineering",
-      "target": "/uncategorized/gestion-de-negocio/"
-    },
-    {
-      "source": "/devops/sre-site-reliability-engineering",
-      "target": "/devops/iinfraestructura-como-codigo/"
     },
     {
       "source": "/devops/sql-server",

@@ -135,7 +135,7 @@ En muchos problemas se desea minimizar una función ( f(\mathbf{x}) ) sujeta a *
    $$
    El óptimo cumple:
    $$
-   \nabla_{\mathbf{x}} \mathcal{L} = 0, \quad g_i(\mathbf{x}) = 0
+   \nabla_{\mathbf{x&#125;&#125; \mathcal{L} = 0, \quad g_i(\mathbf{x}) = 0
    $$
 
 2. **Métodos de penalización:**
@@ -159,7 +159,7 @@ En muchos problemas se desea minimizar una función ( f(\mathbf{x}) ) sujeta a *
 El problema de **mínimos cuadrados** busca una solución ( \mathbf{x} ) que minimice el error cuadrático entre un modelo lineal ( A\mathbf{x} ) y los datos observados ( \mathbf{b} ):
 
 $$
-\min_{\mathbf{x}} |A\mathbf{x} - \mathbf{b}|^2
+\min_{\mathbf{x&#125;&#125; |A\mathbf{x} - \mathbf{b}|^2
 $$
 
 ### 🔹 Solución analítica
@@ -326,7 +326,7 @@ Un buen método numérico debe cumplir:
 
 Problema:
 $$
-\min_{\mathbf{x}} \|A\mathbf{x} - \mathbf{b}\|^2
+\min_{\mathbf{x&#125;&#125; \|A\mathbf{x} - \mathbf{b}\|^2
 $$
 
 Solución:
@@ -427,7 +427,7 @@ Este lenguaje une el pensamiento matemático abstracto con la implementación co
 
 7. **Norma del error (en vectores o funciones):**
 	$$
-	\| \mathbf{e} \| = \| \mathbf{x} - \tilde{\mathbf{x}} \|
+	\| \mathbf{e} \| = \| \mathbf{x} - \tilde{\mathbf{x&#125;&#125; \|
 	$$
 
 ---

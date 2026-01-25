@@ -146,8 +146,8 @@ result = np.dot(A, B)
 ## Producto Interno (Dot Product)
 - Fórmula: \( \mathbf{u} \cdot \mathbf{v} = \sum u_i v_i \)
 - Permite calcular:
-	- Longitud (norma) de un vector: \( ||\mathbf{v}|| = \sqrt{\mathbf{v}\cdot\mathbf{v}} \)
-	- Ángulo entre vectores: \( \cos(\theta) = \frac{\mathbf{u}\cdot\mathbf{v}}{||\mathbf{u}||\,||\mathbf{v}||} \)
+	- Longitud (norma) de un vector: \( ||\mathbf{v}|| = \sqrt{\mathbf{v}\cdot\mathbf{v&#125;&#125; \)
+	- Ángulo entre vectores: \( \cos(\theta) = \frac{\mathbf{u}\cdot\mathbf{v&#125;&#125;{||\mathbf{u}||\,||\mathbf{v}||} \)
 - Aplicación en ML: Similitud entre vectores de características, embeddings de palabras o imágenes
 
 ## Norma de un Vector

@@ -248,7 +248,7 @@ $$\vec{v} = \begin{bmatrix} v_1 \\ v_2 \\ \vdots \\ v_n \end{bmatrix}$$
 - **Producto escalar (o punto):**  
 	$$\vec{u} \cdot \vec{v} = \sum_i u_i v_i$$
 - **Norma (longitud):**  
-	$$\|\vec{v}\| = \sqrt{\vec{v} \cdot \vec{v}}$$
+	$$\|\vec{v}\| = \sqrt{\vec{v} \cdot \vec{v&#125;&#125;$$
 
 Estas operaciones permiten construir conceptos más avanzados como la **proyección**, la **ortogonalidad** y las **transformaciones lineales**.
 
@@ -486,7 +486,7 @@ y forman un ángulo de $90^\circ$.
 
 ### Proyecciones
 La **proyección** de $\vec{u}$ sobre $\vec{v}$ se denota:
-$$\text{proj}_{\vec{v}}(\vec{u}) = \frac{\vec{u} \cdot \vec{v}}{\|\vec{v}\|^2} \vec{v}$$
+$$\text{proj}_{\vec{v&#125;&#125;(\vec{u}) = \frac{\vec{u} \cdot \vec{v&#125;&#125;{\|\vec{v}\|^2} \vec{v}$$
 
 ---
 
@@ -608,11 +608,11 @@ $$
 3. **Ángulo entre los vectores:**
 
 $$
-\cos(\theta) = \frac{\vec{a} \cdot \vec{b}}{|\vec{a}||\vec{b}|} = \frac{10}{5\sqrt{5}} = \frac{2}{\sqrt{5}}
+\cos(\theta) = \frac{\vec{a} \cdot \vec{b&#125;&#125;{|\vec{a}||\vec{b}|} = \frac{10}{5\sqrt{5&#125;&#125; = \frac{2}{\sqrt{5&#125;&#125;
 $$
 
 $$
-\Rightarrow \theta = \cos^{-1}\left(\frac{2}{\sqrt{5}}\right) \approx 26.6^\circ
+\Rightarrow \theta = \cos^{-1}\left(\frac{2}{\sqrt{5&#125;&#125;\right) \approx 26.6^\circ
 $$
 
 ---
