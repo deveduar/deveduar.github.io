@@ -1,0 +1,44 @@
+---
+date: 2025-05-22 04:26
+title: Desarrollo multiplataforma
+tags:
+  - desarrollo
+  - programming
+keywords:
+source:
+status: 📌
+Parent: "[[Area-Prog]]"
+cssclasses:
+  - hide-embedded-header1
+categories:
+  - uncategorized
+public_note: "true"
+category: uncategorized
+---
+# Desarrollo multiplataforma
+`$= dv.current().file.tags.join(" ")`
+
+- [Software engineering](/uncategorized/software-engineering/)
+- mobile apps 
+	- android
+	- [react native](/desarrollo%20multiplataforma/react-native/) 
+	- [flutter](/desarrollo%20multiplataforma/flutter/)
+	- [kotlin](/desarrollo%20multiplataforma/kotlin/) 🔥
+	- [Rust](/desarrollo%20multiplataforma/rust/)
+		- WebAssembly
+- [pwa](/frontend/pwa/)
+	- [ionic](/desarrollo%20multiplataforma/ionic/)
+	- [native script](/desarrollo%20multiplataforma/native-script/) 
+	- [capacitor](/desarrollo%20multiplataforma/capacitor/)
+	- [react native](/desarrollo%20multiplataforma/react-native/)
+	- 
+- [power apps](/desarrollo%20multiplataforma/power-apps/) lowcode
+- desktop apps
+	- [electron](/desarrollo%20multiplataforma/electron/) 
+	- [MAUI NET](/desarrollo%20multiplataforma/maui-net/)
+	- [net](/software%20engineering/net/) 
+	- [csharp](/software%20engineering/csharp/)
+	- [cpp](/software%20engineering/cpp/)
+- [simulaciones](/desarrollo%20multiplataforma/simulaciones/) 
+- GameDev
+- 

@@ -1,0 +1,1880 @@
+---
+date: 2024-11-23 03:43
+title: Terraform
+tags:
+  - devops
+  - terraform
+  - cloud
+  - infraestructura
+keywords:
+source:
+status: 🌟
+Parent: "[[Area-Sistemas]]"
+cssclasses:
+  - hide-embedded-header1
+  - wide
+categories:
+  - devops
+public_note: "true"
+category: devops
+---
+# Terraform
+`$= dv.current().file.tags.join(" ")`
+
+## Conceptos base y ecosistema
+- [IInfraestructura como codigo](/devops/iinfraestructura-como-codigo/)
+- [devops](/uncategorized/devops/)
+- [cloud](/uncategorized/cloud/)
+- Automatizacion
+- [Aws](/cloud/aws/)
+- [GCP Google cloud](/data%20science/gcp-google-cloud/)
+- Terraform permite definir, versionar y desplegar infraestructura mediante archivos declarativos
+- Lenguajes soportados:
+	- HCL (HashiCorp Configuration Language) como estándar
+	- JSON como alternativa menos legible
+- Enfoque declarativo:
+	- Se define el **estado deseado**
+	- Terraform calcula el delta entre estado actual y deseado
+
+## Casos de uso y ejemplos
+- Gestión de recursos de proveedores cloud
+	- Máquinas virtuales, almacenamiento, bases de datos, IAM
+- Redes y seguridad
+	- Redes privadas (VPC/VNet)
+	- Subredes públicas y privadas
+	- Reglas de firewall y security groups
+- Balanceo de carga
+	- Load balancers para distribuir tráfico entre instancias
+- Gestión de entornos híbridos
+	- Infraestructura local + cloud
+	- Conexión de red on-premise con VPC de AWS
+- DNS y routing
+	- Gestión de DNS con Route53 o Cloudflare
+- Automatización de despliegues
+	- Integración con GitLab CI/CD o GitHub Actions
+	- Infraestructura desplegada como parte de pipelines
+- Contenedores y orquestación
+	- Implementación de clústeres [Kubernetes](/virtualizacion/kubernetes/)
+	- EKS (AWS), AKS (Azure), GKE (GCP)
+
+## Infraestructura mutable vs inmutable
+- Infraestructura mutable
+	- Cambios aplicados directamente sobre recursos existentes
+	- Herramientas típicas: Ansible, Puppet
+- Infraestructura inmutable
+	- Recursos se reemplazan en lugar de modificarse
+	- Mayor trazabilidad y consistencia
+- Versionado y migraciones
+	- Control de cambios mediante Git
+	- Rollback sencillo a versiones previas
+## Configuración vs estado
+- Configuración
+	- Archivos `.tf` que definen recursos deseados
+- Estado (state)
+	- Archivo que refleja la infraestructura real
+	- Puede contener información sensible
+- Backend de estado
+	- Local (por defecto)
+	- Backend cloud (recomendado en equipos)
+		- Terraform Cloud / Enterprise
+		- S3 + DynamoDB (AWS)
+	- Control de bloqueos y concurrencia
+- Gestión de apply
+	- Evitar ejecuciones simultáneas
+	- Auditoría de cambios
+
+## Planificación y aplicación
+- `terraform plan`
+	- Simula los cambios sin aplicarlos
+	- Muestra:
+		- values
+		- instance_type
+		- ami
+		- arn, id, IPs
+	- Detecta diferencias entre AWS y el estado de Terraform
+- `terraform apply`
+	- Aplica los cambios calculados
+	- Opción de corrección directa:
+		- `terraform apply -auto-approve`
+
+## Integración con on-premise
+- Interacción con infraestructura local
+	- Cisco Intersight (ITS)
+	- Conectores híbridos
+- Casos habituales
+	- Extensión de red local a la nube
+	- Gestión centralizada de recursos
+
+## Documentación y recursos
+- [Infrastructure as Code (IaC) con Terraform](https://www.deloitte.com/es/es/services/consulting/blogs/todo-tecnologia/infrastructure-as-code-iac-con-terraform.html)
+- [Docker | Terraform | HashiCorp Developer](https://developer.hashicorp.com/terraform/tutorials/docker-get-started)
+- [¿Qué son los archivos de configuración en Terraform? - YouTube](https://youtu.be/abTxS9JJ6W4)
+- [Comandos comunes en Terraform - YouTube](https://youtu.be/ECEW-P4l7Xg)
+- [Terraform Registry providers](https://registry.terraform.io/namespaces/hashicorp)
+- Conceptos adicionales
+	- Workspaces
+	- Providers
+	- Modules reutilizables
+
+## Pasos básicos de trabajo
+- Curso y ejemplos
+	- [GitHub - ingjavierpinilla/curso-terraform](https://github.com/ingjavierpinilla/curso-terraform)
+- Acceso y credenciales
+	- IAM en [Aws](/cloud/aws/)
+	- Uso de access key y secret key
+	- Variables de entorno:
+		- `TF_VAR_name`
+		- `var.access_key`
+
+## Comandos principales
+### Inicialización y formato
+```bash
+terraform init
+terraform fmt
+````
+
+### Planificación
+
+```bash
+terraform plan
+```
+
+### Aplicación y destrucción
+
+```bash
+terraform apply
+terraform destroy
+terraform apply -auto-approve
+```
+
+## Configuración inicial de proyecto
+
+- Archivos base
+    - `main.tf`
+    - `vars.tf`
+- Provider
+    - Definición del proveedor cloud
+    - Uso de credenciales por variables o entorno
+- Variables
+    - Uso de `.tfvars`
+        - `terraform apply -var-file=vars.tfvars`
+        - `-var`
+        - `-var-file`
+        - `.auto.tfvars` o `auto.tfvars.json`
+- Variables locales
+    - Constructor de objetos locales
+        - Ejemplo: `extra_tag = "extra_tag"`
+
+## Recursos y outputs
+
+- Definición de recursos
+    - `resource`
+- Outputs
+    - Mostrar IPs y datos relevantes
+
+```hcl
+output "instance_ip_addr" {
+	value = aws_instance.example.private_ip
+}
+```
+
+## Creación de instancias EC2 en AWS
+
+- Recursos EC2
+    - Definición de AMI, tipo de instancia y tags
+- Uso de funciones y bucles
+    - `for_each` para múltiples instancias
+    - Interpolación de claves
+
+```hcl
+tags = {
+	Name = "EC2-${each.key}"
+	ExtraTag = local.extra_tagName
+}
+```
+
+## Integración con CloudWatch
+
+- Creación de recursos adicionales
+
+```hcl
+resource "aws_cloudwatch_log_group" "ec2_log_group" {
+	tags = {
+		Environment = "test"
+		Service = each.key
+	}
+}
+```
+
+### Output de logs y direcciones
+
+```hcl
+output "ec2_private_ips" {
+	value = {
+		for service, i in aws_instance.example :
+		service => i.private_ip
+	}
+}
+```
+
+## Uso de módulos: VPC y Security Groups
+
+- Registro oficial
+    - [Terraform Registry vpc](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc)
+- Ventajas de módulos
+    - Reutilización
+    - Código más limpio
+    - Buenas prácticas integradas
+- Configuración de networking
+
+```hcl
+module "vpc" {
+	source = "terraform-aws-modules/vpc/aws"
+}
+```
+
+```hcl
+module "terraform-sg" {
+	source = "terraform-aws-modules/security-group/aws"
+	vpc_id = module.vpc.vpc_id
+}
+```
+
+### Referencia de módulos en recursos
+
+```hcl
+resource "aws_instance" "example" {
+	subnet_id = module.vpc.public_subnets[0]
+	vpc_security_group_ids = [module.terraform-sg.security_group_id]
+}
+```
+
+## Workspaces y diseño de código
+
+- Uso de workspaces
+    - Separación lógica de entornos
+    - dev, prod, test
+- Comandos
+
+```bash
+terraform workspace list
+terraform workspace new prod
+terraform workspace select default
+```
+
+### Lógica condicional por entorno
+
+```hcl
+resource "aws_instance" "example" {
+	count = terraform.workspace == "prod" ? 2 : 1
+
+	tags = {
+		env  = terraform.workspace
+		Name = format("%s-%s", terraform.workspace, count.index)
+	}
+}
+````
+# Ejemplos de app web con [Aws](/cloud/aws/)
+`$= dv.current().file.tags.join(" ")`
+
+* [GitHub - caosbinario/webinar-terraform: Código utilizado para el webinar de terraform](https://github.com/caosbinario/webinar-terraform)
+
+## Arquitectura base
+- Aplicación web simple sobre instancia EC2 `t3_micro`
+- Servidor web [nginx](/backend/nginx/)
+- Despliegue automatizado con Terraform
+- Acceso remoto mediante ssh
+- Red aislada mediante VPC
+
+## EC2 con Nginx usando user_data
+- Instalación automática de Nginx
+- Uso de `user_data` en el recurso `aws_instance`
+- Script bash ejecutado al iniciar la instancia
+
+### Script user_data (bash)
+```bash
+#!/bin/bash
+yum update -y
+amazon-linux-extras install nginx1 -y
+systemctl start nginx
+systemctl enable nginx
+````
+
+
+## Red y seguridad
+
+* Uso de VPC dedicada
+* Puertos abiertos:
+	* 80 (HTTP)
+	* 22 (SSH)
+* Acceso permitido desde `0.0.0.0/0` (solo para pruebas)
+
+## Gestión de claves SSH
+
+* Generar par de claves
+
+```bash
+ssh-keygen -t rsa 2048 -f "nginx-server.key"
+```
+
+* Subir clave pública a AWS
+* Uso del recurso `aws_key_pair`
+
+### Recurso aws_key_pair
+
+```hcl
+resource "aws_key_pair" "nginx-server-ssh" {
+	key_name   = "nginx-server-key"
+	public_key = file("nginx-server.key.pub")
+}
+```
+
+## Security Group
+
+* Definición de reglas de entrada y salida
+* Asociación a la VPC
+* Asignación del security group a la instancia
+
+### Recurso aws_security_group
+
+```hcl
+resource "aws_security_group" "nginx-server-sg" {
+	name   = "nginx-server-sg"
+	vpc_id = aws_vpc.main.id
+
+	ingress {
+		from_port   = 22
+		to_port     = 22
+		protocol    = "tcp"
+		cidr_blocks = ["0.0.0.0/0"]
+	}
+
+	ingress {
+		from_port   = 80
+		to_port     = 80
+		protocol    = "tcp"
+		cidr_blocks = ["0.0.0.0/0"]
+	}
+
+	egress {
+		from_port   = 0
+		to_port     = 0
+		protocol    = "-1"
+		cidr_blocks = ["0.0.0.0/0"]
+	}
+}
+```
+
+### Asociación del SG a la instancia
+
+```hcl
+vpc_security_group_ids = [aws_security_group.nginx-server-sg.id]
+```
+
+## Tags y metadatos
+
+* Uso de variables como objeto de tags
+* Identificación clara del entorno y recurso
+
+### Tags en recursos
+
+```hcl
+tags = {
+	Name        = var.server_name
+	Environment = var.environment
+}
+```
+
+## Outputs y verificación
+
+* Visualización de información tras el despliegue
+* Uso de `terraform output`
+
+### Outputs definidos
+
+```hcl
+output "server_public_ip" {
+	value = aws_instance.nginx-server.public_ip
+}
+
+output "server_public_dns" {
+	value = aws_instance.nginx-server.public_dns
+}
+```
+
+## Pruebas de acceso
+
+* Probar servidor web
+
+```bash
+curl http://<public_ip>
+```
+
+* Conexión SSH
+
+```bash
+ssh ec2-user@3.232.132.177 -i ./nginx-server.key
+```
+
+## Variables y entornos
+
+* Variables con valores por defecto
+* Separación por entorno: dev, qa, prod
+* Archivos:
+  * `variables.tf`
+  * `terraform.tfvars`
+
+### Variable de ejemplo
+
+```hcl
+variable "server_name" {
+	type    = string
+	default = "nginx-server"
+}
+```
+
+## Uso de módulos
+
+* Reutilización de código
+* Mismo módulo para distintos entornos
+* Diferentes claves SSH por entorno
+* Outputs expuestos por módulo
+
+### Output desde módulo
+
+```hcl
+value = module.nginx_server_dev.server_public_ip
+```
+
+## Gestión de estado (tf state)
+
+* Colaboración en equipos
+* Almacenamiento remoto en [Backend](/uncategorized/backend/)
+* Uso de buckets S3 en [Aws](/cloud/aws/)
+
+## Planes en pipelines CI/CD
+
+* Guardar plan para revisión
+
+```bash
+terraform plan -out server_qa.tfplan
+```
+
+* Integración con [CICD](/devops/cicd/)
+
+## Importación de infraestructura existente
+
+* Importar recursos creados manualmente en AWS
+* Ejemplo: instancia EC2 existente
+
+### Importar recurso
+
+```bash
+terraform import aws_instance.server-web i-23234235fdg
+```
+
+### Recurso vacío inicial
+
+```hcl
+resource "aws_instance" "server-web" {}
+```
+
+### Inspección del estado
+
+```bash
+terraform state show aws_instance.server-web
+```
+
+* Copiar propiedades al recurso:
+	* ami
+	* instance_type
+	* tags
+	* vpc_security_group_ids
+
+## AWS CLI
+* Uso de [Aws](/cloud/aws/) CLI
+* Configuración inicial
+
+```bash
+aws configure
+```
+
+## Ciclo de vida de recursos
+
+* Inicialización de plugins con `terraform init`
+* Creación con `plan`
+* Aplicación con `apply`
+* Verificación desde el panel de AWS
+
+## Terraform con [Aws](/cloud/aws/) y [Docker](/software%20engineering/docker/)
+
+* Ejemplo completo con CI/CD
+* [GitHub - culturadevops/terraform-docker-and-codepipeline](https://github.com/culturadevops/terraform-docker-and-codepipeline)
+
+## Terraform como imagen Docker
+
+* [Containerizing Terraform - DEV Community](https://dev.to/morethancertified/containerizing-terraform-3h3e)
+* Imagen oficial:
+  * [hashicorp/terraform](https://hub.docker.com/r/hashicorp/terraform)
+* No requiere Dockerfile propio
+* Ejecución directa de comandos Terraform
+## AWS CodePipeline y CodeBuild
+
+* Automatización completa del despliegue
+* Uso de:
+	* CodePipeline
+	* CodeBuild
+	* Artifacts en S3
+	* Recursos Terraform
+* `aws_codepipeline`
+* Fases:
+	* Source (Git / Bitbucket)
+	* Build (buildspec.yml)
+	* Deploy
+	* Limpieza de buckets S3 al destruir
+	* Ejecución manual vs automática
+* Documentación oficial:
+	* [What is AWS CodeCommit? - AWS CodeCommit](https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html)
+	* [What is AWS CodePipeline? - AWS CodePipeline](https://docs.aws.amazon.com/codepipeline/latest/userguide/welcome.html)
+	* [¿Qué es AWS CodeBuild? - AWS CodeBuild](https://docs.aws.amazon.com/es_es/codebuild/latest/userguide/welcome.html)
+	* [¿Qué es AWS Secrets Manager? - AWS Secrets Manager](https://docs.aws.amazon.com/es_es/secretsmanager/latest/userguide/intro.html)
+
+## Buckets S3
+
+* Almacenamiento de artifacts
+* Almacenamiento del estado Terraform
+
+### Recursos S3
+
+```hcl
+resource "aws_s3_bucket" "codepipeline_artifacts" {}
+resource "aws_s3_bucket" "terraformstate" {}
+```
+
+## Makefile y automatización
+
+* Uso de [bash](/desarrollo%20multiplataforma/bash/) y Makefile
+* Ejecución de Terraform en Docker
+* Gestión de variables de entorno
+
+### Comando de ejemplo
+
+```bash
+make apply
+```
+
+## Backend remoto y provider
+
+### Configuración de backend S3
+
+```hcl
+backend "s3" {
+	bucket = "es3"
+}
+```
+
+### Provider AWS
+
+```hcl
+provider "aws" {
+	region = "eu-west-1"
+}
+```
+
+## Docker Compose
+
+* Volumen compartido `/infra`
+* Persistencia de estado y configuraciones
+
+## Credenciales [IAM Gestión de Identidades y Acceso](/autenticacion/iam-gesti-n-de-identidades-y-acceso/)
+
+* Uso de roles y policies
+* Acceso mínimo necesario
+* Integración con CI/CD
+* Compatibilidad con [jenkins](/devops/jenkins/)
+
+# Terraform – conceptos avanzados y temas no cubiertos
+
+## Fuentes de datos (data sources)
+- Permiten **leer información existente** sin crear recursos
+- Casos comunes:
+	- Obtener AMIs oficiales o custom
+	- Consultar VPCs, subredes o security groups existentes
+- Diferencia clave:
+	- `resource` crea o gestiona
+	- `data` solo consulta
+
+### Uso típico
+```hcl
+data "aws_ami" "amazon_linux" {
+	most_recent = true
+	owners      = ["amazon"]
+}
+````
+
+## Dependencias explícitas
+
+* Terraform infiere dependencias por referencias
+* En casos complejos se usa `depends_on`
+* Útil cuando:
+	* Recursos externos
+	* Scripts o side-effects no detectables
+
+### Ejemplo
+
+```hcl
+depends_on = [aws_security_group.nginx-server-sg]
+```
+
+## Ciclo de vida de recursos
+
+* Control del comportamiento ante cambios
+* Prevención de errores en producción
+
+### lifecycle
+
+```hcl
+lifecycle {
+	prevent_destroy = true
+	create_before_destroy = true
+}
+```
+
+* `prevent_destroy`
+	* Evita borrados accidentales
+* `create_before_destroy`
+	* Minimiza downtime
+
+## Bloques dinámicos
+
+* Generación dinámica de configuraciones repetitivas
+* Ideal para:
+	* Reglas de firewall
+	* Configuraciones variables
+
+### dynamic block
+
+```hcl
+dynamic "ingress" {
+	for_each = var.ingress_rules
+	content {
+		from_port   = ingress.value.port
+		to_port     = ingress.value.port
+		protocol    = "tcp"
+		cidr_blocks = ingress.value.cidr
+	}
+}
+```
+
+## Locals avanzados
+
+* Centralizan lógica de negocio
+* Reducen duplicación
+* Permiten expresiones complejas
+
+### locals
+
+```hcl
+locals {
+	env_prefix = "${var.project}-${var.environment}"
+	common_tags = {
+		Project = var.project
+		Env     = var.environment
+	}
+}
+```
+
+## IAM Roles para EC2
+
+* Alternativa segura a access keys
+* Uso recomendado en producción
+* Integración con servicios AWS
+* Ventajas:
+	* No credenciales hardcodeadas
+	* Rotación automática
+	* Menor superficie de ataque
+
+## TLS, HTTPS y certificados
+* Uso de AWS ACM
+* Integración con:
+	* Load Balancer
+	* CloudFront
+* Automatización completa del ciclo TLS
+## Load Balancer y Auto Scaling
+
+* Arquitecturas escalables y resilientes
+* Componentes:
+	* ALB / NLB
+	* Auto Scaling Group
+	* Launch Templates
+* Casos de uso:
+	* Alta disponibilidad
+	* Escalado automático
+	* Zero-downtime deployments
+
+## DNS y enrutamiento avanzado
+
+* Integración con Route53
+* Gestión de:
+	* Registros A / CNAME
+	* Alias a ALB
+* Infraestructura declarativa de DNS
+
+## Imágenes inmutables (AMI baking)
+
+* Crear AMIs preconfiguradas
+* Flujo recomendado:
+	* Packer + Terraform
+* Beneficios:
+	  * Arranque más rápido
+	  * Menos lógica en `user_data`
+	  * Mayor reproducibilidad
+
+## Provisioners (uso limitado)
+
+* `remote-exec`
+* `file`
+* Considerados último recurso
+* Riesgos:
+	* No idempotentes
+	* Dependientes de red
+* Recomendación:
+	* Usar AMIs o herramientas de configuración externas
+## Testing y calidad de infraestructura
+
+* Validaciones:
+	* `terraform validate`
+	* `terraform fmt`
+* Testing:
+	* `terraform test`
+* Linting:
+	* tflint
+	* tfsec
+
+## Seguridad y buenas prácticas
+
+* No subir `terraform.tfstate` a repositorios
+* Uso de:
+	* Backends remotos cifrados
+	* Secrets Manager
+	* Variables sensibles
+
+### sensitive outputs
+
+```hcl
+output "db_password" {
+	value     = var.db_password
+	sensitive = true
+}
+```
+
+## Gestión de costes
+
+* Etiquetado obligatorio
+* Uso de `terraform plan` para estimar impacto
+* Integración con:
+
+  * AWS Cost Explorer
+  * Presupuestos por entorno
+
+## Drift detection
+
+* Detección de cambios manuales en cloud
+* `terraform plan` como herramienta de auditoría
+* Importante en entornos compartidos
+
+## Destrucción controlada
+
+* Separación clara de entornos
+* Uso de workspaces o cuentas distintas
+* Protección de recursos críticos
+
+## Escalado organizativo
+
+* Terraform Cloud / Enterprise
+* Features clave:
+	* Remote runs
+	* Policy as Code (Sentinel)
+	* Control de acceso por equipos
+
+## Integración con otras herramientas
+
+* Ansible para configuración post-provisión
+* [Kubernetes](/virtualizacion/kubernetes/) para workloads
+* Packer para imágenes
+* [HashiCorp Vault](/ciberseguridad/hashicorp-vault/) para secretos
+
+## Casos de uso empresariales
+
+* Landing zones
+* Multi-account AWS
+* Infraestructura regulada
+* Auditoría y compliance automatizado
+
+
+# Recursos Terraform (estado 2025)
+`$= dv.current().file.tags.join(" ")`
+
+## Documentación y tutoriales oficiales
+- **Terraform Tutorials – HashiCorp Developer**  
+  Colección de tutoriales paso a paso para múltiples proveedores y casos de uso, incluyendo AWS, Azure, GCP y Docker.  
+  [Terraform Tutorials](https://developer.hashicorp.com/terraform/tutorials)
+
+- **Terraform AWS Get Started – HashiCorp Developer**  
+  Tutorial interactivo completo para crear, gestionar y destruir infraestructura AWS con Terraform.  
+  [Terraform AWS Get Started](https://developer.hashicorp.com/terraform/tutorials/aws-get-started)
+
+## Guías y artículos actualizados
+- **Terraform on AWS — The Most Complete Beginner Guide for 2025**  
+  Guía reciente que cubre fundamentos, estructura de proyectos, módulos, estado remoto y buenas prácticas actuales.  
+  [Terraform on AWS 2025](https://medium.com/atmosly/terraform-on-aws-the-most-complete-beginner-guide-for-2025-f1c2cdf1ed4d)
+
+- **Terraform Tutorial for Beginners 2025**  
+  Guía actualizada para principiantes con los conceptos esenciales y primeros pasos en Terraform.  
+  [Terraform Beginners Guide 2025](https://k21academy.com/terraform/terraform-beginners-guide/)
+
+- **Complete Terraform Guide (BuzzClan, 2025)**  
+  Visión global de Terraform IaC, ciclo de vida, estado, módulos y uso empresarial.  
+  [Complete Terraform Guide](https://buzzclan.com/cloud/terraform-complete-guide/)
+
+## Libros y cursos recomendados
+- **Terraform YouTube & Video Playlists (2025 Edition)**  
+  Curso completo en vídeo desde nivel básico hasta avanzado con ejemplos prácticos.  
+  [Terraform Playlist](https://www.youtube.com/playlist?list=PLGyKZJoyKdOfehoKuFC1PKTGzMtRwnGNd)
+
+- **Tutorials en YouTube sobre IaC con Terraform (2025)**  
+  Guías prácticas centradas en casos reales y buenas prácticas actuales.  
+  [Terraform IaC YouTube](https://www.youtube.com/watch?v=p8_-jvlEYTo)
+
+## Versiones y estado del software
+- **Terraform (software)**  
+  Herramienta IaC desarrollada por HashiCorp en Go.  
+  Estado a 2025: versión estable **Terraform v1.14.x**.  
+  [Terraform – Wikipedia](https://en.wikipedia.org/wiki/Terraform_(software))
+
+## Buenas prácticas y guías prescriptivas
+- **AWS Guía prescriptiva – Terraform AWS Provider Best Practices**  
+  Recomendaciones oficiales de AWS para el uso de Terraform con AWS: módulos, versiones, estado remoto y seguridad IAM.  
+  [Terraform AWS Provider Best Practices](https://docs.aws.amazon.com/prescriptive-guidance/latest/terraform-aws-provider-best-practices/terraform-aws-provider-best-practices.pdf)
+
+- **HashiCorp Module Creation Patterns**  
+  Patrones recomendados para crear módulos reutilizables y mantenibles.  
+  [Terraform Module Creation Patterns](https://www.hashicorp.com/blog/terraform-tutorial-module-creation-recommended-pattern)
+
+## Investigación y tendencias
+### IaC y automatización con IA
+- **Multi-Agent Code-Orchestrated Generation for Reliable IaC (2025)**  
+  Investigación sobre generación de IaC modular y gobernada por políticas usando múltiples agentes de IA.  
+  [arXiv – Multi-Agent IaC](https://arxiv.org/abs/2510.03902)
+
+- **IaC Generation with LLMs: Error Taxonomy and Configuration Knowledge Injection**  
+  Estudio sobre errores comunes en IaC generado por LLMs y técnicas para mejorar Terraform generado por IA.  
+  [arXiv – IaC Generation with LLMs](https://arxiv.org/abs/2512.14792)
+
+### Calidad y sostenibilidad en IaC
+- **Smells-sus: Sustainability Smells in IaC (2025)**  
+  Investigación sobre patrones de IaC que impactan en costes y sostenibilidad.  
+  [arXiv – Sustainability Smells in IaC](https://arxiv.org/abs/2501.07676)
+
+- **Multi-IaC-Eval: Benchmarking Cloud IaC Across Formats (2025)**  
+  Benchmark para evaluar IaC en distintos formatos, incluyendo Terraform.  
+  [arXiv – Multi-IaC-Eval](https://arxiv.org/abs/2509.05303)
+
+## Proyectos alternativos y ecosistema
+- **OpenTofu**  
+  Proyecto open-source bajo la Linux Foundation como alternativa compatible con Terraform.  
+  [OpenTofu](https://opentofu.org/)
+
+## Recursos adicionales
+### Herramientas complementarias para Terraform
+- Validación y seguridad
+	- TFLint
+	- tfsec
+	- Checkov
+
+### Integración y colaboración
+- Estado remoto
+	- S3 + DynamoDB
+	- Terraform Cloud / Enterprise
+- CI/CD
+	- GitHub Actions
+	- GitLab CI/CD
+	- Pipelines automatizados
+
+## Repositorios útiles
+- **Terraform (HashiCorp) GitHub**  
+  Código fuente oficial y releases.  
+  [Terraform GitHub](https://github.com/hashicorp/terraform)
+
+- **Terraform Registry**  
+  Proveedores y módulos oficiales y comunitarios.  
+  [Terraform Registry](https://registry.terraform.io/)
+
+## Canales de aprendizaje rápido
+- Comunidad HashiCorp Discuss
+- Meetups y grupos DevOps
+- Blogs técnicos centrados en IaC y Terraform
+
+# Terraform – explicación con ejemplos de código
+`$= dv.current().file.tags.join(" ")`
+
+## Estructura básica de un proyecto Terraform
+- Un proyecto Terraform se compone de archivos `.tf`
+- No importa el orden de los archivos
+- Terraform carga todo el directorio como una única configuración
+
+Estructura típica:
+- `main.tf` → recursos principales
+- `providers.tf` → proveedores
+- `variables.tf` → definición de variables
+- `outputs.tf` → valores de salida
+- `backend.tf` → estado remoto
+
+## Provider
+- Define el proveedor cloud o servicio externo
+- Gestiona autenticación y región
+
+### Provider AWS
+```hcl
+provider "aws" {
+	region = "eu-west-1"
+}
+````
+
+## Recursos (resource)
+
+* Representan infraestructura real
+* Cada recurso tiene:
+	* tipo
+	* nombre lógico
+	* configuración
+
+### Recurso EC2 básico
+
+```hcl
+resource "aws_instance" "web" {
+	ami           = "ami-0abcdef1234567890"
+	instance_type = "t3.micro"
+}
+```
+
+## Variables
+
+* Permiten reutilizar código
+* Evitan valores hardcodeados
+* Se pueden sobreescribir por entorno
+
+### Definición de variable
+
+```hcl
+variable "instance_type" {
+	type    = string
+	default = "t3.micro"
+}
+```
+
+### Uso de variable
+
+```hcl
+instance_type = var.instance_type
+```
+
+## Variables por entorno (.tfvars)
+
+* Separan configuraciones dev, qa, prod
+* Se cargan automáticamente o por CLI
+
+### Archivo `dev.tfvars`
+
+```hcl
+instance_type = "t3.micro"
+```
+
+### Aplicar variables
+
+```bash
+terraform apply -var-file=dev.tfvars
+```
+
+## Variables locales (locals)
+
+* Lógica reutilizable dentro del proyecto
+* Ideal para tags y nombres compuestos
+
+### locals
+
+```hcl
+locals {
+	name_prefix = "${var.project}-${var.environment}"
+}
+```
+
+## Tags
+
+* Clave para costes, auditoría y organización
+* Buenas prácticas en AWS
+
+### Tags comunes
+
+```hcl
+tags = {
+	Name        = local.name_prefix
+	Environment = var.environment
+}
+```
+
+## Outputs
+
+* Devuelven información útil tras el despliegue
+* Usados por humanos o por otros módulos
+
+### Output de IP pública
+
+```hcl
+output "public_ip" {
+	value = aws_instance.web.public_ip
+}
+```
+
+## Data sources
+
+* Consultan recursos existentes
+* No crean infraestructura
+
+### Obtener AMI más reciente
+
+```hcl
+data "aws_ami" "amazon_linux" {
+	most_recent = true
+	owners      = ["amazon"]
+}
+```
+
+### Uso del data source
+
+```hcl
+ami = data.aws_ami.amazon_linux.id
+```
+
+## user_data
+
+* Script ejecutado al arrancar la instancia
+* Ideal para bootstrap básico
+
+### user_data con Nginx
+
+```hcl
+user_data = <<EOF
+#!/bin/bash
+yum install -y nginx
+systemctl start nginx
+systemctl enable nginx
+EOF
+```
+
+## Security Groups
+
+* Controlan tráfico de red
+* Reglas ingress y egress
+
+### Security Group básico
+
+```hcl
+resource "aws_security_group" "web_sg" {
+	name = "web-sg"
+
+	ingress {
+		from_port   = 80
+		to_port     = 80
+		protocol    = "tcp"
+		cidr_blocks = ["0.0.0.0/0"]
+	}
+
+	egress {
+		from_port   = 0
+		to_port     = 0
+		protocol    = "-1"
+		cidr_blocks = ["0.0.0.0/0"]
+	}
+}
+```
+
+## Dependencias
+
+* Terraform infiere dependencias automáticamente
+* `depends_on` fuerza el orden cuando es necesario
+
+### depends_on
+
+```hcl
+depends_on = [aws_security_group.web_sg]
+```
+
+## Bucles y for_each
+
+* Permiten crear múltiples recursos dinámicamente
+
+### Crear varias instancias
+
+```hcl
+resource "aws_instance" "servers" {
+	for_each = var.servers
+
+	ami           = each.value.ami
+	instance_type = each.value.type
+	tags = {
+		Name = each.key
+	}
+}
+```
+
+## Condiciones
+
+* Cambian comportamiento según entorno
+
+### count condicional
+
+```hcl
+count = var.environment == "prod" ? 2 : 1
+```
+
+## Módulos
+
+* Agrupan recursos reutilizables
+* Aumentan mantenibilidad y escalabilidad
+
+### Llamada a módulo
+
+```hcl
+module "web_server" {
+	source        = "./modules/web"
+	instance_type = "t3.micro"
+}
+```
+
+## Outputs en módulos
+
+* Exponen información del módulo al root
+
+### Output en módulo
+
+```hcl
+output "server_ip" {
+	value = aws_instance.web.public_ip
+}
+```
+
+## Backend remoto
+
+* Permite colaboración en equipo
+* Evita conflictos de estado
+
+### Backend S3
+
+```hcl
+terraform {
+	backend "s3" {
+		bucket = "terraform-states"
+		key    = "web/terraform.tfstate"
+		region = "eu-west-1"
+	}
+}
+```
+
+## Workspaces
+
+* Separan entornos lógicos
+* Usan el mismo código
+
+### Uso de workspace
+
+```bash
+terraform workspace new prod
+terraform workspace select prod
+```
+
+### Uso en código
+
+```hcl
+tags = {
+	Environment = terraform.workspace
+}
+```
+
+## lifecycle
+
+* Controla cómo se crean o destruyen recursos
+
+### lifecycle
+
+```hcl
+lifecycle {
+	prevent_destroy = true
+	create_before_destroy = true
+}
+```
+
+## Importar infraestructura existente
+
+* Permite adoptar recursos manuales
+
+### Import
+
+```bash
+terraform import aws_instance.legacy i-0123456789abcdef0
+```
+
+## Plan y apply
+
+* `plan` muestra cambios
+* `apply` los ejecuta
+
+### Guardar plan
+
+```bash
+terraform plan -out=tfplan
+terraform apply tfplan
+```
+
+## Buenas prácticas
+
+* Un módulo por responsabilidad
+* Variables explícitas
+* Estado remoto siempre
+* No usar provisioners salvo excepción
+* Usar IAM Roles en vez de access keys
+
+# Terraform – glosario de conceptos
+`$= dv.current().file.tags.join(" ")`
+
+## Conceptos generales
+- **Terraform**
+	- Herramienta de [IInfraestructura como codigo](/devops/iinfraestructura-como-codigo/) para definir y gestionar infraestructura declarativamente
+- **Infrastructure as Code (IaC)**
+	- Práctica de definir infraestructura mediante código versionable
+- **Declarativo**
+	- Se describe el estado deseado, no los pasos para alcanzarlo
+- **Idempotencia**
+	- Ejecutar varias veces produce el mismo resultado
+- **Drift**
+	- Diferencia entre la infraestructura real y la definida en Terraform
+
+## Lenguaje y sintaxis
+- **HCL (HashiCorp Configuration Language)**
+	- Lenguaje principal de Terraform, legible y expresivo
+- **Bloque**
+	- Unidad básica de configuración (`resource`, `provider`, `variable`, etc.)
+- **Interpolación**
+	- Uso de valores dinámicos dentro de strings
+- **Expresiones**
+	- Operaciones lógicas, condicionales y matemáticas
+
+## Providers
+- **Provider**
+	- Plugin que permite a Terraform interactuar con APIs externas
+- **Provider AWS**
+	- Permite gestionar recursos en [Aws](/cloud/aws/)
+- **Inicialización de providers**
+	- Descarga automática mediante `terraform init`
+- **Versionado de providers**
+	- Control de compatibilidad y estabilidad
+
+## Recursos
+- **Resource**
+	- Representa un objeto de infraestructura real
+- **Tipo de recurso**
+	- Define la clase del recurso (`aws_instance`, `aws_s3_bucket`)
+- **Nombre lógico**
+	- Identificador interno del recurso en Terraform
+- **Lifecycle**
+	- Controla creación, actualización y destrucción
+
+## Variables
+- **Variable**
+	- Parámetro reutilizable y configurable
+- **Variable por defecto**
+	- Valor usado si no se sobrescribe
+- **Variables de entorno**
+	- Variables exportadas como `TF_VAR_name`
+- **tfvars**
+	- Archivos de valores por entorno
+- **Variables sensibles**
+	- Ocultan valores en outputs y logs
+
+## Variables locales
+- **locals**
+	- Valores calculados internos
+- **Normalización**
+	- Centralización de nombres y tags
+- **Reutilización**
+	- Evita duplicación de lógica
+
+## Estado (state)
+- **State**
+	- Representación de la infraestructura real
+- **Archivo de estado**
+	- Mapea recursos Terraform con recursos reales
+- **Estado local**
+	- Guardado en disco
+- **Estado remoto**
+	- Guardado en [Backend](/uncategorized/backend/) compartido
+- **Locking**
+	- Evita ejecuciones simultáneas
+- **Sensitive data**
+	- El estado puede contener secretos
+
+## Backend
+- **Backend**
+	- Mecanismo de almacenamiento del estado
+- **S3 Backend**
+	- Uso de buckets S3 con bloqueo DynamoDB
+- **Terraform Cloud**
+	- Backend gestionado por HashiCorp
+- **Migración de estado**
+	- Cambio de backend sin perder datos
+
+## Planificación y ejecución
+- **Plan**
+	- Vista previa de cambios
+- **Apply**
+	- Ejecución real de cambios
+- **Destroy**
+	- Eliminación de infraestructura
+- **Auto-approve**
+	- Salta confirmación manual
+- **Saved plan**
+	- Plan guardado para ejecución controlada
+
+## Outputs
+- **Output**
+	- Valores exportados tras el apply
+- **Outputs sensibles**
+	- No visibles en consola
+- **Outputs para módulos**
+	- Comunicación entre módulos
+
+## Data sources
+- **Data source**
+	- Lectura de recursos existentes
+- **No gestionados**
+	- Terraform no crea ni destruye
+- **Uso típico**
+	- AMIs, VPCs, subredes existentes
+
+## Dependencias
+- **Dependencia implícita**
+	- Inferida por referencias
+- **depends_on**
+	- Fuerza orden de creación
+- **Grafo de dependencias**
+	- Orden interno de ejecución
+
+## Bucles y condiciones
+- **count**
+	- Crea múltiples recursos indexados
+- **for_each**
+	- Crea recursos basados en mapas o sets
+- **Condicional**
+	- Expresiones ternarias
+- **Dynamic blocks**
+	- Generación dinámica de bloques
+
+## Módulos
+- **Module**
+	- Conjunto reutilizable de recursos
+- **Root module**
+	- Directorio principal del proyecto
+- **Child module**
+	- Módulo importado
+- **Module registry**
+	- Repositorio de módulos reutilizables
+- **Versionado de módulos**
+	- Control de cambios y compatibilidad
+
+## Workspaces
+- **Workspace**
+	- Entorno lógico aislado
+- **Default workspace**
+	- Workspace inicial
+- **Uso típico**
+	- dev, qa, prod
+- **Limitación**
+	- No sustituyen cuentas cloud separadas
+
+## Seguridad
+- **IAM**
+	- Gestión de identidades y permisos en [Aws](/cloud/aws/)
+- **IAM Role**
+	- Autenticación recomendada para EC2 y CI/CD
+- **Secrets Manager**
+	- Almacenamiento seguro de secretos
+- **Least privilege**
+	- Permisos mínimos necesarios
+
+## Networking
+- **VPC**
+	- Red virtual aislada
+- **Subnet**
+	- Segmento de red dentro de la VPC
+- **Security Group**
+	- Firewall a nivel de instancia
+- **Ingress / Egress**
+	- Reglas de entrada y salida
+- **CIDR**
+	- Rango de direcciones IP
+
+## Compute y servicios
+- **EC2**
+	- Máquina virtual en [Aws](/cloud/aws/)
+- **AMI**
+	- Imagen de sistema
+- **user_data**
+	- Script de inicialización
+- **Auto Scaling**
+	- Escalado automático de instancias
+- **Load Balancer**
+	- Distribución de tráfico
+
+## Contenedores y orquestación
+- **Docker**
+	- Contenedores y entornos reproducibles
+- **Terraform en Docker**
+	- Ejecución aislada de Terraform
+- **Kubernetes**
+	- Orquestación de contenedores
+- **EKS**
+	- Kubernetes gestionado en [Aws](/cloud/aws/)
+
+## CI/CD
+- **Pipeline**
+	- Flujo automatizado de despliegue
+- **Plan en CI**
+	- Validación antes del apply
+- **Apply automático**
+	- Despliegue sin intervención
+- **Artifacts**
+	- Outputs del pipeline
+- **[CICD](/devops/cicd/)**
+	- Integración y despliegue continuos
+
+## Testing y calidad
+- **terraform validate**
+	- Validación sintáctica
+- **terraform fmt**
+	- Formato estándar
+- **terraform test**
+	- Tests de infraestructura
+- **tflint**
+	- Linting de buenas prácticas
+- **tfsec / checkov**
+	- Análisis de seguridad
+
+## Importación y adopción
+- **terraform import**
+	- Adopta recursos existentes
+- **State show**
+	- Inspección del estado
+- **Refactor**
+	- Reorganización sin recrear recursos
+
+## Alternativas y ecosistema
+- **OpenTofu**
+	- Fork open-source compatible con Terraform
+- **Packer**
+	- Creación de imágenes inmutables
+- **Ansible**
+	- Configuración post-provisión
+- **Vault**
+	- Gestión avanzada de secretos
+
+# Terraform – cheatsheet de comandos y código
+`$= dv.current().file.tags.join(" ")`
+
+## Inicialización y configuración
+- Inicializar proyecto y descargar providers
+```bash
+terraform init
+````
+
+* Reconfigurar backend
+
+```bash
+terraform init -reconfigure
+```
+
+* Actualizar providers
+
+```bash
+terraform init -upgrade
+```
+
+## Formato y validación
+
+* Formatear archivos `.tf`
+
+```bash
+terraform fmt
+```
+
+* Formatear recursivamente
+
+```bash
+terraform fmt -recursive
+```
+
+* Validar configuración
+
+```bash
+terraform validate
+```
+
+## Planificación
+
+* Generar plan
+
+```bash
+terraform plan
+```
+
+* Plan con variables
+
+```bash
+terraform plan -var="env=dev"
+```
+
+* Plan con archivo tfvars
+
+```bash
+terraform plan -var-file=dev.tfvars
+```
+
+* Guardar plan
+
+```bash
+terraform plan -out=tfplan
+```
+
+## Aplicación y destrucción
+
+* Aplicar cambios
+
+```bash
+terraform apply
+```
+
+* Aplicar plan guardado
+
+```bash
+terraform apply tfplan
+```
+
+* Aplicar sin confirmación
+
+```bash
+terraform apply -auto-approve
+```
+
+* Destruir infraestructura
+
+```bash
+terraform destroy
+```
+
+* Destruir sin confirmación
+
+```bash
+terraform destroy -auto-approve
+```
+
+## Variables
+
+* Variable por CLI
+
+```bash
+terraform apply -var="instance_type=t3.micro"
+```
+
+* Variable por entorno
+
+```bash
+export TF_VAR_instance_type=t3.micro
+```
+
+## Outputs
+
+* Mostrar outputs
+
+```bash
+terraform output
+```
+
+* Output específico
+
+```bash
+terraform output public_ip
+```
+
+* Output en JSON
+
+```bash
+terraform output -json
+```
+
+## Estado (state)
+
+* Listar recursos en el estado
+
+```bash
+terraform state list
+```
+
+* Mostrar recurso
+
+```bash
+terraform state show aws_instance.web
+```
+
+* Mover recurso
+
+```bash
+terraform state mv aws_instance.old aws_instance.new
+```
+
+* Eliminar recurso del estado
+
+```bash
+terraform state rm aws_instance.temp
+```
+
+* Reemplazar recurso
+
+```bash
+terraform apply -replace="aws_instance.web"
+```
+
+## Importación de recursos
+
+* Importar recurso existente
+
+```bash
+terraform import aws_instance.server i-0123456789abcdef0
+```
+
+## Workspaces
+
+* Listar workspaces
+
+```bash
+terraform workspace list
+```
+
+* Crear workspace
+
+```bash
+terraform workspace new prod
+```
+
+* Seleccionar workspace
+
+```bash
+terraform workspace select dev
+```
+
+* Mostrar workspace actual
+
+```bash
+terraform workspace show
+```
+
+## Providers
+
+* Bloque provider
+
+```hcl
+provider "aws" {
+	region = "eu-west-1"
+}
+```
+
+## Recursos
+
+* Recurso básico
+
+```hcl
+resource "aws_instance" "web" {
+	ami           = "ami-xxxx"
+	instance_type = "t3.micro"
+}
+```
+
+## Variables
+
+* Definición
+
+```hcl
+variable "environment" {
+	type    = string
+	default = "dev"
+}
+```
+
+* Uso
+
+```hcl
+environment = var.environment
+```
+
+## Variables locales
+
+```hcl
+locals {
+	name_prefix = "${var.project}-${var.environment}"
+}
+```
+
+## Tags
+
+```hcl
+tags = {
+	Name        = local.name_prefix
+	Environment = var.environment
+}
+```
+
+## Data sources
+
+```hcl
+data "aws_ami" "amazon_linux" {
+	most_recent = true
+	owners      = ["amazon"]
+}
+```
+
+## Outputs
+
+```hcl
+output "public_ip" {
+	value = aws_instance.web.public_ip
+}
+```
+
+## user_data
+
+```hcl
+user_data = <<EOF
+#!/bin/bash
+yum install -y nginx
+systemctl start nginx
+EOF
+```
+
+## Security Groups
+
+```hcl
+resource "aws_security_group" "web_sg" {
+	ingress {
+		from_port   = 80
+		to_port     = 80
+		protocol    = "tcp"
+		cidr_blocks = ["0.0.0.0/0"]
+	}
+}
+```
+
+## count y for_each
+
+* count
+
+```hcl
+count = var.environment == "prod" ? 2 : 1
+```
+
+* for_each
+
+```hcl
+for_each = var.servers
+```
+
+## Dynamic blocks
+
+```hcl
+dynamic "ingress" {
+	for_each = var.ingress_rules
+	content {
+		from_port = ingress.value.port
+	}
+}
+```
+
+## Dependencias explícitas
+
+```hcl
+depends_on = [aws_security_group.web_sg]
+```
+
+## lifecycle
+
+```hcl
+lifecycle {
+	prevent_destroy = true
+	create_before_destroy = true
+}
+```
+
+## Módulos
+
+* Llamada a módulo
+
+```hcl
+module "web" {
+	source = "./modules/web"
+}
+```
+
+## Backend remoto (S3)
+
+```hcl
+terraform {
+	backend "s3" {
+		bucket = "terraform-states"
+		key    = "app/terraform.tfstate"
+		region = "eu-west-1"
+	}
+}
+```
+
+## Debug y troubleshooting
+
+* Logs detallados
+
+```bash
+export TF_LOG=TRACE
+```
+
+* Log a archivo
+
+```bash
+export TF_LOG_PATH=terraform.log
+```
+
+## Limpieza
+
+* Borrar caché local
+
+```bash
+rm -rf .terraform
+```
+
+## Utilidades
+
+* Mostrar versión
+
+```bash
+terraform version
+```
+
+* Ayuda
+
+```bash
+terraform -help
+```
