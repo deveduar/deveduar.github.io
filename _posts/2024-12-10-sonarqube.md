@@ -343,8 +343,8 @@ jobs:
 				env:
 					SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
 					SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-```
-{% endraw %}`
+````
+{% endraw %}
 
 ## Caso de uso 2: Quality Gate como bloqueo de despliegue
 

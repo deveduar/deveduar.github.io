@@ -1236,8 +1236,8 @@ export default function Counter() {
 		</View>
 	);
 }
-```
-{% endraw %}`
+````
+{% endraw %}
 
 ## Ejemplo 2 — Lista con FlatList
 

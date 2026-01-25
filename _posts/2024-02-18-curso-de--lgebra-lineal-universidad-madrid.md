@@ -332,7 +332,7 @@ Un sistema de ecuaciones lineales representa la intersección de **hiperplanos**
   Suele no tener solución exacta; se aproxima mediante **mínimos cuadrados**:
 
   $$
-  \min_{\mathbf{x{{ "}}" }} \|A\mathbf{x} - \mathbf{b}\|_2^2
+  \min_{\mathbf{x}} \|A\mathbf{x} - \mathbf{b}\|_2^2
   $$
 
 - **Sistema cuadrado**: mismo número de ecuaciones e incógnitas ($m = n$).  
@@ -464,7 +464,7 @@ Ejemplo: el conjunto de todos los vectores de la forma $(x, 2x)$ en $\mathbb{R}^
 Dadas dos bases $\mathcal{B}$ y $\mathcal{B}'$ de $V$, el cambio de coordenadas entre ambas se realiza mediante una **matriz de cambio de base** $P$:
 
 $$
-[\mathbf{v}]_{\mathcal{B}'} = P^{-1}[\mathbf{v}]_{\mathcal{B{{ "}}" }}
+[\mathbf{v}]_{\mathcal{B}'} = P^{-1}[\mathbf{v}]_{\mathcal{B}}
 $$
 
 ### Espacio generado y rango
@@ -590,13 +590,13 @@ Cuando estas condiciones se cumplen, cada vector del espacio tiene una **represe
 Dadas dos bases $\mathcal{B} = \{\mathbf{v}_1, \dots, \mathbf{v}_n\}$ y $\mathcal{B}' = \{\mathbf{v}_1', \dots, \mathbf{v}_n'\}$ del mismo espacio $V$, existe una **matriz de cambio de base** $P$ tal que:
 
 $$
-[\mathbf{v}]_{\mathcal{B}'} = P^{-1} [\mathbf{v}]_{\mathcal{B{{ "}}" }}
+[\mathbf{v}]_{\mathcal{B}'} = P^{-1} [\mathbf{v}]_{\mathcal{B}}
 $$
 
 y recíprocamente:
 
 $$
-[\mathbf{v}]_{\mathcal{B{{ "}}" }} = P [\mathbf{v}]_{\mathcal{B}'}
+[\mathbf{v}]_{\mathcal{B}} = P [\mathbf{v}]_{\mathcal{B}'}
 $$
 
 donde las columnas de $P$ son las coordenadas de los vectores de $\mathcal{B}'$ expresados en la base $\mathcal{B}$.
@@ -848,7 +848,7 @@ Por tanto, el estudio de las transformaciones lineales y las matrices es equival
 Una transformación lineal $T: V \to V$ es **diagonalizable** si existe una base de vectores propios $\{\mathbf{v}_1, \dots, \mathbf{v}_n\}$ tal que su matriz asociada es diagonal:
 
 $$
-[T]_{\mathcal{B{{ "}}" }} = 
+[T]_{\mathcal{B}} = 
 \begin{bmatrix}
 \lambda_1 & 0 & \dots & 0 \\
 0 & \lambda_2 & \dots & 0 \\
@@ -980,7 +980,7 @@ $$
 Cuando se cambia la base en $V$, la matriz asociada a $T$ se transforma según:
 
 $$
-[T]_{\mathcal{B}'} = P^{-1} [T]_{\mathcal{B{{ "}}" }} P
+[T]_{\mathcal{B}'} = P^{-1} [T]_{\mathcal{B}} P
 $$
 
 donde $P$ es la **matriz de cambio de base** entre $\mathcal{B}$ y $\mathcal{B}'$.
@@ -1069,7 +1069,7 @@ $$
 Cuando existe una base de autovectores de $T$, la matriz asociada es **diagonalizable**:
 
 $$
-[T]_{\mathcal{B{{ "}}" }} = P D P^{-1}
+[T]_{\mathcal{B}} = P D P^{-1}
 $$
 
 donde:
@@ -1116,7 +1116,7 @@ Esta forma permite analizar la naturaleza de la transformación y facilita el c�
 Si $T: V \to V$ es una transformación lineal, su representación matricial depende de la base elegida:
 
 $$
-[T]_{\mathcal{B}'} = P^{-1} [T]_{\mathcal{B{{ "}}" }} P
+[T]_{\mathcal{B}'} = P^{-1} [T]_{\mathcal{B}} P
 $$
 
 donde $P$ es la matriz de cambio de base.  
@@ -1131,7 +1131,7 @@ Encontrar una **forma normal** consiste en hallar una base que transforme la mat
 Una transformación $T$ es **diagonalizable** si existe una base de autovectores $\{\mathbf{v}_1, \dots, \mathbf{v}_n\}$ tal que su matriz asociada es diagonal:
 
 $$
-[T]_{\mathcal{B{{ "}}" }} =
+[T]_{\mathcal{B}} =
 \begin{bmatrix}
 \lambda_1 & 0 & \dots & 0 \\
 0 & \lambda_2 & \dots & 0 \\
@@ -1649,14 +1649,14 @@ Un conjunto de vectores $\{\mathbf{v}_1, \mathbf{v}_2, \dots, \mathbf{v}_k\}$ es
 La **proyección ortogonal** de un vector $\mathbf{v}$ sobre otro $\mathbf{u} \neq 0$ se define como:
 
 $$
-\operatorname{proj}_{\mathbf{u{{ "}}" }}(\mathbf{v}) = 
+\operatorname{proj}_{\mathbf{u}}(\mathbf{v}) = 
 \frac{\langle \mathbf{v}, \mathbf{u} \rangle}{\langle \mathbf{u}, \mathbf{u} \rangle} \, \mathbf{u}
 $$
 
 El **componente ortogonal** de $\mathbf{v}$ respecto a $\mathbf{u}$ es:
 
 $$
-\mathbf{v}_\perp = \mathbf{v} - \operatorname{proj}_{\mathbf{u{{ "}}" }}(\mathbf{v})
+\mathbf{v}_\perp = \mathbf{v} - \operatorname{proj}_{\mathbf{u}}(\mathbf{v})
 $$
 
 y satisface:
@@ -1841,13 +1841,13 @@ $$
 
 3. Normalizamos:
    $$
-   \mathbf{e}_1 = \frac{1}{\sqrt{2{{ "}}" }}(1, 1, 0), \quad
-   \mathbf{e}_2 = \frac{1}{\sqrt{\frac{3}{2{{ "}}" }}}\left(\frac{1}{2}, -\frac{1}{2}, 1\right) = \frac{1}{\sqrt{6{{ "}}" }}(1, -1, 2)
+   \mathbf{e}_1 = \frac{1}{\sqrt{2}}(1, 1, 0), \quad
+   \mathbf{e}_2 = \frac{1}{\sqrt{\frac{3}{2}}}\left(\frac{1}{2}, -\frac{1}{2}, 1\right) = \frac{1}{\sqrt{6}}(1, -1, 2)
    $$
 
 Por tanto, la base ortonormal es:
 $$
-B = \left\{ \frac{1}{\sqrt{2{{ "}}" }}(1, 1, 0), \, \frac{1}{\sqrt{6{{ "}}" }}(1, -1, 2) \right\}
+B = \left\{ \frac{1}{\sqrt{2}}(1, 1, 0), \, \frac{1}{\sqrt{6}}(1, -1, 2) \right\}
 $$
 
 ---
@@ -2009,8 +2009,8 @@ $$
 
 2. **Autovectores** (normalizados):
    $$
-   \mathbf{q}_1 \approx \frac{1}{\sqrt{2{{ "}}" }}(0.850, 0.526), \quad
-   \mathbf{q}_2 \approx \frac{1}{\sqrt{2{{ "}}" }}(-0.526, 0.850)
+   \mathbf{q}_1 \approx \frac{1}{\sqrt{2}}(0.850, 0.526), \quad
+   \mathbf{q}_2 \approx \frac{1}{\sqrt{2}}(-0.526, 0.850)
    $$
 
 3. **Descomposición ortogonal**:
@@ -2045,9 +2045,9 @@ $$
 
 y puede escribirse como:
 $$
-T = \sum_{i=1}^{n} \lambda_i \, P_{E_{\lambda_i{{ "}}" }}
+T = \sum_{i=1}^{n} \lambda_i \, P_{E_{\lambda_i}}
 $$
-donde $P_{E_{\lambda_i{{ "}}" }}$ es la proyección ortogonal sobre el espacio propio asociado al autovalor $\lambda_i$.
+donde $P_{E_{\lambda_i}}$ es la proyección ortogonal sobre el espacio propio asociado al autovalor $\lambda_i$.
 
 ---
 
@@ -2353,7 +2353,7 @@ $$
 donde $A \in \mathbb{R}^{m \times n}$, $\mathbf{b} \in \mathbb{R}^m$, y el sistema puede no tener solución exacta, el objetivo es encontrar el vector $\mathbf{x}$ que **minimiza el error cuadrático**:
 
 $$
-\min_{\mathbf{x{{ "}}" }} \|A\mathbf{x} - \mathbf{b}\|_2^2
+\min_{\mathbf{x}} \|A\mathbf{x} - \mathbf{b}\|_2^2
 $$
 
 ---
@@ -2408,15 +2408,15 @@ $$
 y la proyección del vector $\mathbf{b}$ sobre el subespacio generado por las columnas de $A$ es:
 
 $$
-\hat{\mathbf{b{{ "}}" }} = A\mathbf{x}^* = A A^+ \mathbf{b}
+\hat{\mathbf{b}} = A\mathbf{x}^* = A A^+ \mathbf{b}
 $$
 
 ---
 
 ### Propiedades geométricas
 
-1. $\hat{\mathbf{b{{ "}}" }}$ es la **proyección ortogonal** de $\mathbf{b}$ sobre el subespacio columna de $A$.  
-2. El vector de residuos $\mathbf{r} = \mathbf{b} - \hat{\mathbf{b{{ "}}" }}$ es **ortogonal** a dicho subespacio:
+1. $\hat{\mathbf{b}}$ es la **proyección ortogonal** de $\mathbf{b}$ sobre el subespacio columna de $A$.  
+2. El vector de residuos $\mathbf{r} = \mathbf{b} - \hat{\mathbf{b}}$ es **ortogonal** a dicho subespacio:
 
    $$
    A^T \mathbf{r} = 0
@@ -2436,7 +2436,7 @@ $$
 - Si no lo son, el sistema tiene **infinitas soluciones**, y la pseudoinversa $A^+$ devuelve la solución de **mínima norma**:
 
   $$
-  \mathbf{x}^* = \arg\min_{\mathbf{x{{ "}}" }} \| \mathbf{x} \|_2 \quad \text{sujeto a} \quad \min_{\mathbf{x{{ "}}" }} \|A\mathbf{x} - \mathbf{b}\|_2
+  \mathbf{x}^* = \arg\min_{\mathbf{x}} \| \mathbf{x} \|_2 \quad \text{sujeto a} \quad \min_{\mathbf{x}} \|A\mathbf{x} - \mathbf{b}\|_2
   $$
 
 ---
@@ -2613,7 +2613,7 @@ Dada una matriz $A \in \mathbb{R}^{m \times n}$, la **pseudoinversa** $A^+$ es l
 - Proyecta $\mathbf{b}$ sobre el **subespacio columna de $A$** para obtener la solución de **mínimos cuadrados**:
 
 $$
-\mathbf{x}^* = A^+ \mathbf{b}, \quad \hat{\mathbf{b{{ "}}" }} = A A^+ \mathbf{b}
+\mathbf{x}^* = A^+ \mathbf{b}, \quad \hat{\mathbf{b}} = A A^+ \mathbf{b}
 $$
 
 **Casos especiales:**
@@ -2685,7 +2685,7 @@ donde $\Sigma^+$ se forma tomando la **inversa de cada valor singular no nulo** 
 
 2. **Proyección ortogonal:**
    $$
-   \hat{\mathbf{b{{ "}}" }} = A A^+ \mathbf{b} = U \begin{bmatrix} I_r & 0 \\ 0 & 0 \end{bmatrix} U^T \mathbf{b}
+   \hat{\mathbf{b}} = A A^+ \mathbf{b} = U \begin{bmatrix} I_r & 0 \\ 0 & 0 \end{bmatrix} U^T \mathbf{b}
    $$
 
 3. **Rango de $A$:**  
@@ -2724,7 +2724,7 @@ $$
 3. **Solución de mínimos cuadrados:**  
    Para $\mathbf{b} \in \mathbb{R}^3$:
    $$
-   \mathbf{x}^* = A^+ \mathbf{b}, \quad \hat{\mathbf{b{{ "}}" }} = A A^+ \mathbf{b}
+   \mathbf{x}^* = A^+ \mathbf{b}, \quad \hat{\mathbf{b}} = A A^+ \mathbf{b}
    $$
 
 Esto permite **resolver sistemas sobredeterminados o subdeterminados** y analizar la geometría de la transformación.
