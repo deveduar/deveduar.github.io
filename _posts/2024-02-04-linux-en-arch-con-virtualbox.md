@@ -1,17 +1,14 @@
 ---
 date: 2024-02-04 19:03
 title: Linux en arch con virtualbox
-tags:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 keywords:
 source:
-cssclasses:
 public_note: "true"
 category: Linux
-categories:
+tags:
   - Linux
-  - hide-embedded-header1
 ---
 # Linux en Arch con VirtualBox
 

@@ -1,16 +1,13 @@
 ---
 date: 2025-10-17 01:10
 title: Testing Avanzado 2025 Prácticas y Ejemplos
-tags:
 keywords:
 source:
 status: 📌
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
-category: hide-embedded-header1
-categories:
-  - hide-embedded-header1
+category: Testing
+tags:
   - Testing
 ---
 # Testing Avanzado 2025 Prácticas y Ejemplos

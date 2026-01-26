@@ -1,20 +1,16 @@
 ---
 date: 2025-04-14 19:57
 title: PKI infraestructura de clave pública
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 public_note: "true"
 category: autenticacion
-categories:
+tags:
   - autenticacion
   - criptografia
   - pki
-  - hide-embedded-header1
-  - wide
 ---
 # PKI infraestructura de clave pública
 `$= dv.current().file.tags.join(" ")`

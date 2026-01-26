@@ -1,22 +1,17 @@
 ---
 date: 2025-04-14 18:11
 title: servicio XDR Detección y respuesta extendidas
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 aliases:
 public_note: "true"
 category: Hacking
-categories:
+tags:
   - Hacking
   - servicio
-  - hide-embedded-header1
-  - wide
   - ciberseguridad
-  - XDR
 ---
 # Servicio XDR – Detección y Respuesta Extendidas
 `$= dv.current().file.tags.join(" ")`

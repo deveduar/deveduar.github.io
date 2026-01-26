@@ -1,17 +1,14 @@
 ---
 date: 2024-02-04 19:03
 title: Linux entrevistas
-tags:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 keywords:
 source:
-cssclasses:
 public_note: "true"
 category: Linux
-categories:
+tags:
   - Linux
-  - hide-embedded-header1
 ---
 # Linux entrevistas
 ``$= dv.current().file.tags.join(" ")``

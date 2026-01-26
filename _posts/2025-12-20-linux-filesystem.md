@@ -1,17 +1,14 @@
 ---
 date: 2025-12-20 18:20
 title: Linux Filesystem
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 public_note: "true"
 category: Linux
-categories:
+tags:
   - Linux
-  - hide-embedded-header1
 ---
 # Linux Filesystem
 `$= dv.current().file.tags.join(" ")`

@@ -1,20 +1,16 @@
 ---
 date: 2024-11-18 17:46
 title: Wordpress
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
 category: wordpress
-categories:
+tags:
   - wordpress
   - PHP
   - ecomerce
-  - hide-embedded-header1
-  - wide
   - Desarrollo web
 ---
 # Wordpress

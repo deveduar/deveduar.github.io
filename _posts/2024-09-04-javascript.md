@@ -1,12 +1,11 @@
 ---
 date: 2024-09-04T03:13:00
 title: javascript
-tags:
 status: 🌟
 Parent: "[[Area-Prog]]"
 public_note: "true"
 category: JS
-categories:
+tags:
   - JS
   - Scraping
   - Desarrollo web

@@ -1,22 +1,17 @@
 ---
 date: 2025-04-14 04:28
 title: DFIR forense
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 aliases:
 public_note: "true"
 category: Hacking
-categories:
+tags:
   - Hacking
   - monitoreo
-  - hide-embedded-header1
-  - wide
   - ciberseguridad
-  - DFIR
 ---
 # DFIR forense
 ``$= dv.current().file.tags.join(" ")``

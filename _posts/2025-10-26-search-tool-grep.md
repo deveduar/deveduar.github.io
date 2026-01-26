@@ -1,20 +1,17 @@
 ---
 date: 2025-10-26 13:56
 title: search tool grep
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 public_note: "true"
 category: sistemas
-categories:
+tags:
   - sistemas
   - search
   - search_tool
   - Productividad
-  - hide-embedded-header1
   - Sistemas
 ---
 # search tool grep

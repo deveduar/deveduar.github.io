@@ -1,20 +1,17 @@
 ---
 date: 2025-10-30 16:37
 title: devcontainers
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 public_note: "true"
 category: virtualizacion
-categories:
+tags:
   - virtualizacion
   - devtools
   - devcontainers
   - docker
-  - hide-embedded-header1
   - Virtualizacion
 ---
 # Devcontainers

@@ -1,19 +1,15 @@
 ---
 date: 2025-05-21 20:08
 title: Project Management
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 public_note: "true"
 category: Management
-categories:
+tags:
   - Management
   - project_management
-  - hide-embedded-header1
-  - wide
 ---
 # Project Management
 `$= dv.current().file.tags.join(" ")`

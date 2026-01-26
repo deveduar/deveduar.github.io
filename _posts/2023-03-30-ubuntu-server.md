@@ -1,17 +1,14 @@
 ---
 date: 2023-03-31 01:05
 title: ubuntu server
-tags:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 keywords:
 source:
-cssclasses:
 public_note: "true"
 category: Linux
-categories:
+tags:
   - Linux
-  - hide-embedded-header1
 ---
 # ubuntu server
 `$= dv.current().file.tags.join(" ")`

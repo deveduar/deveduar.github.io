@@ -1,19 +1,16 @@
 ---
 date: 2024-11-23 01:54
 title: Virtualizacion
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 public_note: "true"
 category: virtualizacion
-categories:
+tags:
   - virtualizacion
   - devops
   - VMware
-  - hide-embedded-header1
 ---
 # Virtualización
 `$= dv.current().file.tags.join(" ")`

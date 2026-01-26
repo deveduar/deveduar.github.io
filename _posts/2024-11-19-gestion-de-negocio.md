@@ -1,20 +1,17 @@
 ---
 date: 2024-11-19 01:37
 title: Gestion de Negocio
-tags:
 keywords:
 source:
 status: 🚀
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 public_note: "true"
 category: kpi
-categories:
+tags:
   - kpi
   - economia
   - negocio
   - analisis
-  - hide-embedded-header1
 ---
 # Gestión de Negocio
 `$= dv.current().file.tags.join(" ")`

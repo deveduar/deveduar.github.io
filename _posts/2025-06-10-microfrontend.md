@@ -1,19 +1,16 @@
 ---
 date: 2025-06-10 02:42
 title: microfrontend
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
 category: microservicios
-categories:
+tags:
   - microservicios
   - microfrontend
   - frontend
-  - hide-embedded-header1
   - Frontend
 ---
 # microfrontend

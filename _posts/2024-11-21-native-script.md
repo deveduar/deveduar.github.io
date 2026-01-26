@@ -1,20 +1,16 @@
 ---
 date: 2024-11-21 19:30
 title: native script
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
 category: mobile-apps
-categories:
+tags:
   - mobile-apps
   - NativeScript
   - angular
-  - hide-embedded-header1
-  - wide
   - Desarrollo multiplataforma
 ---
 # NativeScript

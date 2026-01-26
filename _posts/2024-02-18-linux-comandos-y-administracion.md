@@ -1,17 +1,14 @@
 ---
 date: 2024-02-18 17:32
 title: Linux comandos y administracion
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 public_note: "true"
 category: Linux
-categories:
+tags:
   - Linux
-  - hide-embedded-header1
 ---
 # Linux comandos
 `$= dv.current().file.tags.join(" ")`

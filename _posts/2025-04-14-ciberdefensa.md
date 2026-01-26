@@ -1,20 +1,16 @@
 ---
 date: 2025-04-14 18:07
 title: Ciberdefensa
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 public_note: "true"
 category: ciberdefensa
-categories:
+tags:
   - ciberdefensa
   - Hacking
   - ciberseguridad
-  - hide-embedded-header1
-  - wide
 ---
 # Ciberdefensa
 `$= dv.current().file.tags.join(" ")`

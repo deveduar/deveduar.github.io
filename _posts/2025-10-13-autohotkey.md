@@ -1,22 +1,19 @@
 ---
 date: 2025-10-13 15:20
 title: autohotkey
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 public_note: "true"
 category: automation
-categories:
+tags:
   - automation
   - autohotkey
   - Productividad
   - sistemas
   - Linux
   - Windows
-  - hide-embedded-header1
   - Automatizacion y Build
 ---
 # autohotkey

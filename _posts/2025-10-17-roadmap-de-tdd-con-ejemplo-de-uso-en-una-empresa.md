@@ -1,16 +1,13 @@
 ---
 date: 2025-10-17 16:48
 title: roadmap de TDD con ejemplo de uso en una empresa
-tags:
 keywords:
 source:
 status: 📌
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
-category: hide-embedded-header1
-categories:
-  - hide-embedded-header1
+category: Testing
+tags:
   - Testing
 ---
 # roadmap de TDD con ejemplo de uso en una empresa

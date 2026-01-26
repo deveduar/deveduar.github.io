@@ -1,17 +1,14 @@
 ---
 date: 2023-04-01 18:06
 title: Funciones
-tags:
 status: 🌟
 Parent: "[[Area-IA]]"
 keywords:
 source:
-cssclasses:
 public_note: "true"
 category: Mates
-categories:
+tags:
   - Mates
-  - hide-embedded-header1
   - mates
 ---
 # Funciones

@@ -1,18 +1,15 @@
 ---
 date: 2024-09-04 19:15
 title: typescript
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
 category: JS
-categories:
+tags:
   - JS
   - typescript
-  - hide-embedded-header1
   - Software engineering
 ---
 # typescript

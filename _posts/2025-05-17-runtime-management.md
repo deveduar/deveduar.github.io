@@ -1,23 +1,18 @@
 ---
 date: 2025-05-17 19:07
 title: Runtime Management
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-cssclasses:
 aliases:
 public_note: "true"
 category: devops
-categories:
+tags:
   - devops
   - monitoreo
   - procesos
-  - hide-embedded-header1
-  - wide
   - Backend
-  - gestion de ciclo de vida
 ---
 # Runtime Management
 ``$= dv.current().file.tags.join(" ")``

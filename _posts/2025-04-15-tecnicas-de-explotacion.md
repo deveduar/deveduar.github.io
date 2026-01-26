@@ -1,19 +1,15 @@
 ---
 date: 2025-04-15 17:05
 title: tecnicas de explotacion
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 public_note: "true"
 category: vulnerabilidades
-categories:
+tags:
   - vulnerabilidades
   - Hacking
-  - hide-embedded-header1
-  - wide
   - ciberseguridad
 ---
 # tecnicas de explotacion

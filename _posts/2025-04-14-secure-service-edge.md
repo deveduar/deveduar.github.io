@@ -1,25 +1,18 @@
 ---
 date: 2025-04-14 04:12
 title: Secure Service Edge
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 aliases:
 public_note: "true"
 category: hardening
-categories:
+tags:
   - hardening
   - Hacking
   - servicio
-  - hide-embedded-header1
-  - wide
   - ciberseguridad
-  - SSE
-  - Secure Service Edge
-  - SSE Secure Service Edge
 ---
 # Secure Service Edge SSE
 

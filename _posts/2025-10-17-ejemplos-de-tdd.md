@@ -1,16 +1,13 @@
 ---
 date: 2025-10-17 13:26
 title: ejemplos de TDD
-tags:
 keywords:
 source:
 status: 📌
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
-category: hide-embedded-header1
-categories:
-  - hide-embedded-header1
+category: Testing
+tags:
   - Testing
 ---
 # ejemplos de TDD

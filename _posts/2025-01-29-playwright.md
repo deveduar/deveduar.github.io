@@ -1,19 +1,15 @@
 ---
 date: 2025-01-29 18:46
 title: Playwright
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
 category: playwright
-categories:
+tags:
   - playwright
   - testing
-  - hide-embedded-header1
-  - wide
   - Testing
 ---
 # Playwright  

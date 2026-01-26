@@ -1,20 +1,16 @@
 ---
 date: 2025-05-20 17:26
 title: SRE Site Reliability Engineering
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 public_note: "true"
 category: sre
-categories:
+tags:
   - sre
   - devops
   - IaC
-  - hide-embedded-header1
-  - wide
 ---
 # SRE (Site Reliability Engineering)
 ``$= dv.current().file.tags.join(" ")``

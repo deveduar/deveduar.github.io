@@ -1,20 +1,16 @@
 ---
 date: 2025-05-21 18:31
 title: b2b business-to-business
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 public_note: "true"
 category: ecomerce
-categories:
+tags:
   - ecomerce
   - B2B
   - IT
-  - hide-embedded-header1
-  - wide
   - Gestion de Negocio
 ---
 # B2B Business-to-Business

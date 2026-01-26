@@ -1,16 +1,13 @@
 ---
 date: 2025-10-19 14:54
 title: E2E - Conceptos Avanzados y Estrategia Completa
-tags:
 keywords:
 source:
 status: 📌
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
-category: hide-embedded-header1
-categories:
-  - hide-embedded-header1
+category: Testing
+tags:
   - Testing
 ---
 # E2E - Conceptos Avanzados y Estrategia Completa

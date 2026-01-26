@@ -1,23 +1,19 @@
 ---
 date: 2024-11-23 19:47
 title: Sequelize
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
 category: sequelize
-categories:
+tags:
   - sequelize
   - nodejs
   - backend
   - api
   - db
   - ORM
-  - hide-embedded-header1
-  - wide
   - Backend
 ---
 # Sequelize

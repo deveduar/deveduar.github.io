@@ -1,19 +1,16 @@
 ---
 date: 2025-04-14 03:14
 title: OTRS Znuny
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 public_note: "true"
 category: Znuny
-categories:
+tags:
   - Znuny
   - OTRS
   - ITIL
-  - hide-embedded-header1
   - infraestructura IT
 ---
 # OTRS Znuny

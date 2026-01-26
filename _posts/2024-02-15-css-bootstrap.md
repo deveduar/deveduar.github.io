@@ -1,17 +1,14 @@
 ---
 date: 2024-02-15 16:32
 title: CSS bootstrap
-tags:
 status: 📌
 Parent: "[[Area-Prog]]"
 keywords:
 source:
-cssclasses:
 public_note: "true"
 category: CSS
-categories:
+tags:
   - CSS
-  - hide-embedded-header1
 ---
 # bootstrap
 `$= dv.current().file.tags.join(" ")`

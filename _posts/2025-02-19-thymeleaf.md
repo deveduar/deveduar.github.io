@@ -1,22 +1,18 @@
 ---
 date: 2025-02-19 17:54
 title: thymeleaf
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
 category: thymeleaf
-categories:
+tags:
   - thymeleaf
   - java
   - spring
   - springboot
   - template-engine
-  - hide-embedded-header1
-  - wide
   - Motor de plantillas
 ---
 # thymeleaf

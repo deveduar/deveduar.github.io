@@ -1,20 +1,17 @@
 ---
 date: 2025-04-14 17:50
 title: Burp Suite
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 public_note: "true"
 category: Hacking
-categories:
+tags:
   - Hacking
   - pentesting
   - burp-suite
   - tool
-  - hide-embedded-header1
   - ciberseguridad
 ---
 # Burp Suite

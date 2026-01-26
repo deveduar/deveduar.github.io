@@ -1,17 +1,14 @@
 ---
 date: 2023-03-30 18:36
 title: CSS-Guia completa
-tags:
 status: 📌
 Parent: "[[Area-Prog]]"
 keywords:
 source:
-cssclasses:
 public_note: "true"
 category: CSS
-categories:
+tags:
   - CSS
-  - hide-embedded-header1
 ---
 # CSS-Guia completa
 `$= dv.current().file.tags.join(" ")`

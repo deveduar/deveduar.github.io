@@ -1,19 +1,16 @@
 ---
 date: 2025-11-05 17:10
 title: Lambda Functions
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
 category: CS
-categories:
+tags:
   - CS
   - lambda
   - functions
-  - hide-embedded-header1
   - Computer Science
 ---
 # Lambda Functions

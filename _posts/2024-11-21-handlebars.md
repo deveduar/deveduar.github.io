@@ -1,20 +1,16 @@
 ---
 date: 2024-11-21 18:20
 title: handlebars
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
 category: PHP
-categories:
+tags:
   - PHP
   - mustache
   - template-engine
-  - hide-embedded-header1
-  - wide
   - Motor de plantillas
 ---
 # handlebars

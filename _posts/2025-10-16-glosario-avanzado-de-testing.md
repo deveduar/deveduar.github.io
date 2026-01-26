@@ -1,16 +1,13 @@
 ---
 date: 2025-10-16 18:25
 title: Glosario Avanzado de Testing
-tags:
 keywords:
 source:
 status: 📌
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
-category: hide-embedded-header1
-categories:
-  - hide-embedded-header1
+category: Testing
+tags:
   - Testing
 ---
 # Glosario Avanzado de Testing

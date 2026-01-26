@@ -1,16 +1,13 @@
 ---
 date: 2025-10-19 16:49
 title: E2E - Ejemplos Prácticos Avanzados
-tags:
 keywords:
 source:
 status: 📌
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
-category: hide-embedded-header1
-categories:
-  - hide-embedded-header1
+category: Testing
+tags:
   - Testing
 ---
 # E2E - Ejemplos Prácticos Avanzados

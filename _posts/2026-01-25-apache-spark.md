@@ -1,11 +1,10 @@
 ---
 title: apache spark
-tags:
 status: 🌟
 Parent: "[[Area-Prog]]"
 public_note: "true"
 category: GCP
-categories:
+tags:
   - GCP
   - IA
   - Data Science

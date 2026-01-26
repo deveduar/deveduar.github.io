@@ -1,19 +1,16 @@
 ---
 date: 2025-12-31 15:49
 title: MITRE ATT&CK
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 public_note: "true"
 category: ciberseguridad
-categories:
+tags:
   - ciberseguridad
   - Hacking
   - pentesting
-  - hide-embedded-header1
 ---
 # MITRE ATT&CK
 `$= dv.current().file.tags.join(" ")`

@@ -1,20 +1,16 @@
 ---
 date: 2025-04-15 03:11
 title: cloud segurity
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 public_note: "true"
 category: cloud
-categories:
+tags:
   - cloud
   - ciberseguridad
   - Hacking
-  - hide-embedded-header1
-  - wide
 ---
 # Cloud Security
 ``$= dv.current().file.tags.join(" ")``

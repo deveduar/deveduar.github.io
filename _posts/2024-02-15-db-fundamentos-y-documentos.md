@@ -1,17 +1,14 @@
 ---
 date: 2024-02-15 16:37
 title: DB-Fundamentos y documentos
-tags:
 status: 🌟
 Parent: "[[Area-Prog]]"
 keywords:
 source:
-cssclasses:
 public_note: "true"
 category: DB
-categories:
+tags:
   - DB
-  - hide-embedded-header1
   - Databases
 ---
 # DB-Fundamentos y documentos

@@ -1,23 +1,18 @@
 ---
 date: 2025-11-05 13:46
 title: PF Programación Funcional
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-cssclasses:
 aliases:
 public_note: "true"
 category: CS
-categories:
+tags:
   - CS
   - arquitectura
   - programming
-  - hide-embedded-header1
   - Computer Science
-  - Programacin Funcional
-  - PF
 ---
 # PF Programación Funcional
 ``$= dv.current().file.tags.join(" ")``

@@ -1,21 +1,17 @@
 ---
 date: 2024-11-23 03:43
 title: Terraform
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 public_note: "true"
 category: devops
-categories:
+tags:
   - devops
   - terraform
   - cloud
   - infraestructura
-  - hide-embedded-header1
-  - wide
 ---
 # Terraform
 `$= dv.current().file.tags.join(" ")`

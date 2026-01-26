@@ -1,20 +1,16 @@
 ---
 date: 2024-11-21 19:31
 title: react native
-tags:
 keywords:
 source:
 status: 🚀
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
 category: react
-categories:
+tags:
   - react
   - reactnative
   - mobile-apps
-  - hide-embedded-header1
-  - wide
   - Desarrollo multiplataforma
 ---
 # react native

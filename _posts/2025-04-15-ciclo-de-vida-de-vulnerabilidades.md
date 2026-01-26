@@ -1,22 +1,17 @@
 ---
 date: 2025-04-15 17:50
 title: ciclo de vida de vulnerabilidades
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 aliases:
 public_note: "true"
 category: Hacking
-categories:
+tags:
   - Hacking
   - vulnerabilidades
-  - hide-embedded-header1
-  - wide
   - ciberseguridad
-  - Vulnerability Lifecycle
 ---
 # Ciclo de vida de vulnerabilidades
 ``$= dv.current().file.tags.join(" ")``

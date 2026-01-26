@@ -1,18 +1,15 @@
 ---
 date: 2025-06-10 15:20
 title: mascara de red
-tags:
 keywords:
 source:
 status: 📌
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 public_note: "true"
 category: redes
-categories:
+tags:
   - redes
   - mascara_de_red
-  - hide-embedded-header1
   - Redes
 ---
 # mascara de red

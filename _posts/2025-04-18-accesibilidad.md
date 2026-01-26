@@ -1,19 +1,15 @@
 ---
 date: 2025-04-18 03:20
 title: accesibilidad
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
 category: frontend
-categories:
+tags:
   - frontend
   - accesibilidad
-  - hide-embedded-header1
-  - wide
   - Frontend
 ---
 # Accesibilidad

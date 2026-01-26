@@ -1,22 +1,18 @@
 ---
 date: 2024-11-16 17:21
 title: Elasticsearch
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 public_note: "true"
 category: db
-categories:
+tags:
   - db
   - elasticsearh
   - backend
   - devops
   - ELK
-  - hide-embedded-header1
-  - wide
   - monitoreo
 ---
 # Elasticsearch

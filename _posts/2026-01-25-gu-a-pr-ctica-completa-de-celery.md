@@ -2,7 +2,7 @@
 title: Guía Práctica Completa de Celery
 public_note: "true"
 category: uncategorized
-categories:
+tags:
   - uncategorized
 ---
 # Guía Práctica Completa de Celery

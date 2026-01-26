@@ -1,21 +1,17 @@
 ---
 date: 2024-11-16 17:32
 title: microservicios
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
 category: backend
-categories:
+tags:
   - backend
   - devops
   - docker
   - microservicios
-  - hide-embedded-header1
-  - wide
   - Backend
 ---
 # microservicios

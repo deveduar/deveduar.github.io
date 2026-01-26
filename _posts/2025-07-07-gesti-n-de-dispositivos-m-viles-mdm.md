@@ -1,20 +1,17 @@
 ---
 date: 2025-07-07 13:18
 title: Gestión de Dispositivos Móviles MDM
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 public_note: "true"
 category: MDM
-categories:
+tags:
   - MDM
   - moviles
   - sistemas
   - redes
-  - hide-embedded-header1
   - Sistemas
 ---
 # Gestión de Dispositivos Móviles MDM

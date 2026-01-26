@@ -1,19 +1,16 @@
 ---
 date: 2025-04-15 19:15
 title: criptografia
-tags:
 keywords:
 source:
 status: 🚀
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 public_note: "true"
 category: Hacking
-categories:
+tags:
   - Hacking
   - ciberseguridad
   - criptografia
-  - hide-embedded-header1
   - autenticacion
 ---
 # Criptografía

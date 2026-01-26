@@ -1,18 +1,15 @@
 ---
 date: 2025-05-21 15:31
 title: iPaaS Integration Platform as a Service
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 public_note: "true"
 category: IT
-categories:
+tags:
   - IT
   - infraestructura
-  - hide-embedded-header1
   - infraestructura IT
 ---
 # iPaaS Integration Platform as a Service

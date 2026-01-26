@@ -1,19 +1,16 @@
 ---
 date: 2025-12-06 18:15
 title: Web Components
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
 category: webcomponents
-categories:
+tags:
   - webcomponents
   - frontend
   - webdevelopment
-  - hide-embedded-header1
   - Frontend
 ---
 # Web Components  

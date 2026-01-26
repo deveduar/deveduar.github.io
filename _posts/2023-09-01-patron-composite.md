@@ -2,20 +2,17 @@
 date: 2023-09-01 15:50
 title: Patron Composite
 Hecho: false
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
 category: GameDev
-categories:
+tags:
   - GameDev
   - CS
   - computer_Science
   - patrones_diseo
-  - hide-embedded-header1
   - Computer Science
 ---
 # Patron Composite

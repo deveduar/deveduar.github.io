@@ -1,21 +1,17 @@
 ---
 date: 2025-05-18 04:04
 title: serverless
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
 category: backend
-categories:
+tags:
   - backend
   - server_less
   - server
   - devops
-  - hide-embedded-header1
-  - wide
   - Backend
 ---
 # Serverless

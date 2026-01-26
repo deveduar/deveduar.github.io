@@ -1,21 +1,17 @@
 ---
 date: 2024-12-10 02:53
 title: Sonarqube
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 public_note: "true"
 category: sonarqube
-categories:
+tags:
   - sonarqube
   - Hacking
   - devops
   - IaC
-  - hide-embedded-header1
-  - wide
 ---
 # SonarQube
 `$= dv.current().file.tags.join(" ")`

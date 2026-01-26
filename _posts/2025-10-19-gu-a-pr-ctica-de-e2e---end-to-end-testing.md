@@ -1,16 +1,13 @@
 ---
 date: 2025-10-19 15:42
 title: Guía Práctica de E2E - End to End Testing
-tags:
 keywords:
 source:
 status: 📌
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
-category: hide-embedded-header1
-categories:
-  - hide-embedded-header1
+category: Testing
+tags:
   - Testing
 ---
 # Guía Práctica de [E2E - End to End Testing](/testing/e2e---end-to-end-testing/)

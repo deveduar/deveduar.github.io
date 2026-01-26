@@ -1,18 +1,15 @@
 ---
 date: 2023-05-02 15:47
 title: Prompt Engineering
-tags:
 status: 🌟
 Parent: "[[Area-IA]]"
 keywords:
 source:
-cssclasses:
 public_note: "true"
 category: IA
-categories:
+tags:
   - IA
   - Prompt
-  - hide-embedded-header1
   - Data Science
 ---
 # # Prompt Engineering

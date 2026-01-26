@@ -1,20 +1,16 @@
 ---
 date: 2024-12-09 23:51
 title: redes mobiles
-tags:
 keywords:
 source:
 status: 📌
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 public_note: "true"
 category: redes
-categories:
+tags:
   - redes
   - network
   - LTE
-  - hide-embedded-header1
-  - wide
 ---
 # redes mobiles
 `$= dv.current().file.tags.join(" ")` 

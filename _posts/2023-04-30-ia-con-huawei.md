@@ -1,18 +1,15 @@
 ---
 date: 2023-04-30 22:16
 title: IA con Huawei
-tags:
 status: 🌟
 Parent: "[[Area-IA]]"
 keywords:
 source:
-cssclasses:
 public_note: "true"
 category: IA
-categories:
+tags:
   - IA
   - Huawei
-  - hide-embedded-header1
   - Data Science
 ---
 # IA con Huawei

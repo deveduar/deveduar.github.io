@@ -1,16 +1,13 @@
 ---
 date: 2025-10-19 16:57
 title: Guía Actualizada 2025 de E2E End-to-End Testing
-tags:
 keywords:
 source:
 status: 📌
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
-category: hide-embedded-header1
-categories:
-  - hide-embedded-header1
+category: Testing
+tags:
   - Testing
 ---
 # Guía Actualizada 2025 de E2E – “End-to-End Testing

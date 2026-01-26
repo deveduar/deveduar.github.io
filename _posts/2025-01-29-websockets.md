@@ -1,20 +1,16 @@
 ---
 date: 2025-01-29 17:19
 title: websockets
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
 category: websockets
-categories:
+tags:
   - websockets
   - protocolo
   - backend
-  - hide-embedded-header1
-  - wide
   - Backend
 ---
 # WebSockets

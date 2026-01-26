@@ -1,20 +1,17 @@
 ---
 date: 2025-10-13 14:45
 title: capacitor
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
 category: desktop-apps
-categories:
+tags:
   - desktop-apps
   - Capacitor
   - android
   - native_runtime
-  - hide-embedded-header1
   - Desarrollo multiplataforma
 ---
 # Capacitor

@@ -1,22 +1,18 @@
 ---
 date: 2025-04-30 21:05
 title: storybook
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
 category: storybook
-categories:
+tags:
   - storybook
   - CSS
   - components
   - testing
   - documentacion
-  - hide-embedded-header1
-  - wide
   - Frontend
 ---
 # Storybook

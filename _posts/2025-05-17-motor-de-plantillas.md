@@ -1,19 +1,14 @@
 ---
 date: 2025-05-17 17:40
 title: Motor de plantillas
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
 category: template-engine
-categories:
+tags:
   - template-engine
-  - template engine
-  - hide-embedded-header1
-  - wide
   - Desarrollo web
 ---
 # Motor de plantillas

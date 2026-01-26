@@ -1,21 +1,18 @@
 ---
 date: 2024-11-06 23:21
 title: Management
-tags:
 keywords:
 source:
 status: 🚀
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 public_note: "true"
 category: PM
-categories:
+tags:
   - PM
   - SCRUM
   - CRM
   - odoo
   - ERP
-  - hide-embedded-header1
 ---
 # Management
 `$= dv.current().file.tags.join(" ")`

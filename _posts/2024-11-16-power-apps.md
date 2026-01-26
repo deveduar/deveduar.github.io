@@ -1,19 +1,15 @@
 ---
 date: 2024-11-16 20:54
 title: power apps
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
 category: powerapps
-categories:
+tags:
   - powerapps
   - Windows
-  - hide-embedded-header1
-  - wide
   - Desarrollo multiplataforma
 ---
 # Power Apps

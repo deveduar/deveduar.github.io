@@ -1,16 +1,13 @@
 ---
 date: 2025-10-17 18:19
 title: Mocks MSW - patrones y casos reales
-tags:
 keywords:
 source:
 status: 📌
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
-category: hide-embedded-header1
-categories:
-  - hide-embedded-header1
+category: Testing
+tags:
   - Testing
 ---
 # Mocks MSW - patrones y casos reales

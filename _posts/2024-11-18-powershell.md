@@ -1,18 +1,14 @@
 ---
 date: 2024-11-18 22:45
 title: powershell
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 public_note: "true"
 category: powershell
-categories:
+tags:
   - powershell
-  - hide-embedded-header1
-  - wide
   - Sistemas
 ---
 # PowerShell

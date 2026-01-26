@@ -1,15 +1,13 @@
 ---
 date: 2025-05-20 18:10
 title: control de datos
-tags:
 keywords:
 source:
 status: 🚀
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 public_note: "true"
 category: ciberseguridad
-categories:
+tags:
   - ciberseguridad
   - db
 ---

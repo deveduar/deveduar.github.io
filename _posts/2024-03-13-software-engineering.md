@@ -1,15 +1,13 @@
 ---
 date: 2024-03-13 15:51
 title: Software engineering
-tags:
 keywords:
 source:
 status: 🚀
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
 category: desarrollo
-categories:
+tags:
   - desarrollo
   - programming
 ---

@@ -1,19 +1,16 @@
 ---
 date: 2025-11-01 20:19
 title: VDC Virtual Data Center
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 public_note: "true"
 category: VDC
-categories:
+tags:
   - VDC
   - virtualizacion
   - cloud
-  - hide-embedded-header1
   - Virtualizacion
 ---
 # VDC Virtual Data Center

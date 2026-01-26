@@ -1,19 +1,16 @@
 ---
 date: 2023-08-31 16:47
 title: Comunicación entre Procesos
-tags:
 status: 🌟
 Parent: "[[Area-Prog]]"
 keywords:
 aliases:
 source:
-cssclasses:
 public_note: "true"
 category: CS
-categories:
+tags:
   - CS
   - Codes
-  - hide-embedded-header1
   - Computer Science
 ---
 # Comunicación entre Procesos

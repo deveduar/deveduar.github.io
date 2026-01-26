@@ -1,20 +1,17 @@
 ---
 date: 2025-06-10 22:34
 title: Active Directory
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 public_note: "true"
 category: active_directory
-categories:
+tags:
   - active_directory
   - Windows
   - roles
   - sistemas
-  - hide-embedded-header1
   - Sistemas
 ---
 # Active Directory

@@ -1,19 +1,15 @@
 ---
 date: 2025-05-19 01:12
 title: DDD Domain-Driven Design
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
 category: DDD
-categories:
+tags:
   - DDD
   - arquitectura
-  - hide-embedded-header1
-  - wide
   - Computer Science
 ---
 # DDD Domain-Driven Design

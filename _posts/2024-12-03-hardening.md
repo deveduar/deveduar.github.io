@@ -1,18 +1,15 @@
 ---
 date: 2024-12-03 03:34
 title: hardening
-tags:
 keywords:
 source:
 status: 🚀
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 public_note: "true"
 category: Hacking
-categories:
+tags:
   - Hacking
   - hardening
-  - hide-embedded-header1
   - ciberseguridad
 ---
 # Hardening  

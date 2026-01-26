@@ -1,21 +1,17 @@
 ---
 date: 2024-11-21 01:17
 title: Springboot
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
 category: spring
-categories:
+tags:
   - spring
   - java
   - api
   - backend
-  - hide-embedded-header1
-  - wide
   - Backend
 ---
 # Springboot 

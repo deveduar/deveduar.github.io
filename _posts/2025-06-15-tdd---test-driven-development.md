@@ -1,18 +1,15 @@
 ---
 date: 2025-06-15 11:46
 title: TDD - Test Driven Development
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
 category: TDD
-categories:
+tags:
   - TDD
   - testing
-  - hide-embedded-header1
   - Testing
 ---
 # TDD - Test Driven Development

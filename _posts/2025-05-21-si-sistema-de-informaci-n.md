@@ -1,19 +1,16 @@
 ---
 date: 2025-05-21 16:53
 title: SI Sistema de Información
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 public_note: "true"
 category: ITIL
-categories:
+tags:
   - ITIL
   - SI
   - infraestructura
-  - hide-embedded-header1
   - infraestructura IT
 ---
 # SI Sistema de Información

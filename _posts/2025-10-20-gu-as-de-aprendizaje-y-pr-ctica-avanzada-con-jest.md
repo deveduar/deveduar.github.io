@@ -1,16 +1,13 @@
 ---
 date: 2025-10-20 15:51
 title: Guías de aprendizaje y práctica avanzada con Jest
-tags:
 keywords:
 source:
 status: 📌
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
-category: hide-embedded-header1
-categories:
-  - hide-embedded-header1
+category: Testing
+tags:
   - Testing
 ---
 # Guías de aprendizaje y práctica avanzada con Jest

@@ -1,14 +1,13 @@
 ---
 title: ⭐ My favourite plugins for obsidian
 date: 2024-05-06
-tags:
 status: 📌
 public_notes: true
 public_note: true
 public_note1: true
 public: true
 category: uncategorized
-categories:
+tags:
   - obsidian
   - productivity
   - uncategorized

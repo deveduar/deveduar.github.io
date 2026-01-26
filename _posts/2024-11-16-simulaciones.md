@@ -1,20 +1,16 @@
 ---
 date: 2024-11-16 20:26
 title: simulaciones
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
 category: simulaciones
-categories:
+tags:
   - simulaciones
   - Mates
   - cpp
-  - hide-embedded-header1
-  - wide
   - Desarrollo multiplataforma
 ---
 # simulaciones

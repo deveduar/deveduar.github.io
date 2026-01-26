@@ -1,18 +1,15 @@
 ---
 date: 2025-11-06 19:04
 title: algoritmos y tecnicas de computacion
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
 category: computer_Science
-categories:
+tags:
   - computer_Science
   - CS
-  - hide-embedded-header1
   - Computer Science
 ---
 # algoritmos y tecnicas de computacion

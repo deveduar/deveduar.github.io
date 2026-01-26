@@ -1,20 +1,16 @@
 ---
 date: 2025-05-18 03:59
 title: Instance Scaling
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
 category: backend
-categories:
+tags:
   - backend
   - devops
   - scaling
-  - hide-embedded-header1
-  - wide
   - Backend
 ---
 # Instance Scaling

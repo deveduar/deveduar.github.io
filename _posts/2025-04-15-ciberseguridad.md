@@ -1,20 +1,17 @@
 ---
 date: 2025-04-15 17:39
 title: ciberseguridad
-tags:
 keywords:
 source:
 status: 🚀
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 public_note: "true"
 category: Hacking
-categories:
+tags:
   - Hacking
   - ciberseguridad
   - hardening
   - pentesting
-  - hide-embedded-header1
 ---
 # ciberseguridad
 `$= dv.current().file.tags.join(" ")`

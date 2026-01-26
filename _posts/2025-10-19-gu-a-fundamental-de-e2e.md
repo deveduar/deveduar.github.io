@@ -1,16 +1,14 @@
 ---
 date: 2025-10-19 14:43
 title: Guía Fundamental de E2E
-tags:
 keywords:
 source:
 status: 📌
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
-category: hide-embedded-header1
-categories:
-  - hide-embedded-header1
+category: uncategorized
+tags:
+  - uncategorized
 ---
 
 # Guía Fundamental de [E2E - End to End Testing](/testing/e2e---end-to-end-testing/)

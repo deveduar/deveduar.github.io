@@ -1,16 +1,14 @@
 ---
 date: 2025-10-18 16:58
 title: QA Gestión Herramientas y Métricas
-tags:
 keywords:
 source:
 status: 📌
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
-category: hide-embedded-header1
-categories:
-  - hide-embedded-header1
+category: uncategorized
+tags:
+  - uncategorized
 ---
 # QA Gestión Herramientas y Métricas
 `$= dv.current().file.tags.join(" ")`

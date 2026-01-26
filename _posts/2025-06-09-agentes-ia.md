@@ -1,19 +1,16 @@
 ---
 date: 2025-06-09 14:47
 title: Agentes IA
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
 category: AI
-categories:
+tags:
   - AI
   - agentes
   - automatizacion
-  - hide-embedded-header1
   - Automatizacion y Build
 ---
 # Agentes IA

@@ -1,19 +1,16 @@
 ---
 date: 2025-11-06 15:45
 title: Patrones de diseño
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
 category: computer_Science
-categories:
+tags:
   - computer_Science
   - CS
   - patrones_diseo
-  - hide-embedded-header1
   - Computer Science
 ---
 # Patrones de diseño

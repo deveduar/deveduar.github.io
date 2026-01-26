@@ -1,18 +1,15 @@
 ---
 date: 2025-11-06 22:07
 title: arquitecturas en computacion
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
 category: CS
-categories:
+tags:
   - CS
   - computer_Science
-  - hide-embedded-header1
   - Computer Science
 ---
 # Arquitecturas en Computación

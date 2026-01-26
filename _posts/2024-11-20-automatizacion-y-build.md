@@ -1,15 +1,13 @@
 ---
 date: 2024-11-20 17:53
 title: Automatizacion y Build
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
 category: linters
-categories:
+tags:
   - linters
   - runners
   - automation
@@ -18,7 +16,6 @@ categories:
   - build
   - Scraping
   - devops
-  - hide-embedded-header1
 ---
 # Automatización y Build
 `$= dv.current().file.tags.join(" ")` 

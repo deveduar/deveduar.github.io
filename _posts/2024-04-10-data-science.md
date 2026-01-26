@@ -1,14 +1,13 @@
 ---
 date: 2024-04-10 21:05
 title: Data Science
-tags:
 keywords:
 source:
 status: 🚀
 Parent: "[[Area-Prog]]"
 public_note: "true"
 category: GCP
-categories:
+tags:
   - GCP
   - IA
   - estadistica

@@ -1,16 +1,13 @@
 ---
 date: 2025-10-18 16:31
 title: glosario de QA Avanzado
-tags:
 keywords:
 source:
 status: 📌
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
-category: hide-embedded-header1
-categories:
-  - hide-embedded-header1
+category: Testing
+tags:
   - Testing
 ---
 # Glosario de QA Avanzado

@@ -1,22 +1,17 @@
 ---
 date: 2025-04-15 03:33
 title: modelado de amenazas
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 aliases:
 public_note: "true"
 category: Hacking
-categories:
+tags:
   - Hacking
   - amenazas
-  - hide-embedded-header1
-  - wide
   - ciberseguridad
-  - Threat modeling
 ---
 # Modelado de Amenazas
 `$= dv.current().file.tags.join(" ")`

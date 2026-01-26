@@ -1,20 +1,16 @@
 ---
 date: 2025-04-14 18:16
 title: Email DLP Protección Correo
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 public_note: "true"
 category: Hacking
-categories:
+tags:
   - Hacking
   - ciberseguridad
   - hardening
-  - hide-embedded-header1
-  - wide
 ---
 # Email DLP — Protección de Correo
 ``$= dv.current().file.tags.join(" ")``

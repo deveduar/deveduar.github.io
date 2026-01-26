@@ -1,18 +1,15 @@
 ---
 date: 2025-10-29 19:54
 title: Soporte Microinformático
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 public_note: "true"
 category: sistemas
-categories:
+tags:
   - sistemas
   - soporte
-  - hide-embedded-header1
   - Sistemas
 ---
 # Soporte Microinformático

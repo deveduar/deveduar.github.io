@@ -1,16 +1,13 @@
 ---
 date: 2025-10-18 14:15
 title: QUnit - Arquitectura de testing modular
-tags:
 keywords:
 source:
 status: 📌
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
-category: hide-embedded-header1
-categories:
-  - hide-embedded-header1
+category: Testing
+tags:
   - Testing
 ---
 # QUnit - Arquitectura de testing modular

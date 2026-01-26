@@ -1,20 +1,17 @@
 ---
 date: 2024-02-15 17:14
 title: Visual Basic y C
-tags:
 status: 🌟
 Parent: "[[Area-Prog]]"
 keywords:
 source:
-cssclasses:
 public_note: "true"
 category: CS
-categories:
+tags:
   - CS
   - visual_basic
   - cpp
   - excel
-  - hide-embedded-header1
   - Software engineering
 ---
 # C y Visual Basic

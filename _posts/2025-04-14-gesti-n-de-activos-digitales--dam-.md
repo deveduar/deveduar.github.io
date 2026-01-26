@@ -1,18 +1,15 @@
 ---
 date: 2025-04-14 18:17
 title: Gestión de Activos Digitales (DAM)
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 public_note: "true"
 category: Hacking
-categories:
+tags:
   - Hacking
   - hardening
-  - hide-embedded-header1
   - ciberseguridad
 ---
 # Gestión de Activos Digitales (DAM)

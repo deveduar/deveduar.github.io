@@ -1,20 +1,16 @@
 ---
 date: 2025-05-18 04:01
 title: server actions
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
 category: backend
-categories:
+tags:
   - backend
   - server
   - server_actions
-  - hide-embedded-header1
-  - wide
   - Backend
 ---
 # Server Actions

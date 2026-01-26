@@ -1,20 +1,16 @@
 ---
 date: 2024-11-19 02:08
 title: visual basic VBA
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
 category: excel
-categories:
+tags:
   - excel
   - cpp
   - vba
-  - hide-embedded-header1
-  - wide
   - Software engineering
 ---
 # Visual Basic VBA

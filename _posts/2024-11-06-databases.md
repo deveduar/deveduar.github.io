@@ -1,16 +1,14 @@
 ---
 date: 2024-11-06 23:27
 title: Databases
-tags:
 keywords:
 source:
 status: 🚀
 Parent: "[[Area-Prog]]"
-cssclasses:
 aliases:
 public_note: "true"
 category: db
-categories:
+tags:
   - db
   - MySQL
   - postgres
@@ -21,10 +19,6 @@ categories:
   - json
   - mongodb
   - backend
-  - hide-embedded-header1
-  - bases de datos
-  - databases
-  - Bases de datos
 ---
 # Databases
 `$= dv.current().file.tags.join(" ")`

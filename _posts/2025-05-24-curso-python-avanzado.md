@@ -1,17 +1,14 @@
 ---
 date: 2025-05-24 04:06
 title: curso python avanzado
-tags:
 keywords:
 source:
 status: 📌
-cssclasses:
 Parent: "[[Area-Prog]]"
 public_note: "true"
 category: python
-categories:
+tags:
   - python
-  - hide-embedded-header1
 ---
 # curso python avanzado
 `$= dv.current().file.tags.join(" ")`

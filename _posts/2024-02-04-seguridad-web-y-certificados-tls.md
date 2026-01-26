@@ -1,17 +1,14 @@
 ---
 date: 2024-02-04 18:57
 title: Seguridad Web y Certificados TLS
-tags:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 keywords:
 source:
-cssclasses:
 public_note: "true"
 category: Devops
-categories:
+tags:
   - Devops
-  - hide-embedded-header1
   - devops
 ---
 # Seguridad Web y Certificados TLS

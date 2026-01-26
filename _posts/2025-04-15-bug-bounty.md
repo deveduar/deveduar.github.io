@@ -1,17 +1,14 @@
 ---
 date: 2025-04-15 17:00
 title: bug bounty
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 public_note: "true"
 category: vulnerabilidades
-categories:
+tags:
   - vulnerabilidades
-  - hide-embedded-header1
   - ciberseguridad
 ---
 # Bug Bounty

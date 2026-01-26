@@ -1,19 +1,16 @@
 ---
 date: 2025-04-15 16:45
 title: Antivirus
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 public_note: "true"
 category: Hacking
-categories:
+tags:
   - Hacking
   - antivirus
   - malware
-  - hide-embedded-header1
   - ciberseguridad
 ---
 # Antivirus

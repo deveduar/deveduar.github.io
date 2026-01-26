@@ -1,17 +1,14 @@
 ---
 date: 2023-03-31 01:29
 title: Linux Shell Scripting
-tags:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 keywords:
 source:
-cssclasses:
 public_note: "true"
 category: Linux
-categories:
+tags:
   - Linux
-  - hide-embedded-header1
 ---
 # Linux Shell Scripting
 `$= dv.current().file.tags.join(" ")`

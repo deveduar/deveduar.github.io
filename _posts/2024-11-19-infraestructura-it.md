@@ -1,21 +1,18 @@
 ---
 date: 2024-11-19 01:48
 title: infraestructura IT
-tags:
 keywords:
 source:
 status: 🚀
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 public_note: "true"
 category: IT
-categories:
+tags:
   - IT
   - ITIL
   - TI
   - ISO
   - estandares
-  - hide-embedded-header1
 ---
 # Infraestructura IT
 ``$= dv.current().file.tags.join(" ")``

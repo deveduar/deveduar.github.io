@@ -1,20 +1,16 @@
 ---
 date: 2025-04-17 22:25
 title: apache flink
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
 category: apache
-categories:
+tags:
   - apache
   - stream_processing
   - kafka
-  - hide-embedded-header1
-  - wide
   - Backend
 ---
 # apache flink

@@ -1,18 +1,15 @@
 ---
 date: 2025-05-22 04:26
 title: Desarrollo multiplataforma
-tags:
 keywords:
 source:
 status: 📌
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
 category: desarrollo
-categories:
+tags:
   - desarrollo
   - programming
-  - hide-embedded-header1
 ---
 # Desarrollo multiplataforma
 `$= dv.current().file.tags.join(" ")`

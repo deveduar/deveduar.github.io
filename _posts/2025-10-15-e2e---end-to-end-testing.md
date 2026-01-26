@@ -1,18 +1,15 @@
 ---
 date: 2025-10-15 11:48
 title: E2E - End to End Testing
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
 category: testing
-categories:
+tags:
   - testing
   - e2e
-  - hide-embedded-header1
   - Testing
 ---
 # E2E - End to End Testing

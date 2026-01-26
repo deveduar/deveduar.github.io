@@ -1,20 +1,16 @@
 ---
 date: 2024-11-23 19:31
 title: poketbase
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
 category: pocketbase
-categories:
+tags:
   - pocketbase
   - db
   - backend
-  - hide-embedded-header1
-  - wide
   - Backend
 ---
 # PocketBase

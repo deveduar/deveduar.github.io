@@ -1,20 +1,16 @@
 ---
 date: 2024-11-19 23:32
 title: Deep Learning
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
 category: IA
-categories:
+tags:
   - IA
   - datascience
   - deep-learning
-  - hide-embedded-header1
-  - wide
   - Data Science
 ---
 # Deep Learning

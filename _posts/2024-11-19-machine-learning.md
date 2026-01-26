@@ -1,21 +1,17 @@
 ---
 date: 2024-11-19 23:34
 title: Machine Learning
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
 category: IA
-categories:
+tags:
   - IA
   - machine-learning
   - data-science
   - ML
-  - hide-embedded-header1
-  - wide
   - Data Science
 ---
 # Machine Learning

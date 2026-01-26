@@ -1,16 +1,14 @@
 ---
 date: 2025-10-22 12:19
 title: Estrategias de mocking para APIs y servicios externos con Jest
-tags:
 keywords:
 source:
 status: 📌
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
-category: hide-embedded-header1
-categories:
-  - hide-embedded-header1
+category: uncategorized
+tags:
+  - uncategorized
 ---
 # Estrategias de mocking para APIs y servicios externos con Jest
 `$= dv.current().file.tags.join(" ")`

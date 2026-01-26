@@ -1,21 +1,17 @@
 ---
 date: 2024-11-16 17:44
 title: web services
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
 category: webservices
-categories:
+tags:
   - webservices
   - devops
   - backend
   - microservicios
-  - hide-embedded-header1
-  - wide
   - Backend
 ---
 # Web Services

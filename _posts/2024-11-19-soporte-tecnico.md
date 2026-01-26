@@ -1,19 +1,16 @@
 ---
 date: 2024-11-19 02:46
 title: soporte tecnico
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 public_note: "true"
 category: soporte
-categories:
+tags:
   - soporte
   - analisis
   - cloud
-  - hide-embedded-header1
   - infraestructura IT
 ---
 # soporte tecnico

@@ -1,16 +1,13 @@
 ---
 date: 2025-10-20 20:03
 title: Uso de jest-dom y Testing Library en entornos React
-tags:
 keywords:
 source:
 status: 📌
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
-category: hide-embedded-header1
-categories:
-  - hide-embedded-header1
+category: Testing
+tags:
   - Testing
 ---
 # Uso de jest-dom y Testing Library en entornos React

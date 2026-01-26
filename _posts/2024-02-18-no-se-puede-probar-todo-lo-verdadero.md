@@ -2,17 +2,14 @@
 date: 2024-02-18 16:14
 title: No se puede probar todo lo verdadero
 Hecho: false
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-IA]]"
-cssclasses:
 public_note: "true"
 category: Mates
-categories:
+tags:
   - Mates
-  - hide-embedded-header1
   - mates
 ---
 # No se puede probar todo lo verdadero

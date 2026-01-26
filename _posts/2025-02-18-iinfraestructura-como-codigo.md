@@ -1,22 +1,16 @@
 ---
 date: 2025-02-18 15:57
 title: IInfraestructura como codigo
-tags:
 keywords:
 source:
 status: 🚀
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 aliases:
 public_note: "true"
 category: IaC
-categories:
+tags:
   - IaC
   - devops
-  - hide-embedded-header1
-  - Infraestructura como Cdigo
-  - IaC infraestructura como cdigo
-  - infraestructura como cdigo
 ---
 # IaC infraestructura como código
 `$= dv.current().file.tags.join(" ")`  

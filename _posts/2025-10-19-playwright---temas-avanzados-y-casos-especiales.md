@@ -1,16 +1,13 @@
 ---
 date: 2025-10-19 21:46
 title: Playwright - Temas Avanzados y Casos Especiales
-tags:
 keywords:
 source:
 status: 📌
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
-category: hide-embedded-header1
-categories:
-  - hide-embedded-header1
+category: Testing
+tags:
   - Testing
 ---
 # Playwright - Temas Avanzados y Casos Especiales  

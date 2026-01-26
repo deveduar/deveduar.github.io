@@ -1,21 +1,17 @@
 ---
 date: 2025-01-29 00:32
 title: Apache Kafka
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
 category: apache
-categories:
+tags:
   - apache
   - kafka
   - microservicios
   - devops
-  - hide-embedded-header1
-  - wide
   - Backend
 ---
 # Apache Kafka

@@ -1,18 +1,15 @@
 ---
 date: 2025-05-24 19:00
 title: Videoconferencia
-tags:
 keywords:
 source:
 status: 📌
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 public_note: "true"
 category: redes
-categories:
+tags:
   - redes
   - voip
-  - hide-embedded-header1
   - Telefona y UC
 ---
 # Videoconferencia

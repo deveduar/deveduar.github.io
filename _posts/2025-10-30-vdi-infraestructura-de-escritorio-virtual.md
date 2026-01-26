@@ -1,18 +1,15 @@
 ---
 date: 2025-10-30 16:02
 title: VDI Infraestructura de Escritorio Virtual
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 public_note: "true"
 category: virtualizacion
-categories:
+tags:
   - virtualizacion
   - VDI
-  - hide-embedded-header1
   - Virtualizacion
 ---
 # VDI Infraestructura de Escritorio Virtual

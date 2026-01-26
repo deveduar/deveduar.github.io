@@ -1,16 +1,14 @@
 ---
 date: 2025-10-18 17:02
 title: QA Procesos y Ciclo de Vida
-tags:
 keywords:
 source:
 status: 📌
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
-category: hide-embedded-header1
-categories:
-  - hide-embedded-header1
+category: uncategorized
+tags:
+  - uncategorized
 ---
 # QA: Procesos y Ciclo de Vida
 `$= dv.current().file.tags.join(" ")`

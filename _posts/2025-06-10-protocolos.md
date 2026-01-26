@@ -1,22 +1,17 @@
 ---
 date: 2025-06-10 15:21
 title: Protocolos
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 aliases:
 public_note: "true"
 category: protocolo
-categories:
+tags:
   - protocolo
   - redes
-  - hide-embedded-header1
   - Redes
-  - protocols
-  - protocol
 ---
 # Protocolos
 `$= dv.current().file.tags.join(" ")`

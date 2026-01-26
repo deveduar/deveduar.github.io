@@ -1,18 +1,15 @@
 ---
 date: 2025-04-14 18:18
 title: IRM manejo de derechos de la informacion
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 public_note: "true"
 category: hardening
-categories:
+tags:
   - hardening
   - Hacking
-  - hide-embedded-header1
   - ciberseguridad
 ---
 # IRM — Manejo de Derechos de la Información  

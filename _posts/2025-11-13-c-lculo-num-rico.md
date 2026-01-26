@@ -1,16 +1,13 @@
 ---
 date: 2025-11-13 10:54
 title: Cálculo numérico
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-IA]]"
-cssclasses:
 public_note: "true"
-category: hide-embedded-header1
-categories:
-  - hide-embedded-header1
+category: mates
+tags:
   - mates
 ---
 # 🧮 Cálculo numérico

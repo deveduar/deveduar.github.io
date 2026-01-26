@@ -1,19 +1,15 @@
 ---
 date: 2025-05-19 20:33
 title: AOP Programación Orientada a Aspectos
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
 category: AOP
-categories:
+tags:
   - AOP
   - CS
-  - hide-embedded-header1
-  - wide
   - Computer Science
 ---
 # AOP (Programación Orientada a Aspectos)

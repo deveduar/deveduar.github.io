@@ -1,16 +1,13 @@
 ---
 date: 2025-10-17 00:25
 title: Mapa Conceptual Completo de Testing
-tags:
 keywords:
 source:
 status: 📌
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
-category: hide-embedded-header1
-categories:
-  - hide-embedded-header1
+category: Testing
+tags:
   - Testing
 ---
 # Mapa Conceptual Completo de Testing

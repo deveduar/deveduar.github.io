@@ -1,20 +1,16 @@
 ---
 date: 2025-05-19 20:32
 title: POO Programación Orientada a Objetos
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
 category: POO
-categories:
+tags:
   - POO
   - arquitectura
   - CS
-  - hide-embedded-header1
-  - wide
   - Computer Science
 ---
 # POO Programación Orientada a Objetos

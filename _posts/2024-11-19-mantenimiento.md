@@ -1,17 +1,14 @@
 ---
 date: 2024-11-19 01:25
 title: mantenimiento
-tags:
 keywords:
 source:
 status: 🚀
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 public_note: "true"
 category: mantenimiento
-categories:
+tags:
   - mantenimiento
-  - hide-embedded-header1
 ---
 # mantenimiento
 ``$= dv.current().file.tags.join(" ")``

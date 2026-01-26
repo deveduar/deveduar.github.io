@@ -2,20 +2,17 @@
 date: 2024-03-01 16:40
 title: Expresiones regulares
 modification date: Friday 1st March 2024 16:40:27
-tags:
 keywords:
 aliases: []
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
 category: JS
-categories:
+tags:
   - JS
   - CS
   - mates
-  - hide-embedded-header1
   - Computer Science
 ---
 # Expresiones regulares

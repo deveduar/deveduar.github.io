@@ -1,20 +1,17 @@
 ---
 date: 2025-04-14 18:02
 title: Metasploit
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 public_note: "true"
 category: metasploit
-categories:
+tags:
   - metasploit
   - vulnerabilidades
   - pentesting
   - Hacking
-  - hide-embedded-header1
   - ciberseguridad
 ---
 # Metasploit

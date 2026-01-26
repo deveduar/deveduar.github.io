@@ -1,19 +1,15 @@
 ---
 date: 2025-05-20 18:35
 title: DevSecOps
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 public_note: "true"
 category: devops
-categories:
+tags:
   - devops
   - ciberseguridad
-  - hide-embedded-header1
-  - wide
 ---
 # DevSecOps
 ``$= dv.current().file.tags.join(" ")``

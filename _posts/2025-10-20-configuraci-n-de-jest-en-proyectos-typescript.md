@@ -1,16 +1,13 @@
 ---
 date: 2025-10-20 18:43
 title: Configuración de Jest en proyectos TypeScript
-tags:
 keywords:
 source:
 status: 📌
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
-category: hide-embedded-header1
-categories:
-  - hide-embedded-header1
+category: Testing
+tags:
   - Testing
 ---
 # Configuración de Jest en proyectos TypeScript

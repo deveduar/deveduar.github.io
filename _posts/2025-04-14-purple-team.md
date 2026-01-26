@@ -1,19 +1,16 @@
 ---
 date: 2025-04-14 20:43
 title: Purple Team
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 public_note: "true"
 category: Hacking
-categories:
+tags:
   - Hacking
   - dfir
   - forense
-  - hide-embedded-header1
   - ciberseguridad
 ---
 # Purple Team

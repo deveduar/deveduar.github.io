@@ -1,19 +1,15 @@
 ---
 date: 2024-11-23 01:58
 title: sql server
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 public_note: "true"
 category: MySQL
-categories:
+tags:
   - MySQL
   - sql-server
-  - hide-embedded-header1
-  - wide
   - devops
 ---
 # SQL Server

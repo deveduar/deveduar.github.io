@@ -1,21 +1,17 @@
 ---
 date: 2025-05-21 19:54
 title: ticketing
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 public_note: "true"
 category: ticketing
-categories:
+tags:
   - ticketing
   - Management
   - odoo
   - ERP
-  - hide-embedded-header1
-  - wide
 ---
 # ticketing
 `$= dv.current().file.tags.join(" ")`

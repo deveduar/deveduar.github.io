@@ -1,19 +1,15 @@
 ---
 date: 2024-11-16 17:15
 title: postgreSQL
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
 category: postgres
-categories:
+tags:
   - postgres
   - db
-  - hide-embedded-header1
-  - wide
   - Databases
 ---
 # postgreSQL

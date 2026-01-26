@@ -1,21 +1,17 @@
 ---
 date: 2025-01-29 19:28
 title: Supervisor
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
 category: supervisor
-categories:
+tags:
   - supervisor
   - procesos
   - backend
   - pythoon
-  - hide-embedded-header1
-  - wide
   - Backend
 ---
 # Supervisor

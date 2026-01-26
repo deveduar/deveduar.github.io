@@ -1,20 +1,16 @@
 ---
 date: 2025-05-19 04:38
 title: Stream Processing
-tags:
 keywords:
 source:
 status: 🚀
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
 category: stream_processing
-categories:
+tags:
   - stream_processing
   - kafka
   - CS
-  - hide-embedded-header1
-  - wide
   - Backend
 ---
 # Stream Processing

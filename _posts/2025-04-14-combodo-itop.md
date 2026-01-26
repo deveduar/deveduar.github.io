@@ -1,18 +1,15 @@
 ---
 date: 2025-04-14 03:12
 title: Combodo itop
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 public_note: "true"
 category: ITIL
-categories:
+tags:
   - ITIL
   - monitoreo
-  - hide-embedded-header1
   - infraestructura IT
 ---
 # Combodo iTop

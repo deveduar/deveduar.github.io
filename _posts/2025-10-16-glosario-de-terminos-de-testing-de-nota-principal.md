@@ -1,16 +1,13 @@
 ---
 date: 2025-10-16 18:18
 title: glosario de terminos de testing de nota principal
-tags:
 keywords:
 source:
 status: 📌
 Parent: "[[Area-Prog]]"
-cssclasses:
 public_note: "true"
-category: hide-embedded-header1
-categories:
-  - hide-embedded-header1
+category: Testing
+tags:
   - Testing
 ---
 # glosario de terminos de testing principal

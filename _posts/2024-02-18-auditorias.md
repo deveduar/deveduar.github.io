@@ -1,17 +1,14 @@
 ---
 date: 2024-02-18 17:50
 title: Auditorias
-tags:
 Parent: "[[Area-Sistemas]]"
 keywords:
 source:
 status: 🌟
-cssclasses:
 public_note: "true"
 category: Hacking
-categories:
+tags:
   - Hacking
-  - hide-embedded-header1
   - ciberseguridad
 ---
 # Auditorías

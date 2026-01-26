@@ -2,17 +2,14 @@
 date: 2024-02-18 16:15
 title: congetura de collatz
 Hecho: false
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-IA]]"
-cssclasses:
 public_note: "true"
 category: Mates
-categories:
+tags:
   - Mates
-  - hide-embedded-header1
   - mates
 ---
 # Conjetura de Collatz# congetura de collatz

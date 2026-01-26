@@ -1,18 +1,15 @@
 ---
 date: 2025-05-24 18:48
 title: Telefonía y UC
-tags:
 keywords:
 source:
 status: 📌
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 public_note: "true"
 category: redes
-categories:
+tags:
   - redes
   - telefonia
-  - hide-embedded-header1
 ---
 # Telefonía y UC
 `$= dv.current().file.tags.join(" ")`

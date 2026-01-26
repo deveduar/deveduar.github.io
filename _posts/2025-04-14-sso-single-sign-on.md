@@ -1,22 +1,17 @@
 ---
 date: 2025-04-14 19:00
 title: SSO Single Sign-On
-tags:
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-cssclasses:
 aliases:
 public_note: "true"
 category: autentication
-categories:
+tags:
   - autentication
   - Hacking
-  - hide-embedded-header1
   - autenticacion
-  - sso
-  - SSO
 ---
 # SSO Single Sign-On
 `$= dv.current().file.tags.join(" ")` 
