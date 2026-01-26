@@ -7,7 +7,7 @@ status: 🌟
 Parent: "[[Area-Sistemas]]"
 aliases:
 public_note: "true"
-category: Hacking
+category: ciberseguridad
 tags:
   - Hacking
   - ciberseguridad

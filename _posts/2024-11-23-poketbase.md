@@ -6,12 +6,11 @@ source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: pocketbase
+category: Backend
 tags:
   - pocketbase
   - db
   - backend
-  - Backend
 ---
 # PocketBase
 `$= dv.current().file.tags.join(" ")`

@@ -3,11 +3,10 @@ title: apache spark
 status: 🌟
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: GCP
+category: Data Science
 tags:
   - GCP
   - IA
-  - Data Science
 ---
 # APACHE SPARK
 ``$= dv.current().file.tags.join(" ")``

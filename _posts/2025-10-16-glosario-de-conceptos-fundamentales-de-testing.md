@@ -7,8 +7,6 @@ status: 📌
 Parent: "[[Area-Prog]]"
 public_note: "true"
 category: Testing
-tags:
-  - Testing
 ---
 # Glosario de Conceptos Fundamentales de Testing
 `$= dv.current().file.tags.join(" ")`

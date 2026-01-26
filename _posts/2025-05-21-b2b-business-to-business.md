@@ -6,12 +6,11 @@ source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: ecomerce
+category: Gestion de Negocio
 tags:
   - ecomerce
   - B2B
   - IT
-  - Gestion de Negocio
 ---
 # B2B Business-to-Business
 

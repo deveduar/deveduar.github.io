@@ -6,11 +6,10 @@ source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: MSW
+category: Testing
 tags:
   - MSW
   - testing
-  - Testing
 ---
 
 # MSW Mocks service worker 

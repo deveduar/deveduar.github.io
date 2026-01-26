@@ -6,13 +6,12 @@ source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: tool
+category: monitoreo
 tags:
   - tool
   - Hacking
   - pentesting
   - vulnerabilidades
-  - monitoreo
 ---
 # Acunetix scanner
 `$= dv.current().file.tags.join(" ")`

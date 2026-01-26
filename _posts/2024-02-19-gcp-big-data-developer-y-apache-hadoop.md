@@ -6,11 +6,10 @@ Parent: "[[Area-IA]]"
 keywords:
 source:
 public_note: "true"
-category: GCP
+category: Data Science
 tags:
   - GCP
   - IA
-  - Data Science
 ---
 # GCP Big Data Developer y Apache Hadoop
 `$= dv.current().file.tags.join(" ")`

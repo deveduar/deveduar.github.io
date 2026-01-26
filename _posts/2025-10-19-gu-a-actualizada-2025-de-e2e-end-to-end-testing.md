@@ -7,8 +7,6 @@ status: 📌
 Parent: "[[Area-Prog]]"
 public_note: "true"
 category: Testing
-tags:
-  - Testing
 ---
 # Guía Actualizada 2025 de E2E – “End-to-End Testing
 `$= dv.current().file.tags.join(" ")`

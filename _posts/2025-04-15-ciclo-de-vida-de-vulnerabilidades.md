@@ -7,11 +7,10 @@ status: 🌟
 Parent: "[[Area-Sistemas]]"
 aliases:
 public_note: "true"
-category: Hacking
+category: ciberseguridad
 tags:
   - Hacking
   - vulnerabilidades
-  - ciberseguridad
 ---
 # Ciclo de vida de vulnerabilidades
 ``$= dv.current().file.tags.join(" ")``

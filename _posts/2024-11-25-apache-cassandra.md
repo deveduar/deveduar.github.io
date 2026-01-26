@@ -7,12 +7,11 @@ status: 🌟
 Parent: "[[Area-Sistemas]]"
 aliases:
 public_note: "true"
-category: apache
+category: cloud
 tags:
   - apache
   - apache-cassandra
   - db
-  - cloud
 ---
 # apache cassandra
 `$= dv.current().file.tags.join(" ")`

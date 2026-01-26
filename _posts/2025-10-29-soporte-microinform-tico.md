@@ -6,11 +6,10 @@ source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: sistemas
+category: Sistemas
 tags:
   - sistemas
   - soporte
-  - Sistemas
 ---
 # Soporte Microinformático
 `$= dv.current().file.tags.join(" ")`

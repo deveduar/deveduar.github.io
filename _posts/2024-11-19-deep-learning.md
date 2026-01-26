@@ -6,12 +6,11 @@ source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: IA
+category: Data Science
 tags:
   - IA
   - datascience
   - deep-learning
-  - Data Science
 ---
 # Deep Learning
 ``$= dv.current().file.tags.join(" ")``

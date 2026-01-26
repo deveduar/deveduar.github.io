@@ -6,12 +6,11 @@ Parent: "[[Area-Sistemas]]"
 keywords:
 source:
 public_note: "true"
-category: GCP
+category: Data Science
 tags:
   - GCP
   - IA
   - data-science
-  - Data Science
 ---
 # GCP Google cloud
 `$= dv.current().file.tags.join(" ")`

@@ -7,8 +7,6 @@ status: 📌
 Parent: "[[Area-Prog]]"
 public_note: "true"
 category: Testing
-tags:
-  - Testing
 ---
 # Quality Assurance Estrategia y Gobierno
 `$= dv.current().file.tags.join(" ")`

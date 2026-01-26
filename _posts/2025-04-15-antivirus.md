@@ -6,12 +6,11 @@ source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: Hacking
+category: ciberseguridad
 tags:
   - Hacking
   - antivirus
   - malware
-  - ciberseguridad
 ---
 # Antivirus
 ``$= dv.current().file.tags.join(" ")``

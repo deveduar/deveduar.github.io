@@ -7,8 +7,6 @@ status: 📌
 Parent: "[[Area-Prog]]"
 public_note: "true"
 category: Testing
-tags:
-  - Testing
 ---
 # testing asíncrono en Jest con Promises y async await
 `$= dv.current().file.tags.join(" ")`

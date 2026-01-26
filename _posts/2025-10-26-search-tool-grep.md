@@ -6,13 +6,12 @@ source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: sistemas
+category: Sistemas
 tags:
   - sistemas
   - search
   - search_tool
   - Productividad
-  - Sistemas
 ---
 # search tool grep
 `$= dv.current().file.tags.join(" ")`

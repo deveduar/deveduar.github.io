@@ -6,12 +6,11 @@ source:
 status: 🚀
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: stream_processing
+category: Backend
 tags:
   - stream_processing
   - kafka
   - CS
-  - Backend
 ---
 # Stream Processing
 `$= dv.current().file.tags.join(" ")`
@@ -298,7 +297,7 @@ tags:
 `$= dv.current().file.tags.join(" ")`
 
 ## Conceptos Fundamentales
-- [Stream Processing](/stream_processing/stream-processing/)
+- [Stream Processing](/backend/stream-processing/)
 - Event Streaming
 - Micro-batches
 - True Streaming

@@ -6,10 +6,9 @@ Parent: "[[Area-Prog]]"
 keywords:
 source:
 public_note: "true"
-category: DB
+category: Databases
 tags:
   - DB
-  - Databases
 ---
 # DB-Fundamentos y documentos
 `$= dv.current().file.tags.join(" ")`

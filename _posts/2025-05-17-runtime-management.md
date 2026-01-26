@@ -7,12 +7,11 @@ status: 🌟
 Parent: "[[Area-Prog]]"
 aliases:
 public_note: "true"
-category: devops
+category: Backend
 tags:
   - devops
   - monitoreo
   - procesos
-  - Backend
 ---
 # Runtime Management
 ``$= dv.current().file.tags.join(" ")``

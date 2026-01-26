@@ -6,7 +6,7 @@ source:
 status: 📌
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: desarrollo
+category: uncategorized
 tags:
   - desarrollo
   - programming

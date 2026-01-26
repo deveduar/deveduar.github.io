@@ -7,7 +7,7 @@ status: 🚀
 Parent: "[[Area-Sistemas]]"
 aliases:
 public_note: "true"
-category: IaC
+category: devops
 tags:
   - IaC
   - devops
@@ -131,7 +131,7 @@ El enfoque IaC es clave para SRE porque:
 # IaC avanzada: prácticas, evolución y tendencias
 `$= dv.current().file.tags.join(" ")`
 
-- [IInfraestructura como codigo](/iac/iinfraestructura-como-codigo/)
+- [IInfraestructura como codigo](/devops/iinfraestructura-como-codigo/)
 - [devops](/uncategorized/devops/)
 - [CICD](/devops/cicd/)
 - Automatizacion

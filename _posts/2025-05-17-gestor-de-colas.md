@@ -6,11 +6,10 @@ source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: backend
+category: Backend
 tags:
   - backend
   - rabbitmq
-  - Backend
 ---
 # Gestor de Colas
 `$= dv.current().file.tags.join(" ")`

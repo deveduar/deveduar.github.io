@@ -6,7 +6,7 @@ Parent: "[[Area-Sistemas]]"
 keywords:
 source:
 public_note: "true"
-category: Linux
+category: uncategorized
 tags:
   - Linux
 ---

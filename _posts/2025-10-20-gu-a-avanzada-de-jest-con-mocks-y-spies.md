@@ -7,10 +7,9 @@ source:
 status: 📌
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: Codes
+category: Testing
 tags:
   - Codes
-  - Testing
 ---
 # Guía avanzada de Jest con mocks y spies
 `$= dv.current().file.tags.join(" ")`

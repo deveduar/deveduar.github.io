@@ -6,14 +6,13 @@ source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: storybook
+category: Frontend
 tags:
   - storybook
   - CSS
   - components
   - testing
   - documentacion
-  - Frontend
 ---
 # Storybook
 

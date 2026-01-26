@@ -7,11 +7,10 @@ keywords:
 aliases:
 source:
 public_note: "true"
-category: CS
+category: Computer Science
 tags:
   - CS
   - Codes
-  - Computer Science
 ---
 # Comunicación entre Procesos
 `$= dv.current().file.tags.join(" ")`

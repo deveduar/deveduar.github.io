@@ -6,11 +6,10 @@ source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: computer_Science
+category: Computer Science
 tags:
   - computer_Science
   - CS
-  - Computer Science
 ---
 # algoritmos y tecnicas de computacion
 `$= dv.current().file.tags.join(" ")`

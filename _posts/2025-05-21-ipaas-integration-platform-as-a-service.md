@@ -6,11 +6,10 @@ source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: IT
+category: infraestructura IT
 tags:
   - IT
   - infraestructura
-  - infraestructura IT
 ---
 # iPaaS Integration Platform as a Service
 `$= dv.current().file.tags.join(" ")`

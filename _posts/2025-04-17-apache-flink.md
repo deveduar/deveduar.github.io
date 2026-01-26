@@ -6,12 +6,11 @@ source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: apache
+category: Backend
 tags:
   - apache
   - stream_processing
   - kafka
-  - Backend
 ---
 # apache flink
 ``$= dv.current().file.tags.join(" ")``
@@ -78,7 +77,7 @@ tags:
 
 ## Comparativa con Apache Spark
 ### Diferencias principales
-| Característica           | [apache spark](/data%20science/apache-spark/)                                           | [apache flink](/apache/apache-flink/)                  |
+| Característica           | [apache spark](/data%20science/apache-spark/)                                           | [apache flink](/backend/apache-flink/)                  |
 | ------------------------ | ---------------------------------------------------------- | --------------------------------- |
 | Modelo de procesamiento  | Batch processing                                           | Data streaming                    |
 | Procesamiento de eventos | Microlotes                                                 | En tiempo real                    |
@@ -93,7 +92,7 @@ tags:
 
 ## Comparativa con Apache Kafka
 ### Roles dentro del flujo de datos
-|                 | [Apache Kafka](/backend/apache-kafka/)                        | [apache flink](/apache/apache-flink/)                                               |
+|                 | [Apache Kafka](/backend/apache-kafka/)                        | [apache flink](/backend/apache-flink/)                                               |
 | --------------- | --------------------------------------- | -------------------------------------------------------------- |
 | Función         | Almacén de eventos distribuido          | Marco de procesamiento de flujos                               |
 | Uso             | Ideal para ingerir datos en tiempo real | Ideal para aplicaciones de streaming complejas y a gran escala |

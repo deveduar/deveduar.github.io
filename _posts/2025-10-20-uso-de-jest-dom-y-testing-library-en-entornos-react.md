@@ -7,8 +7,6 @@ status: 📌
 Parent: "[[Area-Prog]]"
 public_note: "true"
 category: Testing
-tags:
-  - Testing
 ---
 # Uso de jest-dom y Testing Library en entornos React
 `$= dv.current().file.tags.join(" ")`

@@ -7,7 +7,7 @@ status: 🚀
 Parent: "[[Area-Sistemas]]"
 aliases:
 public_note: "true"
-category: devops
+category: uncategorized
 tags:
   - devops
   - monitoreo

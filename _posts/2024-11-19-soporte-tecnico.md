@@ -6,12 +6,11 @@ source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: soporte
+category: infraestructura IT
 tags:
   - soporte
   - analisis
   - cloud
-  - infraestructura IT
 ---
 # soporte tecnico
 `$= dv.current().file.tags.join(" ")`

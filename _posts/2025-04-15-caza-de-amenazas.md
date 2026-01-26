@@ -7,11 +7,10 @@ status: 🌟
 Parent: "[[Area-Sistemas]]"
 aliases:
 public_note: "true"
-category: Hacking
+category: ciberseguridad
 tags:
   - Hacking
   - amenazas
-  - ciberseguridad
 ---
 # Caza de amenazas
 ``$= dv.current().file.tags.join(" ")``

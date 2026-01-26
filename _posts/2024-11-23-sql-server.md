@@ -6,11 +6,10 @@ source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: MySQL
+category: devops
 tags:
   - MySQL
   - sql-server
-  - devops
 ---
 # SQL Server
 `$= dv.current().file.tags.join(" ")`

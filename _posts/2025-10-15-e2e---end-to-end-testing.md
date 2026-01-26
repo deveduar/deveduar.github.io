@@ -6,11 +6,10 @@ source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: testing
+category: Testing
 tags:
   - testing
   - e2e
-  - Testing
 ---
 # E2E - End to End Testing
 `$= dv.current().file.tags.join(" ")`

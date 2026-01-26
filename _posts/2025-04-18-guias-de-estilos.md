@@ -6,14 +6,13 @@ source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: frontend
+category: Frontend
 tags:
   - frontend
   - desing
   - CSS
   - design_tokens
   - design_systems
-  - Frontend
 ---
 # guias de estilos
 `$= dv.current().file.tags.join(" ")`

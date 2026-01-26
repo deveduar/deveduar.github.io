@@ -6,11 +6,10 @@ source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: computer_Science
+category: Computer Science
 tags:
   - computer_Science
   - CS
-  - Computer Science
 ---
 # Estructuras de Datos
 `$= dv.current().file.tags.join(" ")`
@@ -884,5 +883,5 @@ Estrategias para minimizar colisiones y optimizar espacio:
 
 ---
 
-🧠 Esta nota amplía el glosario de [estructuras de datos](/computer_science/estructuras-de-datos/) incluyendo estructuras **modernas, concurrentes, funcionales y probabilísticas**, abarcando enfoques teóricos y prácticos de nivel avanzado.
+🧠 Esta nota amplía el glosario de [estructuras de datos](/computer%20science/estructuras-de-datos/) incluyendo estructuras **modernas, concurrentes, funcionales y probabilísticas**, abarcando enfoques teóricos y prácticos de nivel avanzado.
 

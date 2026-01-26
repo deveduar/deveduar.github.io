@@ -7,8 +7,6 @@ status: 📌
 Parent: "[[Area-Prog]]"
 public_note: "true"
 category: Testing
-tags:
-  - Testing
 ---
 # Testing Fundamental Multilenguaje 2025 Prácticas y Ejemplos
 `$= dv.current().file.tags.join(" ")`

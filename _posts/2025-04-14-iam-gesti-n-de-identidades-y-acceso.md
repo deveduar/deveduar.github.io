@@ -6,12 +6,11 @@ source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: autentication
+category: autenticacion
 tags:
   - autentication
   - Hacking
   - ciberseguridad
-  - autenticacion
 ---
 # IAM  Gestión de Identidades y Acceso
 `$= dv.current().file.tags.join(" ")`

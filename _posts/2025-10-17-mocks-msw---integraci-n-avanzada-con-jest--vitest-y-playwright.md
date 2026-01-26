@@ -7,8 +7,6 @@ status: 📌
 Parent: "[[Area-Prog]]"
 public_note: "true"
 category: Testing
-tags:
-  - Testing
 ---
 
 # Mocks MSW - integración avanzada con Jest, Vitest y Playwright

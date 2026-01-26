@@ -4,8 +4,6 @@ Parent: "[[Area-Prog]]"
 status: 📌
 public_note: "true"
 category: Testing
-tags:
-  - Testing
 ---
 # 🧪 Prácticas Modernas y Ejemplos de Testing (2025)
 

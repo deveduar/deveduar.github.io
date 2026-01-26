@@ -6,11 +6,10 @@ source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: JS
+category: Software engineering
 tags:
   - JS
   - typescript
-  - Software engineering
 ---
 # typescript
 `$= dv.current().file.tags.join(" ")`

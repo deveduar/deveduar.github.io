@@ -6,12 +6,11 @@ source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: webcomponents
+category: Frontend
 tags:
   - webcomponents
   - frontend
   - webdevelopment
-  - Frontend
 ---
 # Web Components  
 `$= dv.current().file.tags.join(" ")`

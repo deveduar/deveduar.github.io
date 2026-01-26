@@ -8,12 +8,11 @@ source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: JS
+category: Computer Science
 tags:
   - JS
   - CS
   - mates
-  - Computer Science
 ---
 # Expresiones regulares
 `$= dv.current().file.tags.join(" ")`

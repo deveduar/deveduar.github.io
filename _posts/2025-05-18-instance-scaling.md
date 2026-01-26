@@ -6,12 +6,11 @@ source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: backend
+category: Backend
 tags:
   - backend
   - devops
   - scaling
-  - Backend
 ---
 # Instance Scaling
 ``$= dv.current().file.tags.join(" ")``

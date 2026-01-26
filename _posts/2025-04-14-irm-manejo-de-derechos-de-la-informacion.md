@@ -6,11 +6,10 @@ source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: hardening
+category: ciberseguridad
 tags:
   - hardening
   - Hacking
-  - ciberseguridad
 ---
 # IRM — Manejo de Derechos de la Información  
 ``$= dv.current().file.tags.join(" ")``

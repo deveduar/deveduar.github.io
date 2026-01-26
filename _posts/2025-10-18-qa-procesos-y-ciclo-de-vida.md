@@ -7,8 +7,6 @@ status: 📌
 Parent: "[[Area-Prog]]"
 public_note: "true"
 category: uncategorized
-tags:
-  - uncategorized
 ---
 # QA: Procesos y Ciclo de Vida
 `$= dv.current().file.tags.join(" ")`

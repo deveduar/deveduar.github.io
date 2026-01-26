@@ -6,12 +6,11 @@ source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: ITIL
+category: infraestructura IT
 tags:
   - ITIL
   - SI
   - infraestructura
-  - infraestructura IT
 ---
 # SI Sistema de Información
 ``$= dv.current().file.tags.join(" ")``

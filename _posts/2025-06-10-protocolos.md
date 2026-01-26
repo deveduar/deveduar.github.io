@@ -7,11 +7,10 @@ status: 🌟
 Parent: "[[Area-Sistemas]]"
 aliases:
 public_note: "true"
-category: protocolo
+category: Redes
 tags:
   - protocolo
   - redes
-  - Redes
 ---
 # Protocolos
 `$= dv.current().file.tags.join(" ")`

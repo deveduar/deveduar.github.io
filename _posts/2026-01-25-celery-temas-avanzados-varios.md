@@ -2,8 +2,6 @@
 title: Celery Temas Avanzados Varios
 public_note: "true"
 category: uncategorized
-tags:
-  - uncategorized
 ---
 # Celery Temas Avanzados Varios
 

@@ -6,12 +6,11 @@ source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: computer_Science
+category: Computer Science
 tags:
   - computer_Science
   - CS
   - patrones_diseo
-  - Computer Science
 ---
 # Patrones de diseño
 `$= dv.current().file.tags.join(" ")`
@@ -486,7 +485,7 @@ interface UserRepository {
 # Patrones de diseño — Ejemplos de código
 `$= dv.current().file.tags.join(" ")`
 
-- [Patrones de diseño](/computer_science/patrones-de-dise-o/)
+- [Patrones de diseño](/computer%20science/patrones-de-dise-o/)
 - Arquitectura de Software
 - [POO Programación Orientada a Objetos](/computer%20science/poo-programaci-n-orientada-a-objetos/)
 - [SOLID](/computer%20science/solid/)
@@ -1075,7 +1074,7 @@ server.listen(4000, () => console.log("Servidor Reactor en puerto 4000"));
 # Patrones de diseño — Tests y escenarios de integración
 `$= dv.current().file.tags.join(" ")`
 
-- [Patrones de diseño](/computer_science/patrones-de-dise-o/)
+- [Patrones de diseño](/computer%20science/patrones-de-dise-o/)
 - Arquitectura de Software
 - [SOLID](/computer%20science/solid/)
 
@@ -1558,7 +1557,7 @@ kernel.execute("request", { url: "/home" });
 # Patrones de diseño — Integraciones avanzadas
 `$= dv.current().file.tags.join(" ")`
 
-- [Patrones de diseño](/computer_science/patrones-de-dise-o/)
+- [Patrones de diseño](/computer%20science/patrones-de-dise-o/)
 - Arquitectura de Software
 - DDD Domain Driven Design
 - CQRS
@@ -1981,7 +1980,7 @@ for i in range(5):
 `$= dv.current().file.tags.join(" ")`
 
 - Arquitectura de Software
-- [Patrones de diseño](/computer_science/patrones-de-dise-o/)
+- [Patrones de diseño](/computer%20science/patrones-de-dise-o/)
 - Microservicios
 - Event Driven Architecture
 - CQRS

@@ -6,7 +6,7 @@ source:
 status: 📌
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: CSS
+category: uncategorized
 tags:
   - CSS
 ---

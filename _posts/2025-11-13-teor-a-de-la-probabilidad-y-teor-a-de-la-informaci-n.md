@@ -7,8 +7,6 @@ status: 🌟
 Parent: "[[Area-IA]]"
 public_note: "true"
 category: mates
-tags:
-  - mates
 ---
 # 🧮 Teoría de la probabilidad y teoría de la información
 `$= dv.current().file.tags.join(" ")`

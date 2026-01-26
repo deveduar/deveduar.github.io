@@ -6,11 +6,10 @@ source:
 status: 📌
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: redes
+category: Redes
 tags:
   - redes
   - mascara_de_red
-  - Redes
 ---
 # mascara de red
 `$= dv.current().file.tags.join(" ")`

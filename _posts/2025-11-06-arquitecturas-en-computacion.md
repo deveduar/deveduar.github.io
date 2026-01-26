@@ -6,11 +6,10 @@ source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: CS
+category: Computer Science
 tags:
   - CS
   - computer_Science
-  - Computer Science
 ---
 # Arquitecturas en Computación
 `$= dv.current().file.tags.join(" ")`

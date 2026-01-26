@@ -7,8 +7,6 @@ status: 📌
 Parent: "[[Area-Prog]]"
 public_note: "true"
 category: Testing
-tags:
-  - Testing
 ---
 # Guías de aprendizaje y práctica avanzada con Jest
 `$= dv.current().file.tags.join(" ")`

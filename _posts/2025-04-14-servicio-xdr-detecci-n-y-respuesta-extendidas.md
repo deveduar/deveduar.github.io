@@ -7,11 +7,10 @@ status: 🌟
 Parent: "[[Area-Sistemas]]"
 aliases:
 public_note: "true"
-category: Hacking
+category: ciberseguridad
 tags:
   - Hacking
   - servicio
-  - ciberseguridad
 ---
 # Servicio XDR – Detección y Respuesta Extendidas
 `$= dv.current().file.tags.join(" ")`

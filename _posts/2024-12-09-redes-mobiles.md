@@ -6,7 +6,7 @@ source:
 status: 📌
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: redes
+category: uncategorized
 tags:
   - redes
   - network

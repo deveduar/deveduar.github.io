@@ -6,11 +6,10 @@ source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: edi
+category: Gestion de Negocio
 tags:
   - edi
   - IT
-  - Gestion de Negocio
 ---
 # EDI Intercambio Electrónico de Datos
 `$= dv.current().file.tags.join(" ")`

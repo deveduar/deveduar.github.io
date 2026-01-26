@@ -6,13 +6,12 @@ source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: virtualizacion
+category: Virtualizacion
 tags:
   - virtualizacion
   - devtools
   - devcontainers
   - docker
-  - Virtualizacion
 ---
 # Devcontainers
 `$= dv.current().file.tags.join(" ")`

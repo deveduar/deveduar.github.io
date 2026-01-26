@@ -6,13 +6,12 @@ source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: spring
+category: Backend
 tags:
   - spring
   - java
   - api
   - backend
-  - Backend
 ---
 # Springboot 
 `$= dv.current().file.tags.join(" ")`
@@ -164,7 +163,7 @@ tags:
 # Spring Boot — Conceptos Avanzados y Expansión
 `$= dv.current().file.tags.join(" ")`
 
-> Extensión complementaria de la nota base sobre [Springboot](/spring/springboot/), enfocada en temas intermedios y avanzados **no tratados anteriormente**, sin repeticiones.
+> Extensión complementaria de la nota base sobre [Springboot](/backend/springboot/), enfocada en temas intermedios y avanzados **no tratados anteriormente**, sin repeticiones.
 
 ---
 

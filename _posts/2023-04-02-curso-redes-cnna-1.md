@@ -6,11 +6,10 @@ Parent: "[[Area-Sistemas]]"
 keywords:
 source:
 public_note: "true"
-category: Devops
+category: Redes
 tags:
   - Devops
   - redes
-  - Redes
 ---
 # curso-redes-CNNA-1
 `$= dv.current().file.tags.join(" ")`

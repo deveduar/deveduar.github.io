@@ -6,11 +6,10 @@ source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: AOP
+category: Computer Science
 tags:
   - AOP
   - CS
-  - Computer Science
 ---
 # AOP (Programación Orientada a Aspectos)
 ``$= dv.current().file.tags.join(" ")``
@@ -449,7 +448,7 @@ Incluye temas de integración con infraestructuras modernas, evolución del para
 
 # Guía Práctica de Implementación AOP
 
-Esta nota presenta una guía práctica para implementar [AOP Programación Orientada a Aspectos](/aop/aop-programaci-n-orientada-a-aspectos/) (Programación Orientada a Aspectos) con ejemplos en distintos lenguajes y frameworks.  
+Esta nota presenta una guía práctica para implementar [AOP Programación Orientada a Aspectos](/computer%20science/aop-programaci-n-orientada-a-aspectos/) (Programación Orientada a Aspectos) con ejemplos en distintos lenguajes y frameworks.  
 Incluye estrategias, patrones de código, herramientas y recomendaciones de implementación real.
 
 ---
@@ -789,7 +788,7 @@ El patrón de interceptación (ya sea vía decoradores, proxies o middleware) pe
 
 # AOP: Implementaciones Avanzadas y Casos Especializados
 
-Esta nota amplía la guía de implementación de [AOP Programación Orientada a Aspectos](/aop/aop-programaci-n-orientada-a-aspectos/) abordando temas avanzados: patrones especializados, configuración dinámica, instrumentación en tiempo de ejecución, integración con herramientas de observabilidad y estrategias de diseño para entornos complejos.
+Esta nota amplía la guía de implementación de [AOP Programación Orientada a Aspectos](/computer%20science/aop-programaci-n-orientada-a-aspectos/) abordando temas avanzados: patrones especializados, configuración dinámica, instrumentación en tiempo de ejecución, integración con herramientas de observabilidad y estrategias de diseño para entornos complejos.
 
 ---
 
@@ -1203,7 +1202,7 @@ En arquitecturas modernas, los aspectos ya no se limitan al código, sino que ab
 
 # Glosario AOP
 
-Glosario completo de términos, conceptos, patrones y técnicas relacionados con [AOP Programación Orientada a Aspectos](/aop/aop-programaci-n-orientada-a-aspectos/) (Programación Orientada a Aspectos). Incluye fundamentos, implementaciones, estrategias avanzadas y su integración con otras arquitecturas modernas.
+Glosario completo de términos, conceptos, patrones y técnicas relacionados con [AOP Programación Orientada a Aspectos](/computer%20science/aop-programaci-n-orientada-a-aspectos/) (Programación Orientada a Aspectos). Incluye fundamentos, implementaciones, estrategias avanzadas y su integración con otras arquitecturas modernas.
 
 ---
 
@@ -1462,6 +1461,6 @@ Patrón que crea un intermediario para controlar el acceso a otro objeto, base d
 
 ## Conclusión
 
-[AOP Programación Orientada a Aspectos](/aop/aop-programaci-n-orientada-a-aspectos/) es un paradigma que extiende los principios de la [POO Programación Orientada a Objetos](/computer%20science/poo-programaci-n-orientada-a-objetos/) al proporcionar una forma declarativa y modular de abordar las preocupaciones transversales.  
+[AOP Programación Orientada a Aspectos](/computer%20science/aop-programaci-n-orientada-a-aspectos/) es un paradigma que extiende los principios de la [POO Programación Orientada a Objetos](/computer%20science/poo-programaci-n-orientada-a-objetos/) al proporcionar una forma declarativa y modular de abordar las preocupaciones transversales.  
 Su implementación en entornos modernos permite construir sistemas **más limpios, observables y configurables**, integrando de forma natural prácticas de DevOps, Arquitectura Limpia, CQRS y Event Sourcing.
 

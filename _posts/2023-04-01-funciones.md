@@ -6,10 +6,9 @@ Parent: "[[Area-IA]]"
 keywords:
 source:
 public_note: "true"
-category: Mates
+category: mates
 tags:
   - Mates
-  - mates
 ---
 # Funciones
 

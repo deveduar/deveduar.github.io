@@ -6,11 +6,10 @@ source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: frontend
+category: Frontend
 tags:
   - frontend
   - accesibilidad
-  - Frontend
 ---
 # Accesibilidad
 ``$= dv.current().file.tags.join(" ")``

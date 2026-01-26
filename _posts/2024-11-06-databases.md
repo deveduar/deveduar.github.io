@@ -7,7 +7,7 @@ status: 🚀
 Parent: "[[Area-Prog]]"
 aliases:
 public_note: "true"
-category: db
+category: uncategorized
 tags:
   - db
   - MySQL

@@ -6,12 +6,11 @@ source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: Hacking
+category: ciberseguridad
 tags:
   - Hacking
   - dfir
   - forense
-  - ciberseguridad
 ---
 # Purple Team
 `$= dv.current().file.tags.join(" ")`

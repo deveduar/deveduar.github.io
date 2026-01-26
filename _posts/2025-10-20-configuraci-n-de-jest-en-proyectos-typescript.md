@@ -7,8 +7,6 @@ status: 📌
 Parent: "[[Area-Prog]]"
 public_note: "true"
 category: Testing
-tags:
-  - Testing
 ---
 # Configuración de Jest en proyectos TypeScript
 `$= dv.current().file.tags.join(" ")`

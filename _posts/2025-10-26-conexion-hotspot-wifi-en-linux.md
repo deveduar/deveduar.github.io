@@ -6,12 +6,11 @@ source:
 status: 📌
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: redes
+category: Sistemas
 tags:
   - redes
   - sistemas
   - Linux
-  - Sistemas
 ---
 # conexion hotspot wifi
 `$= dv.current().file.tags.join(" ")`

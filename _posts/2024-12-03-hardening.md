@@ -6,11 +6,10 @@ source:
 status: 🚀
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: Hacking
+category: ciberseguridad
 tags:
   - Hacking
   - hardening
-  - ciberseguridad
 ---
 # Hardening  
 `$= dv.current().file.tags.join(" ")`

@@ -6,7 +6,7 @@ source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: automation
+category: Automatizacion y Build
 tags:
   - automation
   - autohotkey
@@ -14,7 +14,6 @@ tags:
   - sistemas
   - Linux
   - Windows
-  - Automatizacion y Build
 ---
 # autohotkey
 `$= dv.current().file.tags.join(" ")`

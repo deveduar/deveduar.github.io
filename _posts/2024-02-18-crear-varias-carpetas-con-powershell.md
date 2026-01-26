@@ -6,10 +6,9 @@ source:
 status: 📌
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: Windows
+category: powershell
 tags:
   - Windows
-  - powershell
 ---
 # Crear varias carpetas con PowerShell
 `$= dv.current().file.tags.join(" ")`

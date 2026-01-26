@@ -6,13 +6,12 @@ source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: apache
+category: Backend
 tags:
   - apache
   - kafka
   - microservicios
   - devops
-  - Backend
 ---
 # Apache Kafka
 `$= dv.current().file.tags.join(" ")`

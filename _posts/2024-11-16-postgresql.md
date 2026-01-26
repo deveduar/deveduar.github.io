@@ -6,11 +6,10 @@ source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: postgres
+category: Databases
 tags:
   - postgres
   - db
-  - Databases
 ---
 # postgreSQL
 `$= dv.current().file.tags.join(" ")`

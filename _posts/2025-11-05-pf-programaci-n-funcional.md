@@ -7,12 +7,11 @@ status: 🌟
 Parent: "[[Area-Prog]]"
 aliases:
 public_note: "true"
-category: CS
+category: Computer Science
 tags:
   - CS
   - arquitectura
   - programming
-  - Computer Science
 ---
 # PF Programación Funcional
 ``$= dv.current().file.tags.join(" ")``

@@ -6,11 +6,10 @@ source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: playwright
+category: Testing
 tags:
   - playwright
   - testing
-  - Testing
 ---
 # Playwright  
 `$= dv.current().file.tags.join(" ")`

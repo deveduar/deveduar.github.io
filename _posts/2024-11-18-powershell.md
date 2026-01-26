@@ -6,10 +6,9 @@ source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: powershell
+category: Sistemas
 tags:
   - powershell
-  - Sistemas
 ---
 # PowerShell
 `$= dv.current().file.tags.join(" ")`

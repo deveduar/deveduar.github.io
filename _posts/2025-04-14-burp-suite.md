@@ -6,13 +6,12 @@ source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: Hacking
+category: ciberseguridad
 tags:
   - Hacking
   - pentesting
   - burp-suite
   - tool
-  - ciberseguridad
 ---
 # Burp Suite
 ``$= dv.current().file.tags.join(" ")``

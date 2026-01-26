@@ -7,8 +7,6 @@ status: 📌
 Parent: "[[Area-Prog]]"
 public_note: "true"
 category: Testing
-tags:
-  - Testing
 ---
 # Arquitectura de Cucumber
 `$= dv.current().file.tags.join(" ")`

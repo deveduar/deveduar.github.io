@@ -4,11 +4,10 @@ title: javascript
 status: 🌟
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: JS
+category: Desarrollo web
 tags:
   - JS
   - Scraping
-  - Desarrollo web
 ---
 # JavaScript
 `$= dv.current().file.tags.join(" ")`

@@ -7,10 +7,9 @@ source:
 status: 🌟
 Parent: "[[Area-IA]]"
 public_note: "true"
-category: Mates
+category: mates
 tags:
   - Mates
-  - mates
 ---
 # Teoria de juegos
 `$= dv.current().file.tags.join(" ")`

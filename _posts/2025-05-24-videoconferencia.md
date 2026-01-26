@@ -6,11 +6,10 @@ source:
 status: 📌
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: redes
+category: Telefona y UC
 tags:
   - redes
   - voip
-  - Telefona y UC
 ---
 # Videoconferencia
 

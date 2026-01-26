@@ -6,7 +6,7 @@ source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: sre
+category: devops
 tags:
   - sre
   - devops
@@ -145,7 +145,7 @@ Integra métricas cuantificables (SLO, SLI), procesos automatizados (Automatizac
 
 # SRE Avanzado: Prácticas, Cultura y Evolución
 
-[SRE Site Reliability Engineering](/sre/sre-site-reliability-engineering/) | [devops](/uncategorized/devops/) | Automatizacion | [Gestion de Negocio](/uncategorized/gestion-de-negocio/)
+[SRE Site Reliability Engineering](/devops/sre-site-reliability-engineering/) | [devops](/uncategorized/devops/) | Automatizacion | [Gestion de Negocio](/uncategorized/gestion-de-negocio/)
 
 ---
 
@@ -305,7 +305,7 @@ Su objetivo final es **crear sistemas adaptativos, observables y sostenibles**, 
 # SRE: Extensión Avanzada de Conceptos y Prácticas Emergentes
 $= dv.current().file.tags.join(" ")
 
-[SRE Site Reliability Engineering](/sre/sre-site-reliability-engineering/) | [devops](/uncategorized/devops/) | Automatizacion | [Gestion de Negocio](/uncategorized/gestion-de-negocio/) | [IInfraestructura como codigo](/devops/iinfraestructura-como-codigo/)
+[SRE Site Reliability Engineering](/devops/sre-site-reliability-engineering/) | [devops](/uncategorized/devops/) | Automatizacion | [Gestion de Negocio](/uncategorized/gestion-de-negocio/) | [IInfraestructura como codigo](/devops/iinfraestructura-como-codigo/)
 
 ---
 
@@ -483,7 +483,7 @@ El objetivo ya no es solo evitar fallos, sino **crear sistemas resilientes, adap
 
 # SRE: Expansión Experta y Temas de Frontera
 
-[SRE Site Reliability Engineering](/sre/sre-site-reliability-engineering/) | [devops](/uncategorized/devops/) | Automatizacion | [Gestion de Negocio](/uncategorized/gestion-de-negocio/) | [IInfraestructura como codigo](/devops/iinfraestructura-como-codigo/)
+[SRE Site Reliability Engineering](/devops/sre-site-reliability-engineering/) | [devops](/uncategorized/devops/) | Automatizacion | [Gestion de Negocio](/uncategorized/gestion-de-negocio/) | [IInfraestructura como codigo](/devops/iinfraestructura-como-codigo/)
 
 ---
 

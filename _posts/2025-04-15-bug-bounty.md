@@ -6,10 +6,9 @@ source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: vulnerabilidades
+category: ciberseguridad
 tags:
   - vulnerabilidades
-  - ciberseguridad
 ---
 # Bug Bounty
 ``$= dv.current().file.tags.join(" ")``

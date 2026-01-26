@@ -7,11 +7,10 @@ status: 🌟
 Parent: "[[Area-Sistemas]]"
 aliases:
 public_note: "true"
-category: autentication
+category: autenticacion
 tags:
   - autentication
   - Hacking
-  - autenticacion
 ---
 # SSO Single Sign-On
 `$= dv.current().file.tags.join(" ")` 

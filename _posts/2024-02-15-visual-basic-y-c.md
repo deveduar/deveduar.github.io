@@ -6,13 +6,12 @@ Parent: "[[Area-Prog]]"
 keywords:
 source:
 public_note: "true"
-category: CS
+category: Software engineering
 tags:
   - CS
   - visual_basic
   - cpp
   - excel
-  - Software engineering
 ---
 # C y Visual Basic
 `$= dv.current().file.tags.join(" ")`

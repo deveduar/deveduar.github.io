@@ -6,13 +6,12 @@ source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: MDM
+category: Sistemas
 tags:
   - MDM
   - moviles
   - sistemas
   - redes
-  - Sistemas
 ---
 # Gestión de Dispositivos Móviles MDM
 ``$= dv.current().file.tags.join(" ")``

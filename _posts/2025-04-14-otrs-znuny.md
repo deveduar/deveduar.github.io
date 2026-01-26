@@ -6,12 +6,11 @@ source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: Znuny
+category: infraestructura IT
 tags:
   - Znuny
   - OTRS
   - ITIL
-  - infraestructura IT
 ---
 # OTRS Znuny
 ``$= dv.current().file.tags.join(" ")``

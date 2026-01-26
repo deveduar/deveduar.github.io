@@ -6,14 +6,13 @@ source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: db
+category: monitoreo
 tags:
   - db
   - elasticsearh
   - backend
   - devops
   - ELK
-  - monitoreo
 ---
 # Elasticsearch
 `$= dv.current().file.tags.join(" ")`

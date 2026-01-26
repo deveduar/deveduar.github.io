@@ -2,8 +2,6 @@
 title: Celery Conceptos Avanzados y Configuración Profesional
 public_note: "true"
 category: uncategorized
-tags:
-  - uncategorized
 ---
 # Celery: Conceptos Avanzados y Configuración Profesional
 

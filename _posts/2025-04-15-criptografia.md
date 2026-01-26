@@ -6,12 +6,11 @@ source:
 status: 🚀
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: Hacking
+category: autenticacion
 tags:
   - Hacking
   - ciberseguridad
   - criptografia
-  - autenticacion
 ---
 # Criptografía
 `$= dv.current().file.tags.join(" ")` 

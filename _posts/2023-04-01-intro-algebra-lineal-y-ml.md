@@ -6,10 +6,9 @@ Parent: "[[Area-IA]]"
 keywords:
 source:
 public_note: "true"
-category: Mates
+category: mates
 tags:
   - Mates
-  - mates
 ---
 # Intro Algebra lineal y ML
 `$= dv.current().file.tags.join(" ")`

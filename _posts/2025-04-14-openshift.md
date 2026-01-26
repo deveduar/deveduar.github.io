@@ -6,12 +6,11 @@ source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: OpenShift
+category: Virtualizacion
 tags:
   - OpenShift
   - devops
   - virtualizacion
-  - Virtualizacion
 ---
 # OpenShift
 `$= dv.current().file.tags.join(" ")`

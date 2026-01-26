@@ -6,7 +6,7 @@ source:
 status: 🚀
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: Hacking
+category: uncategorized
 tags:
   - Hacking
   - ciberseguridad
@@ -109,7 +109,7 @@ tags:
 
 ## Servicios empresariales
 - servicios empresariales
-	- [ciberseguridad](/hacking/ciberseguridad/)
+	- [ciberseguridad](/uncategorized/ciberseguridad/)
 	- [SOC](/ciberseguridad/soc/) auditorias
 	- servicios de red y modelado
 	- [Redes](/uncategorized/redes/)

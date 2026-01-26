@@ -6,7 +6,7 @@ source:
 status: 🚀
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: GCP
+category: uncategorized
 tags:
   - GCP
   - IA

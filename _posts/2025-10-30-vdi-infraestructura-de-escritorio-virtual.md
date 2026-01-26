@@ -6,11 +6,10 @@ source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: virtualizacion
+category: Virtualizacion
 tags:
   - virtualizacion
   - VDI
-  - Virtualizacion
 ---
 # VDI Infraestructura de Escritorio Virtual
 `$= dv.current().file.tags.join(" ")`

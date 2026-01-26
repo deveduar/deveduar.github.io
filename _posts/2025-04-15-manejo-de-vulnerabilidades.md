@@ -7,11 +7,10 @@ status: 🌟
 Parent: "[[Area-Sistemas]]"
 aliases:
 public_note: "true"
-category: vulnerabilidades
+category: ciberseguridad
 tags:
   - vulnerabilidades
   - Hacking
-  - ciberseguridad
 ---
 # Manejo de Vulnerabilidades
 ``$= dv.current().file.tags.join(" ")``

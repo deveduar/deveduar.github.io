@@ -6,11 +6,10 @@ source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: Windows
+category: Sistemas
 tags:
   - Windows
   - powershell
-  - Sistemas
 ---
 # Problema ExecutionPolicy en PowerShell
 `$= dv.current().file.tags.join(" ")`

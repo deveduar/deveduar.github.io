@@ -6,11 +6,10 @@ Parent: "[[Area-IA]]"
 keywords:
 source:
 public_note: "true"
-category: IA
+category: Data Science
 tags:
   - IA
   - Huawei
-  - Data Science
 ---
 # IA con Huawei
 ``$= dv.current().file.tags.join(" ")``

@@ -6,13 +6,12 @@ source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: webservices
+category: Backend
 tags:
   - webservices
   - devops
   - backend
   - microservicios
-  - Backend
 ---
 # Web Services
 `$= dv.current().file.tags.join(" ")`

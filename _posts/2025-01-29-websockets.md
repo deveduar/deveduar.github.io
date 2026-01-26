@@ -6,12 +6,11 @@ source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: websockets
+category: Backend
 tags:
   - websockets
   - protocolo
   - backend
-  - Backend
 ---
 # WebSockets
 `$= dv.current().file.tags.join(" ")`

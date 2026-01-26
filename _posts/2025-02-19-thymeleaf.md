@@ -6,14 +6,13 @@ source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: thymeleaf
+category: Motor de plantillas
 tags:
   - thymeleaf
   - java
   - spring
   - springboot
   - template-engine
-  - Motor de plantillas
 ---
 # thymeleaf
 `$= dv.current().file.tags.join(" ")`

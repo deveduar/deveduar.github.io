@@ -7,11 +7,10 @@ status: 🌟
 Parent: "[[Area-Sistemas]]"
 aliases:
 public_note: "true"
-category: vulnerabilidades
+category: ciberseguridad
 tags:
   - vulnerabilidades
   - owasp
-  - ciberseguridad
 ---
 # vulnerabilidades
 ``$= dv.current().file.tags.join(" ")``

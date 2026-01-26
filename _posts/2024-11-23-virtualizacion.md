@@ -6,7 +6,7 @@ source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: virtualizacion
+category: devops
 tags:
   - virtualizacion
   - devops

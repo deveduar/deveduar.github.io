@@ -7,12 +7,11 @@ status: 🌟
 Parent: "[[Area-Sistemas]]"
 aliases:
 public_note: "true"
-category: hardening
+category: ciberseguridad
 tags:
   - hardening
   - Hacking
   - servicio
-  - ciberseguridad
 ---
 # Secure Service Edge SSE
 

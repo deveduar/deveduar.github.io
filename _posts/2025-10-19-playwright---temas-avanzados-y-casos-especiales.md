@@ -7,8 +7,6 @@ status: 📌
 Parent: "[[Area-Prog]]"
 public_note: "true"
 category: Testing
-tags:
-  - Testing
 ---
 # Playwright - Temas Avanzados y Casos Especiales  
 `$= dv.current().file.tags.join(" ")`

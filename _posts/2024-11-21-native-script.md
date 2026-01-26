@@ -6,12 +6,11 @@ source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: mobile-apps
+category: Desarrollo multiplataforma
 tags:
   - mobile-apps
   - NativeScript
   - angular
-  - Desarrollo multiplataforma
 ---
 # NativeScript
 `$= dv.current().file.tags.join(" ")`

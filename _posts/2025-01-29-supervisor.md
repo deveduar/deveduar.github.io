@@ -6,13 +6,12 @@ source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: supervisor
+category: Backend
 tags:
   - supervisor
   - procesos
   - backend
   - pythoon
-  - Backend
 ---
 # Supervisor
 `$= dv.current().file.tags.join(" ")`

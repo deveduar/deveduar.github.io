@@ -7,8 +7,6 @@ status: 📌
 Parent: "[[Area-Prog]]"
 public_note: "true"
 category: Testing
-tags:
-  - Testing
 ---
 # Cobertura de código en Jest y análisis con SonarQube
 `$= dv.current().file.tags.join(" ")`

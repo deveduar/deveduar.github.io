@@ -7,8 +7,6 @@ status: 📌
 Parent: "[[Area-Prog]]"
 public_note: "true"
 category: uncategorized
-tags:
-  - uncategorized
 ---
 # Estrategias de mocking para APIs y servicios externos con Jest
 `$= dv.current().file.tags.join(" ")`

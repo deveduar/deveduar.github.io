@@ -6,12 +6,11 @@ source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: VDC
+category: Virtualizacion
 tags:
   - VDC
   - virtualizacion
   - cloud
-  - Virtualizacion
 ---
 # VDC Virtual Data Center
 `$= dv.current().file.tags.join(" ")`

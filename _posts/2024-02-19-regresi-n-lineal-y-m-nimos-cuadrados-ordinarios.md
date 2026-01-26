@@ -6,10 +6,9 @@ Parent: "[[Area-IA]]"
 keywords:
 source:
 public_note: "true"
-category: IA
+category: Data Science
 tags:
   - IA
-  - Data Science
 ---
 # Regresión Lineal y Mínimos Cuadrados Ordinarios
 `$= dv.current().file.tags.join(" ")`

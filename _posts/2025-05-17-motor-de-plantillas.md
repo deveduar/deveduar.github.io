@@ -6,10 +6,9 @@ source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: template-engine
+category: Desarrollo web
 tags:
   - template-engine
-  - Desarrollo web
 ---
 # Motor de plantillas
 `$= dv.current().file.tags.join(" ")`

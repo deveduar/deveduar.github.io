@@ -6,12 +6,11 @@ source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: wordpress
+category: Desarrollo web
 tags:
   - wordpress
   - PHP
   - ecomerce
-  - Desarrollo web
 ---
 # Wordpress
 `$= dv.current().file.tags.join(" ")`

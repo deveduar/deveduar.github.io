@@ -6,11 +6,10 @@ source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: powerapps
+category: Desarrollo multiplataforma
 tags:
   - powerapps
   - Windows
-  - Desarrollo multiplataforma
 ---
 # Power Apps
 `$= dv.current().file.tags.join(" ")`

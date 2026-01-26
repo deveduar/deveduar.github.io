@@ -7,11 +7,10 @@ status: 🌟
 Parent: "[[Area-Sistemas]]"
 aliases:
 public_note: "true"
-category: servicio
+category: ciberseguridad
 tags:
   - servicio
   - Hacking
-  - ciberseguridad
 ---
 # Servicio MDR - Detección y Respuesta Administradas
 `$= dv.current().file.tags.join(" ")`

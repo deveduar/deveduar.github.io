@@ -6,10 +6,9 @@ Parent: "[[Area-Sistemas]]"
 keywords:
 source:
 public_note: "true"
-category: Devops
+category: devops
 tags:
   - Devops
-  - devops
 ---
 # Seguridad Web y Certificados TLS
 

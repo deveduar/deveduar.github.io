@@ -6,12 +6,11 @@ source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: excel
+category: Software engineering
 tags:
   - excel
   - cpp
   - vba
-  - Software engineering
 ---
 # Visual Basic VBA
 ``$= dv.current().file.tags.join(" ")``

@@ -7,8 +7,6 @@ status: 🌟
 Parent: "[[Area-IA]]"
 public_note: "true"
 category: mates
-tags:
-  - mates
 ---
 # 🧮 Cálculo numérico
 `$= dv.current().file.tags.join(" ")`

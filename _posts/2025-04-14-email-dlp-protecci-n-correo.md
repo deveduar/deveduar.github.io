@@ -6,7 +6,7 @@ source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: Hacking
+category: ciberseguridad
 tags:
   - Hacking
   - ciberseguridad
@@ -140,7 +140,7 @@ tags:
 # Herramientas, Frameworks y Enfoque Práctico para Email DLP
 
 - [hardening](/ciberseguridad/hardening/)
-- [Email DLP Protección Correo](/hacking/email-dlp-protecci-n-correo/)
+- [Email DLP Protección Correo](/ciberseguridad/email-dlp-protecci-n-correo/)
 
 ## Frameworks y Estándares Relevantes
 - **NIST 800-53 / 800-171**  

@@ -6,12 +6,11 @@ source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: microservicios
+category: Frontend
 tags:
   - microservicios
   - microfrontend
   - frontend
-  - Frontend
 ---
 # microfrontend
 `$= dv.current().file.tags.join(" ")`

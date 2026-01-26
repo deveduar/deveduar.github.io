@@ -6,11 +6,10 @@ source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: vulnerabilidades
+category: ciberseguridad
 tags:
   - vulnerabilidades
   - Hacking
-  - ciberseguridad
 ---
 # tecnicas de explotacion
 `$= dv.current().file.tags.join(" ")`

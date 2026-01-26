@@ -7,8 +7,6 @@ status: 📌
 Parent: "[[Area-Prog]]"
 public_note: "true"
 category: Testing
-tags:
-  - Testing
 ---
 # E2E - Ejemplos Prácticos Avanzados
 `$= dv.current().file.tags.join(" ")`

@@ -6,12 +6,11 @@ source:
 status: 🚀
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: react
+category: Desarrollo multiplataforma
 tags:
   - react
   - reactnative
   - mobile-apps
-  - Desarrollo multiplataforma
 ---
 # react native
 `$= dv.current().file.tags.join(" ")`

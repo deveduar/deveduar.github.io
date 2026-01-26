@@ -7,8 +7,6 @@ status: 📌
 Parent: "[[Area-Prog]]"
 public_note: "true"
 category: Testing
-tags:
-  - Testing
 ---
 # Mocks MSW - patrones y casos reales
 `$= dv.current().file.tags.join(" ")`

@@ -6,11 +6,10 @@ source:
 status: 📌
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: Productividad
+category: Sistemas
 tags:
   - Productividad
   - sistemas
-  - Sistemas
 ---
 # surfing keys vim in browser
 `$= dv.current().file.tags.join(" ")`

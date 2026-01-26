@@ -7,8 +7,6 @@ status: 📌
 Parent: "[[Area-Prog]]"
 public_note: "true"
 category: Testing
-tags:
-  - Testing
 ---
 # roadmap de TDD con ejemplo de uso en una empresa
 `$= dv.current().file.tags.join(" ")`

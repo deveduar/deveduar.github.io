@@ -6,12 +6,11 @@ source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: simulaciones
+category: Desarrollo multiplataforma
 tags:
   - simulaciones
   - Mates
   - cpp
-  - Desarrollo multiplataforma
 ---
 # simulaciones
 ``$= dv.current().file.tags.join(" ")``

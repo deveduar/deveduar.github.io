@@ -6,7 +6,7 @@ source:
 status: 🚀
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: mantenimiento
+category: uncategorized
 tags:
   - mantenimiento
 ---

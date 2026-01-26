@@ -7,13 +7,12 @@ source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: GameDev
+category: Computer Science
 tags:
   - GameDev
   - CS
   - computer_Science
   - patrones_diseo
-  - Computer Science
 ---
 # Patron Composite
 `$= dv.current().file.tags.join(" ")`

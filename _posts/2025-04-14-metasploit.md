@@ -6,13 +6,12 @@ source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: metasploit
+category: ciberseguridad
 tags:
   - metasploit
   - vulnerabilidades
   - pentesting
   - Hacking
-  - ciberseguridad
 ---
 # Metasploit
 `$= dv.current().file.tags.join(" ")`

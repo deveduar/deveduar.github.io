@@ -6,12 +6,11 @@ source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: backend
+category: Backend
 tags:
   - backend
   - server
   - server_actions
-  - Backend
 ---
 # Server Actions
 `$= dv.current().file.tags.join(" ")`

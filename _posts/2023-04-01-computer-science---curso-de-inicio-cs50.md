@@ -6,10 +6,9 @@ Parent: "[[Area-Prog]]"
 keywords:
 source:
 public_note: "true"
-category: CS
+category: Computer Science
 tags:
   - CS
-  - Computer Science
 ---
 # Computer science - curso de inicio CS50
 `$= dv.current().file.tags.join(" ")`

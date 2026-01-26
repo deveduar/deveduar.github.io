@@ -6,13 +6,12 @@ source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: desktop-apps
+category: Desarrollo multiplataforma
 tags:
   - desktop-apps
   - Capacitor
   - android
   - native_runtime
-  - Desarrollo multiplataforma
 ---
 # Capacitor
 ``$= dv.current().file.tags.join(" ")``

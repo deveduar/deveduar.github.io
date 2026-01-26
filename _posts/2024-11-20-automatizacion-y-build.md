@@ -6,7 +6,7 @@ source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: linters
+category: uncategorized
 tags:
   - linters
   - runners

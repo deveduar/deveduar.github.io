@@ -6,11 +6,10 @@ source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: ITIL
+category: infraestructura IT
 tags:
   - ITIL
   - monitoreo
-  - infraestructura IT
 ---
 # Combodo iTop
 `$= dv.current().file.tags.join(" ")`

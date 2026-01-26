@@ -6,13 +6,12 @@ source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: TI
+category: infraestructura IT
 tags:
   - TI
   - ITIL
   - regulaciones
   - normativas
-  - infraestructura IT
 ---
 # ENS Esquema Nacional de Seguridad
 `$= dv.current().file.tags.join(" ")` 

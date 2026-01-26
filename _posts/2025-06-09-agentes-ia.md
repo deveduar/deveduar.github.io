@@ -6,12 +6,11 @@ source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: AI
+category: Automatizacion y Build
 tags:
   - AI
   - agentes
   - automatizacion
-  - Automatizacion y Build
 ---
 # Agentes IA
 `$= dv.current().file.tags.join(" ")`

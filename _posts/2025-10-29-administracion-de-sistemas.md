@@ -6,7 +6,7 @@ source:
 status: 📌
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: sistemas
+category: uncategorized
 tags:
   - sistemas
   - administracion

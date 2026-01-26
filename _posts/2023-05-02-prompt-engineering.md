@@ -6,11 +6,10 @@ Parent: "[[Area-IA]]"
 keywords:
 source:
 public_note: "true"
-category: IA
+category: Data Science
 tags:
   - IA
   - Prompt
-  - Data Science
 ---
 # # Prompt Engineering
 `$= dv.current().file.tags.join(" ")`

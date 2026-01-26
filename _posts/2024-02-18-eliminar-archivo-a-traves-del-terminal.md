@@ -6,10 +6,9 @@ source:
 status: 📌
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: Windows
+category: powershell
 tags:
   - Windows
-  - powershell
 ---
 # Eliminar archivo a través del terminal
 `$= dv.current().file.tags.join(" ")`

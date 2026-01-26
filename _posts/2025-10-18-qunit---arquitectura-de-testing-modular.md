@@ -7,8 +7,6 @@ status: 📌
 Parent: "[[Area-Prog]]"
 public_note: "true"
 category: Testing
-tags:
-  - Testing
 ---
 # QUnit - Arquitectura de testing modular
 `$= dv.current().file.tags.join(" ")`

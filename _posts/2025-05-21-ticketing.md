@@ -6,7 +6,7 @@ source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: ticketing
+category: Management
 tags:
   - ticketing
   - Management

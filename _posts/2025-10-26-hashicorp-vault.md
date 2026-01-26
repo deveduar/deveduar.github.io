@@ -6,7 +6,7 @@ source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: vault
+category: ciberseguridad
 tags:
   - vault
   - ciberseguridad

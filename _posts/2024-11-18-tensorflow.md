@@ -6,13 +6,12 @@ source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: datascience
+category: Data Science
 tags:
   - datascience
   - data-science
   - IA
   - tensorflow
-  - Data Science
 ---
 # TensorFlow
 `$= dv.current().file.tags.join(" ")`

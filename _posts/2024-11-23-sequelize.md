@@ -6,7 +6,7 @@ source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: sequelize
+category: Backend
 tags:
   - sequelize
   - nodejs
@@ -14,7 +14,6 @@ tags:
   - api
   - db
   - ORM
-  - Backend
 ---
 # Sequelize
 `$= dv.current().file.tags.join(" ")`

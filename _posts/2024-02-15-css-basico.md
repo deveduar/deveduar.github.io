@@ -6,7 +6,7 @@ Parent: "[[Area-Prog]]"
 keywords:
 source:
 public_note: "true"
-category: CSS
+category: uncategorized
 tags:
   - CSS
 ---

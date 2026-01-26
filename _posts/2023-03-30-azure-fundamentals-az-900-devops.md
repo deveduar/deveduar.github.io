@@ -6,11 +6,10 @@ Parent: "[[Area-Sistemas]]"
 keywords:
 source:
 public_note: "true"
-category: Devops
+category: cloud
 tags:
   - Devops
   - Azure
-  - cloud
 ---
 # Azure Fundamentals AZ-900 devops
 `$= dv.current().file.tags.join(" ")`

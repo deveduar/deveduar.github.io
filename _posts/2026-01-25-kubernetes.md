@@ -3,11 +3,10 @@ title: Kubernetes
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: Devops
+category: Virtualizacion
 tags:
   - Devops
   - Kubernetes
-  - Virtualizacion
 ---
 # Kubernetes
 `$= dv.current().file.tags.join(" ")`

@@ -7,11 +7,10 @@ status: 🌟
 Parent: "[[Area-Sistemas]]"
 aliases:
 public_note: "true"
-category: IT
+category: Gestion de Negocio
 tags:
   - IT
   - dms
-  - Gestion de Negocio
 ---
 # DMS Sistema de Gestión de Documentos
 ``$= dv.current().file.tags.join(" ")``

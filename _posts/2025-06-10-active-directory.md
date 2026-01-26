@@ -6,13 +6,12 @@ source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: active_directory
+category: Sistemas
 tags:
   - active_directory
   - Windows
   - roles
   - sistemas
-  - Sistemas
 ---
 # Active Directory
 `$= dv.current().file.tags.join(" ")`
