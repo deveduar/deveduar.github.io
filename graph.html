@@ -6,9 +6,15 @@ permalink: /graph/
 
 <div class="graph-container">
     <h2 id="graph-title">Interactive Graph</h2>
-    <div id="note-graph" style="height: 600px; border: 1px solid #eee; border-radius: 8px; margin-bottom: 20px;"></div>
+    <div class="graph-wrapper">
+        <div id="graph-loader">
+            <div class="spinner"></div>
+            <p>Estabilizando gráfico... esto puede tardar unos segundos.</p>
+        </div>
+        <div id="note-graph"></div>
+    </div>
     <button id="remove-orphans" class="btn btn-secondary">Mostrar huérfanos</button>
-    <div id="legend" style="margin-top: 20px; display: flex; flex-wrap: wrap; gap: 15px;"></div>
+    <div id="legend"></div>
 </div>
 
 <script src="/assets/js/notes-graph.js"></script>

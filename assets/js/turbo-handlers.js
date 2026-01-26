@@ -1,67 +1,80 @@
 if (typeof Turbo !== 'undefined' || 'Turbo' in window) {
 
-  // Función centralizada para verificar y cargar posts adicionales
-  window.checkAndLoadAdditionalPosts = function() {
+  // Improve the initArchivePageAfterNavigation function
+  window.initArchivePageAfterNavigation = function () {
+    console.log('Inicializando página de archivo después de la navegación');
+
+    // Verificar si estamos en la página de archivo
+    const archivePage = document.querySelector('.archive-page');
+    if (!archivePage) return;
+
+    // Reset global loading flag
+    window.isLoadingAdditionalPosts = false;
+
+    // Reset Rendering state to ensure we can load posts again
+    if (typeof window.Rendering !== 'undefined') {
+      if (window.Rendering.reset) {
+        console.log('Reseteando estado de Rendering después de navegación');
+        window.Rendering.reset();
+      }
+    } else if (typeof Rendering !== 'undefined' && Rendering.reset) {
+      console.log('Reseteando estado de Rendering (módulo local) después de navegación');
+      Rendering.reset();
+    }
+
+    // Inicializar filtros de archivo si aún no se ha hecho
+    if (typeof window.initArchiveFilters === 'function') {
+      window.initArchiveFilters();
+    }
+
+    // Use the new ensurePostsLoadedAfterNavigation function
+    setTimeout(() => {
+      if (typeof window.ensurePostsLoadedAfterNavigation === 'function') {
+        window.ensurePostsLoadedAfterNavigation();
+      } else {
+        // Fallback if the new function isn't available
+        const additionalPosts = document.querySelectorAll('.archive-post-item[data-additional-post="true"]');
+        if (additionalPosts.length === 0) {
+          console.log('No additional posts found, forcing load');
+          window.isLoadingAdditionalPosts = false; // Reset loading flag
+          if (typeof window.loadAdditionalPosts === 'function') {
+            window.loadAdditionalPosts(1, 50, true);
+          } else if (typeof window.tryLoadAdditionalPosts === 'function') {
+            window.tryLoadAdditionalPosts(0);
+          }
+        }
+      }
+    }, 300);
+  };
+
+  // Improve the checkAndLoadAdditionalPosts function
+  window.checkAndLoadAdditionalPosts = function () {
     if (document.querySelector('.archive-page')) {
       // Verificar si ya hay posts adicionales cargados
       const additionalPosts = document.querySelectorAll('.archive-post-item[data-additional-post="true"]');
-      const additionalPostsMarker = document.getElementById('additional-posts-marker');
-      
-      if (additionalPosts.length === 0 && additionalPostsMarker && !window.isLoadingAdditionalPosts) {
-        console.log('No hay posts adicionales cargados, intentando cargar...');
-        window.tryLoadAdditionalPosts(300, 500);
-      } else if (additionalPosts.length > 0) {
-        console.log(`Ya hay ${additionalPosts.length} posts adicionales cargados`);
-        // Asegurar que los filtros se aplican correctamente
-        if (typeof window.ensureFiltersApplied === 'function') {
-          window.ensureFiltersApplied();
+
+      // Always ensure lazy loading is set up
+      if (typeof window.Rendering !== 'undefined' && window.Rendering.setupLazyLoading) {
+        console.log('Configurando lazy loading en checkAndLoadAdditionalPosts');
+        window.Rendering.setupLazyLoading();
+      } else if (typeof Rendering !== 'undefined' && Rendering.setupLazyLoading) {
+        console.log('Configurando lazy loading (módulo local) en checkAndLoadAdditionalPosts');
+        Rendering.setupLazyLoading();
+      }
+
+      // If no additional posts are loaded, force load them
+      if (additionalPosts.length === 0 && !window.isLoadingAdditionalPosts) {
+        console.log('No additional posts found in checkAndLoadAdditionalPosts, ensuring they are loaded');
+        if (typeof window.ensurePostsLoadedAfterNavigation === 'function') {
+          window.ensurePostsLoadedAfterNavigation();
+        } else if (typeof window.loadAdditionalPosts === 'function') {
+          window.loadAdditionalPosts(1, 50, false);
+        } else if (typeof window.tryLoadAdditionalPosts === 'function') {
+          window.tryLoadAdditionalPosts(0);
         }
       }
     }
   };
-
-// Función para inicializar la página de archivo después de la navegación
-window.initArchivePageAfterNavigation = function() {
-  console.log('Inicializando página de archivo después de la navegación');
-  
-  // Verificar si estamos en la página de archivo
-  const archivePage = document.querySelector('.archive-page');
-  if (!archivePage) return;
-  
-  // Reset Rendering state to ensure we can load posts again
-  if (typeof window.Rendering !== 'undefined' && window.Rendering.reset) {
-    console.log('Reseteando estado de Rendering después de navegación');
-    window.Rendering.reset();
-  } else if (typeof Rendering !== 'undefined' && Rendering.reset) {
-    console.log('Reseteando estado de Rendering (módulo local) después de navegación');
-    Rendering.reset();
-  }
-  
-  // Inicializar filtros de archivo si aún no se ha hecho
-  if (typeof window.initArchiveFilters === 'function') {
-    window.initArchiveFilters();
-  }
-  
-  // Asegurar que se configura la carga lazy
-  if (typeof window.Rendering !== 'undefined' && window.Rendering.setupLazyLoading) {
-    console.log('Configurando lazy loading después de la navegación');
-    window.Rendering.setupLazyLoading();
-  } else {
-    console.warn('Rendering no está disponible globalmente, intentando acceder a través de módulos');
-    // Intentar acceder a Rendering a través de módulos importados
-    if (typeof Rendering !== 'undefined' && Rendering.setupLazyLoading) {
-      console.log('Usando Rendering del módulo importado');
-      Rendering.setupLazyLoading();
-    }
-  }
-  
-  // Intentar cargar posts adicionales si es necesario
-  setTimeout(() => {
-    if (typeof window.tryLoadAdditionalPosts === 'function') {
-      window.tryLoadAdditionalPosts(300);
-    }
-  }, 500);
-};
 
   window.addEventListener('load', function () {
     // Usar la función centralizada
@@ -75,6 +88,12 @@ window.initArchivePageAfterNavigation = function() {
     window.archiveModules = undefined;
 
     setTimeout(function () {
+      // Inicializar el gráfico si estamos en la página del gráfico
+      if (typeof window.initNotesGraph === 'function') {
+        console.log('Intentando inicializar el gráfico de notas...');
+        window.initNotesGraph();
+      }
+
       if (typeof window.ARCHIVE_PATHS === 'undefined') {
         console.warn('ARCHIVE_PATHS no está definido todavía, esperando...');
         setTimeout(function () {
@@ -83,11 +102,11 @@ window.initArchivePageAfterNavigation = function() {
 
             if (document.querySelector('.archive-page')) {
               console.log('Inicializando módulos de archivo...');
-              
+
               // Asegurarse de que la ordenación se aplica correctamente
               const { method, direction } = window.getSortParameters();
               console.log(`Método de ordenación en turbo:load: ${method}, ${direction}`);
-              
+
               // Usar la función centralizada
               window.checkAndLoadAdditionalPosts();
             }
@@ -100,11 +119,11 @@ window.initArchivePageAfterNavigation = function() {
 
         if (document.querySelector('.archive-page')) {
           console.log('Inicializando módulos de archivo...');
-          
+
           // Asegurarse de que la ordenación se aplica correctamente
           const { method, direction } = window.getSortParameters();
           console.log(`Método de ordenación en turbo:load: ${method}, ${direction}`);
-          
+
           // Usar la función centralizada
           window.checkAndLoadAdditionalPosts();
         }
@@ -113,32 +132,32 @@ window.initArchivePageAfterNavigation = function() {
   });
 
   // Añadir un evento específico para turbo:visit para manejar la navegación entre páginas
-  document.addEventListener('turbo:visit', function() {
+  document.addEventListener('turbo:visit', function () {
     console.log('Turbo visit detectado - preparando para navegación');
     // Marcar que necesitamos cargar posts adicionales en la próxima página si es archive
     window.needsAdditionalPosts = true;
   });
-  
-// Antes de visitar una nueva página, limpiar filtros si estamos saliendo de archive
-document.addEventListener('turbo:before-visit', function() {
-  if (document.querySelector('.archive-page')) {
-    console.log('Saliendo de la página de archivo, reiniciando filtros');
-    
-    // Reset Rendering state when leaving the archive page
-    if (typeof window.Rendering !== 'undefined' && window.Rendering.reset) {
-      console.log('Reseteando estado de Rendering al salir de la página de archivo');
-      window.Rendering.reset();
-    } else if (typeof Rendering !== 'undefined' && Rendering.reset) {
-      console.log('Reseteando estado de Rendering (módulo local) al salir de la página de archivo');
-      Rendering.reset();
+
+  // Antes de visitar una nueva página, limpiar filtros si estamos saliendo de archive
+  document.addEventListener('turbo:before-visit', function () {
+    if (document.querySelector('.archive-page')) {
+      console.log('Saliendo de la página de archivo, reiniciando filtros');
+
+      // Reset Rendering state when leaving the archive page
+      if (typeof window.Rendering !== 'undefined' && window.Rendering.reset) {
+        console.log('Reseteando estado de Rendering al salir de la página de archivo');
+        window.Rendering.reset();
+      } else if (typeof Rendering !== 'undefined' && Rendering.reset) {
+        console.log('Reseteando estado de Rendering (módulo local) al salir de la página de archivo');
+        Rendering.reset();
+      }
+
+      if (typeof window.resetArchiveFilters === 'function') {
+        window.resetArchiveFilters();
+      }
     }
-    
-    if (typeof window.resetArchiveFilters === 'function') {
-      window.resetArchiveFilters();
-    }
-  }
-});
-  
+  });
+
   document.addEventListener('turbo:render', function () {
     const archivePage = document.querySelector('.archive-page');
     if (archivePage) {
@@ -175,28 +194,15 @@ document.addEventListener('turbo:before-visit', function() {
     }
   });
 
-  document.addEventListener('turbo:frame-render', function(event) {
+  document.addEventListener('turbo:frame-render', function (event) {
     const frame = event.target;
     if (frame.closest('.archive-page') || document.querySelector('.archive-page')) {
       console.log('Frame renderizado en página de archivo');
-      
+
       // Usar la función centralizada con un retraso para evitar conflictos
       setTimeout(() => {
         window.checkAndLoadAdditionalPosts();
       }, 500);
     }
   });
-
-  // Añadir un evento para pageshow para manejar navegación back/forward
-  // window.addEventListener('pageshow', function(event) {
-  //   // Verificar si la página se está cargando desde el bfcache
-  //   if (event.persisted) {
-  //     console.log('Página cargada desde caché back/forward');
-  //     if (document.querySelector('.archive-page')) {
-  //       if (typeof window.initArchivePageAfterNavigation === 'function') {
-  //         setTimeout(() => window.initArchivePageAfterNavigation(), 300);
-  //       }
-  //     }
-  //   }
-  // });
 }

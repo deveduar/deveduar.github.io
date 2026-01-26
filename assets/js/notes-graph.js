@@ -1,353 +1,204 @@
-fetch('/assets/public-notes-graph.json')
-  .then(res => res.json())
-  .then(graph => {
-    const normalize = url => url.replace(/\/$/, '');
+(function () {
+  let network = null;
+  let dataNodes = null;
+  let dataEdges = null;
+  let animationFrameId = null;
 
-    // Extraer todas las primeras categorías únicas
-    const categoriesSet = new Set();
-    graph.nodes.forEach(n => {
-      if (Array.isArray(n.categories) && n.categories.length > 0) {
-        categoriesSet.add(n.categories[0].toLowerCase());
-      } else {
-        categoriesSet.add('uncategorized');
-      }
-    });
+  window.initNotesGraph = function () {
+    const container = document.getElementById('note-graph');
+    if (!container) return;
 
-    // Función para generar un color pastel random basado en string (categoría)
-    // function stringToColor(str) {
-    //   let hash = 0;
-    //   for (let i = 0; i < str.length; i++) {
-    //     hash = str.charCodeAt(i) + ((hash << 5) - hash);
-    //   }
-    //   const h = hash % 360;
-    //   return `hsl(${h}, 70%, 50%)`; // Saturación 70%, luminosidad 50%
-    // }
-// Paleta estilo "Panda" (pasteles fríos y suaves)
-const pandaPalette = [
-    'hsl(220, 25%, 60%)', // azul grisáceo
-    'hsl(280, 30%, 65%)', // lavanda apagado
-    'hsl(340, 40%, 70%)', // rosa pastel
-    'hsl(170, 35%, 65%)', // verde menta
-    'hsl(40, 30%, 70%)',  // beige suave
-    'hsl(200, 20%, 60%)', // azul pálido
-    'hsl(310, 25%, 60%)', // malva
-    'hsl(180, 20%, 60%)', // cian grisáceo
-    'hsl(50, 20%, 65%)',  // amarillo cremoso
-    'hsl(260, 25%, 68%)', // violeta apagado
-    'hsl(100, 30%, 60%)', // verde grisáceo
-    'hsl(0, 20%, 65%)',   // rojo desaturado
-    'hsl(30, 25%, 68%)',  // salmón claro
-    'hsl(150, 25%, 60%)', // turquesa suave
-    'hsl(190, 30%, 65%)', // azul verdoso claro
-    'hsl(70, 25%, 68%)',  // lima pastel
-  ];
-  
-  
-  // Asigna un color fijo de la paleta a cada categoría
-  function stringToColor(str) {
-    let hash = 0;
-    for (let i = 0; i < str.length; i++) {
-      hash = str.charCodeAt(i) + ((hash << 5) - hash);
+    // Si ya existe una instancia, destruirla
+    if (network) {
+      network.destroy();
+      network = null;
     }
-    const index = Math.abs(hash) % pandaPalette.length;
-    return pandaPalette[index];
-  }
-  
+    if (animationFrameId) {
+      cancelAnimationFrame(animationFrameId);
+      animationFrameId = null;
+    }
 
+    const loader = document.getElementById('graph-loader');
+    const loaderText = loader ? loader.querySelector('p') : null;
+    if (loader) loader.style.display = 'flex';
+    if (loaderText) loaderText.textContent = 'Cargando datos...';
 
-    // Crear mapa dinámico categoría => color
-    const categoryColors = {};
-    categoriesSet.forEach(cat => {
-      categoryColors[cat] = stringToColor(cat);
-    });
+    fetch('/assets/public-notes-graph.json')
+      .then(res => res.json())
+      .then(graph => {
+        // Usar requestAnimationFrame para no bloquear inmediatamente
+        animationFrameId = requestAnimationFrame(() => processGraphData(graph, container, loader, loaderText));
+      })
+      .catch(err => {
+        console.error('Error loading graph data:', err);
+        if (loader) loader.style.display = 'none';
+      });
+  };
 
-    // Mapa para contar grados
+  function processGraphData(graph, container, loader, loaderText) {
+    if (loaderText) loaderText.textContent = 'Procesando nodos...';
+
+    const normalize = url => url.replace(/\/$/, '');
+    const nodesMap = new Map();
     const degreeMap = {};
-    const nodeIds = new Set(graph.nodes.map(n => normalize(n.url)));
 
-    const validLinks = graph.links.filter(l => {
+    graph.nodes.forEach(n => nodesMap.set(normalize(n.url), n));
+
+    graph.links.forEach(l => {
       const from = normalize(l.source);
       const to = normalize(l.target);
-      if (nodeIds.has(from) && nodeIds.has(to)) {
+      if (nodesMap.has(from) && nodesMap.has(to)) {
         degreeMap[from] = (degreeMap[from] || 0) + 1;
         degreeMap[to] = (degreeMap[to] || 0) + 1;
-        return true;
       }
-      return false;
     });
 
-    const getCategoryColor = (categories) => {
-      if (!Array.isArray(categories) || categories.length === 0) {
-        return categoryColors['uncategorized'] || '#555555';
+    const categoriesSet = new Set();
+    nodesMap.forEach((n, id) => {
+      if (degreeMap[id] > 0 && Array.isArray(n.categories) && n.categories.length > 0) {
+        categoriesSet.add(n.categories[0].toLowerCase());
       }
-      const cat = categories[0].toLowerCase();
-      return categoryColors[cat] || '#888888';
+    });
+    if (!categoriesSet.has('uncategorized')) categoriesSet.add('uncategorized');
+
+    const pandaPalette = [
+      'hsl(220, 25%, 60%)', 'hsl(280, 30%, 65%)', 'hsl(340, 40%, 70%)',
+      'hsl(170, 35%, 65%)', 'hsl(40, 30%, 70%)', 'hsl(200, 20%, 60%)',
+      'hsl(310, 25%, 60%)', 'hsl(180, 20%, 60%)', 'hsl(50, 20%, 65%)',
+      'hsl(260, 25%, 68%)', 'hsl(100, 30%, 60%)', 'hsl(0, 20%, 65%)',
+    ];
+    const stringToColor = str => {
+      let hash = 0;
+      for (let i = 0; i < str.length; i++) hash = str.charCodeAt(i) + ((hash << 5) - hash);
+      return pandaPalette[Math.abs(hash) % pandaPalette.length];
+    };
+    const categoryColors = {};
+    categoriesSet.forEach(cat => categoryColors[cat] = stringToColor(cat));
+
+    const getCategoryColor = cats => {
+      if (!Array.isArray(cats) || cats.length === 0) return categoryColors['uncategorized'];
+      return categoryColors[cats[0].toLowerCase()] || categoryColors['uncategorized'];
     };
 
+    // Generar leyenda (rápido, no bloquea)
     const legend = document.getElementById('legend');
     if (legend) {
       legend.innerHTML = '';
       Object.entries(categoryColors).forEach(([cat, color]) => {
         const item = document.createElement('div');
-        item.style.display = 'flex';
-        item.style.alignItems = 'center';
-        item.style.gap = '6px';
-    
-        const swatch = document.createElement('div');
-        swatch.style.width = '16px';
-        swatch.style.height = '16px';
-        swatch.style.borderRadius = '50%';
-        swatch.style.backgroundColor = color;
-    
-        const label = document.createElement('span');
-        label.textContent = cat;
-    
-        item.appendChild(swatch);
-        item.appendChild(label);
+        item.className = 'legend-item';
+        item.innerHTML = `<div class="legend-swatch" style="background-color: ${color}"></div><span>${cat}</span>`;
         legend.appendChild(item);
       });
     }
 
-
-    const nodes = graph.nodes.map(n => {
-      const id = normalize(n.url);
-      const degree = degreeMap[id] || 1;
-      const bgColor = getCategoryColor(n.categories);
-
-      return {
-        id,
-        label: n.title,
-        value: degree,
+    const allNodesArray = [];
+    nodesMap.forEach((n, id) => {
+      const degree = degreeMap[id] || 0;
+      allNodesArray.push({
+        id, label: n.title, value: Math.max(degree, 1),
         font: { color: '#ffffff' },
-        color: {
-          background: bgColor,
-          border: '#ffffff',
-          highlight: {
-            background: '#b1e1f4',
-            border: '#ffffff'
-          }
-        }
-      };
+        color: { background: getCategoryColor(n.categories), border: '#ffffff', highlight: { background: '#b1e1f4', border: '#ffffff' } },
+        isOrphan: degree === 0
+      });
     });
 
-    const data = {
-      nodes: new vis.DataSet(nodes),
-      edges: new vis.DataSet(
-        validLinks.map(l => {
-          const fromColor = '#6ab0f3'; // azul (desde)
-          const toColor = '#f368e0';   // rosa (hacia)
-      
-          return {
-            from: normalize(l.source),
-            to: normalize(l.target),
-            color: {
-              color: fromColor,
-              highlight: toColor,
-              inherit: false
-            }
-          };
-        })
-      ),
+    const initialNodes = allNodesArray.filter(n => !n.isOrphan);
+    const orphanNodes = allNodesArray.filter(n => n.isOrphan);
+
+    const edgesArray = graph.links
+      .filter(l => nodesMap.has(normalize(l.source)) && nodesMap.has(normalize(l.target)))
+      .map(l => ({ from: normalize(l.source), to: normalize(l.target), color: { color: '#4c5761ff', highlight: '#f368e0', inherit: false } }));
+
+    // Usar requestAnimationFrame para ceder el control antes de crear la red
+    animationFrameId = requestAnimationFrame(() => {
+      createNetwork(container, loader, loaderText, initialNodes, edgesArray, orphanNodes, nodesMap, degreeMap);
+    });
+  }
+
+  function createNetwork(container, loader, loaderText, initialNodes, edgesArray, orphanNodes, nodesMap, degreeMap) {
+    if (loaderText) loaderText.textContent = 'Creando gráfico...';
+
+    dataNodes = new vis.DataSet(initialNodes);
+    dataEdges = new vis.DataSet(edgesArray);
+
+    const options = {
+      nodes: { shape: 'dot', scaling: { min: 8, max: 30 }, font: { color: '#ffffff', size: 12, face: 'sans-serif' } },
+      edges: { arrows: { to: { enabled: true, scaleFactor: 0.4 } }, color: { color: '#555', highlight: '#fff' }, smooth: { enabled: true, type: 'continuous' }, width: 0.5 },
+      interaction: { navigationButtons: false, hover: true, hideEdgesOnDrag: true, hideEdgesOnZoom: true },
+      layout: { improvedLayout: false },
+      physics: {
+        enabled: true,
+        solver: 'forceAtlas2Based',
+        forceAtlas2Based: { gravitationalConstant: -50, centralGravity: 0.005, springLength: 150, springConstant: 0.05, damping: 0.5, avoidOverlap: 0.5 },
+        stabilization: { enabled: true, iterations: 300, updateInterval: 25, fit: true },
+        maxVelocity: 50, minVelocity: 0.75
+      }
     };
 
-    const container = document.getElementById('note-graph');
-    if (!container) {
-      console.error('No se encontró el contenedor #note-graph');
-      return;
+    network = new vis.Network(container, { nodes: dataNodes, edges: dataEdges }, options);
+
+    network.on("stabilizationProgress", function (params) {
+      const progress = Math.round((params.iterations / params.total) * 100);
+      if (loaderText) loaderText.textContent = `Estabilizando: ${progress}%`;
+    });
+
+    network.once("stabilizationFinished", function () {
+      network.setOptions({ physics: { enabled: false } });
+      if (loader) loader.style.display = 'none';
+    });
+
+    // Fallback por si la estabilización se atasca
+    setTimeout(() => {
+      if (loader && loader.style.display !== 'none') {
+        network.stopSimulation();
+        network.setOptions({ physics: { enabled: false } });
+        loader.style.display = 'none';
+      }
+    }, 10000);
+
+    network.on("doubleClick", params => {
+      if (params.nodes.length > 0) window.location.href = params.nodes[0];
+    });
+
+    // Huérfanos
+    let orphansVisible = false;
+    const orphanBtn = document.getElementById('remove-orphans');
+    if (orphanBtn) {
+      orphanBtn.onclick = () => {
+        if (orphansVisible) {
+          dataNodes.remove(orphanNodes.map(n => n.id));
+          orphanBtn.textContent = 'Mostrar huérfanos';
+        } else {
+          dataNodes.add(orphanNodes);
+          orphanBtn.textContent = 'Quitar huérfanos';
+        }
+        orphansVisible = !orphansVisible;
+      };
     }
 
-    const network = new vis.Network(container, data, {
-        nodes: {
-          shape: 'dot',
-          scaling: {
-            min: 10,
-            max: 40,
-          },
-          font: {
-            color: '#ffffff',
-            size: 14,
-            face: 'sans-serif',
-          },
-        },
-        edges: {
-          arrows: {
-            to: { enabled: true, scaleFactor: 0.5 }, // más grandes
-          },
-          color: {
-            color: '#888',
-            highlight: '#fff',
-          },
-          smooth: {
-            enabled: true,
-            type: 'dynamic', // tipo de línea más clara
-          },
-          length: 250, // ← mayor distancia entre nodos conectados
-        },
-        interaction: { navigationButtons: false, hover: true },
-        layout: { improvedLayout: true },
-        physics: {
-          enabled: true,
-          barnesHut: {
-            gravitationalConstant: -8000,
-            springLength: 250, // ← espacio entre nodos conectados
-            springConstant: 0.04,
-            damping: 0.09,
-          },
-          stabilization: {
-            iterations: 200,
-          },
-        },
-      });
+    // Tooltip
+    const tooltip = document.getElementById('graph-tooltip') || document.createElement('div');
+    tooltip.id = 'graph-tooltip';
+    Object.assign(tooltip.style, { position: 'absolute', padding: '6px 10px', background: 'rgba(0, 0, 0, 0.8)', color: '#fff', borderRadius: '4px', pointerEvents: 'none', fontSize: '12px', display: 'none', zIndex: 1000 });
+    if (!tooltip.parentElement) document.body.appendChild(tooltip);
 
-    network.on("doubleClick", function (params) {
-        if (params.nodes.length > 0) {
-          const nodeId = params.nodes[0];
-          window.location.href = nodeId;
-        }
-      });
+    network.on("hoverNode", params => {
+      const node = dataNodes.get(params.node);
+      const originalNode = nodesMap.get(params.node);
+      if (!originalNode) return;
+      tooltip.innerHTML = `<strong>${node.label}</strong><br>Conexiones: ${degreeMap[params.node] || 0}`;
+      tooltip.style.background = node.color?.background || '#333';
+      tooltip.style.display = 'block';
+    });
+    container.addEventListener('mousemove', e => { tooltip.style.left = (e.pageX + 15) + 'px'; tooltip.style.top = (e.pageY + 15) + 'px'; });
+    network.on("blurNode", () => tooltip.style.display = 'none');
+  }
 
-      let orphanNodesBackup = [];
-      let orphansVisible = false;
-
-
-      // Restaurar color original
-// function resetNodeStyles() {
-//     nodes.forEach(n => {
-//       data.nodes.update({
-//         id: n.id,
-//         color: n.color,
-//       });
-//     });
-//   }
-  
-  // Hover para resaltar nodos conectados
-//   network.on("hoverNode", function (params) {
-//     const nodeId = params.node;
-  
-//     const connectedNodeIds = network.getConnectedNodes(nodeId);
-//     const allConnected = [...connectedNodeIds, nodeId];
-  
-//     data.nodes.forEach(n => {
-//       const isConnected = allConnected.includes(n.id);
-//       data.nodes.update({
-//         id: n.id,
-//         color: isConnected
-//           ? {
-//               background: '#f7d794',
-//               border: '#ffffff',
-//               highlight: {
-//                 background: '#ffeaa7',
-//                 border: '#ffffff'
-//               },
-//             }
-//           : {
-//               background: '#ccc',
-//               border: '#eee',
-//             },
-//       });
-//     });
-//   });
-  
-//   network.on("blurNode", function () {
-//     resetNodeStyles();
-//   });
-  
-
-
-    const hideOrphansOnLoad = () => {
-      orphanNodesBackup = nodes
-        .filter(n => (degreeMap[n.id] || 0) === 0)
-        .map(n => data.nodes.get(n.id));
-      
-      const orphanIds = orphanNodesBackup.map(n => n.id);
-      data.nodes.remove(orphanIds);
-    };
-
-    hideOrphansOnLoad();
-
-    document.getElementById('remove-orphans')?.addEventListener('click', () => {
-        const button = document.getElementById('remove-orphans');
-        if (!button) return;
-      
-        if (orphansVisible) {
-          // Hide orphans
-          orphanNodesBackup = nodes
-            .filter(n => (degreeMap[n.id] || 0) === 0)
-            .map(n => data.nodes.get(n.id));
-      
-          const orphanIds = orphanNodesBackup.map(n => n.id);
-          data.nodes.remove(orphanIds);
-          button.textContent = 'Mostrar huérfanos';
-          orphansVisible = false;
-        } else {
-          // Show orphans
-          const restored = orphanNodesBackup.map(n => {
-            const originalNode = graph.nodes.find(gn => normalize(gn.url) === n.id);
-            const bgColor = getCategoryColor(originalNode?.categories);
-            return {
-              ...n,
-              color: {
-                background: bgColor,
-                border: '#ffffff',
-                highlight: {
-                  background: '#b1e1f4',
-                  border: '#ffffff'
-                }
-              }
-            };
-          });
-          data.nodes.add(restored);
-          button.textContent = 'Quitar huérfanos';
-          orphansVisible = true;
-        }
-      });
-      
-    // Crear un elemento tooltip
-const tooltip = document.createElement('div');
-tooltip.style.position = 'absolute';
-tooltip.style.padding = '8px';
-tooltip.style.background = 'rgba(0, 0, 0, 0.75)';
-tooltip.style.color = '#fff';
-tooltip.style.borderRadius = '6px';
-tooltip.style.pointerEvents = 'none';
-tooltip.style.fontSize = '13px';
-tooltip.style.display = 'none';
-tooltip.style.zIndex = 1000;
-document.body.appendChild(tooltip);
-
-// Mostrar tooltip al hacer hover sobre nodo
-network.on("hoverNode", function (params) {
-    const nodeId = params.node;
-    const node = data.nodes.get(nodeId);
-  
-    const originalNode = graph.nodes.find(n => normalize(n.url) === nodeId);
-    const category = (originalNode?.categories?.[0] || 'Uncategorized');
-  
-    // Colores del nodo
-    const nodeBg = node.color?.background || '#333';
-  
-    tooltip.innerHTML = `
-      <strong>${node.label}</strong><br>
-      Categoría: ${category}<br>
-      Conexiones: ${node.value}
-    `;
-  
-    tooltip.style.background = nodeBg;
-    tooltip.style.border = `2px solid ${nodeBg}`;
-    tooltip.style.color = '#fff';
-    tooltip.style.display = 'block';
-  });
-  
-
-// Mover el tooltip con el mouse
-container.addEventListener('mousemove', function (e) {
-  tooltip.style.left = (e.pageX + 10) + 'px';
-  tooltip.style.top = (e.pageY + 10) + 'px';
-});
-
-// Ocultar tooltip al salir del nodo
-network.on("blurNode", function () {
-  tooltip.style.display = 'none';
-});
-
-  });
+  // Auto-init
+  if (document.readyState === 'complete') {
+    window.initNotesGraph();
+  } else {
+    window.addEventListener('load', window.initNotesGraph);
+  }
+})();

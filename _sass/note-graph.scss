@@ -1,19 +1,60 @@
 #graph-title {
   font-size: 1.5rem;
   color: #ffffff;
-  // margin-bottom: 1rem;
-  // margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.graph-wrapper {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  margin-bottom: 20px;
 }
 
 #note-graph {
-  width: 43%;
-  height: 290px;
+  width: 100%;
+  height: 100%;
   border: 1px solid #353443;
-  margin-top: 2rem;
+  border-radius: 8px;
   background-color: #1e1e1e;
 }
 
-/* Botón */
+#graph-loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(27, 27, 29, 0.8); // Match $background-color
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  border-radius: 8px;
+  color: #ffffff;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 #remove-orphans {
   margin-top: 1rem;
   padding: 0.5em 1em;
@@ -30,28 +71,27 @@
   background-color: #3c3c4a;
 }
 
-/* Leyenda */
 #legend {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 1em;
-}
+  gap: 15px;
+  margin-top: 20px;
 
-#legend div {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.9rem;
-  color: #ddd;
-}
+  div {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
+    color: #ddd;
 
-#legend div span {
-  color: #ddd;
-}
+    span {
+      color: #ddd;
+    }
 
-#legend div div {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
+    div {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+    }
+  }
 }
