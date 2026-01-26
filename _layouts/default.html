@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="{{ page.lang | default: site.lang | default: " en" }}">
 
 {%- include head.html -%}
 
@@ -18,10 +18,10 @@
 
   <!-- Module loader script -->
   <script src="{{ '/assets/js/module-loader.js' | relative_url }}"></script>
-  
+
   <!-- Load sidebar modules -->
   <script src="{{ '/assets/js/dynamic-sidebar.js' | relative_url }}"></script>
-  
+
 
   <!-- Define archive paths first -->
   <script>
@@ -39,24 +39,25 @@
   </script>
   <script src="{{ '/assets/js/archive-module-loader.js' | relative_url }}"></script>
   <script src="{{ '/assets/js/turbo-handlers.js' | relative_url }}"></script>
-  
+
 
   {% if site.github %}
-  <script src="{{ "/assets/js/github-calendar.js" | relative_url }}"></script>
+  <script src="{{ " /assets/js/github-calendar.js" | relative_url }}"></script>
   {% endif %}
   <!-- Script para manejar el scroll de paginación -->
   <!-- <script src="{{ '/assets/js/pagination-scroll.js' | relative_url }}"></script> -->
-  
+
   <!-- Add this before the closing body tag -->
   <script src="{{ '/assets/js/post-preview.js' | relative_url }}"></script>
-  
+
   <!-- Include the post layout script -->
   <script src="{{ '/assets/js/post-layout.js' | relative_url }}"></script>
-  
+
   <!-- TOC script -->
   <script src="{{ '/assets/js/toc.js' | relative_url }}"></script>
-  
-  <script src="/assets/js/notes-graph.js"></script>
-    
+
+
+
 </body>
+
 </html>
