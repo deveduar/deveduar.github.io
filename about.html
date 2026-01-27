@@ -11,21 +11,23 @@ permalink: /about/
     <div class="github-profile-info">
       <div class="github-profile-details">
         <h2>Hey I'm @{{ site.github.owner_name }}</h2>
-        <p class="hero-description">A full stack developer with over 5 years of experience in technologies like React, Angular, Node.js, Python, and Docker. In addition to developing my own projects, I share content on development, productivity, and problem-solving.</p>
-        
+        <p class="hero-description">A full stack developer with over 5 years of experience in technologies like React,
+          Angular, Node.js, Python, and Docker. In addition to developing my own projects, I share content on
+          development, productivity, and problem-solving.</p>
+
         <div class="social-links">
           {% if site.github_username %}
           <a href="https://github.com/{{ site.github_username }}" target="_blank" class="social-link">
             <i class="fab fa-github"></i>
           </a>
           {% endif %}
-          
+
           {% if site.twitter_username %}
           <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" class="social-link">
             <i class="fab fa-twitter"></i>
           </a>
           {% endif %}
-          
+
           {% if site.linkedin_username %}
           <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" class="social-link">
             <i class="fab fa-linkedin"></i>
@@ -34,7 +36,7 @@ permalink: /about/
         </div>
       </div>
     </div>
-    
+
     <!-- Moved contribution graph into the profile section -->
 
   </div>
@@ -42,7 +44,7 @@ permalink: /about/
 
 <!-- GitHub Repository Information -->
 <!-- Projects Section (usando posts con categoría projects) -->
-<div class="github-info">
+<!-- <div class="github-info">
   <div class="github-info-content">
     <h3>Latest Projects</h3>
     <div class="projects-list">
@@ -88,11 +90,12 @@ permalink: /about/
     </div>
     <a href="/archive?category=projects" class="view-all-btn" data-no-instant>View All Projects</a>
   </div>
-</div>
+</div> -->
 <div class="github-contribution-graph">
   <h3>Github Activity</h3>
   <div id="github-calendar" data-username="{{ site.github.owner_name }}"></div>
-  <p class="contribution-note">See my complete <a href="https://github.com/{{ site.github.owner_name }}">contribution history</a> on GitHub</p>
+  <p class="contribution-note">See my complete <a href="https://github.com/{{ site.github.owner_name }}">contribution
+      history</a> on GitHub</p>
 </div>
 
 {% endif %}

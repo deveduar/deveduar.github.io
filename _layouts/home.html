@@ -4,7 +4,7 @@ layout: default
 
 <div class="home">
   {%- if page.title -%}
-    <h1 class="post-title">{{ page.title }}</h1>
+  <h1 class="post-title">{{ page.title }}</h1>
   {%- endif -%}
 
   {{ content }}
@@ -12,8 +12,8 @@ layout: default
   {%- if site.posts.size > 0 -%}
   <div id="pagination-section" class="content-container">
 
-    <h2 class="post-list-heading" id="recent-posts">{{ page.list_title | default: "Latests Posts" }}</h2>
-    
+    <h2 class="post-list-heading" id="recent-posts">{{ page.list_title | default: "Posts" }}</h2>
+
     <div class="home-posts-list">
       {%- for post in paginator.posts -%}
       <div class="home-post-item">
@@ -23,14 +23,16 @@ layout: default
           {% if post.categories.size > 0 %}
           <div class="post-categories">
             {% for category in post.categories %}
-            <a class="category-badge" href="/archive?category={{ category | uri_escape }}" data-no-instant>{{ category }}</a>
+            <a class="category-badge" href="/archive?category={{ category | uri_escape }}" data-no-instant>{{ category
+              }}</a>
             {% endfor %}
           </div>
           {% endif %}
         </div>
         <div class="post-content-wrapper">
-          <a class="post-link" href="{{ post.url | relative_url }}" data-description="{{ post.excerpt | strip_html | truncate: 150 }}">{{ post.title | escape }}</a>
-          
+          <a class="post-link" href="{{ post.url | relative_url }}"
+            data-description="{{ post.excerpt | strip_html | truncate: 150 }}">{{ post.title | escape }}</a>
+
           {% if post.tags.size > 0 %}
           <div class="post-tags">
             {% for tag in post.tags %}
@@ -46,19 +48,20 @@ layout: default
     <!-- Pagination links -->
     <div class="pagination">
       {% if paginator.previous_page %}
-        <a href="{{ paginator.previous_page_path | relative_url }}#pagination-section" class="previous pagination-link">
-          &laquo; Anterior
-        </a>
+      <a href="{{ paginator.previous_page_path | relative_url }}#pagination-section" class="previous pagination-link">
+        &laquo; Anterior
+      </a>
       {% else %}
-        <span class="previous">&laquo; Anterior</span>
+      <span class="previous">&laquo; Anterior</span>
       {% endif %}
       <span class="page_number">
         Página {{ paginator.page }} de {{ paginator.total_pages }}
       </span>
       {% if paginator.next_page %}
-        <a href="{{ paginator.next_page_path | relative_url }}#pagination-section" class="next pagination-link">Siguiente &raquo;</a>
+      <a href="{{ paginator.next_page_path | relative_url }}#pagination-section" class="next pagination-link">Siguiente
+        &raquo;</a>
       {% else %}
-        <span class="next">Siguiente &raquo;</span>
+      <span class="next">Siguiente &raquo;</span>
       {% endif %}
     </div>
   </div>
