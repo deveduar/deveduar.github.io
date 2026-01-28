@@ -12,7 +12,6 @@ tags:
   - powershell
 ---
 # Problema ExecutionPolicy en PowerShell
-`$= dv.current().file.tags.join(" ")`
 
 ## Descripción general
 El error o bloqueo relacionado con **ExecutionPolicy** ocurre cuando PowerShell impide la ejecución de scripts por motivos de seguridad.  
@@ -123,7 +122,6 @@ Get-ExecutionPolicy -List
 - Muestra la política efectiva actual y por scope.
 - En Windows cliente suele venir por defecto en `Restricted`; en Windows Server suele estar en `RemoteSigned` o superior.  
     [PowerShell Execution Policies: How They Control Script Execution](https://serverspace.io/support/help/about-execution-policies-powershell/)
-    
 
 ### 🧰 Cambiar la política local o por usuario
 
@@ -135,7 +133,6 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 - Permite ejecutar scripts propios localmente y requiere firma para scripts descargados de Internet.
     [Change PowerShell Execution Policy | Dahln Farnes](https://dahln.com/change-powershell-execution-policy.html)
-    
 
 ### 🔒 Alternativas de scopes para casos especiales
 
@@ -202,7 +199,6 @@ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 
 - Ejemplos por scope (`Process`, `CurrentUser`, `LocalMachine`) y recomendaciones de uso.  
     [Gist – PowerShell Execution Policy](https://gist.github.com/sergiomas/3abdfe5d449392a7d27faf08dbe7421f)
-    
 
 ## Comandos de referencia rápida
 

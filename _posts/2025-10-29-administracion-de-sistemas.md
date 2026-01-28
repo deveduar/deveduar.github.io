@@ -6,21 +6,20 @@ source:
 status: 📌
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: uncategorized
+category: Sistemas
 tags:
   - sistemas
   - administracion
 ---
 # administracion de sistemas
-`$= dv.current().file.tags.join(" ")`
 
-- [Sistemas](/uncategorized/sistemas/)
+- [Sistemas](/sistemas/sistemas/)
 - sysadmin-conceptos y rutas 
 - [Windows Server](/devops/windows-server/)
 	- [powershell](/sistemas/powershell/)
 	- FSRM File Server Resource Manager
 		- Introducción al Administrador de recursos del servidor de archivos (FSRM)-fsrm-overview 
-		- [monitoreo](/uncategorized/monitoreo/)
+		- [monitoreo](/monitoreo/monitoreo/)
 		- clasificar, cuotas, informes
 	- gestión de usuarios, aplicaciones, actualizaciones de software, seguridad y configuración del sistema, 
 	- herramientas de administración remota del servidor (RSAT)
@@ -41,7 +40,7 @@ tags:
 	- comutacion por error
 		- Clústeres de conmutación por error-failover-clustering-overview 
 	- 
-- [Redes](/uncategorized/redes/)
+- [Redes](/redes/redes/)
 	- DNS
 	- dhcp
 - [Linux](/sistemas/linux/)
@@ -52,9 +51,9 @@ tags:
 			- Apache, 
 			- Nginx, 
 			- SSH
-	- [Automatizacion y Build](/uncategorized/automatizacion-y-build/)
+	- [Automatizacion y Build](/automatizacion%20y%20build/automatizacion-y-build/)
 		- [cron jobs](/backend/cron-jobs/)
-- [ciberseguridad](/uncategorized/ciberseguridad/)
+- [ciberseguridad](/ciberseguridad/ciberseguridad/)
 	- [Antivirus](/ciberseguridad/antivirus/)
 		- tipos de configuraciones empresariales de antivirus 
 		- [hardening](/ciberseguridad/hardening/)

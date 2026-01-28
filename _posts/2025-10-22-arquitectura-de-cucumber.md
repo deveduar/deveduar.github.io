@@ -9,7 +9,6 @@ public_note: "true"
 category: Testing
 ---
 # Arquitectura de Cucumber
-`$= dv.current().file.tags.join(" ")`
 
 ## Arquitectura de Cucumber
 
@@ -36,7 +35,6 @@ public class Hooks {
     public void setupBrowser() {
         // Configuración específica para tests UI
     }
-    
     @After
     public void teardown(Scenario scenario) {
         if (scenario.isFailed()) {
@@ -54,12 +52,10 @@ public class Hooks {
 ```java
 public class LoginPageSteps {
     private LoginPage loginPage;
-    
     @Given("I am on the login page")
     public void navigateToLogin() {
         loginPage.navigateTo();
     }
-    
     @When("I login with {string} and {string}")
     public void loginWithCredentials(String user, String pass) {
         loginPage.enterCredentials(user, pass);
@@ -102,12 +98,10 @@ public class TestDataConfig {
 public class DatabaseSteps {
     @Autowired
     private UserRepository userRepository;
-    
     @Given("a user exists in database")
     public void createUserInDatabase() {
         userRepository.save(new User("test", "password"));
     }
-    
     @Then("the user should be persisted")
     public void verifyUserPersisted() {
         assertThat(userRepository.findByUsername("test")).isNotNull();
@@ -121,7 +115,6 @@ public class DatabaseSteps {
 ```java
 public class ApiSteps {
     private Response response;
-    
     @When("I call the {string} endpoint")
     public void callEndpoint(String endpoint) {
         response = given()
@@ -129,7 +122,6 @@ public class ApiSteps {
             .when()
             .get(endpoint);
     }
-    
     @Then("the response status should be {int}")
     public void verifyStatus(int expectedStatus) {
         assertThat(response.getStatusCode()).isEqualTo(expectedStatus);
@@ -291,7 +283,6 @@ public class SecuritySteps {
     public void authenticateAsRole(String role) {
         SecurityContext.setAuthentication(role);
     }
-    
     @Then("I should have access to {string}")
     public void verifyAccess(String resource) {
         assertThat(SecurityUtils.hasAccess(resource)).isTrue();
@@ -305,7 +296,6 @@ public class SecuritySteps {
 ```java
 public class ApiSecuritySteps {
     private Headers authHeaders;
-    
     @Given("I have valid API credentials")
     public void setupApiCredentials() {
         authHeaders = Headers.of(
@@ -313,7 +303,6 @@ public class ApiSecuritySteps {
             "Content-Type", "application/json"
         );
     }
-    
     @When("I access secured endpoint {string}")
     public void accessSecuredEndpoint(String endpoint) {
         response = given()
@@ -332,12 +321,10 @@ public class ApiSecuritySteps {
 ```java
 public class MobileSteps {
     private AppiumDriver driver;
-    
     @Given("I open the mobile application")
     public void openMobileApp() {
         driver = new AndroidDriver(new URL("http://localhost:4723"), capabilities);
     }
-    
     @When("I tap on {string} element")
     public void tapOnElement(String elementId) {
         WebElement element = driver.findElement(By.id(elementId));
@@ -368,7 +355,6 @@ Feature: Mobile Login
 public class MicroserviceSteps {
     @WireMockInject
     private WireMockServer wireMock;
-    
     @Given("the user service is available")
     public void setupUserService() {
         wireMock.stubFor(get(urlEqualTo("/users/1"))
@@ -406,7 +392,6 @@ public class PerformanceSteps {
             IntStream.range(0, requests)
                 .mapToObj(i -> makeAsyncRequest())
                 .collect(Collectors.toList());
-        
         CompletableFuture.allOf(futures.toArray(new CompletableFuture[0])).join();
     }
 }
@@ -437,13 +422,11 @@ public class MLModelSteps {
         Model model = ModelLoader.load("model.pkl");
         TestContext.setModel(model);
     }
-    
     @When("I provide input {string}")
     public void provideModelInput(String input) {
         Prediction prediction = TestContext.getModel().predict(input);
         TestContext.setPrediction(prediction);
     }
-    
     @Then("the prediction confidence should be greater than {double}")
     public void verifyConfidence(double minConfidence) {
         assertThat(TestContext.getPrediction().getConfidence())
@@ -460,12 +443,10 @@ public class MLModelSteps {
 ```java
 public class CloudSteps {
     private AmazonS3 s3Client;
-    
     @Given("a test file in S3 bucket {string}")
     public void setupS3File(String bucket) {
         s3Client.putObject(bucket, "test-file.txt", "test content");
     }
-    
     @Then("the file should be processed")
     public void verifyFileProcessing() {
         assertThat(s3Client.doesObjectExist("processed-bucket", "test-file.txt"))
@@ -480,7 +461,6 @@ public class CloudSteps {
 ```java
 public class KubernetesSteps {
     private KubernetesClient k8sClient;
-    
     @Given("the deployment {string} is running")
     public void verifyDeploymentRunning(String deployment) {
         assertThat(k8sClient.apps().deployments()
@@ -502,7 +482,6 @@ public class AccessibilitySteps {
         AccessibilityScanner scanner = new AccessibilityScanner(driver);
         List<AccessibilityViolation> violations = 
             scanner.scan(WCAGLevel.fromString(level));
-        
         assertThat(violations).isEmpty();
     }
 }
@@ -531,7 +510,6 @@ public class LocalizationSteps {
     public void setLocale(String locale) {
         LocaleContext.setLocale(Locale.forLanguageTag(locale));
     }
-    
     @Then("I should see text {string}")
     public void verifyLocalizedText(String expectedText) {
         assertThat(page.getTextContent()).contains(expectedText);
@@ -549,7 +527,6 @@ public class RTLSteps {
         PageConfig.setDirection("rtl");
         PageConfig.setLanguage(language);
     }
-    
     @Then("the layout should be right-aligned")
     public void verifyRTLayout() {
         assertThat(page.getComputedStyle("direction")).isEqualTo("rtl");
@@ -565,13 +542,11 @@ public class RTLSteps {
 ```java
 public class BlockchainSteps {
     private Web3j web3j;
-    
     @Given("a deployed smart contract")
     public void setupSmartContract() {
         Credentials credentials = Credentials.create("private-key");
         contract = SmartContract.deploy(web3j, credentials, GAS_PRICE, GAS_LIMIT);
     }
-    
     @When("I execute contract function {string}")
     public void executeContractFunction(String function) {
         TransactionReceipt receipt = contract.executeFunction(function).send();
@@ -588,13 +563,11 @@ public class BlockchainSteps {
 ```java
 public class IoTSteps {
     private MqttClient mqttClient;
-    
     @Given("a connected IoT device {string}")
     public void simulateDevice(String deviceId) {
         mqttClient.connect();
         mqttClient.subscribe("devices/" + deviceId + "/commands");
     }
-    
     @When("I send command {string} to device")
     public void sendDeviceCommand(String command) {
         mqttClient.publish("devices/" + deviceId + "/commands", command);
@@ -610,18 +583,15 @@ public class IoTSteps {
 ```java
 public class QuantumSteps {
     private QuantumSimulator simulator;
-    
     @Given("a quantum circuit with {int} qubits")
     public void setupQuantumCircuit(int qubits) {
         circuit = new QuantumCircuit(qubits);
         TestContext.setCircuit(circuit);
     }
-    
     @When("I apply Hadamard gate to qubit {int}")
     public void applyQuantumGate(int qubit) {
         circuit.h(qubit);
     }
-    
     @Then("the superposition should be verified")
     public void verifySuperposition() {
         QuantumResult result = simulator.execute(circuit);

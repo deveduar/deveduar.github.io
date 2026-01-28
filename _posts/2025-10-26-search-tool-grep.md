@@ -14,10 +14,9 @@ tags:
   - Productividad
 ---
 # search tool grep
-`$= dv.current().file.tags.join(" ")`
 
 ## Contexto y propósito
-`grep` y herramientas modernas basadas en él permiten realizar búsquedas de texto rápidas, expresivas y escalables dentro de sistemas de archivos, repositorios de código y bases de conocimiento como [Sistemas](/uncategorized/sistemas/). Son clave para:
+`grep` y herramientas modernas basadas en él permiten realizar búsquedas de texto rápidas, expresivas y escalables dentro de sistemas de archivos, repositorios de código y bases de conocimiento como [Sistemas](/sistemas/sistemas/). Son clave para:
 - Localizar configuraciones, logs y referencias técnicas.
 - Auditar código y documentación.
 - Potenciar flujos de trabajo de análisis, debugging y documentación en Obsidian.
@@ -71,10 +70,10 @@ BurntSushiripgrep ripgrep recursively searches directories
 - Integración:
 	- ripgrep se integra mejor con editores, IDEs y herramientas modernas.
 
-## Mejora de búsqueda en [Sistemas](/uncategorized/sistemas/)
+## Mejora de búsqueda en [Sistemas](/sistemas/sistemas/)
 - Estrategias:
 	- Usar tags de Obsidian como filtros conceptuales.
-	- Mapear carpetas de [Sistemas](/uncategorized/sistemas/) a rutas de búsqueda.
+	- Mapear carpetas de [Sistemas](/sistemas/sistemas/) a rutas de búsqueda.
 	- Automatizar búsquedas recurrentes con scripts.
 - Ejemplos de uso:
 	- Localizar patrones arquitectónicos.
@@ -306,7 +305,7 @@ grep -a "version" archivo.bin
 ```
 {% endraw %}
 
-## Integración con [Sistemas](/uncategorized/sistemas/)
+## Integración con [Sistemas](/sistemas/sistemas/)
 
 ### Auditar configuraciones sensibles
 

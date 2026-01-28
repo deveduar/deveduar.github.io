@@ -48,7 +48,6 @@ app.conf.update(
 def tarea_larga(self, segundos):
     """Tarea que simula procesamiento largo"""
     self.update_state(state='PROGRESS', meta={'porcentaje': 0})
-    
     for i in range(segundos):
         time.sleep(1)
         porcentaje = ((i + 1) / segundos) * 100
@@ -56,7 +55,6 @@ def tarea_larga(self, segundos):
             state='PROGRESS', 
             meta={'porcentaje': round(porcentaje, 2)}
         )
-    
     return f'Tarea completada después de {segundos} segundos'
 ```
 {% endraw %}
@@ -81,21 +79,17 @@ def enviar_email_bienvenida(self, usuario_email, usuario_nombre):
         <h1>Bienvenido {usuario_nombre}!</h1>
         <p>Gracias por registrarte en nuestro servicio.</p>
         """
-        
         # Configurar mensaje
         mensaje = MIMEText(template, 'html')
         mensaje['Subject'] = 'Bienvenida a Nuestra Plataforma'
         mensaje['From'] = 'noreply@empresa.com'
         mensaje['To'] = usuario_email
-        
         # Enviar email
         with SMTP('smtp.empresa.com', 587) as servidor:
             servidor.starttls()
             servidor.login('usuario', 'password')
             servidor.send_message(mensaje)
-            
         return f'Email enviado a {usuario_email}'
-        
     except Exception as exc:
         # Reintento automático en caso de error
         raise self.retry(exc=exc)
@@ -104,12 +98,10 @@ def enviar_email_bienvenida(self, usuario_email, usuario_nombre):
 def enviar_newsletter_masiva(lista_emails, contenido):
     """Envía newsletter a lista masiva de emails"""
     resultados = []
-    
     for email in lista_emails:
         # Encadenar envíos individuales
         resultado = enviar_email_bienvenida.delay(email, 'Cliente')
         resultados.append(resultado.id)
-    
     return f'Newsletter programada para {len(resulta)} destinatarios'
 ```
 {% endraw %}
@@ -129,33 +121,28 @@ def procesar_imagen(self, ruta_imagen, operaciones):
     try:
         with Image.open(ruta_imagen) as img:
             self.update_state(state='PROGRESS', meta={'etapa': 'Abriendo imagen'})
-            
             # Aplicar operaciones
             for i, operacion in enumerate(operaciones):
                 self.update_state(
                     state='PROGRESS', 
                     meta={'etapa': f'Procesando: {operacion}', 'progreso': (i/len(operaciones))*100}
                 )
-                
                 if operacion['tipo'] == 'redimensionar':
                     img = img.resize(operacion['dimensiones'])
                 elif operacion['tipo'] == 'convertir':
                     img = img.convert(operacion['formato'])
                 elif operacion['tipo'] == 'filtro':
                     img = img.filter(operacion['filtro'])
-            
             # Guardar resultado
             nombre_base = os.path.splitext(ruta_imagen)[0]
             ruta_salida = f"{nombre_base}_procesada.jpg"
             img.save(ruta_salida, quality=85)
-            
             return {
                 'estado': 'completado',
                 'archivo_salida': ruta_salida,
                 'tamaño_original': os.path.getsize(ruta_imagen),
                 'tamaño_final': os.path.getsize(ruta_salida)
             }
-            
     except Exception as e:
         return {'estado': 'error', 'mensaje': str(e)}
 
@@ -164,12 +151,10 @@ def procesar_csv_masivo(ruta_csv, operaciones):
     """Procesa archivo CSV grande en chunks"""
     chunksize = 10000
     resultados = []
-    
     for i, chunk in enumerate(pd.read_csv(ruta_csv, chunksize=chunksize)):
         # Procesar cada chunk en paralelo
         resultado = procesar_chunk_csv.delay(chunk.to_dict(), operaciones, i)
         resultados.append(resultado)
-    
     return {
         'total_chunks': len(resultados),
         'chunk_ids': [r.id for r in resultados]
@@ -179,14 +164,12 @@ def procesar_csv_masivo(ruta_csv, operaciones):
 def procesar_chunk_csv(chunk_data, operaciones, chunk_num):
     """Procesa un chunk individual de CSV"""
     df = pd.DataFrame(chunk_data)
-    
     # Aplicar operaciones
     for op in operaciones:
         if op['tipo'] == 'filtro':
             df = df.query(op['condicion'])
         elif op['tipo'] == 'transformacion':
             df[op['columna']] = df[op['columna']].apply(op['funcion'])
-    
     return {
         'chunk_num': chunk_num,
         'filas_procesadas': len(df),
@@ -211,24 +194,19 @@ def scrapear_pagina(self, url, selectores):
         headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
         }
-        
         respuesta = requests.get(url, headers=headers, timeout=10)
         respuesta.raise_for_status()
-        
         soup = BeautifulSoup(respuesta.content, 'html.parser')
         datos = {}
-        
         for clave, selector in selectores.items():
             elementos = soup.select(selector)
             datos[clave] = [elem.get_text(strip=True) for elem in elementos]
-        
         return {
             'url': url,
             'estado': 'éxito',
             'datos': datos,
             'timestamp': str(app.now())
         }
-        
     except Exception as e:
         return {
             'url': url,
@@ -240,14 +218,12 @@ def scrapear_pagina(self, url, selectores):
 def scrapear_sitio_completo(urls_config):
     """Coordina scraping de múltiples URLs"""
     resultados = []
-    
     for config in urls_config:
         resultado = scrapear_pagina.delay(
             config['url'], 
             config['selectores']
         )
         resultados.append(resultado)
-    
     # Esperar y recopilar todos los resultados
     datos_completos = []
     for resultado in resultados:
@@ -256,7 +232,6 @@ def scrapear_sitio_completo(urls_config):
             datos_completos.append(datos)
         except Exception as e:
             datos_completos.append({'error': str(e)})
-    
     return datos_completos
 ```
 {% endraw %}
@@ -275,38 +250,28 @@ import base64
 def generar_reporte_ventas(self, fecha_inicio, fecha_fin, formato='pdf'):
     """Genera reporte de ventas con gráficos"""
     self.update_state(state='PROGRESS', meta={'etapa': 'Obteniendo datos'})
-    
     # Simular obtención de datos
     datos_ventas = obtener_ventas_periodo(fecha_inicio, fecha_fin)
     df = pd.DataFrame(datos_ventas)
-    
     self.update_state(state='PROGRESS', meta={'etapa': 'Procesando datos'})
-    
     # Análisis de datos
     ventas_por_dia = df.groupby('fecha')['monto'].sum()
     productos_populares = df['producto'].value_counts().head(10)
-    
     self.update_state(state='PROGRESS', meta={'etapa': 'Generando gráficos'})
-    
     # Crear visualizaciones
     fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(10, 12))
-    
     # Gráfico de ventas por día
     ventas_por_dia.plot(ax=ax1, kind='line', title='Ventas por Día')
     ax1.set_ylabel('Monto de Ventas')
-    
     # Gráfico de productos populares
     productos_populares.plot(ax=ax2, kind='bar', title='Productos Más Vendidos')
     ax2.set_ylabel('Cantidad Vendida')
-    
     plt.tight_layout()
-    
     # Convertir a base64 para enviar
     buffer = io.BytesIO()
     plt.savefig(buffer, format='png', dpi=150)
     buffer.seek(0)
     imagen_base64 = base64.b64encode(buffer.getvalue()).decode()
-    
     # Métricas del reporte
     metricas = {
         'total_ventas': df['monto'].sum(),
@@ -314,7 +279,6 @@ def generar_reporte_ventas(self, fecha_inicio, fecha_fin, formato='pdf'):
         'promedio_venta': df['monto'].mean(),
         'periodo': f'{fecha_inicio} a {fecha_fin}'
     }
-    
     return {
         'metricas': metricas,
         'grafico': imagen_base64,
@@ -393,7 +357,6 @@ class ProductionConfig:
     worker_max_tasks_per_child = 1000
     task_acks_late = True
     task_reject_on_worker_lost = True
-    
     # Queue routing
     task_routes = {
         'tareas.emails.*': {'queue': 'emails'},
@@ -401,7 +364,6 @@ class ProductionConfig:
         'tareas.scraping.*': {'queue': 'scraping'},
         'tareas.reportes.*': {'queue': 'reportes'},
     }
-    
     # Rate limiting
     task_annotations = {
         'tareas.scraping.scrapear_pagina': {'rate_limit': '10/m'},
@@ -425,7 +387,6 @@ from celery.result import AsyncResult
 def verificar_estado_tarea(task_id):
     """Verifica el estado de una tarea específica"""
     resultado = AsyncResult(task_id, app=app)
-    
     return {
         'id': task_id,
         'estado': resultado.state,
@@ -437,7 +398,6 @@ def verificar_estado_tarea(task_id):
 def estadisticas_colas():
     """Obtiene estadísticas de las colas"""
     inspector = app.control.inspect()
-    
     return {
         'tareas_activas': inspector.active(),
         'tareas_pendientes': inspector.reserved(),
@@ -450,7 +410,6 @@ if __name__ == '__main__':
     # Ejecutar tarea de ejemplo
     tarea = app.send_task('tarea_larga', args=[5])
     print(f"Tarea enviada: {tarea.id}")
-    
     # Verificar estado
     import time
     time.sleep(2)

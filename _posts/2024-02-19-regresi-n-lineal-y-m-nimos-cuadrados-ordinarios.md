@@ -11,12 +11,11 @@ tags:
   - IA
 ---
 # Regresión Lineal y Mínimos Cuadrados Ordinarios
-`$= dv.current().file.tags.join(" ")`
 
 [Regresión Lineal y Mínimos Cuadrados Ordinarios](https://www.youtube.com/watch?v=k964_uNn3l0&list=PL-Ogd76BhmcC_E2RjgIIJZd1DQdYHcVf0&index=5) video
 
 - [mates](/uncategorized/mates/)
-- [Data Science](/uncategorized/data-science/)
+- [Data Science](/data%20science/data-science/)
 - [Deep Learning](/data%20science/deep-learning/)
 ## Concepto
 - La regresión lineal busca modelar la relación entre una variable dependiente $y$ (por ejemplo, valor de una vivienda) y una o varias variables independientes $x$ (por ejemplo, número de habitaciones, grado de criminalidad, cercanía a negocios).
@@ -92,7 +91,6 @@ import matplotlib.pyplot as plt  # Visualización gráfica.
 - **numpy**: manejo eficiente de arrays y matrices, operaciones algebraicas.
 - **scipy**: funciones matemáticas avanzadas, estadísticas, optimización, procesamiento de imágenes y señales.
 - **matplotlib.pyplot**: crear gráficos, diagramas y visualizaciones; alternativas: seaborn, plotly.
-    
 
 ### Dataset Boston Housing
 
@@ -109,7 +107,6 @@ boston.  # presionar TAB para autocompletar
 {% endraw %}
 
 - `sklearn.datasets` incluye conjuntos de datos de ejemplo, como Boston Housing.
-    
 - Proceso típico:
     1. Recoger datos.
     2. Explorar estructura del dataset.
@@ -122,7 +119,6 @@ boston.  # presionar TAB para autocompletar
 - `Shift + Enter`: ejecutar celda y moverse a la siguiente.
 - `In [n]`: indica el orden de ejecución de las celdas.
 - `.` + `TAB`: autocompletado de métodos y atributos de objetos.
-    
 
 ### Flujo de trabajo básico
 

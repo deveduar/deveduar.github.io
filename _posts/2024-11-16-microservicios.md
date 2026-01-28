@@ -14,11 +14,10 @@ tags:
   - microservicios
 ---
 # microservicios
-`$= dv.current().file.tags.join(" ")`
 
-- [devops](/uncategorized/devops/)
-- [Computer Science](/uncategorized/computer-science/)
-- [Backend](/uncategorized/backend/)
+- [devops](/devops/devops/)
+- [Computer Science](/computer%20science/computer-science/)
+- [Backend](/backend/backend/)
 - [Docker](/software%20engineering/docker/)
 - [api](/backend/api/)
 - [Virtualizacion](/devops/virtualizacion/)
@@ -304,11 +303,11 @@ async def ping():
 # Preparación para entrevistas de microservicios
 
 - [microservicios](/backend/microservicios/)
-- [Backend](/uncategorized/backend/)
-- [Computer Science](/uncategorized/computer-science/)
+- [Backend](/backend/backend/)
+- [Computer Science](/computer%20science/computer-science/)
 - [api](/backend/api/)
 - [Docker](/software%20engineering/docker/)
-- [devops](/uncategorized/devops/)
+- [devops](/devops/devops/)
 
 ## Enfoque general de la entrevista
 - El objetivo es evaluar:
@@ -454,7 +453,6 @@ async def ping():
 - Crear una estrategia Outbox con PostgreSQL.
 
 # Glosario de conceptos de microservicios
-`$= dv.current().file.tags.join(" ")`
 
 ## Arquitectura general
 - **Microservicio**

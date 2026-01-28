@@ -9,7 +9,6 @@ public_note: "true"
 category: Testing
 ---
 # glosario de terminos sobre qa
-`$= dv.current().file.tags.join(" ")`
 ## Fundamentos y Definiciones Básicas
 - **Quality Assurance (QA)**: Sistema de gestión preventivo que establece procesos estandarizados para garantizar la calidad durante todo el ciclo de desarrollo
 - **Control de Calidad (QC)**: Proceso operativo reactivo centrado en la detección y corrección de defectos en productos finales mediante técnicas de inspección

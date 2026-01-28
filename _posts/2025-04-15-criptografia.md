@@ -13,10 +13,9 @@ tags:
   - criptografia
 ---
 # Criptografía
-`$= dv.current().file.tags.join(" ")` 
 
 - [control de datos](/ciberseguridad/control-de-datos/)
-- [autenticacion](/uncategorized/autenticacion/)
+- [autenticacion](/autenticacion/autenticacion/)
 	- [SSO Single Sign-On](/autenticacion/sso-single-sign-on/)
 	- [OAuth](/autenticacion/oauth/) 🔥
 	- [JWT](/autenticacion/jwt/)  🔥
@@ -31,7 +30,7 @@ Su objetivo es asegurar que solo las partes autorizadas puedan acceder o modific
 ## Fundamentos
 - [control de datos](/ciberseguridad/control-de-datos/)  
 	La criptografía garantiza el control del acceso y la manipulación de datos sensibles, protegiéndolos de accesos no autorizados o alteraciones maliciosas.
-- [autenticacion](/uncategorized/autenticacion/)  
+- [autenticacion](/autenticacion/autenticacion/)  
 	Permite verificar la identidad de los usuarios, sistemas o entidades que participan en una comunicación segura. Puede implementarse mediante contraseñas, claves, certificados o protocolos especializados.
 ## [Protocolos](/redes/protocolos/) y Estándares Criptográficos
 - [OAuth](/autenticacion/oauth/) 🔥  
@@ -109,7 +108,6 @@ Clave privada → Descifrado
 
 - [Cryptography Standards (NIST FIPS)](https://csrc.nist.gov/publications/fips)
 - [Cryptographic Standards and Guidelines | CSRC](https://csrc.nist.gov/projects/cryptographic-standards-and-guidelines)
-    
 
 # Criptografía — Extensión de conceptos avanzados
 

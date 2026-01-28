@@ -10,7 +10,6 @@ category: uncategorized
 ---
 
 # Guía Fundamental de [E2E - End to End Testing](/testing/e2e---end-to-end-testing/)
-`$= dv.current().file.tags.join(" ")`
 ## 🧠 Conceptos Clave
 
 - **Definición**

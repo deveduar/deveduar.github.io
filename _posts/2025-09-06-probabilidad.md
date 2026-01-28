@@ -12,16 +12,15 @@ tags:
   - mates
 ---
 # probabilidad
-`$= dv.current().file.tags.join(" ")`
 
 - [mates](/uncategorized/mates/)
-- [Data Science](/uncategorized/data-science/)
+- [Data Science](/data%20science/data-science/)
 - [Teoría de la probabilidad y teoría de la información](/mates/teor-a-de-la-probabilidad-y-teor-a-de-la-informaci-n/)
 
 ## Predicción de estado
 La predicción de estado es el problema de inferir el estado futuro de un sistema a partir de observaciones pasadas y un modelo probabilístico. Es central en estadística, física, ciencia de datos, IA y sistemas complejos, donde el estado puede ser explícito (variables definidas) o implícito (latente).
 
-- [LLM](/uncategorized/llm/)
+- [LLM](/data%20science/llm/)
 - Cadenas de Markov
 	- Definición: modelos probabilísticos donde el siguiente estado depende únicamente del estado actual (propiedad de Markov).
 	- Estados discretos o continuos según el dominio.
@@ -78,10 +77,10 @@ La probabilidad aplicada permite resolver problemas complejos mediante inferenci
 		- Relación directa con modelos predictivos y compresión.
 
 ## Relación con otros campos
-- [Data Science](/uncategorized/data-science/)
+- [Data Science](/data%20science/data-science/)
 	- Modelos predictivos y series temporales.
 	- Inferencia estadística y validación.
-- [LLM](/uncategorized/llm/)
+- [LLM](/data%20science/llm/)
 	- Predicción del siguiente token como problema probabilístico.
 	- Estados latentes y aproximación de distribuciones complejas.
 - Física y sistemas complejos
@@ -147,7 +146,7 @@ Complementa la probabilidad al medir estructura e incertidumbre.
 	- Medida de dependencia no lineal.
 - Cross-entropy y perplexity
 	- Métricas prácticas para evaluar modelos predictivos.
-	- Uso estándar en [LLM](/uncategorized/llm/) y modelos de lenguaje.
+	- Uso estándar en [LLM](/data%20science/llm/) y modelos de lenguaje.
 
 ## Dependencia temporal y series temporales
 Cuando el orden y el tiempo son críticos.
@@ -231,7 +230,7 @@ Cuando el modelo influye en el sistema observado.
 	- Predicción como tarea base.
 - Estados latentes continuos
 	- Representaciones internas no interpretables directamente.
-- [LLM](/uncategorized/llm/)
+- [LLM](/data%20science/llm/)
 	- Predicción probabilística condicionada a contexto largo.
 	- Aproximación práctica a modelos de estado complejos.
 
@@ -447,7 +446,7 @@ Cuando el modelo influye en el sistema observado.
 - **awesome-bayesian**
 	- https://github.com/josephmisiti/awesome-machine-learning#bayesian
 
-## 🧠 Relación directa con [LLM](/uncategorized/llm/)
+## 🧠 Relación directa con [LLM](/data%20science/llm/)
 - Modelado de tokens como estados probabilísticos.
 - Atención como memoria extendida no-Markoviana.
 - Evaluación mediante entropía, cross-entropy y perplexity.
@@ -456,7 +455,7 @@ Cuando el modelo influye en el sistema observado.
 # Fundamentos de la probabilidad
 
 - [mates](/uncategorized/mates/)
-- [Data Science](/uncategorized/data-science/)
+- [Data Science](/data%20science/data-science/)
 
 ## Definición y objetivo
 La probabilidad es la rama de las matemáticas que estudia fenómenos aleatorios y cuantifica la incertidumbre asociada a ellos. Su objetivo principal es modelar, analizar y predecir resultados cuando no es posible un determinismo completo.
@@ -471,7 +470,7 @@ Un experimento aleatorio es aquel cuyo resultado no puede predecirse con certeza
 - Ejemplos
 	- Lanzar un dado
 	- Medir ruido en un sensor
-	- Próximo token en un [LLM](/uncategorized/llm/)
+	- Próximo token en un [LLM](/data%20science/llm/)
 - Repetibilidad bajo mismas condiciones
 - Resultados impredecibles individualmente
 
@@ -612,7 +611,7 @@ Herramientas prácticas para trabajar con probabilidad.
 - Muestreo aleatorio
 - Métodos Monte Carlo
 - Aproximación numérica de distribuciones
-- Uso extensivo en [Data Science](/uncategorized/data-science/) y ML
+- Uso extensivo en [Data Science](/data%20science/data-science/) y ML
 
 ## Probabilidad y predicción
 La probabilidad no predice valores exactos, sino distribuciones de posibles estados.
@@ -620,7 +619,7 @@ La probabilidad no predice valores exactos, sino distribuciones de posibles esta
 - Predicción como inferencia
 - Incertidumbre cuantificada
 - Relación con cadenas de Markov
-- Base conceptual de [LLM](/uncategorized/llm/) y modelos secuenciales
+- Base conceptual de [LLM](/data%20science/llm/) y modelos secuenciales
 
 ## Errores comunes
 - Confundir probabilidad con certeza
@@ -637,8 +636,8 @@ La probabilidad no predice valores exactos, sino distribuciones de posibles esta
 # Laboratorios de probabilidad y predicción
 
 - [mates](/uncategorized/mates/)
-- [Data Science](/uncategorized/data-science/)
-- [LLM](/uncategorized/llm/)
+- [Data Science](/data%20science/data-science/)
+- [LLM](/data%20science/llm/)
 
 ## Laboratorios introductorios
 Enfocados en construir intuición probabilística y comprensión básica.
@@ -769,10 +768,10 @@ Para integrar conceptos en sistemas complejos.
 	- Horizonte de predictibilidad.
 
 ## Laboratorios aplicados
-- [Data Science](/uncategorized/data-science/)
+- [Data Science](/data%20science/data-science/)
 	- Predicción de demanda.
 	- Detección de anomalías.
-- [LLM](/uncategorized/llm/)
+- [LLM](/data%20science/llm/)
 	- Predicción de tokens como proceso probabilístico.
 	- Análisis de entropía y perplexity.
 - Ciencias naturales
@@ -906,7 +905,7 @@ Curso tipo **Intro to Probability / MA-485**
 - Estadística inferencial
 - Procesos estocásticos
 - Simulación y métodos Monte Carlo
-- [Data Science](/uncategorized/data-science/)
+- [Data Science](/data%20science/data-science/)
 - Aprendizaje automático
 - Modelos predictivos y sistemas probabilísticos
 
@@ -917,8 +916,8 @@ Curso tipo **Intro to Probability / MA-485**
 # Laboratorios de Probabilidad y Predicción con Tecnología y Tools (2025-2026)
 
 - [mates](/uncategorized/mates/)
-- [Data Science](/uncategorized/data-science/)
-- [LLM](/uncategorized/llm/)
+- [Data Science](/data%20science/data-science/)
+- [LLM](/data%20science/llm/)
 
 ## 1. Laboratorio de simulación básica con Python
 - Herramientas: **NumPy, SciPy, Matplotlib**
@@ -987,7 +986,7 @@ Curso tipo **Intro to Probability / MA-485**
 - Herramientas: combinación de **PyMC, pomegranate, sktime, PyTorch**
 - Modelado de sistemas complejos con múltiples variables aleatorias
 - Predicción probabilística y análisis de escenarios
-- Aplicación a problemas reales de [Data Science](/uncategorized/data-science/) y [LLM](/uncategorized/llm/)
+- Aplicación a problemas reales de [Data Science](/data%20science/data-science/) y [LLM](/data%20science/llm/)
 - Interpretación de resultados y análisis de limitaciones
 
 ## 11. Laboratorio aplicado a proyectos de LLM

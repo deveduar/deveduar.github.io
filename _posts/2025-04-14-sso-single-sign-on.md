@@ -13,10 +13,9 @@ tags:
   - Hacking
 ---
 # SSO Single Sign-On
-`$= dv.current().file.tags.join(" ")` 
 
 ## Conceptos Fundamentales
-- [autenticacion](/uncategorized/autenticacion/)
+- [autenticacion](/autenticacion/autenticacion/)
 - [Protocolos](/redes/protocolos/)
 - [SAML](/autenticacion/saml/)
 - [Kerberos](/autenticacion/kerberos/)
@@ -160,7 +159,6 @@ tags:
 
 
 # Frameworks y Tecnologías SSO
-`$= dv.current().file.tags.join(" ")`
 
 ## Protocolos Fundamentales
 ### SAML 2.0

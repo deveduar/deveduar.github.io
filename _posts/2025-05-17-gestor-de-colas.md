@@ -12,10 +12,9 @@ tags:
   - rabbitmq
 ---
 # Gestor de Colas
-`$= dv.current().file.tags.join(" ")`
 
 ## Conceptos Fundamentales
-Los **gestores de colas** permiten la comunicación asíncrona entre servicios y componentes. Son esenciales en arquitecturas distribuidas como [Backend](/uncategorized/backend/), [microservicios](/backend/microservicios/) y sistemas de [Automatizacion y Build](/uncategorized/automatizacion-y-build/).  
+Los **gestores de colas** permiten la comunicación asíncrona entre servicios y componentes. Son esenciales en arquitecturas distribuidas como [Backend](/backend/backend/), [microservicios](/backend/microservicios/) y sistemas de [Automatizacion y Build](/automatizacion%20y%20build/automatizacion-y-build/).  
 Permiten desacoplar productores y consumidores, absorber picos de carga y garantizar entrega fiable.
 
 ## Cuándo Usarlos

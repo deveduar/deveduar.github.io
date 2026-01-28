@@ -11,7 +11,6 @@ tags:
   - Windows
 ---
 # Eliminar archivo a través del terminal
-`$= dv.current().file.tags.join(" ")`
 
 ## Contexto general
 Eliminar archivos desde el terminal es una tarea común cuando se trabaja con automatización, scripts o gestión avanzada de archivos. En sistemas Windows, esto se realiza habitualmente usando [powershell](/sistemas/powershell/) o el símbolo del sistema, permitiendo borrar archivos incluso cuando el explorador gráfico falla o resulta poco práctico.
@@ -136,7 +135,6 @@ Cuando se gestionan bibliotecas de música u otros lotes grandes:
     - `Remove-Item *.mp3`
 - Por coincidencia parcial:
     - `Remove-Item "*xxxx*"`
-        
 
 Usar comodines incrementa el riesgo, por lo que se recomienda combinar con `-WhatIf` previamente.
 

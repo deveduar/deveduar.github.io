@@ -9,12 +9,11 @@ tags:
   - Kubernetes
 ---
 # Kubernetes
-`$= dv.current().file.tags.join(" ")`
 
 - PaaS platform as a service
 - [Virtualizacion](/devops/virtualizacion/)
-- [cloud](/uncategorized/cloud/)
-- [infraestructura IT](/uncategorized/infraestructura-it/)
+- [cloud](/cloud/cloud/)
+- [infraestructura IT](/infraestructura%20it/infraestructura-it/)
 - docs
 	- [Kubernetes Crash Course for Absolute Beginners \[NEW\] - YouTube](https://youtu.be/s_o8dwzRlu4)
 	- [KUBERNETES De NOVATO a PRO](https://youtu.be/DCoBcpOA7W4?t=984)
@@ -182,7 +181,6 @@ tags:
 - [Helm Charts](https://helm.sh/docs/topics/charts/)
 
 # Kubernetes Cheatsheet 2025
-`$= dv.current().file.tags.join(" ")`
 
 ## Clúster y Componentes
 - **Cluster**: conjunto de nodos que ejecutan aplicaciones containerizadas

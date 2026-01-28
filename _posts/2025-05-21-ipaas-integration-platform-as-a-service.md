@@ -12,9 +12,8 @@ tags:
   - infraestructura
 ---
 # iPaaS Integration Platform as a Service
-`$= dv.current().file.tags.join(" ")`
 
-- [infraestructura IT](/uncategorized/infraestructura-it/)
+- [infraestructura IT](/infraestructura%20it/infraestructura-it/)
 - [mulesoft](/cloud/mulesoft/)
 - [GCP Google cloud](/data%20science/gcp-google-cloud/) dataflow
 
@@ -116,9 +115,8 @@ Su objetivo principal es **reducir la complejidad de integración**, acelerar el
 - Alineación entre TI y negocio.
 
 # iPaaS – Patrones, Retos, Métricas y Tendencias (2025–2026)
-`$= dv.current().file.tags.join(" ")`
 
-- [infraestructura IT](/uncategorized/infraestructura-it/)
+- [infraestructura IT](/infraestructura%20it/infraestructura-it/)
 - [mulesoft](/cloud/mulesoft/)
 - [GCP Google cloud](/data%20science/gcp-google-cloud/) dataflow
 
@@ -176,9 +174,8 @@ Su objetivo principal es **reducir la complejidad de integración**, acelerar el
 	- Orquestación de flujos distribuidos para sensores, actuadores y gateways.
 
 # iPaaS – Recursos y Herramientas 2025‑2026
-`$= dv.current().file.tags.join(" ")`
 
-- [infraestructura IT](/uncategorized/infraestructura-it/)
+- [infraestructura IT](/infraestructura%20it/infraestructura-it/)
 - [mulesoft](/cloud/mulesoft/)
 - [GCP Google cloud](/data%20science/gcp-google-cloud/) dataflow
 

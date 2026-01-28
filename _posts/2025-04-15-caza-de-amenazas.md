@@ -13,7 +13,7 @@ tags:
   - amenazas
 ---
 # Caza de amenazas
-``$= dv.current().file.tags.join(" ")``
+``
 
 ## Definición y objetivos
 **Threat Hunting** es un enfoque **proactivo** de ciberseguridad centrado en buscar amenazas que han evadido controles preventivos y detecciones automáticas.
@@ -24,7 +24,7 @@ tags:
 
 Relación directa con:
 - [amenazas](/ciberseguridad/amenazas/)
-- [monitoreo](/uncategorized/monitoreo/)
+- [monitoreo](/monitoreo/monitoreo/)
 
 ## Diferencias frente a detección tradicional
 - Detección tradicional:
@@ -152,7 +152,7 @@ Referencia:
 - Alimenta reglas de detección
 - Mejora playbooks
 - Aporta contexto a incidentes
-- Refuerza [monitoreo](/uncategorized/monitoreo/)
+- Refuerza [monitoreo](/monitoreo/monitoreo/)
 
 ## Formación y recursos recomendados
 - [Compañía especializada en digitalización y ciberseguridad - Ikusi](https://ikusi.com/mx/blog/threat-hunting/)
@@ -228,7 +228,7 @@ Referencia:
 	- Uso indebido de cuentas de servicio
 
 Relación directa con:
-- [monitoreo](/uncategorized/monitoreo/)
+- [monitoreo](/monitoreo/monitoreo/)
 - [amenazas](/ciberseguridad/amenazas/)
 
 ## Threat Hunting y análisis de memoria
@@ -454,7 +454,7 @@ Relación directa con:
 - Creación sospechosa de recursos
 - Exfiltración desde buckets o storage
 - Cambios de configuración sin ticket
-- Integración con [cloud](/uncategorized/cloud/) y hardening preventivo
+- Integración con [cloud](/cloud/cloud/) y hardening preventivo
 
 ## Compromiso de bases de datos
 - Consultas masivas anómalas
@@ -597,4 +597,4 @@ Relación directa con:
 - Documentación sistemática
 - Revisión cruzada entre analistas
 - Mejora continua del logging
-- Alineación con [monitoreo](/uncategorized/monitoreo/) y hardening
+- Alineación con [monitoreo](/monitoreo/monitoreo/) y hardening

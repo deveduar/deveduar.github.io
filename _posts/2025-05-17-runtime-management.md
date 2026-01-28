@@ -14,9 +14,9 @@ tags:
   - procesos
 ---
 # Runtime Management
-``$= dv.current().file.tags.join(" ")``
+``
 
-- [Backend](/uncategorized/backend/)
+- [Backend](/backend/backend/)
 ## Conceptos Clave
 - Gestión del Ciclo de Vida de Procesos: Supervisión, reinicio automático y logging de aplicaciones en producción.
 - Monitoreo y alertas: Integración con sistemas de monitoreo para detectar fallos y analizar rendimiento.
@@ -34,7 +34,6 @@ tags:
 	tab	- Gestión de entornos y variables de configuración.
 - Integración con [microservicios](/backend/microservicios/) para mantener la disponibilidad y escalabilidad.
 - Ejemplo de uso:
-	
 	### Iniciar una aplicación
 	{% raw %}
 ```bash
@@ -81,7 +80,6 @@ stdout_logfile=/var/log/miapp.log
 stderr_logfile=/var/log/miapp.err
 ```
 {% endraw %}
-	
 - Integración con scripts de deployment y control de múltiples servicios.
 
 ### systemd
@@ -109,7 +107,6 @@ Environment=NODE_ENV=production
 WantedBy=multi-user.target
 ```
 {% endraw %}
-	
 - Comandos útiles:
 	{% raw %}
 ```bash

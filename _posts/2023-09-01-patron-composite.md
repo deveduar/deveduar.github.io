@@ -15,9 +15,8 @@ tags:
   - patrones_diseo
 ---
 # Patron Composite
-`$= dv.current().file.tags.join(" ")`
 
-- [Computer Science](/uncategorized/computer-science/)
+- [Computer Science](/computer%20science/computer-science/)
 - [Patrones de diseño](/computer%20science/patrones-de-dise-o/)
 - GameDev
 
@@ -92,7 +91,6 @@ public:
 	~cFireBall();
 	bool Collides(cRect *rc);
 	void Draw(cData* data);
-	
 	int dist;
 	int direc;
 	float angle;

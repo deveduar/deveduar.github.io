@@ -13,7 +13,6 @@ tags:
   - functions
 ---
 # Lambda Functions
-`$= dv.current().file.tags.join(" ")`  
 
 - [PF Programación Funcional](/computer%20science/pf-programaci-n-funcional/)
 

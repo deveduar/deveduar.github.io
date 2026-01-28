@@ -11,7 +11,7 @@ tags:
   - Linux
 ---
 # Linux entrevistas
-``$= dv.current().file.tags.join(" ")``
+``
 
 ## Recursos y referencias
 - [Top 10 Linux Job Interview Questions](https://youtu.be/l0QGLMwR-lY)

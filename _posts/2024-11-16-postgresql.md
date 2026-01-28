@@ -12,7 +12,6 @@ tags:
   - db
 ---
 # postgreSQL
-`$= dv.current().file.tags.join(" ")`
 
 - [PostgreSQL: Documentation](https://www.postgresql.org/docs/)
 
@@ -426,7 +425,6 @@ FOR VALUES FROM ('2025-01-01') TO ('2026-01-01');
 
 
 # PostgreSQL — Conceptos Avanzados y Completos
-`$= dv.current().file.tags.join(" ")`
 
 - [PostgreSQL: Documentation](https://www.postgresql.org/docs/)
 

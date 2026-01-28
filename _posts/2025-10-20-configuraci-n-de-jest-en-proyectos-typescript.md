@@ -9,7 +9,6 @@ public_note: "true"
 category: Testing
 ---
 # Configuración de Jest en proyectos TypeScript
-`$= dv.current().file.tags.join(" ")`
 
 - [Testing](/testing/testing/)
 - [jest](/testing/jest/)

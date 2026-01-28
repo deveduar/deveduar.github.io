@@ -9,7 +9,6 @@ public_note: "true"
 category: Testing
 ---
 # Mocks MSW - patrones y casos reales
-`$= dv.current().file.tags.join(" ")`
 
 - MSW
 - [Testing](/testing/testing/)
@@ -44,9 +43,7 @@ rest.get('/api/user/:id', (req, res, ctx) => {
 🧭 Ideal cuando:
 
 - Simulas endpoints con rutas dinámicas.
-    
 - Quieres testear componentes dependientes de filtros o queries.
-    
 
 ---
 
@@ -69,9 +66,7 @@ rest.get('/api/secure', (req, res, ctx) => {
 🧩 Caso real:
 
 - Validar que tu `fetch` o `axios` maneja correctamente 401/403.
-    
 - Evitar mockear manualmente middlewares de auth.
-    
 
 ---
 
@@ -115,9 +110,7 @@ server.use(
 ✅ Esto es útil para:
 
 - Simular errores de API o estados edge.
-    
 - Asegurar que tu UI reacciona correctamente ante fallos.
-    
 
 ---
 
@@ -189,11 +182,8 @@ export const handlers = [...userHandlers, ...productHandlers];
 📦 Ventajas:
 
 - Escalable a medida que crece la aplicación.
-    
 - Facilita mantenimiento y reuso de mocks.
-    
 - Permite desactivar grupos de handlers durante un test concreto.
-    
 
 ---
 
@@ -288,40 +278,26 @@ npm run dev
 ## Casos Reales de Uso en Empresas
 
 - **GitHub Copilot** — usa MSW en tests internos para simular respuestas de APIs sin exponer endpoints reales.
-    
 - **Vercel** — emplea MSW en componentes Next.js para validar `getServerSideProps` y `fetch`.
-    
 - **Shopify** — combina MSW + Playwright para simular entornos E2E realistas.
-    
 - **Startups SaaS** — lo usan para demos interactivas sin necesidad de servidores temporales.
-    
 
 ---
 
 ## Mejores Prácticas Finales
 
 - Mantén los mocks **sincronizados** con la documentación de API real.
-    
 - Usa **nombres de handlers descriptivos**.
-    
 - Limpia `server.resetHandlers()` después de cada test.
-    
 - Simula errores y delays deliberadamente.
-    
 - Añade **logging condicional** (`console.log(req.url.href)`) para debugging.
-    
 - Versiona los mocks junto al código de frontend (no en repos aparte).
-    
 
 ---
 
 ### 🔗 Referencias recomendadas
 
 - [https://mswjs.io/docs/](https://mswjs.io/docs/)
-    
 - [MSW Recipes](https://github.com/mswjs/msw-examples)
-    
 - [TDD patterns](/testing/tdd-patterns/)
-    
 - Integration tests
-    

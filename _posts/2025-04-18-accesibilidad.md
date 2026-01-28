@@ -12,10 +12,10 @@ tags:
   - accesibilidad
 ---
 # Accesibilidad
-``$= dv.current().file.tags.join(" ")``
+``
 
 ## Conceptos Base
-- [Frontend](/uncategorized/frontend/)
+- [Frontend](/frontend/frontend/)
 - [SEO](/frontend/seo/)
 - 
 - Sumario de WCAG 2-es

@@ -14,7 +14,7 @@ tags:
   - tool
 ---
 # Burp Suite
-``$= dv.current().file.tags.join(" ")``
+``
 
 ## Concepto y propósito
 Burp Suite es una plataforma integral para pruebas de seguridad en aplicaciones web, ampliamente utilizada en [Pentesting](/ciberseguridad/pentesting/) y análisis de [vulnerabilidades](/ciberseguridad/vulnerabilidades/). Actúa como un proxy de interceptación entre el navegador y la aplicación, permitiendo inspeccionar, modificar y analizar el tráfico HTTP/S en tiempo real. Es una herramienta clave tanto para auditorías manuales como para procesos automatizados de detección de fallos de seguridad.
@@ -22,7 +22,7 @@ Burp Suite es una plataforma integral para pruebas de seguridad en aplicaciones 
 ## Relación con otras áreas
 -	[vulnerabilidades](/ciberseguridad/vulnerabilidades/): Identificación y validación de fallos como XSS, SQLi, CSRF, IDOR y deserialización insegura.
 -	[Pentesting](/ciberseguridad/pentesting/): Uso durante fases de reconocimiento, análisis, explotación y validación de impactos.
--	[monitoreo](/uncategorized/monitoreo/): Observación continua del comportamiento de la aplicación, flujos de sesión y comunicaciones cliente-servidor.
+-	[monitoreo](/monitoreo/monitoreo/): Observación continua del comportamiento de la aplicación, flujos de sesión y comunicaciones cliente-servidor.
 
 ## Componentes principales
 -	**Proxy**

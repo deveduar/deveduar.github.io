@@ -15,10 +15,9 @@ tags:
   - design_systems
 ---
 # guias de estilos
-`$= dv.current().file.tags.join(" ")`
 
 ## Referencias principales
-- [Frontend](/uncategorized/frontend/)
+- [Frontend](/frontend/frontend/)
 - [UX-UI](/frontend/ux-ui/)
 - [CSS](/frontend/css/)
 - [Motion – Material Design 3](https://m3.material.io/styles/motion/overview)

@@ -11,10 +11,9 @@ tags:
   - CS
 ---
 # Computer science - curso de inicio CS50
-`$= dv.current().file.tags.join(" ")`
 
 ## Recursos
-- [Computer Science](/uncategorized/computer-science/)
+- [Computer Science](/computer%20science/computer-science/)
 - cs50 codigo y notas [https://cs50.harvard.edu/x/2021/](https://cs50.harvard.edu/x/2021/)
 - cs50 IDE [https://ide.cs50.io/](https://ide.cs50.io/)
 - Manuals [https://manual.cs50.io/](https://manual.cs50.io/) 

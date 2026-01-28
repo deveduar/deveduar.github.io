@@ -9,7 +9,6 @@ public_note: "true"
 category: Testing
 ---
 # Mapa Conceptual Completo de Testing
-`$= dv.current().file.tags.join(" ")`
 
 # 🧠 Mapa Conceptual de Testing (modular)
 
@@ -223,7 +222,6 @@ en un **bloque de código Markdown listo para Obsidian**:
 
 
 # 🧠 Mapa Conceptual Completo de Testing 2
-`$= dv.current().file.tags.join(" ")`
 
 ## Índice de Mapas
 - [[#🧩 Fundamentos y Tipos de Pruebas]]

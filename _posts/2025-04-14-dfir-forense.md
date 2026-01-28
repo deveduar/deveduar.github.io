@@ -13,12 +13,12 @@ tags:
   - monitoreo
 ---
 # DFIR forense
-``$= dv.current().file.tags.join(" ")``
+``
 
 ## Concepto y alcance de DFIR
 - **Digital Forensics & Incident Response (DFIR)** integra el análisis forense digital con la respuesta a incidentes.
 - Combina capacidades técnicas, operativas y estratégicas para investigar, contener y erradicar incidentes de seguridad.
-- Se apoya directamente en procesos de [monitoreo](/uncategorized/monitoreo/) continuo y detección temprana.
+- Se apoya directamente en procesos de [monitoreo](/monitoreo/monitoreo/) continuo y detección temprana.
 - Aplica tanto a entornos on-premise como cloud, híbridos y OT/ICS.
 
 ## Objetivos principales
@@ -118,7 +118,7 @@ tags:
 - Búsqueda proactiva de actividad anómala no alertada.
 - Correlación entre eventos históricos y campañas conocidas.
 - Hunting basado en comportamiento frente a IOC-based.
-- Integración con [monitoreo](/uncategorized/monitoreo/) avanzado y telemetría extendida.
+- Integración con [monitoreo](/monitoreo/monitoreo/) avanzado y telemetría extendida.
 
 ## DFIR en entornos Cloud y SaaS
 - Análisis forense en AWS, Azure y GCP.

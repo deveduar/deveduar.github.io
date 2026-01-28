@@ -9,7 +9,6 @@ public_note: "true"
 category: uncategorized
 ---
 # Estrategias de mocking para APIs y servicios externos con Jest
-`$= dv.current().file.tags.join(" ")`
 
 - [jest](/testing/jest/)
 - [Testing](/testing/testing/)

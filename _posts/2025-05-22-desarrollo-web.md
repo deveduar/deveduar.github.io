@@ -6,18 +6,18 @@ source:
 status: 🚀
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: uncategorized
+category: Desarrollo web
 tags:
   - desarrollo
   - programming
 ---
 # Desarrollo web
-``$= dv.current().file.tags.join(" ")``
+``
 
 ## Áreas y disciplinas
-- [Software engineering](/uncategorized/software-engineering/)
-- [Backend](/uncategorized/backend/)
-- [Frontend](/uncategorized/frontend/)
+- [Software engineering](/software%20engineering/software-engineering/)
+- [Backend](/backend/backend/)
+- [Frontend](/frontend/frontend/)
 - [Motor de plantillas](/desarrollo%20web/motor-de-plantillas/)
 - [CMS](/desarrollo%20web/cms/)
 - [LMS](/desarrollo%20web/lms/)
@@ -125,7 +125,7 @@ tags:
 	- Formularios internos
 	- Research de producto
 - Áreas relacionadas
-	- [Management](/uncategorized/management/)
+	- [Management](/management/management/)
 	- marketing
 - Plataformas SaaS
 	- Typeform
@@ -249,7 +249,7 @@ Integración con ecosistema de formularios modernos.
 - Monolito modular
 - Serverless
 
-## [Backend](/uncategorized/backend/) moderno
+## [Backend](/backend/backend/) moderno
 - APIs
 	- REST
 	- [GraphQL](/backend/graphql/)

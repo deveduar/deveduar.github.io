@@ -13,10 +13,9 @@ tags:
   - server_actions
 ---
 # Server Actions
-`$= dv.current().file.tags.join(" ")`
 
 ## Conceptos Clave Relacionados
-- [Backend](/uncategorized/backend/)
+- [Backend](/backend/backend/)
 - [api](/backend/api/)
 - [GraphQL](/backend/graphql/)
 - [react](/frontend/react/)
@@ -51,7 +50,7 @@ Las Server Actions funcionan mejor cuando se combinan con **Server Components**:
 **Beneficios:**
 - Menos viajes cliente-servidor.
 - Mejor rendimiento por SSR nativo y cero bundle adicional.
-- Encapsulación estricta de la lógica del [Backend](/uncategorized/backend/) dentro de UI declarativa.
+- Encapsulación estricta de la lógica del [Backend](/backend/backend/) dentro de UI declarativa.
 
 ---
 

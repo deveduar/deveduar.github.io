@@ -14,10 +14,10 @@ tags:
   - devops
 ---
 # Serverless
-``$= dv.current().file.tags.join(" ")``
+``
 
 ## Conceptos Clave
-- [Backend](/uncategorized/backend/)
+- [Backend](/backend/backend/)
 - [Instance Scaling](/backend/instance-scaling/)
 - [Lambda Functions](/computer%20science/lambda-functions/)
 	- AWS Lambda

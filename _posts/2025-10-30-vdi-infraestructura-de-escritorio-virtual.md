@@ -12,7 +12,6 @@ tags:
   - VDI
 ---
 # VDI Infraestructura de Escritorio Virtual
-`$= dv.current().file.tags.join(" ")`
 
 - Citrix
 - Horizon
@@ -172,7 +171,6 @@ Add-AzWvdAppGroupUser -ResourceGroupName "VDI-Group" -ApplicationGroupName "VDI-
 * **VDI sin servidor físico** mediante despliegue 100% en cloud y administración automatizada.
 
 # Expansión de Conceptos Avanzados VDI  
-`$= dv.current().file.tags.join(" ")`
 
 ---
 
@@ -306,7 +304,6 @@ La evolución de la VDI ha dado lugar a arquitecturas más flexibles y automatiz
 - Digital Workspace Strategy 2025 - Gartner Report  
 
 # Extensión de Conceptos Especializados VDI  
-`$= dv.current().file.tags.join(" ")`
 
 ---
 
@@ -476,7 +473,6 @@ En entornos VDI, la entrega de **aplicaciones virtualizadas** complementa el esc
 ---
 
 # VDI: Expansión de conceptos y temas avanzados
-`$= dv.current().file.tags.join(" ")`
 
 ## Arquitecturas VDI avanzadas
 

@@ -9,7 +9,6 @@ public_note: "true"
 category: Testing
 ---
 # E2E - Ejemplos Prácticos Avanzados
-`$= dv.current().file.tags.join(" ")`
 ## ⚙️ Objetivo
 
 Estos ejemplos avanzados de [E2E - End to End Testing](/testing/e2e---end-to-end-testing/) profundizan en casos reales de automatización compleja, simulaciones, paralelización, autenticación persistente, manejo de datos dinámicos, interceptores de red, y validación de estados internos.  

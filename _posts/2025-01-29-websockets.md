@@ -13,9 +13,8 @@ tags:
   - backend
 ---
 # WebSockets
-`$= dv.current().file.tags.join(" ")`
 
-- [Backend](/uncategorized/backend/)
+- [Backend](/backend/backend/)
 - [Protocolos](/redes/protocolos/)
 - [Sockets](/backend/sockets/)
 - notificaciones, chat, streaming

@@ -11,10 +11,10 @@ tags:
   - vulnerabilidades
 ---
 # Bug Bounty
-``$= dv.current().file.tags.join(" ")``
+``
 
 ## Relación con otros dominios
-- [ciberseguridad](/uncategorized/ciberseguridad/)
+- [ciberseguridad](/ciberseguridad/ciberseguridad/)
 - [vulnerabilidades](/ciberseguridad/vulnerabilidades/)
 
 ## Concepto de Bug Bounty

@@ -13,7 +13,6 @@ tags:
   - redes
 ---
 # Protocolos
-`$= dv.current().file.tags.join(" ")`
 
 ## Clasificación General de Protocolos
 - Transferencia de Datos:

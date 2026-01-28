@@ -13,7 +13,7 @@ tags:
   - template-engine
 ---
 # handlebars
-``$= dv.current().file.tags.join(" ")``
+``
 
 ## Relación con otros lenguajes y tecnologías
 - [PHP](/backend/php/)  

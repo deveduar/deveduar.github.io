@@ -12,7 +12,6 @@ tags:
   - e2e
 ---
 # E2E - End to End Testing
-`$= dv.current().file.tags.join(" ")`
 
 - docs
 	- [Guía Fundamental de E2E](/uncategorized/gu-a-fundamental-de-e2e/)

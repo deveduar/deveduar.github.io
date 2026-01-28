@@ -11,9 +11,8 @@ tags:
   - template-engine
 ---
 # Motor de plantillas
-`$= dv.current().file.tags.join(" ")`
 
-- [Desarrollo web](/uncategorized/desarrollo-web/)
+- [Desarrollo web](/desarrollo%20web/desarrollo-web/)
 - Jekyll 
 
 Los **motores de plantillas** permiten generar y renderizar contenido dinámico (HTML, emails, PDFs, documentos, etc.) mediante la combinación de datos y estructuras predefinidas. Son fundamentales en entornos donde se requiere **generar vistas desde el backend** o producir **archivos renderizados automáticamente** sin depender de un frontend completo.

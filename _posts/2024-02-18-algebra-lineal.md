@@ -12,7 +12,6 @@ tags:
   - Mates
 ---
 # Álgebra lineal
-`$= dv.current().file.tags.join(" ")`
 
 - [matematicas](/uncategorized/mates/)
 - [Intro Algebra lineal y ML](/mates/intro-algebra-lineal-y-ml/)
@@ -744,16 +743,13 @@ $$
 **Determinar:**
 
 1. La matriz asociada.
-    
 2. El efecto geométrico.
-    
 
 ---
 
 ### 💡 Solución
 
 1. Aplicamos (T) a los vectores base:
-    
 
 $$  
 T(1,0) = (2,1), \quad T(0,1) = (-1,1)  
@@ -770,11 +766,8 @@ A =
 $$
 
 2. **Efecto geométrico:**
-    
     - Escala el eje (x) por 2 y lo combina con (y).
-        
     - Rota y estira el plano en direcciones oblicuas.
-        
 
 ---
 
@@ -810,7 +803,6 @@ $$
 ### 💡 Solución
 
 1. **Ecuación característica:**
-    
 
 $$  
 \det(A - \lambda I) =  
@@ -826,7 +818,6 @@ $$
 $$
 
 2. **Autovectores:**
-    
 
 Para (\lambda_1 = 5):  
 $$  

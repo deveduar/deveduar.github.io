@@ -13,9 +13,7 @@ tags:
   - Codes
 ---
 # Comunicación entre Procesos
-`$= dv.current().file.tags.join(" ")`
- 
-- [Computer Science](/uncategorized/computer-science/)
+- [Computer Science](/computer%20science/computer-science/)
 - [Sockets](/backend/sockets/)
 - [search tool grep](/sistemas/search-tool-grep/)
 
@@ -214,10 +212,8 @@ while True:
 int main() {
     int shmid = shmget(1234, 1024, 0666|IPC_CREAT);
     char *str = (char*) shmat(shmid, NULL, 0);
-    
     sprintf(str, "Hello Shared Memory");
     printf("Data: %s\n", str);
-    
     shmdt(str);
     shmctl(shmid, IPC_RMID, NULL);
     return 0;
@@ -433,7 +429,6 @@ class CircuitBreaker:
     def __init__(self):
         self.state = "CLOSED"
         self.failure_count = 0
-        
     def call_service(self, request):
         if self.state == "OPEN":
             raise CircuitOpenError()
@@ -890,12 +885,10 @@ class APICircuitBreaker {
 // pages/api/users/[id].js
 export default function handler(req, res) {
     const { id } = req.query;
-    
     if (req.method === 'GET') {
         const user = getUserById(id);
         res.status(200).json(user);
     }
-    
     if (req.method === 'POST') {
         updateUser(id, req.body);
         res.status(200).json({ success: true });
@@ -936,7 +929,6 @@ final String result = await platform.invokeMethod('getBatteryLevel');
 // Android side
 public class MainActivity extends FlutterActivity {
     private static final String CHANNEL = "com.example/app";
-    
     @Override
     public void configureFlutterEngine(@NonNull FlutterEngine flutterEngine) {
         super.configureFlutterEngine(flutterEngine);
@@ -1076,10 +1068,8 @@ await eventBridge.putEvents({
 // Socket.io rooms
 io.on('connection', (socket) => {
     socket.join('room-' + userId);
-    
     // Enviar a room específica
     io.to('room-' + userId).emit('private-message', message);
-    
     // Broadcasting
     socket.broadcast.to('room-' + roomId).emit('user-joined', user);
 });
@@ -1131,7 +1121,6 @@ class CartSync {
         // Conflict resolution
         const serverCart = await getServerCart(userId);
         const mergedCart = this.mergeCarts(serverCart, cartData);
-        
         // Broadcast a otros dispositivos
         this.broadcastToUserDevices(userId, 'cart-updated', mergedCart);
         return mergedCart;
@@ -1227,10 +1216,8 @@ pthread_barrier_init(&barrier, NULL, NUM_THREADS);
 void* worker(void* arg) {
     // Trabajo antes de la barrera
     work_before();
-    
     // Esperar a todos los threads
     pthread_barrier_wait(&barrier);
-    
     // Trabajo después de la barrera
     work_after();
 }
@@ -1243,7 +1230,6 @@ void* worker(void* arg) {
 public class BoundedBuffer<T> {
     private final T[] buffer;
     private int count = 0, in = 0, out = 0;
-    
     public synchronized void put(T item) throws InterruptedException {
         while (count == buffer.length) {
             wait();  // Esperar hasta que haya espacio
@@ -1265,13 +1251,11 @@ public class BoundedBuffer<T> {
 class Reactor {
     std::map<int, EventHandler*> handlers;
     Selector selector;
-    
 public:
     void register_handler(int handle, EventHandler* handler) {
         handlers[handle] = handler;
         selector.register(handle);
     }
-    
     void event_loop() {
         while (true) {
             auto ready_handles = selector.select();
@@ -1343,7 +1327,6 @@ class ByzantineAgreement:
     def __init__(self, nodes, f):
         self.nodes = nodes
         self.f = f  # Máximo nodos faulty
-        
     def agree(self, value):
         # Fase de pre-prepare
         # Fase de prepare  
@@ -1371,7 +1354,6 @@ impl<T: Eq + Hash + Clone> GSet<T> {
     fn add(&mut self, element: T) {
         self.elements.insert(element);
     }
-    
     fn merge(&mut self, other: &GSet<T>) {
         self.elements.extend(other.elements.iter().cloned());
     }
@@ -1400,14 +1382,12 @@ public class BackpressureQueue<T> {
     private final Queue<T> queue;
     private final int capacity;
     private final Semaphore semaphore;
-    
     public void put(T item) throws InterruptedException {
         semaphore.acquire();  // Esperar si está lleno
         synchronized (this) {
             queue.add(item);
         }
     }
-    
     public T take() {
         T item;
         synchronized (this) {
@@ -1542,11 +1522,9 @@ public class TracingInterceptor implements ClientInterceptor {
     public <ReqT, RespT> ClientCall<ReqT, RespT> interceptCall(
             MethodDescriptor<ReqT, RespT> method,
             CallOptions callOptions, Channel next) {
-        
         // Propagar headers de tracing
         String traceId = Tracing.getCurrentTraceId();
         String spanId = Tracing.getCurrentSpanId();
-        
         return new ForwardingClientCall.SimpleForwardingClientCall<ReqT, RespT>(
             next.newCall(method, callOptions)) {
             @Override

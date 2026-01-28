@@ -9,7 +9,6 @@ public_note: "true"
 category: uncategorized
 ---
 # QA Gestión Herramientas y Métricas
-`$= dv.current().file.tags.join(" ")`
 - [QA](/testing/qa/)
 ## Fundamentos de la Gestión de Calidad
 

@@ -14,9 +14,9 @@ tags:
   - programming
 ---
 # PF Programación Funcional
-``$= dv.current().file.tags.join(" ")``
+``
 
-- [Computer Science](/uncategorized/computer-science/)
+- [Computer Science](/computer%20science/computer-science/)
 
 La **programación funcional (PF)** es un paradigma de programación que se centra en la evaluación de **funciones puras**, la **inmutabilidad de los datos** y la **ausencia de efectos secundarios**. Su objetivo es producir código más predecible, modular y fácil de razonar matemáticamente.
 

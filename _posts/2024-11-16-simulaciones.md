@@ -13,15 +13,15 @@ tags:
   - cpp
 ---
 # simulaciones
-``$= dv.current().file.tags.join(" ")``
+``
 
 ## Áreas relacionadas y fundamentos
 - [electronica](/electronica/electronica/)
 - [embedded](/electronica/embedded/)
-- [Data Science](/uncategorized/data-science/)
+- [Data Science](/data%20science/data-science/)
 - [cpp](/software%20engineering/cpp/)
 - [csharp](/software%20engineering/csharp/)
-- [Computer Science](/uncategorized/computer-science/)
+- [Computer Science](/computer%20science/computer-science/)
 - [mates](/uncategorized/mates/)
 
 ### Alcance general de las simulaciones
@@ -99,7 +99,7 @@ tags:
 - Model Based Development (MBD)
 - Complementariedad entre ambos enfoques
 - Reutilización de componentes frente a reutilización de modelos
-- Relación con [Computer Science](/uncategorized/computer-science/)
+- Relación con [Computer Science](/computer%20science/computer-science/)
 
 ### Recursos sobre MBD
 - [Model-based design - Wikipedia](https://en.wikipedia.org/wiki/Model-based_design)

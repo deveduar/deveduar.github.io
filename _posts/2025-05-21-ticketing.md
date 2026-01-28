@@ -14,14 +14,13 @@ tags:
   - ERP
 ---
 # ticketing
-`$= dv.current().file.tags.join(" ")`
 
 - [QA](/testing/qa/)
 - [CRM](/management/crm/)
 - [ERP](/management/erp/)
-- [Management](/uncategorized/management/)
-- [infraestructura IT](/uncategorized/infraestructura-it/)
-- [Gestion de Negocio](/uncategorized/gestion-de-negocio/)
+- [Management](/management/management/)
+- [infraestructura IT](/infraestructura%20it/infraestructura-it/)
+- [Gestion de Negocio](/gestion%20de%20negocio/gestion-de-negocio/)
 - [soporte tecnico](/infraestructura%20it/soporte-tecnico/)
 - [ITIL](/infraestructura%20it/itil/)
 - [Jira](/management/jira/)
@@ -44,7 +43,7 @@ Su objetivo es lograr:
 * colaboración entre equipos  
 * métricas para mejora continua  
 
-Se alinean frecuentemente con prácticas de [ITIL](/infraestructura%20it/itil/) y flujos de trabajo empresariales relacionados con [CRM](/management/crm/), [ERP](/management/erp/) y plataformas de [Gestion de Negocio](/uncategorized/gestion-de-negocio/).
+Se alinean frecuentemente con prácticas de [ITIL](/infraestructura%20it/itil/) y flujos de trabajo empresariales relacionados con [CRM](/management/crm/), [ERP](/management/erp/) y plataformas de [Gestion de Negocio](/gestion%20de%20negocio/gestion-de-negocio/).
 
 ---
 
@@ -102,8 +101,8 @@ Los sistemas de ticketing suelen interactuar con múltiples plataformas:
 * [QA](/testing/qa/): registro de bugs y pruebas  
 * [CRM](/management/crm/): gestión de clientes y comunicación  
 * [ERP](/management/erp/): inventario, facturación y órdenes de servicio  
-* [Management](/uncategorized/management/): planificación y seguimiento ejecutivo  
-* [infraestructura IT](/uncategorized/infraestructura-it/): monitoreo, alertas, provisioning automático  
+* [Management](/management/management/): planificación y seguimiento ejecutivo  
+* [infraestructura IT](/infraestructura%20it/infraestructura-it/): monitoreo, alertas, provisioning automático  
 * [Cloud Computing](/cloud/cloud-computing/): soporte a entornos distribuidos  
 	* ej.: [akamai](/cloud/akamai/) como plataforma de edge o CDN  
 * [Jira](/management/jira/): gestión de proyectos y devops  
@@ -183,7 +182,7 @@ Integración con:
 Automatizaciones posibles:
 * apertura de tickets por alertas  
 * cierre automático cuando un servicio se normaliza  
-* sincronización con métricas de [monitoreo](/uncategorized/monitoreo/)  
+* sincronización con métricas de [monitoreo](/monitoreo/monitoreo/)  
 * actualización de estados desde pipelines de QA o DevOps  
 
 ---

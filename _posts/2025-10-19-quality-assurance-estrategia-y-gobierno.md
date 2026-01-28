@@ -9,7 +9,6 @@ public_note: "true"
 category: Testing
 ---
 # Quality Assurance Estrategia y Gobierno
-`$= dv.current().file.tags.join(" ")`
 
 ## Gobierno de Calidad
 

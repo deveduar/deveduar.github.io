@@ -14,7 +14,6 @@ tags:
   - ciberseguridad
 ---
 # Manejo de Parches
-`$= dv.current().file.tags.join(" ")`
 
 ## Patch Management
 El **Patch Management** es el proceso continuo de **identificar, evaluar, priorizar, probar, desplegar y verificar** parches de software en sistemas operativos, aplicaciones, firmware y dispositivos de red. Su objetivo principal es **reducir la superficie de ataque**, corregir errores funcionales y mantener la **estabilidad y cumplimiento** del entorno TI.
@@ -162,7 +161,6 @@ Buenas prácticas:
 - [Introducción al Patch Management](https://blog.invgate.com/es/que-es-patch-management)
 
 # Manejo de Parches — Expansión Avanzada
-`$= dv.current().file.tags.join(" ")`
 
 ## Gobierno y Estrategia de Patch Management
 El manejo de parches a nivel avanzado requiere una **estrategia formal** alineada con objetivos de negocio y riesgo. No se limita a aplicar actualizaciones, sino a **decidir cuándo, cómo y por qué** se parchea cada activo.
@@ -361,7 +359,6 @@ Objetivo final:
 - Alineado con el negocio
 
 # Recursos y Herramientas de Patch Management — 2025
-`$= dv.current().file.tags.join(" ")`
 
 ## 🚀 Visión General de Recursos 2025
 Herramientas **actuales a 2025**, tanto **open source como comerciales**, junto con **recursos, reportes y tendencias** que reflejan el estado real del Patch Management en entornos corporativos, cloud e híbridos.

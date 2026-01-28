@@ -11,10 +11,9 @@ tags:
   - powershell
 ---
 # PowerShell
-`$= dv.current().file.tags.join(" ")`
 
 ## Enlaces internos y contexto
-- [Sistemas](/uncategorized/sistemas/)
+- [Sistemas](/sistemas/sistemas/)
 - Automatizacion
 - script de hardening powershell
 - script para comprobar puertos ocupados con powershell
@@ -218,7 +217,6 @@ Set-PSReadLineOption -PredictionViewStyle ListView
 	- Registro de acciones y estados finales
 
 # PowerShell 7 — Cheatsheet de comandos
-`$= dv.current().file.tags.join(" ")`
 
 ## Comandos básicos
 - `pwsh` → Inicia PowerShell 7
@@ -410,7 +408,6 @@ try {
 
 
 # PowerShell 7 — Conceptos avanzados y temas complementarios
-`$= dv.current().file.tags.join(" ")`
 
 ## Tipos de datos y objetos .NET
 - PowerShell trabaja nativamente con objetos .NET, no solo texto

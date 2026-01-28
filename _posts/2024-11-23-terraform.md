@@ -14,12 +14,11 @@ tags:
   - infraestructura
 ---
 # Terraform
-`$= dv.current().file.tags.join(" ")`
 
 ## Conceptos base y ecosistema
 - [IInfraestructura como codigo](/devops/iinfraestructura-como-codigo/)
-- [devops](/uncategorized/devops/)
-- [cloud](/uncategorized/cloud/)
+- [devops](/devops/devops/)
+- [cloud](/cloud/cloud/)
 - Automatizacion
 - [Aws](/cloud/aws/)
 - [GCP Google cloud](/data%20science/gcp-google-cloud/)
@@ -294,7 +293,6 @@ resource "aws_instance" "example" {
 ```
 {% endraw %}`
 # Ejemplos de app web con [Aws](/cloud/aws/)
-`$= dv.current().file.tags.join(" ")`
 
 * [GitHub - caosbinario/webinar-terraform: Código utilizado para el webinar de terraform](https://github.com/caosbinario/webinar-terraform)
 
@@ -490,7 +488,7 @@ value = module.nginx_server_dev.server_public_ip
 ## Gestión de estado (tf state)
 
 * Colaboración en equipos
-* Almacenamiento remoto en [Backend](/uncategorized/backend/)
+* Almacenamiento remoto en [Backend](/backend/backend/)
 * Uso de buckets S3 en [Aws](/cloud/aws/)
 
 ## Planes en pipelines CI/CD
@@ -884,7 +882,6 @@ output "db_password" {
 
 
 # Recursos Terraform (estado 2025)
-`$= dv.current().file.tags.join(" ")`
 
 ## Documentación y tutoriales oficiales
 - **Terraform Tutorials – HashiCorp Developer**  
@@ -987,7 +984,6 @@ output "db_password" {
 - Blogs técnicos centrados en IaC y Terraform
 
 # Terraform – explicación con ejemplos de código
-`$= dv.current().file.tags.join(" ")`
 
 ## Estructura básica de un proyecto Terraform
 - Un proyecto Terraform se compone de archivos `.tf`
@@ -1364,7 +1360,6 @@ terraform apply tfplan
 * Usar IAM Roles en vez de access keys
 
 # Terraform – glosario de conceptos
-`$= dv.current().file.tags.join(" ")`
 
 ## Conceptos generales
 - **Terraform**
@@ -1436,7 +1431,7 @@ terraform apply tfplan
 - **Estado local**
 	- Guardado en disco
 - **Estado remoto**
-	- Guardado en [Backend](/uncategorized/backend/) compartido
+	- Guardado en [Backend](/backend/backend/) compartido
 - **Locking**
 	- Evita ejecuciones simultáneas
 - **Sensitive data**
@@ -1607,7 +1602,6 @@ terraform apply tfplan
 	- Gestión avanzada de secretos
 
 # Terraform – cheatsheet de comandos y código
-`$= dv.current().file.tags.join(" ")`
 
 ## Inicialización y configuración
 - Inicializar proyecto y descargar providers

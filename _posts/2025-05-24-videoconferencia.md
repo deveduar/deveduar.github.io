@@ -13,7 +13,6 @@ tags:
 ---
 # Videoconferencia
 
-`$= dv.current().file.tags.join(" ")`
 
 - **Zoom Rooms**: 
 	- Hardware dedicado 

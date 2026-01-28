@@ -14,7 +14,6 @@ tags:
   - docker
 ---
 # Devcontainers
-`$= dv.current().file.tags.join(" ")`
 
 - [Docker](/software%20engineering/docker/)
 - [Development containers](https://containers.dev/) 
@@ -42,7 +41,6 @@ Esto lo convierte en una solución clave para el desarrollo **reproducible, port
 
 1. **Archivo `devcontainer.json`**
 	Define la configuración del entorno, las extensiones, el contenedor base, puertos y comandos de inicialización.
-	
 	{% raw %}
 ```json
 	{
@@ -63,7 +61,6 @@ Esto lo convierte en una solución clave para el desarrollo **reproducible, port
 
 2. **Dockerfile o imagen base**
 	Define cómo se construye el entorno. Puede extender imágenes oficiales o personalizadas.
-	
 	{% raw %}
 ```dockerfile
 	FROM node:18

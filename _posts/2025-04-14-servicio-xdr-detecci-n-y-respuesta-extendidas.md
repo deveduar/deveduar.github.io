@@ -13,11 +13,10 @@ tags:
   - servicio
 ---
 # Servicio XDR – Detección y Respuesta Extendidas
-`$= dv.current().file.tags.join(" ")`
 
 ## Definición y concepto
 - **XDR (Extended Detection and Response)** es un enfoque unificado de **detección, correlación y respuesta** que integra múltiples dominios de seguridad en una sola plataforma.
-- Amplía los modelos tradicionales como [EDR](/ciberseguridad/edr/) y NDR al **correlacionar señales de endpoints, red, identidad, correo, aplicaciones y entornos [cloud](/uncategorized/cloud/)**.
+- Amplía los modelos tradicionales como [EDR](/ciberseguridad/edr/) y NDR al **correlacionar señales de endpoints, red, identidad, correo, aplicaciones y entornos [cloud](/cloud/cloud/)**.
 - Su objetivo principal es **mejorar la visibilidad global**, reducir el **MTTD** y **MTTR**, y facilitar respuestas coordinadas frente a ataques complejos.
 
 ## Características clave
@@ -104,7 +103,6 @@ tags:
 - Integraciones habituales con soluciones de Microsoft, Palo Alto, CrowdStrike, SentinelOne y similares.
 
 # XDR – Arquitectura, Madurez y Profundización Técnica
-`$= dv.current().file.tags.join(" ")`
 
 ## Arquitectura interna de XDR
 - **Capa de ingestión**
@@ -227,7 +225,6 @@ tags:
 
 
 # Recursos y herramientas XDR 2025
-`$= dv.current().file.tags.join(" ")`
 
 ## Listado y comparativas de soluciones XDR
 - **CrowdStrike Falcon Insight XDR**
@@ -325,7 +322,7 @@ tags:
 	- [Reddit – XDR & Cloud Security](https://www.reddit.com/r/netsec/)
 
 ## Referencias útiles
-- [cloud](/uncategorized/cloud/)
+- [cloud](/cloud/cloud/)
 - [EDR](/ciberseguridad/edr/)
 - [SIEM](/ciberseguridad/siem/)
 - [SOAR](/ciberseguridad/soar/)
@@ -335,14 +332,13 @@ tags:
 	- [Best XDR Solutions – PeerSpot](https://www.peerspot.com/categories/extended-detection-and-response-xdr)
 
 # Caso de Implementación XDR – Entorno Enterprise Híbrido
-`$= dv.current().file.tags.join(" ")`
 
 ## Contexto de la organización
 - Empresa mediana-grande (≈2.000 empleados).
 - Infraestructura híbrida:
 	- On-premise con [Active Directory](/sistemas/active-directory/).
 	- Microsoft 365 (Exchange Online, SharePoint, Teams).
-	- Workloads en [cloud](/uncategorized/cloud/) (Azure IaaS y PaaS).
+	- Workloads en [cloud](/cloud/cloud/) (Azure IaaS y PaaS).
 - SOC interno con 6 analistas (L1–L3).
 - Problemas iniciales:
 	- Herramientas aisladas (EDR + SIEM + Email Security).

@@ -13,10 +13,10 @@ tags:
   - malware
 ---
 # Antivirus
-``$= dv.current().file.tags.join(" ")``
+``
 
 ## Concepto
-Un **antivirus** es un software de [ciberseguridad](/uncategorized/ciberseguridad/) diseñado para **prevenir, detectar, analizar y eliminar [malware](/ciberseguridad/malware/)** de un sistema informático. Su función principal es proteger la **confidencialidad, integridad y disponibilidad** de la información frente a amenazas conocidas y emergentes.
+Un **antivirus** es un software de [ciberseguridad](/ciberseguridad/ciberseguridad/) diseñado para **prevenir, detectar, analizar y eliminar [malware](/ciberseguridad/malware/)** de un sistema informático. Su función principal es proteger la **confidencialidad, integridad y disponibilidad** de la información frente a amenazas conocidas y emergentes.
 
 ## Funciones principales
 - Detección de amenazas

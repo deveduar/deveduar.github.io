@@ -13,13 +13,12 @@ tags:
   - cloud
 ---
 # soporte tecnico
-`$= dv.current().file.tags.join(" ")`
 
-- [infraestructura IT](/uncategorized/infraestructura-it/)
-- [devops](/uncategorized/devops/)
-- [cloud](/uncategorized/cloud/)
-- [Management](/uncategorized/management/)
-- [Redes](/uncategorized/redes/)
+- [infraestructura IT](/infraestructura%20it/infraestructura-it/)
+- [devops](/devops/devops/)
+- [cloud](/cloud/cloud/)
+- [Management](/management/management/)
+- [Redes](/redes/redes/)
 - [Soporte Microinformático](/sistemas/soporte-microinform-tico/)
 
 ---
@@ -63,21 +62,21 @@ Responsable de **diagnósticos más profundos** y resolución técnica especiali
 * sysadmin  
 	* administración de sistemas operativos  
 	* manejo de logs, eventos y monitorización (journalctl, event viewer, syslog)  
-	* mantenimiento de servicios locales y en [cloud](/uncategorized/cloud/)  
+	* mantenimiento de servicios locales y en [cloud](/cloud/cloud/)  
 * hardware  
 	* fallos de componentes  
 	* reemplazo, compatibilidad y pruebas de estrés  
-* [Redes](/uncategorized/redes/)  
+* [Redes](/redes/redes/)  
 	* análisis de conectividad  
 	* latencias, caídas de paquetes, troubleshooting de VLAN, VPN  
 * prevencion  
 	* hardening básico  
 	* automatización para evitar recurrencias  
 	* documentación para mejorar la base de conocimiento  
-* [Databases](/uncategorized/databases/)  
+* [Databases](/databases/databases/)  
 	* consultas diagnósticas  
 	* revisión de integridad y disponibilidad  
-* [ciberseguridad](/uncategorized/ciberseguridad/)  
+* [ciberseguridad](/ciberseguridad/ciberseguridad/)  
 	* detección de actividad sospechosa  
 	* gestión de accesos y permisos  
 	* análisis de malware básico
@@ -88,7 +87,7 @@ Responsable de **diagnósticos más profundos** y resolución técnica especiali
 ---
 
 ### Nivel 3 (N3)
-Nivel experto con foco en problemas complejos, arquitectura y automatización. Suele solaparse con perfiles de [devops](/uncategorized/devops/) o ingeniería especializada.
+Nivel experto con foco en problemas complejos, arquitectura y automatización. Suele solaparse con perfiles de [devops](/devops/devops/) o ingeniería especializada.
 
 * resolución avanzada de fallos críticos  
 * optimización de infraestructura  

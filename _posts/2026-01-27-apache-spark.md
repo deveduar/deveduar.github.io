@@ -9,12 +9,12 @@ tags:
   - IA
 ---
 # APACHE SPARK
-``$= dv.current().file.tags.join(" ")``
+``
 
 - hadoop
 - [apache](/backend/apache/)
-- [cloud](/uncategorized/cloud/)
-- [Data Science](/uncategorized/data-science/)
+- [cloud](/cloud/cloud/)
+- [Data Science](/data%20science/data-science/)
 - IA
 - Big Data
 - [Stream Processing](/backend/stream-processing/)
@@ -28,7 +28,7 @@ Apache Spark es un motor de procesamiento distribuido de código abierto diseña
 - Soporte para múltiples lenguajes: Scala, Java, Python y R.
 - Compatibilidad con hadoop y otros sistemas de almacenamiento como S3, HDFS y bases de datos NoSQL.
 - Capacidad para procesamiento batch y stream en un mismo framework.
-- Extensiones para análisis avanzado: [Data Science](/uncategorized/data-science/) y IA.
+- Extensiones para análisis avanzado: [Data Science](/data%20science/data-science/) y IA.
 - Optimización automática de consultas mediante Catalyst Optimizer y Tungsten Engine.
 
 ### Componentes Clave
@@ -61,7 +61,7 @@ Apache Spark sigue una arquitectura maestro-esclavo basada en cluster:
 
 ## Integración y Ecosistema
 - Compatible con hadoop para almacenamiento y procesamiento.
-- Se integra con [cloud](/uncategorized/cloud/) para despliegues escalables (AWS EMR, Azure Databricks, GCP Dataproc).
+- Se integra con [cloud](/cloud/cloud/) para despliegues escalables (AWS EMR, Azure Databricks, GCP Dataproc).
 - Se conecta con bases de datos y sistemas de mensajería: Kafka, Cassandra, HBase, MongoDB.
 
 ## Casos de Uso
@@ -117,7 +117,6 @@ df_csv.write.parquet("salida.parquet")
 - Ajustar el **número de particiones** según tamaño de datos y recursos.
 - Monitorear y depurar con Spark UI para identificar cuellos de botella.
 - Evitar **shuffles innecesarios** para reducir tiempo de ejecución.
-    
 
 ## Recursos y Referencias
 

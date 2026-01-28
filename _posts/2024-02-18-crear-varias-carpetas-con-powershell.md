@@ -11,7 +11,6 @@ tags:
   - Windows
 ---
 # Crear varias carpetas con PowerShell
-`$= dv.current().file.tags.join(" ")`
 
 - [powershell](/sistemas/powershell/)
 

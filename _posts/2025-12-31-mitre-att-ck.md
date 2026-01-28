@@ -13,11 +13,10 @@ tags:
   - pentesting
 ---
 # MITRE ATT&CK
-`$= dv.current().file.tags.join(" ")`
 
 ## Enlaces relacionados
 - ttps ciberseguridad - Buscar con Google-
-- [ciberseguridad](/uncategorized/ciberseguridad/)
+- [ciberseguridad](/ciberseguridad/ciberseguridad/)
 - [Pentesting](/ciberseguridad/pentesting/)
 
 ## ¿Qué es MITRE ATT&CK?

@@ -11,10 +11,9 @@ tags:
   - Mates
 ---
 # Intro Algebra lineal y ML
-`$= dv.current().file.tags.join(" ")`
 
 - [mates](/uncategorized/mates/)
-- [Data Science](/uncategorized/data-science/)
+- [Data Science](/data%20science/data-science/)
 - [algebra lineal](/mates/algebra-lineal/)
 
 ## Recursos

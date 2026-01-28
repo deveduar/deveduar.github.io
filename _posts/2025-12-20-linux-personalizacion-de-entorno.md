@@ -11,7 +11,6 @@ tags:
   - Linux
 ---
 # Linux Personalización de Entorno 
-`$= dv.current().file.tags.join(" ")`
 
 ## Entornos y Temas Personalizados
 - ZLCubeKaliBspwm BSPWM para Kali personalizado con un tema de pacman, perfecto para resolver maquinas en HTB-KaliBspwm 

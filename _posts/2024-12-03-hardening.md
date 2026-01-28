@@ -12,9 +12,8 @@ tags:
   - hardening
 ---
 # Hardening  
-`$= dv.current().file.tags.join(" ")`
 
-- [ciberseguridad](/uncategorized/ciberseguridad/)
+- [ciberseguridad](/ciberseguridad/ciberseguridad/)
 ## Documentación y Recursos
 - [Bastionado de sistemas y servidores. ¿Qué es y para qué sirve? | Grupo Atico34](https://protecciondatos-lopd.com/empresas/bastionado-de-sistemas/)
 - [Bastionado de sistemas: el caso de Linux | INCIBE-CERT | INCIBE](https://www.incibe.es/incibe-cert/blog/bastionado-sistemas-el-caso-linux)
@@ -378,7 +377,6 @@ aide --check
 
 
 # Hardening Práctico en Programación  
-`$= dv.current().file.tags.join(" ")`
 
 ## Objetivo
 Guía práctica para aplicar hardening **directamente en el código**, sin repetir conceptos previos y centrada únicamente en **técnicas concretas, implementaciones y patrones seguros**.

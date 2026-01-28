@@ -13,12 +13,12 @@ tags:
   - scaling
 ---
 # Instance Scaling
-``$= dv.current().file.tags.join(" ")``
+``
 
 ## Conceptos Clave
-- [Backend](/uncategorized/backend/)
-- [devops](/uncategorized/devops/)
-- [Databases](/uncategorized/databases/)
+- [Backend](/backend/backend/)
+- [devops](/devops/devops/)
+- [Databases](/databases/databases/)
 - [Auto Scaling](/cloud/auto-scaling/)
 - cache
 	- [redis](/databases/redis/)
@@ -54,7 +54,7 @@ tags:
 
 ## Backend y Arquitectura
 - Patrón stateless: facilita escalado horizontal.
-- Uso de cache distribuida para reducir carga en [Databases](/uncategorized/databases/).
+- Uso de cache distribuida para reducir carga en [Databases](/databases/databases/).
 - Separación de responsabilidades: [microservicios](/backend/microservicios/) o servicios modulares.
 - Optimización de I/O: streaming, compresión, chunked responses.
 - Health checks para detectar fallos y retirarlos del balanceo.
@@ -85,7 +85,7 @@ tags:
 	- TTLs adecuados para evitar datos obsoletos.
 - Objetivos:
 	- Reducir latencia.
-	- Disminuir número de queries a [Databases](/uncategorized/databases/).
+	- Disminuir número de queries a [Databases](/databases/databases/).
 	- Soportar tráfico pico.
 
 ## Kubernetes y Orquestación

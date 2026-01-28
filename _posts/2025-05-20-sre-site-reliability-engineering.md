@@ -13,9 +13,9 @@ tags:
   - IaC
 ---
 # SRE (Site Reliability Engineering)
-``$= dv.current().file.tags.join(" ")``
+``
 
-[IInfraestructura como codigo](/devops/iinfraestructura-como-codigo/) | [Gestion de Negocio](/uncategorized/gestion-de-negocio/) | Automatizacion | [devops](/uncategorized/devops/)
+[IInfraestructura como codigo](/devops/iinfraestructura-como-codigo/) | [Gestion de Negocio](/gestion%20de%20negocio/gestion-de-negocio/) | Automatizacion | [devops](/devops/devops/)
 
 ---
 
@@ -67,7 +67,7 @@ El SRE prioriza la **observabilidad** sobre la mera monitorización.
 ### 3. Automatización
 
 La automatización en SRE va más allá del despliegue; abarca el ciclo completo de vida del servicio.  
-- Integración con Automatizacion y [devops](/uncategorized/devops/) mediante CI/CD, pipelines declarativos y testing automatizado.  
+- Integración con Automatizacion y [devops](/devops/devops/) mediante CI/CD, pipelines declarativos y testing automatizado.  
 - Autoscaling, auto-healing y gestión de configuraciones automatizada.  
 - Implementación de **canary releases**, **feature flags** y **rollbacks automáticos**.
 
@@ -90,7 +90,7 @@ La fiabilidad no es solo técnica, sino estratégica.
 - El coste de mejorar un SLO se evalúa frente al retorno de inversión.  
 - El enfoque SRE conecta métricas técnicas con resultados de negocio, permitiendo **decisiones data-driven**.
 
-Más en [Gestion de Negocio](/uncategorized/gestion-de-negocio/).
+Más en [Gestion de Negocio](/gestion%20de%20negocio/gestion-de-negocio/).
 
 ---
 
@@ -140,12 +140,12 @@ print(f"Error budget utilizado: {error_budget_used:.3f}%")
 ## Conclusión
 
 SRE aporta un marco sistemático para gestionar la fiabilidad como una función de ingeniería.
-Integra métricas cuantificables (SLO, SLI), procesos automatizados (Automatizacion), principios de [devops](/uncategorized/devops/) y gestión estratégica ([Gestion de Negocio](/uncategorized/gestion-de-negocio/)) para crear sistemas resilientes y alineados con los objetivos del negocio moderno.
+Integra métricas cuantificables (SLO, SLI), procesos automatizados (Automatizacion), principios de [devops](/devops/devops/) y gestión estratégica ([Gestion de Negocio](/gestion%20de%20negocio/gestion-de-negocio/)) para crear sistemas resilientes y alineados con los objetivos del negocio moderno.
 
 
 # SRE Avanzado: Prácticas, Cultura y Evolución
 
-[SRE Site Reliability Engineering](/devops/sre-site-reliability-engineering/) | [devops](/uncategorized/devops/) | Automatizacion | [Gestion de Negocio](/uncategorized/gestion-de-negocio/)
+[SRE Site Reliability Engineering](/devops/sre-site-reliability-engineering/) | [devops](/devops/devops/) | Automatizacion | [Gestion de Negocio](/gestion%20de%20negocio/gestion-de-negocio/)
 
 ---
 
@@ -206,7 +206,7 @@ Un SRE debe garantizar que la velocidad de entrega no comprometa la fiabilidad:
 
 El concepto de fiabilidad también se aplica al **nivel organizacional**:
 - Creación de **matrices de riesgo y resiliencia**, identificando dependencias críticas.  
-- Integración con [Gestion de Negocio](/uncategorized/gestion-de-negocio/) para evaluar impacto económico de fallos.  
+- Integración con [Gestion de Negocio](/gestion%20de%20negocio/gestion-de-negocio/) para evaluar impacto económico de fallos.  
 - Priorización de inversiones en fiabilidad basadas en ROI y coste de interrupción.  
 - **SRE Governance:** establecer políticas, estándares y auditorías de fiabilidad.
 
@@ -305,7 +305,7 @@ Su objetivo final es **crear sistemas adaptativos, observables y sostenibles**, 
 # SRE: Extensión Avanzada de Conceptos y Prácticas Emergentes
 $= dv.current().file.tags.join(" ")
 
-[SRE Site Reliability Engineering](/devops/sre-site-reliability-engineering/) | [devops](/uncategorized/devops/) | Automatizacion | [Gestion de Negocio](/uncategorized/gestion-de-negocio/) | [IInfraestructura como codigo](/devops/iinfraestructura-como-codigo/)
+[SRE Site Reliability Engineering](/devops/sre-site-reliability-engineering/) | [devops](/devops/devops/) | Automatizacion | [Gestion de Negocio](/gestion%20de%20negocio/gestion-de-negocio/) | [IInfraestructura como codigo](/devops/iinfraestructura-como-codigo/)
 
 ---
 
@@ -483,7 +483,7 @@ El objetivo ya no es solo evitar fallos, sino **crear sistemas resilientes, adap
 
 # SRE: Expansión Experta y Temas de Frontera
 
-[SRE Site Reliability Engineering](/devops/sre-site-reliability-engineering/) | [devops](/uncategorized/devops/) | Automatizacion | [Gestion de Negocio](/uncategorized/gestion-de-negocio/) | [IInfraestructura como codigo](/devops/iinfraestructura-como-codigo/)
+[SRE Site Reliability Engineering](/devops/sre-site-reliability-engineering/) | [devops](/devops/devops/) | Automatizacion | [Gestion de Negocio](/gestion%20de%20negocio/gestion-de-negocio/) | [IInfraestructura como codigo](/devops/iinfraestructura-como-codigo/)
 
 ---
 

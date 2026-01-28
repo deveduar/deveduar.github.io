@@ -11,7 +11,6 @@ tags:
   - CSS
 ---
 # CSS-Guia completa
-`$= dv.current().file.tags.join(" ")`
 
 
 # 01-CSS Intro
@@ -355,19 +354,16 @@ display: inline-block;
         border: 1px solid #ccc;
         padding: 16px;
     }
-    
     .highlighted {
         border: 2px solid #fa923f;
     }
 ```
 {% endraw %}
-    
 {% raw %}
 ```css
     .highlighted {
         border: 2px solid #fa923f;
     }
-    
     .main-section {
         height: 800px;
         border: 1px solid #ccc;
@@ -375,7 +371,6 @@ display: inline-block;
     }
     ```
 {% endraw %}
-    
 {% raw %}
 ```css
     a.active {
@@ -882,7 +877,6 @@ text-align: right;
 #premium {
 	background: rgba(88, 205, 235, 0.95);
 	border-left: none;
-	
 }
 ```
 {% endraw %}
@@ -1090,21 +1084,18 @@ text-align: center;
         margin: 15px;
         height: 2000px;
     }
-    
     body {
         background: #45d1e4;
         padding: 20px;
         border: 5px solid black;
         margin: 0;
       }
-      
     .parent {
         background: white;
         padding: 20px;
         border: 5px solid black;
         margin: 0;
       }
-      
     .parent div {
         background: rgb(105, 107, 109);
         color: white;
@@ -1160,7 +1151,6 @@ text-align: center;
     /* color: white; */
     padding: 8px 16px;
     /* margin: 10px; */
-    
 }
 ```
 {% endraw %}
@@ -1185,7 +1175,6 @@ margin: 30px;
     /* margin: 10px; */
     top: 0;
     left: 0;
-    
 }
 ```
 {% endraw %}
@@ -1281,7 +1270,6 @@ margin: 30px;
         border: solid 4px rgb(84, 157, 199);
         /* border-left: none; */
         position: absolute;
-        
     }
     ```
 {% endraw %}
@@ -1572,7 +1560,6 @@ background-repeat: repeat-y;
     /* background-attachment: fixed;
     background-attachment: scroll;
     background-attachment: local; */
-    
     width: 100%;
     height: 528px;
     padding: 10px;
@@ -2735,7 +2722,6 @@ background: linear-gradient(to top, rgba(89,68,18,0.6) 10%, transparent), url(./
     }
     .plan--highlighted {
         box-shadow: 2px 2px 2px 2px rgba(82, 82, 167, 0.5);
-    
     }
 }
 ```
@@ -2758,7 +2744,6 @@ background: linear-gradient(to top, rgba(89,68,18,0.6) 10%, transparent), url(./
     }
     .plan--highlighted {
         box-shadow: 2px 2px 2px 2px rgba(82, 82, 167, 0.5);
-    
     }
 }
 ```
@@ -2847,7 +2832,6 @@ background: linear-gradient(to top, rgba(89,68,18,0.6) 10%, transparent), url(./
     }
     .plan--highlighted {
         box-shadow: 2px 2px 2px 2px rgba(82, 82, 167, 0.5);
-    
     }
 }
 ```
@@ -3098,7 +3082,6 @@ Mejorando la pagina de customers
 @media (min-width: 1500px) {
     .package {
     border-left: solid 4px rgb(84, 157, 199);
-    
 
     }
     #free {
@@ -3128,7 +3111,6 @@ Mejorando la pagina de customers
     border: solid 4px rgb(84, 157, 199);
     border-left: none;
     position: relative;
-    
 }
 ```
 {% endraw %}
@@ -4072,13 +4054,9 @@ flex: 0 1 auto; /* flex-grow: 0; flex-shrink: 1; flex-basis: auto; */
 {% endraw %}`
 
 - Distribución proporcional:
-    
     - `flex-grow: 1` en ambos items → espacio disponible se reparte igual.
-        
     - `flex-grow: 2` y `flex-grow: 4` → espacio dividido 2/6 y 4/6.
-        
 - Con wrap → items saltan a otra línea y ocupan todo el ancho disponible.
-    
 
 ---
 
@@ -4164,7 +4142,6 @@ flex: 0 1 auto; /* flex-grow: 0; flex-shrink: 1; flex-basis: auto; */
     }
     .plan--highlighted {
         box-shadow: 2px 2px 2px 2px rgba(82, 82, 167, 0.5);
-    
     }
 }
 ```
@@ -4535,7 +4512,6 @@ flexbox a plans
         box-shadow: 2px 2px 2px 2px rgba(82, 82, 167, 0.5);
         height: 30rem;
         z-index: 50;
-    
     }
 }
 ```
@@ -4918,7 +4894,6 @@ main
 
 main-footer
  grid-row: 3 / 4;
- 
 ```
 {% endraw %}
 
@@ -5506,21 +5481,16 @@ Ejemplo:
 ### Notas
 
 - `alternate` puede producir resultados inesperados
-    
 - Funciones de tiempo por animación:  
     `animation: wiggle 400ms 3s 8 ease-out none;`
-    
 
 ---
 
 ## 8. Animaciones en Customers Page
 
 - En `customers.css`
-    
 - Problema: `transform` de la animación sobrescribe `skew()`
-    
 - Solución: incluir **skew dentro del keyframe**
-    
 
 {% raw %}
 ```css
@@ -5532,7 +5502,6 @@ Ejemplo:
 {% endraw %}
 
 - En móviles sin hover → animación via click o JS
-    
 
 ---
 
@@ -5543,13 +5512,11 @@ Ejemplo:
 - `animationstart`
 - `animationiteration`
 - `animationend`
-    
 
 ### Uso
 
 - Listener en el botón CTA
 - `elapsedTime` útil para detectar finalización
-    
 
 ---
 

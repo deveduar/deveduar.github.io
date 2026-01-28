@@ -12,7 +12,6 @@ tags:
   - testing
 ---
 # TDD - Test Driven Development
-`$= dv.current().file.tags.join(" ")`
 
 - [BDD](/testing/bdd/)
 - [Testing](/testing/testing/)
@@ -82,11 +81,8 @@ En lugar de escribir código libremente, se evoluciona la lógica en base a **ca
 Beneficios:
 
 - El sistema crece mediante requisitos validados.
-    
 - Se previenen regresiones al añadir nuevas funcionalidades.
-    
 - Los tests actúan como documentación técnica viva.
-    
 
 ### 💻 Ejemplo incremental (Python)
 
@@ -123,11 +119,8 @@ Cada unidad debe ser **independiente de otras dependencias** y cubrir solo un ca
 Ventajas:
 
 - Código modular y desacoplado.
-    
 - Menor tiempo de depuración.
-    
 - Facilita los cambios futuros.
-    
 
 ### 💻 Ejemplo (PHPUnit)
 
@@ -155,7 +148,6 @@ Durante esta fase, los tests aseguran que las modificaciones no rompan nada.
 El TDD y el [BDD](/testing/bdd/) (Behavior-Driven Development) se complementan:
 - TDD se enfoca en la **unidad técnica del código**.
 - BDD se centra en el **comportamiento observable del sistema**.
-    
 
 Ambos utilizan ciclos iterativos y refactoring continuo.
 
@@ -189,11 +181,8 @@ Permite definir tests unitarios, integrarlos en pipelines CI/CD y generar report
 Características principales:
 
 - Compatible con [composer](/backend/composer/) y frameworks como Laravel o Symfony.
-    
 - Admite mocks, fixtures y tests parametrizados.
-    
 - Se integra fácilmente con Coveralls Docs- o SonarQube.
-    
 
 ### 💻 Ejemplo CLI
 
@@ -214,7 +203,6 @@ Formato:
 - **Given:** contexto o estado inicial.
 - **When:** acción ejecutada.
 - **Then:** resultado esperado.
-    
 
 ### 💻 Ejemplo adaptado (pseudo BDD)
 
@@ -266,17 +254,12 @@ Ejemplo:
 - `test_crear_usuario_valido`
 - `test_rechazar_usuario_sin_password`
 - `test_login_con_token_invalido`
-    
 ## 🔁 Flujo TDD
 
 1. Escribir un test que falle (**Red**).
-    
 2. Implementar el código mínimo que lo haga pasar (**Green**).
-    
 3. Refactorizar el código sin romper los tests (**Refactor**).
-    
 4. Repetir el ciclo para cada nueva funcionalidad.
-    
 
 **Integración con CI/CD:**  
 Los tests TDD se ejecutan automáticamente en cada commit o _pull request_, asegurando la estabilidad continua del sistema.

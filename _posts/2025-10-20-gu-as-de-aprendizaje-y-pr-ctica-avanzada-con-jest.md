@@ -9,7 +9,6 @@ public_note: "true"
 category: Testing
 ---
 # Guías de aprendizaje y práctica avanzada con Jest
-`$= dv.current().file.tags.join(" ")`
 # Guías de aprendizaje y práctica avanzada con Jest (2025)
 
 ## 🧩 Fundamentos y configuración

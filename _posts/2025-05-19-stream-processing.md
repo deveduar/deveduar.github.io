@@ -13,9 +13,8 @@ tags:
   - CS
 ---
 # Stream Processing
-`$= dv.current().file.tags.join(" ")`
 
-- [Backend](/uncategorized/backend/)
+- [Backend](/backend/backend/)
 
 ## Conceptos Fundamentales
 - Transporte y procesamiento continuo de eventos.
@@ -57,7 +56,7 @@ tags:
 
 ## Apache Spark en Streaming
 - [apache spark](/data%20science/apache-spark/)
-	- Enlazado con [Data Science](/uncategorized/data-science/) por su ecosistema de ML y análisis.
+	- Enlazado con [Data Science](/data%20science/data-science/) por su ecosistema de ML y análisis.
 	- Apache Spark en el Ecosistema de Stream Processing
 	- Spark Structured Streaming opera en micro-batches → buena consistencia, latencia mayor.
 	- Ideal para pipelines donde la latencia sub-segundo no es crítica pero sí la integración con ML/ETL avanzados.
@@ -171,7 +170,6 @@ tags:
 	- Ubicación de tareas según afinidad de datos.
 
 # Stream Processing — Conceptos Explicados
-`$= dv.current().file.tags.join(" ")`
 
 ## Modelos de Tiempo
 - **Event Time**  
@@ -294,7 +292,6 @@ tags:
 
 
 # PKM de Conceptos de Stream Processing
-`$= dv.current().file.tags.join(" ")`
 
 ## Conceptos Fundamentales
 - [Stream Processing](/backend/stream-processing/)

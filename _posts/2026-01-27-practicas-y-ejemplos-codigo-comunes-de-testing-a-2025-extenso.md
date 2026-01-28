@@ -37,11 +37,8 @@ describe('User login', () => {
 ✅ **Buenas prácticas**
 
 - Nombrar los tests con lenguaje natural.
-    
 - Evitar dependencias externas innecesarias.
-    
 - Limpiar el estado global entre tests (`afterEach`, `beforeEach`).
-    
 
 ---
 
@@ -74,11 +71,8 @@ describe('calculateDiscount', () => {
 ✅ **Tips**
 
 - Aislar dependencias con mocks o stubs.
-    
 - Usar nombres descriptivos en las pruebas.
-    
 - Mantener la ejecución rápida (<1s por suite).
-    
 
 ---
 
@@ -100,7 +94,6 @@ describe('POST /login', () => {
     const res = await request(app)
       .post('/login')
       .send({ email: 'test@test.com', password: '1234' });
-    
     expect(res.statusCode).toBe(200);
     expect(res.body.token).toBeDefined();
   });
@@ -111,11 +104,8 @@ describe('POST /login', () => {
 ✅ **Tips**
 
 - Usar una base de datos temporal o Dockerizada.
-    
 - Limpiar los datos tras cada prueba (`truncate`, `rollback`).
-    
 - Simular servicios externos con herramientas como `MSW`, `WireMock` o `nock`.
-    
 
 ---
 
@@ -151,13 +141,9 @@ public class LoginAPITest {
 ✅ **Herramientas clave**
 
 - `Postman` y `Newman` (colecciones y CI/CD).
-    
 - `REST Assured` (Java).
-    
 - `k6` o `JMeter` (carga).
-    
 - `Pact` (contract testing).
-    
 
 ---
 
@@ -166,11 +152,8 @@ public class LoginAPITest {
 ### 💡 Flujo clásico
 
 1. **Red:** escribir un test que falle.
-    
 2. **Green:** escribir el código mínimo que pase el test.
-    
 3. **Refactor:** mejorar sin romper la prueba.
-    
 
 ### 💻 Ejemplo (Python + pytest)
 
@@ -187,11 +170,8 @@ def sum_two_numbers(a, b):
 ✅ **Consejos**
 
 - Escribir tests _antes_ del código principal.
-    
 - Refactorizar con confianza.
-    
 - Mantener las pruebas pequeñas y descriptivas.
-    
 
 ---
 
@@ -212,11 +192,8 @@ Feature: Login de usuario
 ✅ **Herramientas**
 
 - Cucumber (Java, JS, Ruby).
-    
 - Behave (Python).
-    
 - SpecFlow (.NET).
-    
 
 ---
 
@@ -245,11 +222,8 @@ test('flujo completo de login', async ({ page }) => {
 ✅ **Consejos**
 
 - Usar entornos _staging_ o _mockeados_.
-    
 - Evitar flakiness (esperas explícitas, timeouts).
-    
 - Ejecutar en CI/CD (GitHub Actions, GitLab CI).
-    
 
 ---
 
@@ -275,13 +249,9 @@ it('debe retornar datos del usuario mockeados', async () => {
 ✅ **Tipos**
 
 - **Mock:** simula comportamiento dinámico.
-    
 - **Stub:** respuesta fija o estática.
-    
 - **Fake:** implementación simplificada.
-    
 - **Spy:** verifica invocaciones.
-    
 
 ---
 
@@ -298,24 +268,16 @@ npx jest --coverage
 📈 **Métricas útiles**
 
 - `Statements` — líneas ejecutadas.
-    
 - `Branches` — decisiones lógicas cubiertas.
-    
 - `Functions` — funciones llamadas.
-    
 - `Lines` — cobertura total del código.
-    
 
 ✅ **Herramientas**
 
 - Jest / Istanbul
-    
 - Coveralls
-    
 - Codecov
-    
 - SonarQube
-    
 
 ---
 
@@ -346,11 +308,8 @@ jobs:
 ✅ **Buenas prácticas**
 
 - Ejecutar tests en cada `push` y `PR`.
-    
 - Generar reportes y subir métricas.
-    
 - Fasear: _lint → unit → integration → deploy preview_.
-    
 
 ---
 
@@ -374,11 +333,8 @@ export default function () {
 ✅ **Objetivos**
 
 - Identificar cuellos de botella.
-    
 - Medir latencia, throughput y errores.
-    
 - Simular tráfico real (usuarios concurrentes).
-    
 
 ---
 
@@ -409,9 +365,7 @@ test('debe cumplir accesibilidad WCAG', async ({ page }) => {
 ✅ **Herramientas**
 
 - OWASP ZAP, Burp Suite, snyk.
-    
 - axe-core, pa11y, Lighthouse.
-    
 
 ---
 
@@ -432,11 +386,8 @@ print(fake.email())
 ✅ **Buenas prácticas**
 
 - Generar datos consistentes.
-    
 - Evitar datos reales.
-    
 - Usar _fixtures_ reutilizables.
-    
 
 ---
 
@@ -453,15 +404,10 @@ npm run test && allure generate allure-results --clean -o allure-report
 ✅ **KPIs de testing**
 
 - Cobertura total (%)
-    
 - Defectos encontrados por fase
-    
 - Tiempo medio de resolución
-    
 - Pass rate por suite
-    
 - MTTR (Mean Time to Recovery)
-    
 
 ---
 
@@ -470,22 +416,15 @@ npm run test && allure generate allure-results --clean -o allure-report
 ### 🚀 Nuevas tendencias
 
 - **AI-assisted testing** (auto-generación de casos).
-    
 - **Self-healing tests** (autoajuste de selectores).
-    
 - **Chaos engineering** (resiliencia del sistema).
-    
 - **Contract testing en microservicios**.
-    
 - **Testing observability**: métricas + logs + tracing.
-    
 
 ### 🧩 Herramientas emergentes
 
 - Testim, Mabl, Cypress Cloud, Playwright AI, Tracetest.
-    
 - PactFlow, Harness Continuous Quality, QA Wolf.
-    
 
 ---
 
@@ -543,11 +482,8 @@ test('marca una tarea como completada', async () => {
 ✅ **Herramientas populares**
 
 - Testing Library (React, Vue, Svelte)
-    
 - Cypress Component Testing
-    
 - Storybook Interaction Tests
-    
 
 ---
 
@@ -560,18 +496,13 @@ Uso de inteligencia artificial para generar, optimizar o mantener tests automát
 ### 🚀 Aplicaciones
 
 - **Generación automática de casos de prueba** desde código o logs.
-    
 - **Self-healing selectors** en E2E (corrige automáticamente cambios en el DOM).
-    
 - **Predicción de riesgo** para priorizar suites.
-    
 - **Análisis inteligente de regresiones.**
-    
 
 ✅ **Herramientas 2025**
 
 - Playwright AI, Testim, Mabl, QA Wolf AI, CodiumAI.
-    
 
 ---
 
@@ -630,13 +561,9 @@ gremlin attack cpu --length 60 --percent 80
 ✅ **Pruebas comunes**
 
 - Fallo de nodos o pods.
-    
 - Latencia simulada.
-    
 - Corte de red parcial.
-    
 - Sobrecarga de CPU o memoria.
-    
 
 ✅ **Objetivo**  
 Comprobar que los sistemas **se degradan de forma controlada** y se recuperan sin pérdida de datos.
@@ -652,11 +579,8 @@ Combinación de exploración manual con herramientas de registro automático.
 ✅ **Herramientas**
 
 - Xray Exploratory App
-    
 - Testmo Sessions
-    
 - Session-based Test Management (SBTM)
-    
 
 ✅ **Beneficio**  
 Permite documentar, reproducir y aprender de sesiones manuales sin perder trazabilidad.
@@ -672,11 +596,8 @@ Integrar **logs, métricas y trazas** dentro del ciclo de testing para detectar 
 ### 💡 Ejemplo
 
 - Añadir tracing en pruebas de integración (OpenTelemetry).
-    
 - Correlacionar IDs de transacción entre backend y frontend.
-    
 - Analizar métricas de errores con Datadog o Grafana después de las pruebas.
-    
 
 ✅ **Práctica moderna**  
 “**Test what you monitor, monitor what you test**”.
@@ -700,9 +621,7 @@ npx stryker run
 ✅ **Métrica clave**
 
 - **Mutation Score:** porcentaje de mutaciones detectadas por tus tests.
-    
 - Refuerza la calidad de los unit tests más allá de la cobertura tradicional.
-    
 
 ---
 
@@ -731,11 +650,8 @@ percy snapshot ./screenshots
 ✅ **Útil para**
 
 - UI estáticas o dashboards.
-    
 - Detección de cambios visuales o estructurales.
-    
 - Revisiones automáticas en PRs.
-    
 
 ---
 
@@ -772,13 +688,9 @@ Ejecutar pruebas en paralelo o distribuidas entre varios contenedores o workers.
 ✅ **Herramientas**
 
 - Jest `--maxWorkers`
-    
 - Cypress Parallelization
-    
 - Playwright Sharding
-    
 - GitHub Actions Matrix Builds
-    
 
 ✅ **Objetivo**  
 Reducir tiempos de test en pipelines grandes y optimizar recursos en CI/CD.
@@ -813,16 +725,12 @@ Estrategias adaptadas a entornos descentralizados o con funciones efímeras.
 ✅ **Ejemplos**
 
 - Mocking de triggers en AWS Lambda.
-    
 - Simulación de latencia en IoT con MQTT fake brokers.
-    
 - Test locales con Cloudflare Workers + Miniflare.
-    
 
 ✅ **Herramientas**
 
 - LocalStack, Miniflare, MQTTX, Serverless Framework.
-    
 
 ---
 
@@ -835,11 +743,8 @@ Testing como parte del ciclo operativo continuo, con trazabilidad completa y fee
 ✅ **Prácticas Clave**
 
 - Métricas de calidad visibles en dashboards.
-    
 - Orquestación de pipelines de test con Jenkins, GitHub Actions, Harness o ArgoCD.
-    
 - “Shift-left” + “Shift-right”: pruebas desde el desarrollo hasta la observación en producción.
-    
 
 ---
 
@@ -885,13 +790,9 @@ dataset.expect_column_values_to_be_between("age", 0, 100)
 ✅ **Herramientas**
 
 - Great Expectations
-    
 - Deepchecks
-    
 - Evidently AI
-    
 - TensorFlow Model Analysis
-    
 
 ---
 
@@ -904,13 +805,9 @@ Integración de **pruebas de seguridad automatizadas** dentro del pipeline DevOp
 ### 🧩 Tipos
 
 - **SAST** (Static Application Security Testing): analiza código fuente.
-    
 - **DAST** (Dynamic): prueba la app en ejecución.
-    
 - **IAST** (Interactive): mezcla de ambos con feedback en tiempo real.
-    
 - **SCA** (Software Composition Analysis): analiza dependencias.
-    
 
 ### 💻 Ejemplo (GitHub Advanced Security)
 
@@ -970,11 +867,8 @@ Evalúa **la experiencia del usuario** de forma empírica, midiendo facilidad de
 ### 🧠 Métodos modernos
 
 - **UX Metrics Automation:** métricas automáticas como tiempo de tarea, clics, ratio de éxito.
-    
 - **Session Replay Testing:** reproduce interacciones reales (FullStory, Hotjar).
-    
 - **Cognitive Walkthroughs:** validación guiada con testers humanos y heurísticas.
-    
 
 ### 💻 Ejemplo (Playwright + User Flows)
 
@@ -1019,11 +913,8 @@ func TestInfrastructure(t *testing.T) {
 ✅ **Objetivos**
 
 - Validar configuraciones y permisos cloud.
-    
 - Evitar fugas de seguridad por mal despliegue.
-    
 - Garantizar reproducibilidad y consistencia.
-    
 
 ---
 
@@ -1057,11 +948,8 @@ Hardhat · Foundry · Truffle · Ganache · Anvil
 ✅ **Casos típicos**
 
 - Validar lógica de contratos (mint, transfer).
-    
 - Detectar vulnerabilidades (reentrancy, overflow).
-    
 - Simular red blockchain local.
-    
 
 ---
 
@@ -1086,11 +974,8 @@ cy.get('h1').should('contain', 'Welcome');
 ✅ **Checks comunes**
 
 - Codificación y caracteres especiales.
-    
 - Formato de fechas, monedas y unidades.
-    
 - Espaciado dinámico en traducciones.
-    
 
 ---
 
@@ -1103,20 +988,14 @@ Pruebas orientadas a garantizar que el software respeta la **privacidad, equidad
 ✅ **Ejemplos**
 
 - Detección de sesgos algorítmicos.
-    
 - Validación de uso ético de datos personales.
-    
 - Revisión de trazabilidad de decisiones automatizadas.
-    
 
 ### 💻 Frameworks y guías
 
 - **IEEE P7003** (Algorithmic Bias)
-    
 - **ISO/IEC 24028** (AI Trustworthiness)
-    
 - **Ethical Testing Charter** (2024)
-    
 
 ---
 
@@ -1129,11 +1008,8 @@ Evalúa **carga cognitiva** y **rendimiento perceptual** del usuario (UX + neuro
 ✅ **Métricas**
 
 - Eye tracking y heatmaps.
-    
 - Reacción ante estímulos visuales.
-    
 - Pruebas de lectura con dislexia o TDAH.
-    
 
 ✅ **Herramientas**  
 NeuroUX · Tobii Pro · Adobe Accessibility Checker
@@ -1149,11 +1025,8 @@ Gestión avanzada de **entornos de prueba** automatizados y versionados.
 ✅ **Buenas prácticas**
 
 - Versionar entornos como código.
-    
 - Automatizar la creación y destrucción de entornos.
-    
 - Mantener sincronía entre versiones de datos y APIs.
-    
 
 ✅ **Herramientas**  
 TestContainers · Docker Compose · Environment-as-a-Service (EaaS) · Kubernetes namespaces aislados.
@@ -1167,9 +1040,7 @@ TestContainers · Docker Compose · Environment-as-a-Service (EaaS) · Kubernete
 Validación silenciosa o comparativa de nuevas funcionalidades en producción.
 
 - **Shadow Testing:** ejecuta nueva versión en paralelo sin afectar usuarios.
-    
 - **A/B Testing:** compara versiones A y B con usuarios reales.
-    
 
 ### 💻 Ejemplo (Feature Flags + A/B)
 
@@ -1197,16 +1068,12 @@ Uso de IA y métricas históricas para **priorizar y optimizar suites de test** 
 ✅ **Funcionalidades**
 
 - Ejecución inteligente basada en riesgo.
-    
 - Detección de flakiness y auto-reintentos.
-    
 - Visualización de tendencias de estabilidad.
-    
 
 ✅ **Herramientas emergentes (2025)**
 
 - Launchable · ReportPortal.io · TestSigma AI
-    
 
 ---
 

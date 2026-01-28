@@ -11,7 +11,6 @@ tags:
   - CSS
 ---
 # curso CSS 30 projects
-`$= dv.current().file.tags.join(" ")`
 
 - [CSS](/frontend/css/)
 # CSS — Guía Completa + 30 Proyectos con Soluciones
@@ -114,7 +113,6 @@ Cada proyecto incluye:
 - Qué se aprende
 - Solución mínima
 - Técnicas usadas
-    
 ---
 
 ## 1. Fancy Buttons

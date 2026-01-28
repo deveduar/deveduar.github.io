@@ -9,7 +9,6 @@ public_note: "true"
 category: Testing
 ---
 # E2E - Conceptos Avanzados y Estrategia Completa
-`$= dv.current().file.tags.join(" ")`
 
 ## 🧩 Arquitectura del Testing E2E
 

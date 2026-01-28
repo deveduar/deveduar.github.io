@@ -12,7 +12,6 @@ tags:
   - Mates
 ---
 # Curso de Álgebra Lineal universidad madrid
-`$= dv.current().file.tags.join(" ")`
 
 - [http://ocw.uc3m.es/matematicas/algebra-lineal/presentacion-del-curso](http://ocw.uc3m.es/matematicas/algebra-lineal/presentacion-del-curso)
 - [algebra lineal](/mates/algebra-lineal/)
@@ -263,7 +262,6 @@ El análisis de la existencia y unicidad de solución depende del **rango** de l
 
 Sea $A$ la matriz de coeficientes y $[A | \mathbf{b}]$ la matriz ampliada, entonces:
 - El sistema es **compatible** si y solo si:
-  
   $$
   \operatorname{rango}(A) = \operatorname{rango}([A | \mathbf{b}])
   $$

@@ -12,11 +12,10 @@ tags:
   - IA
 ---
 # GCP Big Data Developer y Apache Hadoop
-`$= dv.current().file.tags.join(" ")`
 
 - [apache](/backend/apache/)
 - [GCP Google cloud](/data%20science/gcp-google-cloud/)
-- [Data Science](/uncategorized/data-science/)
+- [Data Science](/data%20science/data-science/)
 ## Temario del curso
 - Fundamentos de Big Data y Hadoop
 - Ecosistema Apache Hadoop
@@ -796,7 +795,6 @@ public class WordCountDriver {
 - Agrupación por clave
 - Ordenación previa a Reduce
 - Impacto crítico en el rendimiento
-    
 
 ## Partitioner
 

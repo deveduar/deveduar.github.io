@@ -15,13 +15,12 @@ tags:
   - ELK
 ---
 # Elasticsearch
-`$= dv.current().file.tags.join(" ")`
 
-- [Databases](/uncategorized/databases/) 
-- [ciberseguridad](/uncategorized/ciberseguridad/)
-- [Data Science](/uncategorized/data-science/)
+- [Databases](/databases/databases/) 
+- [ciberseguridad](/ciberseguridad/ciberseguridad/)
+- [Data Science](/data%20science/data-science/)
 - [kibana](/monitoreo/kibana/)
-- [logstash](/uncategorized/logstash/)
+- [logstash](/monitoreo/logstash/)
 
 ## Introducción a Elasticsearch
 
@@ -116,7 +115,7 @@ Esta combinación de herramientas forma el conocido **ELK Stack**, proporcionand
 - [Set up X-Pack | Elasticsearch Guide 7.17 | Elastic](https://www.elastic.co/guide/en/elasticsearch/reference/7.17/setup-xpack.html)
 
 ### Logstash
-- [logstash](/uncategorized/logstash/)
+- [logstash](/monitoreo/logstash/)
 - **Pipeline de datos**: Procesamiento y transformación
 - [Logstash Introduction | Logstash Reference  8.16  | Elastic](https://www.elastic.co/guide/en/logstash/current/introduction.html)
 
@@ -388,7 +387,6 @@ GET /biblioteca/_mapping
 - Configurar réplicas apropiadas
 - Implementar ILM (Index Lifecycle Management)
 # Elasticsearch - Expansión de Conceptos
-`$= dv.current().file.tags.join(" ")`
 
 ## Arquitectura Avanzada
 

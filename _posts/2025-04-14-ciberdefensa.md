@@ -13,10 +13,9 @@ tags:
   - ciberseguridad
 ---
 # Ciberdefensa
-`$= dv.current().file.tags.join(" ")`
 
-- [ciberseguridad](/uncategorized/ciberseguridad/)
-- [infraestructura IT](/uncategorized/infraestructura-it/)
+- [ciberseguridad](/ciberseguridad/ciberseguridad/)
+- [infraestructura IT](/infraestructura%20it/infraestructura-it/)
 ## Definición y propósito
 La **ciberdefensa** es el conjunto de estrategias, procesos, tecnologías y capacidades humanas orientadas a **prevenir, detectar, responder y recuperarse** frente a ciberataques que afectan a sistemas, redes, aplicaciones, datos e infraestructuras críticas.
 
@@ -229,7 +228,6 @@ La defensa asume que el fallo es posible.
 - Enfoque creciente en resiliencia y recuperación
 
 # Recursos y herramientas de Ciberdefensa y Ciberseguridad (2025)
-`$= dv.current().file.tags.join(" ")`
 
 ## Plataformas y Suites de Seguridad
 ### SIEM / XDR / EDR
@@ -302,7 +300,6 @@ La defensa asume que el fallo es posible.
 - Buscar **integración nativa entre SIEM, XDR, TIP y SOAR** para SOC modernos.
 
 # Glosario de Ciberdefensa y Ciberseguridad
-`$= dv.current().file.tags.join(" ")`
 
 ## Conceptos generales
 - **Ciberdefensa**

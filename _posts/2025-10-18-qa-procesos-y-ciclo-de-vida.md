@@ -9,7 +9,6 @@ public_note: "true"
 category: uncategorized
 ---
 # QA: Procesos y Ciclo de Vida
-`$= dv.current().file.tags.join(" ")`
 
 ## Ciclo de Vida de Desarrollo de Software con QA
 

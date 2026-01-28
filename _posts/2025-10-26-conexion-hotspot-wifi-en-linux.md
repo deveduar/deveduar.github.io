@@ -13,7 +13,6 @@ tags:
   - Linux
 ---
 # conexion hotspot wifi
-`$= dv.current().file.tags.join(" ")`
 
 - [Linux](/sistemas/linux/)
 

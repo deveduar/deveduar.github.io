@@ -13,7 +13,7 @@ tags:
   - kafka
 ---
 # apache flink
-``$= dv.current().file.tags.join(" ")``
+``
 
 - [apache](/backend/apache/)
 - [Apache Kafka](/backend/apache-kafka/)

@@ -9,7 +9,6 @@ public_note: "true"
 category: Testing
 ---
 # Testing Fundamental Multilenguaje 2025 Prácticas y Ejemplos
-`$= dv.current().file.tags.join(" ")`
 
 
 # 🧪 Testing Fundamental Multilenguaje 2025: Prácticas y Ejemplos
@@ -62,11 +61,8 @@ def test_add():
 ✅ **Prácticas**
 
 - Separar claramente preparación, ejecución y validación.
-    
 - Nombrar los tests de forma natural y descriptiva.
-    
 - Evitar dependencias externas innecesarias.
-    
 
 ---
 
@@ -131,11 +127,8 @@ public class MathTests {
 ✅ **Buenas Prácticas**
 
 - Aislar dependencias (mocks/stubs).
-    
 - Probar casos normales y límite.
-    
 - Mantener tests rápidos (<1s).
-    
 
 ---
 
@@ -201,11 +194,8 @@ Assert.AreEqual(200, (int)response.StatusCode);
 ✅ **Tips**
 
 - Usar bases de datos temporales o contenedores.
-    
 - Limpiar datos tras cada test.
-    
 - Simular servicios externos.
-    
 
 ---
 
@@ -220,9 +210,7 @@ const { Pact } = require('@pact-foundation/pact');
 {% endraw %}
 
 - Garantiza que los microservicios cumplan contratos.
-    
 - Integración CI/CD para pruebas continuas.
-    
 
 ### Python – requests + pytest
 
@@ -265,11 +253,8 @@ def test_sum():
 ✅ **Prácticas**
 
 - Escribir test antes del código.
-    
 - Refactorizar con seguridad.
-    
 - Tests pequeños y claros.
-    
 
 ---
 
@@ -290,9 +275,7 @@ Feature: Login
 ✅ **Tips**
 
 - Facilita colaboración QA-Dev-Product.
-    
 - Escenarios claros y comprensibles.
-    
 
 ---
 
@@ -333,11 +316,8 @@ driver.quit()
 ✅ **Consejos**
 
 - Usar entornos staging o mockeados.
-    
 - Evitar tests frágiles.
-    
 - Integrar en CI/CD.
-    
 
 ---
 
@@ -496,11 +476,8 @@ fake.email()
 ✅ **Buenas prácticas**
 
 - Evitar datos reales.
-    
 - Generar datos consistentes.
-    
 - Reutilizar fixtures.
-    
 
 ---
 
@@ -509,14 +486,9 @@ fake.email()
 Este documento **abarca todos los conceptos fundamentales de testing 2025**:
 
 - Unit, Integration, API, E2E.
-    
 - TDD, BDD, Mocking, Coverage.
-    
 - Performance, Security y Test Data.
-    
 - Multilenguaje: JS/TS, Python, Java, C#.
-    
 - Buenas prácticas y patrones AAA, Setup/Teardown, CI/CD.
-    
 
 > Base sólida para avanzar hacia testing avanzado, observability, AI-assisted testing y microservicios.

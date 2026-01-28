@@ -6,7 +6,7 @@ source:
 status: 🚀
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: uncategorized
+category: Data Science
 tags:
   - GCP
   - IA
@@ -18,9 +18,8 @@ tags:
   - Mates
 ---
 # Data Science
-`$= dv.current().file.tags.join(" ")`
 
-- [Gestion de Negocio](/uncategorized/gestion-de-negocio/)
+- [Gestion de Negocio](/gestion%20de%20negocio/gestion-de-negocio/)
 - [mates](/uncategorized/mates/)
 	- estadistica
 	- [probabilidad](/mates/probabilidad/)
@@ -30,16 +29,16 @@ tags:
 	- [Machine Learning](/data%20science/machine-learning/)
 	- [Deep Learning](/data%20science/deep-learning/)
 - Blockchain
-- [Software engineering](/uncategorized/software-engineering/)
+- [Software engineering](/software%20engineering/software-engineering/)
 - [python](/software%20engineering/python/)
 	- python-avanzado-Apuntes > ciencia de datos
 - [TensorFlow](/data%20science/tensorflow/)
 - R
-- [cloud](/uncategorized/cloud/) 
+- [cloud](/cloud/cloud/) 
 	- [GCP Google cloud](/data%20science/gcp-google-cloud/)
-	- [devops](/uncategorized/devops/)
+	- [devops](/devops/devops/)
 	- Automatizacion
-	- [Management](/uncategorized/management/)
+	- [Management](/management/management/)
 - [zotero libros datascience](zotero://select/library/collections/Z3XZGVCJ) 📕
 - sistemas distribuidos
 	- [Scala](/data%20science/scala/) 
@@ -60,12 +59,12 @@ tags:
 		- 
 	- guia de preguntas
 	- tools
-		- [Databases](/uncategorized/databases/)
+		- [Databases](/databases/databases/)
 		- [visual basic VBA](/software%20engineering/visual-basic-vba/)
 		- tableau, 
 		- excel, 
 		- powerbi
-		- [Management](/uncategorized/management/)
+		- [Management](/management/management/)
 		- looker studio
 		- matploitlib
 		- seaborn
@@ -88,16 +87,16 @@ tags:
 				- ETL vs Data Pipeline. ¿Cuál es la mejor manera de mover tus datos- 
 				- ¿Qué es un ETL Pipeline-
 			- Big Data
-			- [cloud](/uncategorized/cloud/)
-			- [Databases](/uncategorized/databases/)
+			- [cloud](/cloud/cloud/)
+			- [Databases](/databases/databases/)
 		- [Machine Learning](/data%20science/machine-learning/)
 		- [Kubernetes](/virtualizacion/kubernetes/)
 	- [apache spark](/data%20science/apache-spark/)
 		- [apache spark](/data%20science/apache-spark/)
-	- [infraestructura IT](/uncategorized/infraestructura-it/)
-		- [cloud](/uncategorized/cloud/) 
-		- [devops](/uncategorized/devops/)
-		- [Databases](/uncategorized/databases/) 
+	- [infraestructura IT](/infraestructura%20it/infraestructura-it/)
+		- [cloud](/cloud/cloud/) 
+		- [devops](/devops/devops/)
+		- [Databases](/databases/databases/) 
 - **data scientist**
 	- IA 
 	- data de usuarios
@@ -117,7 +116,7 @@ tags:
 
 - problemas **ejemplos**
 	- gestion de finanzas
-	- [Gestion de Negocio](/uncategorized/gestion-de-negocio/)
+	- [Gestion de Negocio](/gestion%20de%20negocio/gestion-de-negocio/)
 	- fases
 	- netflix data
 	- marqueting

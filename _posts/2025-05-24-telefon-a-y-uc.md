@@ -12,7 +12,6 @@ tags:
   - telefonia
 ---
 # Telefonía y UC
-`$= dv.current().file.tags.join(" ")`
 
 - Unified Communications:
 	- Integración de voz, video, mensajería y colaboración en una plataforma.  

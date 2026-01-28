@@ -9,7 +9,6 @@ public_note: "true"
 category: mates
 ---
 # 🧮 Teoría de la probabilidad y teoría de la información
-`$= dv.current().file.tags.join(" ")`
 
 - Teoría de la probabilidad y teoría de la información.
 	- Variables aleatorias
@@ -50,11 +49,9 @@ donde $\Omega$ es el espacio muestral.
 Describe cómo se distribuyen los valores posibles de una variable aleatoria.
 
 - Para una **variable discreta**, se define por la **función de masa de probabilidad (pmf)**:
-  
   $$P(X = x_i) = p_i, \quad \text{con} \quad \sum_i p_i = 1$$
 
 - Para una **variable continua**, se define mediante la **función de densidad de probabilidad (pdf)** $f(x)$:
-  
   $$P(a \le X \le b) = \int_a^b f(x)\,dx, \quad \text{con} \quad \int_{-\infty}^{\infty} f(x)\,dx = 1$$
 
 ---
@@ -435,13 +432,9 @@ $$
 ## 📘 Enlaces relacionados
 
 - [Teoría de la probabilidad y teoría de la información](/mates/teor-a-de-la-probabilidad-y-teor-a-de-la-informaci-n/)
-    
 - Reglas bayesianas
-    
 - Modelos gráficos probabilísticos
-    
 - Expectativa, varianza y covarianza
-    
 - Teoría de la información
 
 

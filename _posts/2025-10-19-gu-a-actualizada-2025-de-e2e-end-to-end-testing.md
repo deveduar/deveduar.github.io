@@ -9,7 +9,6 @@ public_note: "true"
 category: Testing
 ---
 # Guía Actualizada 2025 de E2E – “End-to-End Testing
-`$= dv.current().file.tags.join(" ")`
 
 ## 🔮 Tendencias Clave en 2025
 - **IA y Automatización Gen-Auto**

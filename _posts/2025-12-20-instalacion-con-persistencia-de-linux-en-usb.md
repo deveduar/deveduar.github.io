@@ -12,7 +12,6 @@ tags:
   - kali
 ---
 # Instalación con persistencia de Linux en USB
-`$= dv.current().file.tags.join(" ")`
 
 - [Linux](/sistemas/linux/)
 - kali linux

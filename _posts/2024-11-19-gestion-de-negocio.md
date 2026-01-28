@@ -6,7 +6,7 @@ source:
 status: 🚀
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: uncategorized
+category: Gestion de Negocio
 tags:
   - kpi
   - economia
@@ -14,7 +14,6 @@ tags:
   - analisis
 ---
 # Gestión de Negocio
-`$= dv.current().file.tags.join(" ")`
 
 ## Fundamentos
 - estadistica
@@ -22,7 +21,7 @@ tags:
 - economia
 - marketing
 - contabilidad
-- [Management](/uncategorized/management/)
+- [Management](/management/management/)
 
 - **Áreas Clave en Gestión de Negocio**
 	- Análisis cuantitativo para la toma de decisiones.
@@ -32,7 +31,7 @@ tags:
 
 ## Inteligencia de Negocio
 - business intelligence
-- [infraestructura IT](/uncategorized/infraestructura-it/)
+- [infraestructura IT](/infraestructura%20it/infraestructura-it/)
 - [GCP Google cloud](/data%20science/gcp-google-cloud/)
 - [FindOps](/infraestructura%20it/findops/)
 - BPC Business Planning and Consolidation
@@ -52,7 +51,7 @@ tags:
 ## Automatización y Build
 - procesos empresariales
 - digitalización
-- [devops](/uncategorized/devops/)
+- [devops](/devops/devops/)
 - [AIOps](/gestion%20de%20negocio/aiops/)
 
 	- **Objetivos**
@@ -193,7 +192,7 @@ tags:
 - Análisis de brechas y oportunidades de mejora.
 
 ### Normativa
-- [infraestructura IT](/uncategorized/infraestructura-it/)
+- [infraestructura IT](/infraestructura%20it/infraestructura-it/)
 - Cumplimiento regulatorio local e internacional.
 - Estándares de calidad, seguridad y auditoría.
 - Alineación con marcos como ISO, SOC, GDPR, entre otros.

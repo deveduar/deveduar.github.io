@@ -12,11 +12,10 @@ tags:
   - product-management
 ---
 # Product Management
-`$= dv.current().file.tags.join(" ")`
 
 Product Management es la disciplina encargada de guiar el desarrollo, lanzamiento y evolución de un producto, asegurando que cumpla con las necesidades del mercado y los objetivos estratégicos de la organización. Combina visión de negocio, análisis de mercado, gestión de proyectos y coordinación con equipos multidisciplinarios para entregar productos exitosos y rentables.
 
-## [Gestion de Negocio](/uncategorized/gestion-de-negocio/)
+## [Gestion de Negocio](/gestion%20de%20negocio/gestion-de-negocio/)
 - Manejo de proyectos y producto
 	- **Project Management**: planificación, seguimiento y control de proyectos.
 	- **MVP (Producto Mínimo Viable)**: versión básica de un producto para validar hipótesis de negocio.
@@ -137,7 +136,7 @@ Product Management es la disciplina que combina estrategia, diseño, desarrollo 
 - Documentar decisiones y aprendizajes para futuros proyectos.
 
 ## 8. Recursos y aprendizaje
-- [Gestion de Negocio](/uncategorized/gestion-de-negocio/): fundamentos de gestión y estrategia.
+- [Gestion de Negocio](/gestion%20de%20negocio/gestion-de-negocio/): fundamentos de gestión y estrategia.
 - recursos humanos: gestión de talento y cultura de equipos.
 - [SAP](/management/sap/), [CRM](/management/crm/), [ERP](/management/erp/): sistemas de apoyo para la gestión integral.
 - tableau: visualización de datos y análisis de KPIs.

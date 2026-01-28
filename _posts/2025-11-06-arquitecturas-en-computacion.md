@@ -12,9 +12,8 @@ tags:
   - computer_Science
 ---
 # Arquitecturas en Computación
-`$= dv.current().file.tags.join(" ")`
 
-- [Computer Science](/uncategorized/computer-science/)
+- [Computer Science](/computer%20science/computer-science/)
 - sistemas federados ibm
 - 
 ## Arquitectura Hexagonal
@@ -147,7 +146,6 @@ Variante de la arquitectura hexagonal, centrada en un **dominio núcleo**.
 	- Prefiere soluciones simples y claras sobre diseños innecesariamente complejos.
 
 # Arquitecturas en Computación — Expansión y Conceptos Avanzados
-`$= dv.current().file.tags.join(" ")`
 
 ## Clean Architecture
 Evolución de onion architecture y arquitectura hexagonal que enfatiza la **independencia total del dominio** frente a frameworks, bases de datos o interfaces.

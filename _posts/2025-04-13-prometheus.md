@@ -12,9 +12,8 @@ tags:
   - prometheus
 ---
 # prometheus
-`$= dv.current().file.tags.join(" ")`
 
-  * [monitoreo](/uncategorized/monitoreo/)
+  * [monitoreo](/monitoreo/monitoreo/)
   * [Docker](/software%20engineering/docker/)
   * Grafana
   * [Kubernetes](/virtualizacion/kubernetes/)
@@ -161,7 +160,6 @@ services:
 {% endraw %}
 
 # prometheus (avanzado)
-`$= dv.current().file.tags.join(" ")`
 
 ## TSDB Interno (Time Series Database)
 La TSDB es el núcleo de Prometheus, optimizada para métricas de series temporales.
@@ -356,7 +354,6 @@ Combinar recording rules + alertas para eficiencia y claridad.
     - Purgar métricas de alta cardinalidad con `metric_relabel_configs`.
 
 # prometheus (casos de uso)
-`$= dv.current().file.tags.join(" ")`
 
 ## Introducción
 Esta guía reúne **casos de uso reales** y patrones prácticos para aplicar Prometheus de forma efectiva en diferentes entornos. Cada caso incluye su objetivo, enfoque recomendado y ejemplos útiles.
@@ -559,9 +556,6 @@ histogram_quantile(0.95, rate(http_request_duration_seconds_bucket[5m])) > 0.5
 ## Integraciones con el Ecosistema
 
 - Grafana
-    
 - [Docker](/software%20engineering/docker/)
-    
-- [monitoreo](/uncategorized/monitoreo/)
-    
+- [monitoreo](/monitoreo/monitoreo/)
 - [Kubernetes](/virtualizacion/kubernetes/)

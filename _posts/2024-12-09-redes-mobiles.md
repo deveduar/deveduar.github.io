@@ -13,7 +13,6 @@ tags:
   - LTE
 ---
 # redes mobiles
-`$= dv.current().file.tags.join(" ")` 
 
 - diseño de redes moviles y LTE
 - soft atoll, planificacion wifi y movil

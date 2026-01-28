@@ -11,7 +11,6 @@ tags:
   - CSS
 ---
 # CSS-basico
-`$= dv.current().file.tags.join(" ")`
 
 ## Introducción a CSS
 - Sintaxis básica: `selector { propiedad: valor }`

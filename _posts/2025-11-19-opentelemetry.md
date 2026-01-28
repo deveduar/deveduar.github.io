@@ -13,8 +13,7 @@ tags:
   - open_telemetry
 ---
 # OpenTelemetry
-`$= dv.current().file.tags.join(" ")`
-- [monitoreo](/uncategorized/monitoreo/)
+- [monitoreo](/monitoreo/monitoreo/)
 - [Docker](/software%20engineering/docker/)
 
 - [OpenTelemetry](https://opentelemetry.io/)

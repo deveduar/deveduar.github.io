@@ -12,7 +12,6 @@ tags:
   - sistemas
 ---
 # surfing keys vim in browser
-`$= dv.current().file.tags.join(" ")`
 
 - [VIM](/sistemas/vim/)
 - mapear navegador y controlar solo con teclado

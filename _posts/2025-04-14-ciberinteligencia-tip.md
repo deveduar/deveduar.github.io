@@ -15,7 +15,7 @@ tags:
   - servicio
 ---
 # Ciberinteligencia TIP
-``$= dv.current().file.tags.join(" ")``
+``
 
 ## Definición y propósito
 La **Ciberinteligencia TIP (Threat Intelligence Platform)** es el conjunto de procesos, capacidades y herramientas orientadas a **recopilar, analizar, correlacionar y explotar información** relacionada con amenazas digitales, con el objetivo de **anticiparse**, **prevenir** y **responder** de forma informada a incidentes de ciberseguridad.
@@ -23,7 +23,7 @@ La **Ciberinteligencia TIP (Threat Intelligence Platform)** es el conjunto de pr
 Se basa en transformar datos técnicos y contextuales en **inteligencia accionable**, apoyando la toma de decisiones estratégicas, tácticas y operativas.
 
 ## Comparativa conceptual
-- vs [ciberseguridad](/uncategorized/ciberseguridad/)
+- vs [ciberseguridad](/ciberseguridad/ciberseguridad/)
 	La ciberseguridad se centra en **proteger sistemas y datos** mediante controles, tecnologías y políticas.  
 	La ciberinteligencia aporta el **contexto previo y posterior**: quién ataca, cómo, por qué y qué se espera a continuación.
 - vs [Ciberdefensa](/ciberseguridad/ciberdefensa/)

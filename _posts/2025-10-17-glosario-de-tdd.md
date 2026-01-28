@@ -9,7 +9,6 @@ public_note: "true"
 category: Testing
 ---
 # Glosario de TDD
-`$= dv.current().file.tags.join(" ")`
 
 ## Fundamentos
 - [TDD - Test Driven Development](/testing/tdd---test-driven-development/): Test-Driven Development, enfoque de desarrollo donde **los tests se escriben antes del código de producción** para guiar el diseño y garantizar calidad desde el inicio.

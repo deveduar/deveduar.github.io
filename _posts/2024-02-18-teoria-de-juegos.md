@@ -12,7 +12,6 @@ tags:
   - Mates
 ---
 # Teoria de juegos
-`$= dv.current().file.tags.join(" ")`
 
 - [matematicas](/uncategorized/mates/)
 - economia

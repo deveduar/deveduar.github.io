@@ -12,10 +12,9 @@ tags:
   - monitoreo
 ---
 # Combodo iTop
-`$= dv.current().file.tags.join(" ")`
 
 ## Descripción general
-- **iTop (IT Operational Portal)** es una herramienta web de **IT Service Management (ITSM)** y **IT Operations Management (ITOM)** orientada a la gestión integral de [infraestructura IT](/uncategorized/infraestructura-it/).
+- **iTop (IT Operational Portal)** es una herramienta web de **IT Service Management (ITSM)** y **IT Operations Management (ITOM)** orientada a la gestión integral de [infraestructura IT](/infraestructura%20it/infraestructura-it/).
 - Proporciona un **CMDB extensible**, gestión de servicios y soporte IT alineado con **ITIL**.
 - Está diseñada para ser **modular**, **personalizable** y **orientada a procesos**, adecuada tanto para equipos pequeños como para entornos corporativos complejos.
 
@@ -247,7 +246,6 @@ tags:
 - Útil como CMDB lógica en arquitecturas complejas.
 
 # Combodo iTop — Casos de uso, aplicación práctica y configuraciones
-`$= dv.current().file.tags.join(" ")`
 
 ## Gestión de CMDB en entornos corporativos
 - Uso de iTop como **fuente única de verdad** para activos IT.

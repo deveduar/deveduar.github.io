@@ -14,12 +14,11 @@ tags:
   - microservicios
 ---
 # Web Services
-`$= dv.current().file.tags.join(" ")`
 
 ## Enlaces
 - [microservicios](/backend/microservicios/)
-- [Backend](/uncategorized/backend/)
-- [Data Science](/uncategorized/data-science/)
+- [Backend](/backend/backend/)
+- [Data Science](/data%20science/data-science/)
 - [Springboot](/backend/springboot/)
 - [Protocolos](/redes/protocolos/)
 - [JAX-WS](/backend/jax-ws/)

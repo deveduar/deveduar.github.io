@@ -9,7 +9,6 @@ public_note: "true"
 category: Testing
 ---
 # roadmap de TDD con ejemplo de uso en una empresa
-`$= dv.current().file.tags.join(" ")`
 
 ## 1. Preparación y Capacitación
 - Formar al equipo en [TDD - Test Driven Development](/testing/tdd---test-driven-development/) y [BDD](/testing/bdd/).
@@ -39,7 +38,6 @@ test('should return error for invalid credentials', () => {
 ### Green
 
 - Implementar **el código mínimo** que haga pasar el test.
-    
 
 {% raw %}
 ```ts
@@ -55,7 +53,6 @@ function login(email: string, password: string) {
 ### Refactor
 
 - Mejorar la estructura, eliminar duplicación y mantener los tests verdes.
-    
 
 {% raw %}
 ```ts
@@ -71,18 +68,13 @@ function login(email: string, password: string) {
 ## 4. Integración de Tests
 
 - Ejecutar unit tests automáticamente en CI/CD pipelines.
-    
 - Incorporar **Integration Tests** y **E2E Tests** gradualmente.
-    
 - Asegurar que los tests cubran flujos críticos antes de mergear código.
-    
 
 ## 5. Uso de Test Doubles y Mocks
 
 - Aislar dependencias externas: APIs, bases de datos, servicios.
-    
 - Evitar tests frágiles y lentos usando mocks/stubs.
-    
 
 {% raw %}
 ```ts
@@ -96,18 +88,13 @@ axios.get.mockResolvedValue({ data: { name: 'Empresa ABC' } });
 ## 6. Cobertura y Métricas
 
 - Medir **cobertura de código** (statements, branches, functions).
-    
 - Monitorear métricas: defectos por fase, tiempo medio de resolución, pass rate.
-    
 - Ajustar roadmap según KPIs de calidad.
-    
 
 ## 7. Documentación y Comunicación
 
 - Documentar tests como **especificación viva**.
-    
 - Escenarios [BDD](/testing/bdd/) sirven como referencia para Product Owners y QA.
-    
 
 {% raw %}
 ```gherkin
@@ -122,38 +109,24 @@ Feature: Login de empleado
 ## 8. Mejora Continua
 
 - Refactorización periódica de tests y código.
-    
 - Detección y corrección de **tests intermitentes** (Flaky tests).
-    
 - Incorporar **prácticas emergentes**: self-healing tests, AI-assisted testing, chaos engineering.
-    
 
 ## 9. Ejemplo de Flujo Empresarial
 
 **Empresa de e-commerce** implementando TDD:
 
 1. Equipo identifica nueva funcionalidad: **carrito de compras con descuento de fidelidad**.
-    
 2. Escriben tests unitarios para:
-    
     - Cálculo de descuento.
-        
     - Validación de stock.
-        
     - Reglas de impuestos.
-        
 3. Tests fallan (Red), se implementa lógica mínima (Green).
-    
 4. Refactorizan código y agregan integration tests.
-    
 5. CI/CD ejecuta todos los tests antes de mergear.
-    
 6. QA valida escenarios [BDD](/testing/bdd/) de extremo a extremo (E2E).
-    
 7. Monitorean cobertura y métricas; ajustan pruebas según resultados.
-    
 8. Entregan funcionalidad segura, confiable y testeada desde el primer commit.
-    
 
 ---
 

@@ -12,7 +12,6 @@ tags:
   - arquitectura
 ---
 # DDD Domain-Driven Design
-`$= dv.current().file.tags.join(" ")`
 
 ## Conceptos fundamentales
 
@@ -158,7 +157,6 @@ export class CreateUserService {
 * [GitHub - CodelyTV/typescript-ddd-example](https://github.com/CodelyTV/typescript-ddd-example)
 
 # DDD Avanzado y prácticas complementarias
-`$= dv.current().file.tags.join(" ")`
 
 ## Bounded Context y Context Mapping
 
@@ -265,7 +263,6 @@ En proyectos reales:
 * [GitHub - CodelyTV/typescript-ddd-skeleton](https://github.com/CodelyTV/typescript-ddd-skeleton)
 
 # DDD: temas avanzados y extensiones prácticas
-`$= dv.current().file.tags.join(" ")`
 
 ## Invariantes del dominio
 
@@ -433,7 +430,6 @@ Combinado con **arquitectura hexagonal**, **CQRS**, **eventos** y **estrategias 
 * [EventStorming by Alberto Brandolini](https://www.eventstorming.com)
 
 # DDD: Uso práctico, ejemplos de código y casos de uso
-`$= dv.current().file.tags.join(" ")`
 
 ## Objetivo
 

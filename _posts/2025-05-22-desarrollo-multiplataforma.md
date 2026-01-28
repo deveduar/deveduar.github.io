@@ -6,15 +6,14 @@ source:
 status: 📌
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: uncategorized
+category: Desarrollo multiplataforma
 tags:
   - desarrollo
   - programming
 ---
 # Desarrollo multiplataforma
-`$= dv.current().file.tags.join(" ")`
 
-- [Software engineering](/uncategorized/software-engineering/)
+- [Software engineering](/software%20engineering/software-engineering/)
 - mobile apps 
 	- android
 	- [react native](/desarrollo%20multiplataforma/react-native/) 

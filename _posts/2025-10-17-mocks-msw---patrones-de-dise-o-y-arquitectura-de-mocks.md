@@ -9,10 +9,8 @@ public_note: "true"
 category: Testing
 ---
 # Mocks MSW - patrones de diseño y arquitectura de mocks
-`$= dv.current().file.tags.join(" ")`
 
 # Mocks MSW - patrones de diseño y arquitectura de mocks
-`$= dv.current().file.tags.join(" ")`
 
 - [MSW Mocks service worker](/testing/msw-mocks-service-worker/)
 - [Mocks MSW - patrones de validación y depuración](/testing/mocks-msw---patrones-de-validaci-n-y-depuraci-n/)

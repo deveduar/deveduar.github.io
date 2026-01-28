@@ -13,9 +13,9 @@ tags:
   - deep-learning
 ---
 # Deep Learning
-``$= dv.current().file.tags.join(" ")``
+``
 
-- [Data Science](/uncategorized/data-science/)
+- [Data Science](/data%20science/data-science/)
 - [Machine Learning](/data%20science/machine-learning/)
 - [Regresión Lineal y Mínimos Cuadrados Ordinarios](/data%20science/regresi-n-lineal-y-m-nimos-cuadrados-ordinarios/)
 
@@ -214,7 +214,7 @@ print(pred)
 
 # Deep Learning: Arquitectura y Fundamentos
 
-- [Data Science](/uncategorized/data-science/)
+- [Data Science](/data%20science/data-science/)
 - [Machine Learning](/data%20science/machine-learning/)
 ## Fundamentos de Deep Learning
 - **Neuronas artificiales**: unidades básicas que simulan el comportamiento de las neuronas biológicas.

@@ -9,7 +9,6 @@ public_note: "true"
 category: Testing
 ---
 # Testing Avanzado 2025 Prácticas y Ejemplos
-`$= dv.current().file.tags.join(" ")`
 
 
 # 🚀 Testing Avanzado 2025: Prácticas y Ejemplos
@@ -35,7 +34,6 @@ test('login auto-healing', async ({ page }) => {
   const emailInput = await page.locator('input[name="email"]').catch(async () => 
       page.locator('input#email')
   );
-  
   await emailInput.fill('user@test.com');
   await page.locator('input[name="password"]').fill('1234');
   await page.locator('button[type="submit"]').click();
@@ -48,11 +46,8 @@ test('login auto-healing', async ({ page }) => {
 ✅ **Buenas prácticas**
 
 - Implementar fallback selectors.
-    
 - Log de auto-healing para seguimiento.
-    
 - Integración en CI/CD.
-    
 
 ---
 
@@ -96,11 +91,8 @@ run_experiment(experiment)
 ✅ **Objetivos**
 
 - Validar recuperación ante fallos.
-    
 - Medir impacto en SLA y latencia.
-    
 - Integrar en pipelines de staging.
-    
 
 ---
 
@@ -140,11 +132,8 @@ PactProviderRule provider = new PactProviderRule("AuthService", this);
 ✅ **Tips**
 
 - Integrar en CI/CD.
-    
 - Validar consumer y provider independientemente.
-    
 - Actualizar contratos versionados.
-    
 
 ---
 
@@ -175,11 +164,8 @@ logging.info("Ejecutando test de login")
 ✅ **Buenas prácticas**
 
 - Centralizar logs en pipelines.
-    
 - Métricas de tiempo, errores y cobertura.
-    
 - Integrar APM (Datadog, NewRelic) en pruebas E2E.
-    
 
 ---
 
@@ -203,11 +189,8 @@ cy.contains('Bienvenido').should('exist');
 ✅ **Ventajas**
 
 - Cobertura más amplia sin esfuerzo manual.
-    
 - Detección temprana de edge cases.
-    
 - Integración con pipelines y GitHub Actions.
-    
 
 ---
 
@@ -242,20 +225,15 @@ wireMockServer.stubFor(post(urlEqualTo("/login"))
 ✅ **Tips**
 
 - Simular servicios externos de forma realista.
-    
 - Usar en integración y pruebas E2E.
-    
 
 ---
 
 ## 🌐 7. Performance Avanzado
 
 - **Time-based tests:** validar expiración de tokens, jobs programados.
-    
 - **Stress & Load tests:** medir SLA bajo usuarios concurrentes.
-    
 - **Profiling:** identificar cuellos de botella internos.
-    
 
 ### JS – k6 avanzado
 
@@ -275,11 +253,8 @@ export default function () {
 ## 🧩 8. Observability + Chaos + AI Integrado
 
 - Combinar métricas, logs y trazas con chaos engineering y AI-assisted test generation.
-    
 - Automatizar análisis de fallos, flaky tests y predicciones de riesgo.
-    
 - Integrar dashboards de calidad y alertas proactivas.
-    
 
 ---
 
@@ -288,12 +263,8 @@ export default function () {
 **Testing avanzado 2025** no es solo validar código:
 
 - **Resiliencia:** chaos engineering, auto-healing.
-    
 - **Calidad predictiva:** AI-assisted tests, observability.
-    
 - **Microservicios confiables:** contract testing, virtualization.
-    
 - **Integración CI/CD completa:** pipelines automáticas con métricas y dashboards.
-    
 
 > Preparación para software altamente escalable, seguro y resiliente, con testing continuo, inteligente y automatizado.

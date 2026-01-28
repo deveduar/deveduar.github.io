@@ -12,10 +12,9 @@ tags:
 ---
 # Seguridad Web y Certificados TLS
 
-`$= dv.current().file.tags.join(" ")`
 
 - [cron jobs](/backend/cron-jobs/)
-- [devops](/uncategorized/devops/)
+- [devops](/devops/devops/)
 - deploy
 ## INTRODUCCIÓN
 - **PHP BCRYPT METHOD**

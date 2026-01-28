@@ -14,11 +14,11 @@ tags:
   - redes
 ---
 # Gestión de Dispositivos Móviles MDM
-``$= dv.current().file.tags.join(" ")``
+``
 
 La gestión de dispositivos móviles (MDM, por sus siglas en inglés) permite a las organizaciones administrar y asegurar de manera remota dispositivos móviles y equipos de trabajo. Facilita la implementación de políticas de seguridad, configuración de dispositivos, instalación de aplicaciones y control de acceso, optimizando la productividad y reduciendo riesgos.
 
-- [infraestructura IT](/uncategorized/infraestructura-it/)
+- [infraestructura IT](/infraestructura%20it/infraestructura-it/)
 
 ## Conceptos clave
 - **Mobile Device Management (MDM)**: Herramienta para gestionar, supervisar y asegurar dispositivos móviles dentro de una organización.  

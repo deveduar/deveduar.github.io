@@ -9,7 +9,6 @@ public_note: "true"
 category: Testing
 ---
 # testing asíncrono en Jest con Promises y async await
-`$= dv.current().file.tags.join(" ")`
 
 - [javascript](/desarrollo%20web/javascript/)
 - [Testing](/testing/testing/)
@@ -180,9 +179,7 @@ test('lanza error si no se encuentra el usuario', async () => {
 ## 🔄 Tests asíncronos en integration test
 
 - En tests de integración, las operaciones asíncronas son comunes (p. ej. APIs, DBs).
-    
 - Usa `beforeAll` y `afterAll` para preparar y limpiar datos.
-    
 
 {% raw %}
 ```javascript
@@ -200,26 +197,17 @@ test('inserta y lee un registro', async () => {
 ## 💡 Buenas prácticas
 
 - Evita el uso de `done()` salvo en casos heredados.
-    
 - No mezcles `async/await` con `done`, puede causar falsos positivos.
-    
 - Usa `await expect(...).rejects` para errores, nunca `try/catch` si no es necesario.
-    
 - Mantén tus mocks asíncronos simples y consistentes.
-    
 - En [CICD](/devops/cicd/), usa `--runInBand` si tienes problemas de sincronización con recursos compartidos.
-    
 
 ## 📚 Recursos y documentación
 
 - [Jest - Testing Asynchronous Code](https://jestjs.io/docs/asynchronous)
-    
 - [Async/Await en JavaScript - MDN](https://developer.mozilla.org/es/docs/Learn/JavaScript/Asynchronous/Promises)
-    
 - Mocking avanzado con funciones asíncronas.
-    
 - integration test en entornos con datos reales.
-    
 
 {% raw %}
 ```

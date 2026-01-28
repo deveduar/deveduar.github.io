@@ -16,10 +16,9 @@ tags:
   - Windows
 ---
 # autohotkey
-`$= dv.current().file.tags.join(" ")`
 
-- [Automatizacion y Build](/uncategorized/automatizacion-y-build/)
-- [Sistemas](/uncategorized/sistemas/)
+- [Automatizacion y Build](/automatizacion%20y%20build/automatizacion-y-build/)
+- [Sistemas](/sistemas/sistemas/)
 - windows
 - [powershell](/sistemas/powershell/)
 
@@ -56,7 +55,7 @@ Está diseñado para ser:
 	- Apertura de repositorios
 	- Gestión de issues y PRs vía navegador
 - Automatización de flujos locales previos a CI/CD
-- Integración con scripts de [Automatizacion y Build](/uncategorized/automatizacion-y-build/)
+- Integración con scripts de [Automatizacion y Build](/automatizacion%20y%20build/automatizacion-y-build/)
 
 ## AutoHotkey y Obsidian
 - Automatización de:
@@ -124,7 +123,7 @@ Está diseñado para ser:
 - Recomendado para nuevos proyectos
 - Documentación oficial: [AutoHotkey  v2](https://www.autohotkey.com/docs/v2/)
 
-## Relación con [Sistemas](/uncategorized/sistemas/)
+## Relación con [Sistemas](/sistemas/sistemas/)
 - Automatización a nivel de usuario
 - Puente entre usuario y sistema operativo
 - Ideal para entornos Windows administrados
@@ -244,7 +243,7 @@ Está diseñado para ser:
 - Modularización avanzada
 - Documentación interna del workflow
 
-## Relación con [Automatizacion y Build](/uncategorized/automatizacion-y-build/)
+## Relación con [Automatizacion y Build](/automatizacion%20y%20build/automatizacion-y-build/)
 - Automatización previa a pipelines
 - Preparación de entornos locales
 - Estandarización de acciones humanas
@@ -257,7 +256,6 @@ Está diseñado para ser:
 - Control fino sin herramientas externas
 
 # autohotkey — casos de uso y ejemplos de código
-`$= dv.current().file.tags.join(" ")`
 
 ## Casos de uso comunes
 - **Automatización de tareas repetitivas**

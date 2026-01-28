@@ -13,10 +13,9 @@ tags:
   - ciberseguridad
 ---
 # IAM  Gestión de Identidades y Acceso
-`$= dv.current().file.tags.join(" ")`
 
-- [autenticacion](/uncategorized/autenticacion/)
-- [ciberseguridad](/uncategorized/ciberseguridad/)
+- [autenticacion](/autenticacion/autenticacion/)
+- [ciberseguridad](/ciberseguridad/ciberseguridad/)
 - protocolos
 - [LDAP](/autenticacion/ldap/)
 - [ABAC](/autenticacion/abac/)

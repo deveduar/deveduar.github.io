@@ -9,7 +9,6 @@ public_note: "true"
 category: Testing
 ---
 # QUnit - Arquitectura de testing modular
-`$= dv.current().file.tags.join(" ")`
 
 - [QUnit](/testing/qunit/)
 - [Testing](/testing/testing/)
@@ -31,15 +30,10 @@ La **arquitectura modular de testing** en QUnit permite escalar los tests de man
 ## 🧱 Principios de Arquitectura
 
 - **Separación por dominio:** Cada módulo de negocio o componente debe tener su propio conjunto de tests unitarios y de integración.
-    
 - **Encapsulamiento:** Los tests deben ser autocontenidos, sin depender de datos globales o del orden de ejecución.
-    
 - **Composición modular:** Agrupar los tests en jerarquías de carpetas (`unit`, `integration`, `e2e`) según su nivel de abstracción.
-    
 - **Configuración local:** Cada módulo puede tener su propio `qunit.config.js` con paths, timeouts o setups específicos.
-    
 - **Mocks consistentes:** Centralizar mocks y fakes reutilizables (por ejemplo, en `tests/mocks/`) para evitar duplicación.
-    
 
 ---
 
@@ -114,11 +108,8 @@ QUnit.module("User Service", hooks => {
 La **composición modular** favorece la colaboración entre equipos y la evolución del sistema:
 
 - **Capa Unitaria:** Lógica pura, sin dependencias externas.
-    
 - **Capa de Integración:** Comunicación entre módulos, uso de Mocks MSW para endpoints simulados.
-    
 - **Capa End-to-End (E2E):** Flujos reales usando navegadores o entornos instrumentados.
-    
 
 Cada capa puede ejecutarse de forma independiente para reducir tiempos de CI:
 
@@ -166,15 +157,10 @@ QUnit.module("API Mocking", hooks => {
 ## 🧠 Mejores Prácticas de Escalabilidad
 
 - **Convenciones de nombres:** usa `*.test.js` para unidad, `*.spec.js` para integración.
-    
 - **Reutilización de fixtures:** define datos simulados reutilizables en `/tests/fixtures`.
-    
 - **Modularización progresiva:** cada nueva funcionalidad debe incluir su propio módulo de test.
-    
 - **Estandarización CI/CD:** scripts separados (`test:unit`, `test:integration`) facilitan diagnósticos.
-    
 - **Desacople del entorno:** evita dependencias de entorno (puertos, tiempos, rutas absolutas).
-    
 
 ---
 

@@ -175,7 +175,6 @@ services:
   redis:
     image: redis:alpine
     ports: ["6379:6379"]
-  
   worker:
     build: .
     command: celery -A app worker --loglevel=info

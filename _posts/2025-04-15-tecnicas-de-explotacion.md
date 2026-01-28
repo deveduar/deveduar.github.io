@@ -12,7 +12,6 @@ tags:
   - Hacking
 ---
 # tecnicas de explotacion
-`$= dv.current().file.tags.join(" ")`
 
 ## Conceptos relacionados
 - [vulnerabilidades](/ciberseguridad/vulnerabilidades/)
@@ -478,7 +477,6 @@ Explotar un binario vulnerable mediante *Buffer Overflow* en un entorno con miti
 	- Cadena completa de explotación moderna.
 
 # recursos y herramientas 2025 — ciberseguridad y explotacion
-`$= dv.current().file.tags.join(" ")`
 
 ## Bases de datos y repositorios de exploits
 - **ExploitDB** – Base de datos pública de vulnerabilidades y *proof-of-concepts* para aprendizaje y pruebas de exploits.  

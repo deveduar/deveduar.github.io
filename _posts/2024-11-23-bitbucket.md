@@ -13,11 +13,10 @@ tags:
   - github
 ---
 # bitbucket
-`$= dv.current().file.tags.join(" ")`
 
 - [CICD](/devops/cicd/)
 - [Jira](/management/jira/)
-- [devops](/uncategorized/devops/)
-- [Management](/uncategorized/management/)
+- [devops](/devops/devops/)
+- [Management](/management/management/)
 - [git](/software%20engineering/git/)
 - [Bitbucket | Git solution for teams using Jira](https://bitbucket.org/product/) 

@@ -12,7 +12,6 @@ tags:
   - mascara_de_red
 ---
 # mascara de red
-`$= dv.current().file.tags.join(" ")`
 
 - máscaras de [subred](/redes/subred/)
 - [¿Qué es la MÁSCARA DE RED de una DIRECCIÓN IP? Calcula la DIRECCIÓN DE RED y número de HOSTS - YouTube](https://youtu.be/EhMI71bKSJ0) 

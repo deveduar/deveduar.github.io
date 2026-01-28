@@ -13,9 +13,8 @@ tags:
   - backend
 ---
 # PocketBase
-`$= dv.current().file.tags.join(" ")`
 
-- [Databases](/uncategorized/databases/)
+- [Databases](/databases/databases/)
 - **Headless backend** orientado a proyectos MVP.
 - Open source backend que consiste en una **base de datos embebida (SQLite)** con:
 	- **Suscripciones en tiempo real**.
@@ -26,8 +25,8 @@ tags:
 	- JavaScript
 	- Dart
 	- Go
-- [Databases](/uncategorized/databases/)
-- [Backend](/uncategorized/backend/)
+- [Databases](/databases/databases/)
+- [Backend](/backend/backend/)
 - **Sass** para estilo y personalización de la UI.
 - Recursos y ejemplos:
 	- [PoketBase Docs](https://pocketbase.io/docs/)
@@ -98,7 +97,6 @@ void main() async {
 * Sistemas que requieren autenticación sencilla y control de roles.
 
 # PocketBase - Expansión avanzada
-`$= dv.current().file.tags.join(" ")`
 
 - **Headless backend** ideal para MVPs y prototipos rápidos.
 - **Open source** con base de datos embebida SQLite.
@@ -107,8 +105,8 @@ void main() async {
 - **Dashboard UI**: administración visual de colecciones, datos y roles.
 - **API REST-ish** simple para CRUD y autenticación.
 - Compatible con JavaScript, Dart, Go y frameworks modernos.
-- [Databases](/uncategorized/databases/)
-- [Backend](/uncategorized/backend/)
+- [Databases](/databases/databases/)
+- [Backend](/backend/backend/)
 - **Sass** para personalización del dashboard.
 - Ejemplos y recursos:
 	- [PoketBase Docs](https://pocketbase.io/docs/)
@@ -193,7 +191,6 @@ pb.collection('posts').on('create', (record) => {
 * Comunidad y foros para dudas y soporte.
 
 # PocketBase – Temas complementarios (2025)
-`$= dv.current().file.tags.join(" ")`
 
 ## Versiones, migraciones y breaking‑changes
 - La versión v0.29.0 fue publicada el 19 de julio de 2025. :contentReference[oaicite:1]{index=1}  
@@ -237,7 +234,6 @@ pb.collection('posts').on('create', (record) => {
 - Gestión de migraciones de esquema orientadas a producción: sí están, pero requieren cuidado manual al actualizar.
 
 # PocketBase – Nota ampliada  
-`$= dv.current().file.tags.join(" ")`
 ## Visión general  
 - **Backend sin cabeza (headless)**, empaquetado como un solo binario que incluye base de datos, API y panel de administración. :contentReference[oaicite:0]{index=0}  
 - Orientado tanto a proyectos rápidos (MVP) como a aplicaciones autosuficientes de tamaño medio. :contentReference[oaicite:1]{index=1}  

@@ -12,7 +12,7 @@ tags:
   - Hacking
 ---
 # IRM — Manejo de Derechos de la Información  
-``$= dv.current().file.tags.join(" ")``
+``
 
 - [hardening](/ciberseguridad/hardening/) 
 - [control de datos](/ciberseguridad/control-de-datos/)

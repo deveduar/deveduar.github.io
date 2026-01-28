@@ -6,7 +6,7 @@ source:
 status: 🚀
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: uncategorized
+category: infraestructura IT
 tags:
   - IT
   - ITIL
@@ -15,12 +15,12 @@ tags:
   - estandares
 ---
 # Infraestructura IT
-``$= dv.current().file.tags.join(" ")``
+``
 
 ## Fundamentos TI
-- [Computer Science](/uncategorized/computer-science/) – Principios de computación, algoritmos, estructuras de datos y fundamentos de hardware y software.
-- [Software engineering](/uncategorized/software-engineering/) – Ciclo de vida del software, metodologías ágiles, pruebas, mantenimiento y documentación.
-- [Management](/uncategorized/management/) – Gestión de proyectos TI, liderazgo de equipos, planificación estratégica y optimización de recursos.
+- [Computer Science](/computer%20science/computer-science/) – Principios de computación, algoritmos, estructuras de datos y fundamentos de hardware y software.
+- [Software engineering](/software%20engineering/software-engineering/) – Ciclo de vida del software, metodologías ágiles, pruebas, mantenimiento y documentación.
+- [Management](/management/management/) – Gestión de proyectos TI, liderazgo de equipos, planificación estratégica y optimización de recursos.
 - consultoria – Asesoramiento en implementación, optimización de procesos TI y transformación digital.
 
 ## Tools IT
@@ -29,7 +29,7 @@ tags:
 - [OTRS Znuny](/infraestructura%20it/otrs-znuny/) – Sistema de ticketing y gestión de incidencias con soporte multicanal.
 ### Automatización
 - [Control-M](/infraestructura%20it/control-m/) – Herramienta de planificación y automatización de flujos de trabajo y jobs empresariales.
-- [devops](/uncategorized/devops/) – Prácticas y herramientas para integración continua, entrega continua (CI/CD) y colaboración entre desarrollo y operaciones.
+- [devops](/devops/devops/) – Prácticas y herramientas para integración continua, entrega continua (CI/CD) y colaboración entre desarrollo y operaciones.
 
 ## Gestión de Negocio
 - [Product Management](/management/product-management/) – Gestión de productos digitales, roadmap, backlog y estrategia de lanzamiento.
@@ -58,7 +58,7 @@ tags:
 ## Arquitecturas y Regulaciones IT
 ### Gestión de Servicios y Ciberseguridad
 - [ISO 20000](/infraestructura%20it/iso-20000/) – Gestión de servicios TI alineada con ITIL.
-- [ciberseguridad](/uncategorized/ciberseguridad/) – Protección de información, detección de amenazas y respuesta ante incidentes.
+- [ciberseguridad](/ciberseguridad/ciberseguridad/) – Protección de información, detección de amenazas y respuesta ante incidentes.
 ### Marcos de Gobernanza
 - [ISMS](/infraestructura%20it/isms/) (Sistema de Gestión) – Gestión de seguridad de la información.
 - [GRC](/infraestructura%20it/grc/) (Gobernanza, Riesgos, Cumplimiento) – Coordinación de riesgos, políticas y cumplimiento normativo.
@@ -77,7 +77,7 @@ tags:
 - [PSD2](/infraestructura%20it/psd2/) – Directiva de servicios de pago de la UE, impulso de Open Banking.
 - [ecomerce](/desarrollo%20web/ecomerce/) – Normativas y seguridad en comercio electrónico.
 ### Continuidad y Gestión de Riesgos
-- [Gestion de Negocio](/uncategorized/gestion-de-negocio/) – Estrategias de continuidad operativa y gestión de incidentes.
+- [Gestion de Negocio](/gestion%20de%20negocio/gestion-de-negocio/) – Estrategias de continuidad operativa y gestión de incidentes.
 - [ISO 22301](/infraestructura%20it/iso-22301/) – Gestión de continuidad de negocio.
 - [ISO 31010](/infraestructura%20it/iso-31010/) – Técnicas de evaluación de riesgos aplicables a TI y negocios.
 # Infraestructura TI Avanzada

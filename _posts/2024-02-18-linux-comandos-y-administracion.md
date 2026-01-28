@@ -11,7 +11,6 @@ tags:
   - Linux
 ---
 # Linux comandos
-`$= dv.current().file.tags.join(" ")`
 # Comandos sysadmin
 
 ## Gestión de usuarios

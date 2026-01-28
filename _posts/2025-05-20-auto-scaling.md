@@ -13,10 +13,10 @@ tags:
   - scaling
 ---
 # Auto Scaling
-``$= dv.current().file.tags.join(" ")``
+``
 
-- [cloud](/uncategorized/cloud/)  
-- [Backend](/uncategorized/backend/)  
+- [cloud](/cloud/cloud/)  
+- [Backend](/backend/backend/)  
 - [Instance Scaling](/backend/instance-scaling/)
 
 - [Qué es el Upskilling: plan, estrategias, ventajas y ejemplos – LISA Institute](https://www.lisainstitute.com/blogs/blog/upskilling-ventajas-estrategias-ejemplos#:~:text=es%20el%20Upskilling%3F-,El%20Upskilling%20es%20una%20tendencia%20laboral%20que%20facilita%20y%20favorece,de%20m%C3%A1s%20habilidades%20y%20competencias.)  

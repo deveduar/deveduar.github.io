@@ -14,11 +14,11 @@ tags:
   - ML
 ---
 # Machine Learning
-``$= dv.current().file.tags.join(" ")``
+``
 
 ## Recursos y Referencias
 - [mates](/uncategorized/mates/)
-- [Data Science](/uncategorized/data-science/)
+- [Data Science](/data%20science/data-science/)
 - [Deep Learning](/data%20science/deep-learning/)
 - pandas
 - [python](/software%20engineering/python/)

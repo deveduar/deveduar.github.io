@@ -12,7 +12,6 @@ tags:
   - Sistemas
 ---
 # Arch Linux
-`$= dv.current().file.tags.join(" ")`
 ## Recursos y Enlaces
 - [Linux](/sistemas/linux/)
 - [Linux personalizacion de entorno](/linux/linux-personalizacion-de-entorno/)

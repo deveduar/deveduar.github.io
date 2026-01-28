@@ -13,7 +13,6 @@ tags:
   - forense
 ---
 # Purple Team
-`$= dv.current().file.tags.join(" ")`
 
 ## Concepto y Objetivo
 - Enfoque colaborativo que integra capacidades de **Red Team** (ofensivo) y **Blue Team** (defensivo).
@@ -134,7 +133,6 @@ tags:
 	- Equipos alineados técnica y operativamente.
 
 # Purple Team
-`$= dv.current().file.tags.join(" ")`
 
 ## Marcos y Estándares Relacionados
 - Uso de marcos para estructurar ejercicios y medición objetiva.

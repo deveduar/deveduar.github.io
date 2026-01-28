@@ -14,9 +14,8 @@ tags:
   - framework
 ---
 # Better Auth
-`$= dv.current().file.tags.join(" ")`
 
-- [autenticacion](/uncategorized/autenticacion/)
+- [autenticacion](/autenticacion/autenticacion/)
 
 ## Docs
 - Introduction  Better Auth-introduction

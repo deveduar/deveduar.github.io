@@ -12,7 +12,6 @@ tags:
   - Mates
 ---
 # No se puede probar todo lo verdadero
-`$= dv.current().file.tags.join(" ")`
 
 
 Teorema de Incompletitud de Gödel y la imposibilidad de abarcar toda la verdad matemática dentro de un solo sistema formal son uno de los resultados más profundos del pensamiento humano. Este conjunto de ideas muestra que existen límites intrínsecos a la lógica, las matemáticas y cualquier sistema capaz de describirse a sí mismo.

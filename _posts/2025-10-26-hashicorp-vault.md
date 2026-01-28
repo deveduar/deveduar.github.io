@@ -13,11 +13,10 @@ tags:
   - sistemas
 ---
 # HashiCorp Vault
-`$= dv.current().file.tags.join(" ")`
 
-- [Sistemas](/uncategorized/sistemas/)
-- [ciberseguridad](/uncategorized/ciberseguridad/)
-- [autenticacion](/uncategorized/autenticacion/)
+- [Sistemas](/sistemas/sistemas/)
+- [ciberseguridad](/ciberseguridad/ciberseguridad/)
+- [autenticacion](/autenticacion/autenticacion/)
 
 ## Documentación
 - Vault  HashiCorp Developer

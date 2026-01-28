@@ -12,7 +12,6 @@ tags:
   - redes
 ---
 # curso-redes-CNNA-1
-`$= dv.current().file.tags.join(" ")`
 
 
 - [x] examen final, 25 al 31 de Marzo de 2024

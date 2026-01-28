@@ -14,15 +14,14 @@ tags:
   - IaC
 ---
 # SonarQube
-`$= dv.current().file.tags.join(" ")`
 
-- [devops](/uncategorized/devops/)
+- [devops](/devops/devops/)
 - [CICD](/devops/cicd/)
 - [Testing](/testing/testing/)
 - [IInfraestructura como codigo](/devops/iinfraestructura-como-codigo/)
 
 ## Descripción general
-SonarQube es una plataforma open-source orientada a la **inspección continua de la calidad del código**, integrándose de forma natural en flujos [CICD](/devops/cicd/) y entornos [devops](/uncategorized/devops/). Permite detectar problemas de forma temprana mediante **análisis estático**, aplicando reglas consistentes a múltiples lenguajes y frameworks.
+SonarQube es una plataforma open-source orientada a la **inspección continua de la calidad del código**, integrándose de forma natural en flujos [CICD](/devops/cicd/) y entornos [devops](/devops/devops/). Permite detectar problemas de forma temprana mediante **análisis estático**, aplicando reglas consistentes a múltiples lenguajes y frameworks.
 
 Su objetivo principal es **mejorar la mantenibilidad, fiabilidad y seguridad** del software antes de que el código llegue a producción.
 
@@ -125,7 +124,7 @@ Puede desplegarse:
 - En Kubernetes
 
 ## Seguridad
-- [ciberseguridad](/uncategorized/ciberseguridad/)
+- [ciberseguridad](/ciberseguridad/ciberseguridad/)
 - SonarQube ayuda a detectar:
 	- Inyecciones SQL
 	- XSS

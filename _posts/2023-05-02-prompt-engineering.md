@@ -12,7 +12,6 @@ tags:
   - Prompt
 ---
 # # Prompt Engineering
-`$= dv.current().file.tags.join(" ")`
 
 
 ## Curso IA - ChatGPT Prompt Engineering

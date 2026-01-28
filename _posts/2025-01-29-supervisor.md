@@ -14,10 +14,9 @@ tags:
   - pythoon
 ---
 # Supervisor
-`$= dv.current().file.tags.join(" ")`
 
 ## Recursos y enlaces
-- [Backend](/uncategorized/backend/)
+- [Backend](/backend/backend/)
 - [python](/software%20engineering/python/)
 - [Linux](/sistemas/linux/)
 - Supervisor- A Process Control System — Supervisor 4.2.5 documentation

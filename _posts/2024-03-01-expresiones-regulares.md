@@ -15,9 +15,8 @@ tags:
   - mates
 ---
 # Expresiones regulares
-`$= dv.current().file.tags.join(" ")`
 
-- [Computer Science](/uncategorized/computer-science/)
+- [Computer Science](/computer%20science/computer-science/)
 - [mates](/uncategorized/mates/)
 
 Herramienta útil: [RegEx Tool](https://regexr.com/)
@@ -51,7 +50,6 @@ console.log(isValidEmail); // true
 - `@` → símbolo obligatorio
 - `\.` → punto obligatorio (escapado)
 - `[^\s@]+` → dominio o subdominio final
-    
 
 ---
 
@@ -77,13 +75,9 @@ console.log(replacedText); // "La CASA está en la CALLE principal"
 ### Explicación del patrón
 
 - `/casa|calle/g` → busca "casa" **o** "calle"
-    
 - `|` → operador OR lógico
-    
 - `g` → bandera global: reemplaza todas las ocurrencias
-    
 - La función recibe cada coincidencia (`match`) y la transforma en mayúsculas
-    
 
 ---
 
@@ -111,13 +105,9 @@ while (match != null) {
 ### Explicación del patrón
 
 - `(\d+)` → grupo que captura uno o más dígitos (número)
-    
 - `[°%]` → coincide con los símbolos "°" o "%"
-    
 - `(C?)` → grupo opcional para capturar "C" si está presente
-    
 - `g` → bandera global para recorrer todas las coincidencias con `.exec()`
-    
 
 ---
 
@@ -126,40 +116,28 @@ while (match != null) {
 ### Validaciones
 
 - **Número de teléfono:** `/^\+?\d{1,3}?[-.\s]?\(?\d{1,4}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/`
-    
 - **URL básica:** `/https?:\/\/(www\.)?[a-zA-Z0-9\-]+\.[a-z]{2,}(\S*)?/`
-    
 - **Contraseña segura:** `/^(?=.*[A-Z])(?=.*\d)[A-Za-z\d@$!%*?&]{8,}$/`
-    
 
 ### Limpieza de texto
 
 - Eliminar espacios duplicados: `/\s{2,}/g`
-    
 - Quitar etiquetas HTML: `/\<[^>]*\>/g`
-    
 
 ### Extracción de datos
 
 - Números: `/\d+/g`
-    
 - Palabras: `/\w+/g`
-    
 - Fechas (dd/mm/yyyy): `/\b\d{2}\/\d{2}\/\d{4}\b/`
-    
 
 ---
 
 ## Buenas prácticas con RegEx
 
 - **Escapa** caracteres especiales (`.`, `*`, `+`, `?`, `(`, `)`, `[`, `]`, `{`, `}`, `|`, `\`, `^`, `$`) cuando deban tratarse literalmente.
-    
 - **Prueba interactivamente** tus expresiones en herramientas como [regexr.com](https://regexr.com/).
-    
 - **Divide y documenta** las RegEx complejas con comentarios y uso de la bandera `x` (si el lenguaje lo soporta).
-    
 - **Evita sobreuso:** algunas tareas (como parsing de HTML o JSON) requieren soluciones estructurales, no RegEx.
-    
 
 ---
 

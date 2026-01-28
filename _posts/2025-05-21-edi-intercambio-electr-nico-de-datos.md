@@ -12,7 +12,6 @@ tags:
   - IT
 ---
 # EDI Intercambio Electrónico de Datos
-`$= dv.current().file.tags.join(" ")`
 
 ## Recursos y referencias
 - [Intercambio Electrónico de datos (EDI) | 26/38 | UPV - YouTube](https://www.youtube.com/watch?v=u68XQYqFm5U)  
@@ -31,9 +30,9 @@ tags:
 
 ## Integración con sistemas empresariales
 - [ERP](/management/erp/) (Enterprise Resource Planning)
-	- [Management](/uncategorized/management/): control y supervisión de procesos empresariales.
+	- [Management](/management/management/): control y supervisión de procesos empresariales.
 	- Automatizacion: integración de EDI para reducir intervención manual y errores.
-- [Redes](/uncategorized/redes/): EDI requiere infraestructura de red segura y confiable para la transmisión de datos.
+- [Redes](/redes/redes/): EDI requiere infraestructura de red segura y confiable para la transmisión de datos.
 - Posibilidad de integración con CRM, SCM, WMS y otros sistemas corporativos para flujo de información automatizado.
 
 ## Beneficios de EDI
@@ -321,7 +320,7 @@ print("EDI procesado y convertido a JSON")
 - Objetivo:
 	- Automatizar pedidos.
 	- Detectar errores y anomalías antes de impactar en operaciones.
-	- Integrar con [ERP](/management/erp/) y sistemas de [Management](/uncategorized/management/) y Automatizacion.
+	- Integrar con [ERP](/management/erp/) y sistemas de [Management](/management/management/) y Automatizacion.
 
 ## Tool utilizado
 - **MuleSoft Anypoint Platform (B2B/EDI + API Manager)**  
@@ -587,8 +586,8 @@ SE*6*0001~
 - Documentar mappings EDI ↔ modelo interno.
 
 ## Relación con otros conceptos
-- [Redes](/uncategorized/redes/): transporte seguro del mensaje.
+- [Redes](/redes/redes/): transporte seguro del mensaje.
 - [ERP](/management/erp/): destino/origen del dato procesado.
 - Automatizacion: ejecución automática tras parsing.
-- [Management](/uncategorized/management/): control y supervisión de flujos EDI.
+- [Management](/management/management/): control y supervisión de flujos EDI.
 

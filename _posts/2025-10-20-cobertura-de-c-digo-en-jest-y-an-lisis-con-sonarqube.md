@@ -9,7 +9,6 @@ public_note: "true"
 category: Testing
 ---
 # Cobertura de código en Jest y análisis con SonarQube
-`$= dv.current().file.tags.join(" ")`
 
 - [Testing](/testing/testing/)
 - [jest](/testing/jest/)

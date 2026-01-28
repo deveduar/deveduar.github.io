@@ -14,12 +14,11 @@ tags:
   - devops
 ---
 # Apache Kafka
-`$= dv.current().file.tags.join(" ")`
 
 ## Relación con otros dominios
 - Big Data
 - [Stream Processing](/backend/stream-processing/)
-- [Data Science](/uncategorized/data-science/)
+- [Data Science](/data%20science/data-science/)
 - [apache](/backend/apache/)
 - Kafka Streams vs [apache flink](/backend/apache-flink/)
 
@@ -284,7 +283,6 @@ Se utiliza como **backbone de datos** en arquitecturas modernas orientadas a eve
 - Complementa, no reemplaza, otros sistemas de procesamiento
 
 # Apache Kafka · Conceptos Avanzados y Temas Complementarios
-`$= dv.current().file.tags.join(" ")`
 
 ## Seguridad
 ### Autenticación
@@ -461,7 +459,6 @@ Se utiliza como **backbone de datos** en arquitecturas modernas orientadas a eve
 - Kafka amplifica buenas y malas decisiones
 
 # Apache Kafka · Glosario de Conceptos
-`$= dv.current().file.tags.join(" ")`
 
 ## Conceptos básicos
 - **Evento**

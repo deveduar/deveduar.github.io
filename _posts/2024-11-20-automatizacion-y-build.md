@@ -6,7 +6,7 @@ source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: uncategorized
+category: Automatizacion y Build
 tags:
   - linters
   - runners
@@ -18,7 +18,6 @@ tags:
   - devops
 ---
 # Automatización y Build
-`$= dv.current().file.tags.join(" ")` 
 
 > - Automatización de tareas (tanto dev como operativas)
 > - Proceso de build y empaquetado de código
@@ -35,8 +34,8 @@ tags:
 	- llamadas y sms 
 		- Our API the basics  Twilio-api 
 	- [power apps](/desarrollo%20multiplataforma/power-apps/)
-	- [devops](/uncategorized/devops/)
-	- [cloud](/uncategorized/cloud/)
+	- [devops](/devops/devops/)
+	- [cloud](/cloud/cloud/)
 - automatizacion de procesos
 	- [cron jobs](/backend/cron-jobs/)
 - Infraestructura

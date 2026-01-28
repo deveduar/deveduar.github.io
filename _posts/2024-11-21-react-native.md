@@ -13,10 +13,9 @@ tags:
   - mobile-apps
 ---
 # react native
-`$= dv.current().file.tags.join(" ")`
 
 - [react](/frontend/react/)
-- [Desarrollo multiplataforma](/uncategorized/desarrollo-multiplataforma/)
+- [Desarrollo multiplataforma](/desarrollo%20multiplataforma/desarrollo-multiplataforma/)
 - android
 ## Qué es React Native
 - Framework para construir **aplicaciones móviles nativas** usando JavaScript/TypeScript y el paradigma de [react](/frontend/react/).
@@ -246,7 +245,6 @@ tags:
 	- Soluciones híbridas según el contexto.
 
 # react native — guía práctica con casos de uso y ejemplos
-`$= dv.current().file.tags.join(" ")`
 
 ## Caso de Uso: App CRUD con API REST
 - Escenario
@@ -528,7 +526,6 @@ export function FadeIn() {
 
 
 # react native — cheatsheet
-`$= dv.current().file.tags.join(" ")`
 
 ## Estructura Básica
 - Entrada de la app
@@ -729,7 +726,6 @@ export function FadeIn() {
 - Uso extremo de APIs nativas específicas.
 
 # react native — recursos actualizados 2025
-`$= dv.current().file.tags.join(" ")`
 
 ## 🌐 Documentación y guías oficiales
 - **[React Native Docs (official)](https://reactnative.dev/)**  

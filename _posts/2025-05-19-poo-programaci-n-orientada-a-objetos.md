@@ -14,7 +14,6 @@ tags:
 ---
 # POO Programación Orientada a Objetos
 
-`$= dv.current().file.tags.join(" ")`
 
 La **Programación Orientada a Objetos (POO)** es un paradigma que organiza el código en torno a *objetos*, entidades que combinan **datos (propiedades)** y **comportamientos (métodos)**. Su objetivo es mejorar la modularidad, reutilización y mantenibilidad del software.
 
@@ -184,7 +183,6 @@ JavaScript implementa la POO mediante dos enfoques principales:
 
 # POO avanzada y patrones aplicados
 
-`$= dv.current().file.tags.join(" ")`
 
 Esta nota amplía los conceptos fundamentales de la [POO Programación Orientada a Objetos](/computer%20science/poo-programaci-n-orientada-a-objetos/) explorando temas avanzados, buenas prácticas, patrones de diseño y principios que fortalecen la arquitectura del software orientado a objetos.
 
@@ -435,7 +433,6 @@ Este ejemplo combina **polimorfismo**, **inyección de dependencias** y el **pri
 
 # POO aplicada: principios de diseño, pruebas y rendimiento
 
-`$= dv.current().file.tags.join(" ")`
 
 Esta nota amplía el enfoque práctico de la POO avanzada y patrones aplicados, abordando temas de **diseño orientado a objetos**, **testeo**, **optimización de rendimiento**, y **POO funcional** en JavaScript moderno.
 
@@ -654,7 +651,6 @@ Busca objetos **inmutables**, métodos **puros**, y un flujo **predecible**.
 
 # POO en contextos reales y diseño evolutivo
 
-`$= dv.current().file.tags.join(" ")`
 
 Esta nota extiende los principios de la POO aplicada: principios de diseño, pruebas y rendimiento hacia el **uso profesional en entornos reales**, abordando integración con otros paradigmas, patrones arquitectónicos modernos, y diseño evolutivo orientado al cambio continuo.
 
@@ -865,7 +861,6 @@ temp.emitir(22);
 
 # POO extendida: interoperabilidad, diseño seguro y paradigmas complementarios
 
-`$= dv.current().file.tags.join(" ")`
 
 Esta nota complementa la serie de POO en contextos reales y diseño evolutivo abarcando temas avanzados de **interoperabilidad entre lenguajes**, **seguridad orientada a objetos**, **metadiseño**, y la relación entre la POO y otros paradigmas modernos como la programación funcional, reactiva y declarativa.
 
@@ -1089,7 +1084,6 @@ Este ejemplo muestra un diseño **modular**, **extensible**, y **orientado a obj
 
 # POO en el ecosistema moderno y orientación arquitectónica
 
-`$= dv.current().file.tags.join(" ")`
 
 Esta nota completa la serie de [POO Programación Orientada a Objetos](/computer%20science/poo-programaci-n-orientada-a-objetos/) abarcando su evolución en **arquitecturas modernas**, **lenguajes emergentes** y **nuevos contextos cognitivos e inteligentes**.  
 El objetivo es entender cómo los principios clásicos de la orientación a objetos se adaptan al desarrollo contemporáneo, donde la modularidad, la escalabilidad y la expresividad del dominio son fundamentales.
@@ -1314,7 +1308,6 @@ La POO no ha desaparecido: ha mutado para servir como la **capa conceptual unifi
 
 # Principios de diseño y buenas prácticas en POO
 
-`$= dv.current().file.tags.join(" ")`
 
 Esta nota aborda los **principios fundamentales de diseño y buenas prácticas** en la [POO Programación Orientada a Objetos](/computer%20science/poo-programaci-n-orientada-a-objetos/), centrada en la creación de sistemas robustos, mantenibles y extensibles.  
 Su objetivo es ofrecer una visión clara de cómo los principios teóricos (como SOLID o GRASP) se aplican en el diseño real de software orientado a objetos.
@@ -1639,7 +1632,6 @@ Aplicados correctamente, permiten que el software crezca en complejidad sin perd
 
 # Glosario POO · Fundamentos y Conceptos Básicos
 
-`$= dv.current().file.tags.join(" ")`
 
 Este glosario reúne los **términos esenciales** de la [POO Programación Orientada a Objetos](/computer%20science/poo-programaci-n-orientada-a-objetos/) (Programación Orientada a Objetos).  
 Cada definición está optimizada para consulta rápida en Obsidian y enlazada con notas relacionadas cuando aplican.
@@ -1886,7 +1878,6 @@ Cada definición está optimizada para consulta rápida en Obsidian y enlazada c
 
 # Glosario POO · Principios de Diseño y Buenas Prácticas
 
-`$= dv.current().file.tags.join(" ")`
 
 Esta sección del glosario aborda los **principios de diseño orientado a objetos**, junto con **buenas prácticas**, **metodologías** y **conceptos de calidad del software** que guían el uso eficaz de la [POO Programación Orientada a Objetos](/computer%20science/poo-programaci-n-orientada-a-objetos/).
 
@@ -2106,7 +2097,6 @@ Esta sección del glosario aborda los **principios de diseño orientado a objeto
 
 # Glosario POO · Patrones de Diseño y Arquitectura Orientada a Objetos
 
-`$= dv.current().file.tags.join(" ")`
 
 Esta sección del glosario recoge los **principales patrones de diseño** en el contexto de la [POO Programación Orientada a Objetos](/computer%20science/poo-programaci-n-orientada-a-objetos/), así como los enfoques arquitectónicos que los sustentan.  
 Se agrupan según las categorías clásicas de la GoF (Gang of Four): **creacionales**, **estructurales** y **de comportamiento**, junto con patrones arquitectónicos modernos.
@@ -2354,7 +2344,6 @@ Se agrupan según las categorías clásicas de la GoF (Gang of Four): **creacion
 
 # Glosario POO · Paradigmas Relacionados y Extensiones Modernas
 
-`$= dv.current().file.tags.join(" ")`
 
 Esta sección del glosario profundiza en los **paradigmas híbridos, extensiones modernas** y enfoques derivados de la [POO Programación Orientada a Objetos](/computer%20science/poo-programaci-n-orientada-a-objetos/).  
 Incluye la integración con la Programación funcional, la Programación reactiva, la Metaprogramación y las tendencias orientadas a datos, componentes y eventos.
@@ -2571,7 +2560,6 @@ Incluye la integración con la Programación funcional, la Programación reactiv
 
 # Glosario POO · Aplicaciones Prácticas y Ejemplos
 
-`$= dv.current().file.tags.join(" ")`
 
 Esta sección recopila los **principales contextos de aplicación de la [POO Programación Orientada a Objetos](/computer%20science/poo-programaci-n-orientada-a-objetos/)**, mostrando cómo sus conceptos, principios y patrones se materializan en sistemas reales, frameworks, arquitecturas y entornos de desarrollo.
 
@@ -2774,7 +2762,6 @@ Esta sección recopila los **principales contextos de aplicación de la [POO Pro
 
 # Glosario POO · Lenguajes y Ecosistemas Modernos
 
-`$= dv.current().file.tags.join(" ")`
 
 Esta sección resume cómo distintos lenguajes y ecosistemas modernos implementan, extienden o reinterpretan la [POO Programación Orientada a Objetos](/computer%20science/poo-programaci-n-orientada-a-objetos/), integrando paradigmas como el funcional, reactivo o declarativo.
 
@@ -2972,7 +2959,6 @@ Esta sección resume cómo distintos lenguajes y ecosistemas modernos implementa
 - Ecosistema y orientación moderna de POO
 
 # Glosario POO · Síntesis de Modelos, Comparativas y Anti-Patrones
-`$= dv.current().file.tags.join(" ")`
 
 ---
 

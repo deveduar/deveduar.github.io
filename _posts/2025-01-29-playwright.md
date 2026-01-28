@@ -12,7 +12,6 @@ tags:
   - testing
 ---
 # Playwright  
-`$= dv.current().file.tags.join(" ")`
 
 - [Testing](/testing/testing/)  
 - [QA](/testing/qa/)  

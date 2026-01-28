@@ -13,11 +13,10 @@ tags:
   - data-science
 ---
 # GCP Google cloud
-`$= dv.current().file.tags.join(" ")`
 
-- [cloud](/uncategorized/cloud/)
-- [devops](/uncategorized/devops/)
-- [Data Science](/uncategorized/data-science/)
+- [cloud](/cloud/cloud/)
+- [devops](/devops/devops/)
+- [Data Science](/data%20science/data-science/)
 - Big Data
 - links
 	- [From Data to Insights with GCP | PUE SEPE](https://sepe.pue.es/cursos/google-cloud/data-engineering/from-data-to-insights-google-cloud-platform/ed829) 

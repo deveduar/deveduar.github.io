@@ -10,7 +10,6 @@ category: Testing
 ---
 
 # Mocks MSW - patrones de validación y depuración
-`$= dv.current().file.tags.join(" ")`
 
 - Mocks MSW
 - [Testing](/testing/testing/)
@@ -311,14 +310,8 @@ rest.get('/api/profile', (req, res, ctx) => {
 ## 🔗 Referencias
 
 - Mocks MSW
-    
 - [Mocks MSW - integración avanzada con Jest, Vitest y Playwright](/testing/mocks-msw---integraci-n-avanzada-con-jest--vitest-y-playwright/)
-    
 - [TDD patterns](/testing/tdd-patterns/)
-    
 - [profiler](/testing/profiler/)
-    
 - [MSW Debugging Guide](https://mswjs.io/docs/troubleshooting)
-    
 - [Vitest MSW Integration Docs](https://vitest.dev/guide/mocking.html#mock-service-worker)
-    

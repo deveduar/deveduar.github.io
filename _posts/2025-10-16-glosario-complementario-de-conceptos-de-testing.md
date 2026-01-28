@@ -9,7 +9,6 @@ public_note: "true"
 category: Testing
 ---
 # Glosario Complementario de Conceptos de Testing
-`$= dv.current().file.tags.join(" ")`
 
 # 🧾 Glosario Complementario de Conceptos de Testing (Términos No Tratados)
 

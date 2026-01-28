@@ -9,7 +9,6 @@ public_note: "true"
 category: Testing
 ---
 # Uso de jest-dom y Testing Library en entornos React
-`$= dv.current().file.tags.join(" ")`
 
 - [Testing](/testing/testing/)
 - [react](/frontend/react/)

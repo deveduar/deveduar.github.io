@@ -12,10 +12,9 @@ tags:
   - db
 ---
 # control de datos
-`$= dv.current().file.tags.join(" ")` 
 
-- [ciberseguridad](/uncategorized/ciberseguridad/)
-- [autenticacion](/uncategorized/autenticacion/)
+- [ciberseguridad](/ciberseguridad/ciberseguridad/)
+- [autenticacion](/autenticacion/autenticacion/)
 - [criptografia](/autenticacion/criptografia/)
 - [hardening](/ciberseguridad/hardening/)
 - [Expresiones regulares](/computer%20science/expresiones-regulares/)
@@ -60,13 +59,13 @@ El **control de datos** comprende el conjunto de prácticas, políticas, configu
 
 ## Soluciones, Tecnologías y Conceptos Asociados
 
-### [ciberseguridad](/uncategorized/ciberseguridad/)
+### [ciberseguridad](/ciberseguridad/ciberseguridad/)
 - Defensas preventivas (firewalls, WAF, EDR).
 - Controles de detección y respuesta (SIEM, SOAR).
 - Evaluación continua de vulnerabilidades.
 - Analítica avanzada y correlación de eventos.
 
-### [autenticacion](/uncategorized/autenticacion/)
+### [autenticacion](/autenticacion/autenticacion/)
 - MFA, passwordless, biometría.
 - Autenticación contextual/adaptativa.
 - Federaciones (SAML, OAuth2, OIDC).
@@ -173,7 +172,6 @@ El **control de datos** comprende el conjunto de prácticas, políticas, configu
 ---
 
 # Control de Datos — Extensiones y Conceptos Avanzados
-`$= dv.current().file.tags.join(" ")`
 
 ## Nuevas Dimensiones del Control de Datos
 
@@ -337,7 +335,6 @@ El **control de datos** comprende el conjunto de prácticas, políticas, configu
 - Estrategias de compartición segura temporizada (links con expiración).
 
 # Control de Datos — Frameworks, Normativas y Estándares (Extensión)
-`$= dv.current().file.tags.join(" ")`
 
 ## Frameworks Internacionales de Seguridad y Control de Datos
 
@@ -493,7 +490,6 @@ El **control de datos** comprende el conjunto de prácticas, políticas, configu
 - Estándares de ciclo de vida digital y destrucción segura (NIST 800-88).
 
 # Controles obligatorios por estándar — Mapas de equivalencias
-`$= dv.current().file.tags.join(" ")`
 
 ## Nota rápida sobre alcance
 - Esta guía muestra **controles obligatorios** (o requisitos prescriptivos) de cada normativa/estándar y su **mapeo** hacia controles ISO/ NIST / NIST CSF cuando existe correspondencia práctica. Usa esto como **hoja de ruta** para reducir solapamientos entre auditorías y diseñar una matriz de evidencia única. :contentReference[oaicite:0]{index=0}
@@ -582,8 +578,8 @@ El **control de datos** comprende el conjunto de prácticas, políticas, configu
 ---
 
 ## Enlaces internos relacionados
-- [ciberseguridad](/uncategorized/ciberseguridad/)  
-- [autenticacion](/uncategorized/autenticacion/)  
+- [ciberseguridad](/ciberseguridad/ciberseguridad/)  
+- [autenticacion](/autenticacion/autenticacion/)  
 - [criptografia](/autenticacion/criptografia/)  
 - [hardening](/ciberseguridad/hardening/)  
 - [Email DLP Protección Correo](/ciberseguridad/email-dlp-protecci-n-correo/)  

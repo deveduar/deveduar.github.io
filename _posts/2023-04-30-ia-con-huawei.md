@@ -12,9 +12,9 @@ tags:
   - Huawei
 ---
 # IA con Huawei
-``$= dv.current().file.tags.join(" ")``
+``
 
-- [Data Science](/uncategorized/data-science/)
+- [Data Science](/data%20science/data-science/)
 - IA
 ## Curso 
 - 0.2.0 CERTIFICACIONES HAWEI, varios

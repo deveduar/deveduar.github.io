@@ -11,9 +11,8 @@ tags:
   - cloud
 ---
 # Cloud Computing
-`$= dv.current().file.tags.join(" ")`
 
-- [cloud](/uncategorized/cloud/)
+- [cloud](/cloud/cloud/)
 - [Azure](/cloud/azure/)
 - [FindOps](/infraestructura%20it/findops/)
 

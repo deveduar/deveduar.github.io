@@ -6,16 +6,16 @@ source:
 status: 🚀
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: uncategorized
+category: mantenimiento
 tags:
   - mantenimiento
 ---
 # mantenimiento
-``$= dv.current().file.tags.join(" ")``
+``
 
 ## Conceptos Clave
-- [Management](/uncategorized/management/)
-- [devops](/uncategorized/devops/) 
+- [Management](/management/management/)
+- [devops](/devops/devops/) 
 - [electronica](/electronica/electronica/)
 - [embedded](/electronica/embedded/)
 - [soporte tecnico](/infraestructura%20it/soporte-tecnico/)
@@ -23,7 +23,7 @@ tags:
 
 ## Indicadores y Comparaciones
 - [KPI](/gestion%20de%20negocio/kpi/) vs pki
-	- [Gestion de Negocio](/uncategorized/gestion-de-negocio/)
+	- [Gestion de Negocio](/gestion%20de%20negocio/gestion-de-negocio/)
 - RAM vs RCA
 - TPM (Total Productive Maintenance)
 

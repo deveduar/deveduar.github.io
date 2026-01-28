@@ -16,13 +16,12 @@ tags:
   - ORM
 ---
 # Sequelize
-`$= dv.current().file.tags.join(" ")`
 
 ## Enlaces Relacionados
 - [node.js](/backend/node-js/)
-- [Backend](/uncategorized/backend/)
+- [Backend](/backend/backend/)
 - [api](/backend/api/)
-- [Databases](/uncategorized/databases/)
+- [Databases](/databases/databases/)
 - [postgreSQL](/databases/postgresql/)
 - ORM
 - SQL
@@ -280,7 +279,6 @@ module.exports = {
         type: Sequelize.DATE
       }
     });
-    
     // Añadir índice
     await queryInterface.addIndex('Users', ['email']);
   },
@@ -581,7 +579,6 @@ module.exports = {
   up: async (queryInterface, Sequelize) => {
     // Verificar versión actual antes de aplicar cambios
     const tableInfo = await queryInterface.describeTable('Users');
-    
     if (!tableInfo.newColumn) {
       await queryInterface.addColumn('Users', 'newColumn', {
         type: Sequelize.STRING
@@ -598,7 +595,6 @@ module.exports = {
 // Estrategia de rollback automático en errores
 const safeMigration = async (migrationFunction) => {
   const transaction = await queryInterface.sequelize.transaction();
-  
   try {
     await migrationFunction(queryInterface, Sequelize, transaction);
     await transaction.commit();

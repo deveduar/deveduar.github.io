@@ -12,9 +12,8 @@ tags:
   - Azure
 ---
 # Azure Fundamentals AZ-900 devops
-`$= dv.current().file.tags.join(" ")`
 
-- [cloud](/uncategorized/cloud/)
+- [cloud](/cloud/cloud/)
 - [Azure](/cloud/azure/)
 ## Programa de 12 Meses de Azure Cloud (Cuenta Gratuita)
 

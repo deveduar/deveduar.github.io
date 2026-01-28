@@ -9,7 +9,6 @@ public_note: "true"
 category: Testing
 ---
 # Glosario Avanzado de Testing
-`$= dv.current().file.tags.join(" ")`
 
 # 🧠 Glosario Avanzado de Testing (Tercera Parte)
 

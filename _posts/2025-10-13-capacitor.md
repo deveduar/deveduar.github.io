@@ -14,9 +14,9 @@ tags:
   - native_runtime
 ---
 # Capacitor
-``$= dv.current().file.tags.join(" ")``
+``
 ## Recursos y documentación
-- [Desarrollo multiplataforma](/uncategorized/desarrollo-multiplataforma/)
+- [Desarrollo multiplataforma](/desarrollo%20multiplataforma/desarrollo-multiplataforma/)
 - [angular](/frontend/angular/)
 - [Using Capacitor with Angular](https://capacitorjs.com/docs/frameworks/angular)
 - [Capacitor - Cross-platform Native Runtime for Web Apps](https://capacitorjs.com/docs)

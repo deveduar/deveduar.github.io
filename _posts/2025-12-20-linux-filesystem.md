@@ -11,7 +11,6 @@ tags:
   - Linux
 ---
 # Linux Filesystem
-`$= dv.current().file.tags.join(" ")`
 
 
 [Linux Filesystem Cheat Sheet PDF](39.1_Section_3_Cheat_Sheet.pdf)

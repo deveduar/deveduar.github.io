@@ -13,11 +13,11 @@ tags:
   - ciberseguridad
 ---
 # Ingeniería inversa
-``$= dv.current().file.tags.join(" ")``
+``
 
 ## Enlaces conceptuales
 - [vulnerabilidades](/ciberseguridad/vulnerabilidades/)
-- [ciberseguridad](/uncategorized/ciberseguridad/)
+- [ciberseguridad](/ciberseguridad/ciberseguridad/)
 
 ## Definición y alcance
 La **ingeniería inversa (Reverse Engineering)** es el proceso de analizar un sistema, software o binario para **comprender su funcionamiento interno sin disponer del diseño original ni del código fuente**.  
@@ -329,7 +329,7 @@ Esto convierte el reversing en conocimiento reutilizable.
 ## Relación con otras disciplinas
 La ingeniería inversa se conecta con:
 - [vulnerabilidades](/ciberseguridad/vulnerabilidades/)
-- [ciberseguridad](/uncategorized/ciberseguridad/)
+- [ciberseguridad](/ciberseguridad/ciberseguridad/)
 - [Pentesting](/ciberseguridad/pentesting/) avanzado
 - [DFIR forense](/ciberseguridad/dfir-forense/)
 - [Red team](/ciberseguridad/red-team/)
@@ -558,7 +558,7 @@ Malware modular moderno con:
 
 ## Relación con otras áreas
 - [vulnerabilidades](/ciberseguridad/vulnerabilidades/)
-- [ciberseguridad](/uncategorized/ciberseguridad/)
+- [ciberseguridad](/ciberseguridad/ciberseguridad/)
 - [DFIR](/ciberseguridad/dfir-forense/)
 - Threat Intelligence
 - EDR engineering
@@ -724,7 +724,7 @@ No cubierto:
 
 ## Relación con otras áreas
 - [vulnerabilidades](/ciberseguridad/vulnerabilidades/)
-- [ciberseguridad](/uncategorized/ciberseguridad/)
+- [ciberseguridad](/ciberseguridad/ciberseguridad/)
 - Software protection
 - Secure software design
 - Malware reversing

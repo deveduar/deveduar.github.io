@@ -10,7 +10,6 @@ category: Testing
 ---
 
 # Mocks MSW - integración avanzada con Jest, Vitest y Playwright
-`$= dv.current().file.tags.join(" ")`
 
 - MSW
 - [TDD - Test Driven Development](/testing/tdd---test-driven-development/)
@@ -255,9 +254,7 @@ jobs:
 📦 En entornos Docker:
 
 - Inicia los mocks con `server.listen()` solo si `NODE_ENV === 'test'`.
-    
 - Usa `onUnhandledRequest: 'error'` para asegurar cobertura completa.
-    
 
 ---
 
@@ -276,27 +273,18 @@ jobs:
 ## 🪶 Mejores Prácticas Globales
 
 - Define **nombres consistentes** en endpoints (`/api/...`).
-    
 - Resetea handlers tras cada test (`server.resetHandlers()`).
-    
 - Mantén mocks cerca del código fuente (no en repos externos).
-    
 - Usa `ctx.delay()` para simular condiciones reales.
-    
 - Documenta tus mocks en la wiki o junto al [Glosario de TDD](/testing/glosario-de-tdd/).
-    
 - Evita mezclar MSW con interceptores manuales (axios/fetch mocks) en el mismo entorno.
-    
 
 ---
 
 ## 🔗 Referencias
 
 - [MSW Docs — Integration Guides](https://mswjs.io/docs/integrations)
-    
 - [Vitest + MSW Example](https://vitest.dev/guide/mocking.html#mock-service-worker)
-    
 - [Playwright Intercept Requests](https://playwright.dev/docs/network#modify-requests)
-    
 - [Mocks MSW - patrones y casos reales](/testing/mocks-msw---patrones-y-casos-reales/)
 - [TDD patterns](/testing/tdd-patterns/)

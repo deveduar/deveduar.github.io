@@ -6,7 +6,7 @@ source:
 status: 🚀
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: uncategorized
+category: Management
 tags:
   - PM
   - SCRUM
@@ -15,7 +15,6 @@ tags:
   - ERP
 ---
 # Management
-`$= dv.current().file.tags.join(" ")`
 
 - Scrum master
 - 
@@ -52,7 +51,7 @@ Nota central para agrupar conceptos, prácticas, marcos de trabajo, herramientas
 ---
 
 ### Gestión de Negocio
-- [Gestion de Negocio](/uncategorized/gestion-de-negocio/)
+- [Gestion de Negocio](/gestion%20de%20negocio/gestion-de-negocio/)
 
 #### Contenido recomendado
 - Modelos de negocio (Canvas)
@@ -121,7 +120,7 @@ Nota central para agrupar conceptos, prácticas, marcos de trabajo, herramientas
 ---
 
 ### Herramientas para Equipos Técnicos
-- [devops](/uncategorized/devops/)
+- [devops](/devops/devops/)
 - [maven](/automatizacion%20y%20build/maven/)
 - [Jira](/management/jira/)
 - [ticketing](/management/ticketing/)

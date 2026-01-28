@@ -6,20 +6,19 @@ source:
 status: 🚀
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: uncategorized
+category: autenticacion
 tags:
   - autenticacion
   - Hacking
   - criptografia
 ---
 # Autenticación
-`$= dv.current().file.tags.join(" ")` 
 
 - [criptografia](/autenticacion/criptografia/)
 	- [PKI infraestructura de clave pública](/autenticacion/pki-infraestructura-de-clave-p-blica/)
-- [ciberseguridad](/uncategorized/ciberseguridad/)
+- [ciberseguridad](/ciberseguridad/ciberseguridad/)
 - [control de datos](/ciberseguridad/control-de-datos/)
-- [Backend](/uncategorized/backend/)
+- [Backend](/backend/backend/)
 - [SSO Single Sign-On](/autenticacion/sso-single-sign-on/) 🔥
 - [better auth](/autenticacion/better-auth/)
 - [JWT](/autenticacion/jwt/)
@@ -63,14 +62,13 @@ tags:
 - [YouTube MERN todo app](https://youtu.be/NmkY4JgS21A?t=16015)
 
 # Autenticación Avanzada
-`$= dv.current().file.tags.join(" ")` 
 
 - [OAuth](/autenticacion/oauth/)
 - [JWT](/autenticacion/jwt/)
 - [SSO Single Sign-On](/autenticacion/sso-single-sign-on/)
 - 2FA
 - IdP
-- [ciberseguridad](/uncategorized/ciberseguridad/)
+- [ciberseguridad](/ciberseguridad/ciberseguridad/)
 - control de acceso
 
 ## Flujos de autenticación OAuth
@@ -126,9 +124,8 @@ tags:
 	- Implementación de 2FA opcional para usuarios
 
 # Autenticación Avanzada: Aspectos Complementarios
-`$= dv.current().file.tags.join(" ")` 
 
-- [ciberseguridad](/uncategorized/ciberseguridad/)
+- [ciberseguridad](/ciberseguridad/ciberseguridad/)
 - control de acceso
 - [OAuth](/autenticacion/oauth/)
 - [JWT](/autenticacion/jwt/)
@@ -180,7 +177,6 @@ tags:
 
 
 # Autenticación Avanzada: Diagramas y Flujos
-`$= dv.current().file.tags.join(" ")` 
 
 - [OAuth](/autenticacion/oauth/)
 - [JWT](/autenticacion/jwt/)
@@ -189,7 +185,7 @@ tags:
 - MFA
 - IdP
 - Microservicios
-- [ciberseguridad](/uncategorized/ciberseguridad/)
+- [ciberseguridad](/ciberseguridad/ciberseguridad/)
 
 ## Flujo de autenticación SSO con OAuth / OIDC
 
@@ -264,9 +260,8 @@ sequenceDiagram
 - **Monitoreo y auditoría:** registrar eventos de login, revocación y uso de MFA.
 - **Integración con múltiples IdP:** soportar federated identity y SSO corporativo.
 # Autenticación Avanzada: Temas Complementarios
-`$= dv.current().file.tags.join(" ")` 
 
-- [ciberseguridad](/uncategorized/ciberseguridad/)
+- [ciberseguridad](/ciberseguridad/ciberseguridad/)
 - control de acceso
 - [IAM Gestión de Identidades y Acceso](/autenticacion/iam-gesti-n-de-identidades-y-acceso/)
 - Federated Identity
@@ -316,7 +311,6 @@ sequenceDiagram
 Perfecto, aquí tienes una nota centrada **en técnicas de autenticación con ejemplos prácticos, algoritmos y snippets de programación**, lista para Obsidian:
 
 # Autenticación: Técnicas y Ejemplos de Programación 1
-`$= dv.current().file.tags.join(" ")` 
 
 - [OAuth](/autenticacion/oauth/)
 - [JWT](/autenticacion/jwt/)
@@ -485,7 +479,6 @@ Perfecto, aquí tienes una **versión extendida tipo “recetario completo de al
 
 
 # Recetario Completo de Algoritmos de Autenticación 2
-`$= dv.current().file.tags.join(" ")` 
 
 - [OAuth](/autenticacion/oauth/)
 - [JWT](/autenticacion/jwt/)
@@ -717,7 +710,6 @@ graph TD
 * Claims limitados y scoped tokens para autorización granular
 
 # Implementaciones Avanzadas de Autenticación (Nuevas)
-`$= dv.current().file.tags.join(" ")` 
 
 - Context-aware Authentication
 - Adaptive Authentication
@@ -848,7 +840,6 @@ navigator.credentials.get({ publicKey: publicKeyOptions })
 * Monitorear accesos y patrones sospechosos en tiempo real
 
 # Glosario de Autenticación - Secciones Temáticas
-`$= dv.current().file.tags.join(" ")` 
 
 ## 1. Fundamentos de Autenticación y Autorización
 - **Autenticación:** Verificación de identidad de un usuario o sistema.  

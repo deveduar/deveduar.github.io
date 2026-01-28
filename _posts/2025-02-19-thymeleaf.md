@@ -15,7 +15,6 @@ tags:
   - template-engine
 ---
 # thymeleaf
-`$= dv.current().file.tags.join(" ")`
 
 ## Relación con el ecosistema Java
 - [java](/software%20engineering/java/)

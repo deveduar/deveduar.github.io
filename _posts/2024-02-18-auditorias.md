@@ -11,9 +11,9 @@ tags:
   - Hacking
 ---
 # Auditorías
-``$= dv.current().file.tags.join(" ")``
+``
 
-- [ciberseguridad](/uncategorized/ciberseguridad/)
+- [ciberseguridad](/ciberseguridad/ciberseguridad/)
 - 
 ## Alcance de Auditorías de Seguridad
 - Evaluación técnica y organizativa de controles de seguridad

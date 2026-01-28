@@ -11,7 +11,6 @@ tags:
   - Linux
 ---
 # ubuntu server
-`$= dv.current().file.tags.join(" ")`
 
 # Ubuntu Server — Fundamentos y Arquitectura (2025)
 
@@ -1086,10 +1085,7 @@ sudo apt install apache2
 {% endraw %}`
 
 - `apt-get install` funciona de forma similar a `apt install`.
-    
 - Opciones útiles:
-    
     - `--install-suggests`: instala paquetes sugeridos (puede incluir muchos extras).
-        
     - `-y`: asume "sí" a la confirmación, automatizando la instalación.
 

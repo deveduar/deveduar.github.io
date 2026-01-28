@@ -11,7 +11,6 @@ tags:
   - python
 ---
 # curso python avanzado
-`$= dv.current().file.tags.join(" ")`
 - [python](/software%20engineering/python/)
 
 ## 📁 Recursos y Material de Referencia

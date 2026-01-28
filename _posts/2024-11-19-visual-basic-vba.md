@@ -13,13 +13,13 @@ tags:
   - vba
 ---
 # Visual Basic VBA
-``$= dv.current().file.tags.join(" ")``
+``
 
 - [cpp](/software%20engineering/cpp/)
-- [cloud](/uncategorized/cloud/)
-- [Gestion de Negocio](/uncategorized/gestion-de-negocio/)
-- [Data Science](/uncategorized/data-science/)
-- [devops](/uncategorized/devops/)
+- [cloud](/cloud/cloud/)
+- [Gestion de Negocio](/gestion%20de%20negocio/gestion-de-negocio/)
+- [Data Science](/data%20science/data-science/)
+- [devops](/devops/devops/)
 - [net](/software%20engineering/net/)
 - 
 - [Visual Basic y C](/software%20engineering/visual-basic-y-c/) 

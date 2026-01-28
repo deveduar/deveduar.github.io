@@ -13,7 +13,7 @@ tags:
   - owasp
 ---
 # vulnerabilidades
-``$= dv.current().file.tags.join(" ")``
+``
 
 ## Enlaces y notas relacionadas
 - [OWASP](/ciberseguridad/owasp/)
@@ -30,7 +30,7 @@ Las vulnerabilidades son debilidades técnicas, lógicas u operativas que pueden
 ## Vulnerabilidades en aplicaciones
 Incluyen fallos presentes en aplicaciones web, móviles y APIs, tanto del lado cliente como servidor.
 - Errores de validación de entrada
-- Fallos de [autenticacion](/uncategorized/autenticacion/) y autorización
+- Fallos de [autenticacion](/autenticacion/autenticacion/) y autorización
 - Exposición de información sensible
 - Dependencias vulnerables
 - Configuraciones inseguras

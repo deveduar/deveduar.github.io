@@ -6,7 +6,7 @@ source:
 status: 🚀
 Parent: "[[Area-Sistemas]]"
 public_note: "true"
-category: uncategorized
+category: ciberseguridad
 tags:
   - Hacking
   - ciberseguridad
@@ -14,19 +14,18 @@ tags:
   - pentesting
 ---
 # ciberseguridad
-`$= dv.current().file.tags.join(" ")`
 
 ## Áreas y fundamentos
-- [monitoreo](/uncategorized/monitoreo/)
+- [monitoreo](/monitoreo/monitoreo/)
 - [Pentesting](/ciberseguridad/pentesting/)
 - [hardening](/ciberseguridad/hardening/)
-- [Sistemas](/uncategorized/sistemas/)
+- [Sistemas](/sistemas/sistemas/)
 - [Linux](/sistemas/linux/)
 - script de hardening powershell
 
 ## DevOps y entornos de infraestructura
-- [devops](/uncategorized/devops/)
-	- [Redes](/uncategorized/redes/)
+- [devops](/devops/devops/)
+	- [Redes](/redes/redes/)
 	- Modo NAT- qué es y para qué sirve
 	- [DevSecOps](/devops/devsecops/)
 	- certificados
@@ -44,7 +43,7 @@ tags:
 
 ## Herramientas de análisis y vulnerabilidades
 - **tools analisis y [vulnerabilidades](/ciberseguridad/vulnerabilidades/)**
-	- [monitoreo](/uncategorized/monitoreo/)
+	- [monitoreo](/monitoreo/monitoreo/)
 	- nmap
 	- [Burp Suite](/ciberseguridad/burp-suite/) 🔥
 	- caido
@@ -68,7 +67,7 @@ tags:
 
 ## Hardening y protección
 - [hardening](/ciberseguridad/hardening/)
-	- [autenticacion](/uncategorized/autenticacion/)
+	- [autenticacion](/autenticacion/autenticacion/)
 	- [control de datos](/ciberseguridad/control-de-datos/)
 	- [criptografia](/autenticacion/criptografia/)
 	- seguridad perimetral
@@ -109,10 +108,10 @@ tags:
 
 ## Servicios empresariales
 - servicios empresariales
-	- [ciberseguridad](/uncategorized/ciberseguridad/)
+	- [ciberseguridad](/ciberseguridad/ciberseguridad/)
 	- [SOC](/ciberseguridad/soc/) auditorias
 	- servicios de red y modelado
-	- [Redes](/uncategorized/redes/)
+	- [Redes](/redes/redes/)
 		- [ZTNA](/ciberseguridad/ztna/)
 		- [SASE](/ciberseguridad/sase/)
 		- [Secure Service Edge](/ciberseguridad/secure-service-edge/)

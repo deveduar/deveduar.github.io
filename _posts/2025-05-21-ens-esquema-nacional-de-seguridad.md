@@ -14,7 +14,6 @@ tags:
   - normativas
 ---
 # ENS Esquema Nacional de Seguridad
-`$= dv.current().file.tags.join(" ")` 
 
 - El **Esquema Nacional de Seguridad (ENS)** es la normativa española que establece los principios y requisitos de seguridad que deben cumplir los sistemas de información en la Administración Pública y en aquellos proveedores que gestionen información relacionada con ésta.  
 - Su objetivo es garantizar la **confidencialidad, integridad, disponibilidad, autenticidad y trazabilidad** de la información y servicios electrónicos.  

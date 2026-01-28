@@ -10,7 +10,6 @@ category: Testing
 ---
 # QUnit - Guía completa para entrevistas y uso profesional
 
-`$= dv.current().file.tags.join(" ")`
 
 * [QUnit](/testing/qunit/)
 * [Testing](/testing/testing/)

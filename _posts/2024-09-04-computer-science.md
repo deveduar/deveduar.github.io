@@ -6,12 +6,11 @@ source:
 status: 🚀
 Parent: "[[Area-Prog]]"
 public_note: "true"
-category: uncategorized
+category: Computer Science
 tags:
   - CS
 ---
 # Computer Science
-`$= dv.current().file.tags.join(" ")`
 
 La ciencia de la computación estudia los principios teóricos, metodológicos y prácticos que sustentan el diseño, desarrollo y análisis de sistemas informáticos. Abarca desde fundamentos matemáticos hasta paradigmas avanzados de programación y arquitecturas distribuidas.  
 Esta nota actúa como índice central de conocimiento técnico y guía estructurada de estudio.
@@ -23,7 +22,7 @@ Exploran las prácticas, herramientas y enfoques aplicados en la construcción y
 
 - [Testing](/testing/testing/)  
 	-   Técnicas y niveles de prueba, desde tests unitarios hasta integración y aceptación.   Se incluyen conceptos como *test-driven development (TDD)*, *mocking*, *fixtures* y *coverage*.
-- [Software engineering](/uncategorized/software-engineering/)
+- [Software engineering](/software%20engineering/software-engineering/)
 - [Expresiones regulares](/computer%20science/expresiones-regulares/)
 
 ---
@@ -115,11 +114,11 @@ Expansiones hacia áreas relacionadas y multidisciplinarias.
 
 - [Machine Learning](/data%20science/machine-learning/) (si existe en la base de notas)  
   Aplicación de algoritmos de aprendizaje y análisis de datos.  
-- [ciberseguridad](/uncategorized/ciberseguridad/) 
+- [ciberseguridad](/ciberseguridad/ciberseguridad/) 
   Cifrado, autenticación, protocolos seguros y auditoría de sistemas.  
 - DevOps  y [CICD](/devops/cicd/)
   Automatización del despliegue, pipelines de integración continua y observabilidad.  
-- [Cloud Computing](/cloud/cloud-computing/)  [cloud](/uncategorized/cloud/)
+- [Cloud Computing](/cloud/cloud-computing/)  [cloud](/cloud/cloud/)
   Infraestructura escalable, servicios distribuidos y gestión de recursos virtualizados.
 
 ---

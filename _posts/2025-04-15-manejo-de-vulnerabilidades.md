@@ -13,11 +13,11 @@ tags:
   - Hacking
 ---
 # Manejo de Vulnerabilidades
-``$= dv.current().file.tags.join(" ")``
+``
 
 ## Conceptos Clave y Definición
 - [vulnerabilidades](/ciberseguridad/vulnerabilidades/)
-- [infraestructura IT](/uncategorized/infraestructura-it/)
+- [infraestructura IT](/infraestructura%20it/infraestructura-it/)
 - Vulnerability Management
 - [What Is Vulnerability Management? | Microsoft Security](https://www.microsoft.com/en-us/security/business/security-101/what-is-vulnerability-management#:~:text=FAQs-,Vulnerability%20management%20defined,from%20cyberattacks%20and%20data%20breaches.)
 - [Vulnerability management - Wikipedia](https://en.wikipedia.org/wiki/Vulnerability_management)
@@ -26,7 +26,7 @@ El **manejo de vulnerabilidades** es un proceso continuo y sistemático orientad
 
 ## Relación con Monitoreo y Detección
 - Análisis de logs, detección de intrusos, correlación de eventos
-- [monitoreo](/uncategorized/monitoreo/)
+- [monitoreo](/monitoreo/monitoreo/)
 - [SIEM](/ciberseguridad/siem/)
 
 El monitoreo continuo permite detectar intentos de explotación de vulnerabilidades conocidas o desconocidas. La correlación de eventos en plataformas SIEM ayuda a:

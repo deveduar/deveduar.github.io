@@ -12,7 +12,7 @@ tags:
   - ciberseguridad
 ---
 # DevSecOps
-``$= dv.current().file.tags.join(" ")``
+``
 
 - DevSecOps Avanzado Expansión de Conceptos y Prácticas Modernas
 - DevSecOps 2025 – Temas Emergentes y Complementarios
@@ -23,7 +23,7 @@ tags:
 DevSecOps integra **seguridad en cada fase del ciclo de vida del desarrollo** (planificación, codificación, construcción, prueba, despliegue y operación). Su objetivo es garantizar que las aplicaciones sean **seguras desde el diseño**, automatizando controles y auditorías en los flujos CI/CD.
 
 ## ⚙️ Fundamentos y Herramientas Clave
-- [devops](/uncategorized/devops/)  
+- [devops](/devops/devops/)  
 - [git](/software%20engineering/git/)  
 - [jenkins](/devops/jenkins/)  
 - [grafana](/monitoreo/grafana/)  

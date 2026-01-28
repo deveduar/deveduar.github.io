@@ -14,9 +14,8 @@ tags:
   - big_0
 ---
 # Complejidad Logarítmica y Notación Big O
-`$= dv.current().file.tags.join(" ")`
 
-- [Computer Science](/uncategorized/computer-science/)
+- [Computer Science](/computer%20science/computer-science/)
 - [mates](/uncategorized/mates/)
 ## 📈 INTRODUCCIÓN A LA COMPLEJIDAD
 
@@ -183,7 +182,6 @@ La **complejidad logarítmica (O(log n))** es una de las más deseables, ya que 
 
 
 # Fundamentos Matemáticos para Entender la Complejidad Algorítmica
-`$= dv.current().file.tags.join(" ")`
 
 ---
 
@@ -404,7 +402,6 @@ Para dominar la **complejidad algorítmica** es esencial entender cómo crecen l
 Estas herramientas matemáticas forman el lenguaje con el que se mide la eficiencia y la escalabilidad de los algoritmos.
 
 # Complejidad Logarítmica y Notaciones — Conceptos Avanzados
-`$= dv.current().file.tags.join(" ")`
 
 ---
 

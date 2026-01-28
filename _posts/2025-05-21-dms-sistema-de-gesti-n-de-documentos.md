@@ -13,9 +13,9 @@ tags:
   - dms
 ---
 # DMS Sistema de Gestión de Documentos
-``$= dv.current().file.tags.join(" ")``
+``
 
-- [infraestructura IT](/uncategorized/infraestructura-it/)
+- [infraestructura IT](/infraestructura%20it/infraestructura-it/)
 - Zotero
 ## Concepto y Funcionalidad
 - Un **DMS (Document Management System)** es un sistema diseñado para **almacenar, organizar, controlar y distribuir documentos digitales** dentro de una organización.  
@@ -27,7 +27,7 @@ tags:
 - **Almacenamiento**: repositorios seguros para documentos estructurados y no estructurados.  
 - **Seguridad**: control de accesos, permisos por usuario/grupo, auditorías de actividad.  
 - **Distribución**: envío, compartición y publicación de documentos dentro y fuera de la organización.  
-- **Automatización**: [Automatizacion y Build](/uncategorized/automatizacion-y-build/) de flujos de trabajo, notificaciones y revisiones.  
+- **Automatización**: [Automatizacion y Build](/automatizacion%20y%20build/automatizacion-y-build/) de flujos de trabajo, notificaciones y revisiones.  
 - **Versionado y trazabilidad**: historial de cambios, control de versiones y restauración de documentos.
 
 ## Funciones y Beneficios

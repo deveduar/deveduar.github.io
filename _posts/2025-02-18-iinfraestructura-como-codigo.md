@@ -13,11 +13,10 @@ tags:
   - devops
 ---
 # IaC infraestructura como código
-`$= dv.current().file.tags.join(" ")`  
 
-- [devops](/uncategorized/devops/)  
+- [devops](/devops/devops/)  
 - [CICD](/devops/cicd/)  
-- [Automatizacion y Build](/uncategorized/automatizacion-y-build/)  
+- [Automatizacion y Build](/automatizacion%20y%20build/automatizacion-y-build/)  
 - [SRE Site Reliability Engineering](/devops/sre-site-reliability-engineering/)  
 
 ---
@@ -37,7 +36,7 @@ La infraestructura —servidores, redes, balanceadores, bases de datos, etc.— 
 - **Consistencia entre entornos** (dev, staging, prod) gracias a definiciones declarativas.  
 - **Versionado y auditoría** mediante control de código fuente (Git).  
 - **Despliegues reproducibles y reversibles**, facilitando rollback o escalado rápido.  
-- **Integración con [devops](/uncategorized/devops/) y [SRE Site Reliability Engineering](/devops/sre-site-reliability-engineering/)**, reforzando prácticas de entrega continua y resiliencia.
+- **Integración con [devops](/devops/devops/) y [SRE Site Reliability Engineering](/devops/sre-site-reliability-engineering/)**, reforzando prácticas de entrega continua y resiliencia.
 
 ---
 
@@ -129,10 +128,9 @@ El enfoque IaC es clave para SRE porque:
 ---
 
 # IaC avanzada: prácticas, evolución y tendencias
-`$= dv.current().file.tags.join(" ")`
 
 - [IInfraestructura como codigo](/devops/iinfraestructura-como-codigo/)
-- [devops](/uncategorized/devops/)
+- [devops](/devops/devops/)
 - [CICD](/devops/cicd/)
 - Automatizacion
 - [SRE Site Reliability Engineering](/devops/sre-site-reliability-engineering/)
@@ -265,10 +263,9 @@ Diseñar IaC como **bloques modulares reutilizables**:
 
 
 # IaC avanzada II: ecosistema, automatización extendida y gestión operativa
-`$= dv.current().file.tags.join(" ")`
 
 - IaC infraestructura como código
-- [devops](/uncategorized/devops/)
+- [devops](/devops/devops/)
 - Automatizacion
 - [CICD](/devops/cicd/)
 - [SRE Site Reliability Engineering](/devops/sre-site-reliability-engineering/)
@@ -484,10 +481,9 @@ Ejemplo: sistemas que recrean instancias corruptas o reasignan recursos sin inte
 ---
 
 # IaC avanzada III: escalabilidad organizacional, arquitectura y evolución del ecosistema  
-`$= dv.current().file.tags.join(" ")`
 
 - IaC infraestructura como código  
-- [devops](/uncategorized/devops/)  
+- [devops](/devops/devops/)  
 - Automatizacion  
 - [CICD](/devops/cicd/)  
 - [SRE Site Reliability Engineering](/devops/sre-site-reliability-engineering/)
@@ -709,10 +705,9 @@ Esta convergencia está dando lugar a **InfraOps**, un modelo unificado de gesti
 ---
 
 # IaC avanzada IV: patrones arquitectónicos, validación formal y evolución tecnológica  
-`$= dv.current().file.tags.join(" ")`
 
 - IaC infraestructura como código  
-- [devops](/uncategorized/devops/)  
+- [devops](/devops/devops/)  
 - [CICD](/devops/cicd/)  
 - Automatizacion  
 - [SRE Site Reliability Engineering](/devops/sre-site-reliability-engineering/)  

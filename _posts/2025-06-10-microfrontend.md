@@ -13,9 +13,8 @@ tags:
   - frontend
 ---
 # microfrontend
-`$= dv.current().file.tags.join(" ")`
 
-- [Frontend](/uncategorized/frontend/)
+- [Frontend](/frontend/frontend/)
 ## Introducción y conceptos clave
 - Los **microfrontends** aplican la filosofía de los [microservicios](/backend/microservicios/) al frontend.
 - Permiten dividir una aplicación grande en **fragmentos independientes**, cada uno con:

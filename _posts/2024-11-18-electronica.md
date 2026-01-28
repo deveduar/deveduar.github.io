@@ -11,7 +11,6 @@ tags:
   - electronica
 ---
 # electronica
-`$= dv.current().file.tags.join(" ")`
 
 - [embedded](/electronica/embedded/)
 - hardware

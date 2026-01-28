@@ -11,7 +11,6 @@ tags:
   - Linux
 ---
 # Linux Shell Scripting
-`$= dv.current().file.tags.join(" ")`
 
 - [Linux](/sistemas/linux/)
 - [bash](/desarrollo%20multiplataforma/bash/)
@@ -271,7 +270,6 @@ echo "Archivo: $archivo, Verbose: $verbose"
 {% endraw %}`
 
 - Parámetros posicionales y valores por defecto:
-    
 
 {% raw %}
 ```bash
@@ -283,7 +281,6 @@ echo "Hola $nombre"
 ## Arrays y Manejo Avanzado de Variables
 
 - Arrays unidimensionales:
-    
 
 {% raw %}
 ```bash
@@ -293,7 +290,6 @@ echo ${frutas[1]}  # banana
 {% endraw %}
 
 - Arrays asociativos:
-    
 
 {% raw %}
 ```bash
@@ -304,7 +300,6 @@ echo ${edades["Ana"]}
 {% endraw %}
 
 - Iteración sobre arrays:
-    
 
 {% raw %}
 ```bash
@@ -315,7 +310,6 @@ done
 {% endraw %}
 
 - Expansión de variables y manipulación de strings:
-    
 
 {% raw %}
 ```bash
@@ -328,7 +322,6 @@ echo ${texto//o/0}  # H0la Mund0
 ## Trap y Manejo de Señales
 
 - Capturar señales y ejecutar limpieza:
-    
 
 {% raw %}
 ```bash
@@ -337,7 +330,6 @@ trap "echo 'Script interrumpido'; exit" SIGINT SIGTERM
 {% endraw %}
 
 - Uso en scripts largos para liberar recursos:
-    
 
 {% raw %}
 ```bash
@@ -348,7 +340,6 @@ trap "rm /tmp/archivo_tmp; exit" EXIT
 ## Subshells y Procesos en Segundo Plano
 
 - Ejecutar comandos en segundo plano:
-    
 
 {% raw %}
 ```bash
@@ -360,7 +351,6 @@ echo "Proceso $pid finalizado"
 {% endraw %}
 
 - Diferencia entre subshell y shell actual:
-    
 
 {% raw %}
 ```bash
@@ -370,7 +360,6 @@ cd /tmp          # shell actual
 {% endraw %}
 
 - Redirecciones avanzadas:
-    
 
 {% raw %}
 ```bash
@@ -382,7 +371,6 @@ comando &> todo.txt
 ## Scripting Modular y Librerías
 
 - Reutilizar scripts con `source`:
-    
 
 {% raw %}
 ```bash
@@ -392,12 +380,10 @@ mi_funcion
 {% endraw %}
 
 - Modularización permite mantener código limpio y organizado.
-    
 
 ## Automatización Avanzada y Cron Jobs
 
 - Programar tareas con cron:
-    
 
 {% raw %}
 ```bash
@@ -408,7 +394,6 @@ crontab -e
 {% endraw %}
 
 - Usar `at` para tareas puntuales:
-    
 
 {% raw %}
 ```bash
@@ -417,7 +402,6 @@ echo "/ruta/script.sh" | at now + 1 minute
 {% endraw %}
 
 - Logging de tareas automatizadas:
-    
 
 {% raw %}
 ```bash
@@ -428,7 +412,6 @@ echo "/ruta/script.sh" | at now + 1 minute
 ## Seguridad y Permisos en Scripts
 
 - Cambiar permisos de ejecución:
-    
 
 {% raw %}
 ```bash
@@ -437,7 +420,6 @@ chmod +x script.sh
 {% endraw %}
 
 - Ejecutar comandos con sudo dentro de scripts:
-    
 
 {% raw %}
 ```bash
@@ -446,7 +428,6 @@ sudo apt update
 {% endraw %}
 
 - Validación de usuario y permisos:
-    
 
 {% raw %}
 ```bash
@@ -458,7 +439,6 @@ fi
 {% endraw %}
 
 - Evitar inyección de comandos:
-    
 
 {% raw %}
 ```bash

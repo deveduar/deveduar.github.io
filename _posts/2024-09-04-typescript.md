@@ -12,11 +12,10 @@ tags:
   - typescript
 ---
 # typescript
-`$= dv.current().file.tags.join(" ")`
 
 - [ZOTERO JS-Typescript](zotero://select/library/collections/UQQKIXBZ)  
-- [Software engineering](/uncategorized/software-engineering/)
-- [Computer Science](/uncategorized/computer-science/)
+- [Software engineering](/software%20engineering/software-engineering/)
+- [Computer Science](/computer%20science/computer-science/)
 - [nextjs](/frontend/nextjs/)
 - [angular](/frontend/angular/)
 
@@ -316,7 +315,6 @@ const str = identity<string>("Hola"); // string
 ### Inferencia de tipos
 
 - TypeScript infiere automáticamente el tipo de `T` según el argumento pasado:
-    
 
 {% raw %}
 ```ts

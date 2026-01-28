@@ -7,24 +7,23 @@ status: 🚀
 Parent: "[[Area-Sistemas]]"
 aliases:
 public_note: "true"
-category: uncategorized
+category: monitoreo
 tags:
   - devops
   - monitoreo
   - tools
 ---
 # Monitoreo
-`$= dv.current().file.tags.join(" ")`
 
 Este documento expande y organiza los conceptos clave relacionados con el monitoreo de sistemas e infraestructura, integrando herramientas, prácticas y marcos de referencia esenciales.
 
-- [devops](/uncategorized/devops/)
+- [devops](/devops/devops/)
 	- [CICD](/devops/cicd/)
 - [soporte tecnico](/infraestructura%20it/soporte-tecnico/)
-- [Redes](/uncategorized/redes/)
-- [infraestructura IT](/uncategorized/infraestructura-it/)
-- [Management](/uncategorized/management/)
-- [ciberseguridad](/uncategorized/ciberseguridad/)
+- [Redes](/redes/redes/)
+- [infraestructura IT](/infraestructura%20it/infraestructura-it/)
+- [Management](/management/management/)
+- [ciberseguridad](/ciberseguridad/ciberseguridad/)
 - tools
 	- [Zabbix](/monitoreo/zabbix/)
 	- [pandora](/monitoreo/pandora/)
@@ -109,7 +108,7 @@ Este documento expande y organiza los conceptos clave relacionados con el monito
 ## Control de Operaciones de TI
 
 - **Control de activos IT y gestión de inventario de red**: Mantener un inventario actualizado de todos los componentes de hardware y software es fundamental para la seguridad y el monitoreo efectivo. Permite identificar activos no autorizados, gestionar vulnerabilidades y comprender el alcance del entorno bajo supervisión.
-- [infraestructura IT](/uncategorized/infraestructura-it/)
+- [infraestructura IT](/infraestructura%20it/infraestructura-it/)
 - [omi](https://docs.microfocus.com/OMi/10.62/Content/OMi/ConceptsGuide/getStarted/getStarted_concepts.htm)
 
 ## Políticas y Controles de Seguridad

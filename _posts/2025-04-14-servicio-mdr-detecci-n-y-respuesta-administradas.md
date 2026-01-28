@@ -13,7 +13,6 @@ tags:
   - Hacking
 ---
 # Servicio MDR - Detección y Respuesta Administradas
-`$= dv.current().file.tags.join(" ")`
 
 El servicio **MDR (Managed Detection and Response)** proporciona a las organizaciones capacidades avanzadas de **detección, análisis y respuesta ante amenazas** sin necesidad de gestionar internamente toda la infraestructura de seguridad. Está diseñado para complementar o sustituir equipos internos de [SOC](/ciberseguridad/soc/) (Security Operations Center).
 

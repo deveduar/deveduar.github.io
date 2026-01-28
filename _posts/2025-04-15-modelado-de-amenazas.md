@@ -13,7 +13,6 @@ tags:
   - amenazas
 ---
 # Modelado de Amenazas
-`$= dv.current().file.tags.join(" ")`
 
 ## Concepto de Threat Modeling
 El **Threat Modeling** (modelado de amenazas) es una disciplina sistemática dentro de la seguridad de la información que permite **identificar, analizar y priorizar amenazas** potenciales contra un sistema, aplicación o infraestructura antes de que sean explotadas.
@@ -173,7 +172,6 @@ Referencia:
 - [OWASP](/ciberseguridad/owasp/)
 
 # Modelado de Amenazas — Expansión Avanzada
-`$= dv.current().file.tags.join(" ")`
 
 ## Integración en el Ciclo de Vida del Desarrollo ([SDLC](/devops/sdlc/))
 El modelado de amenazas debe integrarse como una **actividad continua** dentro del SDLC y no como un evento puntual.
@@ -348,7 +346,6 @@ Indicadores de madurez elevada:
 - Retroalimentación desde incidentes reales.
 
 # Guía Práctica de Modelado de Amenazas — Caso Aplicado
-`$= dv.current().file.tags.join(" ")`
 
 ## Contexto del Caso
 Sistema a analizar:
@@ -535,7 +532,6 @@ Indicador clave:
 - Un modelo de amenazas es **un documento vivo**, no un entregable estático.
 
 # Recursos y Herramientas de Modelado de Amenazas (2025)
-`$= dv.current().file.tags.join(" ")`
 
 ## Repositorios y Proyectos OWASP
 - **[OWASP](/ciberseguridad/owasp/) Threat Model Library**  

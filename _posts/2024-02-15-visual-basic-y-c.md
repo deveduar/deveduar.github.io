@@ -14,7 +14,6 @@ tags:
   - excel
 ---
 # C y Visual Basic
-`$= dv.current().file.tags.join(" ")`
 - [visual basic VBA](/software%20engineering/visual-basic-vba/)
 - [cpp](/software%20engineering/cpp/)
 - [net](/software%20engineering/net/)

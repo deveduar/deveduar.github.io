@@ -11,9 +11,8 @@ tags:
   - DB
 ---
 # DB-Fundamentos y documentos
-`$= dv.current().file.tags.join(" ")`
 
-- [Databases](/uncategorized/databases/)
+- [Databases](/databases/databases/)
 
 ## Introducción
 - Bases de datos permiten almacenar, consultar y actualizar información de manera eficiente.

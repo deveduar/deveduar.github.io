@@ -13,12 +13,11 @@ tags:
   - devops
 ---
 # Windows Server
-`$= dv.current().file.tags.join(" ")`
 
 ## Contexto y alcance
-- [devops](/uncategorized/devops/)
-- [Sistemas](/uncategorized/sistemas/)
-- [infraestructura IT](/uncategorized/infraestructura-it/)
+- [devops](/devops/devops/)
+- [Sistemas](/sistemas/sistemas/)
+- [infraestructura IT](/infraestructura%20it/infraestructura-it/)
 
 Windows Server es una plataforma de sistema operativo orientada a entornos empresariales que soporta servicios de red, identidades, virtualización, aplicaciones, almacenamiento y alta disponibilidad. Es clave en infraestructuras on-premise, híbridas y cloud, integrándose de forma nativa con soluciones Microsoft y de terceros.
 
@@ -33,7 +32,7 @@ Windows Server es una plataforma de sistema operativo orientada a entornos empre
 	- [control de datos](/ciberseguridad/control-de-datos/)
 		- Definición de permisos sobre archivos, carpetas, recursos compartidos y bases de datos.
 		- Integración con NTFS, SMB y servicios de cifrado.
-	- [autenticacion](/uncategorized/autenticacion/)
+	- [autenticacion](/autenticacion/autenticacion/)
 		- Métodos basados en credenciales, certificados, [Kerberos](/autenticacion/kerberos/) y NTLM.
 		- Soporte para autenticación multifactor (MFA) vía integración externa.
 	- [SSO Single Sign-On](/autenticacion/sso-single-sign-on/)

@@ -12,14 +12,13 @@ tags:
   - soporte
 ---
 # Soporte Microinformático
-`$= dv.current().file.tags.join(" ")`
 
 - [soporte tecnico](/infraestructura%20it/soporte-tecnico/)
 - resolucion de incidencias
 - helpdesk
 - [ticketing](/management/ticketing/)
 - Preparación de equipos
-- [monitoreo](/uncategorized/monitoreo/)
+- [monitoreo](/monitoreo/monitoreo/)
 
 ---
 
@@ -79,7 +78,7 @@ La preparación adecuada asegura consistencia técnica y ahorro de tiempo en des
 * uso de herramientas de despliegue masivo:
 	* WDS / MDT  
 	* Clonezilla  
-	* herramientas de MDM / UEM en entornos [cloud](/uncategorized/cloud/)  
+	* herramientas de MDM / UEM en entornos [cloud](/cloud/cloud/)  
 
 ### Configuración Automática
 * scripts de post-instalación  
@@ -90,7 +89,7 @@ La preparación adecuada asegura consistencia técnica y ahorro de tiempo en des
 ---
 
 ## Monitoreo
-Relacionado: [monitoreo](/uncategorized/monitoreo/)
+Relacionado: [monitoreo](/monitoreo/monitoreo/)
 
 El monitoreo permite detectar fallos antes de que el usuario los experimente.
 

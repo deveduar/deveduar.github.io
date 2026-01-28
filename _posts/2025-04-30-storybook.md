@@ -16,11 +16,10 @@ tags:
 ---
 # Storybook
 
-`$= dv.current().file.tags.join(" ")`
 
 ## 📚 Enlaces Relacionados
 - [Testing](/testing/testing/)
-- [Frontend](/uncategorized/frontend/)
+- [Frontend](/frontend/frontend/)
 - Storybook for React & Vite  Storybook docs-react-viterenderer=react
 - [Storybook: Frontend workshop for UI development](https://storybook.js.org/)
 
@@ -187,12 +186,11 @@ Su integración fluida con Vite, React y herramientas de testing lo convierte en
 
 # Storybook Avanzado Ecosistema, Testing Visual y Automatización
 
-`$= dv.current().file.tags.join(" ")`
 
 ## 📚 Enlaces Relacionados
 - Storybook
 - [Testing](/testing/testing/)
-- [Frontend](/uncategorized/frontend/)
+- [Frontend](/frontend/frontend/)
 - Design System
 - CI/CD
 - Chromatic
@@ -420,12 +418,11 @@ Integrado con testing, mocks y CI/CD, se convierte en un sistema central para eq
 
 # Storybook Ecosistema Extendido, Performance y Uso en Escenarios Complejos
 
-`$= dv.current().file.tags.join(" ")`
 
 ## 📚 Enlaces Relacionados
 - Storybook Avanzado: Ecosistema, Testing Visual y Automatización
 - [Testing](/testing/testing/)
-- [Frontend](/uncategorized/frontend/)
+- [Frontend](/frontend/frontend/)
 - UI-Driven Development
 - Design System
 - Cypress
@@ -673,13 +670,12 @@ es un **centro de control de calidad visual, diseño y documentación** que inte
 
 # Guía de Uso Práctico de Storybook
 
-`$= dv.current().file.tags.join(" ")`
 
 ## 📚 Enlaces Relacionados
 - Storybook Avanzado: Ecosistema, Testing Visual y Automatización
 - Storybook: Ecosistema Extendido, Performance y Uso en Escenarios Complejos
 - [Testing](/testing/testing/)
-- [Frontend](/uncategorized/frontend/)
+- [Frontend](/frontend/frontend/)
 - UI-Driven Development
 - Cypress
 - Design System
@@ -709,9 +705,7 @@ npx storybook init
 Esto genera la carpeta `.storybook/` con los archivos principales:
 
 - `main.ts` → configuración del framework y addons.
-    
 - `preview.ts` → decoradores globales, estilos, parámetros.
-    
 
 ### Paso 2 — Configurar para Vite
 
@@ -1057,23 +1051,14 @@ También puede integrarse a CI/CD (e.g. GitHub Actions + Chromatic).
 ## 🌟 10. Buenas Prácticas
 
 - Agrupa stories por dominio (UI/, Forms/, Layouts/).
-    
 - Documenta props importantes y casos límite.
-    
 - Usa `args` para mantener stories dinámicas y reusables.
-    
 - Añade stories para todos los estados: _loading, empty, error, success_.
-    
 - Integra addons clave:
-    
     - `addon-a11y` (accesibilidad)
-        
     - `addon-controls` (prop testing)
-        
     - `addon-actions` (eventos)
-        
     - `addon-interactions` (testing UI)
-        
 
 ---
 
@@ -1254,31 +1239,20 @@ test('Renderiza el botón con texto correcto', () => {
 ## 🪄 Buenas Prácticas
 
 - Mantén cada componente con su historia en el mismo directorio.
-    
 - Usa nombres coherentes en `title` (por ejemplo, `Components/Buttons/Primary`).
-    
 - Aprovecha los `args` para generar variaciones dinámicas sin duplicar código.
-    
 - Usa `CSF3` y `StoryObj` para tipado seguro en TypeScript.
-    
 - Documenta con MDX las dependencias, props y ejemplos reales.
-    
 - Integra Storybook en tu pipeline para garantizar consistencia visual.
-    
 
 ---
 
 ## 🧭 Recursos Recomendados
 
 - [Storybook Docs oficiales](https://storybook.js.org/docs)
-    
 - [Integración con Vite y React](https://storybook.js.org/docs/react/get-started/vite)
-    
 - [Addon Interactions](https://storybook.js.org/docs/react/writing-tests/interaction-testing)
-    
 - [Visual Testing con Chromatic](https://www.chromatic.com/)
-    
 - [Mocking con MSW](https://mswjs.io/)
-    
 
 ---

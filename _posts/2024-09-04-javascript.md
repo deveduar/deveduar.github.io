@@ -10,10 +10,9 @@ tags:
   - Scraping
 ---
 # JavaScript
-`$= dv.current().file.tags.join(" ")`
 
 - [ZOTERO Prog-JS](zotero://select/library/collections/DRU2KC6E)  
-- [Desarrollo web](/uncategorized/desarrollo-web/)
+- [Desarrollo web](/desarrollo%20web/desarrollo-web/)
 - [typescript](/software%20engineering/typescript/)
 - [Expresiones regulares](/computer%20science/expresiones-regulares/)
 

@@ -13,15 +13,14 @@ tags:
   - patrones_diseo
 ---
 # Patrones de diseño
-`$= dv.current().file.tags.join(" ")`
 
-- [Computer Science](/uncategorized/computer-science/)
+- [Computer Science](/computer%20science/computer-science/)
 - Patrones de diseño - Design patterns de refactoring guru
 - [POO Programación Orientada a Objetos](/computer%20science/poo-programaci-n-orientada-a-objetos/)
 - diagramas UML
 - [SOLID](/computer%20science/solid/)
 - [POO Programación Orientada a Objetos](/computer%20science/poo-programaci-n-orientada-a-objetos/)
-- [Backend](/uncategorized/backend/)
+- [Backend](/backend/backend/)
 
 ---
 
@@ -259,7 +258,6 @@ subject.setState(5);
 {% endraw %}
 
 # Patrones de diseño — Expansión y conceptos avanzados
-`$= dv.current().file.tags.join(" ")`
 ## Patrones de diseño avanzados
 
 ### Dependency Injection (DI)
@@ -483,7 +481,6 @@ interface UserRepository {
 - SOLID y principios de diseño
 
 # Patrones de diseño — Ejemplos de código
-`$= dv.current().file.tags.join(" ")`
 
 - [Patrones de diseño](/computer%20science/patrones-de-dise-o/)
 - Arquitectura de Software
@@ -1072,7 +1069,6 @@ server.listen(4000, () => console.log("Servidor Reactor en puerto 4000"));
 ---
 
 # Patrones de diseño — Tests y escenarios de integración
-`$= dv.current().file.tags.join(" ")`
 
 - [Patrones de diseño](/computer%20science/patrones-de-dise-o/)
 - Arquitectura de Software
@@ -1555,7 +1551,6 @@ kernel.execute("request", { url: "/home" });
 
 
 # Patrones de diseño — Integraciones avanzadas
-`$= dv.current().file.tags.join(" ")`
 
 - [Patrones de diseño](/computer%20science/patrones-de-dise-o/)
 - Arquitectura de Software
@@ -1911,7 +1906,6 @@ class SagaRepository:
 
     def get(self, saga_id):
         return self.data.get(saga_id, {})
-    
 
 # 3. SAGA ------------------------------------------------------------
 class TravelBookingSaga:
@@ -1977,7 +1971,6 @@ for i in range(5):
 
 
 # 🏢 Enterprise Patterns – Integraciones Distribuidas
-`$= dv.current().file.tags.join(" ")`
 
 - Arquitectura de Software
 - [Patrones de diseño](/computer%20science/patrones-de-dise-o/)
@@ -2352,7 +2345,6 @@ print("Productos (Query Model):", query.products)
 * CQRS y Event Sourcing - Greg Young
 
 # Distributed Transactions & Message Patterns — Tests distribuidos (incompleta?)
-`$= dv.current().file.tags.join(" ")`
 
 * Microservicios
 * Saga Pattern

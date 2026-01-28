@@ -14,10 +14,9 @@ tags:
   - backend
 ---
 # Springboot 
-`$= dv.current().file.tags.join(" ")`
 
 - [java](/software%20engineering/java/)
-- [Backend](/uncategorized/backend/) 🔥
+- [Backend](/backend/backend/) 🔥
 - [api](/backend/api/)
 - [angular](/frontend/angular/)
 - [carpeta zotero spring](zotero://select/library/collections/2WDA4GWS) 📁
@@ -34,7 +33,7 @@ tags:
 - **Recursos**
 	- [Inversión de Control VS Inyección de dependencias Parte 1 - YouTube](https://youtu.be/uv5AWym2Aok)
 	- [Cómo se maneja la INYECCIÓN DE DEPENDENCIAS en Spring Boot - YouTube](https://youtu.be/v9xEpMFsLck)
-- [Computer Science](/uncategorized/computer-science/) → Aplicación de patrones como Factory, Singleton, Proxy, Adapter
+- [Computer Science](/computer%20science/computer-science/) → Aplicación de patrones como Factory, Singleton, Proxy, Adapter
 
 ## 2. Spring Boot
 - [Spring Boot](https://spring.io/projects/spring-boot) simplifica la configuración del framework
@@ -161,7 +160,6 @@ tags:
 	- [Spring Boot and Angular - Packt](https://github.com/PacktPublishing/Spring-Boot-and-Angular)
 
 # Spring Boot — Conceptos Avanzados y Expansión
-`$= dv.current().file.tags.join(" ")`
 
 > Extensión complementaria de la nota base sobre [Springboot](/backend/springboot/), enfocada en temas intermedios y avanzados **no tratados anteriormente**, sin repeticiones.
 
@@ -265,7 +263,6 @@ tags:
 ```java
 	@Autowired
 	MeterRegistry registry;
-	
 	public void contador() {
 		registry.counter("api.requests.total").increment();
 	}
@@ -365,9 +362,9 @@ tags:
 **Relación con otras notas**  
 - [Docker](/software%20engineering/docker/) — despliegue y empaquetado  
 - [microservicios](/backend/microservicios/) — comunicación, resiliencia y arquitectura  
-- [Backend](/uncategorized/backend/) — integración de servicios  
+- [Backend](/backend/backend/) — integración de servicios  
 - [java](/software%20engineering/java/) — fundamentos del lenguaje  
-- [Computer Science](/uncategorized/computer-science/) — patrones aplicados a Spring  
+- [Computer Science](/computer%20science/computer-science/) — patrones aplicados a Spring  
 # Spring Boot – Actualización info 2025
 
 ## 🚀 Novedades Generales

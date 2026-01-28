@@ -31,12 +31,10 @@ from celery import Celery
 def make_celery(app):
     celery = Celery(app.import_name)
     celery.conf.update(app.config)
-    
     class ContextTask(celery.Task):
         def __call__(self, *args, **kwargs):
             with app.app_context():
                 return self.run(*args, **kwargs)
-    
     celery.Task = ContextTask
     return celery
 ```
@@ -94,7 +92,6 @@ def tarea_con_lock(resource_id):
 ```python
 class OrderProcessingWorkflow:
     states = ['created', 'payment_processing', 'fulfillment', 'completed']
-    
     @app.task
     def process_payment(self, order_id):
         # Transición de estado
@@ -247,10 +244,8 @@ def agregar_modelos(weights_list):
 def ejecutar_smart_contract(contract_address, function_call):
     # Registrar ejecución en blockchain
     tx_hash = registrar_ejecucion(contract_address, function_call)
-    
     # Ejecutar lógica de negocio
     resultado = procesar_contract_call(contract_address, function_call)
-    
     # Confirmar en blockchain
     confirmar_ejecucion(tx_hash, resultado)
     return tx_hash
@@ -266,10 +261,8 @@ def ejecutar_smart_contract(contract_address, function_call):
 def distribuir_calculo_cuantico(problema, backend_preferido):
     # Determinar mejor backend disponible
     backend = seleccionar_backend_cuantico(backend_preferido)
-    
     # Preparar circuito cuántico
     circuito = transpilar_circuito(problema, backend)
-    
     # Ejecutar en backend cuántico
     job = backend.run(circuito, shots=1000)
     return job.result().get_counts()
@@ -289,10 +282,8 @@ def procesar_datos_gdpr(usuario_id, derecho_ejercido):
     if derecho_ejercido == 'olvido':
         anonimizar_datos_usuario(usuario_id)
         programar_eliminacion_definitiva(usuario_id)
-    
     elif derecho_ejercido == 'acceso':
         generar_reporte_datos_personales(usuario_id)
-    
     registrar_ejercicio_derecho(usuario_id, derecho_ejercido)
 ```
 {% endraw %}
@@ -306,10 +297,8 @@ def procesar_datos_gdpr(usuario_id, derecho_ejercido):
 def procesar_operacion_edicion(doc_id, operacion, version):
     # Aplicar operational transform
     operacion_transformada = transformar_operacion(operacion, version)
-    
     # Actualizar documento
     aplicar_operacion_documento(doc_id, operacion_transformada)
-    
     # Broadcast a otros colaboradores
     broadcast_actualizacion(doc_id, operacion_transformada)
 ```
@@ -325,10 +314,8 @@ def procesar_accion_jugador(partida_id, jugador_id, accion):
     # Validar y procesar acción
     if validar_accion(partida_id, jugador_id, accion):
         nuevo_estado = aplicar_accion_estado(partida_id, accion)
-        
         # Sincronizar con todos los jugadores
         broadcast_estado_partida(partida_id, nuevo_estado)
-        
         # Verificar condiciones de victoria
         verificar_condiciones_victoria(partida_id)
 ```

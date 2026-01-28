@@ -13,7 +13,6 @@ tags:
   - cloud
 ---
 # VDC Virtual Data Center
-`$= dv.current().file.tags.join(" ")`
 
 - Virtual Data Center
 - ¿Qué es VDC - Conceptos Básicos  Virtualización

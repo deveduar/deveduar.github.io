@@ -13,10 +13,9 @@ tags:
   - pki
 ---
 # PKI infraestructura de clave pública
-`$= dv.current().file.tags.join(" ")`
 
 - [criptografia](/autenticacion/criptografia/)  
-- [autenticacion](/uncategorized/autenticacion/)
+- [autenticacion](/autenticacion/autenticacion/)
 - control de acceso
 - [¿Qué es PKI? Guía definitiva sobre la infraestructura de clave pública | Keyfactor](https://www.keyfactor.com/es/education-center/what-is-pki/) 
 - [PKI - Istec Digital](https://www.istecdigital.es/certipedia/pki/) 
@@ -26,7 +25,7 @@ tags:
 - 
 ## Conceptos fundamentales de PKI
 - Infraestructura que gestiona claves, certificados y la confianza entre entidades.
-- Facilita [autenticacion](/uncategorized/autenticacion/), firma digital, control de acceso y cifrado seguro.
+- Facilita [autenticacion](/autenticacion/autenticacion/), firma digital, control de acceso y cifrado seguro.
 - Basada en criptografía **asimétrica** (par de claves) y soporte de cifrado **simétrico** para rendimiento.
 - Se apoya en autoridades, políticas y procedimientos formales para garantizar identidad y no repudio.
 
@@ -125,16 +124,15 @@ tags:
 	- Validación strict de hostname y cadena.  
 
 ## Integración práctica con otros conceptos
-- Relación con [autenticacion](/uncategorized/autenticacion/): certificados como credenciales fuertes.  
+- Relación con [autenticacion](/autenticacion/autenticacion/): certificados como credenciales fuertes.  
 - Relación con control de acceso: atar identidades a roles, dispositivos o servicios.  
 - Relación con [criptografia](/autenticacion/criptografia/): base para todo el ecosistema de cifrado moderno.
 
 # PKI avanzada: arquitecturas, automatización, post-quantum y operación
-`$= dv.current().file.tags.join(" ")`
 
 - [criptografia](/autenticacion/criptografia/)
 - [PKI infraestructura de clave pública](/autenticacion/pki-infraestructura-de-clave-p-blica/)
-- [autenticacion](/uncategorized/autenticacion/)
+- [autenticacion](/autenticacion/autenticacion/)
 - control de acceso
 - zero trust
 
@@ -237,13 +235,12 @@ tags:
 	- Compatibles con flujos PKI tradicionales mediante puentes criptográficos.
 
 # PKI avanzada: frameworks, herramientas y casos de uso
-`$= dv.current().file.tags.join(" ")`
 
 - [PKI infraestructura de clave pública](/autenticacion/pki-infraestructura-de-clave-p-blica/)
 - zero trust
 - [criptografia](/autenticacion/criptografia/)
 - control de acceso
-- [autenticacion](/uncategorized/autenticacion/)
+- [autenticacion](/autenticacion/autenticacion/)
 
 ## Frameworks y toolkits para PKI
 - **OpenSSL**

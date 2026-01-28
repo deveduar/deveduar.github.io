@@ -13,14 +13,14 @@ tags:
   - infraestructura
 ---
 # SI Sistema de Información
-``$= dv.current().file.tags.join(" ")``
+``
 
 ## Concepto General
 Un **Sistema de Información (SI)** es un conjunto organizado de recursos (humanos, tecnológicos, datos y procedimientos) que permite **recopilar, procesar, almacenar y distribuir información** para apoyar la toma de decisiones, la coordinación, el control y el análisis dentro de una organización.  
 - Fuente: [¿Qué son los sistemas de información de una empresa?](https://www.kio.tech/blog/data-center/los-sistemas-de-informacion-de-una-empresa#:~:text=Un%20Sistema%20de%20Informaci%C3%B3n%20(SI,y%20visualizaci%C3%B3n%20de%20una%20organizaci%C3%B3n.)
 
 ## Bases de Datos
-- [Databases](/uncategorized/databases/)
+- [Databases](/databases/databases/)
 	- Son el núcleo del almacenamiento de información estructurada.
 	- Permiten consultas, actualizaciones y análisis de datos.
 	- Herramientas y lenguajes asociados: SQL, NoSQL.
@@ -30,14 +30,14 @@ Un **Sistema de Información (SI)** es un conjunto organizado de recursos (human
 		- Permite manipular datos de bases de datos y generar informes automáticos.
 
 ## Gestión y Aplicaciones Empresariales
-- [Management](/uncategorized/management/)
+- [Management](/management/management/)
 	- Sistemas que optimizan la administración y control de los procesos empresariales.
 	- [ERP](/management/erp/) (Enterprise Resource Planning)
 		- Integra todos los procesos internos de la empresa: finanzas, producción, logística, recursos humanos.
 	- [CRM](/management/crm/) (Customer Relationship Management)
 		- Gestiona las relaciones con los clientes, seguimiento de ventas, marketing y soporte.
 
-- [Gestion de Negocio](/uncategorized/gestion-de-negocio/)
+- [Gestion de Negocio](/gestion%20de%20negocio/gestion-de-negocio/)
 	- [soporte tecnico](/infraestructura%20it/soporte-tecnico/)
 		- Sistemas que gestionan la asistencia técnica y mantenimiento.
 	- DSS (Decision Support System)

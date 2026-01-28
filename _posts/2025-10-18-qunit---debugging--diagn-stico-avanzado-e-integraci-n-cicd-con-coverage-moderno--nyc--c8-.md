@@ -12,7 +12,6 @@ category: Testing
 
 # QUnit - Debugging, diagnóstico avanzado e integración CI/CD con coverage moderno (nyc, c8)
 
-`$= dv.current().file.tags.join(" ")`
 
 * [QUnit](/testing/qunit/)
 * [Testing](/testing/testing/)

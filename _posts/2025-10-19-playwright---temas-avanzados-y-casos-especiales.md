@@ -9,7 +9,6 @@ public_note: "true"
 category: Testing
 ---
 # Playwright - Temas Avanzados y Casos Especiales  
-`$= dv.current().file.tags.join(" ")`
 
 - [Testing](/testing/testing/)  
 - [QA](/testing/qa/)  
@@ -285,7 +284,6 @@ ws.on('framereceived', (frame) => console.log(frame.payload));
 
 
 # Playwright – Temas Especializados y Casos de Uso Avanzados  
-`$= dv.current().file.tags.join(" ")`
 
 - [Testing](/testing/testing/)  
 - [QA](/testing/qa/)  

@@ -12,7 +12,6 @@ tags:
   - Mates
 ---
 # Conjetura de Collatz# congetura de collatz
-`$= dv.current().file.tags.join(" ")`
 
 
 La **Conjetura de Collatz** (también conocida como *problema 3n + 1*, *problema de Ulam* o *problema de Syracuse*) es uno de los problemas abiertos más famosos de las matemáticas. Fue formulada por Lothar Collatz en 1937 y afirma que, aplicando un sencillo proceso a cualquier número entero positivo, siempre se llega eventualmente al ciclo **4 → 2 → 1**.

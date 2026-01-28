@@ -9,7 +9,6 @@ public_note: "true"
 category: Testing
 ---
 # glosario de terminos de testing principal
-`$= dv.current().file.tags.join(" ")`
 
 # 🧠 Glosario de Términos de Testing
 
@@ -273,4 +272,4 @@ Ejemplo: fake de inventario.
 
 ---
 
-> **Referencia cruzada:** [Testing](/testing/testing/), [CICD](/devops/cicd/), [QA](/testing/qa/), [devops](/uncategorized/devops/), Automation, [BDD](/testing/bdd/), [TDD - Test Driven Development](/testing/tdd---test-driven-development/), [E2E - End to End Testing](/testing/e2e---end-to-end-testing/), SonarQube, Coveralls Docs-, [JMeter](/testing/jmeter/), Cypress, [Playwright](/testing/playwright/), Testing Library, [MSW Mocks service worker](/testing/msw-mocks-service-worker/), Testcontainers.
+> **Referencia cruzada:** [Testing](/testing/testing/), [CICD](/devops/cicd/), [QA](/testing/qa/), [devops](/devops/devops/), Automation, [BDD](/testing/bdd/), [TDD - Test Driven Development](/testing/tdd---test-driven-development/), [E2E - End to End Testing](/testing/e2e---end-to-end-testing/), SonarQube, Coveralls Docs-, [JMeter](/testing/jmeter/), Cypress, [Playwright](/testing/playwright/), Testing Library, [MSW Mocks service worker](/testing/msw-mocks-service-worker/), Testcontainers.

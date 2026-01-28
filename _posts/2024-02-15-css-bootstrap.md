@@ -11,7 +11,6 @@ tags:
   - CSS
 ---
 # bootstrap
-`$= dv.current().file.tags.join(" ")`
 - [CSS](/frontend/css/)
 
 
@@ -21,7 +20,7 @@ Framework front-end orientado a la creación rápida de interfaces **responsive*
 - [CSS](/frontend/css/): Bootstrap está construido sobre CSS y lo abstrae mediante clases reutilizables.
 - JavaScript: añade comportamiento interactivo (modales, dropdowns, tooltips).
 - HTML semántico: la estructura base sigue dependiendo de un marcado correcto.
-- [Frontend](/uncategorized/frontend/)
+- [Frontend](/frontend/frontend/)
 - [sass](/frontend/sass/)
 ## Características principales
 
@@ -385,7 +384,6 @@ tablet in landscape mode without stacking. only if the tables screen resolution 
 {% raw %}
 ```css
 <div class="container">
-		
 <!--Headings-->
 <h1>Heading 1</h1>
 <h2>Heading 2</h2>
@@ -452,7 +450,6 @@ visible   in html    code.
 	<p class="text-warning">Warning Text.</p>
 	<p class="text-danger">Danger Text.</p>
 <hr />
-		
 <!--Contextual Background Classes-->
 <h1>Contextual Background Classes</h1>
 <p class="bg-primary">Important Text.</p>
@@ -460,7 +457,6 @@ visible   in html    code.
 <p class="bg-info">Informational Text.</p>
 <p class="bg-warning">Warning Text.</p>
 <p class="bg-danger">Danger Text.</p>
-		
 </div>
 ```
 {% endraw %}
@@ -859,7 +855,6 @@ progress-bar-striped active
     <div class="panel-body">Sample Text Content.</div>
 	<div class="panel-footer">Panel footer</div>
   </div>
-  
   <!-- Panel Group -->
   <div class="panel-group">
     <div class="panel panel-primary">
@@ -1238,7 +1233,6 @@ Vertical (Default), Horizontal, Inline
 <div class="container">
  <h4>Form inputs</h4>
 <form role="form">
-  
 <!-- Input Fields -->
     <div class="form-group">
       <label for="usr">Name:</label>
@@ -1258,7 +1252,6 @@ Vertical (Default), Horizontal, Inline
 <div class="checkbox">
  <label><input type="checkbox" value="">Option 2</label>
 </div>
-	
 <!-- Radio Buttons --> // una opcion solo
 <div class="radio">
 <label><input type="radio" name="optradio">Option 1</label>
@@ -1266,7 +1259,6 @@ Vertical (Default), Horizontal, Inline
 <div class="radio">
 <label><input type="radio" name="optradio">Option 2</label>
 </div>
-	
 <!-- Select Menu -->
 <div class="form-group">
 	<label for="sel">Select list:</label>
@@ -1409,7 +1401,6 @@ Vertical (Default), Horizontal, Inline
 <div class="container">
   <br>
   <div id="carousel" class="carousel slide" data-ride="carousel">
-    
 <!-- Carousel Indicators -->
     <ol class="carousel-indicators">
       <li data-target="#carousel" data-slide-to="0" class="active"></li>

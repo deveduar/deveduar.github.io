@@ -11,7 +11,6 @@ tags:
   - Linux
 ---
 # Linux kernel curso LFD103 (entorno comun)
-`$= dv.current().file.tags.join(" ")`
 
 ## Introducción y alcance
 - El curso **LFD103** introduce a desarrolladores al proceso de desarrollo del kernel de Linux, incluyendo las reglas explícitas e implícitas que rigen la colaboración en la comunidad.
@@ -115,7 +114,6 @@ tags:
 - Persistencia y aprendizaje continuo como parte del proceso.
 
 # Linux kernel — Conceptos avanzados y temas complementarios
-`$= dv.current().file.tags.join(" ")`
 
 ## Arquitectura interna del kernel
 - Separación conceptual entre espacio de usuario y espacio de kernel.
@@ -216,7 +214,6 @@ tags:
 - Enfoque en escalabilidad, seguridad y eficiencia energética.
 
 # Linux kernel — Recursos actualizados 2025
-`$= dv.current().file.tags.join(" ")`
 
 ## Documentación oficial y guías completas
 - **Linux kernel documentation** — La documentación oficial del kernel de Linux en `docs.kernel.org`, cubre:
@@ -276,7 +273,6 @@ tags:
 	[arXiv: Linux Kernel Configurations at Scale](https://arxiv.org/abs/2505.07487)
 
 # Linux kernel — Fundamentos, arquitectura y roadmap para desarrolladores
-`$= dv.current().file.tags.join(" ")`
 
 ## Fundamentos del kernel de Linux
 - El kernel de Linux es el núcleo del sistema operativo responsable de:

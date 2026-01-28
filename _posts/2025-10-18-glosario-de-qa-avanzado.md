@@ -9,7 +9,6 @@ public_note: "true"
 category: Testing
 ---
 # Glosario de QA Avanzado
-`$= dv.current().file.tags.join(" ")`
 ## Estrategias de Testing Avanzadas
 - **Test Driven Development (TDD)**: Metodología donde las pruebas se escriben antes del código, guiando el diseño y desarrollo
 - **Behavior Driven Development (BDD)**: Enfoque colaborativo que define comportamiento mediante lenguaje natural estructurado

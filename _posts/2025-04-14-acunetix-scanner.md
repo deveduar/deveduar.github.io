@@ -14,10 +14,9 @@ tags:
   - vulnerabilidades
 ---
 # Acunetix scanner
-`$= dv.current().file.tags.join(" ")`
 
 ## Descripción general
-Acunetix es un **scanner automatizado de seguridad** enfocado en la detección de [vulnerabilidades](/ciberseguridad/vulnerabilidades/) en **aplicaciones web y APIs**. Se utiliza ampliamente en contextos de [Pentesting](/ciberseguridad/pentesting/) y [monitoreo](/uncategorized/monitoreo/) continuo de seguridad, permitiendo identificar fallos técnicos antes de que sean explotados.
+Acunetix es un **scanner automatizado de seguridad** enfocado en la detección de [vulnerabilidades](/ciberseguridad/vulnerabilidades/) en **aplicaciones web y APIs**. Se utiliza ampliamente en contextos de [Pentesting](/ciberseguridad/pentesting/) y [monitoreo](/monitoreo/monitoreo/) continuo de seguridad, permitiendo identificar fallos técnicos antes de que sean explotados.
 
 Está orientado a **scanner vulnerabilities en apps**, cubriendo desde errores de configuración hasta vulnerabilidades complejas de lógica y autenticación.
 
@@ -25,7 +24,7 @@ Está orientado a **scanner vulnerabilities en apps**, cubriendo desde errores d
 - Identificar [vulnerabilidades](/ciberseguridad/vulnerabilidades/) conocidas y emergentes en aplicaciones web
 - Reducir la superficie de ataque mediante escaneos recurrentes
 - Apoyar procesos de [Pentesting](/ciberseguridad/pentesting/) manual con hallazgos automatizados
-- Facilitar el [monitoreo](/uncategorized/monitoreo/) continuo de seguridad en entornos productivos y de staging
+- Facilitar el [monitoreo](/monitoreo/monitoreo/) continuo de seguridad en entornos productivos y de staging
 
 ## Tipos de vulnerabilidades detectadas
 - Inyecciones (SQLi, NoSQLi, Command Injection)
@@ -41,7 +40,7 @@ Está orientado a **scanner vulnerabilities en apps**, cubriendo desde errores d
 - Integración en pipelines CI/CD para escaneo automático
 - Validación de parches y correcciones de seguridad
 - Soporte técnico en ejercicios de [Pentesting](/ciberseguridad/pentesting/)
-- [monitoreo](/uncategorized/monitoreo/) continuo de aplicaciones expuestas a internet
+- [monitoreo](/monitoreo/monitoreo/) continuo de aplicaciones expuestas a internet
 
 ## Características relevantes
 - Escaneo automatizado de aplicaciones web y APIs
@@ -115,12 +114,12 @@ Está orientado a **scanner vulnerabilities en apps**, cubriendo desde errores d
 - Escaneos controlados en producción
 - Validación manual de hallazgos críticos
 - Re-escaneo tras correcciones
-- Uso continuo como parte del [monitoreo](/uncategorized/monitoreo/) de seguridad
+- Uso continuo como parte del [monitoreo](/monitoreo/monitoreo/) de seguridad
 
 ## Notas relacionadas
 - [vulnerabilidades](/ciberseguridad/vulnerabilidades/)
 - [Pentesting](/ciberseguridad/pentesting/)
-- [monitoreo](/uncategorized/monitoreo/)
+- [monitoreo](/monitoreo/monitoreo/)
 - Scanner vulnerabilities en apps
 
 # Acunetix scanner — recursos actuales (2025–2026) y estado del ecosistema
@@ -192,7 +191,7 @@ Referencias:
 ## Implicaciones estratégicas para el uso de Acunetix
 - Evolución hacia **DAST + IA + análisis contextual**
 - Expansión del foco desde backend hacia cliente, navegador y APIs
-- Tendencia a integración con SIEM y plataformas de [monitoreo](/uncategorized/monitoreo/) continuo
+- Tendencia a integración con SIEM y plataformas de [monitoreo](/monitoreo/monitoreo/) continuo
 - Importancia creciente del escaneo profundo en rutas autenticadas
 
 ## Riesgos y desafíos detectados en la práctica
@@ -225,5 +224,5 @@ El rol de Acunetix en 2026 se consolida como:
 ## Notas relacionadas
 - [vulnerabilidades](/ciberseguridad/vulnerabilidades/)
 - [Pentesting](/ciberseguridad/pentesting/)
-- [monitoreo](/uncategorized/monitoreo/)
+- [monitoreo](/monitoreo/monitoreo/)
 - Scanner vulnerabilities en apps

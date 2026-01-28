@@ -14,7 +14,6 @@ tags:
   - Hacking
 ---
 # Metasploit
-`$= dv.current().file.tags.join(" ")`
 
 - [vulnerabilidades](/ciberseguridad/vulnerabilidades/)
 - [Pentesting](/ciberseguridad/pentesting/)
@@ -166,7 +165,6 @@ Metasploit es una de las herramientas centrales en metodologías de pentesting.
 
 
 # Metasploit — Conceptos Avanzados y Temas Complementarios
-`$= dv.current().file.tags.join(" ")`
 
 - [Pentesting](/ciberseguridad/pentesting/)
 - [vulnerabilidades](/ciberseguridad/vulnerabilidades/)
@@ -388,7 +386,6 @@ En fases avanzadas:
 - El uso de Metasploit debe realizarse únicamente en sistemas con **autorización explícita** o en entornos de laboratorio. El acceso no autorizado constituye delito.
 
 # Metasploit — Repositorios Útiles y Open Source (Estado 2025)
-`$= dv.current().file.tags.join(" ")`
 
 - [Pentesting](/ciberseguridad/pentesting/)
 - [vulnerabilidades](/ciberseguridad/vulnerabilidades/)

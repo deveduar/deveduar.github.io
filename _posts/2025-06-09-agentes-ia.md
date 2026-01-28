@@ -13,7 +13,6 @@ tags:
   - automatizacion
 ---
 # Agentes IA
-`$= dv.current().file.tags.join(" ")`
 
 ## Concepto de Agentes de IA
 - Un **agente de IA** es una entidad autónoma capaz de:

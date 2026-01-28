@@ -13,7 +13,6 @@ tags:
 ---
 
 # MSW Mocks service worker 
-`$= dv.current().file.tags.join(" ")`
 
 - [Testing](/testing/testing/)
 - docs gpt
@@ -108,7 +107,6 @@ server.use(
     - Cypress: Permite ejecutar tests E2E interceptando peticiones reales en desarrollo.
     - [Playwright](/testing/playwright/): Puede combinarse con fixtures para simular diferentes estados de API.
     - Vitest / Jest: Configurable mediante setup files globales.
-        
 - buenas prácticas
     - Centralizar los `handlers` por dominio o funcionalidad.
     - Utilizar `ctx.delay()` para simular latencia real de red.
@@ -153,12 +151,7 @@ if (process.env.NODE_ENV === 'development') {
 {% endraw %}
 
 - relación con otras técnicas
-    
     - Complementa integration test y [E2E - End to End Testing](/testing/e2e---end-to-end-testing/) al simular capa de red realista.
-        
     - Sustituye mocks manuales en unit test de componentes con dependencias HTTP.
-        
     - Ideal para Continuous Testing en pipelines de CI/CD.
-        
     - Compatible con Feature Flags y Test Data Management.
-        

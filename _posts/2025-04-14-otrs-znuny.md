@@ -13,11 +13,11 @@ tags:
   - ITIL
 ---
 # OTRS Znuny
-``$= dv.current().file.tags.join(" ")``
+``
 
 - [ticketing](/management/ticketing/)
 ## Descripción General
-OTRS (Open Ticket Request System) es un sistema de **gestión de tickets** ampliamente utilizado para soporte al cliente, helpdesk y [Management](/uncategorized/management/) de servicios IT.  
+OTRS (Open Ticket Request System) es un sistema de **gestión de tickets** ampliamente utilizado para soporte al cliente, helpdesk y [Management](/management/management/) de servicios IT.  
 La versión moderna y mantenida de OTRS Community Edition se conoce como **Znuny**, aunque para nuevos proyectos se recomienda evaluar alternativas modernas, dado que OTRS original está descontinuado.
 
 ## Historia y Estado Actual
@@ -42,7 +42,7 @@ La versión moderna y mantenida de OTRS Community Edition se conoce como **Znuny
 ## Componentes y Arquitectura
 - **Backend**: Perl + base de datos (MySQL, PostgreSQL o SQLite).
 - **Frontend**: interfaz web responsiva para agentes y administradores.
-- **Opcional**: integración con [infraestructura IT](/uncategorized/infraestructura-it/) mediante API y módulos de terceros.
+- **Opcional**: integración con [infraestructura IT](/infraestructura%20it/infraestructura-it/) mediante API y módulos de terceros.
 
 ## Migración y Actualización
 - Las instalaciones de OTRS pueden migrar a Znuny para obtener soporte LTS y actualizaciones de seguridad.
@@ -53,4 +53,4 @@ La versión moderna y mantenida de OTRS Community Edition se conoce como **Znuny
 - [Documentación oficial de Znuny](https://github.com/znuny/Znuny)
 - [Foros de la comunidad Znuny](https://forums.znuny.org)
 - [ticketing](/management/ticketing/): conceptos y mejores prácticas en gestión de tickets.
-- [Management](/uncategorized/management/): integración de OTRS/Znuny en procesos de gestión de servicios IT.
+- [Management](/management/management/): integración de OTRS/Znuny en procesos de gestión de servicios IT.

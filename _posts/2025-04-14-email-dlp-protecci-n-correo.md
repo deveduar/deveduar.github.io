@@ -13,7 +13,7 @@ tags:
   - hardening
 ---
 # Email DLP — Protección de Correo
-``$= dv.current().file.tags.join(" ")``
+``
 
 - [control de datos](/ciberseguridad/control-de-datos/)
 - [hardening](/ciberseguridad/hardening/)

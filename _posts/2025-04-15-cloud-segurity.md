@@ -13,15 +13,15 @@ tags:
   - Hacking
 ---
 # Cloud Security
-``$= dv.current().file.tags.join(" ")``
+``
 
 ## Conceptos Clave
 
 - [hardening](/ciberseguridad/hardening/) – Proceso de asegurar sistemas, aplicaciones y entornos de nube reduciendo vulnerabilidades, configurando correctamente servicios y aplicando políticas de seguridad.
-- [devops](/uncategorized/devops/) – Integración de prácticas de desarrollo y operaciones que incluye seguridad desde el diseño ([DevSecOps](/devops/devsecops/)), asegurando pipelines seguros y control de accesos.
-- [cloud](/uncategorized/cloud/) – Infraestructura, plataformas y servicios alojados en la nube, que requieren un enfoque específico de seguridad y monitoreo continuo.
-- [infraestructura IT](/uncategorized/infraestructura-it/) – Conjunto de recursos tecnológicos (servidores, redes, almacenamiento) que soportan aplicaciones y servicios en la nube.
-- [Databases](/uncategorized/databases/) – Bases de datos en la nube que requieren cifrado, control de acceso y monitoreo de actividades sospechosas.
+- [devops](/devops/devops/) – Integración de prácticas de desarrollo y operaciones que incluye seguridad desde el diseño ([DevSecOps](/devops/devsecops/)), asegurando pipelines seguros y control de accesos.
+- [cloud](/cloud/cloud/) – Infraestructura, plataformas y servicios alojados en la nube, que requieren un enfoque específico de seguridad y monitoreo continuo.
+- [infraestructura IT](/infraestructura%20it/infraestructura-it/) – Conjunto de recursos tecnológicos (servidores, redes, almacenamiento) que soportan aplicaciones y servicios en la nube.
+- [Databases](/databases/databases/) – Bases de datos en la nube que requieren cifrado, control de acceso y monitoreo de actividades sospechosas.
 - [Aws](/cloud/aws/) – Proveedor de servicios en la nube que ofrece soluciones de seguridad integradas como IAM, VPC, CloudTrail y GuardDuty.
 - CDN – Redes de distribución de contenido que permiten entregar datos de forma rápida y segura, mitigando ataques DDoS y optimizando la disponibilidad.
 

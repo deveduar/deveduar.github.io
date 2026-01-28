@@ -12,9 +12,8 @@ tags:
   - project_management
 ---
 # Project Management
-`$= dv.current().file.tags.join(" ")`
 
-Automatizacion · [monitoreo](/uncategorized/monitoreo/) · [Management](/uncategorized/management/) · [Jira](/management/jira/) · Confluence · Redmine · Slack · Google Workspace · PMO
+Automatizacion · [monitoreo](/monitoreo/monitoreo/) · [Management](/management/management/) · [Jira](/management/jira/) · Confluence · Redmine · Slack · Google Workspace · PMO
 
 ---
 
@@ -151,11 +150,10 @@ PMO (Project Management Office) es la entidad encargada de estandarizar procesos
 2. **Desglose del trabajo** y backlog en Jira o Redmine.  
 3. **Comunicación diaria** por Slack.  
 4. **Automatización** con Automatizacion (notificaciones, pipelines).  
-5. **Dashboard de métricas** con [monitoreo](/uncategorized/monitoreo/).  
+5. **Dashboard de métricas** con [monitoreo](/monitoreo/monitoreo/).  
 6. **Control y reporting** para la PMO.  
 
 # Project Management — Conceptos Avanzados
-`$= dv.current().file.tags.join(" ")`
 
 ## Triángulo de Proyecto (Triple Constraint)
 El equilibrio entre **alcance**, **tiempo** y **coste** determina la viabilidad del proyecto.  
@@ -323,7 +321,6 @@ Optimiza la capacidad del equipo y la planificación.
 ---
 
 # Project Management — Conceptos Experto
-`$= dv.current().file.tags.join(" ")`
 
 ---
 

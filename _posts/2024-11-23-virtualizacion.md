@@ -13,12 +13,11 @@ tags:
   - VMware
 ---
 # Virtualización
-`$= dv.current().file.tags.join(" ")`
 
-- [devops](/uncategorized/devops/)
-- [Sistemas](/uncategorized/sistemas/)
-- [ciberseguridad](/uncategorized/ciberseguridad/)
-- [cloud](/uncategorized/cloud/)
+- [devops](/devops/devops/)
+- [Sistemas](/sistemas/sistemas/)
+- [ciberseguridad](/ciberseguridad/ciberseguridad/)
+- [cloud](/cloud/cloud/)
 - contenedores vs clusters
 ## Contenedores y Orquestación
 - [Docker](/software%20engineering/docker/)

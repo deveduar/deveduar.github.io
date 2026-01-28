@@ -13,7 +13,6 @@ tags:
   - ecomerce
 ---
 # Wordpress
-`$= dv.current().file.tags.join(" ")`
 
 ## Enlaces Base y Contexto
 - PHP-web-wp-webapps-book

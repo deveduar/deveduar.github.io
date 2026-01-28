@@ -13,12 +13,11 @@ tags:
   - angular
 ---
 # NativeScript
-`$= dv.current().file.tags.join(" ")`
 
-- [Desarrollo multiplataforma](/uncategorized/desarrollo-multiplataforma/)
+- [Desarrollo multiplataforma](/desarrollo%20multiplataforma/desarrollo-multiplataforma/)
 - android
 - [angular](/frontend/angular/)
-- [Software engineering](/uncategorized/software-engineering/)
+- [Software engineering](/software%20engineering/software-engineering/)
 - Build a master-detail app with Angular - NativeScript
 
 ## Descripción general
@@ -606,7 +605,6 @@ ns build ios --release
 * Código tipado y modular
 
 # Recursos y Tools para NativeScript (estado 2025-2026)
-`$= dv.current().file.tags.join(" ")`
 
 ## Documentación oficial y guías
 - **Docs NativeScript** — Documentación completa, actualizada y mantenida directamente por el proyecto.  

@@ -13,7 +13,6 @@ tags:
   - webdevelopment
 ---
 # Web Components  
-`$= dv.current().file.tags.join(" ")`
 
 - Web Components manuales  
 - [solid.js](/frontend/solid-js/)  
@@ -177,7 +176,6 @@ customElements.define('boton-rojo', BotonRojo);
 {% endraw %}
 
 # Web Components — Expansión de conceptos pendientes  
-`$= dv.current().file.tags.join(" ")`
 
 ## Áreas aún no cubiertas (nuevos conceptos sin repetir)
 A continuación se amplían **temas avanzados** que no estaban en la nota anterior y que son relevantes para 2025, evitando repetir contenido ya dado.
@@ -320,7 +318,6 @@ Para completar un conocimiento experto, aún se podría crear notas específicas
 - **Comparativa 2025 con frameworks UI (React, Vue, Svelte, Angular)** enfocada en interoperabilidad.
 
 # Fundamentos y Arquitectura de Web Components  
-`$= dv.current().file.tags.join(" ")`
 
 ## Objetivo de esta nota  
 Fundamentos esenciales y arquitectura recomendada para crear, mantener y escalar sistemas basados en Web Components, evitando repeticiones previas y añadiendo nuevas capas de entendimiento.

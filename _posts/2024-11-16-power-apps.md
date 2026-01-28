@@ -12,14 +12,13 @@ tags:
   - Windows
 ---
 # Power Apps
-`$= dv.current().file.tags.join(" ")`
 
 ## Concepto general
 - Plataforma **low-code** de Microsoft para crear aplicaciones empresariales rápidamente.
 - Orientada a **integraciones**, **cloud** y automatización de procesos.
 - Parte de **Microsoft Power Platform** junto con Power Automate, Power BI y Power Virtual Agents.
 - Pensada para **usuarios técnicos y no técnicos**, con posibilidad de extenderse mediante código.
-- Uso frecuente en entornos corporativos, M365, Dynamics 365 y escenarios de [devops](/uncategorized/devops/) ligeros (apps internas, flujos de aprobación, paneles operativos).
+- Uso frecuente en entornos corporativos, M365, Dynamics 365 y escenarios de [devops](/devops/devops/) ligeros (apps internas, flujos de aprobación, paneles operativos).
 
 ## Características clave
 - Desarrollo visual basado en componentes y fórmulas tipo Excel (Power Fx).
@@ -77,7 +76,7 @@ tags:
 - Entornos: Development, Test, Production.
 - Soluciones para empaquetar apps, flujos y componentes.
 - Exportación e importación controlada entre entornos.
-- Integración con [devops](/uncategorized/devops/) mediante:
+- Integración con [devops](/devops/devops/) mediante:
 	- Azure DevOps pipelines.
 	- Control de versiones de soluciones.
 	- Automatización de despliegues.
@@ -169,7 +168,7 @@ tags:
 ## Tools y utilidades para Power Apps / Power Platform
 - **Power Platform CLI (pac)**  
 	- Herramienta oficial para desarrollo, empaquetado y despliegue de soluciones.  
-	- Uso clave en pipelines y [devops](/uncategorized/devops/).  
+	- Uso clave en pipelines y [devops](/devops/devops/).  
 	- [Power Platform CLI](https://learn.microsoft.com/es-es/power-platform/developer/cli/introduction)
 
 - **Power CAT Tools**  

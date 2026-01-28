@@ -14,9 +14,8 @@ tags:
   - tensorflow
 ---
 # TensorFlow
-`$= dv.current().file.tags.join(" ")`
 
-- [Data Science](/uncategorized/data-science/)
+- [Data Science](/data%20science/data-science/)
 - [Deep Learning](/data%20science/deep-learning/)
 - [Machine Learning](/data%20science/machine-learning/)
 - keras

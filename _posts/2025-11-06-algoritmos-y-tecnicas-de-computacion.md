@@ -12,9 +12,8 @@ tags:
   - CS
 ---
 # algoritmos y tecnicas de computacion
-`$= dv.current().file.tags.join(" ")`
 
-- [Computer Science](/uncategorized/computer-science/)
+- [Computer Science](/computer%20science/computer-science/)
 - diagramas UML
 - 
 ## Sort
@@ -253,7 +252,6 @@ def eval_rpn(tokens):
   * Compiladores, intérpretes y calculadoras.
 
 # algoritmos y tecnicas de computacion (expansión avanzada)
-`$= dv.current().file.tags.join(" ")`
 
 ## Complejidad y eficiencia algorítmica
 - **Notaciones de complejidad**:
@@ -498,7 +496,6 @@ Esta nota amplía el panorama desde fundamentos (ordenación, búsqueda, recursi
 Integra conceptos de rendimiento, diseño, optimización y arquitectura para formar una visión completa de las **técnicas algorítmicas y computacionales modernas**.
 
 # algoritmos y tecnicas de computacion (expansión complementaria)
-`$= dv.current().file.tags.join(" ")`
 
 ## Paradigmas de programación y su relación con los algoritmos
 - **Imperativo**: describe *cómo* ejecutar paso a paso (C, Python).

@@ -12,7 +12,6 @@ tags:
   - hardening
 ---
 # Gestión de Activos Digitales (DAM)
-`$= dv.current().file.tags.join(" ")` 
 
 - [hardening](/ciberseguridad/hardening/)
 - [¿Qué es la Gestión de Activos Digitales? - Términos y Definiciones de Ciberseguridad](https://www.vpnunlimited.com/es/help/cybersecurity/digital-asset-management?srsltid=AfmBOorweymdrqr85a3xrBlCzSrw7GMjxn5lv1e__pepR3cMWjaSVUUj) 

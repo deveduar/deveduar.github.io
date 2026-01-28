@@ -35,10 +35,10 @@ Secure Service Edge (SSE) es un componente crítico dentro de la arquitectura [S
 - **Escalabilidad:** Adaptable a entornos híbridos y multi-nube, soportando crecimiento de usuarios y servicios.
 - **Cumplimiento Normativo:** Ayuda a cumplir estándares de seguridad y privacidad mediante auditorías y control de datos.
 
-## Integración con [cloud](/uncategorized/cloud/) y [Virtualizacion](/devops/virtualizacion/)
+## Integración con [cloud](/cloud/cloud/) y [Virtualizacion](/devops/virtualizacion/)
 
 - SSE se complementa con estrategias de [hardening](/ciberseguridad/hardening/) y orquestación de entornos virtualizados.
-- Garantiza que aplicaciones y servicios desplegados en [cloud](/uncategorized/cloud/) pública, privada o híbrida mantengan políticas de seguridad consistentes.
+- Garantiza que aplicaciones y servicios desplegados en [cloud](/cloud/cloud/) pública, privada o híbrida mantengan políticas de seguridad consistentes.
 - La combinación con [Virtualizacion](/devops/virtualizacion/) permite segmentación de tráfico y control granular en entornos virtualizados y contenedorizados.
 
 ## Ejemplo de Arquitectura SSE
@@ -60,7 +60,7 @@ graph LR
 
 - [Qué es Secure Service Edge (SSE)](https://www.checkpoint.com/es/cyber-hub/network-security/what-is-secure-access-service-edge-sase/what-is-security-service-edge-sse/)
 - [hardening](/ciberseguridad/hardening/)
-- [cloud](/uncategorized/cloud/)
+- [cloud](/cloud/cloud/)
 - [Virtualizacion](/devops/virtualizacion/)
 - Orquestación de políticas de seguridad y accesos
 
@@ -136,9 +136,9 @@ Secure Service Edge (SSE) es un componente fundamental dentro de la arquitectura
 - Convergencia completa con [SASE](/ciberseguridad/sase/) y SD-WAN.  
 - Expansión de funciones de seguridad hacia entornos de **IoT y edge computing**.  
 
-## Integración con [cloud](/uncategorized/cloud/) y [Virtualizacion](/devops/virtualizacion/)
+## Integración con [cloud](/cloud/cloud/) y [Virtualizacion](/devops/virtualizacion/)
 
-- SSE garantiza políticas de seguridad consistentes en entornos [cloud](/uncategorized/cloud/) pública, privada o híbrida.  
+- SSE garantiza políticas de seguridad consistentes en entornos [cloud](/cloud/cloud/) pública, privada o híbrida.  
 - La integración con [Virtualizacion](/devops/virtualizacion/) permite segmentación de tráfico, control de acceso y microsegmentación en entornos virtualizados y contenedorizados.  
 - Combinado con [hardening](/ciberseguridad/hardening/) y orquestación, mejora la protección de servicios críticos y reduce la superficie de ataque.
 

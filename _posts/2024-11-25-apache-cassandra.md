@@ -14,11 +14,10 @@ tags:
   - db
 ---
 # apache cassandra
-`$= dv.current().file.tags.join(" ")`
 
-- [Databases](/uncategorized/databases/)
+- [Databases](/databases/databases/)
 - [apache](/backend/apache/)
-- [cloud](/uncategorized/cloud/)
+- [cloud](/cloud/cloud/)
 - [Docker](/software%20engineering/docker/)
 - [Apache Cassandra Documentation](https://cassandra.apache.org/_/quickstart.html)
 - [Cassandra Basics](https://cassandra.apache.org/_/cassandra-basics.html)

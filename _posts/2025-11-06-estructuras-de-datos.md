@@ -12,9 +12,8 @@ tags:
   - CS
 ---
 # Estructuras de Datos
-`$= dv.current().file.tags.join(" ")`
 
-- [Computer Science](/uncategorized/computer-science/)
+- [Computer Science](/computer%20science/computer-science/)
 ## Arrays
 - Estructura lineal con elementos contiguos en memoria.
 - Acceso por **índice**: lectura eficiente `O(1)`.
@@ -94,7 +93,6 @@ tags:
 - Uso en estructuras de prioridad y heaps.
 
 # Estructuras de Datos - Expansión Avanzada
-`$= dv.current().file.tags.join(" ")`
 
 ## Matrices / Arrays 2D
 - Representación como arrays de arrays o bloques contiguos en memoria.
@@ -192,7 +190,6 @@ tags:
 	- Algoritmos de grafos: detección de ciclos, Kruskal.
 
 # Estructuras de Datos - Conceptos Avanzados Nuevos
-`$= dv.current().file.tags.join(" ")`
 
 ## Deque (Double-Ended Queue)
 - Extensión de colas y pilas.
@@ -231,7 +228,6 @@ tags:
 - Uso: undo/redo, programación funcional, control de versiones.
 
 # Estructuras de Datos - Ejemplos de Código (Estructuras de Datos - Conceptos Avanzados Nuevos)
-`$= dv.current().file.tags.join(" ")`
 
 ## Deque (Double-Ended Queue) - Python
 {% raw %}
@@ -429,7 +425,6 @@ print(lst2)  # [1,2,3,4]
 
 
 # Estructuras de Datos - Conceptos Complementarios Nuevos
-`$= dv.current().file.tags.join(" ")`
 
 ## Sparse Sets / Sparse Arrays
 - Array optimizado para grandes rangos con pocos elementos.
@@ -476,7 +471,6 @@ print(lst2)  # [1,2,3,4]
 - Uso: bases de datos, índices, caches dinámicas.
 
 # Glosario Completo de Estructuras de Datos v1
-`$= dv.current().file.tags.join(" ")`
 
 ---
 
@@ -685,7 +679,6 @@ Estrategias para minimizar colisiones y optimizar espacio:
 | **Avanzadas** | Fenwick Tree, Skip List, Sparse Set |
 
 # Estructuras de Datos — Expansión y Conceptos Avanzados
-`$= dv.current().file.tags.join(" ")`
 
 ---
 ## 🧠 CONCEPTOS AVANZADOS Y COMPLEMENTARIOS

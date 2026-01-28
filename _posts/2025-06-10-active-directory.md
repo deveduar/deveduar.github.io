@@ -14,9 +14,8 @@ tags:
   - sistemas
 ---
 # Active Directory
-`$= dv.current().file.tags.join(" ")`
 
-- [infraestructura IT](/uncategorized/infraestructura-it/)
+- [infraestructura IT](/infraestructura%20it/infraestructura-it/)
 - Windows
 
 ## Active Directory Domain Services (AD DS)

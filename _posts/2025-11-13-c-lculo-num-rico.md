@@ -9,7 +9,6 @@ public_note: "true"
 category: mates
 ---
 # 🧮 Cálculo numérico
-`$= dv.current().file.tags.join(" ")`
 - Cálculo numérico
 	- Desbordamiento y desbordamiento
 	- Mal estado

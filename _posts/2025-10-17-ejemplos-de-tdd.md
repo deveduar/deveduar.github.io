@@ -9,7 +9,6 @@ public_note: "true"
 category: Testing
 ---
 # ejemplos de TDD
-`$= dv.current().file.tags.join(" ")`
 
 - [TDD - Test Driven Development](/testing/tdd---test-driven-development/)
 - [BDD](/testing/bdd/)
@@ -252,7 +251,6 @@ Ejemplo de ciclo completo: desarrollo de un módulo de tareas con TDD.
 2. Implementar lo mínimo.
 3. Refactorizar.
 4. Añadir nuevos casos.
-    
 
 {% raw %}
 ```js

@@ -7,7 +7,7 @@ status: 🚀
 Parent: "[[Area-Prog]]"
 aliases:
 public_note: "true"
-category: uncategorized
+category: Databases
 tags:
   - db
   - MySQL
@@ -21,13 +21,12 @@ tags:
   - backend
 ---
 # Databases
-`$= dv.current().file.tags.join(" ")`
 
 ## Relacionado
-- [Backend](/uncategorized/backend/)
+- [Backend](/backend/backend/)
 - DevOps
 - AWS
-- [Data Science](/uncategorized/data-science/)
+- [Data Science](/data%20science/data-science/)
 - [Cloud Computing](/cloud/cloud-computing/)
 - [microservicios](/backend/microservicios/)
 

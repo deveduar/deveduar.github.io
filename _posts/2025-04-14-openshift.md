@@ -13,12 +13,11 @@ tags:
   - virtualizacion
 ---
 # OpenShift
-`$= dv.current().file.tags.join(" ")`
 
 - [CICD](/devops/cicd/)
 - [Virtualizacion](/devops/virtualizacion/)
 - [microservicios](/backend/microservicios/)
-- [cloud](/uncategorized/cloud/) 
+- [cloud](/cloud/cloud/) 
 - [Kubernetes](/virtualizacion/kubernetes/)
 
 ## Introducción a OpenShift
@@ -139,7 +138,6 @@ OpenShift es una solución integral que **amplía las capacidades de Kubernetes*
 Su enfoque “*batteries included*” lo convierte en una de las plataformas más completas para **microservicios**, **automatización DevOps**, y **cloud híbrida**.
 
 # OpenShift (ampliación de fundamentos)
-`$= dv.current().file.tags.join(" ")`
 
 - [CICD](/devops/cicd/)
 - DevOps
@@ -288,7 +286,6 @@ Con estos bloques, se completa una visión **end-to-end** de OpenShift como **pl
 
 
 # OpenShift Cheat Sheet
-`$= dv.current().file.tags.join(" ")`
 
 - [Kubernetes](/virtualizacion/kubernetes/)
 - DevOps
@@ -596,7 +593,6 @@ oc delete -f deployment.yaml
 
 
 # OpenShift (temas avanzados complementarios)
-`$= dv.current().file.tags.join(" ")`
 
 - SRE
 - Zero Trust

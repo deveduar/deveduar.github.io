@@ -89,15 +89,10 @@ axios.get.mockResolvedValue({ data: { name: 'Empresa ABC' } });
 **Respuesta:**
 
 - AAA Pattern (Arrange-Act-Assert)
-    
 - Naming Patterns: `should_<comportamiento>_when_<condición>()`
-    
 - Test Isolation
-    
 - Fixture Setup
-    
 - Refactor Patterns y Continuous Quality
-    
 
 **Ejemplo práctico:**
 
@@ -121,13 +116,9 @@ describe('calculateDiscount', () => {
 **Respuesta:**
 
 - Test Coverage (Statements, Branches, Functions, Lines)
-    
 - Pass Rate por suite
-    
 - MTTR y tiempo de ciclo
-    
 - Anti-Flakiness
-    
 
 **Experiencia de uso:** "Usamos Codecov y SonarQube en pipelines CI/CD para asegurar cobertura ≥90% en módulos críticos."
 
@@ -151,11 +142,8 @@ describe('calculateDiscount', () => {
 **Respuesta:** Flaky tests son tests que fallan aleatoriamente. Se gestionan mediante:
 
 - Entornos controlados
-    
 - Mocks consistentes
-    
 - Esperas explícitas y timeouts ajustados
-    
 
 **Pregunta:** ¿Qué patrones de refactorización sigues con TDD?  
 **Respuesta:** Extract Function, Replace Conditional with Polymorphism, Introduce Parameter Object, siempre asegurando tests verdes antes de cualquier cambio.
@@ -165,17 +153,11 @@ describe('calculateDiscount', () => {
 ## 8. Resumen de Herramientas
 
 - [PHPUnit](/testing/phpunit/): Framework PHP compatible con [TDD - Test Driven Development](/testing/tdd---test-driven-development/)
-    
 - Vitest / Jest: Unit testing JS/TS
-    
 - Playwright / Cypress: E2E Testing
-    
 - Cucumber / Behat / SpecFlow: [BDD](/testing/bdd/)
-    
 - Codecov / SonarQube: Cobertura y métricas
-    
 - MSW / WireMock / Sinon: Mocks y test doubles
-    
 
 ---
 

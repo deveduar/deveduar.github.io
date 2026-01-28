@@ -9,7 +9,6 @@ public_note: "true"
 category: Testing
 ---
 # Glosario de Conceptos Fundamentales de Testing
-`$= dv.current().file.tags.join(" ")`
 
 # 🧩 Glosario de Conceptos Fundamentales de Testing (Complementario Final)
 

@@ -9,7 +9,6 @@ public_note: "true"
 category: Testing
 ---
 # Testing Fundamental Prácticas y Ejemplos de Código
-`$= dv.current().file.tags.join(" ")`
 
 # 🧪 Testing Fundamental: Prácticas y Ejemplos de Código
 
@@ -56,11 +55,8 @@ describe('Calculator', () => {
 ✅ **Prácticas**
 
 - Separar claramente preparación, ejecución y validación.
-    
 - Mantener tests simples y legibles.
-    
 - Nombrar las pruebas de forma natural y descriptiva.
-    
 
 ---
 
@@ -104,13 +100,9 @@ def test_add():
 ### 💡 Buenas Prácticas
 
 - Evitar dependencias externas.
-    
 - Mantener tests rápidos (<1s por función).
-    
 - Probar casos normales y límites (border cases).
-    
 - Usar mocks o stubs para dependencias.
-    
 
 ---
 
@@ -132,7 +124,6 @@ describe('POST /login', () => {
     const res = await request(app)
       .post('/login')
       .send({ email: 'user@test.com', password: '1234' });
-    
     expect(res.statusCode).toBe(200);
     expect(res.body.token).toBeDefined();
   });
@@ -143,11 +134,8 @@ describe('POST /login', () => {
 ✅ **Tips**
 
 - Usar bases de datos temporales o contenedores.
-    
 - Limpiar datos tras cada prueba.
-    
 - Simular servicios externos si es necesario.
-    
 
 ---
 
@@ -187,11 +175,8 @@ public class LoginAPITest {
 ✅ **Prácticas**
 
 - Automatizar tests para CI/CD.
-    
 - Probar validaciones de datos, errores y límites.
-    
 - Documentar respuestas esperadas.
-    
 
 ---
 
@@ -200,11 +185,8 @@ public class LoginAPITest {
 ### 💡 Flujo Clásico
 
 1. Red: escribir un test que falle.
-    
 2. Green: escribir código mínimo que pase el test.
-    
 3. Refactor: mejorar código sin romper el test.
-    
 
 ### 💻 Ejemplo (JavaScript + Jest)
 
@@ -223,11 +205,8 @@ test('sum adds two numbers', () => {
 ✅ **Prácticas**
 
 - Mantener tests pequeños y claros.
-    
 - Refactorizar con confianza.
-    
 - Escribir tests antes del código funcional.
-    
 
 ---
 
@@ -252,11 +231,8 @@ Feature: Login
 ✅ **Prácticas**
 
 - Colaborar con QA y Product.
-    
 - Usar escenarios claros y comprensibles.
-    
 - Integrar con automatización (Cucumber, SpecFlow).
-    
 
 ---
 
@@ -285,11 +261,8 @@ test('login flow', async ({ page }) => {
 ✅ **Prácticas**
 
 - Evitar tests frágiles (flaky tests).
-    
 - Usar entornos de staging o mockeados.
-    
 - Ejecutar en pipelines CI/CD.
-    
 
 ---
 
@@ -319,13 +292,9 @@ test('fetchUser returns mocked user', async () => {
 ✅ **Tipos**
 
 - **Mock:** Comportamiento dinámico.
-    
 - **Stub:** Respuesta fija.
-    
 - **Fake:** Implementación simplificada.
-    
 - **Spy:** Verifica invocaciones y parámetros.
-    
 
 ---
 
@@ -342,22 +311,15 @@ npx jest --coverage
 ### 📈 Métricas
 
 - Statements: líneas ejecutadas.
-    
 - Branches: decisiones lógicas cubiertas.
-    
 - Functions: funciones ejecutadas.
-    
 - Lines: cobertura total.
-    
 
 ✅ **Herramientas**
 
 - Jest / Istanbul
-    
 - Codecov / Coveralls
-    
 - SonarQube
-    
 
 ---
 
@@ -366,11 +328,8 @@ npx jest --coverage
 ### 📘 Concepto
 
 - **Smoke:** verificación rápida de funcionalidades críticas.
-    
 - **Sanity:** validaciones básicas tras cambios menores.
-    
 - **Regression:** asegura que cambios no rompan funcionalidades existentes.
-    
 
 ### 💻 Ejemplo (JS)
 
@@ -386,9 +345,7 @@ test('smoke test home page', async () => {
 ✅ **Prácticas**
 
 - Ejecutar antes de despliegues.
-    
 - Integrar en pipelines automáticos.
-    
 
 ---
 
@@ -412,11 +369,8 @@ export default function () {
 ✅ **Objetivos**
 
 - Medir latencia, throughput y cuellos de botella.
-    
 - Simular carga real de usuarios.
-    
 - Integrar en CI/CD para monitorización continua.
-    
 
 ---
 
@@ -425,10 +379,7 @@ export default function () {
 El testing fundamental cubre **unit, integration, functional, E2E, TDD, BDD y mocks**, proporcionando:
 
 - Estructura clara y patrones reproducibles.
-    
 - Automatización inicial para pipelines.
-    
 - Base sólida para ampliar hacia prácticas avanzadas y emergentes (ML, DevSecOps, UX).
-    
 
 > Este documento es una **guía extensiva de conceptos fundamentales** que todo desarrollador debe dominar antes de avanzar hacia testing avanzado o especializado.

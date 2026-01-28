@@ -12,12 +12,11 @@ tags:
   - sql-server
 ---
 # SQL Server
-`$= dv.current().file.tags.join(" ")`
 
 - [Docker](/software%20engineering/docker/)
 - [Azure](/cloud/azure/)
-- [Databases](/uncategorized/databases/)
-- [cloud](/uncategorized/cloud/)
+- [Databases](/databases/databases/)
+- [cloud](/cloud/cloud/)
 - [csharp](/software%20engineering/csharp/)
 - [ASP NET](/backend/asp-net/)
 

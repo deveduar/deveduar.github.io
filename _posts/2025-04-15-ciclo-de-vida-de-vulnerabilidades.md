@@ -13,7 +13,7 @@ tags:
   - vulnerabilidades
 ---
 # Ciclo de vida de vulnerabilidades
-``$= dv.current().file.tags.join(" ")``
+``
 
 ## Conceptos relacionados
 -	[vulnerabilidades](/ciberseguridad/vulnerabilidades/)
