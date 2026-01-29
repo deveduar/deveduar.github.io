@@ -7,37 +7,37 @@
 /**
  * Site header
  */
- .site-header {
- 
-    border-bottom: 1px solid $grey-color-dark;
-    min-height: $spacing-unit * 1.865;
-    position: fixed; // Changed from relative to fixed
-    width: 100%; // Added to make it full width
-    top: 0; // Added to position at the top
-    left: 0; // Added to align from the left
-    background-color: $background-color; // Added background color
-    z-index: 1050; // Keep the high z-index
+.site-header {
+
+  border-bottom: 1px solid $grey-color-dark;
+  min-height: $spacing-unit * 1.865;
+  position: fixed; // Changed from relative to fixed
+  width: 100%; // Added to make it full width
+  top: 0; // Added to position at the top
+  left: 0; // Added to align from the left
+  background-color: $background-color; // Added background color
+  z-index: 1050; // Keep the high z-index
+}
+
+.site-title {
+  @include relative-font-size(1.625);
+  font-weight: 600; // Changed from 300 to 600 for bolder text
+  line-height: $base-line-height * $base-font-size * 2.25;
+  letter-spacing: -0.5px; // Reduced negative letter-spacing
+  margin-bottom: 0;
+  color: $text-color;
+  text-decoration: none;
+
+  &,
+  &:visited {
+    color: darken($text-color, 10%);
   }
-  
-  .site-title {
-    @include relative-font-size(1.625);
-    font-weight: 600; // Changed from 300 to 600 for bolder text
-    line-height: $base-line-height * $base-font-size * 2.25;
-    letter-spacing: -0.5px; // Reduced negative letter-spacing
-    margin-bottom: 0;
-    color: $text-color;
-    text-decoration: none;
-    
-    &,
-    &:visited {
-      color: darken($text-color, 10%);
-    }
-    
-    &:hover {
-      text-decoration: none; // Prevent underline on hover
-      color: $brand-color;
-    }
+
+  &:hover {
+    text-decoration: none; // Prevent underline on hover
+    color: $brand-color;
   }
+}
 
 // Mixins reutilizables
 @mixin flex-center {
@@ -69,7 +69,7 @@
     background: $track-color;
     border-radius: 10px;
   }
-  
+
   // For Vivaldi and other Chromium variants
   &::-webkit-scrollbar-corner {
     background: transparent;
@@ -95,24 +95,24 @@
   align-items: center;
   gap: 1rem;
   margin-left: auto; // Push to the right
-  
+
   .nav-icon-link {
     text-align: center;
-    
+
     i {
       font-size: 0.9rem;
       color: $grey-color;
       transition: color 0.2s ease;
     }
-    
+
     &:hover {
       text-decoration: none;
-      
+
       i {
         color: $brand-color;
       }
     }
-    
+
     &.active-link {
       i {
         color: $brand-color !important;
@@ -140,7 +140,7 @@
   display: flex;
   align-items: center;
   height: 100%;
-  
+
   svg {
     fill: currentColor;
     vertical-align: middle;
@@ -157,7 +157,7 @@
   font-size: 1.3rem; // Match desktop title size
   font-weight: 700; // Match desktop title weight
   margin-bottom: 0;
-  
+
   &:hover {
     text-decoration: none;
     color: $brand-color;
@@ -179,7 +179,7 @@
   text-align: center;
   width: 100%;
   margin-bottom: 0.2rem;
-  
+
   &:hover {
     text-decoration: none;
     color: $brand-color;
@@ -214,10 +214,10 @@
 }
 
 .sidebar-inner {
-display: flex;
-flex-direction: column;
-height: 100%;
-overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
 }
 
 .sidebar-heading {
@@ -243,24 +243,24 @@ overflow: hidden;
   width: 200px;
   margin-left: auto;
   margin-right: auto;
-  
+
   .nav-icon-link {
     text-align: center;
-    
+
     i {
       font-size: 0.9rem;
       color: $grey-color;
       transition: color 0.2s ease;
     }
-    
+
     &:hover {
       text-decoration: none;
-      
+
       i {
         color: $brand-color;
       }
     }
-    
+
     &.active-link {
       i {
         color: $brand-color !important;
@@ -293,6 +293,12 @@ overflow: hidden;
 .site-content {
   flex: 1;
   padding: $spacing-unit;
+
+  @include media-query($on-palm) {
+    padding-top: $spacing-unit;
+    padding-left: $spacing-unit / 2;
+    padding-right: $spacing-unit / 2;
+  }
 }
 
 // Comportamiento responsivo
@@ -330,7 +336,8 @@ overflow: hidden;
     overflow: visible;
   }
 
-  .category-header, .sidebar-nav {
+  .category-header,
+  .sidebar-nav {
     max-width: 200px;
     overflow: hidden;
   }
@@ -383,7 +390,7 @@ overflow: hidden;
     display: block;
   }
 
-  #sidebar-trigger:checked ~ .site-container .site-sidebar {
+  #sidebar-trigger:checked~.site-container .site-sidebar {
     transform: translateX(0) !important;
   }
 
@@ -396,7 +403,7 @@ overflow: hidden;
     overflow-y: auto;
   }
 
-  #sidebar-trigger:checked ~ .site-container::before {
+  #sidebar-trigger:checked~.site-container::before {
     content: "";
     position: fixed;
     top: 0;
@@ -470,7 +477,7 @@ overflow: hidden;
       position: relative;
       word-break: break-word; // Asegura que las palabras largas se rompan correctamente
 
-      
+
       &::after {
         content: "";
         position: absolute;
@@ -530,8 +537,13 @@ overflow: hidden;
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .sidebar-body {
