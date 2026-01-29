@@ -39,7 +39,7 @@ tags:
 	- [devops](/devops/devops/)
 	- Automatizacion
 	- [Management](/management/management/)
-- [zotero libros datascience](zotero://select/library/collections/Z3XZGVCJ) 📕
+-  📕
 - sistemas distribuidos
 	- [Scala](/data%20science/scala/) 
 	- 

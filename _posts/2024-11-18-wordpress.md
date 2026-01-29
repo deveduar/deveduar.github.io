@@ -22,7 +22,7 @@ tags:
 - [ ] crear template para wp
 - [ ] [ecomerce](/desarrollo%20web/ecomerce/) con wp con local
 	- canvas-web-store.canvas
-	- [zotero coleccion ecomerce](zotero://select/library/collections/X5WTJKSJ)
+	- 
 
 ---
 

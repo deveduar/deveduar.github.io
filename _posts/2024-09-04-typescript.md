@@ -13,7 +13,7 @@ tags:
 ---
 # typescript
 
-- [ZOTERO JS-Typescript](zotero://select/library/collections/UQQKIXBZ)  
+-   
 - [Software engineering](/software%20engineering/software-engineering/)
 - [Computer Science](/computer%20science/computer-science/)
 - [nextjs](/frontend/nextjs/)

@@ -11,7 +11,7 @@ tags:
 ---
 # JavaScript
 
-- [ZOTERO Prog-JS](zotero://select/library/collections/DRU2KC6E)  
+-   
 - [Desarrollo web](/desarrollo%20web/desarrollo-web/)
 - [typescript](/software%20engineering/typescript/)
 - [Expresiones regulares](/computer%20science/expresiones-regulares/)
@@ -125,7 +125,7 @@ tags:
 
 ### 🧩 Curso JS - Paradigmas de Programación ✔
 
-- [A2-JS.code-workspace](file:///C:%5CUsers%5CAdmin%5CDesktop%5CDocs%20Hp%202%5CA0-Workspaces%5CA2-JS.code-workspace)
+- 
 - 01-POO intro y ES6
 - 02-Entendiendo this en JS
 - 03-Programación asincrónica

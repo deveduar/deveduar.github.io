@@ -19,12 +19,12 @@ tags:
 ## Libros
 - Las redes en la actualidad tema 1
 - CIisco CNNA 1 Drive
-- [Meet Google Drive - One place for all your files](https://drive.google.com/drive/folders/1hi0135geOUFZyfwZKDRadp8SWuhJ0W2q?usp=sharing)
+- 
 - Cisco Packet Tracer:
 - [Packet Tracer Official Tutorials](http://static-pt-assets.s3.amazonaws.com/tutorials72.htm)
-- [Meet Google Drive - One place for all your files](https://drive.google.com/drive/folders/16kFQoeETgcQYiJ14KEMM8YrnmfezE83N?usp=sharing)
+- 
 - Cisco cyberseguridad
-- [Meet Google Drive - One place for all your files](https://drive.google.com/drive/folders/15T5S-QEbF61a7WqJcLNeer3HUkpRf9i7?usp=sharing)
+- 
 
 
 ## CNNA Calculadoras de redes

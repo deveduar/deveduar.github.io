@@ -16,31 +16,24 @@ tags:
 ## 📁 Recursos y Material de Referencia
 - **python-projects.code-workspace**  
 	Entorno de trabajo preparado para VS Code con varias carpetas y configuraciones listas para proyectos Python avanzados.  
-	[file](file:///C:%5CUsers%5CAdmin%5CDesktop%5CDocs%20Hp%202%5CPython-Projects%5Cpython-projects.code-workspace)
 
 - **Prog-Python-PCAP-PCPP**  
 	Colección organizada para estudiar y preparar certificaciones PCAP y PCPP1.  
-	[zotero](zotero://select/library/collections/MJ6VKTQ7)
 
 - **Practical Data Science Cookbook**  
 	Libro práctico con recetas reales para procesado de datos, machine learning y pipelines reproducibles.  
-	[zotero](zotero://select/library/items/LWZ66X99)
 
 - **The SQL Workshop**  
 	Guía práctica para aprender SQL aplicable a Python mediante SQLite, PostgreSQL o herramientas locales.  
-	[zotero](zotero://select/library/items/KRPZ3768)
 
 - **Python pandas**  
 	Referencia completa de análisis de datos con Pandas: DataFrames, operaciones vectorizadas y limpieza de datos.  
-	[zotero](zotero://select/library/items/VPPWLRDN)
 
 - **Python chuletario**  
 	Chuletas rápidas de sintaxis, estructuras y patrones comunes.  
-	[zotero](zotero://select/library/items/WIII3V98)
 
 - **MongoDBCompass.exe**  
 	Herramienta visual para conectar, explorar y gestionar bases MongoDB.  
-	[file](file:///C:%5CUsers%5CAdmin%5CAppData%5CLocal%5CMongoDBCompass%5CMongoDBCompass.exe)
 
 ---
 

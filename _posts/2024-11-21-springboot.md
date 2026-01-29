@@ -19,8 +19,8 @@ tags:
 - [Backend](/backend/backend/) 🔥
 - [api](/backend/api/)
 - [angular](/frontend/angular/)
-- [carpeta zotero spring](zotero://select/library/collections/2WDA4GWS) 📁
-- [Spring Boot and Angular: Hands-on full stack web development with Java, Spring, and Angular](zotero://select/library/items/Z6EZEHGU) 📕
+-  📁
+-  📕
 
 ## 1. Fundamentos de Spring Framework
 - **Concepto base**
@@ -75,7 +75,7 @@ tags:
 	- Propiedades por entorno: `application-dev.yml`, `application-prod.yml`
 - JDK recomendado: 17 o superior
 - IDEs: IntelliJ IDEA, VSCode  
-	- [init-spring.code-workspace](file:///D:%5CDocs%20Hp%5CCode-projects%5Cinit-spring.code-workspace)
+	- 
 
 ## 3. Desarrollo de APIs REST
 - Principios:
