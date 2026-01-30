@@ -1,14 +1,15 @@
-tags:
-  - CSS
+---
+date: 2024-02-15 16:32
+title: CSS bootstrap
 status: 📌
-Parent: "Area-Prog"
-creation date: 2024-02-15 16:32
+Parent: "[[Area-Prog]]"
 keywords:
 source:
-cssclasses:
-  - hide-embedded-header1
-categories:
 public_note: "true"
+category: uncategorized
+tags:
+  - CSS
+---
 # bootstrap
 - [CSS](/frontend/css/)
 

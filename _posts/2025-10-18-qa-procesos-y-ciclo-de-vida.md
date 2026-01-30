@@ -1,13 +1,13 @@
-creation date: 2025-10-18 17:02
-tags:
+---
+date: 2025-10-18 17:02
+title: QA Procesos y Ciclo de Vida
 keywords:
 source:
 status: 📌
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-categories:
+Parent: "[[Area-Prog]]"
 public_note: "true"
+category: uncategorized
+---
 # QA: Procesos y Ciclo de Vida
 
 ## Ciclo de Vida de Desarrollo de Software con QA

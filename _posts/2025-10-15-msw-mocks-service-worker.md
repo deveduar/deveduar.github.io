@@ -1,15 +1,16 @@
-creation date: 2025-10-15 12:14
-tags:
-  - MSW
-  - testing
+---
+date: 2025-10-15 12:14
+title: MSW Mocks service worker
 keywords:
 source:
 status: 🌟
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-categories: "[Testing](/testing/testing/)"
+Parent: "[[Area-Prog]]"
 public_note: "true"
+category: Testing
+tags:
+  - MSW
+  - testing
+---
 
 # MSW Mocks service worker 
 

@@ -1,24 +1,26 @@
-creation date: 2024-11-06 23:21
+---
+date: 2024-11-06 23:21
+title: Management
+keywords:
+source:
+status: 🚀
+Parent: "[[Area-Sistemas]]"
+public_note: "true"
+category: Management
 tags:
   - PM
   - SCRUM
   - CRM
   - odoo
   - ERP
-keywords:
-source:
-status: 🚀
-Parent: "Area-Sistemas"
-cssclasses:
-  - hide-embedded-header1
-categories: "[Management](/uncategorized/management/)"
-public_note: "true"
+---
 # Management
 
 - Scrum master
 ## Introducción
 Nota central para agrupar conceptos, prácticas, marcos de trabajo, herramientas y disciplinas relacionadas con la gestión empresarial, técnica y operativa. Esta organización permite navegar fácilmente por distintas áreas: producto, proyectos, negocio, metodologías, herramientas y prácticas.
 
+---
 
 ## Áreas de Gestión
 
@@ -32,6 +34,7 @@ Nota central para agrupar conceptos, prácticas, marcos de trabajo, herramientas
 - Métricas: NPS, DAU/MAU, churn, éxito de funcionalidades
 - Comunicación con stakeholders
 
+---
 
 ### Gestión de Proyectos
 - [Project Management](/management/project-management/)
@@ -44,6 +47,7 @@ Nota central para agrupar conceptos, prácticas, marcos de trabajo, herramientas
 - Gestión de cambios (Change Requests)
 - PMO y gobierno del proyecto
 
+---
 
 ### Gestión de Negocio
 - [Gestion de Negocio](/gestion%20de%20negocio/gestion-de-negocio/)
@@ -55,6 +59,7 @@ Nota central para agrupar conceptos, prácticas, marcos de trabajo, herramientas
 - Estrategia comercial y competitiva
 - Procesos y optimización organizacional
 
+---
 
 ## Metodologías y Marcos
 
@@ -70,6 +75,7 @@ Nota central para agrupar conceptos, prácticas, marcos de trabajo, herramientas
 - Mapeo de flujo de valor (VSM)
 - Lean Office y Lean IT
 
+---
 
 ### Agile
 - Agile
@@ -81,6 +87,7 @@ Nota central para agrupar conceptos, prácticas, marcos de trabajo, herramientas
 - XP: TDD, pair programming, CI
 - Escalado ágil (Scrum@Scale, LeSS)
 
+---
 
 ### Frameworks y Documentación
 - docs metodologias
@@ -91,6 +98,7 @@ Nota central para agrupar conceptos, prácticas, marcos de trabajo, herramientas
 - Estructuras de escalado
 - Roles avanzados: RTE, Product Manager, System Architect
 
+---
 
 ## Herramientas de Gestión
 
@@ -108,6 +116,7 @@ Nota central para agrupar conceptos, prácticas, marcos de trabajo, herramientas
 - Gestión documental
 - LMS como sistemas de formación corporativa
 
+---
 
 ### Herramientas para Equipos Técnicos
 - [devops](/devops/devops/)
@@ -123,6 +132,7 @@ Nota central para agrupar conceptos, prácticas, marcos de trabajo, herramientas
 - Ticketing para soporte y operaciones
 - Integraciones CI/CD y automatización
 
+---
 
 ## Prácticas y Procesos Transversales
 
@@ -144,6 +154,7 @@ Nota central para agrupar conceptos, prácticas, marcos de trabajo, herramientas
 - Mejora continua
 - Operaciones diarias y escalado de incidencias
 
+---
 
 ## Integraciones entre Disciplinas
 
@@ -248,6 +259,7 @@ Nota central para agrupar conceptos, prácticas, marcos de trabajo, herramientas
 - Gestión de conflictos y negociación basada en intereses.  
 - Cultura organizacional: principios, comportamientos, mecanismos de refuerzo.  
 
+---
 
 ## Change Management
 - ADKAR como marco de adopción (conciencia, deseo, conocimiento, habilidad, refuerzo).  
@@ -257,6 +269,7 @@ Nota central para agrupar conceptos, prácticas, marcos de trabajo, herramientas
 - Roadmap de cambio, gestión de adopción y formación escalable.  
 - Medición del cambio: readiness, adopción, performance.  
 
+---
 
 ## Transformación Digital
 - Modelos de madurez digital para evaluar capacidades de negocio y tecnología.  
@@ -265,6 +278,7 @@ Nota central para agrupar conceptos, prácticas, marcos de trabajo, herramientas
 - FinOps orientado a optimización de costes cloud y accountability financiera.  
 - Digital workplace: herramientas colaborativas y flujos de trabajo inteligentes.  
 
+---
 
 ## Gestión Financiera para Managers
 - Diferencias entre Opex y Capex y su impacto en decisiones corporativas.  
@@ -273,6 +287,7 @@ Nota central para agrupar conceptos, prácticas, marcos de trabajo, herramientas
 - ROI, TCO, payback y value analysis para justificar inversiones.  
 - Modelos de presupuestación: incremental, zero-based y rolling forecast.  
 
+---
 
 ## Service Management Avanzado
 - Diseño de servicios: definición, requisitos, criticidad, métricas.  
@@ -282,6 +297,7 @@ Nota central para agrupar conceptos, prácticas, marcos de trabajo, herramientas
 - Modelo CSI (mejora continua del servicio).  
 - Gestión integral del ciclo de vida del servicio desde estrategia a operación.  
 
+---
 
 ## Enterprise Risk Management (ERM)
 - Identificación de riesgos estratégicos, operativos, financieros y reputacionales.  
@@ -291,6 +307,7 @@ Nota central para agrupar conceptos, prácticas, marcos de trabajo, herramientas
 - Modelos de 1ª, 2ª y 3ª línea de defensa.  
 - Reporting al comité de riesgos y seguimiento continuo.  
 
+---
 
 ## Portfolio Management (PPM)
 - Evaluación y priorización de iniciativas según valor, coste y alineamiento estratégico.  
@@ -300,6 +317,7 @@ Nota central para agrupar conceptos, prácticas, marcos de trabajo, herramientas
 - Capacity planning y asignación de recursos a nivel global.  
 - Lifecycle del portafolio: intake → evaluación → priorización → ejecución → revisión.  
 
+---
 
 ## Knowledge Management (KM)
 - Captura, creación y transferencia de conocimiento dentro de la organización.  
@@ -308,6 +326,7 @@ Nota central para agrupar conceptos, prácticas, marcos de trabajo, herramientas
 - Retrospectivas institucionalizadas como mecanismo de aprendizaje continuo.  
 - Modelo SECI (Nonaka): socialización, externalización, combinación e internalización.  
 
+---
 
 ## Estrategia y Gestión Corporativa
 - Cadena de valor (Porter) para análisis de actividades clave.  
@@ -317,12 +336,14 @@ Nota central para agrupar conceptos, prácticas, marcos de trabajo, herramientas
 - Alineamiento transversal entre áreas (negocio, tecnología, operaciones).  
 - Evaluación de desempeño empresarial: KPIs estratégicos y operativos.  
 
+---
 
 ## Gestión de la Demanda y Priorización
 - Intake process para gestionar solicitudes internas.  
 - Gestión del backlog corporativo y asignación de capacidad.  
 - Mecanismos de validación y aprobación antes del inicio de ejecución.  
 
+---
 
 ## Prácticas Transversales
 - Gobernanza basada en datos: dashboards, métricas y reporting.  
@@ -331,6 +352,7 @@ Nota central para agrupar conceptos, prácticas, marcos de trabajo, herramientas
 - Evaluación del rendimiento organizativo mediante indicadores compuestos.  
 - Escalabilidad organizacional y adaptación a crecimiento.  
 
+---
 
 # Glosario Management – Completo
 

@@ -1,17 +1,17 @@
-creation date: 2025-01-29 17:19
+---
+date: 2025-01-29 17:19
+title: websockets
+keywords:
+source:
+status: 🌟
+Parent: "[[Area-Prog]]"
+public_note: "true"
+category: Backend
 tags:
   - websockets
   - protocolo
   - backend
-keywords:
-source:
-status: 🌟
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-  - wide
-categories: "[Backend](/backend/backend/)"
-public_note: "true"
+---
 # WebSockets
 
 - [Backend](/backend/backend/)

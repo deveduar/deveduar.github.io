@@ -1,19 +1,20 @@
-creation date: 2025-10-17 01:05
-tags:
+---
+date: 2025-10-17 01:05
+title: Testing Fundamental Prácticas y Ejemplos de Código
 keywords:
 source:
 status: 📌
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-categories: "[Testing](/testing/testing/)"
+Parent: "[[Area-Prog]]"
 public_note: "true"
+category: Testing
+---
 # Testing Fundamental Prácticas y Ejemplos de Código
 
 # 🧪 Testing Fundamental: Prácticas y Ejemplos de Código
 
 > Guía completa de prácticas y ejemplos de testing sobre **conceptos fundamentales**, orientada a desarrolladores que buscan aprender, reforzar y aplicar pruebas de software correctamente.
 
+---
 
 ## 🧩 1. Conceptos Fundamentales
 
@@ -26,6 +27,7 @@ El testing de software es la práctica de **verificar y validar** que un sistema
 - Reducir costos y riesgos asociados al desarrollo.
 - Mejorar mantenibilidad y confianza del software.
 
+---
 
 ## ⚙️ 2. Patrones de Pruebas
 
@@ -56,6 +58,7 @@ describe('Calculator', () => {
 - Mantener tests simples y legibles.
 - Nombrar las pruebas de forma natural y descriptiva.
 
+---
 
 ### Test Setup / Teardown
 
@@ -74,6 +77,7 @@ afterEach(() => {
 ```
 {% endraw %}
 
+---
 
 ## 🧪 3. Unit Testing (Pruebas Unitarias)
 
@@ -100,6 +104,7 @@ def test_add():
 - Probar casos normales y límites (border cases).
 - Usar mocks o stubs para dependencias.
 
+---
 
 ## 🔗 4. Integration Testing (Pruebas de Integración)
 
@@ -132,6 +137,7 @@ describe('POST /login', () => {
 - Limpiar datos tras cada prueba.
 - Simular servicios externos si es necesario.
 
+---
 
 ## 🌐 5. Functional & API Testing
 
@@ -172,6 +178,7 @@ public class LoginAPITest {
 - Probar validaciones de datos, errores y límites.
 - Documentar respuestas esperadas.
 
+---
 
 ## 🧠 6. Test Driven Development (TDD)
 
@@ -201,6 +208,7 @@ test('sum adds two numbers', () => {
 - Refactorizar con confianza.
 - Escribir tests antes del código funcional.
 
+---
 
 ## 🧩 7. Behavior Driven Development (BDD)
 
@@ -226,6 +234,7 @@ Feature: Login
 - Usar escenarios claros y comprensibles.
 - Integrar con automatización (Cucumber, SpecFlow).
 
+---
 
 ## 🧪 8. End-to-End Testing (E2E)
 
@@ -255,6 +264,7 @@ test('login flow', async ({ page }) => {
 - Usar entornos de staging o mockeados.
 - Ejecutar en pipelines CI/CD.
 
+---
 
 ## ⚙️ 9. Mocking y Stubbing
 
@@ -286,6 +296,7 @@ test('fetchUser returns mocked user', async () => {
 - **Fake:** Implementación simplificada.
 - **Spy:** Verifica invocaciones y parámetros.
 
+---
 
 ## 📊 10. Coverage & Quality Metrics
 
@@ -310,6 +321,7 @@ npx jest --coverage
 - Codecov / Coveralls
 - SonarQube
 
+---
 
 ## 🧩 11. Smoke, Sanity y Regression Tests
 
@@ -335,6 +347,7 @@ test('smoke test home page', async () => {
 - Ejecutar antes de despliegues.
 - Integrar en pipelines automáticos.
 
+---
 
 ## 🔥 12. Pruebas de Rendimiento
 
@@ -359,6 +372,7 @@ export default function () {
 - Simular carga real de usuarios.
 - Integrar en CI/CD para monitorización continua.
 
+---
 
 ## 📌 Conclusión
 

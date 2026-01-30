@@ -1,14 +1,15 @@
-tags:
-  - Linux
+---
+date: 2023-03-31 01:05
+title: ubuntu server
 status: 🌟
-Parent: "Area-Sistemas"
-creation date: 2023-03-31 01:05
+Parent: "[[Area-Sistemas]]"
 keywords:
 source:
-cssclasses:
-  - hide-embedded-header1
-categories: "[Linux](/sistemas/linux/)"
 public_note: "true"
+category: Linux
+tags:
+  - Linux
+---
 # ubuntu server
 
 # Ubuntu Server — Fundamentos y Arquitectura (2025)

@@ -1,17 +1,17 @@
-creation date: 2025-04-15 03:34
-tags:
-  - Hacking
-  - amenazas
+---
+date: 2025-04-15 03:34
+title: caza de amenazas
 keywords:
 source:
 status: 🌟
-Parent: "Area-Sistemas"
-cssclasses:
-  - hide-embedded-header1
-categories: "[ciberseguridad](/ciberseguridad/ciberseguridad/)"
+Parent: "[[Area-Sistemas]]"
 aliases:
-  - Threat Hunting
 public_note: "true"
+category: ciberseguridad
+tags:
+  - Hacking
+  - amenazas
+---
 # Caza de amenazas
 ``
 

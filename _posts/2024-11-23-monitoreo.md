@@ -1,17 +1,18 @@
-creation date: 2024-11-23 02:01
+---
+date: 2024-11-23 02:01
+title: monitoreo
+keywords:
+source:
+status: 🚀
+Parent: "[[Area-Sistemas]]"
+aliases:
+public_note: "true"
+category: monitoreo
 tags:
   - devops
   - monitoreo
   - tools
-keywords:
-source:
-status: 🚀
-Parent: "Area-Sistemas"
-cssclasses: []
-aliases:
-  - monitorización
-categories: "[monitoreo](/uncategorized/monitoreo/)"
-public_note: "true"
+---
 # Monitoreo
 
 Este documento expande y organiza los conceptos clave relacionados con el monitoreo de sistemas e infraestructura, integrando herramientas, prácticas y marcos de referencia esenciales.

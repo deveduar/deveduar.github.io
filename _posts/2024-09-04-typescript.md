@@ -1,15 +1,16 @@
-creation date: 2024-09-04 19:15
-tags:
-  - JS
-  - typescript
+---
+date: 2024-09-04 19:15
+title: typescript
 keywords:
 source:
 status: 🌟
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-categories: "[Software engineering](/software%20engineering/software-engineering/)"
+Parent: "[[Area-Prog]]"
 public_note: "true"
+category: Software engineering
+tags:
+  - JS
+  - typescript
+---
 # typescript
 
 - [Software engineering](/software%20engineering/software-engineering/)

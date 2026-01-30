@@ -1,17 +1,17 @@
-creation date: 2024-11-23 19:31
+---
+date: 2024-11-23 19:31
+title: poketbase
+keywords:
+source:
+status: 🌟
+Parent: "[[Area-Prog]]"
+public_note: "true"
+category: Backend
 tags:
   - pocketbase
   - db
   - backend
-keywords:
-source:
-status: 🌟
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-  - wide
-categories: "[Backend](/backend/backend/)"
-public_note: "true"
+---
 # PocketBase
 
 - [Databases](/databases/databases/)

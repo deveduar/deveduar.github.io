@@ -1,13 +1,13 @@
-creation date: 2025-10-17 16:48
-tags:
+---
+date: 2025-10-17 16:48
+title: roadmap de TDD con ejemplo de uso en una empresa
 keywords:
 source:
 status: 📌
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-categories: "[Testing](/testing/testing/)"
+Parent: "[[Area-Prog]]"
 public_note: "true"
+category: Testing
+---
 # roadmap de TDD con ejemplo de uso en una empresa
 
 ## 1. Preparación y Capacitación
@@ -128,6 +128,7 @@ Feature: Login de empleado
 7. Monitorean cobertura y métricas; ajustan pruebas según resultados.
 8. Entregan funcionalidad segura, confiable y testeada desde el primer commit.
 
+---
 
 > **Resumen:**  
 > Implementar [TDD - Test Driven Development](/testing/tdd---test-driven-development/) en una empresa requiere formación, planificación de tests, integración en CI/CD, uso de test doubles, métricas, documentación [BDD](/testing/bdd/) y mejora continua. El flujo Red-Green-Refactor garantiza calidad desde el inicio, reduce defectos en producción y facilita escalabilidad.

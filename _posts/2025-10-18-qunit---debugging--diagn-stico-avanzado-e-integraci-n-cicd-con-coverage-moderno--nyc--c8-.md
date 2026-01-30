@@ -1,13 +1,13 @@
-creation date: 2025-10-18 14:17
-tags:
+---
+date: 2025-10-18 14:17
+title: QUnit - Debugging, diagnóstico avanzado e integración CICD con coverage moderno (nyc, c8)
 keywords:
 source:
 status: 📌
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-categories: "[Testing](/testing/testing/)"
+Parent: "[[Area-Prog]]"
 public_note: "true"
+category: Testing
+---
 
 
 # QUnit - Debugging, diagnóstico avanzado e integración CI/CD con coverage moderno (nyc, c8)

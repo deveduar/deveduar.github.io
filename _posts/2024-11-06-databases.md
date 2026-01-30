@@ -1,4 +1,13 @@
-creation date: 2024-11-06 23:27
+---
+date: 2024-11-06 23:27
+title: Databases
+keywords:
+source:
+status: 🚀
+Parent: "[[Area-Prog]]"
+aliases:
+public_note: "true"
+category: Databases
 tags:
   - db
   - MySQL
@@ -10,19 +19,7 @@ tags:
   - json
   - mongodb
   - backend
-keywords:
-source:
-status: 🚀
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-aliases:
-  - db
-  - bases de datos
-  - databases
-  - Bases de datos
-categories: "[Databases](/uncategorized/databases/)"
-public_note: "true"
+---
 # Databases
 
 ## Relacionado

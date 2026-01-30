@@ -1,16 +1,17 @@
-creation date: 2025-12-06 18:15
+---
+date: 2025-12-06 18:15
+title: Web Components
+keywords:
+source:
+status: 🌟
+Parent: "[[Area-Prog]]"
+public_note: "true"
+category: Frontend
 tags:
   - webcomponents
   - frontend
   - webdevelopment
-keywords:
-source:
-status: 🌟
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-categories: "[Frontend](/frontend/frontend/)"
-public_note: "true"
+---
 # Web Components  
 
 - Web Components manuales  

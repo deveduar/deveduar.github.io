@@ -1,15 +1,16 @@
-creation date: 2025-05-22 17:22
-tags:
-  - desarrollo
-  - programming
+---
+date: 2025-05-22 17:22
+title: Desarrollo web
 keywords:
 source:
 status: 🚀
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-categories: "[Desarrollo web](/uncategorized/desarrollo-web/)"
+Parent: "[[Area-Prog]]"
 public_note: "true"
+category: Desarrollo web
+tags:
+  - desarrollo
+  - programming
+---
 # Desarrollo web
 ``
 

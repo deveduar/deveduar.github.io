@@ -1,15 +1,16 @@
-creation date: 2025-05-24 18:48
-tags:
-  - redes
-  - telefonia
+---
+date: 2025-05-24 18:48
+title: Telefonía y UC
 keywords:
 source:
 status: 📌
-Parent: "Area-Sistemas"
-cssclasses:
-  - hide-embedded-header1
-categories:
+Parent: "[[Area-Sistemas]]"
 public_note: "true"
+category: uncategorized
+tags:
+  - redes
+  - telefonia
+---
 # Telefonía y UC
 
 - Unified Communications:

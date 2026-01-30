@@ -1,17 +1,17 @@
-creation date: 2024-11-21 19:31
+---
+date: 2024-11-21 19:31
+title: react native
+keywords:
+source:
+status: 🚀
+Parent: "[[Area-Prog]]"
+public_note: "true"
+category: Desarrollo multiplataforma
 tags:
   - react
   - reactnative
   - mobile-apps
-keywords:
-source:
-status: 🚀
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-  - wide
-categories: "[Desarrollo multiplataforma](/desarrollo%20multiplataforma/desarrollo-multiplataforma/)"
-public_note: "true"
+---
 # react native
 
 - [react](/frontend/react/)

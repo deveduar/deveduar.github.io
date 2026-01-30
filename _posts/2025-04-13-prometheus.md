@@ -1,16 +1,16 @@
-creation date: 2025-04-14 01:50
-tags:
-  - monitoreo
-  - prometheus
+---
+date: 2025-04-14 01:50
+title: prometheus
 keywords:
 source:
 status: 🌟
-Parent: "Area-Sistemas"
-cssclasses:
-  - hide-embedded-header1
-  - wide
-categories: "[monitoreo](/monitoreo/monitoreo/)"
+Parent: "[[Area-Sistemas]]"
 public_note: "true"
+category: monitoreo
+tags:
+  - monitoreo
+  - prometheus
+---
 # prometheus
 
   * [monitoreo](/monitoreo/monitoreo/)

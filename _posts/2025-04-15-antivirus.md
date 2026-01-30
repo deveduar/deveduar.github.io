@@ -1,16 +1,17 @@
-creation date: 2025-04-15 16:45
+---
+date: 2025-04-15 16:45
+title: Antivirus
+keywords:
+source:
+status: 🌟
+Parent: "[[Area-Sistemas]]"
+public_note: "true"
+category: ciberseguridad
 tags:
   - Hacking
   - antivirus
   - malware
-keywords:
-source:
-status: 🌟
-Parent: "Area-Sistemas"
-cssclasses:
-  - hide-embedded-header1
-categories: "[ciberseguridad](/ciberseguridad/ciberseguridad/)"
-public_note: "true"
+---
 # Antivirus
 ``
 

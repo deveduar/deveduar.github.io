@@ -1,15 +1,16 @@
-creation date: 2025-06-10 15:20
-tags:
-  - redes
-  - mascara_de_red
+---
+date: 2025-06-10 15:20
+title: mascara de red
 keywords:
 source:
 status: 📌
-Parent: "Area-Sistemas"
-cssclasses:
-  - hide-embedded-header1
-categories: "[Redes](/redes/redes/)"
+Parent: "[[Area-Sistemas]]"
 public_note: "true"
+category: Redes
+tags:
+  - redes
+  - mascara_de_red
+---
 # mascara de red
 
 - máscaras de [subred](/redes/subred/)

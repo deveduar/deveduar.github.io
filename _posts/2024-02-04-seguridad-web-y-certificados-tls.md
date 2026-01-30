@@ -1,14 +1,15 @@
-tags:
-  - Devops
+---
+date: 2024-02-04 18:57
+title: Seguridad Web y Certificados TLS
 status: 🌟
-Parent: "Area-Sistemas"
-creation date: 2024-02-04 18:57
+Parent: "[[Area-Sistemas]]"
 keywords:
 source:
-cssclasses:
-  - hide-embedded-header1
-categories: "[devops](/devops/devops/)"
 public_note: "true"
+category: devops
+tags:
+  - Devops
+---
 # Seguridad Web y Certificados TLS
 
 
@@ -337,6 +338,7 @@ ctrl + x
 - **Nueva práctica CA/B Forum 2025.06:** obliga a incluir extensión `SubjectKeyIdentifier` única en todos los certificados públicos.
 - **Google Chrome** exige HSTS activo y CAA configurado para sitios con formularios de login o checkout.
 
+---
 
 ### 🔐 Recomendaciones clave
 - Migrar toda configuración a TLS 1.3.
@@ -346,6 +348,7 @@ ctrl + x
 - Usar claves de curva P-256 o P-384 en lugar de RSA donde sea posible.
 - Revisar periódicamente con SSLLabs y Hardenize para mantener A+.
 
+---
 📘 **Referencias oficiales 2025:**
 - [Let’s Encrypt Blog (2025)](https://letsencrypt.org/)
 - [CA/B Forum Baseline Requirements v2.0.2 (2025)](https://cabforum.org/)

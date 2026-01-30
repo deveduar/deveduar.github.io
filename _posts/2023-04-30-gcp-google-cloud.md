@@ -1,16 +1,17 @@
+---
+date: 2023-04-30 22:03
+title: GCP Google cloud
+status: 🚀
+Parent: "[[Area-Sistemas]]"
+keywords:
+source:
+public_note: "true"
+category: Data Science
 tags:
   - GCP
   - IA
   - data-science
-status: 🚀
-Parent: "Area-Sistemas"
-creation date: 2023-04-30 22:03
-keywords:
-source:
-cssclasses:
-  - hide-embedded-header1
-categories: "[Data Science](/data%20science/data-science/)"
-public_note: "true"
+---
 # GCP Google cloud
 
 - [cloud](/cloud/cloud/)

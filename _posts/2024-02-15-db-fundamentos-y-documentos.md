@@ -1,14 +1,15 @@
-tags:
-  - DB
+---
+date: 2024-02-15 16:37
+title: DB-Fundamentos y documentos
 status: 🌟
-Parent: "Area-Prog"
-creation date: 2024-02-15 16:37
+Parent: "[[Area-Prog]]"
 keywords:
 source:
-cssclasses:
-  - hide-embedded-header1
-categories: "[Databases](/databases/databases/)"
 public_note: "true"
+category: Databases
+tags:
+  - DB
+---
 # DB-Fundamentos y documentos
 
 - [Databases](/databases/databases/)
@@ -294,6 +295,7 @@ public_note: "true"
 	- Hace parte de los modelos NoSQL, pero es importante para completar el panorama.  
 	- Útil para datos flexibles y jerárquicos sin esquema rígido.
 
+---
 
 ### Conceptos Clave Faltantes
 
@@ -347,6 +349,7 @@ public_note: "true"
 - **Funciones definidas por el usuario y triggers.**  
 - **Materialized Views:** precálculo de resultados para optimizaciones.
 
+---
 
 ### Diseño Conceptual Avanzado (faltante)
 - **Cardinalidad exacta vs mínima/máxima.**  
@@ -354,6 +357,7 @@ public_note: "true"
 - **Relaciones recursivas.**  
 - **Atributos multivaluados y compuestos.**
 
+---
 
 ### Teoría de Conjuntos aplicada a lo Relacional
 - El modelo relacional se fundamenta en operaciones de conjuntos.  
@@ -361,6 +365,7 @@ public_note: "true"
 	- No hay orden inherente en filas o columnas.  
 	- Las operaciones son cerradas y producen siempre nuevas relaciones.
 
+---
 
 ### SQL y sus Extensiones (faltante)
 - **DDL:** Create, Alter, Drop.  
@@ -369,12 +374,14 @@ public_note: "true"
 - **TCL:** Commit, Rollback, Savepoint.  
 - Extensiones modernas: ventanas, CTEs, recursion, funciones agregadas avanzadas.
 
+---
 
 ### Seguridad y Control de Acceso
 - **Roles, permisos y políticas de acceso a filas (RLS).**  
 - **Encriptación en reposo y en tránsito.**  
 - **Auditoría y trazabilidad.**
 
+---
 
 ### Casos de Uso según el Modelo
 - **Jerárquico:** archivos de sistemas, catálogos de hardware.  
@@ -394,6 +401,7 @@ public_note: "true"
 	Conjunto de criterios para que una base de datos sea “verdaderamente relacional”.  
 	Incluyen independencia física, lógica, representación uniforme y manejo consistente de nulls.
 
+---
 
 ### Diseño Lógico Avanzado
 - **Tablas desnormalizadas estratégicamente:**  
@@ -403,6 +411,7 @@ public_note: "true"
 - **Esquemas en estrella y en copo de nieve:**  
 	Útiles para bodegas de datos y análisis multidimensional.
 
+---
 
 ### Modelos y Paradigmas de Almacenamiento Relacional Moderno
 - **OLTP vs OLAP:**  
@@ -414,6 +423,7 @@ public_note: "true"
 	Almacenan datos en RAM para velocidad extrema.  
 	Requieren control de persistencia mediante logs y snapshots.
 
+---
 
 ### Particionamiento Avanzado
 - **Particionamiento horizontal:** divide filas.  
@@ -422,6 +432,7 @@ public_note: "true"
 - **Rangos, listas y hash:** métodos para seleccionar particiones.  
 - Beneficios: aislamiento de cargas, paralelización y optimización física.
 
+---
 
 ### Motores Internos y Ejecución
 - **Optimización basada en costos:**  
@@ -432,6 +443,7 @@ public_note: "true"
 - **JIT Compilation:**  
 	Algunos sistemas generan código nativo en tiempo real para ejecutar consultas.
 
+---
 
 ### Tipos de Joins que faltaban
 - **Semi-Join:** devuelve filas de A que tienen correspondencia en B, sin incluir los datos de B.  
@@ -439,6 +451,7 @@ public_note: "true"
 - **Lateral Join:** permite acceder a resultados fila por fila para generar nuevas filas dinámicamente.  
 	Usado para JSON, arrays y funciones complejas.
 
+---
 
 ### Carga de Trabajo y Rendimiento
 - **Caching de páginas y buffers:**  
@@ -448,6 +461,7 @@ public_note: "true"
 - **Vacuum / Garbage Collection:**  
 	Importante en MVCC para limpiar versiones antiguas.
 
+---
 
 ### Consistencia y Distribución Avanzada
 - **CAP aplicado al mundo relacional:**  
@@ -457,6 +471,7 @@ public_note: "true"
 - **Protocolos de consenso (Raft/Paxos):**  
 	Aseguran integridad de réplicas y tolerancia a fallos.
 
+---
 
 ### Datos Semi-Estructurados y Híbridos
 (Importante porque el modelo relacional moderno ya no es solo tablas)
@@ -466,6 +481,7 @@ public_note: "true"
 - **Arrays y tipos compuestos:** forman parte del modelo objeto-relacional avanzado.  
 - **Tablas con columnas dinámicas / sparse:** optimizadas para nulls masivos.
 
+---
 
 ### Herramientas y Ecosistema Profesional
 - **Diagramas ER/EER avanzados:**  
@@ -475,6 +491,7 @@ public_note: "true"
 - **Pruebas de BD:**  
 	Fixtures, entornos aislados, pruebas de integridad y regresión.
 
+---
 
 ### Perspectivas y Tendencias Modernas
 - **HTAP (Hybrid Transactional/Analytical Processing):**  
@@ -485,6 +502,7 @@ public_note: "true"
 - **DBaaS y autoscaling:**  
 	Servicios administrados que ajustan particiones, réplicas e índices automáticamente.
 
+---
 
 ### Conceptos que cierran el marco teórico
 - **Independencia lógica y física:**  
@@ -678,6 +696,7 @@ public_note: "true"
 * Habilitan el trabajo simultáneo de múltiples usuarios manteniendo seguridad y control de accesos.
 * Reducen redundancia y preservan integridad de los datos.
 
+---
 
 ## **2. Ventajas Generales**
 
@@ -686,12 +705,14 @@ public_note: "true"
 * Acceso multiplataforma desde distintos sistemas.
 * Seguridad mediante restricciones y permisos.
 
+---
 
 ## **3. Control de Redundancia**
 
 * Evita duplicidad de información (ej.: id de producto único).
 * Flujo básico: **Pregunta → Base de Datos → Respuesta**.
 
+---
 
 ## **4. Etapas del Desarrollo de una BD**
 
@@ -701,6 +722,7 @@ public_note: "true"
 4. Pruebas y mantenimiento.
 5. Diseño específico de la BD dentro del diseño del sistema.
 
+---
 
 ## **5. Tipos de Bases de Datos**
 
@@ -736,6 +758,7 @@ public_note: "true"
   * **MongoDB:** documentos JSON.
   * **Cassandra:** orientada a columnas, excelente escritura masiva y disponibilidad; consistencia eventual.
 
+---
 
 ## **6. Sistema Gestor de Bases de Datos (SGBD)**
 
@@ -745,6 +768,7 @@ public_note: "true"
 * Controles de acceso de usuarios.
 * Pueden ser específicos por industria.
 
+---
 
 ## **7. Modelos de Bases de Datos Relacionales**
 
@@ -761,6 +785,7 @@ public_note: "true"
 * **Transaccional:** muy rápido; permite duplicación.
 * **Relacional:** tablas + relaciones; estándar desde 1970.
 
+---
 
 ## **8. Modelo Relacional**
 
@@ -784,6 +809,7 @@ public_note: "true"
 **Ejemplo educativo:**
 Profesor → imparte varios cursos (1:N), por lo tanto su id no debe ser único en la tabla curso, sino una FK.
 
+---
 
 ## **9. Diseño y Modelado de Bases de Datos**
 
@@ -829,6 +855,7 @@ Profesor → imparte varios cursos (1:N), por lo tanto su id no debe ser único 
 * Particiones, tablespaces.
 * Parametrización de rendimiento (buffer pool, logging, checkpointing).
 
+---
 
 ## **10. Índices**
 
@@ -837,6 +864,7 @@ Profesor → imparte varios cursos (1:N), por lo tanto su id no debe ser único 
 * Afectan rendimiento de escritura.
 * Demasiados índices → lentitud en actualizaciones.
 
+---
 
 ## **11. Restricciones de Integridad**
 
@@ -851,6 +879,7 @@ Profesor → imparte varios cursos (1:N), por lo tanto su id no debe ser único 
 * **NOT NULL:** evita datos incompletos.
 * **Restricciones de negocio:** reglas del dominio.
 
+---
 
 ## **12. Integridad Referencial**
 
@@ -866,6 +895,7 @@ Profesor → imparte varios cursos (1:N), por lo tanto su id no debe ser único 
 
 * Auditorías, registros históricos, trazabilidad.
 
+---
 
 ## **13. Diagrama Físico**
 
@@ -878,6 +908,7 @@ Incluye:
 * Estrategias de normalización/desnormalización.
 * Reglas de actualización/eliminación.
 
+---
 
 ## **14. Errores y Riesgos Comunes**
 
@@ -887,6 +918,7 @@ Incluye:
 * Cardinalidades incorrectas.
 * Tipos de datos inadecuados.
 
+---
 
 ## **15. Implementación**
 
@@ -899,6 +931,7 @@ Incluye:
   * Concurrencia.
   * Integridad.
 
+---
 
 ## **16. Uso y Mantenimiento**
 
@@ -953,6 +986,7 @@ Los modelos de bases de datos representan cómo se organiza, describe y manipula
   * Documentos semiestructurados (JSON/BSON).
   * Flexible, sin esquema rígido.
 
+---
 
 ## **2. Fundamentos Teóricos Avanzados**
 
@@ -982,6 +1016,7 @@ Los modelos de bases de datos representan cómo se organiza, describe y manipula
 * 12 reglas que definen cuándo un sistema es realmente relacional:
   Independencia lógica y física, representación uniforme, manejo consistente de nulls, vistas actualizables, etc.
 
+---
 
 ## **3. Integridad y Restricciones**
 
@@ -1003,6 +1038,7 @@ Los modelos de bases de datos representan cómo se organiza, describe y manipula
 * Aplicación en sistemas complejos.
 * Consideraciones al evitar cascadas en auditorías o historiales.
 
+---
 
 ## **4. Modelo Relacional — Operaciones, SQL y Manipulación**
 
@@ -1033,6 +1069,7 @@ Los modelos de bases de datos representan cómo se organiza, describe y manipula
 * Lateral Join
 * Natural Join (usado con moderación)
 
+---
 
 ## **5. Concurrencia, Transacciones y Aislamiento**
 
@@ -1058,6 +1095,7 @@ Los modelos de bases de datos representan cómo se organiza, describe y manipula
 
 * Locks, timestamping, **MVCC** (PostgreSQL), control optimista/pesimista.
 
+---
 
 ## **6. Arquitecturas y Almacenamiento**
 
@@ -1080,6 +1118,7 @@ Los modelos de bases de datos representan cómo se organiza, describe y manipula
 * Bases de datos **in-memory**
 * Motores híbridos y HTAP (SingleStore, extensiones en PostgreSQL)
 
+---
 
 ## **7. Particionamiento y Rendimiento Físico**
 
@@ -1101,6 +1140,7 @@ Los modelos de bases de datos representan cómo se organiza, describe y manipula
 * Ejecución vectorizada.
 * JIT compilation en motores modernos.
 
+---
 
 ## **8. Modelado Conceptual, Lógico y Físico (Avanzado)**
 
@@ -1124,6 +1164,7 @@ Los modelos de bases de datos representan cómo se organiza, describe y manipula
 * Tablespaces, particiones, configuración de motor.
 * Ajustes de rendimiento: buffer pools, logging, paralelismo.
 
+---
 
 ## **9. Datos Semi-Estructurados y Modelos Híbridos**
 
@@ -1132,6 +1173,7 @@ Los modelos de bases de datos representan cómo se organiza, describe y manipula
 * Tipos compuestos y columnas sparse.
 * Integración relacional + documental + analítica.
 
+---
 
 ## **10. Seguridad, Auditoría y Gobernanza**
 
@@ -1140,6 +1182,7 @@ Los modelos de bases de datos representan cómo se organiza, describe y manipula
 * Auditoría, trazabilidad y control de cambios.
 * Máscaras de datos, políticas de cumplimiento (GDPR, PCI, etc.).
 
+---
 
 ## **11. Herramientas y Ecosistema**
 
@@ -1148,6 +1191,7 @@ Los modelos de bases de datos representan cómo se organiza, describe y manipula
 * Testing: entornos aislados, ejecución determinista.
 * Monitoreo: métricas de queries, EXPLAIN, planes reales.
 
+---
 
 ## **12. Casos de Uso por Modelo**
 
@@ -1157,6 +1201,7 @@ Los modelos de bases de datos representan cómo se organiza, describe y manipula
 * **Objeto–Relacional:** GIS, analítica, grandes estructuras anidadas.
 * **Documental:** aplicaciones con requisitos cambiantes y estructuras flexibles.
 
+---
 
 ## **13. Tendencias Modernas**
 
@@ -1166,6 +1211,7 @@ Los modelos de bases de datos representan cómo se organiza, describe y manipula
 * Federaciones SQL hacia múltiples fuentes.
 * Columnar en PostgreSQL y DuckDB en entornos mixtos.
 
+---
 
 ## **14. Conceptos de Cierre**
 
@@ -1181,6 +1227,7 @@ Los modelos de bases de datos representan cómo se organiza, describe y manipula
 ## Definición General
 Un **RDBMS (Relational Database Management System)** es un sistema de gestión de bases de datos basado en el **modelo relacional** propuesto por Edgar F. Codd. Organiza los datos en **tablas** estructuradas en filas y columnas, mantiene **integridad**, permite **consultas declarativas (SQL)** y garantiza **consistencia transaccional** bajo ACID.
 
+---
 
 ## Principios del Modelo Relacional
 ### Estructura Basada en Tablas
@@ -1198,6 +1245,7 @@ Un **RDBMS (Relational Database Management System)** es un sistema de gestión d
 - **Integridad referencial:** FK válidas o nulas según regla.
 - **Integridad de dominio:** valores válidos según tipo y restricciones.
 
+---
 
 ## Arquitectura de un RDBMS
 ### Componentes Internos
@@ -1213,6 +1261,7 @@ Un **RDBMS (Relational Database Management System)** es un sistema de gestión d
 - **Plan Cache:** almacena planes reutilizables para mejorar rendimiento.
 - **Background workers:** tareas como checkpoints, vacuums, defragmentación.
 
+---
 
 ## Lenguaje SQL (vista RDBMS)
 ### Manipulación
@@ -1226,6 +1275,7 @@ Un **RDBMS (Relational Database Management System)** es un sistema de gestión d
 - **Set operations:** UNION, INTERSECT, EXCEPT.
 - **Agregaciones:** `GROUP BY`, `HAVING`.
 
+---
 
 ## Índices y Optimización
 ### Tipos Comunes
@@ -1241,6 +1291,7 @@ Un **RDBMS (Relational Database Management System)** es un sistema de gestión d
 - Mantener estadísticas actualizadas.
 - Evitar funciones sobre columnas indexadas en filtros (`WHERE`).
 
+---
 
 ## Transacciones y Concurrencia
 ### Modelo ACID
@@ -1257,6 +1308,7 @@ Un **RDBMS (Relational Database Management System)** es un sistema de gestión d
 - **Bloqueos (locking):** compartidos, exclusivos, por fila, por tabla.
 - **MVCC:** versiones de filas para lecturas sin bloqueo (PostgreSQL, Oracle).
 
+---
 
 ## Diseño de Esquemas
 ### Normalización
@@ -1268,6 +1320,7 @@ Un **RDBMS (Relational Database Management System)** es un sistema de gestión d
 - Mejor rendimiento en consultas de analítica.
 - Reducir joins en sistemas de alta lectura.
 
+---
 
 ## Copias de Seguridad y Recuperación
 ### Técnicas
@@ -1280,6 +1333,7 @@ Un **RDBMS (Relational Database Management System)** es un sistema de gestión d
 - **Failover automático.**
 - **Sharding limitado:** no es natural en RDBMS tradicionales.
 
+---
 
 ## Casos de Uso del Modelo Relacional
 ### Dónde Destaca
@@ -1295,6 +1349,7 @@ Un **RDBMS (Relational Database Management System)** es un sistema de gestión d
 - Consultas sobre grafos complejos.
 - Ingesta masiva con schema evolucionando constantemente.
 
+---
 
 ## Limitaciones Naturales
 - Escalado horizontal más complejo que en NoSQL.
@@ -1302,6 +1357,7 @@ Un **RDBMS (Relational Database Management System)** es un sistema de gestión d
 - Los JOINs pueden ser costosos si el diseño es defectuoso.
 - Ajuste y mantenimiento más intensivo en sistemas enormes.
 
+---
 
 ## Implementaciones Populares de RDBMS
 - **PostgreSQL:** extendido, MVCC puro, gran ecosistema.

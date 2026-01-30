@@ -1,14 +1,15 @@
-creation date: 2025-12-20 18:36
-tags:
-  - Linux
+---
+date: 2025-12-20 18:36
+title: Linux personalizacion de entorno
 keywords:
 source:
 status: 🌟
-Parent: "Area-Sistemas"
-cssclasses:
-  - hide-embedded-header1
-categories: "[Linux](/sistemas/linux/)"
+Parent: "[[Area-Sistemas]]"
 public_note: "true"
+category: Linux
+tags:
+  - Linux
+---
 # Linux Personalización de Entorno 
 
 ## Entornos y Temas Personalizados

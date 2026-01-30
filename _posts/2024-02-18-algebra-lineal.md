@@ -1,15 +1,16 @@
+---
+date: 2024-02-18 16:14
+title: algebra lineal
 Hecho: false
-tags:
-  - Mates
-creation date: 2024-02-18 16:14
 keywords:
 source:
 status: 🌟
-Parent: "Area-IA"
-cssclasses:
-  - hide-embedded-header1
-categories: "[mates](/uncategorized/mates/)"
+Parent: "[[Area-IA]]"
 public_note: "true"
+category: mates
+tags:
+  - Mates
+---
 # Álgebra lineal
 
 - [matematicas](/uncategorized/mates/)
@@ -39,6 +40,7 @@ Las **matrices especiales** son aquellas con propiedades estructurales o algebra
 
 Estas matrices suelen usarse en descomposiciones y transformaciones fundamentales del álgebra lineal y la computación científica.
 
+---
 
 ## Descomposición propia (Autovalores y autovectores)
 
@@ -61,6 +63,7 @@ Esta forma muestra que $A$ puede interpretarse como una combinación ponderada d
 - Los autovectores indican las direcciones invariantes bajo la transformación.
 - En geometría y PCA, representan los ejes principales de variación.
 
+---
 
 ## Descomposición del valor singular (SVD)
 
@@ -92,6 +95,7 @@ print("Vt =", Vt)
 ```
 {% endraw %}`
 
+---
 
 ## Pseudoinverso de Moore-Penrose
 
@@ -128,6 +132,7 @@ print(A_pinv)
 ```
 {% endraw %}
 
+---
 
 ## Operador de seguimiento (Trace)
 
@@ -144,6 +149,7 @@ $$
 * Igual a la suma de los autovalores de ( A ).
 * En geometría, puede interpretarse como el **rastro de una transformación lineal** (cuánto “escala” el espacio).
 
+---
 
 ## Determinantes
 
@@ -173,6 +179,7 @@ print(detA)
 ```
 {% endraw %}
 
+---
 
 ## Ejemplo: Análisis de Componentes Principales (PCA)
 
@@ -215,6 +222,7 @@ print("Datos proyectados:", X_pca)
 
 El **álgebra lineal** es la rama de las matemáticas que estudia los **vectores**, las **matrices** y las **transformaciones lineales** entre espacios vectoriales. Constituye la base de gran parte de la matemática aplicada, la física, la estadística y la computación científica.
 
+---
 
 ## Vectores
 
@@ -238,6 +246,7 @@ $$\vec{v} = \begin{bmatrix} v_1 \\ v_2 \\ \vdots \\ v_n \end{bmatrix}$$
 
 Estas operaciones permiten construir conceptos más avanzados como la **proyección**, la **ortogonalidad** y las **transformaciones lineales**.
 
+---
 
 ## Espacios vectoriales
 
@@ -254,6 +263,7 @@ El conjunto $\mathbb{R}^n$ con las operaciones habituales de suma y multiplicaci
 Un **subespacio** es un subconjunto de un espacio vectorial que también cumple los axiomas del espacio vectorial.  
 Ejemplo: el conjunto de vectores de $\mathbb{R}^3$ que yacen en un plano que pasa por el origen.
 
+---
 
 ## Combinaciones lineales
 
@@ -267,6 +277,7 @@ El **conjunto de todas las combinaciones lineales** posibles se llama el **subes
 
 $$\text{span}\{\vec{v}_1, ..., \vec{v}_k\}$$
 
+---
 
 ## Independencia lineal
 
@@ -278,6 +289,7 @@ $$c_1 \vec{v}_1 + ... + c_k \vec{v}_k = 0 \implies c_1 = c_2 = ... = c_k = 0$$
 
 Si esta condición no se cumple, el conjunto es **dependiente**.
 
+---
 
 ## Base y dimensión
 
@@ -290,6 +302,7 @@ Ejemplos:
 - En $\mathbb{R}^2$, una base estándar es $\{(1,0), (0,1)\}$.
 - En $\mathbb{R}^3$, la base estándar es $\{(1,0,0), (0,1,0), (0,0,1)\}$.
 
+---
 
 ## Transformaciones lineales
 
@@ -319,6 +332,7 @@ print("Vector transformado:", T_v)
 ```
 {% endraw %}`
 
+---
 
 ## Aplicaciones básicas
 
@@ -327,6 +341,7 @@ print("Vector transformado:", T_v)
 * Cálculo de mínimos cuadrados.
 * Base teórica para vectores, matrices y descomposición del valor singular.
 
+---
 
 ## Conceptos relacionados
 
@@ -345,6 +360,7 @@ print("Vector transformado:", T_v)
 Comprender el **lenguaje simbólico y formal** del álgebra lineal es esencial para poder interpretar correctamente sus definiciones, teoremas y demostraciones.  
 Esta nota introduce la **notación**, **símbolos**, y **convenciones** más comunes que aparecen en libros, artículos o clases de álgebra lineal.
 
+---
 
 ## Símbolos y notaciones fundamentales
 
@@ -357,6 +373,7 @@ Esta nota introduce la **notación**, **símbolos**, y **convenciones** más com
 
 En álgebra lineal trabajamos principalmente sobre $\mathbb{R}$ o $\mathbb{C}$, llamados **campos base**.
 
+---
 
 ## Notación de vectores y matrices
 
@@ -385,6 +402,7 @@ En álgebra lineal trabajamos principalmente sobre $\mathbb{R}$ o $\mathbb{C}$, 
 	- El elemento $a_{ij}$ está en la **i-ésima fila** y **j-ésima columna**.
 	- El subíndice suele empezar en 1: $a_{11}, a_{12}, ...$
 
+---
 
 ## Operaciones y símbolos comunes
 
@@ -403,6 +421,7 @@ En álgebra lineal trabajamos principalmente sobre $\mathbb{R}$ o $\mathbb{C}$, 
 | $\lambda$                                    | Autovalor          | Escala un autovector en una transformación lineal |
 | $\vec{v}$                                    | Autovector         | Vector propio asociado a $\lambda$                |
 
+---
 
 ## Notación funcional
 
@@ -435,6 +454,7 @@ $$T(\vec{v}) =
 x \\ y
 \end{bmatrix}$$
 
+---
 
 ## Expresiones y cuantificadores
 
@@ -449,6 +469,7 @@ El álgebra lineal usa notación lógica para definir propiedades y teoremas:
 - $\iff$: “si y solo si”  
 	$A$ es invertible $\iff$ sus columnas son linealmente independientes.
 
+---
 
 ## Notación vectorial y geométrica
 
@@ -461,6 +482,7 @@ y forman un ángulo de $90^\circ$.
 La **proyección** de $\vec{u}$ sobre $\vec{v}$ se denota:
 $$\text{proj}_{\vec{v&#125;&#125;(\vec{u}) = \frac{\vec{u} \cdot \vec{v&#125;&#125;{\|\vec{v}\|^2} \vec{v}$$
 
+---
 
 ## Convenciones tipográficas
 
@@ -470,6 +492,7 @@ $$\text{proj}_{\vec{v&#125;&#125;(\vec{u}) = \frac{\vec{u} \cdot \vec{v&#125;&#1
 - $I$ → matriz identidad
 - $0$ → vector o matriz nula, según el contexto
 
+---
 
 ## Estructura típica de una expresión
 
@@ -484,6 +507,7 @@ Donde:
 
 Esta ecuación representa un **sistema de ecuaciones lineales**.
 
+---
 
 ## Recomendaciones para leer expresiones matemáticas
 
@@ -494,6 +518,7 @@ Esta ecuación representa un **sistema de ecuaciones lineales**.
 4. **Buscar patrones**: los teoremas y propiedades suelen repetirse con diferentes nombres o símbolos.  
 5. **Relacionar con su interpretación geométrica**: visualizar ayuda a entender los significados algebraicos.
 
+---
 
 ## Conceptos relacionados
 
@@ -504,6 +529,7 @@ Esta ecuación representa un **sistema de ecuaciones lineales**.
 - Espacios vectoriales  
 - Notación matemática general
 
+---
 
 # Problemas y soluciones de Álgebra Lineal
 
@@ -511,6 +537,7 @@ Esta nota reúne **problemas básicos con soluciones paso a paso**, útiles para
 
 Los diagramas **Mermaid** se usan para representar visualmente flujos de operaciones o relaciones entre vectores, matrices y transformaciones.
 
+---
 
 ## 🧩 Problema 1: Suma y multiplicación escalar de vectores
 
@@ -542,6 +569,7 @@ graph LR
 ```
 {% endraw %}`
 
+---
 
 ## 🧮 Problema 2: Producto escalar y ángulo entre vectores
 
@@ -555,6 +583,7 @@ $$
 1. $\vec{a} \cdot \vec{b}$  
 2. El ángulo entre ellos.
 
+---
 
 ### 🧩 Solución
 
@@ -580,6 +609,7 @@ $$
 \Rightarrow \theta = \cos^{-1}\left(\frac{2}{\sqrt{5&#125;&#125;\right) \approx 26.6^\circ
 $$
 
+---
 
 ### 💡 Interpretación geométrica
 
@@ -611,6 +641,7 @@ graph TD
 ```
 {% endraw %}
 
+---
 
 
 ## 🧩 Problema 3: Sistema de ecuaciones lineales
@@ -623,6 +654,7 @@ x + 2y = 5 \\
 \end{cases}
 $$
 
+---
 
 ### 💡 Solución matricial
 
@@ -684,6 +716,7 @@ $$
 \end{bmatrix}
 $$
 
+---
 
 ### 📊 Representación Mermaid
 
@@ -697,6 +730,7 @@ graph TD
 ```
 {% endraw %}`
 
+---
 
 ## 🔢 Problema 4: Transformación lineal y su efecto geométrico
 
@@ -710,6 +744,7 @@ $$
 1. La matriz asociada.
 2. El efecto geométrico.
 
+---
 
 ### 💡 Solución
 
@@ -733,6 +768,7 @@ $$
     - Escala el eje (x) por 2 y lo combina con (y).
     - Rota y estira el plano en direcciones oblicuas.
 
+---
 
 ### 🧭 Representación Mermaid
 
@@ -746,6 +782,7 @@ graph LR
 ```
 {% endraw %}
 
+---
 
 ## 📘 Problema 5: Autovalores y autovectores
 
@@ -760,6 +797,7 @@ $$
 
 **Encontrar los autovalores y autovectores.**
 
+---
 
 ### 💡 Solución
 
@@ -800,6 +838,7 @@ $$
 \Rightarrow \vec{v}_2 = (1, -2)  
 $$
 
+---
 
 ### ✅ Resultado final
 
@@ -823,6 +862,7 @@ graph TD
 ```
 {% endraw %}
 
+---
 
 ## 🧠 Recomendaciones de práctica
 
@@ -830,6 +870,7 @@ graph TD
 * Intenta **representar gráficamente** los vectores antes y después de transformarlos.
 * Usa Fundamentos de Álgebra Lineal y Lenguaje matemático del Álgebra Lineal como referencia teórica para comprender cada paso.
 
+---
 
 ## Conceptos relacionados
 
@@ -839,5 +880,6 @@ graph TD
 * Descomposición propia
 * PCA y espacios vectoriales
 
+---
 
 

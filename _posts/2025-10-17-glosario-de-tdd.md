@@ -1,13 +1,13 @@
-creation date: 2025-10-17 16:28
-tags:
+---
+date: 2025-10-17 16:28
+title: Glosario de TDD
 keywords:
 source:
 status: 📌
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-categories: "[Testing](/testing/testing/)"
+Parent: "[[Area-Prog]]"
 public_note: "true"
+category: Testing
+---
 # Glosario de TDD
 
 ## Fundamentos

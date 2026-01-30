@@ -1,17 +1,18 @@
-creation date: 2025-04-15 17:39
+---
+date: 2025-04-15 17:39
+title: ciberseguridad
+keywords:
+source:
+status: 🚀
+Parent: "[[Area-Sistemas]]"
+public_note: "true"
+category: ciberseguridad
 tags:
   - Hacking
   - ciberseguridad
   - hardening
   - pentesting
-keywords:
-source:
-status: 🚀
-Parent: "Area-Sistemas"
-cssclasses:
-  - hide-embedded-header1
-categories: "[ciberseguridad](/uncategorized/ciberseguridad/)"
-public_note: "true"
+---
 # ciberseguridad
 
 ## Áreas y fundamentos
@@ -106,7 +107,7 @@ public_note: "true"
 
 ## Servicios empresariales
 - servicios empresariales
-	- [ciberseguridad](/uncategorized/ciberseguridad/)
+	- [ciberseguridad](/ciberseguridad/ciberseguridad/)
 	- [SOC](/ciberseguridad/soc/) auditorias
 	- servicios de red y modelado
 	- [Redes](/redes/redes/)

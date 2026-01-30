@@ -1,15 +1,16 @@
-creation date: 2025-05-24 19:00
-tags:
-  - redes
-  - voip
+---
+date: 2025-05-24 19:00
+title: Videoconferencia
 keywords:
 source:
 status: 📌
-Parent: "Area-Sistemas"
-cssclasses:
-  - hide-embedded-header1
-categories: "[Telefonía y UC](/uncategorized/telefon-a-y-uc/)"
+Parent: "[[Area-Sistemas]]"
 public_note: "true"
+category: Telefona y UC
+tags:
+  - redes
+  - voip
+---
 # Videoconferencia
 
 

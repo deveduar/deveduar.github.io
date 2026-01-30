@@ -1,19 +1,18 @@
-creation date: 2025-11-05 13:46
+---
+date: 2025-11-05 13:46
+title: PF Programación Funcional
+keywords:
+source:
+status: 🌟
+Parent: "[[Area-Prog]]"
+aliases:
+public_note: "true"
+category: Computer Science
 tags:
   - CS
   - arquitectura
   - programming
-keywords:
-source:
-status: 🌟
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-categories: "[Computer Science](/computer%20science/computer-science/)"
-aliases:
-  - Programación Funcional
-  - PF
-public_note: "true"
+---
 # PF Programación Funcional
 ``
 
@@ -690,6 +689,7 @@ Modela funciones como **morfismos** y tipos como **objetos**, sirviendo de base 
 
 Esta nota **complementa y cierra** el tema de Programación Funcional, incorporando conceptos de **optimización, implementación práctica, tipado, patrones, verificación formal** y su relación con otros paradigmas y ecosistemas actuales. No repite contenido previo, sino que amplía el panorama hacia el uso profesional y teórico avanzado.
 
+---
 
 ## Tipado y seguridad en PF
 
@@ -740,6 +740,7 @@ data Vector : Nat -> Type -> Type where
 ```
 {% endraw %}
 
+---
 
 ## Evaluación y ejecución
 
@@ -761,6 +762,7 @@ function factorial(n, acc = 1) {
 ```
 {% endraw %}
 
+---
 
 ## PF aplicada a arquitectura y diseño
 
@@ -794,6 +796,7 @@ const aplicarEvento = (estado, evento) => {
 ```
 {% endraw %}
 
+---
 
 ## Patrones funcionales
 
@@ -841,6 +844,7 @@ const set = (lens, val, obj) => lens.set(val, obj);
 ```
 {% endraw %}
 
+---
 
 ## PF y concurrencia
 
@@ -873,6 +877,7 @@ end
 ```
 {% endraw %}
 
+---
 
 ## Verificación formal y PF
 
@@ -894,6 +899,7 @@ fc.assert(
 
 Basado en la **transparencia referencial**, permite reescribir funciones como ecuaciones matemáticas equivalentes, garantizando la corrección.
 
+---
 
 ## PF en la ingeniería de software moderna
 
@@ -913,6 +919,7 @@ El enfoque serverless encaja con PF:
 
 Uso de pipelines de transformación funcional en ETL, Spark, Pandas o DataFrames.
 
+---
 
 ## Lenguajes y ecosistemas destacados
 
@@ -927,6 +934,7 @@ Uso de pipelines de transformación funcional en ETL, Spark, Pandas o DataFrames
 | **PureScript**       | Puro                  | Compila a JavaScript, inspirado en Haskell  |
 | **Erlang**           | Funcional concurrente | Modelo de actores, resiliencia distribuida  |
 
+---
 
 ## PF y filosofía de diseño
 
@@ -936,6 +944,7 @@ Uso de pipelines de transformación funcional en ETL, Spark, Pandas o DataFrames
 * **Pureza por defecto:** los efectos deben justificarse.
 * **Transparencia en el flujo de datos.**
 
+---
 
 ## Ramas teóricas y matemáticas
 
@@ -947,6 +956,7 @@ Base de muchos lenguajes funcionales, donde los programas son **pruebas ejecutab
 
 Define las operaciones funcionales como **composiciones entre morfismos**, sentando la base de monadas, funtores y compositores.
 
+---
 
 ## PF en la educación y la industria
 
@@ -954,6 +964,7 @@ Define las operaciones funcionales como **composiciones entre morfismos**, senta
 * Industria: integración en frameworks modernos, pipelines, y sistemas distribuidos.
 * Impacto directo en React, Redux, Spark, Kafka Streams, y sistemas event-driven.
 
+---
 
 ## Glosario final (síntesis completa)
 
@@ -975,6 +986,7 @@ Define las operaciones funcionales como **composiciones entre morfismos**, senta
 * **Declaratividad:** expresar qué, no cómo.
 * **Determinismo:** predecibilidad total de salida.
 
+---
 
 ## Referencias cruzadas
 
@@ -995,6 +1007,7 @@ Define las operaciones funcionales como **composiciones entre morfismos**, senta
 
 Esta extensión aborda los **temas más avanzados, contemporáneos y experimentales** de la Programación Funcional —aquellos que la conectan con la teoría de tipos, la verificación formal, el paralelismo moderno, la semántica de lenguajes, la inteligencia artificial declarativa y el diseño de sistemas complejos.
 
+---
 
 ## Semántica formal y fundamentos teóricos
 
@@ -1024,6 +1037,7 @@ Base lógica de los lenguajes funcionales modernos:
 - Lambda simplemente tipado → control de tipos.  
 - Sistema de tipos dependientes → verificación lógica.
 
+---
 
 ## Programación funcional cuantitativa y probabilística
 
@@ -1052,6 +1066,7 @@ Investiga **costes computacionales como efectos**, integrando PF con **análisis
 * Control funcional del uso de memoria o energía.
 * Base teórica de optimizaciones perezosas y memoización adaptativa.
 
+---
 
 ## PF y paralelismo moderno
 
@@ -1086,6 +1101,7 @@ atomically $ do
 ```
 {% endraw %}
 
+---
 
 ## PF y aprendizaje automático funcional
 
@@ -1117,6 +1133,7 @@ print(df(2))  # 7
 ```
 {% endraw %}
 
+---
 
 ## PF en sistemas distribuidos y blockchain
 
@@ -1137,6 +1154,7 @@ validate tx = (sum (inputs tx)) >= (sum (outputs tx))
 
 Los algoritmos de consenso (Raft, Paxos) se pueden representar como **transformaciones puras** del estado global + log de eventos.
 
+---
 
 ## PF y metaprogramación
 
@@ -1165,6 +1183,7 @@ data Query = Select [Field] | Where Condition | Join Query Query
 ```
 {% endraw %}
 
+---
 
 ## PF y razonamiento formal asistido por máquina
 
@@ -1191,6 +1210,7 @@ Basado en el principio de **Curry–Howard**:
 
 Esto garantiza **corrección verificable** del código funcional.
 
+---
 
 ## PF aplicada a sistemas operativos y compiladores
 
@@ -1202,6 +1222,7 @@ Los compiladores de PF usan transformación de programas basada en **reescritura
 
 Investigación experimental en **kernels inmutables** donde los procesos y estados son estructuras funcionales persistentes (ej. MirageOS en OCaml).
 
+---
 
 ## PF y ecosistema cuántico
 
@@ -1222,6 +1243,7 @@ hadamardChain q = hadamard q >>= hadamard
 ```
 {% endraw %}
 
+---
 
 ## PF y diseño de interfaces declarativas
 
@@ -1242,6 +1264,7 @@ function Componente({ nombre }) {
 
 PF aplicada a interfaces reactivas: la UI es una **proyección funcional del estado** a lo largo del tiempo.
 
+---
 
 ## PF y computación simbólica
 
@@ -1260,6 +1283,7 @@ Lenguajes como **Lisp**, **Clojure** o **Wolfram Language** modelan código como
 
 PF se usa para derivar ecuaciones, simplificar expresiones o generar código optimizado.
 
+---
 
 ## Glosario técnico adicional
 
@@ -1274,6 +1298,7 @@ PF se usa para derivar ecuaciones, simplificar expresiones o generar código opt
 * **MetaPF:** metaprogramación funcional.
 * **Persistent Kernel:** sistema operativo con estado funcional inmutable.
 
+---
 
 ## Referencias cruzadas finales
 
@@ -1293,6 +1318,7 @@ PF se usa para derivar ecuaciones, simplificar expresiones o generar código opt
 
 Esta nota amplía los límites teóricos y prácticos de la Programación Funcional, abarcando **nuevas intersecciones con otros paradigmas, enfoques híbridos, metodologías de desarrollo y tendencias en investigación aplicada**, sin repetir conceptos previos.
 
+---
 
 ## Paradigmas híbridos y evolución práctica
 
@@ -1321,6 +1347,7 @@ Lenguajes como **Python**, **JavaScript**, **Rust** o **C#** adoptan conceptos f
 * Expresiones lambda puras.
 * Pattern matching (Rust, Swift, C# 9+).
 
+---
 
 ## Efectos algebraicos y manejo avanzado de efectos
 
@@ -1343,6 +1370,7 @@ Ventajas:
 * Mejor control de la inferencia de tipos.
 * Permiten semántica pura con efectos explícitos.
 
+---
 
 ## PF y optimización del compilador
 
@@ -1362,6 +1390,7 @@ sum (map (+1) [1..n])  →  foldl' (\acc x -> acc + (x+1)) 0 [1..n]
 
 Algunos compiladores funcionales modernos (como GHC) combinan **evaluación perezosa y estricta adaptativa**, decidiendo dinámicamente la estrategia de evaluación óptima.
 
+---
 
 ## PF en ingeniería de software moderna
 
@@ -1397,6 +1426,7 @@ prop_reverso xs = reverse (reverse xs) == xs
 ```
 {% endraw %}
 
+---
 
 ## PF y DevOps / Infraestructura
 
@@ -1418,6 +1448,7 @@ services.nginx.enable = true;
 CI/CD declarativo donde cada paso es una **función pura** transformando artefactos de software.
 Ejemplo: GitHub Actions como flujo funcional.
 
+---
 
 ## PF y bases de datos funcionales
 
@@ -1440,6 +1471,7 @@ Ejemplo:
 
 Cada transacción genera un nuevo estado derivado sin modificar el anterior, facilitando auditoría y rollback funcional.
 
+---
 
 ## PF aplicada a arquitectura de microservicios
 
@@ -1469,6 +1501,7 @@ foldEvents :: State -> [Event] -> State
 ```
 {% endraw %}
 
+---
 
 ## PF y seguridad formal
 
@@ -1498,6 +1531,7 @@ puedeAcceder :: Usuario -> Recurso -> Bool
 ```
 {% endraw %}
 
+---
 
 ## PF y inteligencia artificial simbólico-funcional
 
@@ -1513,6 +1547,7 @@ Integración de PF con IA simbólica y Lógica de primer orden:
 
 PF facilita la **explicabilidad funcional** de modelos al poder rastrear las transformaciones exactas de datos → resultados.
 
+---
 
 ## PF en investigación y lenguajes emergentes
 
@@ -1531,6 +1566,7 @@ PF facilita la **explicabilidad funcional** de modelos al poder rastrear las tra
 * **Luna / Enso:** visualización funcional.
 * **Glow:** PF para contratos inteligentes.
 
+---
 
 ## PF y sostenibilidad del software
 
@@ -1542,6 +1578,7 @@ La PF contribuye a la **eficiencia energética y sostenibilidad**:
 * Facilita optimización paralela y lazy evaluation.
 * Promueve sistemas deterministas y reproducibles (menos gasto computacional).
 
+---
 
 ## Glosario extendido
 
@@ -1555,6 +1592,7 @@ La PF contribuye a la **eficiencia energética y sostenibilidad**:
 * **Totalidad:** garantía de que toda función termina y cubre todos los casos posibles.
 * **Functional Hash Identity:** identificación inmutable de código por hash (Unison).
 
+---
 
 ## Referencias cruzadas finales
 

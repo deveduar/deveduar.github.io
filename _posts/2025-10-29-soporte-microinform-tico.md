@@ -1,15 +1,16 @@
-creation date: 2025-10-29 19:54
-tags:
-  - sistemas
-  - soporte
+---
+date: 2025-10-29 19:54
+title: Soporte Microinformático
 keywords:
 source:
 status: 🌟
-Parent: "Area-Sistemas"
-cssclasses:
-  - hide-embedded-header1
-categories: "[Sistemas](/sistemas/sistemas/)"
+Parent: "[[Area-Sistemas]]"
 public_note: "true"
+category: Sistemas
+tags:
+  - sistemas
+  - soporte
+---
 # Soporte Microinformático
 
 - [soporte tecnico](/infraestructura%20it/soporte-tecnico/)
@@ -19,12 +20,14 @@ public_note: "true"
 - Preparación de equipos
 - [monitoreo](/monitoreo/monitoreo/)
 
+---
 
 ## Introducción
 El soporte microinformático se centra en la gestión, mantenimiento y resolución de problemas en estaciones de trabajo, portátiles, periféricos y software de usuario final. Su objetivo principal es garantizar que los equipos funcionen correctamente, estén actualizados y cumplan con las políticas de la organización.
 
 Incluye tareas de instalación, configuración, diagnóstico, gestión de tickets y soporte al usuario final, además de la administración básica de sistemas y red a nivel local.
 
+---
 
 ## Responsabilidades Principales
 
@@ -55,6 +58,7 @@ Incluye tareas de instalación, configuración, diagnóstico, gestión de ticket
 * manejo de licencias, repositorios y versiones  
 * resolución de conflictos, errores y dependencias  
 
+---
 
 ## Preparación de Equipos
 Relacionado: Preparación de equipos
@@ -82,6 +86,7 @@ La preparación adecuada asegura consistencia técnica y ahorro de tiempo en des
 * enrolamiento automático en directorios y sistemas  
 * instalación automatizada de agentes de seguridad, monitoreo y respaldo  
 
+---
 
 ## Monitoreo
 Relacionado: [monitoreo](/monitoreo/monitoreo/)
@@ -94,6 +99,7 @@ El monitoreo permite detectar fallos antes de que el usuario los experimente.
 * agentes de telemetría y diagnósticos  
 * dashboards de salud de endpoints  
 
+---
 
 ## Buenas Prácticas
 
@@ -115,6 +121,7 @@ El monitoreo permite detectar fallos antes de que el usuario los experimente.
 * checklists para entrega y retirada de equipos  
 * procesos repetibles de onboarding/offboarding  
 
+---
 
 ## Interacción con el Usuario
 * comunicación clara y empática  
@@ -123,6 +130,7 @@ El monitoreo permite detectar fallos antes de que el usuario los experimente.
 * proporcionar consejos preventivos  
 * evitar reincidencias con formación básica  
 
+---
 
 ## Flujo General de Trabajo
 1. recepción de ticket en [ticketing](/management/ticketing/)  
@@ -133,3 +141,4 @@ El monitoreo permite detectar fallos antes de que el usuario los experimente.
 6. validación con el usuario  
 7. documentación y cierre  
 
+---

@@ -1,18 +1,18 @@
-creation date: 2024-11-23 03:43
+---
+date: 2024-11-23 03:43
+title: Terraform
+keywords:
+source:
+status: 🌟
+Parent: "[[Area-Sistemas]]"
+public_note: "true"
+category: devops
 tags:
   - devops
   - terraform
   - cloud
   - infraestructura
-keywords:
-source:
-status: 🌟
-Parent: "Area-Sistemas"
-cssclasses:
-  - hide-embedded-header1
-  - wide
-categories: "[devops](/devops/devops/)"
-public_note: "true"
+---
 # Terraform
 
 ## Conceptos base y ecosistema

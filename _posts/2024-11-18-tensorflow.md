@@ -1,18 +1,18 @@
-creation date: 2024-11-18 19:35
+---
+date: 2024-11-18 19:35
+title: TensorFlow
+keywords:
+source:
+status: 🌟
+Parent: "[[Area-Prog]]"
+public_note: "true"
+category: Data Science
 tags:
   - datascience
   - data-science
   - IA
   - tensorflow
-keywords:
-source:
-status: 🌟
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-  - wide
-categories: "[Data Science](/data%20science/data-science/)"
-public_note: "true"
+---
 # TensorFlow
 
 - [Data Science](/data%20science/data-science/)

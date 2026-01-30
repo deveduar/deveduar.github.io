@@ -1,18 +1,18 @@
-creation date: 2025-05-21 19:54
+---
+date: 2025-05-21 19:54
+title: ticketing
+keywords:
+source:
+status: 🌟
+Parent: "[[Area-Sistemas]]"
+public_note: "true"
+category: Management
 tags:
   - ticketing
   - Management
   - odoo
   - ERP
-keywords:
-source:
-status: 🌟
-Parent: "Area-Sistemas"
-cssclasses:
-  - hide-embedded-header1
-  - wide
-categories: "[Management](/management/management/)"
-public_note: "true"
+---
 # ticketing
 
 - [QA](/testing/qa/)
@@ -31,6 +31,7 @@ public_note: "true"
 - uvdesk
 - ppermint
 
+---
 
 ## Introducción
 Los sistemas de **ticketing** permiten gestionar incidencias, solicitudes, tareas y procesos internos dentro de una organización. Son esenciales para soporte técnico, atención al cliente, operaciones, QA, ITSM, y departamentos de negocio.
@@ -44,6 +45,7 @@ Su objetivo es lograr:
 
 Se alinean frecuentemente con prácticas de [ITIL](/infraestructura%20it/itil/) y flujos de trabajo empresariales relacionados con [CRM](/management/crm/), [ERP](/management/erp/) y plataformas de [Gestion de Negocio](/gestion%20de%20negocio/gestion-de-negocio/).
 
+---
 
 ## Componentes Clave de un Sistema de Ticketing
 
@@ -80,6 +82,7 @@ Basada en:
 * encuesta de satisfacción opcional  
 * clasificación final para análisis  
 
+---
 
 ## Métricas y KPIs
 * SLA cumplido / vencido  
@@ -90,6 +93,7 @@ Basada en:
 * satisfacción del usuario (CSAT)  
 * detección de problemas recurrentes  
 
+---
 
 ## Integraciones Habituales
 Los sistemas de ticketing suelen interactuar con múltiples plataformas:
@@ -104,6 +108,7 @@ Los sistemas de ticketing suelen interactuar con múltiples plataformas:
 * [Jira](/management/jira/): gestión de proyectos y devops  
 * [odoo](/infraestructura%20it/odoo/): helpdesk e integración con ERP modular  
 
+---
 
 ## Herramientas de Ticketing (Open Source y Comerciales)
 
@@ -127,6 +132,7 @@ Acceso técnico:
 * soporta acceso SSH al contenedor para mantenimiento  
 * actualizaciones controladas por Docker y scripts internos  
 
+---
 
 ### UVdesk
 Relacionado: uvdesk
@@ -143,6 +149,7 @@ Características:
 * integración con e-commerce  
 * APIs y desarrollo de módulos  
 
+---
 
 ### Peppermint (ppermint)
 Relacionado: ppermint
@@ -160,6 +167,7 @@ Ventajas:
 * API clara  
 * orientación a soporte interno y tareas rápidas  
 
+---
 
 ## Ticketing en Entornos Cloud
 Relacionado: [Cloud Computing](/cloud/cloud-computing/)
@@ -177,6 +185,7 @@ Automatizaciones posibles:
 * sincronización con métricas de [monitoreo](/monitoreo/monitoreo/)  
 * actualización de estados desde pipelines de QA o DevOps  
 
+---
 
 ## Buenas Prácticas del Sistema de Ticketing
 
@@ -201,6 +210,7 @@ Automatizaciones posibles:
 * alimentar la base de conocimiento  
 * registrar mejoras sugeridas para procesos o herramientas  
 
+---
 
 ## Ejemplo de Flujo General
 1. recepción del ticket  
@@ -212,3 +222,4 @@ Automatizaciones posibles:
 7. validación final  
 8. documentación y cierre  
 
+---

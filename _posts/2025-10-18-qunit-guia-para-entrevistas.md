@@ -1,13 +1,13 @@
-creation date: 2025-10-18 15:22
-tags:
+---
+date: 2025-10-18 15:22
+title: qunit guia para entrevistas
 keywords:
 source:
 status: 📌
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-categories: "[Testing](/testing/testing/)"
+Parent: "[[Area-Prog]]"
 public_note: "true"
+category: Testing
+---
 # QUnit - Guía completa para entrevistas y uso profesional
 
 

@@ -1,18 +1,18 @@
-creation date: 2025-04-14 18:01
+---
+date: 2025-04-14 18:01
+title: Acunetix scanner
+keywords:
+source:
+status: 🌟
+Parent: "[[Area-Sistemas]]"
+public_note: "true"
+category: monitoreo
 tags:
   - tool
   - Hacking
   - pentesting
   - vulnerabilidades
-keywords:
-source:
-status: 🌟
-Parent: "Area-Sistemas"
-cssclasses:
-  - hide-embedded-header1
-  - wide
-categories: "[monitoreo](/monitoreo/monitoreo/)"
-public_note: "true"
+---
 # Acunetix scanner
 
 ## Descripción general

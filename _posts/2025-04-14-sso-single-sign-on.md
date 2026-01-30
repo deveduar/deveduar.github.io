@@ -1,18 +1,17 @@
-creation date: 2025-04-14 19:00
-tags:
-  - autentication
-  - Hacking
+---
+date: 2025-04-14 19:00
+title: SSO Single Sign-On
 keywords:
 source:
 status: 🌟
-Parent: "Area-Sistemas"
-cssclasses:
-  - hide-embedded-header1
-categories: "[autenticacion](/autenticacion/autenticacion/)"
+Parent: "[[Area-Sistemas]]"
 aliases:
-  - sso
-  - SSO
 public_note: "true"
+category: autenticacion
+tags:
+  - autentication
+  - Hacking
+---
 # SSO Single Sign-On
 
 ## Conceptos Fundamentales
@@ -182,6 +181,7 @@ public_note: "true"
 - Apropiado para SSO corporativo en redes internas.
 - Enlace: [Kerberos](/autenticacion/kerberos/)
 
+---
 
 ## Frameworks y Librerías de Implementación
 
@@ -235,6 +235,7 @@ public_note: "true"
 - Integración con miles de aplicaciones.
 - MFA, context-aware access, políticas de riesgo.
 
+---
 
 ## Tecnologías y Estándares Complementarios
 
@@ -258,6 +259,7 @@ public_note: "true"
 - Protocolo anterior a OIDC y SAML, todavía usado en entornos Microsoft.
 - Puede interoperar con AD FS.
 
+---
 
 ## Implementaciones Específicas por Lenguaje
 
@@ -282,6 +284,7 @@ public_note: "true"
 - **golang.org/x/oauth2**
 - **coreos/go-oidc** (muy robusto para validación OIDC).
 
+---
 
 ## Plataformas de IAM / IdP Relevantes
 
@@ -297,6 +300,7 @@ public_note: "true"
 - **Ping Identity**
 - **CyberArk Identity**
 
+---
 
 ## Criterios para Seleccionar un Framework
 ### Escalabilidad
@@ -321,6 +325,7 @@ public_note: "true"
 - Auditoría centralizada.
 - Certificaciones (ISO 27001, SOC2).
 
+---
 
 ## Ejemplo: Configuración Básica OIDC (Keycloak)
 

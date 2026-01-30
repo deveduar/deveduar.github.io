@@ -1,18 +1,17 @@
-creation date: 2025-04-15 03:33
-tags:
-  - Hacking
-  - amenazas
+---
+date: 2025-04-15 03:33
+title: modelado de amenazas
 keywords:
 source:
 status: 🌟
-Parent: "Area-Sistemas"
-cssclasses:
-  - hide-embedded-header1
-  - wide
-categories: "[ciberseguridad](/ciberseguridad/ciberseguridad/)"
+Parent: "[[Area-Sistemas]]"
 aliases:
-  - Threat modeling
 public_note: "true"
+category: ciberseguridad
+tags:
+  - Hacking
+  - amenazas
+---
 # Modelado de Amenazas
 
 ## Concepto de Threat Modeling
@@ -151,7 +150,7 @@ El modelado de amenazas ayuda a:
 Referencia:
 - [¿Qué es una amenaza persistente avanzada (APT)? | Fortinet](https://www.fortinet.com/lat/resources/cyberglossary/advanced-persistent-threat)
 
-## Herramientas de [Threat modeling](/uncategorized/modelado-de-amenazas/)
+## Herramientas de [Threat modeling](/ciberseguridad/modelado-de-amenazas/)
 - Microsoft Threat Modeling Tool.
 - OWASP Threat Dragon.
 - IriusRisk.

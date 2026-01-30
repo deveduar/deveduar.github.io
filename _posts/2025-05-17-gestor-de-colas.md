@@ -1,16 +1,16 @@
-creation date: 2025-05-17 19:05
-tags:
-  - backend
-  - rabbitmq
+---
+date: 2025-05-17 19:05
+title: gestor de colas
 keywords:
 source:
 status: 🌟
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-  - wide
-categories: "[Backend](/backend/backend/)"
+Parent: "[[Area-Prog]]"
 public_note: "true"
+category: Backend
+tags:
+  - backend
+  - rabbitmq
+---
 # Gestor de Colas
 
 ## Conceptos Fundamentales
@@ -56,6 +56,7 @@ Permiten desacoplar productores y consumidores, absorber picos de carga y garant
 	- Locks distribuidos (evita doble procesamiento).
 	- Streams de datos (Redis Streams).
 
+---
 
 ## Tecnologías Populares
 
@@ -80,6 +81,7 @@ Ideal para:
 - Grandes volúmenes de mensajes.
 - Integración con sistemas de [Stream Processing](/backend/stream-processing/): Flink, Kafka Streams, Spark.
 
+---
 
 ## Escenarios Típicos
 - **Enviar correos**: workers consumen tareas de email y las envían.
@@ -91,6 +93,7 @@ Ideal para:
 - **ETL**: mover datos desde servicios hacia pipelines de análisis.
 - **Chat y tiempo real** (Kafka o Redis Streams).
 
+---
 
 ## Comparativa Rápida
 
@@ -109,6 +112,7 @@ Ideal para:
 - **Ventaja**: rapidez extrema.
 - **Uso típico**: colas ligeras, sistemas de tiempo real, throttling, rate limiting.
 
+---
 
 ## Diseño de Sistemas con Gestores de Colas
 
@@ -128,6 +132,7 @@ Ideal para:
 - Mezclar demasiados tipos de mensajes en una misma cola.
 - No planificar particionamiento en Kafka.
 
+---
 
 ## Ejemplos de Código
 
@@ -176,6 +181,7 @@ consume();
 ```
 {% endraw %}
 
+---
 
 ## Recursos Recomendados
 

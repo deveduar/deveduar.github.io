@@ -1,13 +1,13 @@
-creation date: 2025-10-22 12:19
-tags:
+---
+date: 2025-10-22 12:19
+title: Estrategias de mocking para APIs y servicios externos con Jest
 keywords:
 source:
 status: 📌
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-categories:
+Parent: "[[Area-Prog]]"
 public_note: "true"
+category: uncategorized
+---
 # Estrategias de mocking para APIs y servicios externos con Jest
 
 - [jest](/testing/jest/)
@@ -30,6 +30,7 @@ public_note: "true"
 - El objetivo: **aislar la lógica interna** del código sin depender de factores externos (latencia, credenciales, red).  
 - Se usa tanto en **Unit test** (mocks simples) como en **integration test** (mocks más realistas con herramientas como [MSW Mocks service worker](/testing/msw-mocks-service-worker/)).
 
+---
 
 ## ⚙️ Tipos de mocks en Jest
 
@@ -40,6 +41,7 @@ public_note: "true"
 | **Mock functions** | Con `jest.fn()` o `jest.spyOn()` | Lógica interna o callbacks |
 | **Service Workers** | Con [MSW Mocks service worker](/testing/msw-mocks-service-worker/) | Pruebas de red realistas (front o backend) |
 
+---
 
 ## 🧩 Ejemplo 1: Mock de `fetch` global
 
@@ -86,6 +88,7 @@ describe('getUsers', () => {
 
 > ✅ Ideal para servicios basados en `fetch` o `window.fetch` en entornos frontend.
 
+---
 
 ## 🧩 Ejemplo 2: Mock de [axios](/backend/axios/)
 
@@ -118,6 +121,7 @@ test('devuelve token al hacer login', async () => {
 
 > 💡 `vi.mock` o `jest.mock` interceptan las importaciones y permiten sustituir módulos enteros.
 
+---
 
 ## 🧠 Ejemplo 3: Mock manual con `__mocks__`
 
@@ -164,6 +168,7 @@ test('usa el mock manual correctamente', async () => {
 
 > ✅ Los mocks manuales son ideales para reutilizar respuestas simuladas complejas o centralizar comportamientos de APIs externas.
 
+---
 
 ## 🧩 Ejemplo 4: Mock con [MSW Mocks service worker](/testing/msw-mocks-service-worker/)
 
@@ -221,6 +226,7 @@ test('retorna usuario simulado desde MSW', async () => {
 
 > 🧩 MSW es la opción más realista: intercepta las peticiones HTTP como lo haría el navegador o Node, sin necesidad de reescribir código ni usar `vi.mock`.
 
+---
 
 ## 🧠 Ejemplo 5: Mock dinámico para errores controlados
 
@@ -242,6 +248,7 @@ test('maneja errores del servidor', async () => {
 ```
 {% endraw %}
 
+---
 
 ## 🧩 Ejemplo 6: Mock de módulos del sistema (ej. `fs`, `path`)
 
@@ -269,6 +276,7 @@ test('lee el archivo simulado', () => {
 
 > 💡 Los mocks de módulos internos permiten testear sin acceder al sistema de archivos, red o procesos reales.
 
+---
 
 ## 💡 Buenas prácticas
 
@@ -281,6 +289,7 @@ test('lee el archivo simulado', () => {
 * Define tipados correctos en mocks (`as jest.Mock` o `Mocked<T>`).
 * Simula latencia con `await waitFor()` o `mockImplementation(async () => ...)`.
 
+---
 
 ## 🧠 Depuración y errores comunes
 
@@ -292,6 +301,7 @@ test('lee el archivo simulado', () => {
 | Mock incompleto                | Falta `default` export              | Usa `vi.mock('axios', () => ({ default: { ... } }))` |
 | Llamadas reales en CI          | Falta setup global de MSW           | Importar `server.listen()` en setup global           |
 
+---
 
 ## 📊 Integración con [CICD](/devops/cicd/)
 
@@ -315,6 +325,7 @@ jobs:
 
 > 📈 Se recomienda almacenar las respuestas mock en JSONs versionados (`/fixtures`) y validarlas con SonarQube para consistencia.
 
+---
 
 ## 📚 Recursos recomendados
 

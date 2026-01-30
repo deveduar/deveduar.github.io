@@ -1,15 +1,16 @@
-creation date: 2025-05-21 15:31
-tags:
-  - IT
-  - infraestructura
+---
+date: 2025-05-21 15:31
+title: iPaaS Integration Platform as a Service
 keywords:
 source:
 status: 🌟
-Parent: "Area-Sistemas"
-cssclasses:
-  - hide-embedded-header1
-categories: "[infraestructura IT](/infraestructura%20it/infraestructura-it/)"
+Parent: "[[Area-Sistemas]]"
 public_note: "true"
+category: infraestructura IT
+tags:
+  - IT
+  - infraestructura
+---
 # iPaaS Integration Platform as a Service
 
 - [infraestructura IT](/infraestructura%20it/infraestructura-it/)

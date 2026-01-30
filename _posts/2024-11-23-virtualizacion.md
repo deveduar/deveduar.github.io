@@ -1,16 +1,17 @@
-creation date: 2024-11-23 01:54
+---
+date: 2024-11-23 01:54
+title: Virtualizacion
+keywords:
+source:
+status: 🌟
+Parent: "[[Area-Sistemas]]"
+public_note: "true"
+category: devops
 tags:
   - virtualizacion
   - devops
   - VMware
-keywords:
-source:
-status: 🌟
-Parent: "Area-Sistemas"
-cssclasses:
-  - hide-embedded-header1
-categories: "[devops](/devops/devops/)"
-public_note: "true"
+---
 # Virtualización
 
 - [devops](/devops/devops/)

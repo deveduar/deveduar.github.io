@@ -1,16 +1,17 @@
-creation date: 2025-06-10 02:42
+---
+date: 2025-06-10 02:42
+title: microfrontend
+keywords:
+source:
+status: 🌟
+Parent: "[[Area-Prog]]"
+public_note: "true"
+category: Frontend
 tags:
   - microservicios
   - microfrontend
   - frontend
-keywords:
-source:
-status: 🌟
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-categories: "[Frontend](/frontend/frontend/)"
-public_note: "true"
+---
 # microfrontend
 
 - [Frontend](/frontend/frontend/)
@@ -27,6 +28,7 @@ public_note: "true"
 	- Carga dinámica de builds usando [webpack](/automatizacion%20y%20build/webpack/) y su ecosistema.
 	- Integraciones avanzadas con module federation.
 
+---
 
 ## Beneficios
 - **Escalabilidad organizacional**  
@@ -38,6 +40,7 @@ public_note: "true"
 - **Performance optimizada por contexto**  
 	- Cargar sólo lo necesario para cada sección.
 
+---
 
 ## Desventajas y desafíos
 - **Complejidad operativa**  
@@ -49,6 +52,7 @@ public_note: "true"
 - **Observabilidad distribuida**  
 	- Requiere logs, métricas y tracing granular por microfrontend.
 
+---
 
 ## Arquitecturas típicas
 ### 1. Integración en build-time
@@ -65,6 +69,7 @@ public_note: "true"
 - Cada microfrontend expone un `<custom-element>` interoperable.
 - Permite mezclar frameworks: React, Svelte, Solid, Vue, etc.
 
+---
 
 ## Casos de uso
 - Plataformas SaaS modulares (dashboard con apps independientes).
@@ -72,6 +77,7 @@ public_note: "true"
 - Productos que requieren **experimentos A/B** sin recompilar el resto.
 - Migraciones tecnológicas graduales (React → Solid, Vue → Svelte, etc.).
 
+---
 
 ## Cuándo usarlos
 - Cuando el tamaño o la complejidad organizacional lo exige.
@@ -79,6 +85,7 @@ public_note: "true"
 - Cuando la app es susceptible a **despliegues frecuentes** y parciales.
 - Cuando hay múltiples productos compartiendo la misma plataforma.
 
+---
 
 ## Cuándo evitarlos
 - Apps pequeñas o medianas donde añadir capas de orquestación es innecesario.
@@ -86,11 +93,13 @@ public_note: "true"
 - Proyectos donde la consistencia visual es crítica y no hay diseño unificado.
 - Situaciones de rendimiento extremo sin CDN ni arquitectura sólida.
 
+---
 
 ## Microfrontends en producción (ejemplos)
 Consulta la nota:  
 - Ejemplos Reales y Detallados de Microfrontends
 
+---
 
 ## Implementación con [nextjs](/frontend/nextjs/)
 - Plantilla oficial:  
@@ -100,6 +109,7 @@ Consulta la nota:
 	- La shell actúa como router y agregador de contenido remoto.
 	- Se combinan rutas, componentes y APIs mediante fetch y runtime remotes.
 
+---
 
 ## Integración con Webpack y Module Federation
 ### Module Federation (Webpack 5+)
@@ -115,6 +125,7 @@ Consulta la nota:
 - Microfrontends con Module Federation-microfrontends-con-module-federation-1apg
 - gpt minimo funcional module federation
 
+---
 
 ## Diseño, comunicación y sincronización
 ### Contratos entre microfrontends
@@ -130,6 +141,7 @@ Consulta la nota:
 - Logs por microfrontend + correlación en la shell.
 - Métricas por recurso cargado, errores, TTI y latencia de remotes.
 
+---
 
 ## Patrones avanzados
 ### 1. Shell + Remotes
@@ -145,6 +157,7 @@ Consulta la nota:
 ### 4. Hybrid Rendering
 - Algunos microfrontends SSR, otros SPA, coexistiendo sin conflictos.
 
+---
 
 ## Buenas prácticas
 - Versionado semántico estricto.
@@ -153,6 +166,7 @@ Consulta la nota:
 - Documentación continua: endpoints, rutas, eventos, contratos.
 - Cargar microfrontends on-demand siempre que se pueda (lazy).
 
+---
 
 ## Código (ejemplo básico Module Federation)
 ### Configuración del host (webpack.config.js)
@@ -182,6 +196,7 @@ module.exports = {
 ```
 {% endraw %}
 
+---
 
 ## Checklist rápido para decidir si necesitas microfrontends
 
@@ -219,6 +234,7 @@ Si la mayoría son **sí**, los microfrontends son adecuados.
 	- Notificaciones
 - Cada capacidad se entrega como paquete UI + lógica + servicios.
 
+---
 
 ## Integración avanzada entre microfrontends
 ### Orquestación de estados globales
@@ -241,6 +257,7 @@ Si la mayoría son **sí**, los microfrontends son adecuados.
 - Los microfrontends reaccionan sin conocer el router real usado por la shell.
 - Evita que cada remote imponga su router (Next, Remix, React Router, etc.).
 
+---
 
 ## Optimización de rendimiento (temas todavía no cubiertos)
 ### Split SSR/CSR inteligente
@@ -262,6 +279,7 @@ Si la mayoría son **sí**, los microfrontends son adecuados.
 - Regla: ningún remote accede al almacenamiento privado del otro.
 - Reducción de colisiones, fugas y migraciones fallidas.
 
+---
 
 ## Seguridad moderna (sin repetir lo anterior)
 ### Zero-trust entre microfrontends
@@ -283,6 +301,7 @@ Si la mayoría son **sí**, los microfrontends son adecuados.
 	- Editores WYSIWYG avanzados
 	- Integraciones externas
 
+---
 
 ## Flujo de trabajo, CI/CD y DevOps
 ### Pipelines independientes
@@ -304,6 +323,7 @@ Si la mayoría son **sí**, los microfrontends son adecuados.
 	- Ej: Remoto A en Staging + Remote B en Producción.
 - Facilita pruebas reales sin desplegar todo.
 
+---
 
 ## Gestión y evolución del diseño (sin repetir conceptos previos)
 ### Design tokens federados
@@ -320,6 +340,7 @@ Si la mayoría son **sí**, los microfrontends son adecuados.
 	- Espaciados
 - El remote adapta la UI sin cambiar código.
 
+---
 
 ## Migraciones y coexistencia tecnológica
 ### Convivencia de frameworks (profundización)
@@ -335,6 +356,7 @@ Si la mayoría son **sí**, los microfrontends son adecuados.
 	- Vue 2 legacy → Nuevo stack con SvelteKit.
 	- Angular 12 legacy → Modern Angular + SSR.
 
+---
 
 ## Testing avanzado para microfrontends
 ### Testing aislado por remote
@@ -354,6 +376,7 @@ Si la mayoría son **sí**, los microfrontends son adecuados.
 	- Error boundaries
 	- Re-intentos de carga
 
+---
 
 ## Observabilidad distribuida (ampliación)
 ### Telemetría por microfrontend
@@ -367,6 +390,7 @@ Si la mayoría son **sí**, los microfrontends son adecuados.
 - Unir trazas de varios remotes bajo un mismo `session-id`.
 - Facilita debugging en sistemas extensos.
 
+---
 
 ## Mantenimiento a largo plazo
 ### Políticas de deprecación
@@ -382,6 +406,7 @@ Si la mayoría son **sí**, los microfrontends son adecuados.
 	- SLA / nivel de soporte  
 	- Canal para incidencias  
 
+---
 
 ## Checklist final de temas avanzados
 - ¿Tenemos CSP segmentada?
@@ -406,6 +431,7 @@ Si la mayoría son **sí**, los microfrontends son adecuados.
 - **Integración en Runtime**: Composición de microfrontends directamente en el navegador o edge.
 - **Integración en Build-Time**: Ensamblado de los microfrontends antes del deploy final.
 
+---
 
 ## Comunicación y Contratos
 - **Event Bus Federado**: Sistema de eventos desacoplado compartido por microfrontends.
@@ -415,6 +441,7 @@ Si la mayoría son **sí**, los microfrontends son adecuados.
 - **Synchronised Navigation**: Emisión de eventos estándar para coordinar navegaciones entre remotes.
 - **Contract Testing**: Pruebas que validan que las interfaces públicas se mantienen estables.
 
+---
 
 ## Integración Técnica
 - **Module Federation**: Mecanismo de Webpack 5 para compartir módulos en runtime.
@@ -424,6 +451,7 @@ Si la mayoría son **sí**, los microfrontends son adecuados.
 - **Shadow DOM**: Aislamiento de estilos y estructura interna de componentes.
 - **Sandboxing (iframe / WebContainers)**: Aislamiento estricto para funcionalidades no confiables.
 
+---
 
 ## Diseño, UI y Consistencia
 - **Design Tokens Federados**: Esquema centralizado con colores, spacing, tipografías, etc.
@@ -431,6 +459,7 @@ Si la mayoría son **sí**, los microfrontends son adecuados.
 - **UI Kit Neutral**: Componentes base agnósticos al framework utilizados por todos los remotes.
 - **Aislamiento Visual**: Uso de Shadow DOM y tokens para evitar fugas de estilos.
 
+---
 
 ## Performance y Optimización
 - **Lazy Loading de Remotes**: Carga bajo demanda según rutas o interacción del usuario.
@@ -439,6 +468,7 @@ Si la mayoría son **sí**, los microfrontends son adecuados.
 - **Islas de Interactividad**: Secciones interactivas aisladas que reducen hidratación global.
 - **Persistencia Segmentada**: Cada microfrontend usa sus propios espacios de IndexedDB o Cache.
 
+---
 
 ## Seguridad y Aislamiento
 - **Zero Trust Interno**: Cada remote se considera no confiable hasta que se validan sus límites.
@@ -446,6 +476,7 @@ Si la mayoría son **sí**, los microfrontends son adecuados.
 - **Validación de Eventos**: Filtrado estricto de mensajes, props y canales de comunicación.
 - **Firmas de Build / Integrity Checks**: Verificación de integridad al cargar remotes.
 
+---
 
 ## DevOps, CI/CD y Entornos
 - **Despliegues Independientes**: Cada microfrontend tiene su pipeline autónomo.
@@ -454,6 +485,7 @@ Si la mayoría son **sí**, los microfrontends son adecuados.
 - **Rollback Independiente**: Reversión de un remote sin afectar a otros.
 - **URLs Dinámicas de Remotes**: La shell actualiza punteros sin necesidad de reconstruirse.
 
+---
 
 ## Testing y Calidad
 - **Testing Aislado**: Pruebas unitarias e integración por microfrontend.
@@ -461,6 +493,7 @@ Si la mayoría son **sí**, los microfrontends son adecuados.
 - **Smoke Tests en Shell**: Comprobación de carga correcta de remotes reales.
 - **Testing de Resiliencia**: Simulación de remotes lentos, caídos o corruptos.
 
+---
 
 ## Observabilidad y Monitoreo Distribuido
 - **Telemetría por Remote**: Logs, métricas y trazas generadas por cada microfrontend.
@@ -468,6 +501,7 @@ Si la mayoría son **sí**, los microfrontends son adecuados.
 - **Session Stitching**: Ensamblado de sesiones multi-remote en un solo timeline.
 - **Metrics Budget por Remote**: Límites independientes de peso, tiempo de carga o errores.
 
+---
 
 ## Mantenimiento y Gobernanza
 - **Ownership por Microfrontend**: Equipo responsable, SLOs, soporte y roadmap.
@@ -475,6 +509,7 @@ Si la mayoría son **sí**, los microfrontends son adecuados.
 - **Documentación Federada**: Repositorio central de contratos, rutas, tokens y eventos.
 - **Límites de Dominio**: Identificación clara de responsabilidades entre equipos.
 
+---
 
 # explicacion de uso de microfronteds para entrevistas
 
@@ -503,6 +538,7 @@ Este enfoque se complementa muy bien con mis conocimientos en **Next.js, Docker,
 - Cada microfrontend representa **una parte autónoma del producto**, con equipos, tecnología, pipelines y ciclos de release independientes.
 - La aplicación completa se construye mediante **composición**, no mediante un único build monolítico.
 
+---
 
 ## Fundamentos conceptuales
 ### División por dominios
@@ -530,6 +566,7 @@ Este enfoque se complementa muy bien con mis conocimientos en **Next.js, Docker,
 	- Aislamiento de datos locales (IndexedDB, Cache Storage)
 	- Aislamiento de seguridad (CSP, sandbox)
 
+---
 
 ## Principios arquitectónicos
 ### 1. Independencia de despliegue
@@ -556,6 +593,7 @@ Este enfoque se complementa muy bien con mis conocimientos en **Next.js, Docker,
 	- Fallback UI
 	- Timeouts y reintentos para cargar remotos
 
+---
 
 ## Componentes base de la arquitectura
 ### Shell / Host
@@ -583,6 +621,7 @@ Este enfoque se complementa muy bien con mis conocimientos en **Next.js, Docker,
 	- BroadcastChannel
 	- Mensajería sandbox
 
+---
 
 ## Patrones estructurales
 ### Microfrontends por página
@@ -601,6 +640,7 @@ Este enfoque se complementa muy bien con mis conocimientos en **Next.js, Docker,
 - Los remotes se cargan dinámicamente cuando el usuario navega.
 - Modelo común con Module Federation, import maps o Web Components.
 
+---
 
 ## Tecnologías fundamentales
 ### Web Components
@@ -616,6 +656,7 @@ Este enfoque se complementa muy bien con mis conocimientos en **Next.js, Docker,
 - Controlan qué módulos deben cargarse y desde dónde.
 - Permiten reconfigurar remotes sin reconstruir la shell.
 
+---
 
 ## Comunicación y datos
 ### Comunicación mínima
@@ -633,6 +674,7 @@ Este enfoque se complementa muy bien con mis conocimientos en **Next.js, Docker,
 	- La shell controla el router
 	- Los microfrontends emiten señales de navegación
 
+---
 
 ## Seguridad en la arquitectura
 - Zero Trust interno: cada remote se trata como no confiable.
@@ -640,6 +682,7 @@ Este enfoque se complementa muy bien con mis conocimientos en **Next.js, Docker,
 - Aislamiento de terceros mediante sandbox (iframe o WebContainer).
 - Validación estricta de eventos, props y mensajes.
 
+---
 
 ## DevOps y flujos de trabajo
 ### Pipelines independientes
@@ -657,6 +700,7 @@ Este enfoque se complementa muy bien con mis conocimientos en **Next.js, Docker,
 - Contract tests entre dominios
 - Smoke tests en la shell
 
+---
 
 ## Observabilidad y mantenimiento
 - Telemetría distribuida: cada microfrontend emite sus métricas.
@@ -664,6 +708,7 @@ Este enfoque se complementa muy bien con mis conocimientos en **Next.js, Docker,
 - Presupuestos de rendimiento por microfrontend.
 - Políticas de deprecación bien documentadas.
 
+---
 
 ## Principios de diseño a largo plazo
 - Minimizar dependencias compartidas.
@@ -672,3 +717,4 @@ Este enfoque se complementa muy bien con mis conocimientos en **Next.js, Docker,
 - Asegurar que la arquitectura permite evolucionar el producto por partes.
 - Priorizar la coherencia visual mediante tokens federados, no mediante frameworks comunes.
 
+---

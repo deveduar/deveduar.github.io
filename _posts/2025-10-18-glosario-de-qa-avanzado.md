@@ -1,13 +1,13 @@
-creation date: 2025-10-18 16:31
-tags:
+---
+date: 2025-10-18 16:31
+title: glosario de QA Avanzado
 keywords:
 source:
 status: 📌
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-categories: "[Testing](/testing/testing/)"
+Parent: "[[Area-Prog]]"
 public_note: "true"
+category: Testing
+---
 # Glosario de QA Avanzado
 ## Estrategias de Testing Avanzadas
 - **Test Driven Development (TDD)**: Metodología donde las pruebas se escriben antes del código, guiando el diseño y desarrollo

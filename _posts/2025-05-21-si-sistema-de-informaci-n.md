@@ -1,16 +1,17 @@
-creation date: 2025-05-21 16:53
+---
+date: 2025-05-21 16:53
+title: SI Sistema de Información
+keywords:
+source:
+status: 🌟
+Parent: "[[Area-Sistemas]]"
+public_note: "true"
+category: infraestructura IT
 tags:
   - ITIL
   - SI
   - infraestructura
-keywords:
-source:
-status: 🌟
-Parent: "Area-Sistemas"
-cssclasses:
-  - hide-embedded-header1
-categories: "[infraestructura IT](/infraestructura%20it/infraestructura-it/)"
-public_note: "true"
+---
 # SI Sistema de Información
 ``
 

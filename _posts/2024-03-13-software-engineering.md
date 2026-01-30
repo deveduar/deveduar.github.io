@@ -1,14 +1,16 @@
-creation date: 2024-03-13 15:51
-tags:
-  - desarrollo
-  - programming
+---
+date: 2024-03-13 15:51
+title: Software engineering
 keywords:
 source:
 status: 🚀
-Parent: "Area-Prog"
-cssclasses:
-categories: "[Software engineering](/uncategorized/software-engineering/)"
+Parent: "[[Area-Prog]]"
 public_note: "true"
+category: Software engineering
+tags:
+  - desarrollo
+  - programming
+---
 # Software engineering
 
 - fundamentos técnicos

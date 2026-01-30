@@ -1,17 +1,18 @@
-creation date: 2025-04-14 17:50
+---
+date: 2025-04-14 17:50
+title: Burp Suite
+keywords:
+source:
+status: 🌟
+Parent: "[[Area-Sistemas]]"
+public_note: "true"
+category: ciberseguridad
 tags:
   - Hacking
   - pentesting
   - burp-suite
   - tool
-keywords:
-source:
-status: 🌟
-Parent: "Area-Sistemas"
-cssclasses:
-  - hide-embedded-header1
-categories: "[ciberseguridad](/ciberseguridad/ciberseguridad/)"
-public_note: "true"
+---
 # Burp Suite
 ``
 

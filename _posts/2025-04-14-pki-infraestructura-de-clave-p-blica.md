@@ -1,17 +1,17 @@
-creation date: 2025-04-14 19:57
+---
+date: 2025-04-14 19:57
+title: PKI infraestructura de clave pública
+keywords:
+source:
+status: 🌟
+Parent: "[[Area-Sistemas]]"
+public_note: "true"
+category: autenticacion
 tags:
   - autenticacion
   - criptografia
   - pki
-keywords:
-source:
-status: 🌟
-Parent: "Area-Sistemas"
-cssclasses:
-  - hide-embedded-header1
-  - wide
-categories: "[autenticacion](/autenticacion/autenticacion/)"
-public_note: "true"
+---
 # PKI infraestructura de clave pública
 
 - [criptografia](/autenticacion/criptografia/)  
@@ -130,7 +130,7 @@ public_note: "true"
 # PKI avanzada: arquitecturas, automatización, post-quantum y operación
 
 - [criptografia](/autenticacion/criptografia/)
-- [PKI infraestructura de clave pública](/uncategorized/pki-infraestructura-de-clave-p-blica/)
+- [PKI infraestructura de clave pública](/autenticacion/pki-infraestructura-de-clave-p-blica/)
 - [autenticacion](/autenticacion/autenticacion/)
 - control de acceso
 - zero trust
@@ -235,7 +235,7 @@ public_note: "true"
 
 # PKI avanzada: frameworks, herramientas y casos de uso
 
-- [PKI infraestructura de clave pública](/uncategorized/pki-infraestructura-de-clave-p-blica/)
+- [PKI infraestructura de clave pública](/autenticacion/pki-infraestructura-de-clave-p-blica/)
 - zero trust
 - [criptografia](/autenticacion/criptografia/)
 - control de acceso

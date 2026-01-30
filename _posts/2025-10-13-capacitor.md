@@ -1,17 +1,18 @@
-creation date: 2025-10-13 14:45
+---
+date: 2025-10-13 14:45
+title: capacitor
+keywords:
+source:
+status: 🌟
+Parent: "[[Area-Prog]]"
+public_note: "true"
+category: Desarrollo multiplataforma
 tags:
   - desktop-apps
   - Capacitor
   - android
   - native_runtime
-keywords:
-source:
-status: 🌟
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-categories: "[Desarrollo multiplataforma](/desarrollo%20multiplataforma/desarrollo-multiplataforma/)"
-public_note: "true"
+---
 # Capacitor
 ``
 ## Recursos y documentación

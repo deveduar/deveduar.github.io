@@ -1,17 +1,17 @@
-creation date: 2024-11-23 01:59
+---
+date: 2024-11-23 01:59
+title: Windows Server
+keywords:
+source:
+status: 🌟
+Parent: "[[Area-Sistemas]]"
+public_note: "true"
+category: devops
 tags:
   - Windows
   - backend
   - devops
-keywords:
-source:
-status: 🌟
-Parent: "Area-Sistemas"
-cssclasses:
-  - hide-embedded-header1
-  - wide
-categories: "[devops](/devops/devops/)"
-public_note: "true"
+---
 # Windows Server
 
 ## Contexto y alcance

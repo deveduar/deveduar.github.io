@@ -1,14 +1,15 @@
-tags:
-  - CSS
+---
+date: 2024-02-15 16:30
+title: CSS-basico
 status: 📌
-Parent: "Area-Prog"
-creation date: 2024-02-15 16:30
+Parent: "[[Area-Prog]]"
 keywords:
 source:
-cssclasses:
-  - hide-embedded-header1
-categories:
 public_note: "true"
+category: uncategorized
+tags:
+  - CSS
+---
 # CSS-basico
 
 ## Introducción a CSS

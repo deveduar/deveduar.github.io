@@ -1,17 +1,17 @@
-creation date: 2025-04-15 16:40
-tags:
-  - Hacking
-  - ciberseguridad
+---
+date: 2025-04-15 16:40
+title: ingenieria inversa
 keywords:
 source:
 status: 🌟
-Parent: "Area-Sistemas"
-cssclasses:
-  - hide-embedded-header1
-categories: "[ciberseguridad](/ciberseguridad/ciberseguridad/)"
+Parent: "[[Area-Sistemas]]"
 aliases:
-  - Reverse engineering
 public_note: "true"
+category: ciberseguridad
+tags:
+  - Hacking
+  - ciberseguridad
+---
 # Ingeniería inversa
 ``
 

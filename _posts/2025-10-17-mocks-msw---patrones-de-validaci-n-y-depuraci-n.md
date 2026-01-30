@@ -1,13 +1,13 @@
-creation date: 2025-10-17 18:38
-tags:
+---
+date: 2025-10-17 18:38
+title: Mocks MSW - patrones de validación y depuración
 keywords:
 source:
 status: 📌
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-categories: "[Testing](/testing/testing/)"
+Parent: "[[Area-Prog]]"
 public_note: "true"
+category: Testing
+---
 
 # Mocks MSW - patrones de validación y depuración
 
@@ -16,10 +16,12 @@ public_note: "true"
 - [TDD - Test Driven Development](/testing/tdd---test-driven-development/)
 - [profiler](/testing/profiler/)
 
+---
 
 ## 🎯 Objetivo
 Esta nota reúne **estrategias, patrones y técnicas de depuración** para entornos que usan MSW (Mock Service Worker), facilitando el diagnóstico de fallos, la verificación de llamadas y la observación de comportamiento de red en entornos locales y CI.
 
+---
 
 ## 🧠 Conceptos Clave
 
@@ -30,6 +32,7 @@ Esta nota reúne **estrategias, patrones y técnicas de depuración** para entor
 - **Reproducción Controlada**: Emular errores HTTP o latencias sin depender del backend real.
 - **Instrumentación**: Registrar actividad de red y estados del mock server para trazabilidad.
 
+---
 
 ## 🧩 Patrón 1 — Validación de Handlers Activos
 
@@ -52,6 +55,7 @@ test('todos los handlers activos están registrados', () => {
 
 Si `server.listHandlers()` devuelve menos handlers de los esperados, revisa si se están sobrescribiendo en algún `beforeEach()`.
 
+---
 
 ## 🧩 Patrón 2 — Logs Detallados de Request/Response
 
@@ -77,6 +81,7 @@ server.events.on('response:mocked', (res, req) => {
 
 🧭 _Ideal para entornos CI/CD_ donde los logs de consola pueden ayudar a identificar mocks fallidos.
 
+---
 
 ## 🧩 Patrón 3 — Depuración de Handlers Dinámicos
 
@@ -105,6 +110,7 @@ test('mock temporal de error 500', async () => {
 
 🧠 Usa este patrón cuando quieras simular fallos o respuestas lentas (`ctx.delay()`).
 
+---
 
 ## 🧩 Patrón 4 — Fallback de Handlers
 
@@ -130,6 +136,7 @@ beforeAll(() => {
 
 💡 Esto evita falsos positivos y te alerta si un endpoint no está cubierto por un handler.
 
+---
 
 ## 🧩 Patrón 5 — Visualización de Tráfico Mockeado
 
@@ -154,6 +161,7 @@ server.events.on('request:start', (req) => {
 
 👁️ _Puedes inspeccionar `window.__MOCK_TRAFFIC__` desde la consola del navegador para ver todas las llamadas interceptadas._
 
+---
 
 ## 🧩 Patrón 6 — Debugging Integrado con `ctx`
 
@@ -179,6 +187,7 @@ rest.get('/api/products', (req, res, ctx) => {
 
 📦 Ideal para validar cómo maneja tu frontend retrasos o cabeceras específicas.
 
+---
 
 ## 🧩 Patrón 7 — Validación en CI/CD
 
@@ -201,6 +210,7 @@ test('no hay peticiones sin mock en CI', async () => {
 
 🧩 _Esto evita fallos silenciosos cuando un test nuevo introduce endpoints sin cubrir._
 
+---
 
 ## 🧩 Patrón 8 — Uso de `afterAll` y `resetHandlers` Correcto
 
@@ -221,6 +231,7 @@ afterAll(() => server.close());
 
 🧹 _Evita que un handler modificado persista y afecte otros tests._
 
+---
 
 ## 🧩 Patrón 9 — Test de Performance con Mocks Activos
 
@@ -245,6 +256,7 @@ test('performance del flujo login', async () => {
 
 🧠 Esto permite validar no solo la respuesta funcional, sino también el tiempo de simulación.
 
+---
 
 ## 🧩 Patrón 10 — Inspección en Navegador (DevTools)
 
@@ -260,6 +272,7 @@ window.msw.worker.printHandlers();
 
 📘 Muestra todos los endpoints simulados y sus métodos.
 
+---
 
 ## 🧩 Patrón 11 — Depuración Avanzada con Breakpoints
 
@@ -280,6 +293,7 @@ rest.get('/api/profile', (req, res, ctx) => {
 
 🪲 Ideal cuando no sabes si el mock se ejecuta realmente.
 
+---
 
 ## 🔍 Diagnóstico Rápido
 
@@ -291,6 +305,7 @@ rest.get('/api/profile', (req, res, ctx) => {
 |CI falla sin motivo|Endpoint no mockeado|Usar `onUnhandledRequest: 'error'`|
 |Respuestas vacías|JSON no devuelto|Asegurar `ctx.json()` en handlers|
 
+---
 
 ## 🔗 Referencias
 

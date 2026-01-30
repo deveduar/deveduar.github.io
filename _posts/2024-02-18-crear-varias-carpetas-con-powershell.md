@@ -1,14 +1,15 @@
-tags:
-  - Windows
-creation date: 2024-02-18 18:02
+---
+date: 2024-02-18 18:02
+title: Crear varias carpetas con powershell
 keywords:
 source:
 status: 📌
-Parent: "Area-Sistemas"
-cssclasses:
-  - hide-embedded-header1
-categories: "[powershell](/sistemas/powershell/)"
+Parent: "[[Area-Sistemas]]"
 public_note: "true"
+category: powershell
+tags:
+  - Windows
+---
 # Crear varias carpetas con PowerShell
 
 - [powershell](/sistemas/powershell/)

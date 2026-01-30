@@ -1,13 +1,13 @@
-creation date: 2025-10-16 18:28
-tags:
+---
+date: 2025-10-16 18:28
+title: Glosario de Conceptos Fundamentales de Testing
 keywords:
 source:
 status: 📌
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-categories: "[Testing](/testing/testing/)"
+Parent: "[[Area-Prog]]"
 public_note: "true"
+category: Testing
+---
 # Glosario de Conceptos Fundamentales de Testing
 
 # 🧩 Glosario de Conceptos Fundamentales de Testing (Complementario Final)
@@ -15,6 +15,7 @@ public_note: "true"
 > Este glosario completa los anteriores reuniendo **conceptos esenciales** que aún no se habían tratado directamente.  
 > Abarca fundamentos, tipologías básicas, ciclos, documentación, herramientas y roles, para consolidar una visión global del *Testing de Software*.
 
+---
 
 ## 🧱 Fundamentos del Testing
 
@@ -42,6 +43,7 @@ Etapas estructuradas del proceso de pruebas:
 6. Reporte de resultados y defectos  
 7. Cierre y documentación final
 
+---
 
 ## 🔍 Tipos de Testing por Nivel
 
@@ -67,6 +69,7 @@ Conjunto mínimo de pruebas rápidas para validar que una build es estable.
 ### **Sanity Testing**
 Pruebas focalizadas tras pequeños cambios o correcciones.
 
+---
 
 ## 🧩 Tipos de Testing por Propósito
 
@@ -94,6 +97,7 @@ Verifica comportamiento en distintos navegadores, dispositivos o sistemas.
 ### **Localization Testing**
 Asegura que el sistema funciona correctamente con distintos idiomas y formatos regionales.
 
+---
 
 ## ⚙️ Técnicas de Diseño de Pruebas
 
@@ -118,6 +122,7 @@ Usa tablas de decisiones para probar combinaciones de condiciones y acciones.
 ### **State Transition Testing**
 Evalúa el comportamiento del sistema ante cambios de estado.
 
+---
 
 ## 🧪 Tipos de Automatización
 
@@ -139,6 +144,7 @@ Los datos de entrada se parametrizan desde archivos externos (CSV, JSON, DB).
 ### **Keyword-Driven Testing**
 Las pruebas se definen a partir de palabras clave que representan acciones o verificaciones.
 
+---
 
 ## 🧠 Roles y Responsabilidades
 
@@ -157,6 +163,7 @@ Desarrollador con enfoque en pruebas automatizadas e infraestructura de QA.
 ### **UAT Tester (User Acceptance Tester)**
 Usuario final que valida el producto antes del lanzamiento.
 
+---
 
 ## 🧩 Documentación de Testing
 
@@ -181,6 +188,7 @@ Informe formal que describe un defecto encontrado, su impacto y pasos de reprodu
 ### **Test Summary Report**
 Documento final que resume el esfuerzo, cobertura, resultados y conclusiones del testing.
 
+---
 
 ## 🧩 Entornos y Configuración
 
@@ -196,6 +204,7 @@ Conjunto de hardware, software y datos configurados para pruebas específicas.
 ### **Test Harness**
 Infraestructura o conjunto de scripts que automatizan la ejecución de pruebas.
 
+---
 
 ## 📈 Métricas Clave en Testing
 
@@ -207,6 +216,7 @@ Infraestructura o conjunto de scripts que automatizan la ejecución de pruebas.
 - **Reopen Rate:** Frecuencia con la que defectos cerrados vuelven a abrirse.  
 - **Test Execution Progress:** Seguimiento del avance de las ejecuciones planificadas.
 
+---
 
 ## 🧰 Herramientas Clásicas y Populares
 
@@ -231,6 +241,7 @@ Jira, Bugzilla, MantisBT.
 ### **CI/CD Integrado**
 GitHub Actions, Jenkins, GitLab CI, CircleCI.
 
+---
 
 ## 📚 Principios Fundamentales del Testing
 
@@ -242,6 +253,7 @@ GitHub Actions, Jenkins, GitLab CI, CircleCI.
 6. **El testing depende del contexto.**  
 7. **La ausencia de errores no implica que el sistema sea útil.**
 
+---
 
 > **Nota:** Este glosario complementa los anteriores (`Glosario Avanzado` y `Glosario de Conceptos de Testing`) y puede servir como base para una nota de referencia general.  
 > **Etiquetas recomendadas:** `#testing #QA #fundamentos #automatizacion #STLC #ISTQB #quality-assurance`

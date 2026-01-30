@@ -1,16 +1,17 @@
-creation date: 2025-04-15 19:15
+---
+date: 2025-04-15 19:15
+title: autenticacion
+keywords:
+source:
+status: 🚀
+Parent: "[[Area-Sistemas]]"
+public_note: "true"
+category: autenticacion
 tags:
   - autenticacion
   - Hacking
   - criptografia
-keywords:
-source:
-status: 🚀
-Parent: "Area-Sistemas"
-cssclasses:
-  - hide-embedded-header1
-categories: "[autenticacion](/uncategorized/autenticacion/)"
-public_note: "true"
+---
 # Autenticación
 
 - [criptografia](/autenticacion/criptografia/)
@@ -521,6 +522,7 @@ if bcrypt.checkpw(password, hashed):
 3. Almacena hash en DB
 4. Para login, se compara hash calculado con el almacenado
 
+---
 
 ## 2. Autenticación con tokens JWT
 
@@ -553,6 +555,7 @@ console.log(decoded);
 4. Cliente envía JWT en cada request
 5. Servidor valida firma y claims para autorización
 
+---
 
 ## 3. OAuth 2.0 y OpenID Connect (OIDC)
 
@@ -595,6 +598,7 @@ def callback():
 ```
 {% endraw %}
 
+---
 
 ## 4. Autenticación multifactor (MFA / 2FA)
 
@@ -628,6 +632,7 @@ if totp.verify(otp):
 4. Servidor verifica OTP
 5. Acceso concedido si ambos factores son correctos
 
+---
 
 ## 5. Passwordless / FIDO2 / WebAuthn
 
@@ -644,6 +649,7 @@ if totp.verify(otp):
 4. Usuario firma desafío con clave privada
 5. Servidor valida firma con clave pública
 
+---
 
 ## 6. Autenticación en aplicaciones móviles / web con Firebase
 
@@ -667,6 +673,7 @@ signInWithEmailAndPassword(auth, email, password)
 ```
 {% endraw %}
 
+---
 
 ## 7. Integración en microservicios
 
@@ -689,6 +696,7 @@ graph TD
 ```
 {% endraw %}
 
+---
 
 ## Buenas prácticas de programación y seguridad
 

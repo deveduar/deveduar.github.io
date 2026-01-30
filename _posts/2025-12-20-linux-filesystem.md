@@ -1,14 +1,15 @@
-creation date: 2025-12-20 18:20
-tags:
-  - Linux
+---
+date: 2025-12-20 18:20
+title: Linux Filesystem
 keywords:
 source:
 status: 🌟
-Parent: "Area-Sistemas"
-cssclasses:
-  - hide-embedded-header1
-categories: "[Linux](/sistemas/linux/)"
+Parent: "[[Area-Sistemas]]"
 public_note: "true"
+category: Linux
+tags:
+  - Linux
+---
 # Linux Filesystem
 
 

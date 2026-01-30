@@ -1,16 +1,16 @@
-creation date: 2025-05-21 20:07
-tags:
-  - Management
-  - product-management
+---
+date: 2025-05-21 20:07
+title: Product Management
 keywords:
 source:
 status: 🌟
-Parent: "Area-Sistemas"
-cssclasses:
-  - hide-embedded-header1
-  - wide
-categories: "[Management](/management/management/)"
+Parent: "[[Area-Sistemas]]"
 public_note: "true"
+category: Management
+tags:
+  - Management
+  - product-management
+---
 # Product Management
 
 Product Management es la disciplina encargada de guiar el desarrollo, lanzamiento y evolución de un producto, asegurando que cumpla con las necesidades del mercado y los objetivos estratégicos de la organización. Combina visión de negocio, análisis de mercado, gestión de proyectos y coordinación con equipos multidisciplinarios para entregar productos exitosos y rentables.

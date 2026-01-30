@@ -1,15 +1,16 @@
-creation date: 2025-10-29 19:55
-tags:
-  - sistemas
-  - administracion
+---
+date: 2025-10-29 19:55
+title: administracion de sistemas
 keywords:
 source:
 status: 📌
-Parent: "Area-Sistemas"
-cssclasses:
-  - hide-embedded-header1
-categories: "[Sistemas](/sistemas/sistemas/)"
+Parent: "[[Area-Sistemas]]"
 public_note: "true"
+category: Sistemas
+tags:
+  - sistemas
+  - administracion
+---
 # administracion de sistemas
 
 - [Sistemas](/sistemas/sistemas/)

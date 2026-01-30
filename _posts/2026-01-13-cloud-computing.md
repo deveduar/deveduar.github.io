@@ -1,14 +1,15 @@
-creation date: 2026-01-13 15:22
-tags:
-  - cloud
+---
+date: 2026-01-13 15:22
+title: Cloud Computing
 keywords:
 source:
 status: 🌟
-Parent: "Area-Sistemas"
-cssclasses:
-  - hide-embedded-header1
-categories: "[cloud](/cloud/cloud/)"
+Parent: "[[Area-Sistemas]]"
 public_note: "true"
+category: cloud
+tags:
+  - cloud
+---
 # Cloud Computing
 
 - [cloud](/cloud/cloud/)

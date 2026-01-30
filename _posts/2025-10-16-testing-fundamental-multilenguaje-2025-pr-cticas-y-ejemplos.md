@@ -1,13 +1,13 @@
-creation date: 2025-10-17 01:08
-tags:
+---
+date: 2025-10-17 01:08
+title: Testing Fundamental Multilenguaje 2025 Prácticas y Ejemplos
 keywords:
 source:
 status: 📌
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-categories: "[Testing](/testing/testing/)"
+Parent: "[[Area-Prog]]"
 public_note: "true"
+category: Testing
+---
 # Testing Fundamental Multilenguaje 2025 Prácticas y Ejemplos
 
 
@@ -15,6 +15,7 @@ public_note: "true"
 
 > Guía completa de prácticas y ejemplos de testing en **JavaScript/TypeScript, Python, Java y C#**, cubriendo todos los conceptos fundamentales y patrones de 2025.
 
+---
 
 ## 🧩 1. Conceptos Fundamentales
 
@@ -25,6 +26,7 @@ public_note: "true"
   - Facilitar refactoring seguro.
   - Mantener tests rápidos y claros.
 
+---
 
 ## ⚙️ 2. Patrones de Tests
 
@@ -62,6 +64,7 @@ def test_add():
 - Nombrar los tests de forma natural y descriptiva.
 - Evitar dependencias externas innecesarias.
 
+---
 
 ## 🧪 3. Unit Testing
 
@@ -127,6 +130,7 @@ public class MathTests {
 - Probar casos normales y límite.
 - Mantener tests rápidos (<1s).
 
+---
 
 ## 🔗 4. Integration Testing
 
@@ -193,6 +197,7 @@ Assert.AreEqual(200, (int)response.StatusCode);
 - Limpiar datos tras cada test.
 - Simular servicios externos.
 
+---
 
 ## 🌐 5. API Testing & Contract Testing
 
@@ -218,6 +223,7 @@ def test_api_contract():
 ```
 {% endraw %}
 
+---
 
 ## 🧠 6. Test Driven Development (TDD)
 
@@ -250,6 +256,7 @@ def test_sum():
 - Refactorizar con seguridad.
 - Tests pequeños y claros.
 
+---
 
 ## 🧩 7. Behavior Driven Development (BDD)
 
@@ -270,6 +277,7 @@ Feature: Login
 - Facilita colaboración QA-Dev-Product.
 - Escenarios claros y comprensibles.
 
+---
 
 ## 🧪 8. E2E Testing
 
@@ -311,6 +319,7 @@ driver.quit()
 - Evitar tests frágiles.
 - Integrar en CI/CD.
 
+---
 
 ## ⚙️ 9. Mocking y Stubbing
 
@@ -353,6 +362,7 @@ mock.Setup(x => x.GetUser(1)).Returns(new User("Eduardo"));
 ```
 {% endraw %}
 
+---
 
 ## 📊 10. Cobertura y Calidad
 
@@ -392,6 +402,7 @@ dotnet test /p:CollectCoverage=true
 ```
 {% endraw %}
 
+---
 
 ## 🔥 11. Performance & Load Testing
 
@@ -417,6 +428,7 @@ jmeter -n -t test_plan.jmx -l results.jtl
 ```
 {% endraw %}
 
+---
 
 ## 🧭 12. Security & Accessibility
 
@@ -436,6 +448,7 @@ zap-cli quick-scan http://localhost:3000
 ```
 {% endraw %}
 
+---
 
 ## 🧩 13. Test Data & Fixtures
 
@@ -466,6 +479,7 @@ fake.email()
 - Generar datos consistentes.
 - Reutilizar fixtures.
 
+---
 
 ## 📌 Conclusión
 

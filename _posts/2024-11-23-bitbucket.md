@@ -1,17 +1,17 @@
-creation date: 2024-11-23 02:15
+---
+date: 2024-11-23 02:15
+title: bitbucket
+keywords:
+source:
+status: 📌
+Parent: "[[Area-Sistemas]]"
+public_note: "true"
+category: devops
 tags:
   - devops
   - bitbucket
   - github
-keywords:
-source:
-status: 📌
-Parent: "Area-Sistemas"
-cssclasses:
-  - hide-embedded-header1
-  - wide
-categories: "[devops](/devops/devops/)"
-public_note: "true"
+---
 # bitbucket
 
 - [CICD](/devops/cicd/)

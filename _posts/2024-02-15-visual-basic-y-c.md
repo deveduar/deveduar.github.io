@@ -1,17 +1,18 @@
+---
+date: 2024-02-15 17:14
+title: Visual Basic y C
+status: 🌟
+Parent: "[[Area-Prog]]"
+keywords:
+source:
+public_note: "true"
+category: Software engineering
 tags:
   - CS
   - visual_basic
   - cpp
   - excel
-status: 🌟
-Parent: "Area-Prog"
-creation date: 2024-02-15 17:14
-keywords:
-source:
-cssclasses:
-  - hide-embedded-header1
-categories: "[Software engineering](/software%20engineering/software-engineering/)"
-public_note: "true"
+---
 # C y Visual Basic
 - [visual basic VBA](/software%20engineering/visual-basic-vba/)
 - [cpp](/software%20engineering/cpp/)

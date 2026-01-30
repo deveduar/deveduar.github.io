@@ -1,13 +1,13 @@
-creation date: 2025-10-19 03:54
-tags:
+---
+date: 2025-10-19 03:54
+title: Quality Assurance Estrategia y Gobierno
 keywords:
 source:
 status: 📌
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-categories: "[Testing](/testing/testing/)"
+Parent: "[[Area-Prog]]"
 public_note: "true"
+category: Testing
+---
 # Quality Assurance Estrategia y Gobierno
 
 ## Gobierno de Calidad

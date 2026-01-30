@@ -1,15 +1,16 @@
-creation date: 2025-05-22 04:26
-tags:
-  - desarrollo
-  - programming
+---
+date: 2025-05-22 04:26
+title: Desarrollo multiplataforma
 keywords:
 source:
 status: 📌
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-categories: "[Desarrollo multiplataforma](/uncategorized/desarrollo-multiplataforma/)"
+Parent: "[[Area-Prog]]"
 public_note: "true"
+category: Desarrollo multiplataforma
+tags:
+  - desarrollo
+  - programming
+---
 # Desarrollo multiplataforma
 
 - [Software engineering](/software%20engineering/software-engineering/)

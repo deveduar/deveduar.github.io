@@ -1,16 +1,17 @@
-creation date: 2025-11-19 16:56
+---
+date: 2025-11-19 16:56
+title: OpenTelemetry
+keywords:
+source:
+status: 🌟
+Parent: "[[Area-Sistemas]]"
+public_note: "true"
+category: monitoreo
 tags:
   - monitoreo
   - telemetry
   - open_telemetry
-keywords:
-source:
-status: 🌟
-Parent: "Area-Sistemas"
-cssclasses:
-  - hide-embedded-header1
-categories: "[monitoreo](/monitoreo/monitoreo/)"
-public_note: "true"
+---
 # OpenTelemetry
 - [monitoreo](/monitoreo/monitoreo/)
 - [Docker](/software%20engineering/docker/)
@@ -23,6 +24,7 @@ OpenTelemetry es un **estándar abierto** para la generación, recolección, pro
 
 Su objetivo principal es **eliminar la dependencia del proveedor**, simplificar la observabilidad y adoptar un modelo consistente para aplicaciones distribuidas (microservicios, contenedores, serverless, etc.).
 
+---
 
 ## Conceptos Fundamentales de OpenTelemetry
 
@@ -58,6 +60,7 @@ OpenTelemetry trabaja con tres tipos principales de señales:
 - **Protocolo OTLP**  
 	Formato estándar (HTTP/gRPC) para enviar telemetría entre servicios y Collector.
 
+---
 
 ## Ventajas Clave
 
@@ -80,6 +83,7 @@ OpenTelemetry trabaja con tres tipos principales de señales:
 - **Estandarización del Ecosistema**  
 	Reducción del acoplamiento con agentes propietarios.
 
+---
 
 ## Arquitectura General
 
@@ -89,6 +93,7 @@ Servicio → SDK/Auto-Inst → Collector → Procesamiento → Backend
 - El Collector unifica toda la gestión.
 - La exportación es modular y reemplazable sin cambiar el código de la aplicación.
 
+---
 
 ## Proceso Completo de Gestión de Logs con OpenTelemetry
 
@@ -124,11 +129,13 @@ La gestión de logs con OTel se integra en un *pipeline unificado* junto con mé
 	- Dashboards en Grafana, Kibana u otros backends.
 	- Integración nativa con Prometheus para métricas.
 
+---
 
 ## Despliegue de OpenTelemetry con Docker
 
 Desplegar el Collector con Docker proporciona un entorno reproducible y portable.
 
+---
 
 ## Ejemplo de Configuración del Collector
 
@@ -189,6 +196,7 @@ service:
 ```
 {% endraw %}`
 
+---
 
 ## Ejecutar el Collector con Docker
 
@@ -201,6 +209,7 @@ docker run -p 4317:4317 -p 4318:4318 -p 8889:8889 \
 ```
 {% endraw %}
 
+---
 
 ## Docker Compose (Collector + Sistema Extensible)
 
@@ -237,6 +246,7 @@ docker compose up -d
 ```
 {% endraw %}
 
+---
 
 ## Casos de Uso Relevantes
 
@@ -246,6 +256,7 @@ docker compose up -d
 - Uso en pipelines de seguridad (detección de outliers mediante logs).
 - Unificación de telemetría en sistemas multi-backend.
 
+---
 
 ## Buenas Prácticas
 
@@ -255,6 +266,7 @@ docker compose up -d
 - Versionar los pipelines del Collector.
 - Añadir atributos consistentes (service.name, env, version).
 
+---
 
 # Prácticas Recomendadas para Pipelines de OpenTelemetry Collector
 
@@ -270,6 +282,7 @@ receivers → processors → exporters
 ```
 {% endraw %}
 
+---
 
 ## Principios Generales de Diseño
 - Pipelines cortos y especializados (evitar pipelines "todo en uno").
@@ -279,6 +292,7 @@ receivers → processors → exporters
 - Estrategia de **redudancia**: al menos 2 collectors por zona/region.
 - Diseñar con **backpressure awareness** (cola, batch, memory_limiter).
 
+---
 
 ## Receivers: Buenas Prácticas
 ### Configuración recomendada
@@ -292,6 +306,7 @@ receivers → processors → exporters
 - En service mesh, usar sidecar o gateway (ingestión por agente local).
 - Para logs, preferir receivers nativos (filelog, journald, docker).
 
+---
 
 ## Processors: Prácticas Recomendadas
 Los processors son el corazón del pipeline. Las prácticas más importantes:
@@ -322,6 +337,7 @@ memory_limiter → batch → transform → resource → attributes → filter
 	- `deployment.environment`
 	- `service.version`
 
+---
 
 ## Exporters: Buenas Prácticas
 ### Reglas generales
@@ -340,6 +356,7 @@ memory_limiter → batch → transform → resource → attributes → filter
 - Loki export vía gateway intermedio
 - Kafka exporter para arquitecturas streaming-first
 
+---
 
 ## Pipelines en Service Mesh (Istio/Linkerd)
 ### Recomendaciones
@@ -354,6 +371,7 @@ memory_limiter → batch → transform → resource → attributes → filter
 - Normalizar trazas duplicadas generadas por sidecars.
 - Correlación automática entre spans de mesh y spans de app.
 
+---
 
 ## Pipelines Multi-Región / Multi-Cluster
 ### Arquitectura recomendada
@@ -380,6 +398,7 @@ Agente Local (Pod/VM)
 - Alinear nombres de servicios entre clusters para evitar cardinalidad infinita.
 - Normalizar latencias entre clusters.
 
+---
 
 ## Pipelines para Canary Releases
 ### Objetivos
@@ -407,6 +426,7 @@ Agente Local (Pod/VM)
 
 - Activar comparación automática en dashboards.
 
+---
 
 ## Pipelines con Enriquecimiento Avanzado (OTTL)
 ### Casos de uso
@@ -421,6 +441,7 @@ Agente Local (Pod/VM)
 ```
 {% endraw %}`
 
+---
 
 ## Gobernanza y Control de Calidad del Pipeline
 
@@ -442,6 +463,7 @@ Agente Local (Pod/VM)
 * Queue length.
 * Latencias internas.
 
+---
 
 ## Seguridad
 
@@ -458,6 +480,7 @@ Agente Local (Pod/VM)
   * Procesamiento pesado
   * Exportación
 
+---
 
 ## Ejemplos de Arquitecturas Recomendadas
 
@@ -495,6 +518,7 @@ Local Collector
 ```
 {% endraw %}
 
+---
 
 ## Checklist Final de Mejores Prácticas
 
@@ -533,6 +557,7 @@ OpenTelemetry proporciona distintos patrones de despliegue según el tipo de car
 	- Combinación de sidecars + gateway centralizado.
 	- Da resiliencia y reducción de cargas hacia el backend.
 
+---
 
 ## OpenTelemetry y Service Mesh
 
@@ -554,6 +579,7 @@ Service Mesh (como **Istio**, **Linkerd**, **Consul**) transforma la forma de ge
 - Eliminación de instrumentación manual en muchas rutas.
 - Observabilidad “zero-touch”.
 
+---
 
 ## Context Propagation
 
@@ -573,6 +599,7 @@ Tipos de contexto:
 	- Se usan para compatibilidad con sistemas legados.
 	- Pueden transformar o añadir metadata para correlación.
 
+---
 
 ## Sampling Avanzado
 
@@ -602,6 +629,7 @@ OpenTelemetry incluye modelos flexibles para controlar el volumen de trazas.
 
 Se ejecuta en el Collector (no en los SDK), permitiendo decisiones basadas en la traza completa.
 
+---
 
 ## Procesadores Avanzados
 
@@ -624,6 +652,7 @@ Además del *batch processor*, existen procesadores más específicos:
 	- Envía distintos pipelines a diferentes exportadores.
 	- Ejemplo: métricas → Prometheus, trazas → Tempo, logs → Loki.
 
+---
 
 ## Exporters y Backends Compatibles
 
@@ -651,6 +680,7 @@ OpenTelemetry soporta una amplia gama de destinos:
 - Honeycomb
 - AppDynamics
 
+---
 
 ## Receivers Especializados
 
@@ -669,6 +699,7 @@ OpenTelemetry Collector puede recibir telemetría desde múltiples fuentes:
 - **tail sampling receiver**
 	- Ingresa trazas de sampling avanzado.
 
+---
 
 ## Instrumentación Automática (Auto-Instrumentation)
 
@@ -693,6 +724,7 @@ Disponible en:
 	- MQ (Kafka, RabbitMQ)  
 	- Frameworks web  
 
+---
 
 ## OpenTelemetry en Kubernetes: Recolección Completa
 
@@ -712,6 +744,7 @@ Patrón típico:
 
 - Sidecar opcional para apps sin SDK nativo
 
+---
 
 ## Integración con Herramientas CI/CD
 
@@ -722,6 +755,7 @@ Patrón típico:
 	- `build.pipeline.id`
 - Permite correlación entre despliegues y degradaciones.
 
+---
 
 ## Observabilidad Unificada
 
@@ -736,6 +770,7 @@ OpenTelemetry permite:
 	- anomalías por log pattern  
 	- saturación de recursos  
 
+---
 
 ## Patrones de Diseño en Observabilidad
 
@@ -744,6 +779,7 @@ OpenTelemetry permite:
 - **SLOs basados en trazas**
 - **Análisis de cuellos de botella con spans jerárquicos**
 
+---
 
 ## Casos de Uso Avanzados
 
@@ -758,6 +794,7 @@ OpenTelemetry permite:
 
 Esta nota recopila pipelines listos para usar en el Collector, cada uno diseñado para un caso de uso real distinto. Incluye trazas, métricas y logs, así como enrutamiento avanzado, transformaciones, sampling y exportación a múltiples backends.
 
+---
 
 ## Pipeline 1 — Traces + Tail Sampling + Exportación Múltiple
 
@@ -810,6 +847,7 @@ service:
 ✓ Sampling condicional por atributos
 ✓ Exporta simultáneamente a Tempo y logs
 
+---
 
 ## Pipeline 2 — Logs desde archivos + Normalización + Loki
 
@@ -858,6 +896,7 @@ service:
 ✓ Solo guarda errores
 ✓ Envía a Loki
 
+---
 
 ## Pipeline 3 — Métricas del Host + Node Exporter Replacement
 
@@ -894,6 +933,7 @@ service:
 ✓ Métricas del sistema
 ✓ Exposición en /metrics
 
+---
 
 ## Pipeline 4 — Enrutamiento según tipo de señal → (Prometheus, Tempo, Loki)
 
@@ -941,6 +981,7 @@ service:
 ✓ Separación por señal
 ✓ Ideal para Grafana Stack (Tempo + Loki + Prometheus)
 
+---
 
 ## Pipeline 5 — Kubernetes Logs + Metadata Enrichment
 
@@ -984,6 +1025,7 @@ service:
 ✓ Team / project / owner
 ✓ Exportación a Loki
 
+---
 
 ## Pipeline 6 — Métricas Prometheus + Reetiquetado → OTLP
 
@@ -1024,6 +1066,7 @@ service:
 ✓ Reetiquetado
 ✓ Exportación vía OTLP
 
+---
 
 ## Pipeline 7 — Logs + Traces Correlacionados (Insertar TraceID en Logs)
 
@@ -1075,6 +1118,7 @@ service:
 ✓ Inserta trace_id/span_id en logs
 ✓ Correlación garantizada en Loki + Tempo
 
+---
 
 ## Pipeline 8 — Kafka como Buffer de Telemetría
 
@@ -1120,6 +1164,7 @@ service:
 ✓ Ideal para cargas muy altas
 ✓ Telemetría enviada a Kafka para procesadores offline
 
+---
 
 ## Pipeline 9 — Filtrado Avanzado (Excluir Salud, Incluir Errores 5xx)
 
@@ -1162,6 +1207,7 @@ service:
 ✓ Solo guarda spans 5xx
 ✓ Reduce consumo de backend
 
+---
 
 ## Pipeline 10 — Collector como Router por Atributos (Multi-Tenant)
 
@@ -1254,6 +1300,7 @@ Pipeline orientado a empresas que despliegan la misma app en varias regiones con
 - Helm release.
 - Reporte de observabilidad/métricas.
 
+---
 
 ## Pipeline 2: Canary Progressive Delivery con Argo Rollouts + Tracking Inteligente
 Pipeline usado para despliegues de alto riesgo donde el canario se evalúa por métricas, no por tiempo.
@@ -1294,6 +1341,7 @@ Pipeline usado para despliegues de alto riesgo donde el canario se evalúa por m
 - OPA para políticas
 - Sentry para errores
 
+---
 
 ## Pipeline 3: Microservicios con Service Mesh + Testing de Resiliencia + Chaos Engineering
 Modelo empresarial orientado a resiliencia en tiempo real.
@@ -1328,6 +1376,7 @@ Modelo empresarial orientado a resiliencia en tiempo real.
 7. **Rollback**
 	- Si resiliencia se degrada, rollback inmediato.
 
+---
 
 ## Pipeline 4: Multi-Cloud Activo/Activo con Replicación de Datos
 Despliega en AWS + GCP simultáneamente.
@@ -1357,6 +1406,7 @@ Despliega en AWS + GCP simultáneamente.
 7. **Promoción**
 	- Se sincroniza la versión “green” como master.
 
+---
 
 ## Pipeline 5: Infraestructuras Regulatorias con Auditoría y Gates de Seguridad
 Diseñado para entornos fintech/health.
@@ -1391,6 +1441,7 @@ Diseñado para entornos fintech/health.
 ## Introducción
 Esta nota resume un conjunto de **buenas prácticas avanzadas** para diseñar, implementar y gestionar pipelines CI/CD robustos, auditables y altamente escalables. Está orientada a entornos modernos con contenedores, orquestadores, IaC, service mesh, multi-región y despliegues progresivos.
 
+---
 
 ## Diseño General del Pipeline
 Un pipeline debe ser **modular, declarativo, idempotente** y **observable**. Cada etapa debe aportar valor, validar calidad o asegurar consistencia entre cambios.
@@ -1402,6 +1453,7 @@ Un pipeline debe ser **modular, declarativo, idempotente** y **observable**. Cad
 - Mantener tiempos de ejecución predecibles y razonables.
 - Todo cambio debe ser auditable y reproducible.
 
+---
 
 ## Fase de Build
 ### Recomendaciones
@@ -1415,6 +1467,7 @@ Un pipeline debe ser **modular, declarativo, idempotente** y **observable**. Cad
 - Imágenes Docker inmutables.
 - Binarios, librerías, charts o manifests empaquetados.
 
+---
 
 ## Fase de Testing
 ### Tipos de pruebas a incluir
@@ -1432,6 +1485,7 @@ Un pipeline debe ser **modular, declarativo, idempotente** y **observable**. Cad
 - Paralelizar tests.
 - Generar reportes: cobertura, resultados y métricas.
 
+---
 
 ## Fase de Seguridad (DevSecOps)
 ### Checks recomendados
@@ -1447,6 +1501,7 @@ Un pipeline debe ser **modular, declarativo, idempotente** y **observable**. Cad
 - Eliminación automática de secretos incrustados.
 - Zero-trust en todos los entornos.
 
+---
 
 ## Fase de Infraestructura como Código (IaC)
 ### Prácticas
@@ -1459,6 +1514,7 @@ Un pipeline debe ser **modular, declarativo, idempotente** y **observable**. Cad
 - Estandarizar módulos/proveedores Terraform.
 - Integrar Helm, Kustomize o ArgoCD para Kubernetes.
 
+---
 
 ## Despliegues Progresivos
 ### Estrategias recomendadas
@@ -1472,6 +1528,7 @@ Un pipeline debe ser **modular, declarativo, idempotente** y **observable**. Cad
 - Guardar siempre métricas pre y post-release.
 - Reducir riesgos basándose en observabilidad, no en tiempos.
 
+---
 
 ## Multi-Región y Multi-Cloud
 ### Buenas prácticas
@@ -1485,6 +1542,7 @@ Un pipeline debe ser **modular, declarativo, idempotente** y **observable**. Cad
 - La región secundaria debe probarse primero.
 - Evitar drift entre configuraciones multi-nube.
 
+---
 
 ## Service Mesh en Pipeline
 ### Validaciones obligatorias
@@ -1498,6 +1556,7 @@ Un pipeline debe ser **modular, declarativo, idempotente** y **observable**. Cad
 - Validar políticas de tráfico antes del rollout.
 - Ensayos de resiliencia dentro del pipeline (latency injection).
 
+---
 
 ## Observabilidad Integrada
 ### Métricas recomendadas
@@ -1512,6 +1571,7 @@ Un pipeline debe ser **modular, declarativo, idempotente** y **observable**. Cad
 - No promover una versión si hay degradación.
 - Integrar Prometheus, Grafana, Loki, OpenTelemetry.
 
+---
 
 ## Automatización de Rollbacks
 ### Criterios típicos
@@ -1525,6 +1585,7 @@ Un pipeline debe ser **modular, declarativo, idempotente** y **observable**. Cad
 - Registrar siempre razón del rollback.
 - Mantener política de retención para imágenes previas.
 
+---
 
 ## Gobernanza, Auditoría y Cumplimiento
 ### Reglas de compliance
@@ -1537,6 +1598,7 @@ Un pipeline debe ser **modular, declarativo, idempotente** y **observable**. Cad
 ### Integración
 - CMDB, sistemas ITSM, plataformas de auditoría.
 
+---
 
 ## Eficiencia y Confiabilidad del Pipeline
 ### Recomendaciones
@@ -1546,6 +1608,7 @@ Un pipeline debe ser **modular, declarativo, idempotente** y **observable**. Cad
 - Uso de pipelines efímeros por PR.
 - Reutilización de módulos, plantillas y jobs estándar.
 
+---
 
 ## Gestión de Secretos
 ### Prácticas
@@ -1554,6 +1617,7 @@ Un pipeline debe ser **modular, declarativo, idempotente** y **observable**. Cad
 - Uso de Vault, KMS, SOPS o Sealed Secrets.
 - Acceso basado en identidad, no en archivos.
 
+---
 
 ## Buenas Prácticas para Monorepos y Multi-Repo
 ### Monorepo
@@ -1565,6 +1629,7 @@ Un pipeline debe ser **modular, declarativo, idempotente** y **observable**. Cad
 - Pipelines independientes y reproducibles.
 - Versionado estricto entre servicios.
 
+---
 
 ## Entornos efímeros (Preview Environments)
 ### Beneficios
@@ -1572,12 +1637,14 @@ Un pipeline debe ser **modular, declarativo, idempotente** y **observable**. Cad
 - Pruebas E2E reales sin afectar otros equipos.
 - Acelera el merge y reduce bugs.
 
+---
 
 ## Documentación y Conocimiento
 - Documentar pipelines con diagrams-as-code (Mermaid).
 - Mantener un catálogo de procesos CI/CD.
 - Registrar flujos de despliegue y estándares.
 
+---
 
 ## Lista Resumida de Prácticas Recomendadas
 1. Pipelines declarativos y modulares.  
@@ -1595,4 +1662,5 @@ Un pipeline debe ser **modular, declarativo, idempotente** y **observable**. Cad
 13. Auditoría y cumplimiento obligatorios.  
 14. Documentación actualizada y accesible.  
 
+---
 

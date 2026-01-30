@@ -1,14 +1,15 @@
-tags:
-  - Mates
+---
+date: 2023-04-01 17:39
+title: Intro Algebra lineal y ML
 status: 🌟
-Parent: "Area-IA"
-creation date: 2023-04-01 17:39
+Parent: "[[Area-IA]]"
 keywords:
 source:
-cssclasses:
-  - hide-embedded-header1
-categories: "[mates](/uncategorized/mates/)"
 public_note: "true"
+category: mates
+tags:
+  - Mates
+---
 # Intro Algebra lineal y ML
 
 - [mates](/uncategorized/mates/)

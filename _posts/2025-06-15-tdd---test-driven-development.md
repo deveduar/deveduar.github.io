@@ -1,15 +1,16 @@
-creation date: 2025-06-15 11:46
-tags:
-  - TDD
-  - testing
+---
+date: 2025-06-15 11:46
+title: TDD - Test Driven Development
 keywords:
 source:
 status: 🌟
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-categories: "[Testing](/testing/testing/)"
+Parent: "[[Area-Prog]]"
 public_note: "true"
+category: Testing
+tags:
+  - TDD
+  - testing
+---
 # TDD - Test Driven Development
 
 - [BDD](/testing/bdd/)
@@ -30,6 +31,7 @@ public_note: "true"
 	- ej: test a login, existe dashboard
 	- tareas, casos de uso
 	- flujo TDD
+---
 
 ## 🧩 Concepto General
 
@@ -41,6 +43,7 @@ El ciclo TDD clásico se conoce como **Red → Green → Refactor**:
 2. **Green:** escribir el código mínimo para pasar el test.
 3. **Refactor:** mejorar el código manteniendo todos los tests en verde.
 
+---
 
 ## 🔄 Testear antes de programar
 
@@ -67,6 +70,7 @@ test('debería retornar token válido con credenciales correctas', () => {
 
 Primero se crea el test (falla). Luego se implementa el código necesario para hacerlo pasar.
 
+---
 
 ## 🧠 Incrementar lógica con los test
 
@@ -105,6 +109,7 @@ def test_suma_negativos():
 ```
 {% endraw %}
 
+---
 
 ## 🔬 Unidad a unidad
 
@@ -133,6 +138,7 @@ class CalculatorTest extends TestCase {
 ```
 {% endraw %}
 
+---
 
 ## ♻️ Refactoring, run tests BDD
 
@@ -165,6 +171,7 @@ test('verifica si el usuario es adulto', () => {
 ```
 {% endraw %}
 
+---
 
 ## ⚙️ [PHPUnit](/testing/phpunit/)
 
@@ -185,6 +192,7 @@ vendor/bin/phpunit --testdox
 ```
 {% endraw %}
 
+---
 
 ## 🧩 Given, When, Then
 
@@ -211,6 +219,7 @@ expect(result.token).not.toBeNull();
 ```
 {% endraw %}
 
+---
 
 ## 🔐 Ejemplo práctico: test a login y dashboard
 
@@ -232,6 +241,7 @@ test('login exitoso muestra dashboard', async () => {
 ```
 {% endraw %}
 
+---
 
 ## 📋 Tareas y casos de uso
 
@@ -269,9 +279,10 @@ npm run lint && npm test
 ```
 {% endraw %}
 
+---
 
 ## 🧭 Resumen
 
-El [TDD - Test Driven Development](/uncategorized/tdd---test-driven-development/) promueve una forma de desarrollo **disciplinada, incremental y segura**, donde el diseño del software se guía por pruebas automatizadas.  
+El [TDD - Test Driven Development](/testing/tdd---test-driven-development/) promueve una forma de desarrollo **disciplinada, incremental y segura**, donde el diseño del software se guía por pruebas automatizadas.  
 Combinado con [BDD](/testing/bdd/) y frameworks como [PHPUnit](/testing/phpunit/), proporciona una base sólida para sistemas **mantenibles, testables y escalables**.  
 Su flujo de **Red → Green → Refactor** garantiza calidad constante y reduce drásticamente la aparición de errores en producción.

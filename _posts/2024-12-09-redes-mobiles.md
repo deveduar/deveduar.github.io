@@ -1,16 +1,17 @@
-creation date: 2024-12-09 23:51
+---
+date: 2024-12-09 23:51
+title: redes mobiles
+keywords:
+source:
+status: 📌
+Parent: "[[Area-Sistemas]]"
+public_note: "true"
+category: uncategorized
 tags:
   - redes
   - network
   - LTE
-keywords:
-source:
-status: 📌
-Parent: "Area-Sistemas"
-cssclasses:
-  - hide-embedded-header1
-  - wide
-public_note: "true"
+---
 # redes mobiles
 
 - diseño de redes moviles y LTE

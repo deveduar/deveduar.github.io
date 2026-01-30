@@ -1,13 +1,13 @@
-creation date: 2025-10-18 16:58
-tags:
+---
+date: 2025-10-18 16:58
+title: QA Gestión Herramientas y Métricas
 keywords:
 source:
 status: 📌
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-categories:
+Parent: "[[Area-Prog]]"
 public_note: "true"
+category: uncategorized
+---
 # QA Gestión Herramientas y Métricas
 - [QA](/testing/qa/)
 ## Fundamentos de la Gestión de Calidad

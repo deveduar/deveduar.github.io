@@ -1,13 +1,13 @@
-creation date: 2025-10-16 18:25
-tags:
+---
+date: 2025-10-16 18:25
+title: Glosario Avanzado de Testing
 keywords:
 source:
 status: 📌
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-categories: "[Testing](/testing/testing/)"
+Parent: "[[Area-Prog]]"
 public_note: "true"
+category: Testing
+---
 # Glosario Avanzado de Testing
 
 # 🧠 Glosario Avanzado de Testing (Tercera Parte)
@@ -15,6 +15,7 @@ public_note: "true"
 > Esta nota amplía los glosarios previos de *Testing*, abordando conceptos especializados, prácticas modernas, enfoques organizativos, técnicas cognitivas, métricas psicológicas y automatización inteligente en QA.  
 > Su propósito es ofrecer una comprensión completa del ecosistema contemporáneo del testing más allá de los fundamentos.
 
+---
 
 ## ⚙️ Conceptos Estratégicos y Avanzados
 
@@ -37,6 +38,7 @@ Estrategia proactiva para evitar defectos mediante buenas prácticas de desarrol
 ### **Continuous Quality**
 Integración permanente de la evaluación de calidad en cada etapa del ciclo de vida del software (planificación, desarrollo, despliegue y operación).
 
+---
 
 ## 🤖 Testing Inteligente y Basado en Datos
 
@@ -61,6 +63,7 @@ Pruebas automatizadas que se ajustan dinámicamente ante cambios en el entorno, 
 ### **Test Optimization**
 Selección dinámica de subconjuntos de pruebas relevantes según cambios en el código (por cobertura, historial o riesgo).
 
+---
 
 ## 🧩 Testing en Contextos Modernos
 
@@ -82,6 +85,7 @@ Validación en entornos perimetrales (edge computing) donde la latencia, descone
 ### **IoT Testing**
 Evaluación de dispositivos conectados, redes, firmware y protocolos de comunicación (MQTT, CoAP, BLE).
 
+---
 
 ## 🧱 Testing de Infraestructura y Configuración
 
@@ -100,6 +104,7 @@ Pruebas planificadas para validar la continuidad operativa frente a fallos crít
 ### **Failback Testing**
 Verifica que el sistema puede volver a su estado primario tras un failover o recuperación.
 
+---
 
 ## 💡 Técnicas Cognitivas y Humanas en Testing
 
@@ -124,6 +129,7 @@ Dos personas (usualmente un QA y un dev) testean juntas, combinando perspectivas
 ### **Bug Advocacy**
 Habilidad para comunicar un defecto con evidencia, contexto y argumentación convincente para su corrección prioritaria.
 
+---
 
 ## 📊 Métricas Psicológicas y de Eficiencia del Testing
 
@@ -146,6 +152,7 @@ Número de pruebas ejecutadas y validadas por unidad de tiempo.
 ### **Defect Arrival Rate**
 Frecuencia con la que se descubren defectos durante el ciclo de pruebas, útil para estimar estabilidad del sistema.
 
+---
 
 ## 🧰 Testing de Integración Continua y Operaciones
 
@@ -167,6 +174,7 @@ Verifica que las versiones anteriores se restauran correctamente tras una revers
 ### **Feature Monitoring Testing**
 Integración entre observabilidad y QA: validar métricas de comportamiento y errores después de activar una nueva funcionalidad.
 
+---
 
 ## 🔄 Testing en Arquitecturas Emergentes
 
@@ -185,6 +193,7 @@ Pruebas que validan la trazabilidad, logging y alertas adecuadas para diagnósti
 ### **Digital Twin Testing**
 Simulación virtual del sistema físico para probar comportamientos sin riesgos reales (especialmente en IoT o industria 4.0).
 
+---
 
 ## 🧮 Testing de Seguridad y Cumplimiento Avanzado
 
@@ -203,6 +212,7 @@ Variación masiva y aleatoria de parámetros API para descubrir vulnerabilidades
 ### **Zero Trust Validation**
 Pruebas que aseguran políticas de acceso y autenticación continua dentro de arquitecturas *Zero Trust*.
 
+---
 
 ## 🧩 Testing Organizativo, Escalable y Evolutivo
 
@@ -224,6 +234,7 @@ Enfoque que fusiona QA con DevOps, priorizando automatización, trazabilidad, m�
 ### **Test Data Virtualization**
 Generación de datos sintéticos o clonados a partir de fuentes reales sin exponer información sensible.
 
+---
 
 ## 📘 Buenas Prácticas Avanzadas y Principios Éticos
 
@@ -242,6 +253,7 @@ Diseño estructural de cómo se organizan, ejecutan y mantienen las pruebas dent
 ### **Knowledge Sharing in QA**
 Práctica de documentación continua, pairing y comunidades internas de calidad dentro del equipo.
 
+---
 
 > **Tip:** Relacionar esta nota con `Glosario Complementario de Testing` y `[Testing](/testing/testing/)`  
 > Etiquetas sugeridas: `#testing #QA #automatizacion #inteligencia-artificial #devops #quality-engineering`

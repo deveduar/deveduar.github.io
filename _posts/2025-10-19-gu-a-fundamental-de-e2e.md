@@ -1,13 +1,13 @@
-creation date: 2025-10-19 14:43
-tags:
+---
+date: 2025-10-19 14:43
+title: Guía Fundamental de E2E
 keywords:
 source:
 status: 📌
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-categories:
+Parent: "[[Area-Prog]]"
 public_note: "true"
+category: uncategorized
+---
 
 # Guía Fundamental de [E2E - End to End Testing](/testing/e2e---end-to-end-testing/)
 ## 🧠 Conceptos Clave

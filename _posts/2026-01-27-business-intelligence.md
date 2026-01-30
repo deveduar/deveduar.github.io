@@ -1,2 +1,5 @@
-categories: "[Gestion de Negocio](/gestion%20de%20negocio/gestion-de-negocio/)"
+---
+title: business intelligence
 public_note: "true"
+category: Gestion de Negocio
+---

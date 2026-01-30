@@ -1,14 +1,15 @@
-tags:
-  - Mates
+---
+date: 2023-04-01 18:06
+title: Funciones
 status: 🌟
-Parent: "Area-IA"
-creation date: 2023-04-01 18:06
+Parent: "[[Area-IA]]"
 keywords:
 source:
-cssclasses:
-  - hide-embedded-header1
-categories: "[mates](/uncategorized/mates/)"
 public_note: "true"
+category: mates
+tags:
+  - Mates
+---
 # Funciones
 
 ## Conceptos básicos
@@ -262,6 +263,7 @@ A partir de la gráfica, calcular qué valor de **x** corresponde a un valor de 
 
 Ejemplo: hallar el punto **y** que corresponde a **x = -3**  
 
+---
 
 #### Función - Dominio y recorrido
 Calcular a partir de una gráfica de una función:
@@ -280,6 +282,7 @@ Calcular a partir de una gráfica de una función:
 - Recorrido = \[-2, 7)
 
 
+---
 
 #### Función - Punto de corte con los ejes
 Puntos donde la gráfica cruza los ejes.
@@ -290,6 +293,7 @@ Puntos donde la gráfica cruza los ejes.
 
 **Coordenadas de los cortes:**
 
+---
 
 #### Signo de la función
 
@@ -303,12 +307,14 @@ Función positiva entre -4 y -3 (vale 0 en -3), negativa hasta 3, luego vuelve a
 Solo se consideran intervalos de **x**, no valores específicos de **y**.
 
 
+---
 
 #### Simetría gráficamente
 - **Función par:** simétrica respecto al eje Y  
 - **Función impar:** simétrica respecto a la bisectriz del primer cuadrante  
 - **Sin simetría:** no cumple ninguna de las dos condiciones  
 
+---
 
 #### Simetría algebraicamente
 
@@ -326,12 +332,14 @@ Ejemplos:
 
 - Función **sin simetría:** combina exponentes pares e impares.  
 
+---
 
 #### Periodicidad
 Una función es **periódica** cuando se repite con un intervalo constante **T** en el eje X.  
 
 Ejemplo: funciones seno y coseno.
 
+---
 
 #### Monotonía (crecimiento y decrecimiento)
 - Si al aumentar **x**, **y** también aumenta → **creciente**  
@@ -340,6 +348,7 @@ Ejemplo: funciones seno y coseno.
 
 Los intervalos se expresan como abiertos y se pueden unir con ∪.
 
+---
 
 #### Máximos y mínimos (extremos)
 - **Máximos relativos:** puntos más altos del entorno (picos)  
@@ -347,6 +356,7 @@ Los intervalos se expresan como abiertos y se pueden unir con ∪.
 
 - **Máximos y mínimos absolutos:** valores más altos o más bajos en todo el dominio.  
 
+---
 
 #### Continuidad y discontinuidad
 Una función es **continua** si puede dibujarse sin levantar el lápiz.
@@ -357,6 +367,7 @@ Tipos de discontinuidad:
 - **Salto infinito:** la función tiende a ±∞ (asíntota vertical).  
 
 
+---
 
 ### Producto, suma y resta de matrices
 - Una matriz tiene **n filas** y **m columnas**.  
@@ -371,6 +382,7 @@ Tipos de discontinuidad:
 Producto entre una matriz 3×2 y una 2×3 → resultado 3×3.
 
 
+---
 
 #### Operaciones adicionales
 - **Suma y resta:** solo entre matrices del mismo tamaño.
@@ -398,6 +410,7 @@ Las funciones pueden clasificarse según la forma de su expresión o su comporta
 - **Trigonométricas:** basadas en seno, coseno, tangente, etc.
 - **Por tramos:** definidas con diferentes expresiones según el intervalo de x.
 
+---
 
 ### Transformaciones de funciones
 Cualquier función puede desplazarse, reflejarse o escalarse:
@@ -412,6 +425,7 @@ Cualquier función puede desplazarse, reflejarse o escalarse:
 
 Estas transformaciones ayudan a deducir gráficas complejas a partir de funciones base.
 
+---
 
 ### Composición de funciones
 La composición combina dos funciones:  
@@ -421,6 +435,7 @@ La composición combina dos funciones:
 - No siempre es conmutativa: f(g(x)) ≠ g(f(x))
 - Se usa en modelado de procesos donde una salida depende de otra transformación.
 
+---
 
 ### Función inversa
 La **inversa** de una función f(x) es otra función f⁻¹(x) tal que:
@@ -433,6 +448,7 @@ f(f⁻¹(x)) = x
 **Ejemplo:**
 f(x) = 2x + 3 → f⁻¹(x) = (x - 3)/2
 
+---
 
 ### Límites y continuidad avanzada
 - Un **límite** describe el comportamiento de una función cerca de un punto.  
@@ -446,6 +462,7 @@ f(x) = 2x + 3 → f⁻¹(x) = (x - 3)/2
 - **Infinita:** el límite tiende a ±∞.
 - **Oscilatoria:** no existe por variaciones extremas (ejemplo: sin(1/x) en x→0).
 
+---
 
 ### Derivadas y comportamiento local
 La **derivada** mide el cambio instantáneo de una función:
@@ -460,6 +477,7 @@ f'(x) = lim(h→0) (f(x+h) - f(x)) / h
 - Determinar puntos críticos (f'(x)=0 → máximos o mínimos).
 - Analizar concavidad y puntos de inflexión (segundas derivadas).
 
+---
 
 ### Asintotas
 Líneas a las que la función se aproxima sin alcanzarlas.
@@ -468,6 +486,7 @@ Líneas a las que la función se aproxima sin alcanzarlas.
 - **Horizontales:** y = b (cuando lim(x→∞) f(x) = b)
 - **Oblicuas:** y = mx + n (cuando la función crece linealmente sin límite)
 
+---
 
 ## Matrices
 
@@ -478,6 +497,7 @@ Líneas a las que la función se aproxima sin alcanzarlas.
 - **Identidad:** A·I = I·A = A
 - **Nula:** A·0 = 0
 
+---
 
 ### Determinante de una matriz
 El **determinante** (det(A) o |A|) indica propiedades geométricas y de invertibilidad.
@@ -493,6 +513,7 @@ Si A = [[a, b], [c, d]]
 Usando la regla de Sarrus:
 det(A) = aei + bfg + cdh - ceg - bdi - afh
 
+---
 
 ### Inversa de una matriz
 Solo existe si det(A) ≠ 0.  
@@ -501,6 +522,7 @@ A⁻¹ = (1 / det(A)) · adj(A)
 **Propiedad:**  
 A·A⁻¹ = I
 
+---
 
 ### Sistemas de ecuaciones lineales
 Los sistemas pueden expresarse como una multiplicación matricial:
@@ -514,6 +536,7 @@ xᵢ = det(Aᵢ) / det(A)
 
 Donde Aᵢ es la matriz A sustituyendo la columna i por B.
 
+---
 
 ### Aplicaciones de las matrices
 - **Transformaciones lineales:** rotación, escalado, traslación en gráficos.
@@ -523,6 +546,7 @@ Donde Aᵢ es la matriz A sustituyendo la columna i por B.
 - **Criptografía:** codificación mediante matrices invertibles.
 - **Simulaciones físicas:** representación de sistemas dinámicos.
 
+---
 
 ### Extensión práctica
 **Ejemplo de rotación 2D con matrices:**
@@ -549,6 +573,7 @@ print(p_rotado)
 
 Este ejemplo muestra cómo usar una matriz para rotar un punto en el plano.
 
+---
 
 ### Representación matricial en programación
 
@@ -574,6 +599,7 @@ print(C)
 ```
 {% endraw %}
 
+---
 
 ### Relación entre funciones y matrices
 
@@ -583,6 +609,7 @@ Ambos conceptos se cruzan en análisis y computación:
 * En álgebra lineal, la evaluación de funciones sobre matrices (f(A)) permite calcular exponentes de matrices, resolviendo ecuaciones diferenciales.
 * En [Machine Learning](/data%20science/machine-learning/), las **funciones de activación** actúan sobre matrices (tensores) de datos.
 
+---
 
 ## Nota complementaria sugerida
 
@@ -612,6 +639,7 @@ Podría ampliarse en una futura nota:
 	- Utilizadas para modelar situaciones donde la relación cambia según el intervalo de x  
 	- Ejemplo: función escalón, función valor absoluto
 
+---
 
 ### Comportamiento asintótico avanzado
 - **Asintotas horizontales y oblicuas para funciones racionales:**  
@@ -625,6 +653,7 @@ Podría ampliarse en una futura nota:
 	- eˣ crece más rápido que cualquier polinomio  
 	- log(x) crece lentamente y no tiene límite superior
 
+---
 
 ### Funciones especiales
 - **Valor absoluto:** f(x) = |x|, simétrica y definida por tramos  
@@ -633,6 +662,7 @@ Podría ampliarse en una futura nota:
 - **Funciones implícitas:** relaciones F(x, y) = 0 donde y no está despejada  
 - **Funciones paramétricas:** describen curvas mediante parámetro t: (x(t), y(t))  
 
+---
 
 ### Optimización y análisis de funciones
 - **Puntos críticos:** donde f'(x) = 0 o f'(x) no existe  
@@ -642,6 +672,7 @@ Podría ampliarse en una futura nota:
 - **Puntos de inflexión:** cambio de concavidad, f''(x) = 0 y cambio de signo  
 - **Aplicaciones:** economía (max/min de ganancias), física (trayectorias), ingeniería (resistencia de materiales)
 
+---
 
 ## Matrices
 
@@ -654,6 +685,7 @@ Podría ampliarse en una futura nota:
 - **Ortogonal:** Aᵀ·A = I, preserva normas y ángulos  
 - **Sparsa:** muchas entradas cero, optimización en cómputo
 
+---
 
 ### Operaciones avanzadas
 - **Autovalores y autovectores:**  
@@ -668,6 +700,7 @@ Podría ampliarse en una futura nota:
 - **Rango de la matriz:** número máximo de filas/columnas linealmente independientes  
 - **Traza (trace):** suma de elementos de la diagonal, útil en propiedades de autovalores
 
+---
 
 ### Sistemas lineales avanzados
 - **Compatibilidad:**  
@@ -682,6 +715,7 @@ Podría ampliarse en una futura nota:
 	- Factorización LU  
 	- Métodos iterativos (Gauss-Seidel, Jacobi)
 
+---
 
 ### Aplicaciones prácticas de matrices
 - **Gráficas y grafos:** matrices de adyacencia y de incidencia  
@@ -691,6 +725,7 @@ Podría ampliarse en una futura nota:
 - **Criptografía:** cifrado de datos mediante matrices invertibles  
 - **Simulación de Markov:** cadenas de estados con matrices estocásticas
 
+---
 
 ### Representación en programación avanzada
 - Uso de librerías para operaciones eficientes: NumPy, SciPy, [TensorFlow](/data%20science/tensorflow/), PyTorch  
@@ -714,6 +749,7 @@ D = A @ B
 ```
 {% endraw %}`
 
+---
 
 ### Conexión funciones y matrices en aplicaciones
 
@@ -722,6 +758,7 @@ D = A @ B
 * **Redes neuronales:** matrices representan pesos, funciones aplican activación no lineal
 * **Procesamiento de señales e imágenes:** convoluciones y filtrado mediante matrices
 
+---
 
 ### Temas sugeridos para futuras notas
 

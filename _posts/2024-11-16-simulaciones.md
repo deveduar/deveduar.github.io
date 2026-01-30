@@ -1,17 +1,17 @@
-creation date: 2024-11-16 20:26
+---
+date: 2024-11-16 20:26
+title: simulaciones
+keywords:
+source:
+status: 🌟
+Parent: "[[Area-Prog]]"
+public_note: "true"
+category: Desarrollo multiplataforma
 tags:
   - simulaciones
   - Mates
   - cpp
-keywords:
-source:
-status: 🌟
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-  - wide
-categories: "[Desarrollo multiplataforma](/desarrollo%20multiplataforma/desarrollo-multiplataforma/)"
-public_note: "true"
+---
 # simulaciones
 ``
 

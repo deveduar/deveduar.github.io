@@ -1,17 +1,18 @@
-creation date: 2025-11-06 15:14
+---
+date: 2025-11-06 15:14
+title: Complejidad Logarítmica y Notación Big O
+keywords:
+source:
+status: 🌟
+Parent: "[[Area-Prog]]"
+public_note: "true"
+category: Computer Science
 tags:
   - CS
   - computer_Science
   - logaritmos
   - big_0
-keywords:
-source:
-status: 🌟
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-categories: "[Computer Science](/computer%20science/computer-science/)"
-public_note: "true"
+---
 # Complejidad Logarítmica y Notación Big O
 
 - [Computer Science](/computer%20science/computer-science/)
@@ -21,6 +22,7 @@ public_note: "true"
 La **complejidad algorítmica** mide el crecimiento del tiempo o espacio que necesita un algoritmo en función del tamaño de la entrada (**n**).  
 Sirve para comparar la **eficiencia** de distintos algoritmos de forma independiente del hardware o lenguaje de programación.
 
+---
 
 ## 🧮 NOTACIÓN BIG O (O GRANDE)
 
@@ -42,6 +44,7 @@ Si un algoritmo tarda aproximadamente `3n² + 5n + 7` operaciones, se dice que t
 | **O(2ⁿ)** | Exponencial | Fuerza bruta en combinaciones | 🔹 Crecimiento explosivo |
 | **O(n!)** | Factorial | Permutaciones totales | 🔹 Inviable para *n > 10* |
 
+---
 
 ## 🔹 COMPLEJIDAD LOGARÍTMICA: O(log n)
 
@@ -71,6 +74,7 @@ El número de pasos necesarios es `log₂(n)`.
 | 1000 | 1000 | 10 |
 | 1.000.000 | 1.000.000 | 20 |
 
+---
 
 ## 🔸 COMPLEJIDAD INVERSA: O(1/log n) o O(√n)
 
@@ -83,6 +87,7 @@ Aunque menos comunes, existen algoritmos cuya complejidad decrece o crece sublin
 ### **O(1/log n)**
 - Raramente aparece de forma directa; puede aparecer como **eficiencia incremental** en estructuras optimizadas o análisis teóricos.
 
+---
 
 ## 🧠 OTRAS NOTACIONES ASOCIADAS
 
@@ -103,6 +108,7 @@ Ejemplo:
 - `log n = o(n)` → log n crece más lento que n.
 - `n² = ω(n)` → n² crece más rápido que n.
 
+---
 
 ## ⚙️ COMPLEJIDAD COMBINADA
 
@@ -120,6 +126,7 @@ El término dominante (de mayor orden) determina la complejidad final.
 - Leer n elementos → `O(n)`
 - Luego aplicar búsqueda binaria en cada uno → `O(n log n)`
 
+---
 
 ## 📊 REPRESENTACIÓN GRÁFICA (Intuitiva)
 
@@ -141,6 +148,7 @@ Crecimiento (tiempo)
 ```
 {% endraw %}
 
+---
 
 ## 🧩 RELACIÓN CON ESTRUCTURAS DE DATOS
 
@@ -153,6 +161,7 @@ Crecimiento (tiempo)
 | **Heap** | Inserción / extracción | O(log n) | Propiedad de orden parcial |
 | **Graph (Dijkstra)** | Camino mínimo | O(E log V) | Logarítmico por cola de prioridad |
 
+---
 
 ## 🧾 RESUMEN FINAL
 
@@ -166,6 +175,7 @@ Crecimiento (tiempo)
 | **O(2ⁿ)** | Recursión total | Explosión combinatoria |
 | **O(n!)** | Permutaciones | Inviable |
 
+---
 
 🔍 **Conclusión:**  
 La **complejidad logarítmica (O(log n))** es una de las más deseables, ya que ofrece un equilibrio ideal entre velocidad y escalabilidad. Comprender la **notación Big O**, junto con **Theta (Θ)** y **Omega (Ω)**, permite analizar el rendimiento de estructuras y algoritmos con precisión teórica y práctica.
@@ -173,6 +183,7 @@ La **complejidad logarítmica (O(log n))** es una de las más deseables, ya que 
 
 # Fundamentos Matemáticos para Entender la Complejidad Algorítmica
 
+---
 
 ## 🧮 1. CRECIMIENTO DE FUNCIONES
 
@@ -197,6 +208,7 @@ c \neq 0 & \Rightarrow f(n) = Θ(g(n)) \\
 \end{cases}
 \]
 
+---
 
 ## 📈 2. LOGARITMOS Y EXPONENCIALES
 
@@ -233,6 +245,7 @@ Ejemplo:
 Si un algoritmo divide el problema entre 2 en cada paso → `O(log₂ n)`.  
 Si divide entre 10 → `O(log₁₀ n)`, pero ambas son equivalentes en Big O.
 
+---
 
 ## 🔁 3. SERIES, SUMAS Y PROGRESIONES
 
@@ -259,6 +272,7 @@ O(n) + O(n) + ... + O(n) = O(n \log n)
 \]
 porque hay `log n` niveles de división.
 
+---
 
 ## ♻️ 4. RECURSIVIDAD Y RELACIONES DE RECURRENCIA
 
@@ -285,6 +299,7 @@ Permite resolver muchas recurrencias comunes sin cálculo manual.
 **Ejemplo:**  
 MergeSort → \( T(n) = 2T(n/2) + O(n) = O(n \log n) \)
 
+---
 
 ## 📊 5. ANÁLISIS ASINTÓTICO
 
@@ -300,6 +315,7 @@ Se centra en el **comportamiento cuando n es muy grande**.
 - **Mejor caso:** límite inferior → Ω.  
 - **Promedio:** comportamiento esperado → Θ.
 
+---
 
 ## 🔢 6. CONCEPTOS DE LÍMITE Y DERIVADA
 
@@ -323,6 +339,7 @@ Si
 1 < \log n < n < n \log n < n^2 < 2^n < n! 
 \]
 
+---
 
 ## 🔢 7. ALGEBRA Y COMBINATORIA BÁSICA
 
@@ -339,6 +356,7 @@ Usadas para estimar operaciones o combinaciones posibles dentro de un algoritmo.
 \]
 → base para análisis de ramas en árboles de recursión y probabilidades de casos.
 
+---
 
 ## 📚 8. TEORÍA DE CONJUNTOS Y FUNCIONES
 
@@ -348,6 +366,7 @@ Comprender **dominios, rangos** y **mapeos** ayuda a modelar estructuras como ta
 - **Relaciones y pares ordenados:** base para representar aristas `(u, v)` en grafos.  
 - **Cardinalidad:** mide tamaño de un conjunto; análogo al tamaño de entrada *n*.
 
+---
 
 ## 🧠 9. PROBABILIDAD Y ESPERANZA MATEMÁTICA
 
@@ -361,6 +380,7 @@ Usada en análisis **promedio o esperado** (randomized algorithms).
 **Ejemplo:**  
 En una tabla hash con buena función dispersora, el tiempo promedio de búsqueda es **O(1)**, aunque el peor caso sea **O(n)**.
 
+---
 
 ## ⚙️ 10. RESUMEN DE CONCEPTOS IMPRESCINDIBLES
 
@@ -375,6 +395,7 @@ En una tabla hash con buena función dispersora, el tiempo promedio de búsqueda
 | **Probabilidad** | Esperanza, dispersión | Análisis promedio |
 | **Teoría de conjuntos** | Cardinalidad, mapeos | Estructuras como hash o grafos |
 
+---
 
 🧩 **En resumen:**  
 Para dominar la **complejidad algorítmica** es esencial entender cómo crecen las funciones, cómo se comportan los **logaritmos y sumatorias**, y cómo se modelan las **relaciones recursivas**.  
@@ -382,6 +403,7 @@ Estas herramientas matemáticas forman el lenguaje con el que se mide la eficien
 
 # Complejidad Logarítmica y Notaciones — Conceptos Avanzados
 
+---
 
 ## 📈 1. Escalas de crecimiento y jerarquía de complejidad
 
@@ -399,6 +421,7 @@ Comprender la relación entre diferentes órdenes de crecimiento permite compara
 
 El **crecimiento logarítmico** aparece típicamente cuando **cada paso divide el problema a la mitad**.
 
+---
 
 ## 🧮 2. Profundización matemática: bases y equivalencias del logaritmo
 
@@ -419,6 +442,7 @@ El **crecimiento logarítmico** aparece típicamente cuando **cada paso divide e
 	\]
 	donde k es el factor de división.
 
+---
 
 ## 🧠 3. Complejidades fraccionales y sublogarítmicas
 
@@ -430,6 +454,7 @@ Existen algoritmos con **complejidades menores que logarítmicas**, aunque muy r
 
 Estas funciones representan **eficiencia extrema** en acceso o búsqueda.
 
+---
 
 ## 🧩 4. Notaciones complementarias a Big O
 
@@ -455,6 +480,7 @@ Estas funciones representan **eficiencia extrema** en acceso o búsqueda.
 
 Estas notaciones permiten expresar relaciones asintóticas **con mayor precisión** que `O(...)`.
 
+---
 
 ## ⚗️ 5. Dominio de recurrencias y el Teorema Maestro
 
@@ -473,6 +499,7 @@ Ejemplo:
 - **MergeSort:** `T(n) = 2T(n/2) + O(n)` → `O(n log n)`
 - **Binary Search:** `T(n) = T(n/2) + O(1)` → `O(log n)`
 
+---
 
 ## 🔢 6. Aproximaciones y crecimiento real
 
@@ -486,6 +513,7 @@ Para observar la diferencia práctica entre escalas de complejidad:
 
 El crecimiento logarítmico es **extremadamente eficiente**, incluso para tamaños de entrada enormes.
 
+---
 
 ## 🧩 7. Conceptos matemáticos relacionados imprescindibles
 
@@ -498,6 +526,7 @@ El crecimiento logarítmico es **extremadamente eficiente**, incluso para tamañ
 - **Combinatoria básica y factoriales** (para contrastar crecimiento exponencial y factorial)
 - **Teoría de complejidad computacional** (P, NP, EXP)
 
+---
 
 ## 🔬 8. Interpretación geométrica e intuitiva
 
@@ -506,6 +535,7 @@ El crecimiento logarítmico es **extremadamente eficiente**, incluso para tamañ
 - Ejemplo intuitivo:  
 	si duplicas el tamaño del problema, un algoritmo `O(log n)` **solo suma una operación adicional**.
 
+---
 
 ## 📚 9. Aplicaciones donde aparece la complejidad logarítmica
 
@@ -516,6 +546,7 @@ El crecimiento logarítmico es **extremadamente eficiente**, incluso para tamañ
 - Union-Find / Disjoint Set optimizado
 - Skip Lists y Segment Trees
 
+---
 
 ## 🧭 10. Complejidad compuesta y mixta
 
@@ -527,6 +558,7 @@ En la práctica, los algoritmos combinan diferentes órdenes:
 
 Estas complejidades **intermedias** aparecen en algoritmos de compresión, búsqueda avanzada y análisis de datos.
 
+---
 
 ## 🔗 11. Lecturas recomendadas
 
@@ -537,3 +569,4 @@ Estas complejidades **intermedias** aparecen en algoritmos de compresión, búsq
 - Análisis Asintótico
 - Logaritmos y Crecimiento de Funciones
 
+---

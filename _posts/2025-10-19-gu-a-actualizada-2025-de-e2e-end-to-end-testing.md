@@ -1,13 +1,13 @@
-creation date: 2025-10-19 16:57
-tags:
+---
+date: 2025-10-19 16:57
+title: Guía Actualizada 2025 de E2E End-to-End Testing
 keywords:
 source:
 status: 📌
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-categories: "[Testing](/testing/testing/)"
+Parent: "[[Area-Prog]]"
 public_note: "true"
+category: Testing
+---
 # Guía Actualizada 2025 de E2E – “End-to-End Testing
 
 ## 🔮 Tendencias Clave en 2025
@@ -30,6 +30,7 @@ public_note: "true"
 - **Pruebas Autónomas**
 	- Scripts que aprenden patrones de interacción y corrigen sus propios fallos de localización o espera.
 
+---
 
 ## 🧩 Nuevos Modelos de Prueba y Buenas Prácticas
 - **Selección Inteligente de Flujos Críticos**
@@ -51,6 +52,7 @@ public_note: "true"
 - **Participación de Stakeholders No Técnicos**
 	- Los product owners o diseñadores pueden visualizar y ejecutar escenarios críticos desde dashboards interactivos.
 
+---
 
 ## 🧠 Conceptos Emergentes 2025
 - **Testing Observability**
@@ -68,6 +70,7 @@ public_note: "true"
 - **Model-Based Testing (MBT)**
 	- Los modelos de flujo de negocio generan automáticamente casos de prueba coherentes con las reglas del sistema.
 
+---
 
 ## 🛠 Recomendaciones Prácticas de Implementación
 - Define pipelines **inteligentes** con ejecución prioritaria por impacto.
@@ -78,6 +81,7 @@ public_note: "true"
 - Mide KPIs de calidad continua: cobertura de negocio, estabilidad, tiempo medio de reparación, defectos post-release.
 - Revisa trimestralmente la estrategia E2E y elimina redundancias.
 
+---
 
 ## 🧭 Herramientas y Ecosistema Relevantes en 2025
 - **Playwright** – Referencia moderna con soporte nativo para tracing, mobile y API.
@@ -88,6 +92,7 @@ public_note: "true"
 - **Axe-Core / Pa11y** – Validaciones automáticas de accesibilidad integradas en flujos E2E.
 - **Allure / ReportPortal / Testmo** – Reportes visuales, trazabilidad y análisis de riesgo.
 
+---
 
 ## 📊 Métricas y KPIs Clave en 2025
 - **Cobertura de flujos de negocio (%)**
@@ -99,6 +104,7 @@ public_note: "true"
 - **Índice de regresión post-despliegue**
 - **Accesibilidad promedio (puntuación A11Y)**
 
+---
 
 ## 🚀 Futuro Inmediato (2026+)
 - Mayor integración de **agentes QA autónomos** que aprenden de cada ejecución.
@@ -107,6 +113,7 @@ public_note: "true"
 - Estandarización de **QA-as-Code**, con pipelines totalmente declarativos.
 - Incorporación de **Large Language Models** directamente dentro del entorno de test para generar y explicar escenarios.
 
+---
 
 ## 🧩 Conclusión
 El E2E moderno en 2025 evoluciona hacia un enfoque **inteligente, observador, autónomo y colaborativo**.  

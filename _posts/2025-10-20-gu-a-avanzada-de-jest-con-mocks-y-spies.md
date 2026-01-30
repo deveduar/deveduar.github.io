@@ -1,15 +1,16 @@
-creation date: 2025-10-20 18:02
-tags:
-  - Codes
+---
+date: 2025-10-20 18:02
+title: Guía avanzada de Jest con mocks y spies
 keywords:
 aliases:
 source:
 status: 📌
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-categories: "[Testing](/testing/testing/)"
+Parent: "[[Area-Prog]]"
 public_note: "true"
+category: Testing
+tags:
+  - Codes
+---
 # Guía avanzada de Jest con mocks y spies
 
 - [javascript](/desarrollo%20web/javascript/)

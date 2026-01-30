@@ -1,16 +1,16 @@
-creation date: 2025-01-29 18:46
-tags:
-  - playwright
-  - testing
+---
+date: 2025-01-29 18:46
+title: Playwright
 keywords:
 source:
 status: 🌟
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-  - wide
-categories: "[Testing](/testing/testing/)"
+Parent: "[[Area-Prog]]"
 public_note: "true"
+category: Testing
+tags:
+  - playwright
+  - testing
+---
 # Playwright  
 
 - [Testing](/testing/testing/)  
@@ -20,6 +20,7 @@ public_note: "true"
 - [Playwright - Temas Avanzados y Casos Especiales](/testing/playwright---temas-avanzados-y-casos-especiales/)
 - Playwright – Temas Especializados y Casos de Uso Avanzados
 
+---
 
 ## 🧩 Conceptos Fundamentales
 
@@ -27,6 +28,7 @@ public_note: "true"
 - Permite ejecutar pruebas en **navegadores reales** (Chromium, Firefox, WebKit) y en diferentes dispositivos o contextos (móvil, escritorio, headless o headed).  
 - Está construido sobre **promesas asincrónicas**, lo que facilita la sincronización automática con el navegador.  
 
+---
 
 ## ⚙️ Características Clave
 
@@ -39,6 +41,7 @@ public_note: "true"
 - **Playwright Trace Viewer** → herramienta visual para revisar ejecuciones paso a paso, capturando red, DOM, capturas y logs.  
 - **Soporte para API testing y componentes** → permite validar tanto UI como endpoints REST o GraphQL.
 
+---
 
 ## 🧠 Estructura de una Prueba
 
@@ -65,6 +68,7 @@ test('flujo de login y navegación', async ({ page }) => {
 * `expect` → validaciones de comportamiento y contenido.
 * El flujo simula **inicio de sesión**, **navegación**, y **validación de interfaz**.
 
+---
 
 ## 🧪 Configuración Básica
 
@@ -93,6 +97,7 @@ export default defineConfig({
 ```
 {% endraw %}
 
+---
 
 ## 🧭 Estrategias de Pruebas
 
@@ -103,6 +108,7 @@ export default defineConfig({
 * **Testing visual** → compara capturas con imágenes base usando `toHaveScreenshot`.
 * **Integración continua (CI/CD)** → integración con GitHub Actions, GitLab CI, Jenkins o Azure Pipelines.
 
+---
 
 ## 🧰 Integración con QA y DevOps
 
@@ -111,6 +117,7 @@ export default defineConfig({
 * **CI pipelines optimizados** → integración con Docker y estrategias de shard/parallel.
 * **Testing híbrido** → combina pruebas API + UI + componentes en un mismo flujo.
 
+---
 
 ## 🚀 Ejemplo Avanzado: Flujos con Estado Persistente
 
@@ -138,6 +145,7 @@ test.describe('Gestión de tareas', () => {
 ```
 {% endraw %}
 
+---
 
 ## 📊 Mejores Prácticas
 
@@ -148,6 +156,7 @@ test.describe('Gestión de tareas', () => {
 * Revisar ejecuciones con Playwright Trace Viewer tras errores.
 * Agrupar flujos críticos dentro de [E2E - End to End Testing](/testing/e2e---end-to-end-testing/).
 
+---
 
 ## 🔮 Tendencias 2025
 
@@ -158,6 +167,7 @@ test.describe('Gestión de tareas', () => {
 * **Snapshots dinámicos y accesibilidad automatizada** (`toHaveAccessibleName`, `axe-core`).
 * **Ejecuciones en paralelo en la nube** (BrowserStack, LambdaTest, Azure Testing Grid).
 
+---
 
 ## 📚 Recursos
 

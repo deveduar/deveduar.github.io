@@ -1,20 +1,17 @@
-creation date: 2025-04-14 18:09
-tags:
-  - servicio
-  - Hacking
+---
+date: 2025-04-14 18:09
+title: servicio MDR detección y respuesta administradas
 keywords:
 source:
 status: 🌟
-Parent: "Area-Sistemas"
-cssclasses:
-  - hide-embedded-header1
-  - wide
-categories: "[ciberseguridad](/ciberseguridad/ciberseguridad/)"
+Parent: "[[Area-Sistemas]]"
 aliases:
-  - MDR
-  - detección y respuesta administradas
-  - Servicio MDR
 public_note: "true"
+category: ciberseguridad
+tags:
+  - servicio
+  - Hacking
+---
 # Servicio MDR - Detección y Respuesta Administradas
 
 El servicio **MDR (Managed Detection and Response)** proporciona a las organizaciones capacidades avanzadas de **detección, análisis y respuesta ante amenazas** sin necesidad de gestionar internamente toda la infraestructura de seguridad. Está diseñado para complementar o sustituir equipos internos de [SOC](/ciberseguridad/soc/) (Security Operations Center).

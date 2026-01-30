@@ -1,18 +1,18 @@
-creation date: 2024-12-10 02:53
+---
+date: 2024-12-10 02:53
+title: Sonarqube
+keywords:
+source:
+status: 🌟
+Parent: "[[Area-Sistemas]]"
+public_note: "true"
+category: devops
 tags:
   - sonarqube
   - Hacking
   - devops
   - IaC
-keywords:
-source:
-status: 🌟
-Parent: "Area-Sistemas"
-cssclasses:
-  - hide-embedded-header1
-  - wide
-categories: "[devops](/devops/devops/)"
-public_note: "true"
+---
 # SonarQube
 
 - [devops](/devops/devops/)

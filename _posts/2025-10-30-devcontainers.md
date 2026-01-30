@@ -1,17 +1,18 @@
-creation date: 2025-10-30 16:37
+---
+date: 2025-10-30 16:37
+title: devcontainers
+keywords:
+source:
+status: 🌟
+Parent: "[[Area-Sistemas]]"
+public_note: "true"
+category: Virtualizacion
 tags:
   - virtualizacion
   - devtools
   - devcontainers
   - docker
-keywords:
-source:
-status: 🌟
-Parent: "Area-Sistemas"
-cssclasses:
-  - hide-embedded-header1
-categories: "[Virtualizacion](/devops/virtualizacion/)"
-public_note: "true"
+---
 # Devcontainers
 
 - [Docker](/software%20engineering/docker/)
@@ -19,6 +20,7 @@ public_note: "true"
 - [Devcontainers - Entornos de desarrollo como código con ‪@DockerInc‬ y ‪@code‬ - YouTube](https://youtu.be/ld-eeO2y6YI) 
 - [GitHub - pabpereza/dockerfile-best-practices](https://github.com/pabpereza/dockerfile-best-practices)
 
+---
 
 ## Qué son los Devcontainers
 
@@ -33,6 +35,7 @@ Un Devcontainer encapsula:
 
 Esto lo convierte en una solución clave para el desarrollo **reproducible, portable y aislado**.
 
+---
 
 ## Componentes principales
 
@@ -72,6 +75,7 @@ Esto lo convierte en una solución clave para el desarrollo **reproducible, port
 	- `docker-compose.yml`: permite definir servicios adicionales (por ejemplo, una base de datos).
 	- `.devcontainer/docker-compose.yml`: cuando el proyecto requiere varios contenedores.
 
+---
 
 ## Beneficios clave
 
@@ -81,6 +85,7 @@ Esto lo convierte en una solución clave para el desarrollo **reproducible, port
 - **Integración con VS Code y GitHub Codespaces:** facilita el desarrollo remoto o en la nube.
 - **Compatibilidad con [Docker](/software%20engineering/docker/) y contenedores personalizados.**
 
+---
 
 ## Uso en Visual Studio Code
 
@@ -92,6 +97,7 @@ Pasos:
 3. VS Code reconstruirá el contenedor según la configuración del proyecto.
 4. Una vez dentro, las extensiones, dependencias y variables se cargarán automáticamente.
 
+---
 
 ## Integración con GitHub Codespaces
 
@@ -101,6 +107,7 @@ Esto permite:
 - Mantener consistencia entre el desarrollo local y remoto.
 - Reducir el tiempo de onboarding de nuevos colaboradores.
 
+---
 
 ## Mejores prácticas
 
@@ -110,6 +117,7 @@ Esto permite:
 - Documentar comandos y variables de entorno dentro del `README.md` del proyecto.
 - Versionar siempre los archivos `.devcontainer` junto con el código fuente.
 
+---
 
 ## Casos de uso comunes
 
@@ -119,6 +127,7 @@ Esto permite:
 - Formación, talleres o repositorios educativos.
 - Creación de entornos de desarrollo en la nube sin instalación local.
 
+---
 
 ## Recursos adicionales
 

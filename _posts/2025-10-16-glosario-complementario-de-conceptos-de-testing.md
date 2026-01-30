@@ -1,13 +1,13 @@
-creation date: 2025-10-16 18:21
-tags:
+---
+date: 2025-10-16 18:21
+title: Glosario Complementario de Conceptos de Testing
 keywords:
 source:
 status: 📌
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-categories: "[Testing](/testing/testing/)"
+Parent: "[[Area-Prog]]"
 public_note: "true"
+category: Testing
+---
 # Glosario Complementario de Conceptos de Testing
 
 # 🧾 Glosario Complementario de Conceptos de Testing (Términos No Tratados)
@@ -15,6 +15,7 @@ public_note: "true"
 > Glosario ampliado de conceptos, prácticas y herramientas complementarias al documento principal de *Testing*.  
 > Se enfoca en técnicas, métricas, filosofías, herramientas emergentes y aspectos organizativos que complementan la estrategia de calidad.
 
+---
 
 ## ⚙️ Conceptos Generales y Filosofías de Testing
 
@@ -43,6 +44,7 @@ Administración y configuración de entornos dedicados al testing, asegurando qu
 ### **Test Readiness Review (TRR)**
 Evaluación previa que determina si el entorno, los datos y los criterios están listos para comenzar la fase de pruebas.
 
+---
 
 ## 🧩 Tipos y Niveles de Testing Avanzados
 
@@ -83,6 +85,7 @@ Conjunto mínimo de pruebas para validar que las funcionalidades críticas del s
 ### **Sanity Testing**
 Pruebas rápidas y específicas tras pequeñas modificaciones para confirmar que los errores previos fueron corregidos.
 
+---
 
 ## 🧰 Herramientas, Integraciones y Entornos
 
@@ -108,6 +111,7 @@ Gestión de entornos de testing mediante código reproducible (Terraform, Ansibl
 ### **Mock Servers**
 Simulan APIs o microservicios externos para pruebas controladas. Ej: MSW, WireMock, JSON Server.
 
+---
 
 ## 🧪 Métricas y Evaluación de Calidad
 
@@ -138,6 +142,7 @@ Porcentaje de ejecuciones exitosas de tests a lo largo del tiempo, útil para me
 ### **Bug Reopen Rate**
 Porcentaje de errores reabiertos después de haberse marcado como resueltos.
 
+---
 
 ## 🧱 Pruebas de Rendimiento, Seguridad y Resiliencia
 
@@ -165,6 +170,7 @@ Simulación de ataques reales para descubrir vulnerabilidades de seguridad antes
 ### **Fuzz Testing**
 Envía entradas malformadas o aleatorias al sistema para detectar vulnerabilidades o errores inesperados.
 
+---
 
 ## 🧩 Testing Organizativo y Cultural
 
@@ -189,6 +195,7 @@ Analogía del “technical debt” aplicada al testing: acumulación de pruebas 
 ### **Quality Gates**
 Puntos de control automáticos en el pipeline que impiden avanzar si no se cumplen ciertos criterios de calidad (ej. cobertura mínima o análisis estático sin errores críticos).
 
+---
 
 ## 🧠 Conceptos de Diseño Aplicados al Testing
 
@@ -207,6 +214,7 @@ Patrón que permite sustituir dependencias reales por dobles de prueba (mocks, s
 ### **Resilience Testing**
 Evalúa la capacidad del sistema para resistir y recuperarse de fallos de hardware, red o software.
 
+---
 
 ## 🧮 Pruebas Especializadas
 
@@ -228,6 +236,7 @@ Comprueba que los datos no se pierdan, corrompan o modifiquen indebidamente dura
 ### **Version Compatibility Testing**
 Verifica compatibilidad con diferentes versiones de dependencias, librerías o navegadores.
 
+---
 
 ## 📚 Recursos y Buenas Prácticas
 
@@ -243,6 +252,7 @@ Clasificación sistemática de defectos por tipo, severidad, impacto o component
 ### **Retrospectivas QA**
 Revisión periódica de la estrategia de testing, identificando oportunidades de mejora continua.
 
+---
 
 > **Sugerencia:** Vincular esta nota a la principal mediante `[Testing](/testing/testing/)` y añadir etiquetas:
 > `#glosario #testing #QA #calidad #metodologias`

@@ -1,15 +1,16 @@
-creation date: 2025-11-06 22:07
-tags:
-  - CS
-  - computer_Science
+---
+date: 2025-11-06 22:07
+title: arquitecturas en computacion
 keywords:
 source:
 status: 🌟
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-categories: "[Computer Science](/computer%20science/computer-science/)"
+Parent: "[[Area-Prog]]"
 public_note: "true"
+category: Computer Science
+tags:
+  - CS
+  - computer_Science
+---
 # Arquitecturas en Computación
 
 - [Computer Science](/computer%20science/computer-science/)
@@ -30,6 +31,7 @@ También conocida como *Ports and Adapters*, busca aislar la lógica del negocio
 	- Permite testear el dominio sin infraestructura real.  
 	- Favorece la mantenibilidad, escalabilidad y sustitución de dependencias.
 
+---
 
 ## Cliente / Servidor
 Modelo base de comunicación en red donde:
@@ -37,6 +39,7 @@ Modelo base de comunicación en red donde:
 - **Servidor** los provee, gestiona y responde.  
 Usado en la mayoría de sistemas distribuidos, desde aplicaciones web hasta bases de datos.
 
+---
 
 ## [serverless](/backend/serverless/)
 Arquitectura donde el despliegue y escalado del servidor son gestionados por el proveedor (AWS Lambda, Azure Functions, GCP Functions).  
@@ -45,6 +48,7 @@ Arquitectura donde el despliegue y escalado del servidor son gestionados por el 
 - Ideal para funciones aisladas y tareas reactivas.  
 - Integra bien con colas, eventos, y flujos de datos asincrónicos.
 
+---
 
 ## Component Driven Design
 Diseño centrado en componentes reutilizables e independientes.  
@@ -52,6 +56,7 @@ Diseño centrado en componentes reutilizables e independientes.
 - Cada componente tiene su propio estado, lógica y estilo.  
 - Popular en frontends (React, Vue) y en sistemas modulares backend.
 
+---
 
 ## Arquitectura Orientada a Eventos
 Diseño basado en la emisión, recepción y reacción a **eventos**.
@@ -66,6 +71,7 @@ Diseño basado en la emisión, recepción y reacción a **eventos**.
 - **[inngest](/data%20science/inngest/)**  
 	- Ejemplo moderno de plataforma para flujos event-driven serverless.
 
+---
 
 ## Arquitectura en Capas (Layered)
 Separación lógica de responsabilidades por capas.
@@ -77,6 +83,7 @@ Separación lógica de responsabilidades por capas.
 - Aísla dependencias y permite probar cada capa de forma independiente.  
 - Base de muchos frameworks tradicionales.
 
+---
 
 ## [microservicios](/backend/microservicios/)
 Arquitectura distribuida donde cada servicio es independiente y especializado en una función.
@@ -88,6 +95,7 @@ Arquitectura distribuida donde cada servicio es independiente y especializado en
 	- Mantienen la consistencia eventual en entornos descentralizados.  
 	- Usan mensajes, colas y mecanismos de compensación.
 
+---
 
 ## ECS (Entity Component System)
 Patrón común en GameDev y sistemas de simulación.  
@@ -96,6 +104,7 @@ Patrón común en GameDev y sistemas de simulación.
 - **System**: lógica que actúa sobre componentes.  
 Promueve la composición sobre la herencia, maximizando la flexibilidad y el rendimiento.
 
+---
 
 ## Pages y Filters
 Modelo derivado de arquitecturas web.  
@@ -103,6 +112,7 @@ Modelo derivado de arquitecturas web.
 - **Filters** permiten aplicar transformaciones o validaciones transversales (autenticación, logging, caching).  
 Similar a middleware o pipelines.
 
+---
 
 ## Arquitectura Monolítica
 - Toda la aplicación en un único bloque.  
@@ -110,6 +120,7 @@ Similar a middleware o pipelines.
 - Dificulta la escalabilidad y evolución modular.  
 Puede ser una buena opción para MVPs o sistemas pequeños.
 
+---
 
 ## onion architecture
 Variante de la arquitectura hexagonal, centrada en un **dominio núcleo**.
@@ -123,6 +134,7 @@ Variante de la arquitectura hexagonal, centrada en un **dominio núcleo**.
 - **Casos de Uso**  
 	- Menor complejidad que *Clean Architecture*, pero con similar separación.
 
+---
 
 ## Principios Fundamentales
 - **YAGNI (You Aren’t Gonna Need It)**  
@@ -147,6 +159,7 @@ Evolución de onion architecture y arquitectura hexagonal que enfatiza la **inde
 	- Nada fuera puede afectar su lógica interna.
 - Favorece pruebas unitarias, mantenibilidad y modularidad extrema.
 
+---
 
 ## Microkernel (Plug-in Architecture)
 Diseño que separa un **núcleo estable** de funcionalidades básicas y una colección de **plugins o módulos** extendibles.
@@ -155,6 +168,7 @@ Diseño que separa un **núcleo estable** de funcionalidades básicas y una cole
 - Plugins: nuevas capacidades que se pueden añadir sin modificar el núcleo.  
 - Usado en IDEs (VSCode, Eclipse), sistemas operativos, videojuegos o plataformas extensibles.
 
+---
 
 ## Service-Oriented Architecture (SOA)
 Antecesora de [microservicios](/backend/microservicios/), centrada en la **interoperabilidad** mediante servicios compartidos.
@@ -164,6 +178,7 @@ Antecesora de [microservicios](/backend/microservicios/), centrada en la **inter
 - Enfatiza contratos de servicio y orquestación.  
 - Se diferencia de microservicios por su **menor granularidad** y **mayor centralización**.
 
+---
 
 ## Data-Centric Architectures
 Arquitecturas orientadas a los flujos y transformaciones de datos.
@@ -175,6 +190,7 @@ Arquitecturas orientadas a los flujos y transformaciones de datos.
 	- Enfoques modernos para gestión de datos distribuidos y descentralizados.  
 	- Cada dominio controla sus propios datos (autonomía y calidad).
 
+---
 
 ## Reactive Architecture
 Enfocada en la **reactividad**, **resiliencia** y **elasticidad** ante eventos asincrónicos.
@@ -187,6 +203,7 @@ Enfocada en la **reactividad**, **resiliencia** y **elasticidad** ante eventos a
 	- *Message Driven*: usa colas y eventos para comunicación.  
 - Ideal para sistemas distribuidos, microservicios y tiempo real.
 
+---
 
 ## Pipeline / Batch Architectures
 Modelos para procesamiento **secuencial** o **masivo** de datos.
@@ -198,6 +215,7 @@ Modelos para procesamiento **secuencial** o **masivo** de datos.
 	- Procesamiento en lotes programados.  
 	- Común en ETL, big data y tareas programadas con cron o Airflow.
 
+---
 
 ## Domain-Driven Design (DDD)
 Complemento conceptual a las arquitecturas de dominio como hexagonal o onion architecture.
@@ -208,6 +226,7 @@ Complemento conceptual a las arquitecturas de dominio como hexagonal o onion arc
 - **Context Mapping**: define relaciones entre dominios (shared kernel, customer-supplier, etc).  
 - Base teórica de [microservicios](/backend/microservicios/) bien definidos.
 
+---
 
 ## Space-Based Architecture
 Diseñada para **alta escalabilidad y baja latencia**, usada en trading, e-commerce y sistemas intensivos.
@@ -217,6 +236,7 @@ Diseñada para **alta escalabilidad y baja latencia**, usada en trading, e-comme
 - Elimina el cuello de botella del almacenamiento centralizado.  
 - Altamente paralelizable.
 
+---
 
 ## Event Mesh & Choreography Patterns
 Extensión avanzada de event driven architecture.
@@ -227,6 +247,7 @@ Extensión avanzada de event driven architecture.
 	- *Choreography*: los servicios reaccionan a eventos sin control central.  
 - Mejora la autonomía, resiliencia y escalabilidad de sistemas distribuidos.
 
+---
 
 ## Edge & Fog Computing
 Complemento a [serverless](/backend/serverless/) y cloud computing para procesamiento cercano a la fuente de datos.
@@ -237,6 +258,7 @@ Complemento a [serverless](/backend/serverless/) y cloud computing para procesam
 	- Filtra, agrega o enruta datos antes del procesamiento central.  
 - Ideal para sistemas en tiempo real, IoT y automatización industrial.
 
+---
 
 ## Actor Model
 Modelo de concurrencia descentralizada.
@@ -247,6 +269,7 @@ Modelo de concurrencia descentralizada.
 - Implementado en frameworks como Akka, Erlang o Orleans.  
 - Base conceptual de muchas arquitecturas reactivas y distribuidas.
 
+---
 
 ## Self-Contained Systems (SCS)
 Evolución práctica de los [microservicios](/backend/microservicios/), donde cada módulo es completamente autónomo.
@@ -256,6 +279,7 @@ Evolución práctica de los [microservicios](/backend/microservicios/), donde ca
 - Promueve despliegue y evolución independientes.  
 - Ideal para grandes plataformas con equipos autónomos.
 
+---
 
 ## Principios Avanzados
 - **SOLID**: cinco principios fundamentales para código mantenible (Single Responsibility, Open/Closed, etc).  
@@ -264,6 +288,7 @@ Evolución práctica de los [microservicios](/backend/microservicios/), donde ca
 - **Composability**: los módulos deben combinarse fácilmente sin alterar su naturaleza.  
 - **Observabilidad**: la arquitectura debe ser medible, trazable y auditable.
 
+---
 
 ## Tendencias Modernas
 - **Composable Architecture**: sistemas ensamblados mediante APIs, microfrontends y módulos dinámicos.  

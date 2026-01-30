@@ -1,14 +1,15 @@
-creation date: 2024-11-19 01:25
-tags:
-  - mantenimiento
+---
+date: 2024-11-19 01:25
+title: mantenimiento
 keywords:
 source:
 status: 🚀
-Parent: "Area-Sistemas"
-cssclasses:
-  - hide-embedded-header1
-categories: "[mantenimiento](/uncategorized/mantenimiento/)"
+Parent: "[[Area-Sistemas]]"
 public_note: "true"
+category: mantenimiento
+tags:
+  - mantenimiento
+---
 # mantenimiento
 ``
 

@@ -1,19 +1,19 @@
-creation date: 2025-02-19 17:54
+---
+date: 2025-02-19 17:54
+title: thymeleaf
+keywords:
+source:
+status: 🌟
+Parent: "[[Area-Prog]]"
+public_note: "true"
+category: Motor de plantillas
 tags:
   - thymeleaf
   - java
   - spring
   - springboot
   - template-engine
-keywords:
-source:
-status: 🌟
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-  - wide
-categories: "[Motor de plantillas](/desarrollo%20web/motor-de-plantillas/)"
-public_note: "true"
+---
 # thymeleaf
 
 ## Relación con el ecosistema Java

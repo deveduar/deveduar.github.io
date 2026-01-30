@@ -1,19 +1,21 @@
-creation date: 2024-09-04 19:12
-tags:
-  - CS
+---
+date: 2024-09-04 19:12
+title: Computer Science
 keywords:
 source:
 status: 🚀
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-categories: "[Computer Science](/uncategorized/computer-science/)"
+Parent: "[[Area-Prog]]"
 public_note: "true"
+category: Computer Science
+tags:
+  - CS
+---
 # Computer Science
 
 La ciencia de la computación estudia los principios teóricos, metodológicos y prácticos que sustentan el diseño, desarrollo y análisis de sistemas informáticos. Abarca desde fundamentos matemáticos hasta paradigmas avanzados de programación y arquitecturas distribuidas.  
 Esta nota actúa como índice central de conocimiento técnico y guía estructurada de estudio.
 
+---
 
 ## Áreas de Desarrollo
 Exploran las prácticas, herramientas y enfoques aplicados en la construcción y mantenimiento de software.
@@ -23,6 +25,7 @@ Exploran las prácticas, herramientas y enfoques aplicados en la construcción y
 - [Software engineering](/software%20engineering/software-engineering/)
 - [Expresiones regulares](/computer%20science/expresiones-regulares/)
 
+---
 
 ## Metodologías y Arquitectura
 Principios que orientan la organización, diseño y evolución del software hacia soluciones mantenibles y escalables.
@@ -42,6 +45,7 @@ Principios que orientan la organización, diseño y evolución del software haci
   Incluye conceptos como *map*, *reduce*, *lambda expressions* y *pure functions*.
 - [DSL](/computer%20science/dsl/)
 
+---
 
 ## Backend y Redes
 Componentes esenciales para el desarrollo del lado del servidor, APIs y conectividad entre servicios.
@@ -52,6 +56,7 @@ Componentes esenciales para el desarrollo del lado del servidor, APIs y conectiv
   Ejecución de funciones sin servidor (serverless), orientadas a eventos y escalabilidad automática.  
   Se relacionan con entornos como AWS Lambda, Azure Functions o Google Cloud Functions.
 
+---
 
 ## Documentación y Recursos Formativos
 Fundamentos y cursos base que establecen las competencias esenciales de un informático.
@@ -75,6 +80,7 @@ Fundamentos y cursos base que establecen las competencias esenciales de un infor
 	- pilares de programacion
 	- su propio lenguaje
 	- ejercicios
+---
 
 ## Entrevistas Técnicas
 Preparación para procesos de selección en desarrollo de software.
@@ -83,6 +89,7 @@ Preparación para procesos de selección en desarrollo de software.
   Guía con ejercicios prácticos, resolución de problemas y estrategias de comunicación técnica.  
   Incluye patrones de preguntas, estructuras de datos frecuentes y tips para *whiteboard interviews*.
 
+---
 
 ## Elementos y Guías de Conocimiento
 Bloques fundamentales de la teoría computacional y la ingeniería de software.
@@ -100,6 +107,7 @@ Bloques fundamentales de la teoría computacional y la ingeniería de software.
 - [arquitecturas en computacion](/computer%20science/arquitecturas-en-computacion/)  
   Diseño de sistemas distribuidos, microservicios, comunicación asincrónica y patrones de resiliencia.
 
+---
 
 ## Integraciones y Extensiones
 Expansiones hacia áreas relacionadas y multidisciplinarias.
@@ -113,6 +121,7 @@ Expansiones hacia áreas relacionadas y multidisciplinarias.
 - [Cloud Computing](/cloud/cloud-computing/)  [cloud](/cloud/cloud/)
   Infraestructura escalable, servicios distribuidos y gestión de recursos virtualizados.
 
+---
 
 # Omnivore CS
 {% raw %}

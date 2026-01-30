@@ -1,16 +1,17 @@
-tags:
-  - CS
-  - Codes
+---
+date: 2023-08-31 16:47
+title: Comunicación entre Procesos
 status: 🌟
-Parent: "Area-Prog"
-creation date: 2023-08-31 16:47
+Parent: "[[Area-Prog]]"
 keywords:
 aliases:
 source:
-cssclasses:
-  - hide-embedded-header1
-categories: "[Computer Science](/computer%20science/computer-science/)"
 public_note: "true"
+category: Computer Science
+tags:
+  - CS
+  - Codes
+---
 # Comunicación entre Procesos
 - [Computer Science](/computer%20science/computer-science/)
 - [Sockets](/backend/sockets/)

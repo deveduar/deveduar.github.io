@@ -1,18 +1,18 @@
-creation date: 2025-01-29 19:28
+---
+date: 2025-01-29 19:28
+title: Supervisor
+keywords:
+source:
+status: 🌟
+Parent: "[[Area-Prog]]"
+public_note: "true"
+category: Backend
 tags:
   - supervisor
   - procesos
   - backend
   - pythoon
-keywords:
-source:
-status: 🌟
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-  - wide
-categories: "[Backend](/backend/backend/)"
-public_note: "true"
+---
 # Supervisor
 
 ## Recursos y enlaces

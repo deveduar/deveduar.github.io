@@ -1,17 +1,17 @@
-creation date: 2025-04-15 18:42
-tags:
-  - vulnerabilidades
-  - Hacking
+---
+date: 2025-04-15 18:42
+title: manejo de vulnerabilidades
 keywords:
 source:
 status: 🌟
-Parent: "Area-Sistemas"
-cssclasses:
-  - hide-embedded-header1
-categories: "[ciberseguridad](/ciberseguridad/ciberseguridad/)"
+Parent: "[[Area-Sistemas]]"
 aliases:
-  - Vulnerability Management
 public_note: "true"
+category: ciberseguridad
+tags:
+  - vulnerabilidades
+  - Hacking
+---
 # Manejo de Vulnerabilidades
 ``
 

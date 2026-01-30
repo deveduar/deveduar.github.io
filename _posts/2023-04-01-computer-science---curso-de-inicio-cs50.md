@@ -1,14 +1,15 @@
-tags:
-  - CS
+---
+date: 2023-04-01 18:49
+title: Computer science - curso de inicio CS50
 status: 📌
-Parent: "Area-Prog"
-categories: "[Computer Science](/computer%20science/computer-science/)"
-creation date: 2023-04-01 18:49
+Parent: "[[Area-Prog]]"
 keywords:
 source:
-cssclasses:
-  - hide-embedded-header1
 public_note: "true"
+category: Computer Science
+tags:
+  - CS
+---
 # Computer science - curso de inicio CS50
 
 ## Recursos

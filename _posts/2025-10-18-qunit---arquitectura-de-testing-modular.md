@@ -1,13 +1,13 @@
-creation date: 2025-10-18 14:15
-tags:
+---
+date: 2025-10-18 14:15
+title: QUnit - Arquitectura de testing modular
 keywords:
 source:
 status: 📌
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-categories: "[Testing](/testing/testing/)"
+Parent: "[[Area-Prog]]"
 public_note: "true"
+category: Testing
+---
 # QUnit - Arquitectura de testing modular
 
 - [QUnit](/testing/qunit/)
@@ -19,11 +19,13 @@ public_note: "true"
 - docs
     - QUnit-js-framework-for-test
 
+---
 
 ## 🧩 Introducción
 
 La **arquitectura modular de testing** en QUnit permite escalar los tests de manera organizada, aislando responsabilidades y facilitando el mantenimiento en proyectos medianos o grandes. En 2025, QUnit sigue siendo una excelente opción para entornos que necesitan **tests claros, rápidos y sin sobrecarga**, especialmente cuando se combina con herramientas modernas como Mocks MSW o pipelines CI.
 
+---
 
 ## 🧱 Principios de Arquitectura
 
@@ -33,6 +35,7 @@ La **arquitectura modular de testing** en QUnit permite escalar los tests de man
 - **Configuración local:** Cada módulo puede tener su propio `qunit.config.js` con paths, timeouts o setups específicos.
 - **Mocks consistentes:** Centralizar mocks y fakes reutilizables (por ejemplo, en `tests/mocks/`) para evitar duplicación.
 
+---
 
 ## 🧩 Estructura recomendada de carpetas
 
@@ -65,6 +68,7 @@ La **arquitectura modular de testing** en QUnit permite escalar los tests de man
 
 🧠 _Cada nivel tiene un propósito claro: `unit` valida lógica interna, `integration` relaciones entre módulos, `e2e` flujos reales._
 
+---
 
 ## 🧰 Patrón Modular con Hooks
 
@@ -97,6 +101,7 @@ QUnit.module("User Service", hooks => {
 
 💡 _Los hooks garantizan independencia entre tests y limpieza del entorno._
 
+---
 
 ## ⚙️ Composición de Tests por Capas
 
@@ -116,6 +121,7 @@ npm run test:e2e
 ```
 {% endraw %}
 
+---
 
 ## 🧩 Integración con [MSW Mocks service worker](/testing/msw-mocks-service-worker/)
 
@@ -146,6 +152,7 @@ QUnit.module("API Mocking", hooks => {
 
 ✅ _Este patrón desacopla los tests del backend real, acelerando las pruebas y garantizando resultados deterministas._
 
+---
 
 ## 🧠 Mejores Prácticas de Escalabilidad
 
@@ -155,6 +162,7 @@ QUnit.module("API Mocking", hooks => {
 - **Estandarización CI/CD:** scripts separados (`test:unit`, `test:integration`) facilitan diagnósticos.
 - **Desacople del entorno:** evita dependencias de entorno (puertos, tiempos, rutas absolutas).
 
+---
 
 ## 🧩 Integración en CI/CD
 
@@ -185,10 +193,12 @@ jobs:
 
 🚀 _Segmentar las pruebas reduce tiempos y mejora el feedback continuo._
 
+---
 
 ## 🧩 Conclusión
 
 La arquitectura modular de testing con **QUnit** sigue siendo relevante en 2025 gracias a su equilibrio entre simplicidad, control y flexibilidad. Al combinarla con Mocks MSW y [TDD - Test Driven Development](/testing/tdd---test-driven-development/), permite mantener entornos de pruebas limpios, reproducibles y escalables sin depender de frameworks pesados.
 
+---
 
 ¿Quieres que cree ahora una **nota complementaria avanzada** sobre “Integración de QUnit con pipelines CI/CD y coverage moderno (nyc, c8)” para añadirla a tu sistema?

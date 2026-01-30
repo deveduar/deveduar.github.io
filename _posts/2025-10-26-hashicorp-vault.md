@@ -1,16 +1,17 @@
-creation date: 2025-10-26 14:13
+---
+date: 2025-10-26 14:13
+title: HashiCorp Vault
+keywords:
+source:
+status: 🌟
+Parent: "[[Area-Sistemas]]"
+public_note: "true"
+category: ciberseguridad
 tags:
   - vault
   - ciberseguridad
   - sistemas
-keywords:
-source:
-status: 🌟
-Parent: "Area-Sistemas"
-cssclasses:
-  - hide-embedded-header1
-categories: "[ciberseguridad](/ciberseguridad/ciberseguridad/)"
-public_note: "true"
+---
 # HashiCorp Vault
 
 - [Sistemas](/sistemas/sistemas/)

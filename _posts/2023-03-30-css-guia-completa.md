@@ -1,14 +1,15 @@
-tags:
-  - CSS
+---
+date: 2023-03-30 18:36
+title: CSS-Guia completa
 status: 📌
-Parent: "Area-Prog"
-creation date: 2023-03-30 18:36
+Parent: "[[Area-Prog]]"
 keywords:
 source:
-cssclasses:
-  - hide-embedded-header1
-categories:
 public_note: "true"
+category: uncategorized
+tags:
+  - CSS
+---
 # CSS-Guia completa
 
 
@@ -3286,6 +3287,7 @@ main {
 	  `"../start-hosting/index.html"`.
 - Se puede arreglar ahora o más adelante en los videos.
 
+---
 
 ## 2. Estructura y estilización de formularios
 - Cada grupo de elementos del form debe ir dentro de un **div** (block element) porque inputs y labels son inline por defecto.
@@ -3294,6 +3296,7 @@ main {
 	- Mantener como inline-element para alinear con su label.
 	- Posible reestilización del checkbox y dropdown (`select`).
 
+---
 
 ## 3. Attribute selectors avanzados
 - Seleccionar elementos por atributo:
@@ -3306,6 +3309,7 @@ main {
 	- `[attr*="value"]` → atributo cuyo valor **contiene** "value".
 	- `[attr="value" i]` → case-insensitive (ignora mayúsculas/minúsculas).
 
+---
 
 ## 4. Focus y outline
 - `outline`:
@@ -3321,6 +3325,7 @@ main {
 {% endraw %}
 	- Para evitar conflicto con pseudo-selectors `:focus` y `:invalid`.
 
+---
 
 ## 5. Validación de formularios
 - Clases especiales:
@@ -3340,6 +3345,7 @@ main {
 {% endraw %}
 	  cuando se hace submit.
 
+---
 
 ## 6. Estilización de botones
 - Botón submit:
@@ -3357,6 +3363,7 @@ main {
 	- Sobrescribir estilos por defecto del navegador.
 	- Mantener consistencia en feedback visual para el usuario.
 
+---
 
 ## 7. Resumen
 - **Estilización de formularios**:
@@ -3688,6 +3695,7 @@ label {
 
 # 11-Text y Fonts
 
+---
 
 ## 1. Introducción
 - Conceptos principales:
@@ -3696,6 +3704,7 @@ label {
 	- Propiedades de font.
 	- Font shorthand.
 
+---
 
 ## 2. Generic vs Font Families
 - **Generic fonts**: categorías genéricas de fuentes usadas como fallback:
@@ -3707,6 +3716,7 @@ label {
 	- Si una font no está instalada, se utiliza el fallback (generic font).
 	- Posible usar **web fonts** o importar fonts desde el servidor.
 
+---
 
 ## 3. Configuración de fonts en el proyecto
 - Ejemplo en `.package__info`:
@@ -3728,6 +3738,7 @@ label {
 	- [Google Fonts Roboto](https://fonts.google.com/specimen/Roboto?preview.text=dghdhdhy&preview.text_type=custom)
 	- [Google Fonts Anonymous Pro](https://fonts.google.com/specimen/Anonymous+Pro?query=anony&preview.text=dghdhdhy&preview.text_type=custom)
 
+---
 
 ## 4. Font Faces
 - Importación de fonts personalizadas con `@font-face`.
@@ -3740,6 +3751,7 @@ label {
 	- Soporte de formatos: `ttf`, `woff`, `woff2`, `eot`.
 		- Compatibilidad: [TTF](https://caniuse.com/ttf), [WOFF](https://caniuse.com/?search=woff), [EOT](https://caniuse.com/?search=eot).
 
+---
 
 ## 5. Propiedades de texto y estilo
 - **Font size y line-height**:
@@ -3761,6 +3773,7 @@ label {
 	- `text-shadow: x-offset y-offset blur color;`  
 	  Ej: `text-shadow: 2px 2px 7px grey;`
 
+---
 
 ## 6. Font Shorthand
 - Sintaxis general:
@@ -3781,6 +3794,7 @@ label {
 	- `font: status-bar;`
 	- Referencia: [MDN Font](https://developer.mozilla.org/es/docs/Web/CSS/font)
 
+---
 
 ## 7. Performance y font-display
 - Controla cómo se cargan las fuentes externas.
@@ -3794,6 +3808,7 @@ label {
 	- **Swap period** → browser reemplaza fallback por custom font.
 - Compatibilidad limitada: [caniuse font-display](https://caniuse.com/?search=font-display)
 
+---
 
 ## 8. Resumen
 - **Generic y Font families**: definir fallback y fonts específicas.
@@ -3942,6 +3957,7 @@ font-display: auto;
 
 # 12-Flexbox
 
+---
 
 ## 1. Introducción
 - Flexbox permite cambiar la forma en que se muestran los elementos.
@@ -3951,12 +3967,14 @@ font-display: auto;
 	- **Main axis** y **Cross axis**: ejes que definen dirección y alineamiento.
 - Ventaja: simplifica la alineación de elementos frente a `inline-block` o `float`.
 
+---
 
 ## 2. Flexbox y Z-Index
 - Normalmente `z-index` solo funciona si el elemento tiene `position` diferente de `static`.
 - Excepción: **flex-items** dentro de un flex container pueden usar `z-index` sin necesidad de `position`.
 - Útil para cambiar el orden visual de los flex items.
 
+---
 
 ## 3. Entendiendo Flexbox
 ### Parent: Flex Container
@@ -3981,6 +3999,7 @@ font-display: auto;
 	- `flex-basis`: tamaño inicial del item en el **main axis**.
 - Referencia: [MDN align-self](https://developer.mozilla.org/en-US/docs/Web/CSS/align-self)
 
+---
 
 ## 4. Main Axis vs Cross Axis
 - **Flex-direction** define el main axis:
@@ -3994,6 +4013,7 @@ font-display: auto;
 	- `align-items` → controla la posición en el cross axis.
 - Con `flex-wrap` activado, los items pueden saltar a otra línea y ocupar el espacio disponible.
 
+---
 
 ## 5. Propiedades de Flex Container
 - `display: flex | inline-flex`
@@ -4004,6 +4024,7 @@ font-display: auto;
 - `align-items: flex-start | flex-end | center | baseline | stretch`
 - `align-content: flex-start | flex-end | center | space-between | space-around | stretch`
 
+---
 
 ## 6. Propiedades de Flex Items
 - `order: <number>` → controla el orden visual.
@@ -4013,6 +4034,7 @@ font-display: auto;
 - `flex: <grow> <shrink> <basis>` → shorthand.
 - `align-self: auto | flex-start | flex-end | center | baseline | stretch` → sobreescribe `align-items`.
 
+---
 
 ## 7. Aplicación práctica
 - Convertir navigation bar y mobile nav en flex container.
@@ -4022,6 +4044,7 @@ font-display: auto;
 	- Items que se mueven → revisar `display: none` o `order`.
 	- Mobile nav: centrar items uno debajo de otro.
 
+---
 
 ## 8. Ejemplo shorthand flex
 {% raw %}
@@ -4035,6 +4058,7 @@ flex: 0 1 auto; /* flex-grow: 0; flex-shrink: 1; flex-basis: auto; */
     - `flex-grow: 2` y `flex-grow: 4` → espacio dividido 2/6 y 4/6.
 - Con wrap → items saltan a otra línea y ocupan todo el ancho disponible.
 
+---
 
 ## 9. Resumen
 
@@ -4536,6 +4560,7 @@ flexbox a customers
 
 # 13-CSS Grid
 
+---
 
 ## 1. Introducción
 - CSS Grid permite crear layouts bidimensionales: filas (**rows**) y columnas (**columns**).
@@ -4546,6 +4571,7 @@ flexbox a customers
 - Solo los **hijos directos** del contenedor forman parte del grid.
 - Activar rejillas en DevTools para depuración.
 
+---
 
 ## 2. Propiedades básicas del Grid
 ### Contenedor
@@ -4585,6 +4611,7 @@ flexbox a customers
 	- DOM order no se respeta → visualmente se reorganiza.
 	- DevTools permite mostrar nombres de área y líneas.
 
+---
 
 ## 3. Propiedades avanzadas
 - **Auto rows y columns**
@@ -4601,6 +4628,7 @@ flexbox a customers
 	- Explícito → definido en `grid-template-columns/rows`.
 	- Implícito → generado automáticamente con `grid-auto-*`.
 
+---
 
 ## 4. Alineamiento en Grid
 - Alinear elementos individuales:
@@ -4610,6 +4638,7 @@ flexbox a customers
 	- `justify-content` → eje X
 	- `align-content` → eje Y
 
+---
 
 ## 5. Aplicación en proyectos
 - Grid para layout principal (`body`):
@@ -4625,6 +4654,7 @@ flexbox a customers
 	- Imagen posicionada incorrectamente → quitar `margin-top` y alinear con grid.
 	- Footer que crece en smartphones → ajustar `grid-template-rows` o usar Flexbox dentro del footer.
 
+---
 
 ## 6. Comparación Grid vs Flexbox
 | Característica | Grid | Flexbox |
@@ -4635,6 +4665,7 @@ flexbox a customers
 | Recomendado para | Layouts de página | Filas o columnas simples |
 | Responsive | Sí, con auto-fill / auto-fit | Flex-wrap |
 
+---
 
 ## 7. Resumen
 - `display: grid;` → convierte el contenedor en grid.
@@ -5082,6 +5113,7 @@ grid-template-columns: repeat(3, 10rem);
 5. `backface-visibility`
 6. Conclusión y wrap-up
 
+---
 
 ## Transformaciones en el Proyecto Final
 
@@ -5095,6 +5127,7 @@ grid-template-columns: repeat(3, 10rem);
 			- Primer valor = eje X  
 			- Segundo valor = eje Y
 
+---
 
 ## Movimiento del badge en el proyecto
 - Con `top` y `right` **no es posible** mover el badge si el elemento no tiene `position: absolute`.
@@ -5102,6 +5135,7 @@ grid-template-columns: repeat(3, 10rem);
 - Para cortar lo sobrante del badge:
 	- Usar `overflow: hidden;` en el contenedor.
 
+---
 
 ## Transformaciones en customers.css (Proyecto Final)
 
@@ -5121,6 +5155,7 @@ grid-template-columns: repeat(3, 10rem);
 	- Ajustar tamaño del contenedor.
 	- Mejoras para mobile: escalar o ajustar layout según breakpoints.
 
+---
 
 ## Transformaciones 3D
 
@@ -5150,6 +5185,7 @@ grid-template-columns: repeat(3, 10rem);
 - `transform: rotateX(30deg) rotateY(80deg) rotateZ(30deg);`
 	- Cada eje aporta su propio giro.
 
+---
 
 ## Transformación 3D de múltiples elementos
 - Requiere `position: absolute;` para superposición.
@@ -5159,6 +5195,7 @@ grid-template-columns: repeat(3, 10rem);
 - Control de perspectiva:
 	- `perspective-origin: center;`
 
+---
 
 ## Aplicando transformaciones al contenedor
 - Rotar el contenedor:
@@ -5170,12 +5207,14 @@ grid-template-columns: repeat(3, 10rem);
 	- box1 → `z-index: 1;`
 	- box2 → `transform: translateZ(-10rem);`
 
+---
 
 ## Voltear elementos (flip)
 - `backface-visibility: hidden;`
 	- Oculta el contenido cuando se voltea.
 	- No soportado en todos los navegadores, especialmente en algunos móviles.
 
+---
 
 ## Resumen General del Módulo
 - Transformaciones 2D:
@@ -5193,6 +5232,7 @@ grid-template-columns: repeat(3, 10rem);
 	- `perspective-origin`
 	- Aplicar al padre para efectos válidos.
 
+---
 
 ## The “transform” Property (Resumen técnico)
 - Permite `translate()`, `scale()`, `rotate()`, `skew()`, y combinaciones.
@@ -5318,6 +5358,7 @@ transform: rotate(45deg) translate(3.5rem, -2rem);
 8. JavaScript Animation Event Listeners
 9. Wrap Up
 
+---
 
 ## 1. CSS Transitions
 
@@ -5336,6 +5377,7 @@ transform: rotate(45deg) translate(3.5rem, -2rem);
 - `linear`
 - `cubic-bezier()`
 
+---
 
 ## 2. CSS Animations
 
@@ -5355,6 +5397,7 @@ Ejemplo:
 		- `forwards`, `backwards`, `both`, `none`
 	- Eventos JS: `animationstart`, `iteration`, `end`
 
+---
 
 ## 3. Transitions en el Proyecto Final
 
@@ -5371,6 +5414,7 @@ Ejemplo:
 - Con delay:
 	`transition: opacity 200ms ease-out 1s, transform 500ms ease-out 1s;`
 
+---
 
 ## 4. Timing Functions en el Proyecto Final
 
@@ -5379,6 +5423,7 @@ Ejemplo:
 - Ejemplo:
 	`transform 500ms cubic-bezier(0.32, 0, 0.67, 0);`
 
+---
 
 ## 5. Transición del Backdrop
 
@@ -5394,6 +5439,7 @@ Ejemplo:
 ### Cierre del backdrop
 - Necesaria sincronización entre duración del CSS y el timeout de JS.
 
+---
 
 ## 6. Animaciones del Proyecto Final
 
@@ -5416,6 +5462,7 @@ Ejemplo:
 - Mantener estado inicial:
 	`animation: wiggle 200ms 3s 8 backwards;`
 
+---
 
 ## 7. Keyframes Avanzados
 
@@ -5437,6 +5484,7 @@ Ejemplo:
 - Funciones de tiempo por animación:  
     `animation: wiggle 400ms 3s 8 ease-out none;`
 
+---
 
 ## 8. Animaciones en Customers Page
 
@@ -5455,6 +5503,7 @@ Ejemplo:
 
 - En móviles sin hover → animación via click o JS
 
+---
 
 ## 9. Eventos JS extras para Animación
 
@@ -5469,6 +5518,7 @@ Ejemplo:
 - Listener en el botón CTA
 - `elapsedTime` útil para detectar finalización
 
+---
 
 ## Resumen General
 
@@ -5735,6 +5785,7 @@ ctaButton.addEventListener('animationend', function(event){
 10. Vanilla CSS vs Frameworks
 11. Wrap Up
 
+---
 
 ## CSS Variables
 - Reutilización de valores: definir una vez, usar múltiples veces.
@@ -5750,6 +5801,7 @@ ctaButton.addEventListener('animationend', function(event){
 - Alternativa:
 	- Sistemas de variables con Sass (preprocessing), sin soporte dinámico en runtime.
 
+---
 
 ## Vendor Prefixes
 - Los navegadores implementan nuevas features a distinta velocidad.
@@ -5765,6 +5817,7 @@ ctaButton.addEventListener('animationend', function(event){
 	- Web UI: https://autoprefixer.github.io/
 	- Consulta de prefijos: http://shouldiprefix.com/
 
+---
 
 ## Support Queries (@supports)
 - Permite verificar si un value o propiedad es soportado.
@@ -5776,6 +5829,7 @@ ctaButton.addEventListener('animationend', function(event){
 - Concepto clave:
 	- *Progressive Enhancement*: primero diseño base; luego mejoras si el navegador soporta la feature.
 
+---
 
 ## Polyfills
 - Paquetes JavaScript que añaden features CSS en navegadores que no las soportan.
@@ -5785,6 +5839,7 @@ ctaButton.addEventListener('animationend', function(event){
 	- Útiles para rem→px, backgrounds o features simples.
 	- Evitar polyfills para layouts complejos; preferir fallbacks bien diseñados.
 
+---
 
 ## Eliminar Inconsistencias Entre Navegadores
 - Los navegadores tienen defaults distintos:
@@ -5797,6 +5852,7 @@ ctaButton.addEventListener('animationend', function(event){
 		- Control granular.
 		- Ideal para proyectos pequeños o específicos.
 
+---
 
 ## Naming CSS Classes Correctamente
 ### Do
@@ -5814,6 +5870,7 @@ ctaButton.addEventListener('animationend', function(event){
 	- `.button__action--success`
 - Evita choques entre clases y mejora la escalabilidad.
 
+---
 
 ## “Vanilla CSS” vs CSS Frameworks
 
@@ -5840,6 +5897,7 @@ ctaButton.addEventListener('animationend', function(event){
 - – Overhead.
 - – Clases mezclan estructura + estilo (si no se usa bien).
 
+---
 
 ## Summary
 ### CSS Variables
@@ -5979,6 +6037,7 @@ body {
 15. Ampersand Operator  
 16. Wrap Up  
 
+---
 
 ## Introducción: Sass & SCSS
 - Sitio oficial: https://sass-lang.com/guide
@@ -5997,6 +6056,7 @@ body {
 	- Partials (`_file.scss`)
 	- Variables
 
+---
 
 ## Instalación
 - Método clásico:
@@ -6006,6 +6066,7 @@ body {
 	- Usar **Dart Sass**, el compilador oficial (recomendado).
 	- Instalación: `npm install -g sass`.
 
+---
 
 ## Mejorar el Proyecto con Sass
 - Crear mixins para vendor prefixes → reutilizables.
@@ -6013,6 +6074,7 @@ body {
 - Variables para colores, tamaños y espaciamiento.
 - División del proyecto en partials para organización modular.
 
+---
 
 ## Nested Rules
 - Con `.sass`:
@@ -6025,6 +6087,7 @@ body {
 - Watch mode:
 	- `sass --watch main.scss:main.css`
 
+---
 
 ## Nested Properties
 - Permiten agrupar propiedades que comparten namespace.
@@ -6038,6 +6101,7 @@ body {
 	```
 {% endraw %}
 
+---
 
 ## Variables en SCSS
 - Funciona en todos los navegadores porque es compilado.
@@ -6049,6 +6113,7 @@ body {
 	```
 {% endraw %}
 
+---
 
 ## Variables con Listas y Maps
 - **Listas**:
@@ -6070,6 +6135,7 @@ body {
 	- `map-get($colors, primary)`
 - Sass permite comentarios con `//` y funciones integradas.
 
+---
 
 ## Funciones Incluidas (Built-in)
 - Manipulación de colores:
@@ -6079,6 +6145,7 @@ body {
 - Rango de 0% a 100%.
 - Al cambiar el color base, las variaciones cambian automáticamente.
 
+---
 
 ## Aritmética Simple
 - Permite calcular valores derivados (padding, tamaños, layouts).
@@ -6090,6 +6157,7 @@ body {
 	```
 {% endraw %}
 
+---
 
 ## Imports y Partials
 - `@import "typography.css"`
@@ -6106,6 +6174,7 @@ body {
 {% endraw %}
 - Nota: Sass moderno recomienda `@use` y `@forward`, pero `@import` sigue siendo común en proyectos legacy.
 
+---
 
 ## Media Queries Mejoradas
 - Mantener media queries **cerca del selector** que modifican.
@@ -6123,6 +6192,7 @@ body {
 {% endraw %}
 - Múltiples queries por selector, más organizado.
 
+---
 
 ## Inheritance (`@extend`)
 - Hereda reglas completas de otra clase.
@@ -6143,6 +6213,7 @@ body {
 	```
 {% endraw %}
 
+---
 
 ## Mixins
 - Snippets reutilizables de código.
@@ -6176,6 +6247,7 @@ body {
 	```
 {% endraw %}
 
+---
 
 ## Ampersand Operator `&`
 - Controla cómo se refiere el selector al nivel actual.
@@ -6200,6 +6272,7 @@ body {
 	```
 {% endraw %}
 
+---
 
 ## Wrap Up / Tips
 - Integrar Sass con Webpack o Vite.

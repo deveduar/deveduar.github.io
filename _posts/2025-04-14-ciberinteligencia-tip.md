@@ -1,21 +1,19 @@
-creation date: 2025-04-14 18:06
+---
+date: 2025-04-14 18:06
+title: Ciberinteligencia TIP
+keywords:
+source:
+status: 🌟
+Parent: "[[Area-Sistemas]]"
+aliases:
+public_note: "true"
+category: ciberseguridad
 tags:
   - Hacking
   - pentesting
   - ciberinteligencia
   - servicio
-keywords:
-source:
-status: 🌟
-Parent: "Area-Sistemas"
-cssclasses:
-  - hide-embedded-header1
-  - wide
-categories: "[ciberseguridad](/ciberseguridad/ciberseguridad/)"
-aliases:
-  - Threat Intelligence
-  - Ciberinteligencia
-public_note: "true"
+---
 # Ciberinteligencia TIP
 ``
 

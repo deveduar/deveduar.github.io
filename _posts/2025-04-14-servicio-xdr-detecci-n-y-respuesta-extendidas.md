@@ -1,18 +1,17 @@
-creation date: 2025-04-14 18:11
-tags:
-  - Hacking
-  - servicio
+---
+date: 2025-04-14 18:11
+title: servicio XDR Detección y respuesta extendidas
 keywords:
 source:
 status: 🌟
-Parent: "Area-Sistemas"
-cssclasses:
-  - hide-embedded-header1
-  - wide
-categories: "[ciberseguridad](/ciberseguridad/ciberseguridad/)"
+Parent: "[[Area-Sistemas]]"
 aliases:
-  - XDR
 public_note: "true"
+category: ciberseguridad
+tags:
+  - Hacking
+  - servicio
+---
 # Servicio XDR – Detección y Respuesta Extendidas
 
 ## Definición y concepto

@@ -1,18 +1,17 @@
-creation date: 2025-06-10 15:21
-tags:
-  - protocolo
-  - redes
+---
+date: 2025-06-10 15:21
+title: Protocolos
 keywords:
 source:
 status: 🌟
-Parent: "Area-Sistemas"
-cssclasses:
-  - hide-embedded-header1
-categories: "[Redes](/redes/redes/)"
+Parent: "[[Area-Sistemas]]"
 aliases:
-  - protocols
-  - protocol
 public_note: "true"
+category: Redes
+tags:
+  - protocolo
+  - redes
+---
 # Protocolos
 
 ## Clasificación General de Protocolos

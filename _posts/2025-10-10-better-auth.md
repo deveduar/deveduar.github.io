@@ -1,17 +1,18 @@
-creation date: 2025-10-10 11:20
+---
+date: 2025-10-10 11:20
+title: better auth
+keywords:
+source:
+status: 🌟
+Parent: "[[Area-Prog]]"
+public_note: "true"
+category: autenticacion
 tags:
   - autenticacion
   - auth
   - seguridad
   - framework
-keywords:
-source:
-status: 🌟
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-categories: "[autenticacion](/autenticacion/autenticacion/)"
-public_note: "true"
+---
 # Better Auth
 
 - [autenticacion](/autenticacion/autenticacion/)

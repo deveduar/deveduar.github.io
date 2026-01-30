@@ -1,16 +1,16 @@
-creation date: 2025-05-19 01:12
-tags:
-  - DDD
-  - arquitectura
+---
+date: 2025-05-19 01:12
+title: DDD Domain-Driven Design
 keywords:
 source:
 status: 🌟
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-  - wide
-categories: "[Computer Science](/computer%20science/computer-science/)"
+Parent: "[[Area-Prog]]"
 public_note: "true"
+category: Computer Science
+tags:
+  - DDD
+  - arquitectura
+---
 # DDD Domain-Driven Design
 
 ## Conceptos fundamentales
@@ -433,8 +433,9 @@ Combinado con **arquitectura hexagonal**, **CQRS**, **eventos** y **estrategias 
 
 ## Objetivo
 
-Esta nota muestra cómo aplicar los principios de [DDD Domain-Driven Design](/uncategorized/ddd-domain-driven-design/) y Arquitectura Hexagonal en un entorno real. Incluye ejemplos de código, patrones tácticos y casos de uso completos, especialmente útiles para proyectos con separación clara entre **dominio**, **aplicación** e **infraestructura**.
+Esta nota muestra cómo aplicar los principios de [DDD Domain-Driven Design](/computer%20science/ddd-domain-driven-design/) y Arquitectura Hexagonal en un entorno real. Incluye ejemplos de código, patrones tácticos y casos de uso completos, especialmente útiles para proyectos con separación clara entre **dominio**, **aplicación** e **infraestructura**.
 
+---
 
 ## Caso de uso: Gestión de pedidos en un e-commerce
 
@@ -446,6 +447,7 @@ El dominio debe garantizar:
 - El total se calcule automáticamente.
 - Se emita un **evento de dominio** al confirmar el pedido.
 
+---
 
 ## Estructura de proyecto
 
@@ -469,6 +471,7 @@ src/
 ```
 {% endraw %}`
 
+---
 
 ## Entidades y Objetos de Valor
 
@@ -535,6 +538,7 @@ export class Order {
 ```
 {% endraw %}
 
+---
 
 ## Evento de Dominio
 
@@ -550,6 +554,7 @@ export class OrderConfirmedEvent {
 ```
 {% endraw %}
 
+---
 
 ## Repositorio del Dominio
 
@@ -565,6 +570,7 @@ export interface OrderRepository {
 ```
 {% endraw %}
 
+---
 
 ## Caso de uso: Crear y confirmar pedido
 
@@ -593,6 +599,7 @@ export class CreateAndConfirmOrder {
 ```
 {% endraw %}
 
+---
 
 ## Adaptador de Infraestructura (Ejemplo In-Memory)
 
@@ -616,6 +623,7 @@ export class InMemoryOrderRepository implements OrderRepository {
 ```
 {% endraw %}
 
+---
 
 ## Ejecución de ejemplo
 
@@ -634,6 +642,7 @@ const useCase = new CreateAndConfirmOrder(repository);
 ```
 {% endraw %}
 
+---
 
 ## Extensiones del caso de uso
 
@@ -646,6 +655,7 @@ const useCase = new CreateAndConfirmOrder(repository);
 3. **Aplicación de Sagas**
    Al confirmar el pedido, una **Saga** podría iniciar el flujo de envío y facturación, asegurando consistencia eventual.
 
+---
 
 ## Casos de uso adicionales
 
@@ -659,6 +669,7 @@ const useCase = new CreateAndConfirmOrder(repository);
 * **Validación de stock:**
   Implementar un **Domain Service** que consulte disponibilidad antes de confirmar el pedido.
 
+---
 
 ## Buenas prácticas
 
@@ -668,6 +679,7 @@ const useCase = new CreateAndConfirmOrder(repository);
 * El **repositorio** no debe filtrar lógica de dominio, solo persistir agregados.
 * Evita dependencias circulares entre `app` y `domain`.
 
+---
 
 ## Posible integración con frameworks
 
@@ -675,6 +687,7 @@ const useCase = new CreateAndConfirmOrder(repository);
 * **Spring Boot (Java):** uso de `@Service`, `@Repository`, `@DomainEvent` y arquitectura hexagonal mediante interfaces.
 * **Symfony (PHP):** separación clara entre `Domain`, `Application` e `Infrastructure` mediante bundles.
 
+---
 
 ## Ejemplo de mapeo a base de datos (ORM)
 
@@ -702,6 +715,7 @@ export class OrderEntity {
 
 El repositorio implementaría la traducción entre `Order` (modelo de dominio) y `OrderEntity` (modelo de persistencia).
 
+---
 
 ## Conclusión
 
@@ -713,10 +727,11 @@ Este ejemplo demuestra cómo aplicar DDD en un flujo de negocio real:
 
 DDD no se trata solo de estructura, sino de **representar el conocimiento del negocio de forma explícita y evolutiva**.
 
+---
 
 ## Recursos relacionados
 
-* [DDD Domain-Driven Design](/uncategorized/ddd-domain-driven-design/)
+* [DDD Domain-Driven Design](/computer%20science/ddd-domain-driven-design/)
 * Arquitectura Hexagonal
 * [GitHub - CodelyTV/typescript-ddd-example](https://github.com/CodelyTV/typescript-ddd-example)
 * [GitHub - Kamil Grzybek - Modular Monolith with DDD](https://github.com/kgrzybek/modular-monolith-with-ddd)

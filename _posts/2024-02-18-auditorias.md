@@ -1,14 +1,15 @@
-tags:
-  - Hacking
-Parent: "Area-Sistemas"
-creation date: 2024-02-18 17:50
+---
+date: 2024-02-18 17:50
+title: Auditorias
+Parent: "[[Area-Sistemas]]"
 keywords:
 source:
 status: 🌟
-cssclasses:
-  - hide-embedded-header1
-categories: "[ciberseguridad](/ciberseguridad/ciberseguridad/)"
 public_note: "true"
+category: ciberseguridad
+tags:
+  - Hacking
+---
 # Auditorías
 ``
 

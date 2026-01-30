@@ -1,17 +1,17 @@
-creation date: 2025-04-15 03:11
+---
+date: 2025-04-15 03:11
+title: cloud segurity
+keywords:
+source:
+status: 🌟
+Parent: "[[Area-Sistemas]]"
+public_note: "true"
+category: ciberseguridad
 tags:
   - cloud
   - ciberseguridad
   - Hacking
-keywords:
-source:
-status: 🌟
-Parent: "Area-Sistemas"
-cssclasses:
-  - hide-embedded-header1
-  - wide
-categories: "[ciberseguridad](/ciberseguridad/ciberseguridad/)"
-public_note: "true"
+---
 # Cloud Security
 ``
 

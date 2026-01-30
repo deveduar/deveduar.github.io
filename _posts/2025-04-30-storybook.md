@@ -1,19 +1,19 @@
-creation date: 2025-04-30 21:05
+---
+date: 2025-04-30 21:05
+title: storybook
+keywords:
+source:
+status: 🌟
+Parent: "[[Area-Prog]]"
+public_note: "true"
+category: Frontend
 tags:
   - storybook
   - CSS
   - components
   - testing
   - documentacion
-keywords:
-source:
-status: 🌟
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-  - wide
-categories: "[Frontend](/frontend/frontend/)"
-public_note: "true"
+---
 # Storybook
 
 
@@ -23,12 +23,14 @@ public_note: "true"
 - Storybook for React & Vite  Storybook docs-react-viterenderer=react
 - [Storybook: Frontend workshop for UI development](https://storybook.js.org/)
 
+---
 
 ## 🎯 Propósito de Storybook
 
 Storybook es una herramienta enfocada en el **desarrollo aislado de componentes UI**, permitiendo documentar, visualizar y testear cada componente sin depender del backend ni de la aplicación completa.  
 Se convierte en un entorno visual donde diseñadores, desarrolladores y testers pueden **probar iteraciones rápidas, revisar estados y validar comportamientos** antes de integrarlos en producción.
 
+---
 
 ## 🧱 Ventajas y Casos de Uso
 
@@ -38,6 +40,7 @@ Se convierte en un entorno visual donde diseñadores, desarrolladores y testers 
 - **Integración en pipelines CI/CD:** automatiza validaciones visuales y genera documentación estática.
 - **Consistencia de diseño:** facilita la colaboración entre diseño y desarrollo asegurando la coherencia del sistema visual.
 
+---
 
 ## ⚙️ Configuración Inicial (React + Vite)
 
@@ -67,6 +70,7 @@ Se convierte en un entorno visual donde diseñadores, desarrolladores y testers 
 
 Esto generará la carpeta `.storybook/` con los archivos de configuración (`main.js`, `preview.js`) y abrirá la UI en el navegador.
 
+---
 
 ## 🧩 Creación de Componentes y Stories
 
@@ -115,6 +119,7 @@ export const WithAction: Story = {
 ```
 {% endraw %}
 
+---
 
 ## 🧪 Integración con [Testing](/testing/testing/)
 
@@ -140,6 +145,7 @@ npx storybook test
 
 Esto ejecuta las historias en un entorno headless, validando que los componentes se rendericen correctamente.
 
+---
 
 ## 🧭 Buenas Prácticas
 
@@ -159,6 +165,7 @@ Esto ejecuta las historias en un entorno headless, validando que los componentes
   ```
 {% endraw %}
 
+---
 
 ## 🧩 Extensiones y Ecosistema
 
@@ -170,6 +177,7 @@ Storybook cuenta con un amplio ecosistema que se integra con frameworks y herram
 * Jest y Testing Library para pruebas unitarias.
 * Design System para documentar librerías de componentes reutilizables.
 
+---
 
 ## 🧭 Conclusión
 
@@ -188,12 +196,14 @@ Su integración fluida con Vite, React y herramientas de testing lo convierte en
 - Chromatic
 - Visual Regression Testing
 
+---
 
 ## 🧭 Visión General
 
 Habiendo cubierto los fundamentos —instalación, configuración, creación de stories, testing básico y addons—, esta nota amplía los **conceptos avanzados** de Storybook:  
 cómo integrarlo en pipelines CI/CD, automatizar pruebas visuales, conectar con APIs o sistemas de diseño, y aprovecharlo como **fuente única de verdad del frontend**.
 
+---
 
 ## 🧱 Arquitectura de Documentación y Componentes
 
@@ -222,6 +232,7 @@ AppShell.stories.tsx
 ```
 {% endraw %}`
 
+---
 
 ## ⚙️ Integración con Vite y Next.js
 
@@ -263,6 +274,7 @@ export const decorators = [
 ```
 {% endraw %}
 
+---
 
 ## 🧪 Testing Visual y Automatización CI/CD
 
@@ -302,6 +314,7 @@ jobs:
 ```
 {% endraw %}
 
+---
 
 ## 🧩 Integración con Cypress y Testing End-to-End
 
@@ -325,6 +338,7 @@ describe('Storybook Components', () => {
 
 Esto facilita pruebas visuales automatizadas sin levantar la app completa.
 
+---
 
 ## 🧰 Mocks, Contextos y Providers
 
@@ -348,6 +362,7 @@ También puede integrar herramientas como:
 * `faker.js` o `@faker-js/faker` para generar datos sintéticos.
 * `zustand` o `redux` con estados iniciales personalizados.
 
+---
 
 ## 🧠 Estrategias Avanzadas
 
@@ -371,6 +386,7 @@ También puede integrar herramientas como:
 
 * **Mock visual de estados dinámicos:** loading, error, empty, success — documentados explícitamente como stories.
 
+---
 
 ## 🌐 Exportación y Hosting
 
@@ -390,6 +406,7 @@ También puede integrar herramientas como:
 
 Esto convierte Storybook en un **catálogo visual compartido** para todo el equipo.
 
+---
 
 ## 🚀 Conclusión
 
@@ -412,6 +429,7 @@ Integrado con testing, mocks y CI/CD, se convierte en un sistema central para eq
 - Microfrontends
 - Accessibility (a11y)
 
+---
 
 ## ⚡ Performance y Optimización en Storybook
 
@@ -430,6 +448,7 @@ Storybook puede volverse pesado a medida que crecen los componentes y addons. Op
 - **StoryStoreV7:**  
 	El nuevo formato de almacenamiento que mejora la carga incremental de historias.
 
+---
 
 ## 🧬 Integración con Microfrontends y Monorepos
 
@@ -457,6 +476,7 @@ Storybook puede servir como **portal de diseño unificado** en entornos distribu
 - **Design Tokens compartidos:**  
 	Exponer variables de estilo (colores, tipografía, espaciado) como stories documentadas.
 
+---
 
 ## 🧩 Documentación Extendida con MDX y DocsPage
 
@@ -483,6 +503,7 @@ Esto genera documentación navegable, enriquecida con ejemplos interactivos y no
 * Permite incluir tablas de props, snippets de código y previews inline.
 * Se puede sincronizar con fuentes externas (Figma, Confluence, Notion).
 
+---
 
 ## 🎨 Integración con Design System y Herramientas de Diseño
 
@@ -508,6 +529,7 @@ export const parameters = {
 ```
 {% endraw %}
 
+---
 
 ## 🧠 Storybook como Entorno de Prototipado de Interacción
 
@@ -534,6 +556,7 @@ export const WizardFlow = () => {
 ```
 {% endraw %}
 
+---
 
 ## 🧰 Integración con Accessibility (a11y)
 
@@ -560,6 +583,7 @@ export const AccessibleStory = {
 ```
 {% endraw %}
 
+---
 
 ## 🧮 Integración con Analítica y Telemetría de UI
 
@@ -569,6 +593,7 @@ Storybook puede registrar **interacciones y métricas visuales** para detectar p
 * **Addons de rendimiento:** medir FPS, tiempo de render, tamaño del bundle.
 * Integración con herramientas como Datadog, Sentry, o New Relic en entornos de testeo visual.
 
+---
 
 ## 🧰 Addons Avanzados y Personalizados
 
@@ -599,6 +624,7 @@ addons.register('my/custom-addon', () => {
 ```
 {% endraw %}
 
+---
 
 ## 🧩 Storybook + API Mocking + [GraphQL](/backend/graphql/)
 
@@ -623,6 +649,7 @@ export const handlers = [
 
 Permite probar flujos completos (loading, error, success) directamente en Storybook.
 
+---
 
 ## 🌐 Distribución como Librería Interna
 
@@ -632,6 +659,7 @@ Storybook puede actuar como **catálogo de componentes exportable**, generando u
 * Integrar autenticación para documentación privada.
 * Versionar stories según release del producto.
 
+---
 
 ## 🚀 Conclusión Extendida
 
@@ -654,12 +682,14 @@ es un **centro de control de calidad visual, diseño y documentación** que inte
 - Chromatic
 - Vite
 
+---
 
 ## 🎯 Objetivo
 
 Esta guía práctica te mostrará cómo **instalar, configurar y usar Storybook** paso a paso con ejemplos funcionales, integrando addons, testing visual, documentación en MDX, y mocks de datos.  
 Ideal para flujos de desarrollo **UI-driven**, donde los componentes se crean y validan antes de conectar con el backend.
 
+---
 
 ## 🚀 1. Instalación y Configuración Inicial
 
@@ -711,6 +741,7 @@ npm run storybook
 
 Abrirá `http://localhost:6006` con la interfaz interactiva.
 
+---
 
 ## 🧱 2. Creación de un Componente UI y su Story
 
@@ -783,6 +814,7 @@ export const Disabled: Story = {
 📌 **Resultado:**  
 Cada variante del botón puede verse, probarse y modificarse en tiempo real desde el panel de Storybook.
 
+---
 
 ## 🧩 3. Documentación Interactiva con MDX
 
@@ -815,6 +847,7 @@ El botón es el componente básico para ejecutar acciones.
 
 📘 Permite incluir texto, previews y props en la misma página.
 
+---
 
 ## 🧪 4. Testing Visual y Funcional
 
@@ -850,6 +883,7 @@ npx chromatic --project-token=<tu_token>
 
 Sube tus stories para revisión visual automática y control de versiones UI.
 
+---
 
 ## 🔧 5. Uso de Decoradores Globales y Theming
 
@@ -874,6 +908,7 @@ export const decorators = [
 
 📌 Permite aplicar temas, estilos globales o providers a todas las stories.
 
+---
 
 ## 🧠 6. Mock de APIs y Estados con `msw`
 
@@ -911,6 +946,7 @@ export const parameters = {
 
 🎯 Resultado: tus componentes pueden simular respuestas API sin backend real.
 
+---
 
 ## 🧩 7. Casos Reales: Formularios y Listas
 
@@ -969,6 +1005,7 @@ export const Default: Story = {};
 
 ✅ Permite probar interactividad, validaciones y diseño sin backend.
 
+---
 
 ## 🧩 8. Integración con Cypress para Testing E2E de Stories
 
@@ -987,6 +1024,7 @@ describe('Storybook Component Testing', () => {
 
 📦 Usa el entorno Storybook como sandbox para testear UI sin dependencia del resto de la app.
 
+---
 
 ## 🧮 9. Build y Deploy de Storybook
 
@@ -1008,6 +1046,7 @@ npx vercel deploy storybook-static
 
 También puede integrarse a CI/CD (e.g. GitHub Actions + Chromatic).
 
+---
 
 ## 🌟 10. Buenas Prácticas
 
@@ -1021,6 +1060,7 @@ También puede integrarse a CI/CD (e.g. GitHub Actions + Chromatic).
     - `addon-actions` (eventos)
     - `addon-interactions` (testing UI)
 
+---
 
 ## 🧭 Conclusión
 
@@ -1072,6 +1112,7 @@ Combinado con Vite, Chromatic, Cypress y [MSW Mocks service worker](/testing/msw
 - **Storybook DocsPage**  
 	Genera automáticamente una página de documentación para cada componente basada en sus historias y metadatos.
 
+---
 
 ## ⚙️ Integraciones Clave
 
@@ -1087,6 +1128,7 @@ Combinado con Vite, Chromatic, Cypress y [MSW Mocks service worker](/testing/msw
 - **Docs automáticos**  
 	Storybook puede extraer automáticamente la documentación de props y tipos desde TypeScript y JSDoc, sincronizando la documentación con el código fuente.
 
+---
 
 ## 🧠 Conceptos Avanzados
 
@@ -1108,6 +1150,7 @@ Combinado con Vite, Chromatic, Cypress y [MSW Mocks service worker](/testing/msw
 - **DocsPage personalizada**  
 	Creación de documentación específica usando MDX, mezclando componentes interactivos, diagramas y ejemplos de código.
 
+---
 
 ## 🧰 Ejemplo Práctico
 
@@ -1147,6 +1190,7 @@ export const Disabled: Story = {
 ```
 {% endraw %}`
 
+---
 
 ### 🧠 Ejemplo con Decorators y Mock de Contexto
 
@@ -1170,6 +1214,7 @@ export default {
 ```
 {% endraw %}
 
+---
 
 ### 🧩 Ejemplo con Testing Integrado
 
@@ -1189,6 +1234,7 @@ test('Renderiza el botón con texto correcto', () => {
 ```
 {% endraw %}
 
+---
 
 ## 🪄 Buenas Prácticas
 
@@ -1199,6 +1245,7 @@ test('Renderiza el botón con texto correcto', () => {
 - Documenta con MDX las dependencias, props y ejemplos reales.
 - Integra Storybook en tu pipeline para garantizar consistencia visual.
 
+---
 
 ## 🧭 Recursos Recomendados
 
@@ -1207,3 +1254,5 @@ test('Renderiza el botón con texto correcto', () => {
 - [Addon Interactions](https://storybook.js.org/docs/react/writing-tests/interaction-testing)
 - [Visual Testing con Chromatic](https://www.chromatic.com/)
 - [Mocking con MSW](https://mswjs.io/)
+
+---

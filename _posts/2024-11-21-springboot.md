@@ -1,18 +1,18 @@
-creation date: 2024-11-21 01:17
+---
+date: 2024-11-21 01:17
+title: Springboot
+keywords:
+source:
+status: 🌟
+Parent: "[[Area-Prog]]"
+public_note: "true"
+category: Backend
 tags:
   - spring
   - java
   - api
   - backend
-keywords:
-source:
-status: 🌟
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-  - wide
-categories: "[Backend](/backend/backend/)"
-public_note: "true"
+---
 # Springboot 
 
 - [java](/software%20engineering/java/)
@@ -160,8 +160,9 @@ public_note: "true"
 
 # Spring Boot — Conceptos Avanzados y Expansión
 
-> Extensión complementaria de la nota base sobre [Springboot](/uncategorized/springboot/), enfocada en temas intermedios y avanzados **no tratados anteriormente**, sin repeticiones.
+> Extensión complementaria de la nota base sobre [Springboot](/backend/springboot/), enfocada en temas intermedios y avanzados **no tratados anteriormente**, sin repeticiones.
 
+---
 
 ## 1. Auto-Configuración y Starters Personalizados
 - **Auto-Configuration**: Spring Boot detecta beans y configura automáticamente componentes comunes (DataSource, MVC, Security, etc.)
@@ -174,6 +175,7 @@ public_note: "true"
 		- Añadir configuraciones automáticas (`META-INF/spring.factories`)
 	- Ideal para ecosistemas corporativos con módulos compartidos
 
+---
 
 ## 2. Programación Reactiva con Spring WebFlux
 - **WebFlux**: alternativa no bloqueante a Spring MVC
@@ -195,6 +197,7 @@ public_note: "true"
 	```
 {% endraw %}
 
+---
 
 ## 3. Microservicios Avanzados
 - **Resiliencia y comunicación distribuida**
@@ -210,6 +213,7 @@ public_note: "true"
 	- Uso de patrones **Saga** o **Outbox**
 	- Mensajería con RabbitMQ, Kafka o EventBridge
 
+---
 
 ## 4. Caching y Optimización
 - **Caching** integrado con `@EnableCaching`
@@ -230,6 +234,7 @@ public_note: "true"
 	- Lazy initialization de beans
 	- Reducción de carga con WebFlux o caching distribuido
 
+---
 
 ## 5. Configuración Avanzada y Multi-Tenancy
 - **Externalización avanzada**
@@ -243,6 +248,7 @@ public_note: "true"
 		- **Discriminator-based**: una tabla compartida con campo `tenant_id`
 - Implementación con Hibernate MultiTenantConnectionProvider
 
+---
 
 ## 6. Observabilidad y Monitorización
 - **Spring Boot Actuator** extendido:
@@ -262,6 +268,7 @@ public_note: "true"
 	```
 {% endraw %}
 
+---
 
 ## 7. Asincronía y Tareas Programadas
 - **Ejecución asíncrona**
@@ -279,6 +286,7 @@ public_note: "true"
 {% endraw %}
 - Uso en limpieza de logs, sincronización, o envío de notificaciones
 
+---
 
 ## 8. CI/CD y Contenedorización Avanzada
 - **Buildpacks** (desde Spring Boot 2.3+):
@@ -311,6 +319,7 @@ public_note: "true"
 		```
 {% endraw %}
 
+---
 
 ## 9. Extensión del Framework
 - **Creación de Starters Internos**
@@ -322,6 +331,7 @@ public_note: "true"
 - **Uso en ecosistemas empresariales**:
 	- Permite estandarizar patrones y dependencias
 
+---
 
 ## 10. Buenas Prácticas Avanzadas
 - **Codebase limpia**
@@ -337,6 +347,7 @@ public_note: "true"
 	- Gestionar dependencias con BOMs (`spring-boot-dependencies`)
 	- Mantener versiones alineadas entre microservicios
 
+---
 
 ## Recursos Adicionales
 - [Advanced Spring Boot Concepts (dev.to)](https://dev.to/vijayskr/advanced-spring-boot-concepts-every-java-developer-should-know-4j9g)
@@ -345,6 +356,7 @@ public_note: "true"
 - [Spring Cloud Reference](https://spring.io/projects/spring-cloud)
 - [OpenTelemetry Java Agent](https://opentelemetry.io/docs/instrumentation/java/)
 
+---
 
 **Relación con otras notas**  
 - [Docker](/software%20engineering/docker/) — despliegue y empaquetado  
@@ -363,6 +375,7 @@ public_note: "true"
 - **Base tecnológica:** Jakarta EE 11 y compatibilidad con Java 21+  
 - **Mantenimiento extendido:** ramas 3.2 y 3.3 finalizan soporte OSS en junio 2025  
 
+---
 
 ## ⚙️ Cambios Técnicos Clave
 
@@ -400,6 +413,7 @@ public_note: "true"
 	- `server.tomcat.max-part-header-size`  
 - Optimización para despliegues en [Docker](/software%20engineering/docker/) y [Kubernetes](/virtualizacion/kubernetes/) con detección automática de recursos.  
 
+---
 
 ## 🧩 Integraciones y Ecosistema
 
@@ -410,6 +424,7 @@ public_note: "true"
 - Soporte extendido para **NoSQL**: MongoDB 7.x, Redis 7, Cassandra 5.  
 - Spring Cloud 2025: incluye mejoras en Circuit Breaker, Config Server y observabilidad distribuida.  
 
+---
 
 ## 🧠 Buenas Prácticas 2025
 
@@ -424,6 +439,7 @@ public_note: "true"
 - Adoptar arquitectura **modular y reactiva** con WebFlux o Kotlin Coroutines.  
 - Externalizar configuración mediante Spring Config Server o Vault.  
 
+---
 
 ## 📚 Recursos actualizados
 

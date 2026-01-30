@@ -1,4 +1,12 @@
-creation date: 2024-04-10 21:05
+---
+date: 2024-04-10 21:05
+title: Data Science
+keywords:
+source:
+status: 🚀
+Parent: "[[Area-Prog]]"
+public_note: "true"
+category: Data Science
 tags:
   - GCP
   - IA
@@ -8,12 +16,7 @@ tags:
   - deep-learning
   - machine-learning
   - Mates
-keywords:
-source:
-status: 🚀
-Parent: "Area-Prog"
-categories: "[Data Science](/uncategorized/data-science/)"
-public_note: "true"
+---
 # Data Science
 
 - [Gestion de Negocio](/gestion%20de%20negocio/gestion-de-negocio/)

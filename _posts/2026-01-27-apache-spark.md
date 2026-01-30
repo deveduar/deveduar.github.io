@@ -1,10 +1,13 @@
+---
+title: apache spark
+status: 🌟
+Parent: "[[Area-Prog]]"
+public_note: "true"
+category: Data Science
 tags:
   - GCP
   - IA
-status: 🌟
-Parent: "Area-Prog"
-categories: "[Data Science](/data%20science/data-science/)"
-public_note: "true"
+---
 # APACHE SPARK
 ``
 

@@ -1,13 +1,13 @@
-creation date: 2025-11-13 10:54
-tags:
+---
+date: 2025-11-13 10:54
+title: Cálculo numérico
 keywords:
 source:
 status: 🌟
-Parent: "Area-IA"
-cssclasses:
-  - hide-embedded-header1
-categories: "[mates](/uncategorized/mates/)"
+Parent: "[[Area-IA]]"
 public_note: "true"
+category: mates
+---
 # 🧮 Cálculo numérico
 - Cálculo numérico
 	- Desbordamiento y desbordamiento
@@ -29,6 +29,7 @@ Su objetivo es minimizar los errores de aproximación y controlar la estabilidad
 - Un **método estable** no amplifica los errores durante el proceso numérico.  
 - Un **algoritmo mal condicionado** o **mal estado** amplifica los errores iniciales en los datos de entrada.
 
+---
 
 ## ⚠️ Desbordamiento y subdesbordamiento
 
@@ -44,6 +45,7 @@ En los cálculos computacionales, los números se representan con un número lim
 
 El **manejo del desbordamiento** implica escalar los datos, usar logaritmos o representar magnitudes en formato normalizado.
 
+---
 
 ## 🧩 Mal estado (condicionamiento de un problema)
 
@@ -69,6 +71,7 @@ $$
 
 Cuanto mayor sea $\kappa(A)$, más sensible será la solución a errores en $\mathbf{b}$ o en $A$.
 
+---
 
 ## 🔺 Método de optimización basado en gradiente
 
@@ -104,6 +107,7 @@ def gradiente(f_grad, x0, alpha=0.01, tol=1e-6, max_iter=1000):
 ```
 {% endraw %}`
 
+---
 
 ## 🧱 Optimización de restricciones
 
@@ -142,6 +146,7 @@ En muchos problemas se desea minimizar una función ( f(\mathbf{x}) ) sujeta a *
    $$
    con ( t ) que crece progresivamente para aproximarse al límite factible.
 
+---
 
 ## 📉 Ejemplo: mínimos cuadrados lineales
 
@@ -195,6 +200,7 @@ La solución ( \mathbf{x} ) minimiza la distancia entre ( A\mathbf{x} ) y ( \mat
 El **cálculo numérico** es una disciplina que estudia los métodos y algoritmos para obtener soluciones aproximadas a problemas matemáticos, especialmente cuando las soluciones exactas son imposibles o difíciles de calcular.  
 Su propósito principal es **encontrar soluciones estables, precisas y eficientes** en presencia de limitaciones computacionales y errores inevitables.
 
+---
 
 ## 🔹 Naturaleza del cálculo numérico
 
@@ -208,6 +214,7 @@ Su propósito principal es **encontrar soluciones estables, precisas y eficiente
 3. **Algoritmos y eficiencia:**  
 	La resolución de problemas en computadora requiere métodos **rápidos y precisos**, diseñados para operar dentro de los límites de la aritmética de máquina.
 
+---
 
 ## ⚙️ Conceptos fundamentales
 
@@ -221,6 +228,7 @@ $$
 
 El número de dígitos en la mantisa limita la **precisión**, y el rango de exponentes define los **límites de representación**.
 
+---
 
 ### Tipos de error
 
@@ -240,6 +248,7 @@ El número de dígitos en la mantisa limita la **precisión**, y el rango de exp
 5. **Propagación del error:**  
 	En cálculos iterativos o secuenciales, los errores se acumulan y pueden amplificarse si el método no es estable.
 
+---
 
 ### Condicionamiento de un problema
 
@@ -255,6 +264,7 @@ $$
 
 Un problema mal condicionado puede producir resultados poco confiables incluso con métodos numéricamente estables.
 
+---
 
 ### Estabilidad numérica
 
@@ -265,6 +275,7 @@ Ejemplo de inestabilidad:
 - Restar dos números casi iguales puede provocar **pérdida de significancia**.
 - Cálculos iterativos mal diseñados pueden amplificar los errores de redondeo.
 
+---
 
 ### Desbordamiento y subdesbordamiento
 
@@ -277,6 +288,7 @@ Estrategias para evitarlo:
 - Normalizar magnitudes durante los cálculos.  
 - Utilizar tipos de datos con mayor rango (por ejemplo, `float64`).
 
+---
 
 ### Convergencia
 
@@ -291,6 +303,7 @@ Tipos de convergencia:
 2. **Cuadrática:** $|x_{k+1} - x^*| \approx C |x_k - x^*|^2$
 3. **Superlineal:** velocidad intermedia entre lineal y cuadrática.
 
+---
 
 ### Evaluación de métodos numéricos
 
@@ -301,6 +314,7 @@ Un buen método numérico debe cumplir:
 3. **Convergencia:** las aproximaciones tienden al valor exacto.  
 4. **Eficiencia:** bajo costo computacional y buena precisión.  
 
+---
 
 ## 🧩 Ejemplo clásico: mínimos cuadrados
 
@@ -324,6 +338,7 @@ A^+ = V \Sigma^+ U^T
 \mathbf{x} = A^+ \mathbf{b}
 $$
 
+---
 
 ## 🧠 Conclusión conceptual
 
@@ -336,6 +351,7 @@ Sus fundamentos —representación, error, estabilidad, condicionamiento y conve
 El **lenguaje matemático del cálculo numérico** proporciona la notación, símbolos y convenciones que permiten expresar los algoritmos, errores y métodos de manera rigurosa y comprensible.  
 Este lenguaje une el pensamiento matemático abstracto con la implementación computacional precisa.
 
+---
 
 ## 🔹 Números y notación
 
@@ -356,6 +372,7 @@ Este lenguaje une el pensamiento matemático abstracto con la implementación co
 	$$
 	donde $\beta$ es la base (normalmente 2 o 10), $m$ la mantisa, y $e$ el exponente.
 
+---
 
 ## 🔹 Expresiones y operadores comunes
 
@@ -407,6 +424,7 @@ Este lenguaje une el pensamiento matemático abstracto con la implementación co
 	\| \mathbf{e} \| = \| \mathbf{x} - \tilde{\mathbf{x&#125;&#125; \|
 	$$
 
+---
 
 ## 🔹 Operaciones numéricas y símbolos útiles
 
@@ -420,6 +438,7 @@ Este lenguaje une el pensamiento matemático abstracto con la implementación co
 | $\propto$ | Proporcionalidad | $f(x) \propto x^2$ |
 | $\mathbb{R}^n$ | Espacio euclídeo n-dimensional | $\mathbf{x} \in \mathbb{R}^n$ |
 
+---
 
 ## 🔹 Relaciones entre funciones y errores
 
@@ -443,6 +462,7 @@ Este lenguaje une el pensamiento matemático abstracto con la implementación co
 	$$
 	El método es estable si el **radio espectral** $\rho(G) < 1$.
 
+---
 
 ## 🔹 Expresiones matriciales clave en cálculo numérico
 
@@ -467,6 +487,7 @@ Este lenguaje une el pensamiento matemático abstracto con la implementación co
 	$$
 	Mide la sensibilidad del resultado respecto a los errores en los datos.
 
+---
 
 ## 🔹 Notación algorítmica y computacional
 
@@ -485,6 +506,7 @@ Este lenguaje une el pensamiento matemático abstracto con la implementación co
 - **Complejidad algorítmica:**  
 	$\mathcal{O}(n^3)$ indica el crecimiento del coste computacional con el tamaño del problema.
 
+---
 
 ## 🧠 Interpretación conceptual
 

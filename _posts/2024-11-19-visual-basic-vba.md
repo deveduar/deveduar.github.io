@@ -1,17 +1,17 @@
-creation date: 2024-11-19 02:08
+---
+date: 2024-11-19 02:08
+title: visual basic VBA
+keywords:
+source:
+status: 🌟
+Parent: "[[Area-Prog]]"
+public_note: "true"
+category: Software engineering
 tags:
   - excel
   - cpp
   - vba
-keywords:
-source:
-status: 🌟
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-  - wide
-categories: "[Software engineering](/software%20engineering/software-engineering/)"
-public_note: "true"
+---
 # Visual Basic VBA
 ``
 

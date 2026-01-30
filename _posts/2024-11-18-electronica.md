@@ -1,15 +1,15 @@
-creation date: 2024-11-18 02:50
-tags:
-  - electronica
+---
+date: 2024-11-18 02:50
+title: electronica
 keywords:
 source:
 status: 📌
-Parent: "Area-Sistemas"
-cssclasses:
-  - hide-embedded-header1
-  - wide
-categories: "[electronica](/uncategorized/electronica/)"
+Parent: "[[Area-Sistemas]]"
 public_note: "true"
+category: electronica
+tags:
+  - electronica
+---
 # electronica
 
 - [embedded](/electronica/embedded/)

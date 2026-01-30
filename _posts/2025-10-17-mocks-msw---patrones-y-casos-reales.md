@@ -1,13 +1,13 @@
-creation date: 2025-10-17 18:19
-tags:
+---
+date: 2025-10-17 18:19
+title: Mocks MSW - patrones y casos reales
 keywords:
 source:
 status: 📌
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-categories: "[Testing](/testing/testing/)"
+Parent: "[[Area-Prog]]"
 public_note: "true"
+category: Testing
+---
 # Mocks MSW - patrones y casos reales
 
 - MSW
@@ -20,6 +20,7 @@ public_note: "true"
 	- Mostrar cómo **parametrizar, modularizar y adaptar mocks** según escenarios complejos, pipelines y entornos CI/CD.
 	- Integrar estrategias de **mock dinámico**, **errores controlados**, **headers**, **autenticación simulada**, **latencia realista** y **testing resiliente**.
 
+---
 
 ## Patrón 1 — Mock Dinámico Basado en Parámetros
 
@@ -44,6 +45,7 @@ rest.get('/api/user/:id', (req, res, ctx) => {
 - Simulas endpoints con rutas dinámicas.
 - Quieres testear componentes dependientes de filtros o queries.
 
+---
 
 ## Patrón 2 — Mock Condicional según Headers o Auth
 
@@ -66,6 +68,7 @@ rest.get('/api/secure', (req, res, ctx) => {
 - Validar que tu `fetch` o `axios` maneja correctamente 401/403.
 - Evitar mockear manualmente middlewares de auth.
 
+---
 
 ## Patrón 3 — Retrasos y Latencia Controlada
 
@@ -88,6 +91,7 @@ ctx.delay(0); // sin delay
 ```
 {% endraw %}
 
+---
 
 ## Patrón 4 — Fallback de Handlers (redefinir durante test)
 
@@ -108,6 +112,7 @@ server.use(
 - Simular errores de API o estados edge.
 - Asegurar que tu UI reacciona correctamente ante fallos.
 
+---
 
 ## Patrón 5 — Mock de Errores con Contexto Realista
 
@@ -131,6 +136,7 @@ rest.post('/api/login', (req, res, ctx) => {
 
 🧠 Este patrón refuerza tests de UI para mostrar mensajes claros y manejar headers HTTP.
 
+---
 
 ## Patrón 6 — Múltiples Entornos (Desarrollo / Test / CI)
 
@@ -157,6 +163,7 @@ beforeAll(() => server.listen({ onUnhandledRequest: 'error' }));
 
 Así los tests fallan si haces una request sin definir su mock explícitamente.
 
+---
 
 ## Patrón 7 — Composición de Handlers
 
@@ -178,6 +185,7 @@ export const handlers = [...userHandlers, ...productHandlers];
 - Facilita mantenimiento y reuso de mocks.
 - Permite desactivar grupos de handlers durante un test concreto.
 
+---
 
 ## Patrón 8 — Simulación de Estados Concurrentes
 
@@ -197,6 +205,7 @@ rest.get('/api/status', (req, res, ctx) => {
 
 🔁 Reproduce fallos intermitentes y prueba resiliencia del cliente.
 
+---
 
 ## Patrón 9 — Testing Resiliente con Assertions Post-Mock
 
@@ -225,6 +234,7 @@ test('debería llamar a /api/user con método GET', async () => {
 
 🧪 Este patrón es especialmente útil para validar integración cliente–API.
 
+---
 
 ## Patrón 10 — Integración Full Stack con Backend Mock
 
@@ -263,6 +273,7 @@ npm run dev
 ```
 {% endraw %}
 
+---
 
 ## Casos Reales de Uso en Empresas
 
@@ -271,6 +282,7 @@ npm run dev
 - **Shopify** — combina MSW + Playwright para simular entornos E2E realistas.
 - **Startups SaaS** — lo usan para demos interactivas sin necesidad de servidores temporales.
 
+---
 
 ## Mejores Prácticas Finales
 
@@ -281,6 +293,7 @@ npm run dev
 - Añade **logging condicional** (`console.log(req.url.href)`) para debugging.
 - Versiona los mocks junto al código de frontend (no en repos aparte).
 
+---
 
 ### 🔗 Referencias recomendadas
 

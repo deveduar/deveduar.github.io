@@ -1,17 +1,17 @@
-creation date: 2024-11-21 19:30
+---
+date: 2024-11-21 19:30
+title: native script
+keywords:
+source:
+status: 🌟
+Parent: "[[Area-Prog]]"
+public_note: "true"
+category: Desarrollo multiplataforma
 tags:
   - mobile-apps
   - NativeScript
   - angular
-keywords:
-source:
-status: 🌟
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-  - wide
-categories: "[Desarrollo multiplataforma](/desarrollo%20multiplataforma/desarrollo-multiplataforma/)"
-public_note: "true"
+---
 # NativeScript
 
 - [Desarrollo multiplataforma](/desarrollo%20multiplataforma/desarrollo-multiplataforma/)

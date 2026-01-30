@@ -1,13 +1,13 @@
-creation date: 2025-10-19 21:46
-tags:
+---
+date: 2025-10-19 21:46
+title: Playwright - Temas Avanzados y Casos Especiales
 keywords:
 source:
 status: 📌
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-categories: "[Testing](/testing/testing/)"
+Parent: "[[Area-Prog]]"
 public_note: "true"
+category: Testing
+---
 # Playwright - Temas Avanzados y Casos Especiales  
 
 - [Testing](/testing/testing/)  
@@ -16,6 +16,7 @@ public_note: "true"
 - Playwright Trace Viewer  
 - [Playwright](https://playwright.dev/docs/writing-tests)
 
+---
 
 ## 🧩 Integración con Frameworks Modernos
 
@@ -44,6 +45,7 @@ test('añadir una tarea en el componente', async ({ mount }) => {
 * Facilitan **testeo de reactividad, eventos y props**, permitiendo verificar cambios dinámicos en tiempo real.
 * Ideal para validar **renderizados condicionales**, **ciclos de vida**, y **transiciones**.
 
+---
 
 ## 🧠 Testing de APIs y Mock de Red
 
@@ -71,6 +73,7 @@ test('mock de API para simular respuesta del servidor', async ({ page }) => {
 * Validar **retry logic**, **caché** o **fallbacks**.
 * Medir tiempos de respuesta o logs del backend.
 
+---
 
 ## 🧩 Fixtures y Reutilización de Estado
 
@@ -104,6 +107,7 @@ test('validar flujo con sesión iniciada', async ({ authenticatedPage }) => {
 * Mejora la velocidad reutilizando estados de sesión o tokens.
 * Facilita la paralelización de flujos autenticados.
 
+---
 
 ## 🧰 Integración con CI/CD y Contenedores
 
@@ -147,6 +151,7 @@ CMD ["npx", "playwright", "test"]
 ```
 {% endraw %}
 
+---
 
 ## 📸 Testing Visual y Accesibilidad
 
@@ -175,6 +180,7 @@ console.log(results.violations);
 ```
 {% endraw %}
 
+---
 
 ## 🔐 Autenticación y Seguridad
 
@@ -191,6 +197,7 @@ use: { storageState: 'auth.json' }
 
 * Puede detectar **errores CORS**, cabeceras inseguras y restricciones CSP.
 
+---
 
 ## 📡 Testing de Performance
 
@@ -214,6 +221,7 @@ await page.route('**/*', (route) =>
 ```
 {% endraw %}
 
+---
 
 ## 🧬 Integración con Herramientas de Desarrollo
 
@@ -221,6 +229,7 @@ await page.route('**/*', (route) =>
 * **Playwright Inspector:** ejecuta paso a paso, captura selectores, pausa pruebas.
 * **Trace Viewer:** permite revisar ejecuciones históricas, capturas, logs y red.
 
+---
 
 ## 🧩 Testing de Aplicaciones Complejas
 
@@ -241,6 +250,7 @@ ws.on('framereceived', (frame) => console.log(frame.payload));
 ```
 {% endraw %}
 
+---
 
 ## 🧠 Estrategias Avanzadas
 
@@ -251,6 +261,7 @@ ws.on('framereceived', (frame) => console.log(frame.payload));
 * **Cobertura de código integrada** con `nyc` o `c8`.
 * **Snapshots dinámicos** con control de versiones en CI.
 
+---
 
 ## 🔮 Tendencias Avanzadas 2025
 
@@ -261,6 +272,7 @@ ws.on('framereceived', (frame) => console.log(frame.payload));
 * **Pruebas basadas en observabilidad** (trazas, métricas y logs integrados).
 * **Auditorías de rendimiento en streaming y entornos 3D/WebGPU.**
 
+---
 
 ## 📚 Recursos Recomendados
 
@@ -279,6 +291,7 @@ ws.on('framereceived', (frame) => console.log(frame.payload));
 - Playwright Trace Viewer  
 - [Playwright](https://playwright.dev)
 
+---
 
 ## 🧩 Testing Multinavegador y Multiplataforma
 
@@ -303,6 +316,7 @@ export default defineConfig({
 * Ideal para validación de compatibilidad, CSS cross-browser y rendering visual.
 * Se puede usar `--project` para filtrar ejecución.
 
+---
 
 ## 📱 Testing en Dispositivos Móviles y Responsivos
 
@@ -325,6 +339,7 @@ test('visualización móvil correcta', async ({ page }) => {
 * Soporte para **gestos táctiles**, **rotación de pantalla** y **modo oscuro**.
 * Útil para validar experiencias móviles reales sin usar simuladores externos.
 
+---
 
 ## 🔄 Testing de Integraciones Externas
 
@@ -342,6 +357,7 @@ await page.route('**/auth0/callback', (route) =>
 * También permite **verificar redirecciones** y **tokens JWT** en cookies.
 * Es posible testear integraciones reales en entornos sandbox de APIs públicas.
 
+---
 
 ## 🧠 Testing de Internacionalización (i18n) y Localización (L10n)
 
@@ -359,6 +375,7 @@ await expect(page.locator('h1')).toHaveText('Welcome');
 
 * Compatible con pruebas dinámicas en múltiples idiomas dentro del mismo flujo.
 
+---
 
 ## 🧩 Testing en Entornos Server-Side Rendering (SSR)
 
@@ -381,6 +398,7 @@ test('el SSR muestra contenido accesible', async ({ page }) => {
 
 * Ayuda a validar SEO, accesibilidad y consistencia del HTML inicial.
 
+---
 
 ## 🧪 Testing de Microfrontends y Aplicaciones Modulares
 
@@ -396,6 +414,7 @@ await expect(frame.locator('text=Pago')).toBeVisible();
 
 * También permite inyectar mocks para microservicios que alimentan cada módulo.
 
+---
 
 ## 🧰 Estrategias de Sincronización y Esperas Inteligentes
 
@@ -414,6 +433,7 @@ await expect.poll(async () => page.locator('#contador').textContent()).toBe('5')
 
 * Evita flakiness al depender del estado real del DOM y eventos.
 
+---
 
 ## 🧬 Testing de Integraciones con Web Workers / Service Workers
 
@@ -431,6 +451,7 @@ await expect(page).toHaveText('Modo sin conexión activo');
 
 * También puede escuchar mensajes del Service Worker y medir tiempos de sincronización.
 
+---
 
 ## 🔍 Análisis de Logs, Errores y Cobertura
 
@@ -446,6 +467,7 @@ page.on('pageerror', (err) => console.error('Error:', err.message));
 * Integración con **Cobertura de Código (Code Coverage)** mediante `@playwright/test` + `v8-to-istanbul`.
 * Permite ver qué partes del código se ejecutaron durante el test.
 
+---
 
 ## 🧠 Testing Distribuido y Paralelismo Avanzado
 
@@ -461,6 +483,7 @@ npx playwright test --shard=1/3
 * Se integra con CI/CD para dividir suites entre runners o contenedores.
 * Soporta **priorización adaptativa de tests** (ejecución de los más críticos primero).
 
+---
 
 ## ⚙️ Extensibilidad y Plugins
 
@@ -482,6 +505,7 @@ export default JsonConsoleReporter;
 
 * También existen integraciones con **Allure**, **TestRail**, **Jira** o **Slack** para informes automáticos.
 
+---
 
 ## 📡 Integración con Observabilidad y Métricas
 
@@ -498,6 +522,7 @@ await page.tracing.stop({ path: 'trace.zip' });
 
 * Permite correlacionar errores de test con logs y métricas del sistema.
 
+---
 
 ## 🧭 Buenas Prácticas Avanzadas
 
@@ -509,6 +534,7 @@ await page.tracing.stop({ path: 'trace.zip' });
 * Usar **fixtures globales** para manejo de entorno (DB, seeds, usuarios).
 * Mantener balance entre cobertura visual, API y E2E.
 
+---
 
 ## 🔮 Innovaciones y Ecosistema 2025
 
@@ -519,6 +545,7 @@ await page.tracing.stop({ path: 'trace.zip' });
 * **Testing híbrido UI + API + DB** integrado en un mismo flujo de trace.
 * **Integración con observabilidad generativa** para detección predictiva de flakiness.
 
+---
 
 ## 📚 Recursos Adicionales
 

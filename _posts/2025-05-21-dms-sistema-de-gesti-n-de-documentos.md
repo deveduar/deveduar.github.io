@@ -1,18 +1,17 @@
-creation date: 2025-05-21 18:34
-tags:
-  - IT
-  - dms
+---
+date: 2025-05-21 18:34
+title: DMS sistema de gestión de documentos
 keywords:
 source:
 status: 🌟
-Parent: "Area-Sistemas"
-cssclasses:
-  - hide-embedded-header1
-  - wide
-categories: "[Gestion de Negocio](/gestion%20de%20negocio/gestion-de-negocio/)"
+Parent: "[[Area-Sistemas]]"
 aliases:
-  - Document Management System
 public_note: "true"
+category: Gestion de Negocio
+tags:
+  - IT
+  - dms
+---
 # DMS Sistema de Gestión de Documentos
 ``
 

@@ -1,15 +1,16 @@
-tags:
-  - Linux
-  - Sistemas
-creation date: 2024-03-02 01:11
+---
+date: 2024-03-02 01:11
+title: arch linux
 keywords:
 source:
 status: 🌟
-Parent: "Area-Sistemas"
-cssclasses:
-  - hide-embedded-header1
-categories: "[Linux](/sistemas/linux/)"
+Parent: "[[Area-Sistemas]]"
 public_note: "true"
+category: Linux
+tags:
+  - Linux
+  - Sistemas
+---
 # Arch Linux
 ## Recursos y Enlaces
 - [Linux](/sistemas/linux/)

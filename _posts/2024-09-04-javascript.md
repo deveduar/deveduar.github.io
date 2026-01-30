@@ -1,22 +1,27 @@
+---
+date: 2024-09-04T03:13:00
+title: javascript
+status: 🌟
+Parent: "[[Area-Prog]]"
+public_note: "true"
+category: Desarrollo web
 tags:
   - JS
   - Scraping
-status: 🌟
-Parent: "Area-Prog"
-creation date: 2024-09-04T03:13:00
-categories: "[Desarrollo web](/desarrollo%20web/desarrollo-web/)"
-public_note: "true"
+---
 # JavaScript
 
 - [Desarrollo web](/desarrollo%20web/desarrollo-web/)
 - [typescript](/software%20engineering/typescript/)
 - [Expresiones regulares](/computer%20science/expresiones-regulares/)
 
+---
 
 ## 📺 Entrevistas
 
 - [Entrevistando para Javascript Senior Developer - Prueba Técnica - YouTube](https://youtu.be/1tazdyy4Zqw)
 
+---
 
 ## 🧠 Conceptos Clave
 
@@ -54,6 +59,7 @@ public_note: "true"
 	- ESM → `import`, `export` (estándar moderno y compatible con navegador)
 	- CommonJS vs ES Modules - Javascript en español - Lenguaje JS
 
+---
 
 ## 🎓 Cursos y Formación
 
@@ -130,6 +136,7 @@ public_note: "true"
 - 10-POO con clases
 - 11-poo_prototipica
 
+---
 
 ## 🧮 Otros Cursos y Recursos
 
@@ -170,6 +177,7 @@ npm install three
 ```
 {% endraw %}
 
+---
 
 ## 🔧 Tópicos Sugeridos para Expansión
 
@@ -181,11 +189,13 @@ npm install three
 - Testing en JavaScript: Jest, Vitest, y testing asíncrono.
 - Security JS: XSS, CSRF, y sanitización en frontend/backend.
 
+---
 
 # JavaScript — Expansión de Conceptos Avanzados
 
 Esta nota amplía los temas fundamentales del ecosistema JavaScript, abordando su **motor interno**, **modelos de ejecución**, **patrones de diseño**, y **buenas prácticas** para entornos modernos de desarrollo. Se evitan repeticiones respecto a notas anteriores.
 
+---
 
 ## ⚙️ Núcleo del Lenguaje y Ejecución
 
@@ -211,6 +221,7 @@ console.log("4");
 ```
 {% endraw %}`
 
+---
 
 ### Memory Management
 
@@ -224,6 +235,7 @@ El Memory Management en JS es automático, pero conocer su funcionamiento evita 
   * Listeners no removidos en DOM o Node.js.
 * **Herramientas**: Chrome DevTools → *Memory Profiler*, *Heap Snapshot*.
 
+---
 
 ### JS Engine Internals
 
@@ -237,6 +249,7 @@ Motores como V8 (Chrome, Node.js) o SpiderMonkey (Firefox) ejecutan código JS c
 **Consecuencia práctica:**
 Evita estructuras dinámicas con tipos inconsistentes para mejorar la optimización JIT.
 
+---
 
 ## 🧱 Patrones de Diseño en JavaScript
 
@@ -301,6 +314,7 @@ function withLogging(fn) {
 ```
 {% endraw %}
 
+---
 
 ## ⚡ Asincronía Moderna y Patrones
 
@@ -334,6 +348,7 @@ async function* fetchPaginated(urls) {
 ```
 {% endraw %}
 
+---
 
 ## 🧩 Metaprogramación
 
@@ -367,6 +382,7 @@ console.log(Reflect.get(person, "age"));
 ```
 {% endraw %}
 
+---
 
 ## 🧪 Testing y Buenas Prácticas
 
@@ -398,6 +414,7 @@ Buenas prácticas recomendadas:
 * Nombres semánticos (acciones para funciones, sustantivos para objetos).
 * Comentarios solo donde aporten contexto adicional, no para repetir el código.
 
+---
 
 ## 🛡️ Seguridad en JavaScript
 
@@ -423,6 +440,7 @@ element.textContent = userInput; // ✅ seguro
 * Usa `helmet` y `express-rate-limit`.
 * Deshabilita cabeceras innecesarias en respuestas HTTP.
 
+---
 
 ## 🧰 Ecosistema Moderno y Build Tools
 
@@ -433,6 +451,7 @@ element.textContent = userInput; // ✅ seguro
 * Babel: transpila a versiones compatibles.
 * ESLint y Prettier: linting y formateo automatizado.
 
+---
 
 ## 🧠 Conceptos Avanzados Relacionados
 
@@ -442,6 +461,7 @@ element.textContent = userInput; // ✅ seguro
 * Data Structures → mapas, sets, weakmaps, iteradores personalizados.
 * [Web Components](/frontend/web-components/) → encapsulación nativa y shadow DOM.
 
+---
 
 ## 🚀 Sugerencia de Expansión Futura
 
@@ -457,6 +477,7 @@ element.textContent = userInput; // ✅ seguro
 
 Esta nota continúa la expansión de temas avanzados de JavaScript, profundizando en su integración con entornos modernos, nuevos estándares, y áreas donde el lenguaje evoluciona más allá del frontend tradicional. No se repiten contenidos de notas previas.
 
+---
 
 ## 🧩 Arquitectura y Entornos de Ejecución
 
@@ -481,6 +502,7 @@ console.log("Start");
 ```
 {% endraw %}`
 
+---
 
 ### Deno y Bun
 
@@ -500,6 +522,7 @@ Runtime seguro y moderno creado por el mismo autor de Node.js:
 * Alta compatibilidad con Node.js y NPM.
 * Excelente rendimiento para SSR y edge computing.
 
+---
 
 ## 🌍 JavaScript en el Lado del Servidor y la Nube
 
@@ -537,6 +560,7 @@ Patrones comunes:
 * API Gateways con autenticación JWT.
 * Balanceo mediante reverse proxies o *load balancers*.
 
+---
 
 ## 🧠 Modelos de Programación Emergentes
 
@@ -562,6 +586,7 @@ Combinan programación funcional + reactiva:
 * Pureza + Observables = lógica predecible y testeable.
 * Patrones: *store as a function*, *intent-model-view*.
 
+---
 
 ## 🧬 Programación Funcional Avanzada
 
@@ -580,6 +605,7 @@ console.log(inc(5)); // 6
 ```
 {% endraw %}
 
+---
 
 ## 📚 Estandarización y Evolución del Lenguaje
 
@@ -610,6 +636,7 @@ match (user.role) {
 ```
 {% endraw %}
 
+---
 
 ## 🧠 Data Structures Modernas
 
@@ -653,6 +680,7 @@ for (const n of contador) console.log(n);
 ```
 {% endraw %}
 
+---
 
 ## 🖥️ WebAssembly (WASM) y Rendimiento
 
@@ -673,6 +701,7 @@ Usos comunes:
 * Juegos 3D y motores de física.
 * Cálculos científicos o financieros.
 
+---
 
 ## 🧭 Web Workers y Paralelismo
 
@@ -697,6 +726,7 @@ worker.postMessage(10);
 ```
 {% endraw %}
 
+---
 
 ## 🪶 Performance Patterns
 
@@ -712,6 +742,7 @@ worker.postMessage(10);
 * Prefiere `ArrayBuffer` o `TypedArray` en cálculos numéricos.
 * Usa `Object.freeze()` para estructuras estáticas.
 
+---
 
 ## 🌐 Interoperabilidad y APIs del Navegador
 
@@ -721,6 +752,7 @@ worker.postMessage(10);
 * **WebSockets y SSE** → comunicación bidireccional en tiempo real.
 * **WebGPU** → API moderna para gráficos y computación paralela.
 
+---
 
 ## 🧱 Integración con TypeScript
 
@@ -742,6 +774,7 @@ type Result = Awaited<Promise<number>>; // number
 ```
 {% endraw %}
 
+---
 
 ## 🔮 Futuros Horizontes
 
@@ -751,6 +784,7 @@ type Result = Awaited<Promise<number>>; // number
 * WebContainers: ejecución completa de Node.js en el navegador (StackBlitz).
 * Zero-copy Data Exchange: mejora de rendimiento entre JS y WASM.
 
+---
 
 ## ✅ Conclusión
 

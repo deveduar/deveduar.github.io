@@ -1,16 +1,17 @@
-creation date: 2025-04-14 03:14
+---
+date: 2025-04-14 03:14
+title: OTRS Znuny
+keywords:
+source:
+status: 🌟
+Parent: "[[Area-Sistemas]]"
+public_note: "true"
+category: infraestructura IT
 tags:
   - Znuny
   - OTRS
   - ITIL
-keywords:
-source:
-status: 🌟
-Parent: "Area-Sistemas"
-cssclasses:
-  - hide-embedded-header1
-categories: "[infraestructura IT](/infraestructura%20it/infraestructura-it/)"
-public_note: "true"
+---
 # OTRS Znuny
 ``
 

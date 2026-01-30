@@ -1,4 +1,12 @@
-creation date: 2025-10-13 15:20
+---
+date: 2025-10-13 15:20
+title: autohotkey
+keywords:
+source:
+status: 🌟
+Parent: "[[Area-Sistemas]]"
+public_note: "true"
+category: Automatizacion y Build
 tags:
   - automation
   - autohotkey
@@ -6,14 +14,7 @@ tags:
   - sistemas
   - Linux
   - Windows
-keywords:
-source:
-status: 🌟
-Parent: "Area-Sistemas"
-cssclasses:
-  - hide-embedded-header1
-categories: "[Automatizacion y Build](/automatizacion%20y%20build/automatizacion-y-build/)"
-public_note: "true"
+---
 # autohotkey
 
 - [Automatizacion y Build](/automatizacion%20y%20build/automatizacion-y-build/)

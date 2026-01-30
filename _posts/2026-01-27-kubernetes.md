@@ -1,10 +1,13 @@
+---
+title: Kubernetes
+status: 🌟
+Parent: "[[Area-Sistemas]]"
+public_note: "true"
+category: Virtualizacion
 tags:
   - Devops
   - Kubernetes
-status: 🌟
-Parent: "Area-Sistemas"
-categories: "[Virtualizacion](/devops/virtualizacion/)"
-public_note: "true"
+---
 # Kubernetes
 
 - PaaS platform as a service
@@ -18,6 +21,7 @@ public_note: "true"
 	- [Install Tools kubectl](https://kubernetes.io/docs/tasks/tools/)
 	- [minikube start](https://minikube.sigs.k8s.io/docs/start/)
 
+---
 
 ## INTRO
 - docker-compose no escala adecuadamente para producción
@@ -29,6 +33,7 @@ public_note: "true"
 - gestiona **cargas de trabajo** (apps, microservicios, jobs)
 - objetivo: alta disponibilidad, escalabilidad y autorreparación
 
+---
 
 ## CONCEPTOS CLAVE
 - [¿Qué es Kubernetes?](https://kubernetes.io/es/docs/concepts/overview/what-is-kubernetes/)
@@ -41,6 +46,7 @@ public_note: "true"
 - virtualización a nivel del sistema operativo (no de hardware)
 - integración con Open Service Broker para servicios externos
 
+---
 
 ## ARQUITECTURA
 - **Pod**: unidad básica de ejecución (1 o más contenedores), volátil, con IP propia
@@ -56,6 +62,7 @@ public_note: "true"
 	- etcd: almacén distribuido del estado del cluster
 	- API Server: punto central de comunicación y control declarativo
 
+---
 
 ## LABELS
 - [Etiquetas y Selectores](https://kubernetes.io/es/docs/concepts/overview/working-with-objects/labels/) 
@@ -63,6 +70,7 @@ public_note: "true"
 - permiten seleccionar y agrupar objetos del cluster
 - esenciales para filtrado, targeting de deployments y organización lógica
 
+---
 
 ## ANNOTATIONS
 - [Annotations \| Kubernetes](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/)
@@ -73,6 +81,7 @@ public_note: "true"
 - prefijos reservados: `kubernetes.io/`, `k8s.io/`
 - usadas por componentes del sistema (`kube-scheduler`, `kube-controller-manager`, `kubectl`, etc.)
 
+---
 
 ## SETUP
 - [Setup Kubernetes](https://kubernetes.io/es/docs/setup/)
@@ -85,6 +94,7 @@ public_note: "true"
 - integración con cloud providers:
 	- AWS EKS, GCP GKE, Azure AKS
 
+---
 
 ## RECURSOS Y REFERENCIAS
 - kubectl cheatsheet: comandos básicos y avanzados

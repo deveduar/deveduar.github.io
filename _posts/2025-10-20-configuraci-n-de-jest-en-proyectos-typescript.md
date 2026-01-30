@@ -1,13 +1,13 @@
-creation date: 2025-10-20 18:43
-tags:
+---
+date: 2025-10-20 18:43
+title: Configuración de Jest en proyectos TypeScript
 keywords:
 source:
 status: 📌
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-categories: "[Testing](/testing/testing/)"
+Parent: "[[Area-Prog]]"
 public_note: "true"
+category: Testing
+---
 # Configuración de Jest en proyectos TypeScript
 
 - [Testing](/testing/testing/)
@@ -30,6 +30,7 @@ public_note: "true"
   - `ts-jest` → ideal si el proyecto se compila con `tsc`.  
   - `babel-jest` → preferido si ya usas Babel (React, Next.js, Vite, etc.).
 
+---
 
 ## ⚙️ Configuración básica con `ts-jest`
 
@@ -89,6 +90,7 @@ export default {
 ```
 {% endraw %}
 
+---
 
 ## ⚙️ Configuración alternativa con `babel-jest`
 
@@ -130,6 +132,7 @@ export default {
 
 > 💡 `babel-jest` es ideal en proyectos con Next.js, Vite o React, donde Babel ya está configurado y no se desea compilar dos veces.
 
+---
 
 ## 🧩 Configuración mixta (React + TS + Jest)
 
@@ -168,6 +171,7 @@ import '@testing-library/jest-dom'
 ```
 {% endraw %}
 
+---
 
 ## 🧠 Ejemplo práctico
 
@@ -209,6 +213,7 @@ Salida:
 ```
 {% endraw %}
 
+---
 
 ## 📊 Integración con [CICD](/devops/cicd/) y cobertura
 
@@ -246,6 +251,7 @@ jobs:
 ```
 {% endraw %}
 
+---
 
 ## 🧠 Depuración de errores comunes
 
@@ -257,6 +263,7 @@ jobs:
 | Tests lentos                                   | `ts-jest` recompila todo             | Usa `isolatedModules: true` o cachea compilación |
 | Problemas con alias `@/`                       | Falta `moduleNameMapper`             | Define rutas en `jest.config.js`                 |
 
+---
 
 ## 💡 Buenas prácticas
 
@@ -267,6 +274,7 @@ jobs:
 * Usa `test:coverage` como parte del pipeline CI.
 * Integra SonarQube o SonarCloud para análisis de cobertura.
 
+---
 
 ## 📚 Recursos recomendados
 

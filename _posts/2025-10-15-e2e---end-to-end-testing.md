@@ -1,15 +1,16 @@
-creation date: 2025-10-15 11:48
-tags:
-  - testing
-  - e2e
+---
+date: 2025-10-15 11:48
+title: E2E - End to End Testing
 keywords:
 source:
 status: 🌟
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-categories: "[Testing](/testing/testing/)"
+Parent: "[[Area-Prog]]"
 public_note: "true"
+category: Testing
+tags:
+  - testing
+  - e2e
+---
 # E2E - End to End Testing
 
 - docs

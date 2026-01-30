@@ -1,18 +1,19 @@
-creation date: 2025-10-19 15:42
-tags:
+---
+date: 2025-10-19 15:42
+title: Guía Práctica de E2E - End to End Testing
 keywords:
 source:
 status: 📌
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-categories: "[Testing](/testing/testing/)"
+Parent: "[[Area-Prog]]"
 public_note: "true"
+category: Testing
+---
 # Guía Práctica de [E2E - End to End Testing](/testing/e2e---end-to-end-testing/)
 ## 🚀 Objetivo
 
 Esta guía práctica muestra cómo implementar pruebas E2E completas con las herramientas más utilizadas: Cypress, [Playwright](/testing/playwright/) y Selenium. Incluye configuración, ejemplos de uso, comandos, CI/CD y recomendaciones de mantenimiento.
 
+---
 
 ## 🧩 1. Cypress
 
@@ -123,6 +124,7 @@ jobs:
 ```
 {% endraw %}
 
+---
 
 ## 🧩 2. [Playwright](/testing/playwright/)
 
@@ -235,6 +237,7 @@ jobs:
 ```
 {% endraw %}
 
+---
 
 ## 🧩 3. Selenium
 
@@ -277,6 +280,7 @@ node tests/login.js
 ```
 {% endraw %}
 
+---
 
 ## 🧮 Ejemplo Comparativo de Flujos
 
@@ -289,6 +293,7 @@ node tests/login.js
 | Entornos móviles | Limitado                   | Sí                               | Depende del driver                  |
 | Lenguajes        | JS/TS                      | JS/TS, Python, C#                | Multilenguaje                       |
 
+---
 
 ## 🧠 Buenas Prácticas
 
@@ -300,6 +305,7 @@ node tests/login.js
 * Integrar con dashboards para visibilidad del equipo QA/DevOps.
 * Asegurar limpieza del entorno tras cada ejecución.
 
+---
 
 ## 🧭 Recursos Útiles
 
@@ -309,6 +315,7 @@ node tests/login.js
 * [MSW (Mock Service Worker)](https://mswjs.io)
 * [Allure Reports](https://docs.qameta.io/allure/)
 
+---
 
 ## ✅ Conclusión
 

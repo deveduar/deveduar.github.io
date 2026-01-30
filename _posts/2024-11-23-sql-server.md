@@ -1,16 +1,16 @@
-creation date: 2024-11-23 01:58
-tags:
-  - MySQL
-  - sql-server
+---
+date: 2024-11-23 01:58
+title: sql server
 keywords:
 source:
 status: 🌟
-Parent: "Area-Sistemas"
-cssclasses:
-  - hide-embedded-header1
-  - wide
-categories: "[devops](/devops/devops/)"
+Parent: "[[Area-Sistemas]]"
 public_note: "true"
+category: devops
+tags:
+  - MySQL
+  - sql-server
+---
 # SQL Server
 
 - [Docker](/software%20engineering/docker/)

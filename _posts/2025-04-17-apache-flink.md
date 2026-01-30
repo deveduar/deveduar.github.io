@@ -1,17 +1,17 @@
-creation date: 2025-04-17 22:25
+---
+date: 2025-04-17 22:25
+title: apache flink
+keywords:
+source:
+status: 🌟
+Parent: "[[Area-Prog]]"
+public_note: "true"
+category: Backend
 tags:
   - apache
   - stream_processing
   - kafka
-keywords:
-source:
-status: 🌟
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-  - wide
-categories: "[Backend](/backend/backend/)"
-public_note: "true"
+---
 # apache flink
 ``
 
@@ -77,7 +77,7 @@ public_note: "true"
 
 ## Comparativa con Apache Spark
 ### Diferencias principales
-| Característica           | [apache spark](/data%20science/apache-spark/)                                           | [apache flink](/uncategorized/apache-flink/)                  |
+| Característica           | [apache spark](/data%20science/apache-spark/)                                           | [apache flink](/backend/apache-flink/)                  |
 | ------------------------ | ---------------------------------------------------------- | --------------------------------- |
 | Modelo de procesamiento  | Batch processing                                           | Data streaming                    |
 | Procesamiento de eventos | Microlotes                                                 | En tiempo real                    |
@@ -92,7 +92,7 @@ public_note: "true"
 
 ## Comparativa con Apache Kafka
 ### Roles dentro del flujo de datos
-|                 | [Apache Kafka](/backend/apache-kafka/)                        | [apache flink](/uncategorized/apache-flink/)                                               |
+|                 | [Apache Kafka](/backend/apache-kafka/)                        | [apache flink](/backend/apache-flink/)                                               |
 | --------------- | --------------------------------------- | -------------------------------------------------------------- |
 | Función         | Almacén de eventos distribuido          | Marco de procesamiento de flujos                               |
 | Uso             | Ideal para ingerir datos en tiempo real | Ideal para aplicaciones de streaming complejas y a gran escala |

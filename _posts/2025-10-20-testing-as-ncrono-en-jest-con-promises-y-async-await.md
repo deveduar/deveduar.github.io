@@ -1,13 +1,13 @@
-creation date: 2025-10-20 18:33
-tags:
+---
+date: 2025-10-20 18:33
+title: testing asíncrono en Jest con Promises y async await
 keywords:
 source:
 status: 📌
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-categories: "[Testing](/testing/testing/)"
+Parent: "[[Area-Prog]]"
 public_note: "true"
+category: Testing
+---
 # testing asíncrono en Jest con Promises y async await
 
 - [javascript](/desarrollo%20web/javascript/)

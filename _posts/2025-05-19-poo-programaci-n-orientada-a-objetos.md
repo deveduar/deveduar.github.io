@@ -1,22 +1,23 @@
-creation date: 2025-05-19 20:32
+---
+date: 2025-05-19 20:32
+title: POO Programación Orientada a Objetos
+keywords:
+source:
+status: 🌟
+Parent: "[[Area-Prog]]"
+public_note: "true"
+category: Computer Science
 tags:
   - POO
   - arquitectura
   - CS
-keywords:
-source:
-status: 🌟
-Parent: "Area-Prog"
-cssclasses:
-  - hide-embedded-header1
-  - wide
-categories: "[Computer Science](/computer%20science/computer-science/)"
-public_note: "true"
+---
 # POO Programación Orientada a Objetos
 
 
 La **Programación Orientada a Objetos (POO)** es un paradigma que organiza el código en torno a *objetos*, entidades que combinan **datos (propiedades)** y **comportamientos (métodos)**. Su objetivo es mejorar la modularidad, reutilización y mantenibilidad del software.
 
+---
 
 ## Fundamentos de la POO
 
@@ -93,6 +94,7 @@ La POO se basa en cuatro pilares esenciales:
 	```
 {% endraw %}
 
+---
 
 ## POO en JavaScript
 
@@ -109,6 +111,7 @@ JavaScript implementa la POO mediante dos enfoques principales:
 - 01-POO intro y ES6  
 	Explica cómo la introducción de ES6 formalizó el uso de clases, métodos estáticos y constructores, mejorando la estructuración del código.
 
+---
 
 ## Mecanismos y aplicación práctica
 
@@ -169,6 +172,7 @@ JavaScript implementa la POO mediante dos enfoques principales:
 	- Desarrollo de juegos y simulaciones basadas en objetos.
 	- APIs orientadas a objetos para SDKs o librerías.
 
+---
 
 ## Referencias cruzadas
 
@@ -180,8 +184,9 @@ JavaScript implementa la POO mediante dos enfoques principales:
 # POO avanzada y patrones aplicados
 
 
-Esta nota amplía los conceptos fundamentales de la [POO Programación Orientada a Objetos](/uncategorized/poo-programaci-n-orientada-a-objetos/) explorando temas avanzados, buenas prácticas, patrones de diseño y principios que fortalecen la arquitectura del software orientado a objetos.
+Esta nota amplía los conceptos fundamentales de la [POO Programación Orientada a Objetos](/computer%20science/poo-programaci-n-orientada-a-objetos/) explorando temas avanzados, buenas prácticas, patrones de diseño y principios que fortalecen la arquitectura del software orientado a objetos.
 
+---
 
 ## Principios SOLID
 
@@ -233,6 +238,7 @@ Los **principios SOLID** guían la escritura de código mantenible y escalable.
 	```
 {% endraw %}
 
+---
 
 ## Patrones de diseño orientados a objetos
 
@@ -304,6 +310,7 @@ Los **patrones de diseño** son soluciones reutilizables a problemas comunes en 
 	```
 {% endraw %}
 
+---
 
 ## Metaprogramación y POO dinámica en JavaScript
 
@@ -356,6 +363,7 @@ La **metaprogramación** permite modificar o extender el comportamiento de objet
 	```
 {% endraw %}
 
+---
 
 ## Diseño y arquitectura orientada a objetos
 
@@ -372,6 +380,7 @@ La **metaprogramación** permite modificar o extender el comportamiento de objet
 4. **Inyección de dependencias**
 	Permite pasar los objetos requeridos desde el exterior, facilitando pruebas unitarias y modularidad.
 
+---
 
 ## Ejemplo práctico: sistema modular de pagos
 
@@ -412,10 +421,11 @@ procesador.procesar(100);
 
 Este ejemplo combina **polimorfismo**, **inyección de dependencias** y el **principio abierto/cerrado**, mostrando una POO aplicada y extensible.
 
+---
 
 ## Referencias cruzadas
 
-* [POO Programación Orientada a Objetos](/uncategorized/poo-programaci-n-orientada-a-objetos/): fundamentos y sintaxis básica.
+* [POO Programación Orientada a Objetos](/computer%20science/poo-programaci-n-orientada-a-objetos/): fundamentos y sintaxis básica.
 * poo mecanimos y aplicacion: mecanismos de encapsulación y herencia.
 * 10-POO con clases: estructuras modernas basadas en `class`.
 * 11-poo_prototipica: herencia basada en prototipos y funciones constructoras.
@@ -426,6 +436,7 @@ Este ejemplo combina **polimorfismo**, **inyección de dependencias** y el **pri
 
 Esta nota amplía el enfoque práctico de la POO avanzada y patrones aplicados, abordando temas de **diseño orientado a objetos**, **testeo**, **optimización de rendimiento**, y **POO funcional** en JavaScript moderno.
 
+---
 
 ## Diseño orientado a responsabilidades
 
@@ -478,6 +489,7 @@ Un diseño orientado a objetos eficaz surge cuando las clases y objetos reflejan
 	```
 {% endraw %}
 
+---
 
 ## Pruebas unitarias y POO
 
@@ -516,6 +528,7 @@ La POO facilita la **testabilidad** al aislar responsabilidades.
 3. **Testeo de herencia y polimorfismo**
 	Cada subclase debe respetar las expectativas contractuales de su clase base.
 
+---
 
 ## Rendimiento y optimización en POO
 
@@ -540,6 +553,7 @@ La POO facilita la **testabilidad** al aislar responsabilidades.
 4. **Reutilización por composición**
 	Favorece el reuso de comportamientos sin duplicar código ni sobrecargar relaciones jerárquicas.
 
+---
 
 ## POO funcional
 
@@ -574,6 +588,7 @@ Busca objetos **inmutables**, métodos **puros**, y un flujo **predecible**.
 4. **Objetos como flujos de datos**
 	El objeto se convierte en una entidad procesada mediante funciones puras, facilitando la depuración y paralelización.
 
+---
 
 ## Metodologías y patrones arquitectónicos
 
@@ -607,6 +622,7 @@ Busca objetos **inmutables**, métodos **puros**, y un flujo **predecible**.
 	Usado en motores de videojuegos.  
 	Los objetos se definen como combinaciones de componentes reutilizables y sistemas que los procesan.
 
+---
 
 ## Reflexión sobre la evolución del paradigma
 
@@ -622,11 +638,12 @@ Busca objetos **inmutables**, métodos **puros**, y un flujo **predecible**.
 	- *Component-driven design*: centrado en unidades funcionales reutilizables.  
 	- *POO reactiva*: objetos que responden a flujos y eventos (ej. RxJS).
 
+---
 
 ## Referencias cruzadas
 
 - POO avanzada y patrones aplicados: principios SOLID, metaprogramación y ejemplos estructurales.  
-- [POO Programación Orientada a Objetos](/uncategorized/poo-programaci-n-orientada-a-objetos/): base conceptual y fundamentos del paradigma.  
+- [POO Programación Orientada a Objetos](/computer%20science/poo-programaci-n-orientada-a-objetos/): base conceptual y fundamentos del paradigma.  
 - poo mecanimos y aplicacion: ejemplos de encapsulación y aplicación práctica.  
 - 10-POO con clases: uso de clases, herencia y métodos modernos en ES6.  
 - 11-poo_prototipica: enfoque basado en prototipos y delegación.  
@@ -637,6 +654,7 @@ Busca objetos **inmutables**, métodos **puros**, y un flujo **predecible**.
 
 Esta nota extiende los principios de la POO aplicada: principios de diseño, pruebas y rendimiento hacia el **uso profesional en entornos reales**, abordando integración con otros paradigmas, patrones arquitectónicos modernos, y diseño evolutivo orientado al cambio continuo.
 
+---
 
 ## POO en sistemas distribuidos y arquitecturas modernas
 
@@ -670,6 +688,7 @@ class PedidoDTO {
 	Los **puertos** definen contratos, y los **adaptadores** implementan esos contratos.  
 	Este enfoque aplica directamente el principio de inversión de dependencias (DIP).
 
+---
 
 ## Persistencia y POO
 
@@ -686,6 +705,7 @@ class PedidoDTO {
 3. **Persistencia inmutable**  
 	En sistemas concurrentes, los objetos inmutables reducen conflictos y simplifican sincronización entre hilos o procesos.
 
+---
 
 ## Integración de POO con programación reactiva y asíncrona
 
@@ -732,6 +752,7 @@ temp.emitir(22);
 	- *Iterator / AsyncIterator* → lectura progresiva de datos.  
 	- *Mediator* → coordinación entre objetos asíncronos.
 
+---
 
 ## Diseño evolutivo y refactorización orientada a objetos
 
@@ -762,6 +783,7 @@ temp.emitir(22);
 3. **Deuda técnica y diseño adaptable**
 	El diseño orientado a objetos no debe ser rígido: las clases deben poder crecer o dividirse con facilidad sin romper el sistema.
 
+---
 
 ## POO y concurrencia
 
@@ -776,6 +798,7 @@ temp.emitir(22);
 3. **Sincronización de estado**
 	En sistemas distribuidos, los objetos pueden mantener consistencia eventual, aplicando versiones y eventos compensatorios.
 
+---
 
 ## POO en entornos de frontend y frameworks modernos
 
@@ -811,6 +834,7 @@ temp.emitir(22);
 	```
 {% endraw %}
 
+---
 
 ## POO en inteligencia artificial y simulaciones
 
@@ -824,12 +848,13 @@ temp.emitir(22);
 3. **Integración con aprendizaje automático**
 	Las clases pueden envolver modelos ML para mantener consistencia y reutilización del código, por ejemplo, en pipelines o procesamiento de datos.
 
+---
 
 ## Referencias cruzadas
 
 - POO aplicada: principios de diseño, pruebas y rendimiento: testeo, rendimiento y POO funcional.  
 - POO avanzada y patrones aplicados: principios SOLID, metaprogramación, y patrones estructurales.  
-- [POO Programación Orientada a Objetos](/uncategorized/poo-programaci-n-orientada-a-objetos/): fundamentos del paradigma orientado a objetos.  
+- [POO Programación Orientada a Objetos](/computer%20science/poo-programaci-n-orientada-a-objetos/): fundamentos del paradigma orientado a objetos.  
 - poo mecanimos y aplicacion: mecanismos y ejemplos concretos de uso.  
 - 10-POO con clases y 11-poo_prototipica: diferencias sintácticas y conceptuales en JavaScript.  
 - 01-POO intro y ES6: bases conceptuales y transición del modelo tradicional al moderno.
@@ -839,6 +864,7 @@ temp.emitir(22);
 
 Esta nota complementa la serie de POO en contextos reales y diseño evolutivo abarcando temas avanzados de **interoperabilidad entre lenguajes**, **seguridad orientada a objetos**, **metadiseño**, y la relación entre la POO y otros paradigmas modernos como la programación funcional, reactiva y declarativa.
 
+---
 
 ## Interoperabilidad y comunicación entre sistemas orientados a objetos
 
@@ -870,6 +896,7 @@ Esta nota complementa la serie de POO en contextos reales y diseño evolutivo ab
 3. **RPC orientado a objetos**
 	Patrones como *gRPC* usan clases y métodos remotos, conservando el enfoque orientado a objetos a través de la red.
 
+---
 
 ## Seguridad en la programación orientada a objetos
 
@@ -899,6 +926,7 @@ Esta nota complementa la serie de POO en contextos reales y diseño evolutivo ab
 	```
 {% endraw %}
 
+---
 
 ## Metadiseño y reflexión orientada a objetos
 
@@ -942,6 +970,7 @@ Esta nota complementa la serie de POO en contextos reales y diseño evolutivo ab
 	```
 {% endraw %}
 
+---
 
 ## Integración de la POO con paradigmas emergentes
 
@@ -962,6 +991,7 @@ Esta nota complementa la serie de POO en contextos reales y diseño evolutivo ab
 	Cada clase puede ser una unidad de emisión y reacción a eventos del sistema.  
 	Facilita el desacoplamiento entre módulos.
 
+---
 
 ## Adaptabilidad y evolución de modelos de objetos
 
@@ -981,6 +1011,7 @@ Esta nota complementa la serie de POO en contextos reales y diseño evolutivo ab
 4. **POO y modelos de conocimiento**
 	Se usa la POO para representar **ontologías** y **relaciones semánticas** (por ejemplo, en sistemas de razonamiento o gestión del conocimiento).
 
+---
 
 ## Buenas prácticas y filosofía de diseño orientado a objetos
 
@@ -997,6 +1028,7 @@ Esta nota complementa la serie de POO en contextos reales y diseño evolutivo ab
 4. **Patrón de diseño emergente**
 	No se fuerza un patrón desde el inicio; se deja que surja según las necesidades reales del dominio.
 
+---
 
 ## Ejemplo: sistema extensible basado en plugins
 
@@ -1038,13 +1070,14 @@ sistema.ejecutarTodos();
 
 Este ejemplo muestra un diseño **modular**, **extensible**, y **orientado a objetos**, donde el sistema puede crecer sin modificarse directamente.
 
+---
 
 ## Referencias cruzadas
 
 * POO en contextos reales y diseño evolutivo: microservicios, asincronía, concurrencia y diseño modular.
 * POO aplicada: principios de diseño, pruebas y rendimiento: POO funcional, rendimiento y pruebas unitarias.
 * POO avanzada y patrones aplicados: principios SOLID y patrones creacionales/estructurales.
-* [POO Programación Orientada a Objetos](/uncategorized/poo-programaci-n-orientada-a-objetos/): fundamentos conceptuales.
+* [POO Programación Orientada a Objetos](/computer%20science/poo-programaci-n-orientada-a-objetos/): fundamentos conceptuales.
 * poo mecanimos y aplicacion: ejemplos de encapsulación y composición.
 * 10-POO con clases y 11-poo_prototipica: herencia, delegación y clases modernas en ES6.
 * 01-POO intro y ES6: transición del modelo clásico al moderno en JavaScript.
@@ -1052,9 +1085,10 @@ Este ejemplo muestra un diseño **modular**, **extensible**, y **orientado a obj
 # POO en el ecosistema moderno y orientación arquitectónica
 
 
-Esta nota completa la serie de [POO Programación Orientada a Objetos](/uncategorized/poo-programaci-n-orientada-a-objetos/) abarcando su evolución en **arquitecturas modernas**, **lenguajes emergentes** y **nuevos contextos cognitivos e inteligentes**.  
+Esta nota completa la serie de [POO Programación Orientada a Objetos](/computer%20science/poo-programaci-n-orientada-a-objetos/) abarcando su evolución en **arquitecturas modernas**, **lenguajes emergentes** y **nuevos contextos cognitivos e inteligentes**.  
 El objetivo es entender cómo los principios clásicos de la orientación a objetos se adaptan al desarrollo contemporáneo, donde la modularidad, la escalabilidad y la expresividad del dominio son fundamentales.
 
+---
 
 ## POO y Arquitectura de Software
 
@@ -1113,6 +1147,7 @@ En este enfoque, los **objetos** no son simples estructuras de datos, sino **rep
 	- Contienen lógica que no pertenece a ninguna entidad en particular pero afecta al dominio.  
 	- Son funciones puras que operan sobre objetos.
 
+---
 
 ### Arquitectura Limpia y Hexagonal
 
@@ -1132,6 +1167,7 @@ La **POO moderna** se orienta a la separación de responsabilidades mediante **c
 
 > Este enfoque se apoya fuertemente en el principio **DIP (Dependency Inversion Principle)** de SOLID.
 
+---
 
 ## POO en Lenguajes Emergentes
 
@@ -1205,6 +1241,7 @@ impl Dibujable for Circulo {
 ```
 {% endraw %}
 
+---
 
 ## POO y Programación Cognitiva / Inteligente
 
@@ -1244,6 +1281,7 @@ En el contexto de IA, los objetos sirven como **unidades semánticas** que repre
    * Combinan estructuras simbólicas (reglas, clases) con aprendizaje estadístico.
    * Esta fusión se denomina **neuro-simbólica**, y la POO ofrece un marco natural para modelar ambos mundos.
 
+---
 
 ## POO hacia el futuro
 
@@ -1256,6 +1294,7 @@ La evolución de la orientación a objetos muestra una tendencia clara:
 
 La POO no ha desaparecido: ha mutado para servir como la **capa conceptual unificadora** que permite conectar paradigmas, representar dominios complejos y mantener coherencia semántica en sistemas distribuidos e inteligentes.
 
+---
 
 ## Referencias cruzadas
 
@@ -1270,9 +1309,10 @@ La POO no ha desaparecido: ha mutado para servir como la **capa conceptual unifi
 # Principios de diseño y buenas prácticas en POO
 
 
-Esta nota aborda los **principios fundamentales de diseño y buenas prácticas** en la [POO Programación Orientada a Objetos](/uncategorized/poo-programaci-n-orientada-a-objetos/), centrada en la creación de sistemas robustos, mantenibles y extensibles.  
+Esta nota aborda los **principios fundamentales de diseño y buenas prácticas** en la [POO Programación Orientada a Objetos](/computer%20science/poo-programaci-n-orientada-a-objetos/), centrada en la creación de sistemas robustos, mantenibles y extensibles.  
 Su objetivo es ofrecer una visión clara de cómo los principios teóricos (como SOLID o GRASP) se aplican en el diseño real de software orientado a objetos.
 
+---
 
 ## Principios SOLID
 
@@ -1299,6 +1339,7 @@ class ReportePDF {
 
 > Cada clase cumple una función clara: una genera datos, otra se encarga del formato.
 
+---
 
 ### 2. Open/Closed Principle (OCP)
 
@@ -1321,6 +1362,7 @@ class EnvioExpress extends Envio {
 
 > Nuevos comportamientos se añaden extendiendo la clase base.
 
+---
 
 ### 3. Liskov Substitution Principle (LSP)
 
@@ -1344,6 +1386,7 @@ class Pinguino extends Ave {
 > ❌ Viola LSP: el contrato del tipo base se rompe.
 > ✅ Solución: redefinir la jerarquía o usar interfaces más específicas.
 
+---
 
 ### 4. Interface Segregation Principle (ISP)
 
@@ -1368,6 +1411,7 @@ class Impresora implements Imprimible {
 ```
 {% endraw %}
 
+---
 
 ### 5. Dependency Inversion Principle (DIP)
 
@@ -1392,6 +1436,7 @@ email.enviar("Hola mundo");
 ```
 {% endraw %}
 
+---
 
 ## Principios GRASP
 
@@ -1426,6 +1471,7 @@ email.enviar("Hola mundo");
 9. **Protected Variations**
    Aísla partes del sistema susceptibles al cambio detrás de interfaces estables.
 
+---
 
 ## Buenas Prácticas de Diseño OO
 
@@ -1448,6 +1494,7 @@ class Coche {
 ```
 {% endraw %}
 
+---
 
 ### Composición sobre Herencia
 
@@ -1467,6 +1514,7 @@ class Ave {
 ```
 {% endraw %}
 
+---
 
 ### Encapsulación y Abstracción
 
@@ -1483,6 +1531,7 @@ class Cuenta {
 ```
 {% endraw %}
 
+---
 
 ### Inmutabilidad y Pureza
 
@@ -1501,6 +1550,7 @@ class Punto {
 ```
 {% endraw %}
 
+---
 
 ### Principio de Diseño por Contrato
 
@@ -1522,12 +1572,14 @@ class Rectangulo {
 ```
 {% endraw %}
 
+---
 
 ### Reutilización y Extensibilidad
 
 * Usa **patrones de diseño** para extender comportamiento sin duplicar código.
 * Aplica **interfaces y delegación** para aumentar flexibilidad.
 
+---
 
 ## Anti-patrones comunes
 
@@ -1539,6 +1591,7 @@ class Rectangulo {
 
 > La refactorización continua y el respeto a los principios SOLID ayudan a evitar estos errores.
 
+---
 
 ## Pruebas y Diseño Orientado a Objetos
 
@@ -1559,16 +1612,18 @@ test('suma dos números', () => {
 ```
 {% endraw %}
 
+---
 
 ## Conclusión
 
 Los principios de diseño OO no son reglas rígidas, sino **directrices evolutivas**.
 Aplicados correctamente, permiten que el software crezca en complejidad sin perder claridad, garantizando **modularidad, adaptabilidad y calidad técnica**.
 
+---
 
 ## Referencias cruzadas
 
-* [POO Programación Orientada a Objetos](/uncategorized/poo-programaci-n-orientada-a-objetos/)
+* [POO Programación Orientada a Objetos](/computer%20science/poo-programaci-n-orientada-a-objetos/)
 * POO avanzada y patrones aplicados
 * POO aplicada: principios de diseño, pruebas y rendimiento
 * poo mecanimos y aplicacion
@@ -1578,9 +1633,10 @@ Aplicados correctamente, permiten que el software crezca en complejidad sin perd
 # Glosario POO · Fundamentos y Conceptos Básicos
 
 
-Este glosario reúne los **términos esenciales** de la [POO Programación Orientada a Objetos](/uncategorized/poo-programaci-n-orientada-a-objetos/) (Programación Orientada a Objetos).  
+Este glosario reúne los **términos esenciales** de la [POO Programación Orientada a Objetos](/computer%20science/poo-programaci-n-orientada-a-objetos/) (Programación Orientada a Objetos).  
 Cada definición está optimizada para consulta rápida en Obsidian y enlazada con notas relacionadas cuando aplican.
 
+---
 
 ## Conceptos Fundamentales
 
@@ -1626,6 +1682,7 @@ Cada definición está optimizada para consulta rápida en Obsidian y enlazada c
 	Propiedad que permite distinguir un objeto de otro, aunque tengan los mismos valores.  
 	En JavaScript, se compara por referencia (`===`).
 
+---
 
 ## Mecanismos Clave de la POO
 
@@ -1680,6 +1737,7 @@ Cada definición está optimizada para consulta rápida en Obsidian y enlazada c
 	Una forma de agregación donde la clase contenedora gestiona completamente la vida de los objetos internos.  
 	Cuando el contenedor se destruye, los componentes también.
 
+---
 
 ## Elementos del Modelo de Objetos
 
@@ -1723,6 +1781,7 @@ Cada definición está optimizada para consulta rápida en Obsidian y enlazada c
 - **Clase final / sellada**  
 	Clase que no puede ser heredada. Protege la implementación de cambios.
 
+---
 
 ## Relaciones y Comunicación
 
@@ -1746,6 +1805,7 @@ Cada definición está optimizada para consulta rápida en Obsidian y enlazada c
 	Acuerdo formal que garantiza que las clases que lo implementen cumplan el mismo comportamiento.  
 	👉 Ver Diseño por contrato.
 
+---
 
 ## Tipos, Clases y Objetos
 
@@ -1767,6 +1827,7 @@ Cada definición está optimizada para consulta rápida en Obsidian y enlazada c
 - **Metaclase**  
 	Clase cuyos objetos son otras clases. Define cómo se comportan las clases mismas.
 
+---
 
 ## POO Clásica vs Prototípica
 
@@ -1783,6 +1844,7 @@ Cada definición está optimizada para consulta rápida en Obsidian y enlazada c
 	Mecanismo de herencia en JavaScript donde los objetos se enlazan en una cadena de prototipos.  
 	Permite reutilizar propiedades y métodos.
 
+---
 
 ## Conceptos de Diseño Relacionados
 
@@ -1802,10 +1864,11 @@ Cada definición está optimizada para consulta rápida en Obsidian y enlazada c
 	Propiedad de los objetos cuyos valores no pueden cambiar después de ser creados.  
 	Fundamental para Programación funcional y sistemas concurrentes.
 
+---
 
 ## Referencias cruzadas
 
-- [POO Programación Orientada a Objetos](/uncategorized/poo-programaci-n-orientada-a-objetos/)  
+- [POO Programación Orientada a Objetos](/computer%20science/poo-programaci-n-orientada-a-objetos/)  
 - 10-POO con clases  
 - 11-poo_prototipica  
 - 01-POO intro y ES6  
@@ -1816,8 +1879,9 @@ Cada definición está optimizada para consulta rápida en Obsidian y enlazada c
 # Glosario POO · Principios de Diseño y Buenas Prácticas
 
 
-Esta sección del glosario aborda los **principios de diseño orientado a objetos**, junto con **buenas prácticas**, **metodologías** y **conceptos de calidad del software** que guían el uso eficaz de la [POO Programación Orientada a Objetos](/uncategorized/poo-programaci-n-orientada-a-objetos/).
+Esta sección del glosario aborda los **principios de diseño orientado a objetos**, junto con **buenas prácticas**, **metodologías** y **conceptos de calidad del software** que guían el uso eficaz de la [POO Programación Orientada a Objetos](/computer%20science/poo-programaci-n-orientada-a-objetos/).
 
+---
 
 ## Principios Fundamentales de Diseño
 
@@ -1843,6 +1907,7 @@ Esta sección del glosario aborda los **principios de diseño orientado a objeto
 	Las clases deben depender de **abstracciones**, no de implementaciones concretas.  
 	👉 Base de la Inyección de dependencias y la arquitectura desacoplada.
 
+---
 
 ## Principios Complementarios y Derivados
 
@@ -1875,6 +1940,7 @@ Esta sección del glosario aborda los **principios de diseño orientado a objeto
 	Define **precondiciones**, **postcondiciones** e **invariantes** que las clases deben cumplir.  
 	👉 Mejora la fiabilidad y el control del comportamiento.
 
+---
 
 ## Buenas Prácticas de Modelado y Codificación
 
@@ -1925,6 +1991,7 @@ Esta sección del glosario aborda los **principios de diseño orientado a objeto
 	Una clase debe hacer una cosa, y hacerla bien.  
 	👉 Refuerza el SRP y facilita las pruebas unitarias.
 
+---
 
 ## Diseño Orientado a Interfaces
 
@@ -1951,6 +2018,7 @@ Esta sección del glosario aborda los **principios de diseño orientado a objeto
 	Establecen expectativas claras sobre los métodos que deben implementarse.  
 	Favorece la extensibilidad y la sustitución polimórfica.
 
+---
 
 ## Calidad, Mantenibilidad y Refactorización
 
@@ -1978,6 +2046,7 @@ Esta sección del glosario aborda los **principios de diseño orientado a objeto
 	SRP, OCP, LSP, ISP, DIP.  
 	👉 Base de la arquitectura orientada a objetos moderna.
 
+---
 
 ## Enfoques de Diseño
 
@@ -1988,12 +2057,13 @@ Esta sección del glosario aborda los **principios de diseño orientado a objeto
 - **Domain-Driven Design (DDD)**  
 	Diseño guiado por el dominio del problema.  
 	Usa objetos que reflejan conceptos reales del negocio.  
-	👉 Integra principios de [POO Programación Orientada a Objetos](/uncategorized/poo-programaci-n-orientada-a-objetos/) y Arquitectura hexagonal.
+	👉 Integra principios de [POO Programación Orientada a Objetos](/computer%20science/poo-programaci-n-orientada-a-objetos/) y Arquitectura hexagonal.
 
 - **Modelado UML (Unified Modeling Language)**  
 	Lenguaje visual para representar clases, relaciones y comportamientos del sistema.  
 	Uso común: diagramas de clases, secuencia y colaboración.
 
+---
 
 ## Evaluación de Diseño
 
@@ -2012,10 +2082,11 @@ Esta sección del glosario aborda los **principios de diseño orientado a objeto
 - **Escalabilidad**  
 	Capacidad del sistema para crecer en complejidad o carga sin perder eficiencia.
 
+---
 
 ## Referencias cruzadas
 
-- [POO Programación Orientada a Objetos](/uncategorized/poo-programaci-n-orientada-a-objetos/)  
+- [POO Programación Orientada a Objetos](/computer%20science/poo-programaci-n-orientada-a-objetos/)  
 - Glosario POO · Fundamentos y Conceptos Básicos  
 - Patrones de diseño y arquitectura orientada a objetos  
 - Principio SOLID  
@@ -2027,9 +2098,10 @@ Esta sección del glosario aborda los **principios de diseño orientado a objeto
 # Glosario POO · Patrones de Diseño y Arquitectura Orientada a Objetos
 
 
-Esta sección del glosario recoge los **principales patrones de diseño** en el contexto de la [POO Programación Orientada a Objetos](/uncategorized/poo-programaci-n-orientada-a-objetos/), así como los enfoques arquitectónicos que los sustentan.  
+Esta sección del glosario recoge los **principales patrones de diseño** en el contexto de la [POO Programación Orientada a Objetos](/computer%20science/poo-programaci-n-orientada-a-objetos/), así como los enfoques arquitectónicos que los sustentan.  
 Se agrupan según las categorías clásicas de la GoF (Gang of Four): **creacionales**, **estructurales** y **de comportamiento**, junto con patrones arquitectónicos modernos.
 
+---
 
 ## Patrones Creacionales
 
@@ -2065,6 +2137,7 @@ Se agrupan según las categorías clásicas de la GoF (Gang of Four): **creacion
 	Permite crear nuevos objetos copiando instancias existentes.  
 	👉 Base del modelo 11-poo_prototipica en JavaScript.
 
+---
 
 ## Patrones Estructurales
 
@@ -2119,6 +2192,7 @@ Se agrupan según las categorías clásicas de la GoF (Gang of Four): **creacion
 	Proporciona un sustituto o intermediario para controlar el acceso a un objeto.  
 	Usos comunes: control remoto, cache, lazy loading o validación.
 
+---
 
 ## Patrones de Comportamiento
 
@@ -2172,6 +2246,7 @@ Se agrupan según las categorías clásicas de la GoF (Gang of Four): **creacion
 	Define una gramática y un intérprete para evaluar expresiones en ese lenguaje.  
 	👉 Base conceptual de los lenguajes embebidos o DSLs.
 
+---
 
 ## Patrones Arquitectónicos Orientados a Objetos
 
@@ -2208,6 +2283,7 @@ Se agrupan según las categorías clásicas de la GoF (Gang of Four): **creacion
 	Arquitectura centrada en eventos. Los componentes reaccionan a cambios en lugar de llamar directamente.  
 	👉 Inspirada en el Observer y la programación reactiva.
 
+---
 
 ## Patrones Transversales y de Infraestructura
 
@@ -2233,6 +2309,7 @@ Se agrupan según las categorías clásicas de la GoF (Gang of Four): **creacion
 	Separa completamente los objetos de negocio de la lógica de persistencia.  
 	👉 Patrón más limpio pero más complejo que Active Record.
 
+---
 
 ## Principios Asociados a los Patrones
 
@@ -2250,10 +2327,11 @@ Se agrupan según las categorías clásicas de la GoF (Gang of Four): **creacion
 	Los patrones pueden combinarse o adaptarse según las necesidades:  
 	`MVC + Repository + Dependency Injection` es un ejemplo clásico.
 
+---
 
 ## Referencias cruzadas
 
-- [POO Programación Orientada a Objetos](/uncategorized/poo-programaci-n-orientada-a-objetos/)  
+- [POO Programación Orientada a Objetos](/computer%20science/poo-programaci-n-orientada-a-objetos/)  
 - Glosario POO · Fundamentos y Conceptos Básicos  
 - Glosario POO · Principios de Diseño y Buenas Prácticas  
 - Patrones GoF  
@@ -2267,9 +2345,10 @@ Se agrupan según las categorías clásicas de la GoF (Gang of Four): **creacion
 # Glosario POO · Paradigmas Relacionados y Extensiones Modernas
 
 
-Esta sección del glosario profundiza en los **paradigmas híbridos, extensiones modernas** y enfoques derivados de la [POO Programación Orientada a Objetos](/uncategorized/poo-programaci-n-orientada-a-objetos/).  
+Esta sección del glosario profundiza en los **paradigmas híbridos, extensiones modernas** y enfoques derivados de la [POO Programación Orientada a Objetos](/computer%20science/poo-programaci-n-orientada-a-objetos/).  
 Incluye la integración con la Programación funcional, la Programación reactiva, la Metaprogramación y las tendencias orientadas a datos, componentes y eventos.
 
+---
 
 ## Evolución del Paradigma Orientado a Objetos
 
@@ -2294,6 +2373,7 @@ Incluye la integración con la Programación funcional, la Programación reactiv
 	Centrada en flujos de datos y eventos como entidades observables.  
 	👉 Usa patrones como Observer o librerías como RxJS.
 
+---
 
 ## Paradigmas Híbridos y Complementarios
 
@@ -2325,6 +2405,7 @@ Incluye la integración con la Programación funcional, la Programación reactiv
 	El diseño se centra en los datos y su flujo, no en el comportamiento.  
 	👉 Usado en motores de videojuegos y sistemas de alto rendimiento.
 
+---
 
 ## Extensiones Avanzadas del Modelo OO
 
@@ -2378,6 +2459,7 @@ Incluye la integración con la Programación funcional, la Programación reactiv
 	Similares a los mixins, pero con mayor control sobre conflictos de métodos.  
 	👉 Implementados en lenguajes como PHP, Scala o Rust.
 
+---
 
 ## Conceptos Relacionados con el Diseño Moderno
 
@@ -2411,6 +2493,7 @@ Incluye la integración con la Programación funcional, la Programación reactiv
 	```
 {% endraw %}
 
+---
 
 ## Lenguajes y Ecosistemas Modernos Híbridos
 
@@ -2438,6 +2521,7 @@ Incluye la integración con la Programación funcional, la Programación reactiv
 	Incorpora LINQ, delegados, eventos y POO clásica.  
 	👉 Soporta [AOP Programación Orientada a Aspectos](/computer%20science/aop-programaci-n-orientada-a-aspectos/) y paradigmas reactivos.
 
+---
 
 ## Convergencias de Paradigmas
 
@@ -2457,10 +2541,11 @@ Incluye la integración con la Programación funcional, la Programación reactiv
 	Reemplaza herencia profunda por ensamblaje de comportamientos y funciones reutilizables.  
 	👉 Base de la programación modular moderna.
 
+---
 
 ## Referencias cruzadas
 
-- [POO Programación Orientada a Objetos](/uncategorized/poo-programaci-n-orientada-a-objetos/)  
+- [POO Programación Orientada a Objetos](/computer%20science/poo-programaci-n-orientada-a-objetos/)  
 - Glosario POO · Fundamentos y Conceptos Básicos  
 - Glosario POO · Principios de Diseño y Buenas Prácticas  
 - Glosario POO · Patrones de Diseño y Arquitectura Orientada a Objetos  
@@ -2476,8 +2561,9 @@ Incluye la integración con la Programación funcional, la Programación reactiv
 # Glosario POO · Aplicaciones Prácticas y Ejemplos
 
 
-Esta sección recopila los **principales contextos de aplicación de la [POO Programación Orientada a Objetos](/uncategorized/poo-programaci-n-orientada-a-objetos/)**, mostrando cómo sus conceptos, principios y patrones se materializan en sistemas reales, frameworks, arquitecturas y entornos de desarrollo.
+Esta sección recopila los **principales contextos de aplicación de la [POO Programación Orientada a Objetos](/computer%20science/poo-programaci-n-orientada-a-objetos/)**, mostrando cómo sus conceptos, principios y patrones se materializan en sistemas reales, frameworks, arquitecturas y entornos de desarrollo.
 
+---
 
 ## Modelado de Objetos y Dominios
 
@@ -2505,6 +2591,7 @@ Esta sección recopila los **principales contextos de aplicación de la [POO Pro
 	Abstracciones para gestionar el acceso a datos.  
 	👉 Aíslan la persistencia del modelo de dominio.
 
+---
 
 ## Aplicación en Arquitectura de Software
 
@@ -2532,6 +2619,7 @@ Esta sección recopila los **principales contextos de aplicación de la [POO Pro
 	Divide la aplicación en tres tipos de objetos: modelo, vista y controlador.  
 	👉 Patrón clásico en frameworks como Django, Spring, Laravel.
 
+---
 
 ## Ejemplos Prácticos de Aplicación
 
@@ -2559,6 +2647,7 @@ Esta sección recopila los **principales contextos de aplicación de la [POO Pro
 	En Android o iOS, las vistas y controladores son objetos.  
 	👉 La POO define la jerarquía de componentes visuales y su comportamiento.
 
+---
 
 ## Aplicación de Principios OO
 
@@ -2579,6 +2668,7 @@ Esta sección recopila los **principales contextos de aplicación de la [POO Pro
 	Define contratos (interfaces) sin exponer la implementación.  
 	👉 Permite sustituir componentes fácilmente.
 
+---
 
 ## POO en Patrones y Frameworks
 
@@ -2600,6 +2690,7 @@ Esta sección recopila los **principales contextos de aplicación de la [POO Pro
 - **POO en motores de juego**  
 	Las entidades del mundo son objetos con atributos (posición, energía) y métodos (mover, colisionar).
 
+---
 
 ## Testing y Calidad en POO
 
@@ -2619,6 +2710,7 @@ Esta sección recopila los **principales contextos de aplicación de la [POO Pro
 	Mejora del diseño interno sin cambiar el comportamiento externo.  
 	👉 Aplica principios [SOLID](/computer%20science/solid/) y patrones de diseño.
 
+---
 
 ## Aplicación en Bases de Datos y Persistencia
 
@@ -2633,6 +2725,7 @@ Esta sección recopila los **principales contextos de aplicación de la [POO Pro
 	Objetos simples usados para transferir datos entre capas o servicios.  
 	👉 Evitan exponer la lógica interna.
 
+---
 
 ## Integración con Ecosistemas Modernos
 
@@ -2649,10 +2742,11 @@ Esta sección recopila los **principales contextos de aplicación de la [POO Pro
 - **POO y DevOps**  
 	Automatización de despliegues mediante clases de infraestructura o plantillas (IaC orientado a objetos).
 
+---
 
 ## Referencias cruzadas
 
-- [POO Programación Orientada a Objetos](/uncategorized/poo-programaci-n-orientada-a-objetos/)  
+- [POO Programación Orientada a Objetos](/computer%20science/poo-programaci-n-orientada-a-objetos/)  
 - Glosario POO · Fundamentos y Conceptos Básicos  
 - Glosario POO · Principios de Diseño y Buenas Prácticas  
 - Glosario POO · Patrones de Diseño y Arquitectura Orientada a Objetos  
@@ -2669,8 +2763,9 @@ Esta sección recopila los **principales contextos de aplicación de la [POO Pro
 # Glosario POO · Lenguajes y Ecosistemas Modernos
 
 
-Esta sección resume cómo distintos lenguajes y ecosistemas modernos implementan, extienden o reinterpretan la [POO Programación Orientada a Objetos](/uncategorized/poo-programaci-n-orientada-a-objetos/), integrando paradigmas como el funcional, reactivo o declarativo.
+Esta sección resume cómo distintos lenguajes y ecosistemas modernos implementan, extienden o reinterpretan la [POO Programación Orientada a Objetos](/computer%20science/poo-programaci-n-orientada-a-objetos/), integrando paradigmas como el funcional, reactivo o declarativo.
 
+---
 
 ## Java
 
@@ -2682,6 +2777,7 @@ Esta sección resume cómo distintos lenguajes y ecosistemas modernos implementa
 	- Ecosistema: Spring, Hibernate, Jakarta EE.  
 	- Paradigmas: OO + funcional (desde Java 8 con lambdas y streams).
 
+---
 
 ## C#
 
@@ -2692,6 +2788,7 @@ Esta sección resume cómo distintos lenguajes y ecosistemas modernos implementa
 	- Ecosistema: .NET, ASP.NET Core, Unity.  
 	- Paradigmas: OO + funcional + reactivo.
 
+---
 
 ## Python
 
@@ -2703,6 +2800,7 @@ Esta sección resume cómo distintos lenguajes y ecosistemas modernos implementa
 	- Ecosistema: Django, Flask, FastAPI.  
 	- Paradigmas: OO + funcional + procedural.
 
+---
 
 ## JavaScript
 
@@ -2714,6 +2812,7 @@ Esta sección resume cómo distintos lenguajes y ecosistemas modernos implementa
 	- Ecosistema: Node.js, React, Vue, Angular.  
 	- Paradigmas: prototípico + funcional + declarativo.
 
+---
 
 ## TypeScript
 
@@ -2724,6 +2823,7 @@ Esta sección resume cómo distintos lenguajes y ecosistemas modernos implementa
 	- Ecosistema: Angular, NestJS, React con TypeScript.  
 	- Paradigmas: OO + tipado estático + funcional.
 
+---
 
 ## PHP
 
@@ -2734,6 +2834,7 @@ Esta sección resume cómo distintos lenguajes y ecosistemas modernos implementa
 	- Ecosistema: Laravel, Symfony.  
 	- Paradigmas: OO + procedural + funcional (parcial).
 
+---
 
 ## C++
 
@@ -2744,17 +2845,19 @@ Esta sección resume cómo distintos lenguajes y ecosistemas modernos implementa
 	- Ecosistema: Unreal Engine, Qt, sistemas embebidos.  
 	- Paradigmas: OO + procedural + genérico.
 
+---
 
 ## Kotlin
 
 - **Lenguaje moderno diseñado para mejorar Java.**  
 	👉 Enfocado en seguridad de tipos, inmutabilidad y expresividad.  
-	👉 Soporta [POO Programación Orientada a Objetos](/uncategorized/poo-programaci-n-orientada-a-objetos/) clásica, Programación funcional y Data Classes.  
+	👉 Soporta [POO Programación Orientada a Objetos](/computer%20science/poo-programaci-n-orientada-a-objetos/) clásica, Programación funcional y Data Classes.  
 	👉 Simplifica patrones como Singleton y Builder.  
 	👉 Nulos seguros (`?.`, `!!`).  
 	- Ecosistema: Android, Ktor, Spring Boot.  
 	- Paradigmas: OO + funcional + declarativo.
 
+---
 
 ## Swift
 
@@ -2765,6 +2868,7 @@ Esta sección resume cómo distintos lenguajes y ecosistemas modernos implementa
 	- Ecosistema: iOS, macOS, SwiftUI.  
 	- Paradigmas: OO + funcional + declarativo.
 
+---
 
 ## Ruby
 
@@ -2775,6 +2879,7 @@ Esta sección resume cómo distintos lenguajes y ecosistemas modernos implementa
 	- Ecosistema: Ruby on Rails.  
 	- Paradigmas: OO + meta + dinámico.
 
+---
 
 ## Rust
 
@@ -2785,6 +2890,7 @@ Esta sección resume cómo distintos lenguajes y ecosistemas modernos implementa
 	- Ecosistema: sistemas, CLI, WASM.  
 	- Paradigmas: funcional + orientado a datos + orientado a traits.
 
+---
 
 ## Go (Golang)
 
@@ -2795,6 +2901,7 @@ Esta sección resume cómo distintos lenguajes y ecosistemas modernos implementa
 	- Ecosistema: microservicios, sistemas concurrentes.  
 	- Paradigmas: estructurado + composicional.
 
+---
 
 ## Scala
 
@@ -2805,6 +2912,7 @@ Esta sección resume cómo distintos lenguajes y ecosistemas modernos implementa
 	- Ecosistema: Apache Spark, Akka.  
 	- Paradigmas: OO + funcional + reactivo.
 
+---
 
 ## Dart
 
@@ -2815,6 +2923,7 @@ Esta sección resume cómo distintos lenguajes y ecosistemas modernos implementa
 	- Ecosistema: Flutter.  
 	- Paradigmas: OO + declarativo + reactivo.
 
+---
 
 ## Otros Ecosistemas
 
@@ -2830,12 +2939,13 @@ Esta sección resume cómo distintos lenguajes y ecosistemas modernos implementa
 	👉 Todo es un objeto, incluidos los mensajes y clases.
 
 - **Objective-C**  
-	👉 Predecesor de Swift, combina C con [POO Programación Orientada a Objetos](/uncategorized/poo-programaci-n-orientada-a-objetos/) mediante mensajes y Delegación.
+	👉 Predecesor de Swift, combina C con [POO Programación Orientada a Objetos](/computer%20science/poo-programaci-n-orientada-a-objetos/) mediante mensajes y Delegación.
 
+---
 
 ## Referencias cruzadas
 
-- [POO Programación Orientada a Objetos](/uncategorized/poo-programaci-n-orientada-a-objetos/)  
+- [POO Programación Orientada a Objetos](/computer%20science/poo-programaci-n-orientada-a-objetos/)  
 - Glosario POO · Fundamentos y Conceptos Básicos  
 - Glosario POO · Principios de Diseño y Buenas Prácticas  
 - Glosario POO · Patrones de Diseño y Arquitectura Orientada a Objetos  
@@ -2850,6 +2960,7 @@ Esta sección resume cómo distintos lenguajes y ecosistemas modernos implementa
 
 # Glosario POO · Síntesis de Modelos, Comparativas y Anti-Patrones
 
+---
 
 ## Modelos de diseño orientado a objetos
 
@@ -2869,9 +2980,10 @@ Favorece la independencia, el principio de composición sobre herencia y la modu
 Usado en arquitecturas modernas (e.g., Unity, React).
 
 ### Modelo orientado a datos
-Integra la [POO Programación Orientada a Objetos](/uncategorized/poo-programaci-n-orientada-a-objetos/) con el paradigma declarativo para manipular estructuras de datos inmutables.  
+Integra la [POO Programación Orientada a Objetos](/computer%20science/poo-programaci-n-orientada-a-objetos/) con el paradigma declarativo para manipular estructuras de datos inmutables.  
 Frecuente en lenguajes híbridos como [Scala](/data%20science/scala/), Kotlin y [Rust](/desarrollo%20multiplataforma/rust/).
 
+---
 
 ## Comparativas entre enfoques
 
@@ -2886,7 +2998,7 @@ Frecuente en lenguajes híbridos como [Scala](/data%20science/scala/), Kotlin y 
 → Véase Polimorfismo y Abstracción.
 
 ### Orientación a objetos vs funcional
-- [POO Programación Orientada a Objetos](/uncategorized/poo-programaci-n-orientada-a-objetos/) enfatiza el **estado mutable** y la **interacción entre objetos**.  
+- [POO Programación Orientada a Objetos](/computer%20science/poo-programaci-n-orientada-a-objetos/) enfatiza el **estado mutable** y la **interacción entre objetos**.  
 - Programación funcional prioriza **inmutabilidad** y **funciones puras**.  
 Modelos híbridos combinan ambos paradigmas (ej. [Scala](/data%20science/scala/), Kotlin).
 
@@ -2895,6 +3007,7 @@ Modelos híbridos combinan ambos paradigmas (ej. [Scala](/data%20science/scala/)
 - **Prototipos**: los objetos heredan directamente unos de otros.  
 → Véase 11-poo_prototipica.
 
+---
 
 ## Anti-patrones comunes en POO
 
@@ -2918,14 +3031,16 @@ Contrario a los principios [SOLID](/computer%20science/solid/) y Inversión de D
 Clases o interfaces que no aportan valor real al diseño.  
 Generan complejidad accidental y disminuyen la claridad.
 
+---
 
 ## Síntesis conceptual
 
-- La [POO Programación Orientada a Objetos](/uncategorized/poo-programaci-n-orientada-a-objetos/) moderna tiende a la **composición**, **inmutabilidad controlada** y **modularidad funcional**.  
+- La [POO Programación Orientada a Objetos](/computer%20science/poo-programaci-n-orientada-a-objetos/) moderna tiende a la **composición**, **inmutabilidad controlada** y **modularidad funcional**.  
 - Los principios de diseño y los [Patrones de diseño](/computer%20science/patrones-de-dise-o/) son guías, no reglas rígidas.  
-- Los modelos híbridos entre [POO Programación Orientada a Objetos](/uncategorized/poo-programaci-n-orientada-a-objetos/) y funcional reflejan la evolución del software hacia la **claridad, testabilidad y bajo acoplamiento**.  
+- Los modelos híbridos entre [POO Programación Orientada a Objetos](/computer%20science/poo-programaci-n-orientada-a-objetos/) y funcional reflejan la evolución del software hacia la **claridad, testabilidad y bajo acoplamiento**.  
 - Evitar los anti-patrones y priorizar la responsabilidad única y la abstracción correcta mantiene la escalabilidad del sistema.
 
+---
 
 ## Véase también
 - Principios de diseño y buenas prácticas POO  
