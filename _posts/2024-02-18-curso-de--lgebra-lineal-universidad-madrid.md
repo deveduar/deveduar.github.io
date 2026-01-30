@@ -1,16 +1,15 @@
----
-date: 2024-02-18 16:14
-title: Curso de Álgebra Lineal universidad madrid
 Hecho: false
+tags:
+  - Mates
+creation date: 2024-02-18 16:14
 keywords:
 source:
 status: 🌟
-Parent: "[[Area-IA]]"
+Parent: "Area-IA"
+cssclasses:
+  - hide-embedded-header1
+categories: "[mates](/uncategorized/mates/)"
 public_note: "true"
-category: mates
-tags:
-  - Mates
----
 # Curso de Álgebra Lineal universidad madrid
 
 - [http://ocw.uc3m.es/matematicas/algebra-lineal/presentacion-del-curso](http://ocw.uc3m.es/matematicas/algebra-lineal/presentacion-del-curso)
@@ -34,7 +33,6 @@ El curso tiene como finalidad desarrollar tanto conocimientos teóricos como hab
 - Modelizar situaciones reales descritas en palabras mediante conceptos matemáticos.  
 - Interpretar la solución matemática de un problema, evaluando su **fiabilidad** y **limitaciones**.
 
----
 
 ## Programa del Curso
 
@@ -870,7 +868,6 @@ Las **transformaciones lineales** y las **matrices** están íntimamente relacio
 Toda transformación lineal entre espacios vectoriales de dimensión finita puede representarse mediante una matriz, y toda matriz define una transformación lineal.  
 Esta relación permite traducir problemas algebraicos en problemas matriciales y viceversa, lo cual es fundamental en el [Cálculo numérico](/mates/c-lculo-num-rico/) y el álgebra lineal computacional.
 
----
 
 ### Correspondencia entre transformaciones y matrices
 
@@ -904,7 +901,6 @@ $$
 T(\mathbf{x}) = A\mathbf{x}
 $$
 
----
 
 ### Interpretación geométrica
 
@@ -943,7 +939,6 @@ Ejemplos:
    \end{bmatrix}
    $$
 
----
 
 ### Matriz asociada en distintas bases
 
@@ -967,7 +962,6 @@ $$
 [T(\mathbf{x})]_{\mathcal{B}_W} = [T]_{\mathcal{B}_W, \mathcal{B}_V} [\mathbf{x}]_{\mathcal{B}_V}
 $$
 
----
 
 ### Cambio de base y semejanza matricial
 
@@ -987,7 +981,6 @@ $$
 
 Esto significa que ambas representan la **misma transformación lineal** pero en **bases diferentes**.
 
----
 
 ### Composición y producto matricial
 
@@ -1011,7 +1004,6 @@ $$
 
 La **composición de transformaciones** corresponde al **producto de matrices**, preservando el orden.
 
----
 
 ### Núcleo e imagen a través de la matriz
 
@@ -1034,7 +1026,6 @@ Dada $T(\mathbf{x}) = A\mathbf{x}$:
 
 Este es el **teorema del rango y la nulidad**, que vincula las propiedades estructurales de la transformación con las de su matriz.
 
----
 
 ### Inversa de una transformación lineal
 
@@ -1056,7 +1047,6 @@ $$
 T^{-1}(\mathbf{x}) = A^{-1}\mathbf{x}
 $$
 
----
 
 ### Transformaciones diagonales y autovalores
 
@@ -1072,7 +1062,6 @@ donde:
 
 Esto permite interpretar $T$ como un escalado independiente en cada dirección propia.
 
----
 
 ### Resumen conceptual
 
@@ -1086,7 +1075,6 @@ Esto permite interpretar $T$ como un escalado independiente en cada dirección p
 | Inversa | $T^{-1}$ | $A^{-1}$ |
 | Cambio de base | $P^{-1} A P$ | Matrices semejantes |
 
----
 
 ### Aplicaciones
 
@@ -1103,7 +1091,6 @@ Su objetivo es expresar la transformación de la manera **más sencilla posible*
 
 Esta forma permite analizar la naturaleza de la transformación y facilita el cálculo de potencias, inversas, exponentiales y otras operaciones matriciales.
 
----
 
 ### Idea general
 
@@ -1116,7 +1103,6 @@ $$
 donde $P$ es la matriz de cambio de base.  
 Encontrar una **forma normal** consiste en hallar una base que transforme la matriz de $T$ en una forma canónica más simple, como **diagonal**, **triangular**, o **canónica de Jordan**.
 
----
 
 ### Tipos principales de formas normales
 
@@ -1145,7 +1131,6 @@ $$
 T(\mathbf{v}_i) = \lambda_i \mathbf{v}_i
 $$
 
----
 
 #### 2. Forma triangular superior (Forma de Schur o de Jordan)
 
@@ -1192,7 +1177,6 @@ $$
 
 Cada bloque representa un **subespacio generalizado** donde $T$ no puede diagonalizarse pero sigue teniendo una estructura repetitiva.
 
----
 
 ### 3. Forma canónica por semejanza
 
@@ -1205,7 +1189,6 @@ $$
 Ambas representan la **misma transformación lineal** en diferentes bases.  
 La **forma normal** busca un representante canónico dentro de esta clase de semejanza.
 
----
 
 ### 4. Forma canónica racional (o de Frobenius)
 
@@ -1226,7 +1209,6 @@ $$
 
 donde cada $C(p_i(x))$ es la **matriz compañera** de un polinomio invariante $p_i(x)$.
 
----
 
 ### Propiedades conservadas en la forma normal
 
@@ -1242,7 +1224,6 @@ Al aplicar un cambio de base, ciertas propiedades fundamentales de la transforma
 
 Por eso, la forma normal permite estudiar $T$ sin alterar su comportamiento esencial.
 
----
 
 ### Resumen comparativo
 
@@ -1253,7 +1234,6 @@ Por eso, la forma normal permite estudiar $T$ sin alterar su comportamiento esen
 | **Jordan**               | Siempre posible (sobre $\mathbb{C}$) | Bloques Jordan           | $\mathbb{C}$                |
 | **Racional (Frobenius)** | Siempre posible                      | Bloques compañera        | Cualquier cuerpo            |
 
----
 
 ### Interpretación geométrica
 
@@ -1261,7 +1241,6 @@ Por eso, la forma normal permite estudiar $T$ sin alterar su comportamiento esen
 - La **forma de Jordan** muestra cómo la transformación **mezcla** o **acopla** subespacios que comparten autovalores.  
 - La **forma racional** codifica el comportamiento algebraico mediante polinomios, sin necesidad de autovectores reales.
 
----
 
 ### Aplicaciones
 
@@ -1276,7 +1255,6 @@ Por eso, la forma normal permite estudiar $T$ sin alterar su comportamiento esen
 Los **valores propios** (o **autovalores**) y **vectores propios** (o **autovectores**) son conceptos fundamentales en el estudio de las transformaciones lineales y las matrices.  
 Permiten comprender cómo una transformación actúa sobre ciertas direcciones del espacio que permanecen invariantes, excepto por un factor de escala.
 
----
 
 ### Definición
 
@@ -1295,7 +1273,6 @@ $$
 
 Esto significa que la acción de $A$ sobre $\mathbf{v}$ **no cambia su dirección**, solo su magnitud (escalada por $\lambda$).
 
----
 
 ### Ecuación característica
 
@@ -1313,7 +1290,6 @@ $$
 
 Esta ecuación se denomina **ecuación característica**, y su solución en $\lambda$ proporciona los **valores propios** de $A$.
 
----
 
 ### Polinomio característico
 
@@ -1346,7 +1322,6 @@ p_A(\lambda) = \det
 $$
 y sus autovalores son $\lambda_1 = 3$, $\lambda_2 = 1$.
 
----
 
 ### Cálculo de los vectores propios
 
@@ -1368,7 +1343,6 @@ $$
 \dim(E_\lambda) = \text{multiplicidad geométrica de } \lambda
 $$
 
----
 
 ### Multiplicidades
 
@@ -1385,7 +1359,6 @@ $$
 m_g = m_a
 $$
 
----
 
 ### Propiedades fundamentales
 
@@ -1403,7 +1376,6 @@ $$
 
 4. Si $A$ es **simétrica**, todos sus autovalores son **reales** y los autovectores correspondientes pueden elegirse **ortonormales**.
 
----
 
 ### Diagonalización
 
@@ -1432,7 +1404,6 @@ $$
 **Interpretación:**  
 Cada autovector $\mathbf{v}_i$ es una dirección en la que la transformación $A$ actúa como una **escala** $\lambda_i$.
 
----
 
 ### Autovalores y autovectores complejos
 
@@ -1440,7 +1411,6 @@ Aunque $A$ tenga entradas reales, sus autovalores pueden ser **complejos**.
 Por ejemplo, una rotación en el plano tiene autovalores $e^{\pm i\theta}$.  
 En estos casos, el análisis se realiza en $\mathbb{C}^n$.
 
----
 
 ### Ejemplo numérico
 
@@ -1507,7 +1477,6 @@ $$
    A = P D P^{-1}
    $$
 
----
 
 ### Interpretación geométrica
 
@@ -1519,7 +1488,6 @@ Los **autovalores** indican cuánto se **escala** o **invierte** esa dirección.
 - Si $\lambda < 0$: el vector invierte su dirección.  
 - Si $|\lambda| = 1$: el vector conserva su magnitud (rotación o reflexión).
 
----
 
 ### Aplicaciones
 
@@ -1535,7 +1503,6 @@ Los **autovalores** indican cuánto se **escala** o **invierte** esa dirección.
 El **producto interno** es una herramienta que extiende el concepto de **multiplicación escalar** y **ángulo** entre vectores a espacios vectoriales más generales.  
 Permite definir nociones de **longitud**, **ángulo**, **proyección** y **ortogonalidad**, fundamentales en el análisis de espacios vectoriales, transformaciones lineales y álgebra lineal aplicada.
 
----
 
 ### Definición de producto interno
 
@@ -1563,7 +1530,6 @@ que cumple, para todo $\mathbf{u}, \mathbf{v}, \mathbf{w} \in V$ y $\alpha \in \
    \langle \mathbf{v}, \mathbf{v} \rangle \ge 0 \quad \text{y} \quad \langle \mathbf{v}, \mathbf{v} \rangle = 0 \iff \mathbf{v} = \mathbf{0}
    $$
 
----
 
 ### Ejemplo en $\mathbb{R}^n$
 
@@ -1578,7 +1544,6 @@ $$
 \langle (x_1, y_1), (x_2, y_2) \rangle = x_1x_2 + y_1y_2
 $$
 
----
 
 ### Norma inducida por el producto interno
 
@@ -1590,7 +1555,6 @@ $$
 
 que representa la **longitud** o **magnitud** del vector $\mathbf{v}$.
 
----
 
 ### Ángulo entre vectores
 
@@ -1606,7 +1570,6 @@ $$
 \langle \mathbf{u}, \mathbf{v} \rangle = \|\mathbf{u}\| \, \|\mathbf{v}\| \cos(\theta)
 $$
 
----
 
 ### Ortogonalidad
 
@@ -1622,7 +1585,6 @@ Un conjunto de vectores $\{\mathbf{v}_1, \mathbf{v}_2, \dots, \mathbf{v}_k\}$ es
 - **Ortogonal** si $\langle \mathbf{v}_i, \mathbf{v}_j \rangle = 0$ para todo $i \neq j$.
 - **Ortonormal** si además cada vector tiene norma 1.
 
----
 
 ### Propiedades de la ortogonalidad
 
@@ -1636,7 +1598,6 @@ Un conjunto de vectores $\{\mathbf{v}_1, \mathbf{v}_2, \dots, \mathbf{v}_k\}$ es
 
 3. En $\mathbb{R}^n$, cualquier conjunto ortogonal puede ser normalizado para formar una **base ortonormal**.
 
----
 
 ### Proyección ortogonal
 
@@ -1658,7 +1619,6 @@ $$
 \langle \mathbf{v}_\perp, \mathbf{u} \rangle = 0
 $$
 
----
 
 ### Ortogonalización de Gram-Schmidt
 
@@ -1675,7 +1635,6 @@ Dado un conjunto linealmente independiente $\{\mathbf{v}_1, \mathbf{v}_2, \dots,
 
 El conjunto $\{\mathbf{u}_i\}$ es una **base ortonormal** del subespacio generado por $\{\mathbf{v}_i\}$.
 
----
 
 ### Subespacios ortogonales
 
@@ -1698,7 +1657,6 @@ Propiedades:
    \operatorname{proj}_W(\mathbf{v}) = \sum_{i=1}^{k} \langle \mathbf{v}, \mathbf{u}_i \rangle \mathbf{u}_i
    $$
 
----
 
 ### Matrices ortogonales
 
@@ -1717,7 +1675,6 @@ Propiedades:
   \|Q\mathbf{v}\| = \|\mathbf{v}\|, \quad \langle Q\mathbf{u}, Q\mathbf{v} \rangle = \langle \mathbf{u}, \mathbf{v} \rangle
   $$
 
----
 
 ### Aplicaciones
 
@@ -1733,7 +1690,6 @@ Una **base ortogonal** en un espacio vectorial real con producto interno es un c
 Si además cada vector tiene norma unitaria, se denomina **base ortonormal**.  
 Estas bases simplifican enormemente los cálculos y son esenciales en álgebra lineal, análisis numérico y geometría vectorial.
 
----
 
 ### Definición
 
@@ -1752,7 +1708,6 @@ $$
 $$
 entonces $B$ es una **base ortonormal**.
 
----
 
 ### Propiedades fundamentales
 
@@ -1778,7 +1733,6 @@ entonces $B$ es una **base ortonormal**.
    \|\mathbf{x}\|^2 = \sum_{i=1}^n |c_i|^2
    $$
 
----
 
 ### Construcción de una base ortogonal
 
@@ -1799,7 +1753,6 @@ $$
 $$
 se obtiene una **base ortonormal**.
 
----
 
 ### Ejemplo
 
@@ -1844,7 +1797,6 @@ $$
 B = \left\{ \frac{1}{\sqrt{2&#125;&#125;(1, 1, 0), \, \frac{1}{\sqrt{6&#125;&#125;(1, -1, 2) \right\}
 $$
 
----
 
 ### Ventajas del uso de bases ortogonales
 
@@ -1854,7 +1806,6 @@ $$
 - Permiten representar subespacios mediante **proyecciones ortogonales**.  
 - Son base para algoritmos como la Descomposición QR o la Transformada de Fourier.
 
----
 
 ### Propiedades adicionales
 
@@ -1872,7 +1823,6 @@ $$
 
 3. Toda **rotación** o **reflexión** en $\mathbb{R}^n$ puede representarse como una transformación lineal cuya matriz es ortogonal respecto a la base canónica.
 
----
 
 ### Aplicaciones
 
@@ -1887,7 +1837,6 @@ $$
 El **teorema espectral** es uno de los resultados más importantes del álgebra lineal y del estudio de las transformaciones lineales y matrices simétricas en espacios vectoriales reales con producto interno.  
 Establece que **toda matriz simétrica real es diagonalizable mediante una matriz ortogonal**, lo que implica que sus autovalores son reales y sus autovectores pueden elegirse ortogonales.
 
----
 
 ### Enunciado del teorema espectral
 
@@ -1913,7 +1862,6 @@ donde:
 - Las **columnas de $Q$** son **autovectores ortonormales** de $A$.  
 - Los **elementos de la diagonal de $D$** son los **autovalores reales** de $A$.
 
----
 
 ### Consecuencias directas
 
@@ -1932,7 +1880,6 @@ donde:
 3. **Existe una base ortonormal de autovectores** de $\mathbb{R}^n$.  
    Esto permite expresar $A$ como una combinación simple de proyecciones ortogonales.
 
----
 
 ### Interpretación geométrica
 
@@ -1944,7 +1891,6 @@ El teorema espectral indica que toda transformación lineal simétrica en $\math
 
 En otras palabras, $A$ actúa como una “**dilatación direccional**”: cada autovector se estira o comprime por su autovalor correspondiente.
 
----
 
 ### Forma diagonal de una matriz simétrica
 
@@ -1962,7 +1908,6 @@ $$
 A\mathbf{q}_i = \lambda_i \mathbf{q}_i, \quad \langle \mathbf{q}_i, \mathbf{q}_j \rangle = \delta_{ij}
 $$
 
----
 
 ### Descomposición espectral
 
@@ -1976,7 +1921,6 @@ donde $\mathbf{q}_i \mathbf{q}_i^T$ es la **proyección ortogonal** sobre el sub
 
 Esta forma muestra explícitamente cómo $A$ actúa escalando cada dirección propia por su autovalor.
 
----
 
 ### Ejemplo
 
@@ -2026,7 +1970,6 @@ $$
    A = Q D Q^T
    $$
 
----
 
 ### Generalización a subespacios y operadores
 
@@ -2043,7 +1986,6 @@ T = \sum_{i=1}^{n} \lambda_i \, P_{E_{\lambda_i&#125;&#125;
 $$
 donde $P_{E_{\lambda_i&#125;&#125;$ es la proyección ortogonal sobre el espacio propio asociado al autovalor $\lambda_i$.
 
----
 
 ### Propiedades adicionales
 
@@ -2061,7 +2003,6 @@ donde $P_{E_{\lambda_i&#125;&#125;$ es la proyección ortogonal sobre el espacio
 
 3. Si $A$ es una matriz de **covarianza**, su descomposición espectral conduce al análisis de **componentes principales (PCA)**.
 
----
 
 ### Aplicaciones
 
@@ -2083,7 +2024,6 @@ $$
 
 Esta representación nos permite entender cómo la transformación **modifica la geometría** del espacio: distancias, direcciones, áreas, volúmenes y ángulos.
 
----
 
 ### Transformaciones elementales en ℝ² y ℝ³
 
@@ -2110,7 +2050,6 @@ A =
 $$
 duplica todas las longitudes.
 
----
 
 #### 2. **Reflexión**
 Refleja los puntos respecto a un eje, plano o hipersuperficie.
@@ -2128,7 +2067,6 @@ $$
 - Geométricamente: cambia el signo de la coordenada $y$.  
 - Preserva distancias y ángulos (es una **isometría**).
 
----
 
 #### 3. **Rotación**
 Gira el espacio en torno al origen sin modificar distancias.
@@ -2148,7 +2086,6 @@ $$
 
 En $\mathbb{R}^3$, las rotaciones se representan respecto a un eje (por ejemplo, usando matrices de rotación o cuaterniones).
 
----
 
 #### 4. **Cizalla (shear)**
 Desplaza una dirección proporcionalmente a otra, deformando el espacio sin cambiar áreas (si $\det(A) = 1$).
@@ -2166,7 +2103,6 @@ $$
 - Las líneas horizontales se mantienen, pero las verticales se inclinan.  
 - Ángulos y longitudes no se conservan.
 
----
 
 #### 5. **Proyección**
 Reduce la dimensión del espacio proyectando sobre un subespacio.
@@ -2184,7 +2120,6 @@ $$
 - Es **idempotente**: $A^2 = A$.  
 - Reduce la norma (a menos que el vector ya esté en el subespacio).
 
----
 
 ### Interpretación general en términos de autovalores y autovectores
 
@@ -2208,7 +2143,6 @@ Geometría según el valor de $\lambda_i$:
 | $\lambda = 0$ | Proyección sobre un subespacio |
 | $\lambda < 0$ | Reflexión y posible inversión de orientación |
 
----
 
 ### Caso particular: transformaciones simétricas
 
@@ -2226,7 +2160,6 @@ $$
 
 donde $D$ contiene los autovalores (escalas) y $Q$ las direcciones ortogonales.
 
----
 
 ### Determinante y orientación
 
@@ -2240,7 +2173,6 @@ Ejemplo:
 - Si $\det(A) = 2$, el área se duplica.  
 - Si $\det(A) = -1$, el espacio se refleja.
 
----
 
 ### Núcleo e imagen: efectos geométricos
 
@@ -2255,7 +2187,6 @@ $$
 \dim(\ker(A)) + \dim(\text{Im}(A)) = n
 $$
 
----
 
 ### Transformaciones ortogonales
 
@@ -2272,7 +2203,6 @@ $$
 Por tanto, las transformaciones ortogonales son **isometrías**:  
 preservan longitudes y ángulos (rotaciones, reflexiones, simetrías).
 
----
 
 ### Interpretación en términos de deformación
 
@@ -2294,7 +2224,6 @@ Esta descomposición se conoce como la **Descomposición en Valores Singulares (
 
 Geométricamente, cualquier elipse o elipsoide generado por $A$ proviene de aplicar $A$ a una esfera o círculo unidad.
 
----
 
 ### Ejemplo geométrico completo
 
@@ -2321,7 +2250,6 @@ $$
    - La dirección $(1,-1)$ **se mantiene** (factor 1).
    - La figura resultante de transformar un círculo es una **elipse** con ejes principales alineados con los autovectores.
 
----
 
 ### Conceptos relacionados
 
@@ -2350,7 +2278,6 @@ $$
 \min_{\mathbf{x&#125;&#125; \|A\mathbf{x} - \mathbf{b}\|_2^2
 $$
 
----
 
 ### Interpretación geométrica
 
@@ -2364,7 +2291,6 @@ $$
 
 Esto significa que el error mínimo es **ortogonal al espacio generado por las columnas de $A$**.
 
----
 
 ### Ecuaciones normales
 
@@ -2382,7 +2308,6 @@ $$
 
 Esta expresión define la **solución de mínimos cuadrados ordinarios (OLS)**.
 
----
 
 ### Interpretación matricial
 
@@ -2405,7 +2330,6 @@ $$
 \hat{\mathbf{b&#125;&#125; = A\mathbf{x}^* = A A^+ \mathbf{b}
 $$
 
----
 
 ### Propiedades geométricas
 
@@ -2422,7 +2346,6 @@ $$
    P^2 = P, \quad P^T = P
    $$
 
----
 
 ### Condiciones de unicidad
 
@@ -2433,7 +2356,6 @@ $$
   \mathbf{x}^* = \arg\min_{\mathbf{x&#125;&#125; \| \mathbf{x} \|_2 \quad \text{sujeto a} \quad \min_{\mathbf{x&#125;&#125; \|A\mathbf{x} - \mathbf{b}\|_2
   $$
 
----
 
 ### Formulación general en espacios vectoriales
 
@@ -2449,7 +2371,6 @@ $$
 \langle \mathbf{u}, \mathbf{v} \rangle = \mathbf{u}^T \mathbf{v}
 $$
 
----
 
 ### Solución numérica eficiente
 
@@ -2483,7 +2404,6 @@ $$
 donde $\Sigma^+$ es la pseudoinversa de $\Sigma$.  
 Este método es el más **robusto numéricamente** y permite manejar casos donde $A$ no tiene rango completo.
 
----
 
 ### Error cuadrático mínimo
 
@@ -2495,7 +2415,6 @@ $$
 
 La norma del error depende de cuán bien el subespacio generado por las columnas de $A$ aproxima al vector $\mathbf{b}$.
 
----
 
 ### Aplicaciones
 
@@ -2505,7 +2424,6 @@ La norma del error depende de cuán bien el subespacio generado por las columnas
 - **Reducción de ruido y compresión** en análisis de datos.  
 - **Método de estimación estadística** por mínimos cuadrados ordinarios (OLS).
 
----
 
 ### Ejemplo práctico
 
@@ -2574,7 +2492,6 @@ $$
 
 Por tanto, la solución de mínimos cuadrados es $x = 1, y = 1$.
 
----
 
 ### Conceptos relacionados
 
@@ -2590,7 +2507,6 @@ Por tanto, la solución de mínimos cuadrados es $x = 1, y = 1$.
 
 La **pseudoinversa** y la **descomposición en valores singulares (SVD)** son herramientas fundamentales en álgebra lineal y [Cálculo numérico](/mates/c-lculo-num-rico/) para resolver sistemas lineales, analizar transformaciones lineales y estudiar la estructura de matrices, especialmente cuando son **rectangulares** o **singulares**.
 
----
 
 ### Pseudoinversa de Moore-Penrose
 
@@ -2624,7 +2540,6 @@ $$
 A^+ = A^T (A A^T)^{-1}
 $$
 
----
 
 ### Descomposición en valores singulares (SVD)
 
@@ -2650,7 +2565,6 @@ donde:
 
 - Cada **valor singular** $\sigma_i$ indica cuánto se **escala** la dirección correspondiente.
 
----
 
 ### Relación entre pseudoinversa y SVD
 
@@ -2668,7 +2582,6 @@ donde $\Sigma^+$ se forma tomando la **inversa de cada valor singular no nulo** 
 - Proporciona una **solución estable y mínima norma** a sistemas sobredeterminados o subdeterminados.  
 - Permite analizar la **condición numérica** de la matriz mediante el **ratio $\sigma_1 / \sigma_r$**.
 
----
 
 ### Propiedades importantes
 
@@ -2689,7 +2602,6 @@ donde $\Sigma^+$ se forma tomando la **inversa de cada valor singular no nulo** 
    La norma 2 de $A$ es $\|A\|_2 = \sigma_1$  
    La norma de Frobenius: $\|A\|_F^2 = \sum_i \sigma_i^2$
 
----
 
 ### Ejemplo
 
@@ -2723,7 +2635,6 @@ $$
 
 Esto permite **resolver sistemas sobredeterminados o subdeterminados** y analizar la geometría de la transformación.
 
----
 
 ### Aplicaciones
 
@@ -2733,7 +2644,6 @@ Esto permite **resolver sistemas sobredeterminados o subdeterminados** y analiza
 - Procesamiento de señales e imágenes.  
 - Estudio de estabilidad numérica y condición de matrices.
 
----
 
 ### Conceptos relacionados
 

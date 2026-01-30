@@ -1,18 +1,17 @@
----
-date: 2025-04-15 17:39
-title: ciberseguridad
-keywords:
-source:
-status: 🚀
-Parent: "[[Area-Sistemas]]"
-public_note: "true"
-category: ciberseguridad
+creation date: 2025-04-15 17:39
 tags:
   - Hacking
   - ciberseguridad
   - hardening
   - pentesting
----
+keywords:
+source:
+status: 🚀
+Parent: "Area-Sistemas"
+cssclasses:
+  - hide-embedded-header1
+categories: "[ciberseguridad](/uncategorized/ciberseguridad/)"
+public_note: "true"
 # ciberseguridad
 
 ## Áreas y fundamentos
@@ -51,7 +50,6 @@ tags:
 	- [Nessus](/ciberseguridad/nessus/)
 	- [Acunetix scanner](/monitoreo/acunetix-scanner/)
 	- [Metasploit](/ciberseguridad/metasploit/) 🔥
-	- 
 	- escáneres SAST y DAST
 	- análisis de dependencias y SBOM
 
@@ -108,7 +106,7 @@ tags:
 
 ## Servicios empresariales
 - servicios empresariales
-	- [ciberseguridad](/ciberseguridad/ciberseguridad/)
+	- [ciberseguridad](/uncategorized/ciberseguridad/)
 	- [SOC](/ciberseguridad/soc/) auditorias
 	- servicios de red y modelado
 	- [Redes](/redes/redes/)

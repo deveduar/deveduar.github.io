@@ -1,13 +1,13 @@
----
-date: 2025-10-17 01:10
-title: Testing Avanzado 2025 Prácticas y Ejemplos
+creation date: 2025-10-17 01:10
+tags:
 keywords:
 source:
 status: 📌
-Parent: "[[Area-Prog]]"
+Parent: "Area-Prog"
+cssclasses:
+  - hide-embedded-header1
+categories: "[Testing](/testing/testing/)"
 public_note: "true"
-category: Testing
----
 # Testing Avanzado 2025 Prácticas y Ejemplos
 
 
@@ -15,7 +15,6 @@ category: Testing
 
 > Este documento cubre **prácticas avanzadas de testing**, incluyendo self-healing tests, chaos engineering, contract testing, observability y AI-assisted testing, con ejemplos en JS/TS, Python, Java y C#.
 
----
 
 ## 🧠 1. Self-Healing Tests
 
@@ -49,7 +48,6 @@ test('login auto-healing', async ({ page }) => {
 - Log de auto-healing para seguimiento.
 - Integración en CI/CD.
 
----
 
 ## 🔥 2. Chaos Engineering (Resiliencia)
 
@@ -94,7 +92,6 @@ run_experiment(experiment)
 - Medir impacto en SLA y latencia.
 - Integrar en pipelines de staging.
 
----
 
 ## 🔗 3. Contract Testing / Microservicios
 
@@ -135,7 +132,6 @@ PactProviderRule provider = new PactProviderRule("AuthService", this);
 - Validar consumer y provider independientemente.
 - Actualizar contratos versionados.
 
----
 
 ## 🧭 4. Observability & Testing Metrics
 
@@ -167,7 +163,6 @@ logging.info("Ejecutando test de login")
 - Métricas de tiempo, errores y cobertura.
 - Integrar APM (Datadog, NewRelic) en pruebas E2E.
 
----
 
 ## 🧠 5. AI-Assisted Test Generation
 
@@ -192,7 +187,6 @@ cy.contains('Bienvenido').should('exist');
 - Detección temprana de edge cases.
 - Integración con pipelines y GitHub Actions.
 
----
 
 ## 🧪 6. Advanced Mocking y Service Virtualization
 
@@ -227,7 +221,6 @@ wireMockServer.stubFor(post(urlEqualTo("/login"))
 - Simular servicios externos de forma realista.
 - Usar en integración y pruebas E2E.
 
----
 
 ## 🌐 7. Performance Avanzado
 
@@ -248,7 +241,6 @@ export default function () {
 ```
 {% endraw %}
 
----
 
 ## 🧩 8. Observability + Chaos + AI Integrado
 
@@ -256,7 +248,6 @@ export default function () {
 - Automatizar análisis de fallos, flaky tests y predicciones de riesgo.
 - Integrar dashboards de calidad y alertas proactivas.
 
----
 
 ## 📌 Conclusión
 

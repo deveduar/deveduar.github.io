@@ -1,16 +1,16 @@
----
-date: 2025-05-20 18:35
-title: DevSecOps
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Sistemas]]"
-public_note: "true"
-category: devops
+creation date: 2025-05-20 18:35
 tags:
   - devops
   - ciberseguridad
----
+keywords:
+source:
+status: 🌟
+Parent: "Area-Sistemas"
+cssclasses:
+  - hide-embedded-header1
+  - wide
+categories: "[devops](/devops/devops/)"
+public_note: "true"
 # DevSecOps
 ``
 

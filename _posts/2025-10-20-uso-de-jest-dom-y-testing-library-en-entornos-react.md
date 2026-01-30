@@ -1,13 +1,13 @@
----
-date: 2025-10-20 20:03
-title: Uso de jest-dom y Testing Library en entornos React
+creation date: 2025-10-20 20:03
+tags:
 keywords:
 source:
 status: 📌
-Parent: "[[Area-Prog]]"
+Parent: "Area-Prog"
+cssclasses:
+  - hide-embedded-header1
+categories: "[Testing](/testing/testing/)"
 public_note: "true"
-category: Testing
----
 # Uso de jest-dom y Testing Library en entornos React
 
 - [Testing](/testing/testing/)
@@ -27,7 +27,6 @@ category: Testing
 - Esta combinación (React Testing Library + jest-dom + Jest) constituye el estándar moderno para testeo de interfaces.  
 - Se centra en la **experiencia del usuario (UX)** y no en detalles internos del componente.  
 
----
 
 ## ⚙️ Instalación y configuración
 
@@ -61,7 +60,6 @@ export default {
 ```
 {% endraw %}
 
----
 
 ## 🧩 Ejemplo básico
 
@@ -100,7 +98,6 @@ PASS src/components/Saludo.test.tsx
 ```
 {% endraw %}
 
----
 
 ## ⚙️ Testing de interacción con `userEvent`
 
@@ -144,7 +141,6 @@ describe('Contador', () => {
 
 > 💡 `userEvent` simula acciones reales (click, tab, input, teclado, etc.), a diferencia de `fireEvent`, que es más bajo nivel.
 
----
 
 ## 🧠 Ejemplo de pruebas de formularios
 
@@ -194,7 +190,6 @@ test('envía los datos correctos al login', async () => {
 ```
 {% endraw %}
 
----
 
 ## 🧩 Testing de componentes con hooks o efectos
 
@@ -232,7 +227,6 @@ test('muestra "Listo ✅" después de 1s', async () => {
 
 > 🧩 `waitFor` es útil para pruebas con temporizadores, efectos o peticiones asíncronas.
 
----
 
 ## 🧠 Comparativa rápida: `fireEvent` vs `userEvent`
 
@@ -244,7 +238,6 @@ test('muestra "Listo ✅" después de 1s', async () => {
 | Eventos encadenados  | No                       | Sí                                 |
 | Uso recomendado      | Casos simples o internos | Simular acciones del usuario final |
 
----
 
 ## 💡 Buenas prácticas
 
@@ -256,7 +249,6 @@ test('muestra "Listo ✅" después de 1s', async () => {
 * Usa `waitFor` o `findBy...` para elementos renderizados de forma asíncrona.
 * Añade estos tests en pipelines [CICD](/devops/cicd/) y ejecuta con `--coverage` en github actions.
 
----
 
 ## 📊 Ejemplo de integración en [CICD](/devops/cicd/)
 
@@ -278,7 +270,6 @@ jobs:
 ```
 {% endraw %}
 
----
 
 ## 📚 Recursos recomendados
 

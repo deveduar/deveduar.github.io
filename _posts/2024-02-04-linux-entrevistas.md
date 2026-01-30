@@ -1,15 +1,14 @@
----
-date: 2024-02-04 19:03
-title: Linux entrevistas
-status: 🌟
-Parent: "[[Area-Sistemas]]"
-keywords:
-source:
-public_note: "true"
-category: Linux
 tags:
   - Linux
----
+status: 🌟
+Parent: "Area-Sistemas"
+creation date: 2024-02-04 19:03
+keywords:
+source:
+cssclasses:
+  - hide-embedded-header1
+categories: "[Linux](/sistemas/linux/)"
+public_note: "true"
 # Linux entrevistas
 ``
 

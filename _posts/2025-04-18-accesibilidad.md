@@ -1,23 +1,22 @@
----
-date: 2025-04-18 03:20
-title: accesibilidad
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Prog]]"
-public_note: "true"
-category: Frontend
+creation date: 2025-04-18 03:20
 tags:
   - frontend
   - accesibilidad
----
+keywords:
+source:
+status: 🌟
+Parent: "Area-Prog"
+cssclasses:
+  - hide-embedded-header1
+  - wide
+categories: "[Frontend](/frontend/frontend/)"
+public_note: "true"
 # Accesibilidad
 ``
 
 ## Conceptos Base
 - [Frontend](/frontend/frontend/)
 - [SEO](/frontend/seo/)
-- 
 - Sumario de WCAG 2-es
 - Web Content Accessibility Guidelines - Wikipedia, la enciclopedia libre-Web_Content_Accessibility_Guidelines
 - WCAG 3 Introduction-

@@ -1,22 +1,20 @@
----
-date: 2024-02-18 16:15
-title: congetura de collatz
 Hecho: false
+tags:
+  - Mates
+creation date: 2024-02-18 16:15
 keywords:
 source:
 status: 🌟
-Parent: "[[Area-IA]]"
+Parent: "Area-IA"
+cssclasses:
+  - hide-embedded-header1
+categories: "[mates](/uncategorized/mates/)"
 public_note: "true"
-category: mates
-tags:
-  - Mates
----
 # Conjetura de Collatz# congetura de collatz
 
 
 La **Conjetura de Collatz** (también conocida como *problema 3n + 1*, *problema de Ulam* o *problema de Syracuse*) es uno de los problemas abiertos más famosos de las matemáticas. Fue formulada por Lothar Collatz en 1937 y afirma que, aplicando un sencillo proceso a cualquier número entero positivo, siempre se llega eventualmente al ciclo **4 → 2 → 1**.
 
----
 
 ## Explicación
 
@@ -38,7 +36,6 @@ Por ejemplo, empezando con `n = 6`:
 
 Una vez se alcanza el **1**, la secuencia entra en el ciclo infinito `4 → 2 → 1`.
 
----
 
 ## Naturaleza del problema
 
@@ -47,7 +44,6 @@ Por eso se conoce como el **problema de la detención** (*halting problem*) de l
 
 El comportamiento de las secuencias muestra características **aparentemente aleatorias**, similares a sistemas caóticos o incluso al comportamiento del **mercado de valores**.
 
----
 
 ## Representaciones y análisis
 
@@ -62,7 +58,6 @@ El comportamiento de las secuencias muestra características **aparentemente ale
 Se ha observado una relación entre la distribución de los dígitos en las secuencias de Collatz y la **Ley de Benford**, la cual describe la frecuencia esperada de los dígitos en datos naturales.  
 Esta relación sugiere que los datos de Collatz podrían usarse como modelo para estudiar fenómenos de **aleatoriedad aparente** y **detección de fraude numérico**.
 
----
 
 ## Representaciones gráficas
 
@@ -73,7 +68,6 @@ Este árbol muestra cómo los números se conectan al ciclo final `4 → 2 → 1
 
 Se pueden aplicar transformaciones logarítmicas como `y = log(x)` para escalar los valores y revelar patrones en la estructura de crecimiento.
 
----
 
 ## Implementación en Python
 
@@ -116,7 +110,6 @@ Comparar ambas versiones permite analizar la **eficiencia computacional** y el *
 
 Referencia: [Conjetura de Collatz en Python. Recursivo vs iterativo](https://neuralcovenant.com/2020/11/24/conjetura-de-collatz-en-python-recursivo-vs-iterativo/)
 
----
 
 ## Reflexión y significado
 
@@ -129,7 +122,6 @@ Representa una intersección entre:
 * Algoritmos recursivos
 * Problemas no resueltos de las matemáticas
 
----
 
 ## Recursos y referencias
 

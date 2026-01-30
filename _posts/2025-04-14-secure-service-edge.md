@@ -1,18 +1,21 @@
----
-date: 2025-04-14 04:12
-title: Secure Service Edge
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Sistemas]]"
-aliases:
-public_note: "true"
-category: ciberseguridad
+creation date: 2025-04-14 04:12
 tags:
   - hardening
   - Hacking
   - servicio
----
+keywords:
+source:
+status: 🌟
+Parent: "Area-Sistemas"
+cssclasses:
+  - hide-embedded-header1
+  - wide
+categories: "[ciberseguridad](/ciberseguridad/ciberseguridad/)"
+aliases:
+  - SSE
+  - Secure Service Edge
+  - SSE Secure Service Edge
+public_note: "true"
 # Secure Service Edge SSE
 
 Secure Service Edge (SSE) es un componente crítico dentro de la arquitectura [SASE](/ciberseguridad/sase/) (Secure Access Service Edge), centrado en la seguridad de acceso a servicios y datos desde la nube, independientemente de la ubicación del usuario o del dispositivo. Su objetivo principal es garantizar conectividad segura, inspección de tráfico y control de accesos en entornos híbridos y multi-nube.

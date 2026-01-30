@@ -1,16 +1,15 @@
----
-date: 2023-04-30 22:16
-title: IA con Huawei
-status: 🌟
-Parent: "[[Area-IA]]"
-keywords:
-source:
-public_note: "true"
-category: Data Science
 tags:
   - IA
   - Huawei
----
+status: 🌟
+Parent: "Area-IA"
+creation date: 2023-04-30 22:16
+keywords:
+source:
+cssclasses:
+  - hide-embedded-header1
+categories: "[Data Science](/data%20science/data-science/)"
+public_note: "true"
 # IA con Huawei
 ``
 

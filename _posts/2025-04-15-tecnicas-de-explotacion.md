@@ -1,16 +1,16 @@
----
-date: 2025-04-15 17:05
-title: tecnicas de explotacion
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Sistemas]]"
-public_note: "true"
-category: ciberseguridad
+creation date: 2025-04-15 17:05
 tags:
   - vulnerabilidades
   - Hacking
----
+keywords:
+source:
+status: 🌟
+Parent: "Area-Sistemas"
+cssclasses:
+  - hide-embedded-header1
+  - wide
+categories: "[ciberseguridad](/ciberseguridad/ciberseguridad/)"
+public_note: "true"
 # tecnicas de explotacion
 
 ## Conceptos relacionados
@@ -374,7 +374,6 @@ La explotación rara vez es un evento aislado.
 - **Lab 10 – Exploiting Logic Flaws**
 	- Bypass sin corrupción de memoria.
 
----
 
 ## Lab desarrollado – Buffer Overflow con mitigaciones
 

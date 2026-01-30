@@ -1,19 +1,20 @@
----
-date: 2024-11-16 17:21
-title: Elasticsearch
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Sistemas]]"
-public_note: "true"
-category: monitoreo
+creation date: 2024-11-16 17:21
 tags:
   - db
   - elasticsearh
   - backend
   - devops
   - ELK
----
+keywords:
+  - ELK
+source:
+status: 🌟
+Parent: "Area-Sistemas"
+cssclasses:
+  - hide-embedded-header1
+  - wide
+categories: "[monitoreo](/monitoreo/monitoreo/)"
+public_note: "true"
 # Elasticsearch
 
 - [Databases](/databases/databases/) 

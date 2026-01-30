@@ -1,17 +1,17 @@
----
-date: 2025-05-21 18:31
-title: b2b business-to-business
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Sistemas]]"
-public_note: "true"
-category: Gestion de Negocio
+creation date: 2025-05-21 18:31
 tags:
   - ecomerce
   - B2B
   - IT
----
+keywords:
+source:
+status: 🌟
+Parent: "Area-Sistemas"
+cssclasses:
+  - hide-embedded-header1
+  - wide
+categories: "[Gestion de Negocio](/gestion%20de%20negocio/gestion-de-negocio/)"
+public_note: "true"
 # B2B Business-to-Business
 
 ## Conceptos clave

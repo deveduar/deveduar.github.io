@@ -1,16 +1,15 @@
----
-date: 2024-12-03 03:34
-title: hardening
-keywords:
-source:
-status: 🚀
-Parent: "[[Area-Sistemas]]"
-public_note: "true"
-category: ciberseguridad
+creation date: 2024-12-03 03:34
 tags:
   - Hacking
   - hardening
----
+keywords:
+source:
+status: 🚀
+Parent: "Area-Sistemas"
+cssclasses:
+  - hide-embedded-header1
+categories: "[ciberseguridad](/ciberseguridad/ciberseguridad/)"
+public_note: "true"
 # Hardening  
 
 - [ciberseguridad](/ciberseguridad/ciberseguridad/)
@@ -381,7 +380,6 @@ aide --check
 ## Objetivo
 Guía práctica para aplicar hardening **directamente en el código**, sin repetir conceptos previos y centrada únicamente en **técnicas concretas, implementaciones y patrones seguros**.
 
----
 
 ## 1. Validación y Saneamiento de Datos
 
@@ -406,7 +404,6 @@ return True
 ```
 {% endraw %}`
 
----
 
 ## 2. Hardening de Autenticación y Sesiones
 
@@ -433,7 +430,6 @@ cookie: {
 ```
 {% endraw %}
 
----
 
 ## 3. Hardening contra Inyección
 
@@ -450,7 +446,6 @@ err := db.QueryRow("SELECT id FROM usuarios WHERE email = ?", email).Scan(&id)
 ```
 {% endraw %}
 
----
 
 ## 4. Hardening de Serialización y Deserialización
 
@@ -472,7 +467,6 @@ return v;
 ```
 {% endraw %}
 
----
 
 ## 5. Hardening de Gestión de Errores
 
@@ -492,7 +486,6 @@ return {"error": "Ocurrió un problema"}, 500
 ```
 {% endraw %}
 
----
 
 ## 6. Hardening de Acceso a Archivos y Directorios
 
@@ -517,7 +510,6 @@ return open(target)
 ```
 {% endraw %}
 
----
 
 ## 7. Hardening Criptográfico
 
@@ -539,7 +531,6 @@ original = f.decrypt(token)
 ```
 {% endraw %}
 
----
 
 ## 8. Hardening de APIs
 
@@ -567,7 +558,6 @@ v.validate(data, schema);
 ```
 {% endraw %}
 
----
 
 ## 9. Hardening en Programación Asíncrona y Concurrencia
 
@@ -590,7 +580,6 @@ let mut c = contador.lock().unwrap();
 ```
 {% endraw %}
 
----
 
 ## 10. Hardening en Microservicios
 
@@ -614,7 +603,6 @@ def llamar_servicio():
 ```
 {% endraw %}
 
----
 
 ## 11. Hardening en Programación Orientada a Objetos
 
@@ -635,7 +623,6 @@ public String get(){ return valor; }
 ```
 {% endraw %}
 
----
 
 ## 12. Hardening en CI/CD (Enfocado al Código)
 
@@ -645,7 +632,6 @@ public String get(){ return valor; }
 - Pipeline aislado, sin acceso a producción.  
 - Variables de entorno seguras, jamás incluir secretos en código.
 
----
 
 ## 13. Hardening de Librerías y Dependencias
 
@@ -655,7 +641,6 @@ public String get(){ return valor; }
 - Preferir librerías minimalistas y mantenidas.  
 - Sustituir dependencias abandonadas.
 
----
 
 ## 14. Hardening para Prevención de Abuso Lógico
 
@@ -670,7 +655,6 @@ public String get(){ return valor; }
 Esta nota recopila **patrones de diseño específicamente orientados al hardening**, es decir, a aumentar la **resistencia, robustez y seguridad del software**, SIN repetir patrones clásicos si no aportan defensa directa.  
 Todos los patrones aquí se centran en **mitigar vectores de ataque**, **reducir superficie**, **garantizar integridad**, **controlar acceso**, **sanear datos**, y **evitar estados corruptos**.
 
----
 
 ## 1. 🧱 **Secure Facade Pattern**
 Un *Facade* diseñado para **encapsular recursos sensibles**, exponiendo solo operaciones sanitizadas y seguras.
@@ -689,7 +673,6 @@ Un *Facade* diseñado para **encapsular recursos sensibles**, exponiendo solo op
 - Punto único para aplicar hardening.
 - Menor probabilidad de bypass.
 
----
 
 ## 2. 🗝️ **Validated Builder Pattern**
 Un *Builder* donde **cada campo es validado, sanetizado o normalizado** antes de construir el objeto final.
@@ -703,7 +686,6 @@ Un *Builder* donde **cada campo es validado, sanetizado o normalizado** antes de
 - Objetos que representan datos externos.
 - Configuraciones cargadas desde archivos o inputs de usuario.
 
----
 
 ## 3. 🔐 **Privileged Execution Wrapper**
 Patrón para aislar bloques de código que requieren permisos elevados dentro de un “wrapper” seguro.
@@ -717,7 +699,6 @@ Patrón para aislar bloques de código que requieren permisos elevados dentro de
 - Evitar escaladas de privilegios por error.
 - Minimizar tiempo con permisos elevados.
 
----
 
 ## 4. 🧽 **Input-Sanitizing Pipeline**
 Pipeline modular y extensible donde cada etapa limpia o verifica entradas.
@@ -732,7 +713,6 @@ Pipeline modular y extensible donde cada etapa limpia o verifica entradas.
 - Análisis semántico
 - Escapado o codificación (HTML, SQL, cmd, XML)
 
----
 
 ## 5. 🧩 **Fail-Safe Strategy Selector**
 Patrón que aplica estrategias distintas según contexto, eligiendo SIEMPRE la opción “más segura disponible”.
@@ -742,7 +722,6 @@ Patrón que aplica estrategias distintas según contexto, eligiendo SIEMPRE la o
 - Seleccionar métodos de acceso según política vigente.
 - Cambiar flujo cuando detecta una anomalía.
 
----
 
 ## 6. 🛡️ **Immutable Security Object**
 Todos los objetos relacionados con autenticación, autorización, secretos o tokens son **inmutables**.
@@ -757,7 +736,6 @@ Ejemplos:
 - JWT decodificados
 - Claims de sesión
 
----
 
 ## 7. 🧨 **Circuit-Breaker de Seguridad**
 Aplica el patrón *Circuit Breaker* no solo para disponibilidad sino para **detectar comportamientos sospechosos**.
@@ -773,7 +751,6 @@ Aplica el patrón *Circuit Breaker* no solo para disponibilidad sino para **dete
 - Restablecer sesión
 - Activar capa defensiva
 
----
 
 ## 8. 🗂️ **Secure Adapter Pattern**
 Adaptadores que aíslan librerías inseguras o legacy, imponiendo un contrato interno seguro.
@@ -783,7 +760,6 @@ Adaptadores que aíslan librerías inseguras o legacy, imponiendo un contrato in
 - Sanitización automática de entradas/salidas.
 - Auditoría del uso de librerías antiguas.
 
----
 
 ## 9. 🌐 **Context-Aware Escaper**
 Un patrón para asegurar que **cada salida** se codifique según el **contexto**:
@@ -800,7 +776,6 @@ Evita:
 - Injection
 - Insecure deserialization
 
----
 
 ## 10. 🔄 **Self-Healing Pattern**
 El sistema se “cura” o revierte a estados seguros cuando detecta anomalías.
@@ -810,7 +785,6 @@ Incluye:
 - Restauración desde configuración estable.
 - Reinicio controlado de subsistemas.
 
----
 
 ## 11. 📦 **Secure Dependency Manager**
 Patrón para centralizar:
@@ -823,7 +797,6 @@ Patrón para centralizar:
 Objetivo:
 - Evitar riesgos de supply-chain.
 
----
 
 ## 12. 🧬 **Deterministic State Machine Pattern**
 Todo flujo crítico es guiado por una **máquina de estados determinista**, evitando:
@@ -837,7 +810,6 @@ Se usa mucho en:
 - Flujos de pagos  
 - Validación multicapa  
 
----
 
 ## 13. 🧊 **Secrets-Freezing Pattern**
 Mantiene los secretos (tokens, claves, contraseñas) en estructuras:
@@ -847,7 +819,6 @@ Mantiene los secretos (tokens, claves, contraseñas) en estructuras:
 - con TTL integrado  
 - acceso solo mediante funciones controladas  
 
----
 
 ## 14. 🕵️ **Anti-Tampering Proxy**
 Proxy interno antes de ciertas operaciones que verifica:
@@ -857,13 +828,11 @@ Proxy interno antes de ciertas operaciones que verifica:
 - ausencia de hooks sospechosos
 - comprobaciones de entorno (anticomposición, anti-debugging)
 
----
 
 ## 15. 🔎 **Secure Observer Pattern**
 Oberservers dedicados solo a **auditar**, **monitorizar**, **detectar anomalías** y levantar eventos de seguridad.
 
 No modifican el flujo principal → separan seguridad de lógica funcional.
 
----
 
 

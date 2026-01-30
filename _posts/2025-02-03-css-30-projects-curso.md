@@ -1,15 +1,15 @@
----
-date: 2025-02-03 21:05
-title: CSS 30 projects curso
+creation date: 2025-02-03 21:05
+tags:
+  - CSS
 keywords:
 source:
 status: 📌
-Parent: "[[Area-Prog]]"
+cssclasses:
+  - hide-embedded-header1
+  - wide
+Parent: "Area-Prog"
+categories:
 public_note: "true"
-category: uncategorized
-tags:
-  - CSS
----
 # curso CSS 30 projects
 
 - [CSS](/frontend/css/)
@@ -21,7 +21,6 @@ Esta nota reúne:
 - Un **cheatsheet ampliado**.
 - Los **30 proyectos CSS** con explicación + solución.
 
----
 
 ## Fundamentos Modernos de CSS (2025)
 
@@ -64,7 +63,6 @@ Esta nota reúne:
 - Preferencias de usuario.
 - Contraste mínimo AA/AAA.
 
----
 
 ## Cheatsheet Avanzado CSS (2025)
 
@@ -105,7 +103,6 @@ Esta nota reúne:
 ```
 {% endraw %}`
 
----
 
 # 30 Proyectos CSS — Explicación + Solución
 
@@ -113,7 +110,6 @@ Cada proyecto incluye:
 - Qué se aprende
 - Solución mínima
 - Técnicas usadas
----
 
 ## 1. Fancy Buttons
 
@@ -148,7 +144,6 @@ Cada proyecto incluye:
 ```
 {% endraw %}
 
----
 
 ## 2. Navbar Responsiva
 
@@ -176,7 +171,6 @@ nav ul {
 ```
 {% endraw %}
 
----
 
 ## 3. Gallery Grid Auto-fit
 
@@ -190,7 +184,6 @@ nav ul {
 ```
 {% endraw %}
 
----
 
 ## 4. Glassmorphism Card
 
@@ -205,7 +198,6 @@ nav ul {
 ```
 {% endraw %}
 
----
 
 ## 5. Animated Gradient Background
 
@@ -223,7 +215,6 @@ nav ul {
 ```
 {% endraw %}
 
----
 
 ## 6. Loader Spinner
 
@@ -243,7 +234,6 @@ nav ul {
 ```
 {% endraw %}
 
----
 
 ## 7. Tooltip
 
@@ -266,7 +256,6 @@ nav ul {
 ```
 {% endraw %}
 
----
 
 ## 8. Accordion
 
@@ -283,7 +272,6 @@ nav ul {
 ```
 {% endraw %}
 
----
 
 ## 9. Modal
 
@@ -306,7 +294,6 @@ nav ul {
 ```
 {% endraw %}
 
----
 
 ## 10. Tabs con CSS
 
@@ -322,7 +309,6 @@ nav ul {
 ```
 {% endraw %}
 
----
 
 ## 11. Pricing Table
 
@@ -336,7 +322,6 @@ nav ul {
 ```
 {% endraw %}
 
----
 
 ## 12. Hero Section Fluid
 
@@ -351,7 +336,6 @@ nav ul {
 ```
 {% endraw %}
 
----
 
 ## 13. Landing Page Layout
 
@@ -365,7 +349,6 @@ nav ul {
 ```
 {% endraw %}
 
----
 
 ## 14. Footer Sticky
 
@@ -379,7 +362,6 @@ body {
 ```
 {% endraw %}
 
----
 
 ## 15. CSS Masonry
 
@@ -396,7 +378,6 @@ body {
 ```
 {% endraw %}
 
----
 
 ## 16. Icon Buttons
 
@@ -413,7 +394,6 @@ body {
 ```
 {% endraw %}
 
----
 
 ## 17. Timeline
 
@@ -440,7 +420,6 @@ body {
 ```
 {% endraw %}
 
----
 
 ## 18. Hover Cards
 
@@ -456,7 +435,6 @@ body {
 ```
 {% endraw %}
 
----
 
 ## 19. Login Form UI
 
@@ -476,7 +454,6 @@ input {
 ```
 {% endraw %}
 
----
 
 ## 20. Product Card + Hover
 
@@ -491,7 +468,6 @@ input {
 ```
 {% endraw %}
 
----
 
 ## 21. Offcanvas Menu
 
@@ -510,7 +486,6 @@ input {
 ```
 {% endraw %}
 
----
 
 ## 22. CSS Parallax
 
@@ -524,7 +499,6 @@ input {
 ```
 {% endraw %}
 
----
 
 ## 23. Card Flip
 
@@ -551,7 +525,6 @@ input {
 ```
 {% endraw %}
 
----
 
 ## 24. Animated Border
 
@@ -565,7 +538,6 @@ input {
 ```
 {% endraw %}
 
----
 
 ## 25. Notification Badge
 
@@ -588,7 +560,6 @@ input {
 ```
 {% endraw %}
 
----
 
 ## 26. Chat Bubbles
 
@@ -610,7 +581,6 @@ input {
 ```
 {% endraw %}
 
----
 
 ## 27. Image Overlay Text
 
@@ -637,7 +607,6 @@ input {
 ```
 {% endraw %}
 
----
 
 ## 28. Progress Bar
 
@@ -656,7 +625,6 @@ input {
 ```
 {% endraw %}
 
----
 
 ## 29. Stepper UI
 
@@ -678,7 +646,6 @@ input {
 ```
 {% endraw %}
 
----
 
 ## 30. Responsive Dashboard Layout
 
@@ -697,14 +664,12 @@ input {
 ```
 {% endraw %}
 
----
 
 
 # CSS — 30 Proyectos Extra (Avanzados, Modernos y sin Repetición)
 
 Esta nota amplía la colección anterior con **30 nuevos proyectos**, 100% distintos, orientados a técnicas modernas, soluciones reales y patrones reutilizables.
 
----
 
 ## 1. Menú tipo Mega-Dropdown
 **Qué aprendes:** posicionamiento, overlays, layouts internos.
@@ -724,7 +689,6 @@ Esta nota amplía la colección anterior con **30 nuevos proyectos**, 100% disti
 ```
 {% endraw %}`
 
----
 
 ## 2. Tarjeta con efecto Tilt (sin JS)
 
@@ -745,7 +709,6 @@ Esta nota amplía la colección anterior con **30 nuevos proyectos**, 100% disti
 ```
 {% endraw %}
 
----
 
 ## 3. Imagen con zoom animado y pan suave
 
@@ -760,7 +723,6 @@ img {
 ```
 {% endraw %}
 
----
 
 ## 4. Tabs verticales responsivos
 
@@ -776,7 +738,6 @@ img {
 ```
 {% endraw %}
 
----
 
 ## 5. Cursor personalizado
 
@@ -788,7 +749,6 @@ body {
 ```
 {% endraw %}
 
----
 
 ## 6. Campo input con animación de etiqueta flotante
 
@@ -811,7 +771,6 @@ input:not(:placeholder-shown) + label {
 ```
 {% endraw %}
 
----
 
 ## 7. Skeleton loading
 
@@ -828,7 +787,6 @@ input:not(:placeholder-shown) + label {
 ```
 {% endraw %}
 
----
 
 ## 8. Checkbox toggle iOS-style
 
@@ -860,7 +818,6 @@ input:checked + .toggle::after {
 ```
 {% endraw %}
 
----
 
 ## 9. Botón tipo ripple (CSS-only)
 
@@ -881,7 +838,6 @@ input:checked + .toggle::after {
 ```
 {% endraw %}
 
----
 
 ## 10. Lista con líneas conectadas
 
@@ -907,7 +863,6 @@ input:checked + .toggle::after {
 ```
 {% endraw %}
 
----
 
 ## 11. Menú lateral plegable (hover expand)
 
@@ -923,7 +878,6 @@ input:checked + .toggle::after {
 ```
 {% endraw %}
 
----
 
 ## 12. Botón 3D con sombra neumórfica
 
@@ -938,7 +892,6 @@ input:checked + .toggle::after {
 ```
 {% endraw %}
 
----
 
 ## 13. Divider con texto centrado
 
@@ -960,7 +913,6 @@ input:checked + .toggle::after {
 ```
 {% endraw %}
 
----
 
 ## 14. Modal inferior tipo mobile-sheet
 
@@ -980,7 +932,6 @@ input:checked + .toggle::after {
 ```
 {% endraw %}
 
----
 
 ## 15. Card con borde doble animado
 
@@ -997,7 +948,6 @@ input:checked + .toggle::after {
 ```
 {% endraw %}
 
----
 
 ## 16. Menú contextual estilo OS
 
@@ -1016,7 +966,6 @@ input:checked + .toggle::after {
 ```
 {% endraw %}
 
----
 
 ## 17. Card con auto-resize según contenido
 
@@ -1028,7 +977,6 @@ input:checked + .toggle::after {
 ```
 {% endraw %}
 
----
 
 ## 18. Chip tags con hover de selección
 
@@ -1046,7 +994,6 @@ input:checked + .toggle::after {
 ```
 {% endraw %}
 
----
 
 ## 19. Lista sortable visual (solo UI)
 
@@ -1062,7 +1009,6 @@ input:checked + .toggle::after {
 ```
 {% endraw %}
 
----
 
 ## 20. Avatar con estatus online
 
@@ -1087,7 +1033,6 @@ input:checked + .toggle::after {
 ```
 {% endraw %}
 
----
 
 ## 21. Tarjetas con gradiente rotativo
 
@@ -1104,7 +1049,6 @@ input:checked + .toggle::after {
 ```
 {% endraw %}
 
----
 
 ## 22. Scroll suave interno con snap Y
 
@@ -1122,7 +1066,6 @@ input:checked + .toggle::after {
 ```
 {% endraw %}
 
----
 
 ## 23. Efecto de texto “stroke + fill”
 
@@ -1138,7 +1081,6 @@ input:checked + .toggle::after {
 ```
 {% endraw %}
 
----
 
 ## 24. Menú hamburguesa animado (solo CSS)
 
@@ -1158,7 +1100,6 @@ input:checked + .toggle::after {
 ```
 {% endraw %}
 
----
 
 ## 25. Tooltip con flecha personalizada
 
@@ -1175,7 +1116,6 @@ input:checked + .toggle::after {
 ```
 {% endraw %}
 
----
 
 ## 26. Input con borde gradiente animado
 
@@ -1195,7 +1135,6 @@ input:checked + .toggle::after {
 ```
 {% endraw %}
 
----
 
 ## 27. Botón sticky flotante (FAB)
 
@@ -1213,7 +1152,6 @@ input:checked + .toggle::after {
 ```
 {% endraw %}
 
----
 
 ## 28. Grid alineado por baseline
 
@@ -1227,7 +1165,6 @@ input:checked + .toggle::after {
 ```
 {% endraw %}
 
----
 
 ## 29. Modo oscuro automático
 
@@ -1239,7 +1176,6 @@ input:checked + .toggle::after {
 ```
 {% endraw %}
 
----
 
 ## 30. Imagen con borde recortado (clip-path)
 
@@ -1251,14 +1187,12 @@ input:checked + .toggle::after {
 ```
 {% endraw %}
 
----
 
 Fin de la nota.
 
 {% raw %}
 ```
 
----
 
 Si quieres, puedo crear:
 

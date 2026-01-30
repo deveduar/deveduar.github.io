@@ -1,17 +1,17 @@
----
-date: 2025-04-14 19:20
-title: IAM Gestión de Identidades y Acceso
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Sistemas]]"
-public_note: "true"
-category: autenticacion
+creation date: 2025-04-14 19:20
 tags:
   - autentication
   - Hacking
   - ciberseguridad
----
+keywords:
+source:
+status: 🌟
+Parent: "Area-Sistemas"
+cssclasses:
+  - hide-embedded-header1
+  - wide
+categories: "[autenticacion](/autenticacion/autenticacion/)"
+public_note: "true"
 # IAM  Gestión de Identidades y Acceso
 
 - [autenticacion](/autenticacion/autenticacion/)

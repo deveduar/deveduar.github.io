@@ -1,16 +1,15 @@
----
-date: 2023-05-02 15:47
-title: Prompt Engineering
-status: 🌟
-Parent: "[[Area-IA]]"
-keywords:
-source:
-public_note: "true"
-category: Data Science
 tags:
   - IA
   - Prompt
----
+status: 🌟
+Parent: "Area-IA"
+creation date: 2023-05-02 15:47
+keywords:
+source:
+cssclasses:
+  - hide-embedded-header1
+categories: "[Data Science](/data%20science/data-science/)"
+public_note: "true"
 # # Prompt Engineering
 
 

@@ -1,17 +1,17 @@
----
-date: 2025-05-18 04:01
-title: server actions
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Prog]]"
-public_note: "true"
-category: Backend
+creation date: 2025-05-18 04:01
 tags:
   - backend
   - server
   - server_actions
----
+keywords:
+source:
+status: 🌟
+Parent: "Area-Prog"
+cssclasses:
+  - hide-embedded-header1
+  - wide
+categories: "[Backend](/backend/backend/)"
+public_note: "true"
 # Server Actions
 
 ## Conceptos Clave Relacionados
@@ -24,7 +24,6 @@ tags:
 - Server Components
 - Slug
 
----
 
 ## Qué son las Server Actions
 Las **Server Actions** son funciones ejecutadas **únicamente en el servidor** dentro de aplicaciones basadas en [nextjs](/frontend/nextjs/). Permiten manejar lógica de negocio, validación, inserciones o consultas a bases de datos sin exponer endpoints REST/[api](/backend/api/) explícitos.  
@@ -38,7 +37,6 @@ Su propósito principal es unir de forma directa la interfaz (componentes de [re
 - Permiten streaming, revalidación y actualización selectiva de UI.
 - Mejoran la DX simplificando el manejo de formularios (especialmente con React Hook Form).
 
----
 
 ## Integración con Server Components
 Las Server Actions funcionan mejor cuando se combinan con **Server Components**:
@@ -52,7 +50,6 @@ Las Server Actions funcionan mejor cuando se combinan con **Server Components**:
 - Mejor rendimiento por SSR nativo y cero bundle adicional.
 - Encapsulación estricta de la lógica del [Backend](/backend/backend/) dentro de UI declarativa.
 
----
 
 ## Uso con Slugs
 Un **slug** es un identificador legible incluido en la URL para localizar recursos (ej. `/producto/camiseta-algodon`).  
@@ -66,7 +63,6 @@ Ejemplos de usos habituales:
 - Editar un post asociado a ese `slug`.
 - Validar rutas o permisos en base a identificadores semánticos.
 
----
 
 ## Integración con GraphQL
 Cuando utilizas [GraphQL](/backend/graphql/) junto a Server Actions:
@@ -79,7 +75,6 @@ Patrones comunes:
 - `serverAction -> graphqlMutation -> revalidatePath`
 - `serverAction -> graphqlQuery -> hydrate server component`
 
----
 
 ## Integración con React y React Hook Form
 ### Con React
@@ -99,7 +94,6 @@ Patrones típicos:
 - La Server Action procesa la mutación.
 - UI se refresca con revalidación del árbol.
 
----
 
 ## Integración con Next.js
 Las Server Actions son parte del ecosistema de [nextjs](/frontend/nextjs/) App Router desde las versiones más recientes.
@@ -122,7 +116,6 @@ Las Server Actions son parte del ecosistema de [nextjs](/frontend/nextjs/) App R
 | Uso | Lógica acoplada a UI | Lógica desacoplada de UI |
 | Ideal para | Formularios, mutaciones pequeñas | Integraciones externas, webhooks |
 
----
 
 ## Ejemplos de Código (cada uno bajo su heading)
 
@@ -207,7 +200,6 @@ const onSubmit = handleSubmit(async (values) => {
 ```
 {% endraw %}
 
----
 
 ## Cuándo Usarlas y Cuándo Evitarlas
 
@@ -225,7 +217,6 @@ const onSubmit = handleSubmit(async (values) => {
 - Requieres alto desacoplamiento entre frontend y backend.
 - Estás fuera del ecosistema [nextjs](/frontend/nextjs/).
 
----
 
 ## Patrones Arquitectónicos Recomendados
 
@@ -235,7 +226,6 @@ const onSubmit = handleSubmit(async (values) => {
 - **Revalidación estratégica:** solo refrescar rutas afectadas.
 - **Integración con GraphQL interna:** evita exponer GraphQL en cliente.
 
----
 
 ## Anti-Patrones Comunes
 
@@ -264,7 +254,6 @@ const onSubmit = handleSubmit(async (values) => {
 4. Nuevo render del componente afectado.
 5. El cliente recibe el árbol actualizado sin fetch manual.
 
----
 
 ## Patrones de Dominios y Modularidad
 ### Separación por dominios funcionales
@@ -279,7 +268,6 @@ Para escalabilidad, estructura las acciones en módulos autónomos:
 - Tipado más preciso por dominio.
 - Reducen colisiones o duplicación de lógica.
 
----
 
 ## Server Actions + Data Layer
 ### Capas de datos recomendadas
@@ -293,7 +281,6 @@ Integración con:
 - Las Server Actions permiten mantener toda la capa de acceso a datos **dentro del servidor**, evitando clientes expuestos.
 - Pagination, sorting y búsqueda se manejan desde componentes server-side sin round-trips explícitos.
 
----
 
 ## Acciones Compuestas (Macro-Actions)
 ### Qué son
@@ -305,7 +292,6 @@ Ejemplo: actualizar un perfil, enviar email, guardar logs y refrescar un `tag`.
 - Garantizas consistencia transaccional.
 - Evitas exponer múltiples puntos vulnerables.
 
----
 
 ## Server Actions + Autenticación y Autorización
 ### Uso correcto
@@ -318,7 +304,6 @@ Ejemplo: actualizar un perfil, enviar email, guardar logs y refrescar un `tag`.
 - Mutaciones condicionadas por permisos.
 - Auditoría interna de llamadas.
 
----
 
 ## Revalidación Avanzada
 ### Revalidate Granular
@@ -330,7 +315,6 @@ Ejemplo: actualizar un perfil, enviar email, guardar logs y refrescar un `tag`.
 - Revalidación condicional basada en lógica de negocio.
 - Combinación con fetch cacheado y deduplicación.
 
----
 
 ## Integración con APIs Externas (sin repetir lo anterior)
 ### Casos de uso
@@ -343,7 +327,6 @@ Ejemplo: actualizar un perfil, enviar email, guardar logs y refrescar un `tag`.
 - Normalizar datos antes de enviar a cliente.
 - Enriquecimiento de datos previo a revalidación.
 
----
 
 ## Server Actions + GraphQL Avanzado
 ### Nuevas capacidades sin repetir lo previo
@@ -357,7 +340,6 @@ Ejemplo: actualizar un perfil, enviar email, guardar logs y refrescar un `tag`.
 - Sin fuga de tokens en cliente.
 - Eliminación del cliente GraphQL del bundle.
 
----
 
 ## Server Actions + React Server Components Avanzado
 ### Técnicas sin solapar lo anterior
@@ -370,7 +352,6 @@ Ejemplo: actualizar un perfil, enviar email, guardar logs y refrescar un `tag`.
 - Menos estado duplicado.
 - Arquitectura más declarativa.
 
----
 
 ## Integración con Formularios Avanzados (RHF y +)
 ### Formas complejas
@@ -383,7 +364,6 @@ Ejemplo: actualizar un perfil, enviar email, guardar logs y refrescar un `tag`.
 - Validación unificada.
 - Estado garantizado en servidor.
 
----
 
 ## Server Actions + Optimización de Rendimiento
 ### Caching interno
@@ -396,7 +376,6 @@ Ejemplo: actualizar un perfil, enviar email, guardar logs y refrescar un `tag`.
 - Delegar side-effects de datos al servidor.
 - Reducir dependencias del bundle.
 
----
 
 ## Casos Reales Avanzados (sin repetir nada previo)
 ### 1. Comercio electrónico
@@ -414,7 +393,6 @@ Ejemplo: actualizar un perfil, enviar email, guardar logs y refrescar un `tag`.
 ### 4. Integración con colas
 - Acción crea una entrada → la cola procesa → `revalidateTag`.
 
----
 
 ## Errores Avanzados a Evitar (Anti-Patrones)
 ### Nuevos sin repetir los base
@@ -424,7 +402,6 @@ Ejemplo: actualizar un perfil, enviar email, guardar logs y refrescar un `tag`.
 - Tratar Server Actions como microservicios (no lo son).
 - Reutilizar acciones dentro de componentes cliente (no funcionará).
 
----
 
 ## Checklist Final de Buenas Prácticas Avanzadas
 - Componentes server por defecto, cliente solo cuando sea obligatorio.

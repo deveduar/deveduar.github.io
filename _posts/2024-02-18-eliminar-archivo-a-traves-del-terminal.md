@@ -1,15 +1,14 @@
----
-date: 2024-02-18 18:02
-title: eliminar archivo a traves del terminal
+tags:
+  - Windows
+creation date: 2024-02-18 18:02
 keywords:
 source:
 status: 📌
-Parent: "[[Area-Sistemas]]"
+Parent: "Area-Sistemas"
+cssclasses:
+  - hide-embedded-header1
+categories: "[powershell](/sistemas/powershell/)"
 public_note: "true"
-category: powershell
-tags:
-  - Windows
----
 # Eliminar archivo a través del terminal
 
 ## Contexto general

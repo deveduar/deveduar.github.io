@@ -1,17 +1,17 @@
----
-date: 2026-01-02 17:28
-title: vulnerabilidades
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Sistemas]]"
-aliases:
-public_note: "true"
-category: ciberseguridad
+creation date: 2026-01-02 17:28
 tags:
   - vulnerabilidades
   - owasp
----
+keywords:
+source:
+status: 🌟
+Parent: "Area-Sistemas"
+cssclasses:
+  - hide-embedded-header1
+categories: "[ciberseguridad](/ciberseguridad/ciberseguridad/)"
+aliases:
+  - Vulnerabilidades
+public_note: "true"
 # vulnerabilidades
 ``
 

@@ -1,18 +1,17 @@
----
-date: 2024-11-19 01:37
-title: Gestion de Negocio
-keywords:
-source:
-status: 🚀
-Parent: "[[Area-Sistemas]]"
-public_note: "true"
-category: Gestion de Negocio
+creation date: 2024-11-19 01:37
 tags:
   - kpi
   - economia
   - negocio
   - analisis
----
+keywords:
+source:
+status: 🚀
+Parent: "Area-Sistemas"
+cssclasses:
+  - hide-embedded-header1
+categories: "[Gestion de Negocio](/uncategorized/gestion-de-negocio/)"
+public_note: "true"
 # Gestión de Negocio
 
 ## Fundamentos

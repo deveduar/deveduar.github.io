@@ -1,17 +1,18 @@
----
-date: 2025-04-14 04:28
-title: DFIR forense
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Sistemas]]"
-aliases:
-public_note: "true"
-category: ciberseguridad
+creation date: 2025-04-14 04:28
 tags:
   - Hacking
   - monitoreo
----
+keywords:
+source:
+status: 🌟
+Parent: "Area-Sistemas"
+cssclasses:
+  - hide-embedded-header1
+  - wide
+categories: "[ciberseguridad](/ciberseguridad/ciberseguridad/)"
+aliases:
+  - DFIR
+public_note: "true"
 # DFIR forense
 ``
 

@@ -1,8 +1,4 @@
----
-title: Celery Conceptos Avanzados y Configuración Profesional
 public_note: "true"
-category: uncategorized
----
 # Celery: Conceptos Avanzados y Configuración Profesional
 
 ## Arquitectura Extendida

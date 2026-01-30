@@ -1,17 +1,17 @@
----
-date: 2024-11-18 17:46
-title: Wordpress
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Prog]]"
-public_note: "true"
-category: Desarrollo web
+creation date: 2024-11-18 17:46
 tags:
   - wordpress
   - PHP
   - ecomerce
----
+keywords:
+source:
+status: 🌟
+Parent: "Area-Prog"
+cssclasses:
+  - hide-embedded-header1
+  - wide
+categories: "[Desarrollo web](/desarrollo%20web/desarrollo-web/)"
+public_note: "true"
 # Wordpress
 
 ## Enlaces Base y Contexto
@@ -22,9 +22,7 @@ tags:
 - [ ] crear template para wp
 - [ ] [ecomerce](/desarrollo%20web/ecomerce/) con wp con local
 	- canvas-web-store.canvas
-	- 
 
----
 
 ## WordPress con Local — Guías, Recursos y Conceptos
 - wordpress con local guias:
@@ -51,7 +49,6 @@ tags:
 	- WP_DEBUG activo solo en local
 	- Control de wp-config en entornos
 
----
 
 ## Proyectos y Modelos de Negocio Soportados
 - own print on demand business
@@ -66,14 +63,12 @@ tags:
 	- amazon
 	- clickbank
 
----
 
 ## Integraciones
 - API printify afiliados
 - Integracion printify y etsy
 - integracion printify y wordpress
 
----
 
 ## Tareas para una WooCommerce Store con Printify
 - Responsive **Print On Demand store** design and setup
@@ -93,7 +88,6 @@ tags:
 - Adding **Live Chat**
 - **Coupon & Discount** System
 
----
 
 ## Notas y Archivos Relacionados
 - Info de wp local server visualevoke wp
@@ -127,7 +121,6 @@ tags:
 	- separación lógica entre estilos del tema y estilos específicos de secciones
 	- evitar cargar scripts innecesarios en páginas donde no se usan
 
----
 
 ## Snippets
 
@@ -295,7 +288,6 @@ add_action('init', 'mytheme_register_portfolio_cpt');
 	- Se aplica el tema usado (activa funciones + estilos + templates).
 	- Render final → HTML enviado al navegador.
 
----
 
 ### 2. Arquitectura General de un Tema
 - **Estructura mínima**
@@ -325,7 +317,6 @@ add_action('init', 'mytheme_register_portfolio_cpt');
 	- Evitar guardar lógica de negocio en el tema.
 	- Plugins gestionan funcionalidad reutilizable.
 
----
 
 ### 3. Hooks y Extensibilidad
 - **Acciones (`do_action`, `add_action`)**
@@ -340,7 +331,6 @@ add_action('init', 'mytheme_register_portfolio_cpt');
 	- Agrupar hooks en archivos del directorio `inc/`.
 	- No saturar `functions.php`.
 
----
 
 ### 4. Jerarquía de Plantillas
 - Concepto fundamental: WordPress elige el archivo más específico posible.
@@ -357,7 +347,6 @@ add_action('init', 'mytheme_register_portfolio_cpt');
 
 - Ventaja: control granular sin lógica compleja.
 
----
 
 ### 5. El Loop
 - Núcleo del render:
@@ -369,7 +358,6 @@ add_action('init', 'mytheme_register_portfolio_cpt');
 	- Loops secundarios usando `WP_Query`.
 	- Parámetros para queries personalizadas.
 
----
 
 ### 6. Arquitectura de Estilos y Scripts
 - **Carga siempre vía `wp_enqueue_*`**
@@ -385,7 +373,6 @@ add_action('init', 'mytheme_register_portfolio_cpt');
 	- Cargar scripts en footer cuando sea posible.
 	- Cargar CSS específico según plantilla (optimización).
 
----
 
 ### 7. Gutenberg y Theme JSON (Arquitectura Moderna)
 - WordPress evoluciona a un sistema *Block Based*.
@@ -398,7 +385,6 @@ add_action('init', 'mytheme_register_portfolio_cpt');
 
 - Plantillas `.html` permiten crear themes sin PHP en partes del diseño.
 
----
 
 ### 8. Custom Post Types y Taxonomías
 - Arquitectura basada en contenido personalizado.
@@ -414,7 +400,6 @@ add_action('init', 'mytheme_register_portfolio_cpt');
 
 - Cada CPT puede tener sus propias plantillas jerárquicas.
 
----
 
 ### 9. Arquitectura de Plugins vs Temas
 - **Temas**:
@@ -430,7 +415,6 @@ add_action('init', 'mytheme_register_portfolio_cpt');
 	- Un tema no debe registrar CPTs permanentes → rompe portabilidad.
 	- Plugins no deben sobrescribir diseño → romperían el tema.
 
----
 
 ### 10. Seguridad y Buenas Prácticas
 - Sanitizar:
@@ -440,7 +424,6 @@ add_action('init', 'mytheme_register_portfolio_cpt');
 - Evitar exponer datos sensibles en templates.
 - Respetar la estructura del core.
 
----
 
 ### 11. Optimización y Rendimiento
 - Minificación de CSS/JS.
@@ -449,7 +432,6 @@ add_action('init', 'mytheme_register_portfolio_cpt');
 - Evitar consultas pesadas en templates.
 - Cache en funciones complejas.
 
----
 
 ### 12. Arquitectura para Desarrollo en Local y Entornos
 - Entorno Local:
@@ -466,7 +448,6 @@ add_action('init', 'mytheme_register_portfolio_cpt');
 	- minificación
 	- backups automáticos
 
----
 
 ### Qué puedes expandir después
 - Arquitectura Headless: WP + NextJS/React
@@ -494,7 +475,6 @@ add_action('init', 'mytheme_register_portfolio_cpt');
 	- Extensibilidad por medio de hooks.
 	- Diseño monolítico pero modularizable.
 
----
 
 ### 2. Ciclo Interno de Carga (WordPress Request Lifecycle)
 1. El navegador hace una petición: `https://tusitio.com/ejemplo`
@@ -516,7 +496,6 @@ Este ciclo es clave, incluso cuando no estás creando temas, porque afecta:
 - carga de plugins
 - APIs internas
 
----
 
 ### 3. Base de Datos Interna y Estructura de Contenidos
 WordPress usa un modelo flexible basado en **posts** para casi todo.
@@ -541,7 +520,6 @@ WordPress usa un modelo flexible basado en **posts** para casi todo.
 
 WordPress es esencialmente un *sistema orientado a entidades dinámicas*, lo que le permite ser un CMS, LMS, ecommerce, intranet, foro o API.
 
----
 
 ### 4. Hooks (Acciones y Filtros)
 Los hooks son la arquitectura de extensibilidad principal del core.
@@ -556,7 +534,6 @@ Características:
 - Todos los plugins y gran parte del core funcionan gracias a ellos.
 - Facilitan un modelo de *event-driven architecture*.
 
----
 
 ### 5. API Internas del Core
 WordPress tiene múltiples APIs internas que forman parte de su arquitectura:
@@ -590,7 +567,6 @@ WordPress tiene múltiples APIs internas que forman parte de su arquitectura:
 - Sistema RBAC simple
 - Permite definir permisos granularmente
 
----
 
 ### 6. Seguridad desde la Arquitectura
 WordPress implementa seguridad en múltiples capas:
@@ -607,7 +583,6 @@ WordPress implementa seguridad en múltiples capas:
 **Regla crucial:**  
 No se debe modificar el core → rompe actualizaciones y seguridad del sistema.
 
----
 
 ### 7. Arquitectura de Plugins
 - Cargados antes que el tema.
@@ -621,7 +596,6 @@ No se debe modificar el core → rompe actualizaciones y seguridad del sistema.
 	- paneles en el admin
 - Deben ser independientes del tema.
 
----
 
 ### 8. Multisite: Arquitectura Avanzada
 WordPress Multisite extiende la arquitectura del core:
@@ -631,7 +605,6 @@ WordPress Multisite extiende la arquitectura del core:
 - Un único conjunto de plugins.
 - Ideal para intranets, SaaS simples, portales multi-marca.
 
----
 
 ### 9. Performance y Arquitectura Interna
 WordPress optimiza varios aspectos:
@@ -648,7 +621,6 @@ Optimizaciones recomendadas:
 - Carga condicional de scripts
 - Transients para cachear operaciones costosas
 
----
 
 ### 10. Arquitectura del Admin (wp-admin)
 - Sistema propio de pantallas:
@@ -662,7 +634,6 @@ Optimizaciones recomendadas:
 - Media Library:
 	- sistema de adjuntos vinculado a posts
 
----
 
 ### 11. WordPress como Plataforma Extensible
 WordPress no es solo un CMS: es una plataforma completa.
@@ -683,7 +654,6 @@ Gracias a:
 - CPTs
 - Tema o Block Theme
 
----
 
 ### Qué se puede expandir si lo deseas
 - Arquitectura Headless en detalle

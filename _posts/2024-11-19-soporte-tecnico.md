@@ -1,17 +1,16 @@
----
-date: 2024-11-19 02:46
-title: soporte tecnico
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Sistemas]]"
-public_note: "true"
-category: infraestructura IT
+creation date: 2024-11-19 02:46
 tags:
   - soporte
   - analisis
   - cloud
----
+keywords:
+source:
+status: 🌟
+Parent: "Area-Sistemas"
+cssclasses:
+  - hide-embedded-header1
+categories: "[infraestructura IT](/infraestructura%20it/infraestructura-it/)"
+public_note: "true"
 # soporte tecnico
 
 - [infraestructura IT](/infraestructura%20it/infraestructura-it/)
@@ -21,7 +20,6 @@ tags:
 - [Redes](/redes/redes/)
 - [Soporte Microinformático](/sistemas/soporte-microinform-tico/)
 
----
 
 ## Introducción al Soporte Técnico
 El soporte técnico abarca la asistencia para resolver incidencias tecnológicas, garantizar la continuidad operativa y guiar al usuario en el uso adecuado de sistemas, hardware y software. Se estructura por **niveles de escalado**, cada uno con un alcance y profundidad técnica diferente.  
@@ -33,7 +31,6 @@ El enfoque profesional implica:
 * mejora de procesos
 * escalado adecuado según complejidad
 
----
 
 ## Niveles de Soporte
 
@@ -54,7 +51,6 @@ Funciones orientadas a la **primera línea** y contacto directo con el usuario. 
 **Recursos**  
 * [¿Qué hace el Soporte Técnico Nivel 1 o Help Desk?](https://www.freelancermap.com/blog/es/que-hace-soporte-tecnico-nivel-1/)
 
----
 
 ### Nivel 2 (N2)
 Responsable de **diagnósticos más profundos** y resolución técnica especializada en sistemas, redes y hardware. Requiere habilidades más avanzadas.
@@ -84,7 +80,6 @@ Responsable de **diagnósticos más profundos** y resolución técnica especiali
 **Recursos**  
 * [¿Qué hace el soporte nivel 2?](https://www.freelancermap.com/blog/es/que-hace-soporte-nivel-2/)
 
----
 
 ### Nivel 3 (N3)
 Nivel experto con foco en problemas complejos, arquitectura y automatización. Suele solaparse con perfiles de [devops](/devops/devops/) o ingeniería especializada.
@@ -96,7 +91,6 @@ Nivel experto con foco en problemas complejos, arquitectura y automatización. S
 * automatización CI/CD para soporte  
 * colaboración directa con desarrollo y operaciones  
 
----
 
 ## Videos y Recursos Multimedia
 
@@ -108,7 +102,6 @@ Nivel experto con foco en problemas complejos, arquitectura y automatización. S
 * empatía y comunicación efectiva  
 * transparencia en tiempos y procesos  
 
----
 
 ## Sistema de Ticketing
 Relacionado: [ticketing](/management/ticketing/)
@@ -122,7 +115,6 @@ Principios clave:
 * evitar reprocesos  
 * plantillas para comunicación eficiente  
 
----
 
 ## Proceso Profesional de Resolución de Incidencias
 
@@ -158,7 +150,6 @@ Ejemplos:
 * carga de CPU  
 * fallos intermitentes  
 
----
 
 ## Soft Skills Esenciales
 * comunicación clara y sin tecnicismos innecesarios  
@@ -168,7 +159,6 @@ Ejemplos:
 * documentación narrativa y técnica  
 * aprendizaje continuo  
 
----
 
 ## Tiempos de Resolución
 * SLAs  
@@ -176,7 +166,6 @@ Ejemplos:
 * escalar sin bloquear  
 * mantener informado al usuario  
 
----
 
 ## Experiencia de Soporte
 * avisos: aclarar tiempos, pasos y expectativas  

@@ -1,13 +1,4 @@
----
-date: 2024-11-06 23:27
-title: Databases
-keywords:
-source:
-status: 🚀
-Parent: "[[Area-Prog]]"
-aliases:
-public_note: "true"
-category: Databases
+creation date: 2024-11-06 23:27
 tags:
   - db
   - MySQL
@@ -19,7 +10,19 @@ tags:
   - json
   - mongodb
   - backend
----
+keywords:
+source:
+status: 🚀
+Parent: "Area-Prog"
+cssclasses:
+  - hide-embedded-header1
+aliases:
+  - db
+  - bases de datos
+  - databases
+  - Bases de datos
+categories: "[Databases](/uncategorized/databases/)"
+public_note: "true"
 # Databases
 
 ## Relacionado
@@ -69,7 +72,6 @@ tags:
 - Backup, Recovery y Snapshots
 - Optimización de consultas y performance tuning
 - [DB-Fundamentos y documentos](/databases/db-fundamentos-y-documentos/) 
-- 
 
 ## ORM y Mapeo de Datos
 - ORM

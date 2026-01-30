@@ -1,16 +1,15 @@
----
-date: 2025-04-14 03:12
-title: Combodo itop
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Sistemas]]"
-public_note: "true"
-category: infraestructura IT
+creation date: 2025-04-14 03:12
 tags:
   - ITIL
   - monitoreo
----
+keywords:
+source:
+status: 🌟
+Parent: "Area-Sistemas"
+cssclasses:
+  - hide-embedded-header1
+categories: "[infraestructura IT](/infraestructura%20it/infraestructura-it/)"
+public_note: "true"
 # Combodo iTop
 
 ## Descripción general

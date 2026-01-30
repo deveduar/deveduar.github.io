@@ -1,20 +1,19 @@
----
-date: 2025-10-19 16:49
-title: E2E - Ejemplos Prácticos Avanzados
+creation date: 2025-10-19 16:49
+tags:
 keywords:
 source:
 status: 📌
-Parent: "[[Area-Prog]]"
+Parent: "Area-Prog"
+cssclasses:
+  - hide-embedded-header1
+categories: "[Testing](/testing/testing/)"
 public_note: "true"
-category: Testing
----
 # E2E - Ejemplos Prácticos Avanzados
 ## ⚙️ Objetivo
 
 Estos ejemplos avanzados de [E2E - End to End Testing](/testing/e2e---end-to-end-testing/) profundizan en casos reales de automatización compleja, simulaciones, paralelización, autenticación persistente, manejo de datos dinámicos, interceptores de red, y validación de estados internos.  
 Se utilizan principalmente [Playwright](/testing/playwright/) y Cypress como base, con técnicas aplicables también a Selenium o WebdriverIO.
 
----
 
 ## 🧩 1. Autenticación Persistente y Reutilización de Sesión (Playwright)
 
@@ -50,7 +49,6 @@ use: {
 
 Ahora todas las pruebas posteriores reutilizan la sesión, evitando autenticarse en cada ejecución.
 
----
 
 ## 🧩 2. Interceptar y Modificar Respuestas de API (Playwright)
 
@@ -81,7 +79,6 @@ test('interceptar respuesta del servidor', async ({ page }) => {
 
 Ideal para aislar pruebas de la infraestructura backend o validar comportamiento ante respuestas personalizadas.
 
----
 
 ## 🧩 3. Validar Estados Internos del Frontend (Cypress + Redux / Zustand)
 
@@ -106,7 +103,6 @@ describe('Gestión de estado global (Redux)', () => {
 
 Permite probar la lógica interna de la aplicación sin depender únicamente del DOM.
 
----
 
 ## 🧩 4. Pruebas Condicionales y Entornos Variables (Playwright)
 
@@ -131,7 +127,6 @@ test('acceso según rol de usuario', async ({ page }) => {
 
 Permite validar permisos y comportamientos adaptados a distintos contextos de despliegue (QA, staging, producción).
 
----
 
 ## 🧩 5. Pruebas Multitab y Comunicación Entre Pestañas (Playwright)
 
@@ -159,7 +154,6 @@ test('sincronización entre pestañas', async ({ browser }) => {
 
 Demuestra control avanzado del entorno multi-pestaña y sincronización de estados.
 
----
 
 ## 🧩 6. Validación Visual (Visual Regression Testing)
 
@@ -181,7 +175,6 @@ test('comparación visual del dashboard', async ({ page }) => {
 
 Detecta regresiones visuales provocadas por cambios de CSS, layout o componentes UI.
 
----
 
 ## 🧩 7. Datos Dinámicos y Factories (Playwright + Faker)
 
@@ -210,7 +203,6 @@ test('crear usuario dinámico', async ({ page }) => {
 
 Los factories permiten tests más realistas y resistentes a cambios de datos.
 
----
 
 ## 🧩 8. Control de Red, Tiempos y Retrasos (Cypress)
 
@@ -236,7 +228,6 @@ describe('Simulación de red lenta y error 500', () => {
 
 Útil para validar comportamiento bajo condiciones reales de latencia o caída del backend.
 
----
 
 ## 🧩 9. Tests Paralelos y Data-driven (Playwright)
 
@@ -267,7 +258,6 @@ for (const caso of casos) {
 
 Cada caso se ejecuta como prueba independiente, lo que facilita cobertura de múltiples combinaciones de entrada.
 
----
 
 ## 🧩 10. Integración con CI/CD y Artifacts Avanzados (Playwright)
 
@@ -303,7 +293,6 @@ jobs:
 
 Este flujo genera reportes detallados por navegador y permite análisis visual tras cada ejecución CI.
 
----
 
 ## 🧠 Conclusiones Prácticas
 

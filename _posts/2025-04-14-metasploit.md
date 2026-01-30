@@ -1,18 +1,17 @@
----
-date: 2025-04-14 18:02
-title: Metasploit
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Sistemas]]"
-public_note: "true"
-category: ciberseguridad
+creation date: 2025-04-14 18:02
 tags:
   - metasploit
   - vulnerabilidades
   - pentesting
   - Hacking
----
+keywords:
+source:
+status: 🌟
+Parent: "Area-Sistemas"
+cssclasses:
+  - hide-embedded-header1
+categories: "[ciberseguridad](/ciberseguridad/ciberseguridad/)"
+public_note: "true"
 # Metasploit
 
 - [vulnerabilidades](/ciberseguridad/vulnerabilidades/)

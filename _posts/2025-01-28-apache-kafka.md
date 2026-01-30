@@ -1,18 +1,18 @@
----
-date: 2025-01-29 00:32
-title: Apache Kafka
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Prog]]"
-public_note: "true"
-category: Backend
+creation date: 2025-01-29 00:32
 tags:
   - apache
   - kafka
   - microservicios
   - devops
----
+keywords:
+source:
+status: 🌟
+Parent: "Area-Prog"
+cssclasses:
+  - hide-embedded-header1
+  - wide
+categories: "[Backend](/backend/backend/)"
+public_note: "true"
 # Apache Kafka
 
 ## Relación con otros dominios

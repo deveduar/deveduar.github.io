@@ -1,16 +1,15 @@
----
-date: 2025-10-26 13:44
-title: surfing keys vim in browser
-keywords:
-source:
-status: 📌
-Parent: "[[Area-Sistemas]]"
-public_note: "true"
-category: Sistemas
+creation date: 2025-10-26 13:44
 tags:
   - Productividad
   - sistemas
----
+keywords:
+source:
+status: 📌
+Parent: "Area-Sistemas"
+cssclasses:
+  - hide-embedded-header1
+categories: "[Sistemas](/sistemas/sistemas/)"
+public_note: "true"
 # surfing keys vim in browser
 
 - [VIM](/sistemas/vim/)

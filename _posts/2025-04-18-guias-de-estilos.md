@@ -1,19 +1,19 @@
----
-date: 2025-04-18 03:23
-title: guias de estilos
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Prog]]"
-public_note: "true"
-category: Frontend
+creation date: 2025-04-18 03:23
 tags:
   - frontend
   - desing
   - CSS
   - design_tokens
   - design_systems
----
+keywords:
+source:
+status: 🌟
+Parent: "Area-Prog"
+cssclasses:
+  - hide-embedded-header1
+  - wide
+categories: "[Frontend](/frontend/frontend/)"
+public_note: "true"
 # guias de estilos
 
 ## Referencias principales

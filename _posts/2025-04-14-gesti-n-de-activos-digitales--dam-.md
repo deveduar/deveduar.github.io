@@ -1,16 +1,15 @@
----
-date: 2025-04-14 18:17
-title: Gestión de Activos Digitales (DAM)
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Sistemas]]"
-public_note: "true"
-category: ciberseguridad
+creation date: 2025-04-14 18:17
 tags:
   - Hacking
   - hardening
----
+keywords:
+source:
+status: 🌟
+Parent: "Area-Sistemas"
+cssclasses:
+  - hide-embedded-header1
+categories: "[ciberseguridad](/ciberseguridad/ciberseguridad/)"
+public_note: "true"
 # Gestión de Activos Digitales (DAM)
 
 - [hardening](/ciberseguridad/hardening/)

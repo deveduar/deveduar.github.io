@@ -1,13 +1,13 @@
----
-date: 2025-10-22 17:27
-title: Arquitectura de Cucumber
+creation date: 2025-10-22 17:27
+tags:
 keywords:
 source:
 status: 📌
-Parent: "[[Area-Prog]]"
+Parent: "Area-Prog"
+cssclasses:
+  - hide-embedded-header1
+categories: "[Testing](/testing/testing/)"
 public_note: "true"
-category: Testing
----
 # Arquitectura de Cucumber
 
 ## Arquitectura de Cucumber

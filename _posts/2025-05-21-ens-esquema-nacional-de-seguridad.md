@@ -1,18 +1,17 @@
----
-date: 2025-05-21 17:44
-title: ENS Esquema Nacional de Seguridad
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Sistemas]]"
-public_note: "true"
-category: infraestructura IT
+creation date: 2025-05-21 17:44
 tags:
   - TI
   - ITIL
   - regulaciones
   - normativas
----
+keywords:
+source:
+status: 🌟
+Parent: "Area-Sistemas"
+cssclasses:
+  - hide-embedded-header1
+categories: "[infraestructura IT](/infraestructura%20it/infraestructura-it/)"
+public_note: "true"
 # ENS Esquema Nacional de Seguridad
 
 - El **Esquema Nacional de Seguridad (ENS)** es la normativa española que establece los principios y requisitos de seguridad que deben cumplir los sistemas de información en la Administración Pública y en aquellos proveedores que gestionen información relacionada con ésta.  

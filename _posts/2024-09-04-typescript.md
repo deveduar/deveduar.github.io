@@ -1,19 +1,17 @@
----
-date: 2024-09-04 19:15
-title: typescript
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Prog]]"
-public_note: "true"
-category: Software engineering
+creation date: 2024-09-04 19:15
 tags:
   - JS
   - typescript
----
+keywords:
+source:
+status: 🌟
+Parent: "Area-Prog"
+cssclasses:
+  - hide-embedded-header1
+categories: "[Software engineering](/software%20engineering/software-engineering/)"
+public_note: "true"
 # typescript
 
--   
 - [Software engineering](/software%20engineering/software-engineering/)
 - [Computer Science](/computer%20science/computer-science/)
 - [nextjs](/frontend/nextjs/)

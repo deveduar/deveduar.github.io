@@ -1,17 +1,16 @@
----
-date: 2025-04-15 19:15
-title: criptografia
-keywords:
-source:
-status: 🚀
-Parent: "[[Area-Sistemas]]"
-public_note: "true"
-category: autenticacion
+creation date: 2025-04-15 19:15
 tags:
   - Hacking
   - ciberseguridad
   - criptografia
----
+keywords:
+source:
+status: 🚀
+Parent: "Area-Sistemas"
+cssclasses:
+  - hide-embedded-header1
+categories: "[autenticacion](/autenticacion/autenticacion/)"
+public_note: "true"
 # Criptografía
 
 - [control de datos](/ciberseguridad/control-de-datos/)
@@ -54,7 +53,6 @@ Su objetivo es asegurar que solo las partes autorizadas puedan acceder o modific
 	- **TLS (Transport Layer Security):** sucesor de SSL, ofrece mayor seguridad y eficiencia.  
 	Ambos se utilizan para establecer canales cifrados sobre TCP/IP.
 
----
 
 ## [PKI infraestructura de clave pública](/autenticacion/pki-infraestructura-de-clave-p-blica/)
 
@@ -70,7 +68,6 @@ La **Infraestructura de Clave Pública (PKI)** proporciona los mecanismos necesa
 Documento electrónico emitido por una CA que vincula una **clave pública** con una **identidad** (persona, organización o dispositivo).  
 Permite autenticar y establecer conexiones seguras.
 
----
 
 ## Tipos de cifrado
 
@@ -102,7 +99,6 @@ Clave privada → Descifrado
 ```
 {% endraw %}
 
----
 
 ## Recursos y guías de estándares criptográficos
 
@@ -127,7 +123,6 @@ Mecanismo que combina un hash criptográfico con una clave secreta para garantiz
 - Autenticación entre las partes  
 Usado en APIs, protocolos de red y firma de tokens.
 
----
 
 ## Operaciones y Construcciones Criptográficas Comunes
 
@@ -149,7 +144,6 @@ Ejemplos:
 Procesos para generar claves fuertes a partir de contraseñas o material base.  
 Funciones típicas: **PBKDF2**, **scrypt**, **Argon2**.
 
----
 
 ## Criptografía aplicada en sistemas
 
@@ -166,7 +160,6 @@ No se almacenan contraseñas en claro; se guardan:
 - Hash lento (Argon2, bcrypt)  
 - Opcional: pepper a nivel de servidor
 
----
 
 ## Criptografía en tránsito y en reposo
 
@@ -184,7 +177,6 @@ Ejemplos:
 - VPN  
 - Túneles cifrados SSH  
 
----
 
 ## Criptografía Post-Cuántica (PQC)
 
@@ -201,7 +193,6 @@ Nuevos estándares resistentes a ataques cuánticos:
 - **FALCON** (firmas)  
 - **SPHINCS+** (firmas basadas en hash)  
 
----
 
 ## Modos de operación en cifrado simétrico
 
@@ -219,7 +210,6 @@ Modos comunes:
 - **AES-GCM**  
 - **ChaCha20-Poly1305**
 
----
 
 ## Criptografía funcional avanzada
 
@@ -240,7 +230,6 @@ Tipos:
 Divide un secreto en múltiples partes, requiriendo un mínimo para reconstruirlo.  
 Ejemplo: **Shamir’s Secret Sharing**.
 
----
 
 ## Seguridad en APIs y Servicios
 
@@ -255,7 +244,6 @@ Más allá de JWT:
 - Refresh Token  
 - Proof-of-Possession tokens (PoP)
 
----
 
 ## Análisis Criptográfico
 
@@ -288,7 +276,6 @@ Modelos formales usados en investigación y certificaciones para asegurar que:
 - El esquema no revela información del mensaje (IND = indistinguishability).
 - Proveen garantías matemáticas bajo escenarios realistas.
 
----
 
 ## Arquitecturas Criptográficas en Sistemas Reales
 
@@ -306,7 +293,6 @@ Los protocolos modernos usan **claves efímeras** (ECDHE).
 ### Backward Secrecy
 Garantiza que un atacante no pueda descifrar mensajes futuros incluso si compromete claves actuales.
 
----
 
 ## Criptografía en Mensajería Segura
 
@@ -321,7 +307,6 @@ Mecanismo de rotación continua y automática de claves que mejora seguridad:
 - *Diffie-Hellman ratchet*  
 - *Double ratchet*
 
----
 
 ## Criptografía en Blockchain y Web3
 
@@ -343,7 +328,6 @@ Permiten verificar que un elemento está incluido en un conjunto sin revelar el 
 - *Proof of Work:* hashes repetidos y medición de dificultad  
 - *Proof of Stake:* firmas y validación
 
----
 
 ## Criptografía en Hardware
 
@@ -364,7 +348,6 @@ Chip dedicado para:
 Generación de claves a partir de micro-variaciones físicas de un chip.  
 Clave que nunca se almacena, solo se “reproduce”.
 
----
 
 ## Cifrado de Flujo y Cifrado de Bloque (Aprofundización)
 
@@ -386,7 +369,6 @@ Propiedades:
 - Redes SPN (Substitution-Permutation Network)  
 Esquemas icónicos: AES (SPN), DES (Feistel)
 
----
 
 ## Criptografía de Curvas Elípticas — Más allá de lo básico
 
@@ -407,7 +389,6 @@ Esquemas icónicos: AES (SPN), DES (Feistel)
 - Más eficiente  
 - Menor carga computacional en dispositivos móviles
 
----
 
 ## Criptografía en el Desarrollo Seguro
 
@@ -429,7 +410,6 @@ Fuentes:
 - Rotación ante incidentes  
 - Versionado de claves
 
----
 
 ## Criptografía y Privacidad de Usuario
 
@@ -448,7 +428,6 @@ Usado en:
 - E-cash  
 - Sistemas de votación electrónicos
 
----
 
 ## Criptografía en Infraestructura de Redes
 
@@ -467,7 +446,6 @@ Cifrado a nivel de red:
 ### DNSSEC
 Protege integridad de consultas DNS mediante firmas digitales.
 
----
 
 ## Auditoría Criptográfica
 

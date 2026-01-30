@@ -1,17 +1,16 @@
----
-date: 2024-12-09 23:51
-title: redes mobiles
-keywords:
-source:
-status: 📌
-Parent: "[[Area-Sistemas]]"
-public_note: "true"
-category: uncategorized
+creation date: 2024-12-09 23:51
 tags:
   - redes
   - network
   - LTE
----
+keywords:
+source:
+status: 📌
+Parent: "Area-Sistemas"
+cssclasses:
+  - hide-embedded-header1
+  - wide
+public_note: "true"
 # redes mobiles
 
 - diseño de redes moviles y LTE
@@ -30,4 +29,3 @@ tags:
 	- [Capacidad y funcionamiento de una red GSM 2G - YouTube](https://youtu.be/c_cce3yhTRo) 
 - iBwave
 	- [iBwave Design: A single solution to streamline your design projects.](https://www.ibwave.com/ibwave-design/) 
-- 

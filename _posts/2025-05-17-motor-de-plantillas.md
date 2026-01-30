@@ -1,15 +1,16 @@
----
-date: 2025-05-17 17:40
-title: Motor de plantillas
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Prog]]"
-public_note: "true"
-category: Desarrollo web
+creation date: 2025-05-17 17:40
 tags:
   - template-engine
----
+keywords:
+  - template engine
+source:
+status: 🌟
+Parent: "Area-Prog"
+cssclasses:
+  - hide-embedded-header1
+  - wide
+categories: "[Desarrollo web](/desarrollo%20web/desarrollo-web/)"
+public_note: "true"
 # Motor de plantillas
 
 - [Desarrollo web](/desarrollo%20web/desarrollo-web/)
@@ -226,7 +227,6 @@ Para minimizar la carga del servidor, los motores pueden:
 * Rendering híbrido: mezcla entre SSR y SPA.
 * Templating Headless: renderización desacoplada para APIs o microservicios.
 
----
 
 **En resumen**, los motores de plantillas son una capa fundamental de generación de contenido estructurado, con aplicaciones que abarcan desde sitios estáticos y dashboards internos hasta servicios distribuidos y documentación dinámica. Su evolución apunta a integrarse con flujos de datos en tiempo real, pipelines automatizados y entornos sin frontend explícito.
 
@@ -363,7 +363,6 @@ Esto permite crear *vistas consistentes y accesibles* sin necesidad de un framew
 * Renderización de contenido en CLI o terminal con plantillas basadas en texto.
 * Generación de reportes técnicos o analíticos con datos en tiempo real (ej. Grafana o scripts Python).
 
----
 
 **Conclusión extendida:**
 Los motores de plantillas se han convertido en herramientas transversales entre backend, documentación, DevOps y automatización empresarial. Su evolución apunta hacia la **composición dinámica**, la **integración en pipelines de despliegue continuo**, y la **adaptación semántica y contextual** del contenido generado, posicionándolos como una capa esencial en la infraestructura de generación de interfaces, datos y comunicación entre sistemas.

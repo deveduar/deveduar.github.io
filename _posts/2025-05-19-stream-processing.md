@@ -1,17 +1,17 @@
----
-date: 2025-05-19 04:38
-title: Stream Processing
-keywords:
-source:
-status: 🚀
-Parent: "[[Area-Prog]]"
-public_note: "true"
-category: Backend
+creation date: 2025-05-19 04:38
 tags:
   - stream_processing
   - kafka
   - CS
----
+keywords:
+source:
+status: 🚀
+Parent: "Area-Prog"
+cssclasses:
+  - hide-embedded-header1
+  - wide
+categories: "[Backend](/backend/backend/)"
+public_note: "true"
 # Stream Processing
 
 - [Backend](/backend/backend/)
@@ -294,7 +294,7 @@ tags:
 # PKM de Conceptos de Stream Processing
 
 ## Conceptos Fundamentales
-- [Stream Processing](/backend/stream-processing/)
+- [Stream Processing](/uncategorized/stream-processing/)
 - Event Streaming
 - Micro-batches
 - True Streaming

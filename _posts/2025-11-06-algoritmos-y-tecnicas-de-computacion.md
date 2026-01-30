@@ -1,21 +1,19 @@
----
-date: 2025-11-06 19:04
-title: algoritmos y tecnicas de computacion
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Prog]]"
-public_note: "true"
-category: Computer Science
+creation date: 2025-11-06 19:04
 tags:
   - computer_Science
   - CS
----
+keywords:
+source:
+status: 🌟
+Parent: "Area-Prog"
+cssclasses:
+  - hide-embedded-header1
+categories: "[Computer Science](/computer%20science/computer-science/)"
+public_note: "true"
 # algoritmos y tecnicas de computacion
 
 - [Computer Science](/computer%20science/computer-science/)
 - diagramas UML
-- 
 ## Sort
 - Técnicas de ordenación comunes:
 	- **Bubble Sort**: intercambios sucesivos de elementos adyacentes.
@@ -31,7 +29,6 @@ tags:
 		- O(n²) para métodos simples.  
 		- O(n log n) para métodos eficientes (Merge, Quick, Heap).
 
----
 
 ## Search
 
@@ -53,7 +50,6 @@ tags:
 - Breadth-first search - Wikipedia-Breadth-first_search
 - Difference between Binary Tree and Binary Search Tree-difference-between-binary-tree-and-binary-search-tree
 
----
 
 ## backtracking
 - Técnica de **exploración sistemática** que construye soluciones parciales y retrocede cuando no cumplen restricciones.
@@ -68,7 +64,6 @@ tags:
 - Vuelta atrás - Wikipedia, la enciclopedia libre-Vuelta_atr%C3%A1s
 - 2.4 Backtracking  Programación, refactoriza tu mente-backtracking
 
----
 
 ## programacion paralela
 - Ejecución de múltiples tareas simultáneamente.  
@@ -82,7 +77,6 @@ tags:
 	- Coordinación con **futuros**, **promesas** y **async/await**.
 - Relación con Recursion: tareas recursivas paralelizables (divide & conquer paralelos).
 
----
 
 ## Recursion
 - Función que se llama a sí misma hasta alcanzar una **condición base**.
@@ -102,7 +96,6 @@ def factorial(n):
 ```
 {% endraw %}`
 
----
 
 ## Paso por referencia o paso por valor
 
@@ -111,7 +104,6 @@ def factorial(n):
 * **Copia superficial (shallow copy)**: copia referencias, no objetos anidados.
 * **Copia profunda (deep copy)**: crea duplicados completos.
 
----
 
 ## UML y diagramas
 
@@ -123,7 +115,6 @@ def factorial(n):
   * UML → conjunto de notaciones.
   * Diagramas → instancias específicas de vista del sistema.
 
----
 
 ## Interfaces, clases abstractas y herencia múltiple
 
@@ -133,7 +124,6 @@ def factorial(n):
 * Recomendación:
   * Usar **interfaces + composición** antes que herencia múltiple.
 
----
 
 ## Acoplamiento y cohesión
 
@@ -144,7 +134,6 @@ def factorial(n):
 * Comparación:
   * Alta cohesión + bajo acoplamiento → diseño ideal.
 
----
 
 ## Previsión de cambios y efectos
 
@@ -155,7 +144,6 @@ def factorial(n):
   * **Liskov**: sustitución de subtipos.
   * **DI/IoC** facilitan extensibilidad.
 
----
 
 ## DI e IoC (Inversión de Control)
 
@@ -169,7 +157,6 @@ def factorial(n):
 
   * Constructor, setter o interface injection.
 
----
 
 ## Composición vs herencia
 
@@ -181,7 +168,6 @@ def factorial(n):
   * Herencia → rígida, jerárquica.
 * Principio: *"Prefer composition over inheritance."*
 
----
 
 ## Idempotencia
 
@@ -191,7 +177,6 @@ def factorial(n):
   * HTTP PUT y DELETE deben ser idempotentes.
 * Útil en sistemas distribuidos, transacciones y APIs.
 
----
 
 ## Callbacks y funciones acumuladoras
 
@@ -207,7 +192,6 @@ const sum = arr => arr.reduce((acc, val) => acc + val, 0);
 
 * Riesgos: *callback hell* → mitigado por promesas y `async/await`.
 
----
 
 ## HOF (Higher Order Functions)
 
@@ -219,7 +203,6 @@ const sum = arr => arr.reduce((acc, val) => acc + val, 0);
   * Reutilización de lógica.
 * Base de [PF Programación Funcional](/computer%20science/pf-programaci-n-funcional/) junto a **inmutabilidad** y **funciones puras**.
 
----
 
 ## NPI (Notación Polaca Inversa) [mates](/uncategorized/mates/)
 
@@ -268,7 +251,6 @@ def eval_rpn(tokens):
 	- **Big-Theta (Θ)**: comportamiento promedio.  
 	- **Big-O (O)**: límite superior.
 
----
 
 ## Estructuras y técnicas complementarias de búsqueda y ordenación
 
@@ -305,7 +287,6 @@ def binary_search(arr, target):
 * Algoritmos modernos (como **Timsort**) combinan **Merge Sort + Insertion Sort** según el tamaño de las sublistas.
 * Mejora el rendimiento en datos parcialmente ordenados.
 
----
 
 ## Técnicas avanzadas de exploración y optimización
 
@@ -336,7 +317,6 @@ def fib(n, memo={}):
   * **Bottom-up (tabulation)**
   * Optimización de espacio mediante reutilización de estados.
 
----
 
 ## Grafos y algoritmos asociados
 
@@ -355,7 +335,6 @@ def fib(n, memo={}):
 
   * Ruteo, planificación, análisis de dependencias, redes.
 
----
 
 ## Concurrencia, paralelismo y asincronía
 
@@ -374,7 +353,6 @@ def fib(n, memo={}):
   * **Lock-free structures**, **atomics**, **CAS (compare-and-swap)**.
   * **Thread pools** y **work stealing** (asignación dinámica de hilos).
 
----
 
 ## Diseño y arquitectura orientada a cambios
 
@@ -416,7 +394,6 @@ print(s.execute(3, 4))  # 7
 ```
 {% endraw %}
 
----
 
 ## Arquitectura y patrones de control
 
@@ -425,7 +402,6 @@ print(s.execute(3, 4))  # 7
 * **AOP (Programación orientada a aspectos)** → permite añadir comportamientos transversales (logs, seguridad) sin modificar código principal.
 * **Idempotencia** y **side-effects** controlados en sistemas distribuidos y APIs.
 
----
 
 ## Evaluación funcional y transformación de datos
 
@@ -451,7 +427,6 @@ console.log(add(2)(3)); // 5
 * Reduce consumo de recursos y permite flujos infinitos.
 * Ejemplo: generadores en Python (`yield`).
 
----
 
 ## Pilas, colas y NPI
 
@@ -462,7 +437,6 @@ console.log(add(2)(3)); // 5
   * **Deque (double-ended queue)** → inserción y eliminación en ambos extremos.
   * **Priority Queue / Heap** → prioriza elementos según peso o coste.
 
----
 
 ## Conceptos de seguridad y consistencia en algoritmos
 
@@ -471,7 +445,6 @@ console.log(add(2)(3)); // 5
 * **Determinismo** → misma entrada = mismo resultado (clave para reproducibilidad).
 * **Consistencia eventual** → sistemas distribuidos que convergen con el tiempo (en contraste con consistencia fuerte).
 
----
 
 ## Tendencias actuales y paradigmas emergentes
 
@@ -488,7 +461,6 @@ console.log(add(2)(3)); // 5
 
   * Grover (búsqueda O(√n)), Shor (factorización en tiempo polinómico).
 
----
 
 ## Conclusión
 
@@ -508,7 +480,6 @@ Integra conceptos de rendimiento, diseño, optimización y arquitectura para for
 	- Paradigma condiciona **cómo se expresan y optimizan** los algoritmos.
 	- Ej: Dijkstra en funcional → recursion + listas inmutables; en imperativo → estructuras mutables + bucles.
 
----
 
 ## Técnicas de optimización de algoritmos
 - **Memoización avanzada**:
@@ -523,7 +494,6 @@ Integra conceptos de rendimiento, diseño, optimización y arquitectura para for
 - **Optimización incremental**:
 	- Evitar recomputaciones totales ante pequeñas variaciones en la entrada (ej. algoritmos de streaming).
 
----
 
 ## Técnicas de evaluación y pruebas de algoritmos
 - **Testing determinístico**:
@@ -540,7 +510,6 @@ Integra conceptos de rendimiento, diseño, optimización y arquitectura para for
 	- Python: `timeit`, `cProfile`, `pytest-benchmark`.
 	- C/C++: `gprof`, `perf`, `valgrind`.
 
----
 
 ## Estructuras de datos avanzadas y sus implicaciones algorítmicas
 - **Árboles autoequilibrados**:
@@ -557,7 +526,6 @@ Integra conceptos de rendimiento, diseño, optimización y arquitectura para for
 - **Graph embeddings**:
 	- Representaciones vectoriales de grafos para aprendizaje o predicción.
 
----
 
 ## Paradigmas de resolución de problemas
 - **Greedy (voraces)**:
@@ -575,7 +543,6 @@ Integra conceptos de rendimiento, diseño, optimización y arquitectura para for
 - **Algoritmos estocásticos**:
 	- Incorporan aleatoriedad controlada (Monte Carlo, Las Vegas).
 
----
 
 ## Algoritmos distribuidos y consistencia
 - **Modelos de comunicación**:
@@ -593,7 +560,6 @@ Integra conceptos de rendimiento, diseño, optimización y arquitectura para for
 - **Patrones de consistencia eventual**:
 	- CRDTs, gossip protocols, leader election.
 
----
 
 ## Análisis de grafos avanzado
 - **Centralidad y métricas estructurales**:
@@ -609,7 +575,6 @@ Integra conceptos de rendimiento, diseño, optimización y arquitectura para for
 - Aplicaciones:
 	- Redes sociales, biología computacional, sistemas de recomendación.
 
----
 
 ## Teoría de autómatas y algoritmos formales
 - **Autómatas finitos**:
@@ -624,7 +589,6 @@ Integra conceptos de rendimiento, diseño, optimización y arquitectura para for
 - **Lenguajes decidibles vs indecidibles**:
 	- Ejemplo: problema de la parada (Halting Problem).
 
----
 
 ## Complejidad computacional y teoría de clases
 - **P, NP, NP-completo, NP-hard**:
@@ -638,7 +602,6 @@ Integra conceptos de rendimiento, diseño, optimización y arquitectura para for
 - **Randomized algorithms**:
 	- Reducen complejidad esperada mediante aleatoriedad (QuickSelect, Bloom filters).
 
----
 
 ## Algoritmos en inteligencia artificial
 - **Búsqueda informada**:
@@ -654,7 +617,6 @@ Integra conceptos de rendimiento, diseño, optimización y arquitectura para for
 - **Teoría de juegos algorítmica**:
 	- Equilibrio de Nash, subasta de Vickrey, estrategias adaptativas.
 
----
 
 ## Algoritmos cuánticos
 - **Principios**:
@@ -670,7 +632,6 @@ Integra conceptos de rendimiento, diseño, optimización y arquitectura para for
 - Aplicaciones futuras:
 	- Criptografía post-cuántica, simulación molecular, optimización.
 
----
 
 ## Criptografía y algoritmos de seguridad
 - **Criptografía simétrica**: AES, DES → misma clave para cifrar/descifrar.
@@ -683,7 +644,6 @@ Integra conceptos de rendimiento, diseño, optimización y arquitectura para for
 - **Cifrado homomórfico**:
 	- Permite operar sobre datos cifrados sin desencriptar.
 
----
 
 ## Algoritmos en sistemas y redes
 - **Algoritmos de planificación de CPU**:
@@ -697,7 +657,6 @@ Integra conceptos de rendimiento, diseño, optimización y arquitectura para for
 - **Sistemas de archivos y estructuras persistentes**:
 	- B+ Trees, Log-Structured Merge Trees (LSM).
 
----
 
 ## Visualización, geometría y gráficos computacionales
 - **Algoritmos geométricos**:
@@ -712,7 +671,6 @@ Integra conceptos de rendimiento, diseño, optimización y arquitectura para for
 - **Computación visual e IA gráfica**:
 	- Algoritmos de segmentación, detección de bordes, flujo óptico.
 
----
 
 ## Conclusión
 Esta expansión complementaria cubre ámbitos **formales, distribuidos, probabilísticos, de IA y de sistemas**, ampliando los enfoques algorítmicos hacia paradigmas modernos (cuántico, reactivo, evolutivo, criptográfico).  

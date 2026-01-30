@@ -1,13 +1,13 @@
----
-date: 2025-10-20 18:37
-title: Cobertura de código en Jest y análisis con SonarQube
+creation date: 2025-10-20 18:37
+tags:
 keywords:
 source:
 status: 📌
-Parent: "[[Area-Prog]]"
+Parent: "Area-Prog"
+cssclasses:
+  - hide-embedded-header1
+categories: "[Testing](/testing/testing/)"
 public_note: "true"
-category: Testing
----
 # Cobertura de código en Jest y análisis con SonarQube
 
 - [Testing](/testing/testing/)

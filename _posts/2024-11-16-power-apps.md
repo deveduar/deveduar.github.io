@@ -1,16 +1,16 @@
----
-date: 2024-11-16 20:54
-title: power apps
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Prog]]"
-public_note: "true"
-category: Desarrollo multiplataforma
+creation date: 2024-11-16 20:54
 tags:
   - powerapps
   - Windows
----
+keywords:
+source:
+status: 🌟
+Parent: "Area-Prog"
+cssclasses:
+  - hide-embedded-header1
+  - wide
+categories: "[Desarrollo multiplataforma](/desarrollo%20multiplataforma/desarrollo-multiplataforma/)"
+public_note: "true"
 # Power Apps
 
 ## Concepto general

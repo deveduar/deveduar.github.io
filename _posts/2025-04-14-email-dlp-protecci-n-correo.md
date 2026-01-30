@@ -1,17 +1,17 @@
----
-date: 2025-04-14 18:16
-title: Email DLP Protección Correo
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Sistemas]]"
-public_note: "true"
-category: ciberseguridad
+creation date: 2025-04-14 18:16
 tags:
   - Hacking
   - ciberseguridad
   - hardening
----
+keywords:
+source:
+status: 🌟
+Parent: "Area-Sistemas"
+cssclasses:
+  - hide-embedded-header1
+  - wide
+categories: "[ciberseguridad](/ciberseguridad/ciberseguridad/)"
+public_note: "true"
 # Email DLP — Protección de Correo
 ``
 
@@ -140,7 +140,7 @@ tags:
 # Herramientas, Frameworks y Enfoque Práctico para Email DLP
 
 - [hardening](/ciberseguridad/hardening/)
-- [Email DLP Protección Correo](/ciberseguridad/email-dlp-protecci-n-correo/)
+- [Email DLP Protección Correo](/uncategorized/email-dlp-protecci-n-correo/)
 
 ## Frameworks y Estándares Relevantes
 - **NIST 800-53 / 800-171**  

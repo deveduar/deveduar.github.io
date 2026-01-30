@@ -1,8 +1,4 @@
----
-title: Guía Práctica Completa de Celery
 public_note: "true"
-category: uncategorized
----
 # Guía Práctica Completa de Celery
 
 ## Configuración Inicial

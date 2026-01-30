@@ -1,17 +1,18 @@
----
-date: 2025-04-15 17:50
-title: ciclo de vida de vulnerabilidades
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Sistemas]]"
-aliases:
-public_note: "true"
-category: ciberseguridad
+creation date: 2025-04-15 17:50
 tags:
   - Hacking
   - vulnerabilidades
----
+keywords:
+source:
+status: 🌟
+Parent: "Area-Sistemas"
+cssclasses:
+  - hide-embedded-header1
+  - wide
+categories: "[ciberseguridad](/ciberseguridad/ciberseguridad/)"
+aliases:
+  - Vulnerability Lifecycle
+public_note: "true"
 # Ciclo de vida de vulnerabilidades
 ``
 

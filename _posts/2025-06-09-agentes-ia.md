@@ -1,17 +1,16 @@
----
-date: 2025-06-09 14:47
-title: Agentes IA
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Prog]]"
-public_note: "true"
-category: Automatizacion y Build
+creation date: 2025-06-09 14:47
 tags:
   - AI
   - agentes
   - automatizacion
----
+keywords:
+source:
+status: 🌟
+Parent: "Area-Prog"
+cssclasses:
+  - hide-embedded-header1
+categories: "[Automatizacion y Build](/automatizacion%20y%20build/automatizacion-y-build/)"
+public_note: "true"
 # Agentes IA
 
 ## Concepto de Agentes de IA

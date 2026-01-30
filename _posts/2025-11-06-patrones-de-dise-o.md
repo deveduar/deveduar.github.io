@@ -1,17 +1,16 @@
----
-date: 2025-11-06 15:45
-title: Patrones de diseño
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Prog]]"
-public_note: "true"
-category: Computer Science
+creation date: 2025-11-06 15:45
 tags:
   - computer_Science
   - CS
-  - patrones_diseo
----
+  - patrones_diseño
+keywords:
+source:
+status: 🌟
+Parent: "Area-Prog"
+cssclasses:
+  - hide-embedded-header1
+categories: "[Computer Science](/computer%20science/computer-science/)"
+public_note: "true"
 # Patrones de diseño
 
 - [Computer Science](/computer%20science/computer-science/)
@@ -22,7 +21,6 @@ tags:
 - [POO Programación Orientada a Objetos](/computer%20science/poo-programaci-n-orientada-a-objetos/)
 - [Backend](/backend/backend/)
 
----
 
 ## Clasificación general
 
@@ -44,7 +42,6 @@ Patrones que facilitan la creación de objetos sin acoplar el código a clases c
 	- Crea nuevos objetos copiando instancias existentes (clonación).
 	- Ideal para casos donde la creación desde cero es costosa (por ejemplo, estructuras preconfiguradas o pesadas).
 
----
 
 ### Structural Patterns
 Patrones que facilitan la **composición y organización de clases y objetos** para formar estructuras flexibles y escalables.
@@ -68,7 +65,6 @@ Patrones que facilitan la **composición y organización de clases y objetos** p
 	- Proporciona un objeto sustituto o intermediario que controla el acceso a otro.
 	- Se usa para control de acceso, carga diferida, logging, o conexiones remotas.
 
----
 
 ### Behavioral Patterns
 Patrones que se centran en la **comunicación y responsabilidad entre objetos**.
@@ -85,7 +81,6 @@ Patrones que se centran en la **comunicación y responsabilidad entre objetos**.
 		- **Notify**: método que comunica los cambios.
 	- Ejemplo: sistemas de eventos, interfaces reactivas, o data-binding.
 
----
 
 ## Patrones arquitectónicos
 
@@ -95,7 +90,6 @@ Patrones que se centran en la **comunicación y responsabilidad entre objetos**.
 	- Permite optimizar la respuesta y estructura de datos para las necesidades de cada cliente.
 	- Mejora la mantenibilidad y desacopla la lógica de negocio del cliente.
 
----
 
 ### MVC, MVP, MVVM, MVVM-C y VIPER
 
@@ -116,7 +110,6 @@ Patrones que se centran en la **comunicación y responsabilidad entre objetos**.
 	- Arquitectura usada en iOS que promueve la separación estricta de responsabilidades.
 	- El **Interactor** maneja la lógica de negocio, el **Router** la navegación, y el **Presenter** comunica vista y lógica.
 
----
 
 ## Patrón Criteria
 
@@ -135,7 +128,6 @@ Patrones que se centran en la **comunicación y responsabilidad entre objetos**.
 	- **Convertidores** para transformar filtros en consultas reales (SQL, ORM, etc.).
 	- Soporte para **paginación**, ordenación y combinaciones lógicas de criterios.
 
----
 
 ## Patrones de concurrencia
 
@@ -147,7 +139,6 @@ Patrones que se centran en la **comunicación y responsabilidad entre objetos**.
 	- Maneja múltiples flujos de eventos concurrentes de forma no bloqueante.
 	- Utilizado en servidores de alto rendimiento y sistemas reactivos.
 
----
 
 ## Código de ejemplo
 
@@ -201,7 +192,6 @@ clientCode(new ConcreteCreatorB());
 ```
 {% endraw %}`
 
----
 
 ### Observer Pattern (TypeScript)
 
@@ -268,7 +258,6 @@ subject.setState(5);
 	- Mejora la mantenibilidad y adherencia a Inversión de Dependencias (principio SOLID).
 - **Ejemplo de uso:** frameworks como Angular, Spring o NestJS.
 
----
 
 ### Inversion of Control (IoC)
 - Principio que cede el control de la creación y gestión de objetos a un contenedor o framework.
@@ -277,7 +266,6 @@ subject.setState(5);
 	- Desacopla la aplicación del ciclo de vida de sus componentes.
 	- Facilita la configuración declarativa (por ejemplo, mediante archivos YAML o JSON).
 
----
 
 ### Event Sourcing
 - Los cambios en el estado del sistema se almacenan como una **secuencia de eventos inmutables**.
@@ -291,7 +279,6 @@ subject.setState(5);
 	- Complejidad en la rehidratación de estado.
 	- Necesidad de manejar versiones de eventos.
 
----
 
 ### CQRS (Command Query Responsibility Segregation)
 - Separa las operaciones de **lectura (Query)** y **escritura (Command)** en modelos distintos.
@@ -303,7 +290,6 @@ subject.setState(5);
 	- A menudo se combinan, donde los comandos generan eventos y las consultas leen proyecciones derivadas de ellos.
 - [websockets](/backend/websockets/)
 - registro de eventos
----
 
 ### Repository Pattern
 - Abstracción que actúa como intermediario entre la capa de dominio y la capa de datos.
@@ -321,14 +307,12 @@ interface UserRepository {
 ```
 {% endraw %}
 
----
 
 ### Unit of Work
 - Coordina las operaciones sobre múltiples repositorios como una única transacción.
 - **Objetivo:** garantizar consistencia y evitar estados intermedios corruptos.
 - Se usa en combinación con **Repository Pattern** y ORMs (como Hibernate o TypeORM).
 
----
 
 ## Patrones estructurales avanzados
 
@@ -337,7 +321,6 @@ interface UserRepository {
 - El **Facade** actúa como punto de entrada único, mientras que el **DI Container** administra la inyección de dependencias.
 - Ejemplo: en sistemas grandes, la fachada puede encapsular APIs, bases de datos y servicios externos.
 
----
 
 ### Microkernel (Plugin Architecture)
 - Núcleo mínimo que ofrece la infraestructura base, mientras los módulos o plugins añaden funcionalidades.
@@ -346,14 +329,12 @@ interface UserRepository {
 	- Facilita el mantenimiento y personalización.
 - **Ejemplo:** sistemas de IDEs, navegadores, o plataformas de videojuegos.
 
----
 
 ### Proxy avanzado: Lazy Loading y Caching
 - **Lazy Loading:** retrasa la carga de recursos hasta que son necesarios.
 - **Caching Proxy:** almacena respuestas de un objeto costoso para acelerar las subsiguientes peticiones.
 - **Ejemplo:** ORM que retrasa la carga de relaciones (`lazy relationships`).
 
----
 
 ## Patrones de comportamiento avanzados
 
@@ -365,14 +346,12 @@ interface UserRepository {
 	- `Receiver`: contiene la lógica de negocio real.
 - **Ejemplo de uso:** implementaciones de `undo/redo`, colas de tareas.
 
----
 
 ### State Pattern
 - Permite que un objeto altere su comportamiento cuando cambia su estado interno.
 - **Diferencia con Strategy:** en `State`, los estados pueden transicionar entre sí; en `Strategy`, las estrategias son seleccionadas externamente.
 - **Ejemplo:** una máquina de estados para el ciclo de vida de una orden o sesión.
 
----
 
 ### Chain of Responsibility
 - Permite pasar una solicitud a través de una cadena de manejadores hasta que uno la procese.
@@ -381,14 +360,12 @@ interface UserRepository {
 	- Permite añadir nuevos manejadores sin alterar el código existente.
 - **Ejemplo:** middleware en frameworks web (Express, Django, etc.).
 
----
 
 ### Mediator Pattern
 - Centraliza la comunicación entre múltiples objetos (colegas), evitando dependencias directas.
 - **Aplicación:** sistemas de UI, chatrooms, o flujos coordinados.
 - **Ejemplo:** un componente UI notifica al Mediator en lugar de comunicarse con otros directamente.
 
----
 
 ## Patrones arquitectónicos complementarios
 
@@ -402,7 +379,6 @@ interface UserRepository {
 	- Escalabilidad y desacoplamiento.
 	- Ideal para sistemas distribuidos y microservicios.
 
----
 
 ### Layered Architecture
 - Divide el sistema en capas con responsabilidades claras:
@@ -414,7 +390,6 @@ interface UserRepository {
 	- Aislamiento entre lógica de negocio y detalles técnicos.
 	- Combinable con otros patrones (Repository, Service, Facade).
 
----
 
 ### Hexagonal Architecture (Ports and Adapters)
 - También llamada **Arquitectura Limpia** o **Clean Architecture**.
@@ -424,7 +399,6 @@ interface UserRepository {
 	- Independencia de frameworks o bases de datos.
 - **Relación:** extensión conceptual de los patrones **Adapter** y **Dependency Inversion**.
 
----
 
 ## Patrones de concurrencia y reactividad
 
@@ -445,7 +419,6 @@ interface UserRepository {
 - Se usa en combinación con colas o cron jobs.
 - **Ejemplo:** actualización de cachés o limpieza de logs.
 
----
 
 ## Patrones emergentes y modernos
 
@@ -470,7 +443,6 @@ interface UserRepository {
 - Inspirado en los compartimentos estancos de los barcos.
 - **Ejemplo:** separar hilos o conexiones por servicio.
 
----
 
 ## Recursos y vínculos útiles
 - Refactoring Guru - Design Patterns
@@ -482,12 +454,11 @@ interface UserRepository {
 
 # Patrones de diseño — Ejemplos de código
 
-- [Patrones de diseño](/computer%20science/patrones-de-dise-o/)
+- [Patrones de diseño](/uncategorized/patrones-de-dise-o/)
 - Arquitectura de Software
 - [POO Programación Orientada a Objetos](/computer%20science/poo-programaci-n-orientada-a-objetos/)
 - [SOLID](/computer%20science/solid/)
 
----
 
 ## 🧱 PATRONES CREACIONALES
 
@@ -537,7 +508,6 @@ creators.forEach(c => c.deliver());
 ```
 {% endraw %}`
 
----
 
 ### Abstract Factory (Java)
 
@@ -587,7 +557,6 @@ public class App {
 ```
 {% endraw %}
 
----
 
 ### Builder Pattern (Python)
 
@@ -633,7 +602,6 @@ print(house)
 ```
 {% endraw %}
 
----
 
 ### Prototype Pattern (JavaScript)
 
@@ -659,7 +627,6 @@ console.log(doc1, doc2);
 ```
 {% endraw %}
 
----
 
 ## 🧩 PATRONES ESTRUCTURALES
 
@@ -692,7 +659,6 @@ newSystem.pay(250);
 ```
 {% endraw %}
 
----
 
 ### Decorator Pattern (Python)
 
@@ -724,7 +690,6 @@ notifier.send("Actualización del sistema completada ✅")
 ```
 {% endraw %}
 
----
 
 ### Proxy Pattern (Python)
 
@@ -752,7 +717,6 @@ service.request()
 ```
 {% endraw %}
 
----
 
 ## ⚙️ PATRONES DE COMPORTAMIENTO
 
@@ -795,7 +759,6 @@ new Context(new BubbleSort()).execute(dataset);
 ```
 {% endraw %}
 
----
 
 ### Observer Pattern (TypeScript)
 
@@ -844,7 +807,6 @@ market.setPrice("AAPL", 175.5);
 ```
 {% endraw %}
 
----
 
 ### Command Pattern (Python)
 
@@ -892,7 +854,6 @@ remote.press("off")
 ```
 {% endraw %}
 
----
 
 ### State Pattern (JavaScript)
 
@@ -938,7 +899,6 @@ context.request();
 ```
 {% endraw %}
 
----
 
 ## 🏗️ PATRONES ARQUITECTÓNICOS
 
@@ -975,7 +935,6 @@ console.log(repo.findByEmail("edu@domain.com"));
 ```
 {% endraw %}
 
----
 
 ### Event Sourcing + CQRS (Python simplificado)
 
@@ -1014,7 +973,6 @@ print("Saldo actual:", acc.balance)
 ```
 {% endraw %}
 
----
 
 ## ⚡ PATRONES DE CONCURRENCIA
 
@@ -1036,7 +994,6 @@ with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:
 ```
 {% endraw %}
 
----
 
 ### Reactor Pattern (Node.js)
 
@@ -1055,7 +1012,6 @@ server.listen(4000, () => console.log("Servidor Reactor en puerto 4000"));
 ```
 {% endraw %}
 
----
 
 ## 🔗 Recursos relacionados
 
@@ -1066,15 +1022,13 @@ server.listen(4000, () => console.log("Servidor Reactor en puerto 4000"));
 * CQRS y Event Sourcing
 * SOLID y principios de diseño
 
----
 
 # Patrones de diseño — Tests y escenarios de integración
 
-- [Patrones de diseño](/computer%20science/patrones-de-dise-o/)
+- [Patrones de diseño](/uncategorized/patrones-de-dise-o/)
 - Arquitectura de Software
 - [SOLID](/computer%20science/solid/)
 
----
 
 ## ✅ Escenario 1 — Factory + Strategy + Observer (Sistema de pagos modular)
 
@@ -1206,7 +1160,6 @@ const premiumPayment = new PaymentService(new PremiumFee(), eventBus);
 ```
 {% endraw %}
 
----
 
 ## ✅ Escenario 2 — Builder + Repository + Unit of Work (Sistema de pedidos)
 
@@ -1303,7 +1256,6 @@ print("Pedidos guardados:", ids)
 ```
 {% endraw %}
 
----
 
 ## ✅ Escenario 3 — Adapter + Facade + Strategy (Sistema de envío logístico)
 
@@ -1406,7 +1358,6 @@ console.log(facade2.processShipment(pkg));
 ```
 {% endraw %}
 
----
 
 ## ✅ Escenario 4 — Chain of Responsibility + Command + Observer (Procesador de operaciones financieras)
 
@@ -1500,7 +1451,6 @@ print(result)
 ```
 {% endraw %}
 
----
 
 ## ✅ Escenario 5 — Microkernel + Plugin Architecture
 
@@ -1546,13 +1496,12 @@ kernel.execute("request", { url: "/home" });
 ```
 {% endraw %}
 
----
 
 
 
 # Patrones de diseño — Integraciones avanzadas
 
-- [Patrones de diseño](/computer%20science/patrones-de-dise-o/)
+- [Patrones de diseño](/uncategorized/patrones-de-dise-o/)
 - Arquitectura de Software
 - DDD Domain Driven Design
 - CQRS
@@ -1562,7 +1511,6 @@ kernel.execute("request", { url: "/home" });
 - Circuit Breaker Pattern
 - Repository Pattern
 
----
 
 ## 🧠 Escenario 1 — CQRS + Event Sourcing + Factory + Strategy
 
@@ -1691,7 +1639,6 @@ print(read_model.orders)
 ```
 {% endraw %}
 
----
 
 ## ⚙️ Escenario 2 — Decorator + Proxy + Adapter (Sistema de caché y logging para API externa)
 
@@ -1765,7 +1712,6 @@ const loggedApi = new LoggingDecorator(cachedApi);
 ```
 {% endraw %}
 
----
 
 ## 🧩 Escenario 3 — MVVM + Observer + Command (Aplicación de tareas Reactiva)
 
@@ -1853,7 +1799,6 @@ toggle.execute();
 ```
 {% endraw %}
 
----
 
 ## 🔁 Escenario 4 — Saga + Circuit Breaker + Repository (Orquestación distribuida)
 
@@ -1958,7 +1903,6 @@ for i in range(5):
 ```
 {% endraw %}
 
----
 
 ## 🧩 Notas adicionales
 
@@ -1973,7 +1917,7 @@ for i in range(5):
 # 🏢 Enterprise Patterns – Integraciones Distribuidas
 
 - Arquitectura de Software
-- [Patrones de diseño](/computer%20science/patrones-de-dise-o/)
+- [Patrones de diseño](/uncategorized/patrones-de-dise-o/)
 - Microservicios
 - Event Driven Architecture
 - CQRS
@@ -1986,7 +1930,6 @@ for i in range(5):
 - Message Broker
 - Domain Driven Design
 
----
 
 ## 🌐 Escenario 1 — API Gateway + Proxy + Adapter (Orquestación de microservicios REST)
 
@@ -2059,7 +2002,6 @@ class ApiGateway {
 ```
 {% endraw %}
 
----
 
 ## 🧩 Escenario 2 — CQRS + Event Bus + Saga Orchestrator
 
@@ -2146,7 +2088,6 @@ print("[READ MODEL]", read_model.data)
 ```
 {% endraw %}
 
----
 
 ## 🧱 Escenario 3 — Repository + Unit of Work + Circuit Breaker + Retry
 
@@ -2244,7 +2185,6 @@ uow.commit()
 ```
 {% endraw %}
 
----
 
 ## 🧠 Escenario 4 — Event Store + CQRS + Kafka Mock
 
@@ -2325,7 +2265,6 @@ print("Productos (Query Model):", query.products)
 ```
 {% endraw %}
 
----
 
 ## 🧩 Extensiones sugeridas
 
@@ -2334,7 +2273,6 @@ print("Productos (Query Model):", query.products)
 * **Agregar patrones de resiliencia: Retry, Timeout, Fallback**
 * **Simular integración entre microservicios con AsyncAPI**
 
----
 
 ## 📚 Referencias útiles
 
@@ -2381,7 +2319,6 @@ pip install pytest pytest-asyncio
 ```
 {% endraw %}
 
----
 
 ## Escenario A — Orquestación de Saga (Orchestrator)
 
@@ -2821,7 +2758,6 @@ async def test_retry_succeeds():
 - Compensaciones reversibles para sagas orquestadas.
 - Pruebas asíncronas con `pytest-asyncio` para simular concurrencia real.
 
----
 
 ## Extensiones sugeridas
 - Añadir simulación de latencias de red y particionamientos (chaos testing).
@@ -2829,7 +2765,6 @@ async def test_retry_succeeds():
 - Añadir métricas y observabilidad (traces, logs estructurados, prometheus mock).
 - Generar diagramas de secuencia para cada test utilizando PlantUML.
 
----
 
 ## Referencias
 - Enterprise Integration Patterns (Hohpe & Woolf)

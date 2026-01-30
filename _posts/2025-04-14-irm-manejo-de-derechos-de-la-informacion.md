@@ -1,16 +1,15 @@
----
-date: 2025-04-14 18:18
-title: IRM manejo de derechos de la informacion
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Sistemas]]"
-public_note: "true"
-category: ciberseguridad
+creation date: 2025-04-14 18:18
 tags:
   - hardening
   - Hacking
----
+keywords:
+source:
+status: 🌟
+Parent: "Area-Sistemas"
+cssclasses:
+  - hide-embedded-header1
+categories: "[ciberseguridad](/ciberseguridad/ciberseguridad/)"
+public_note: "true"
 # IRM — Manejo de Derechos de la Información  
 ``
 
@@ -18,7 +17,6 @@ tags:
 - [control de datos](/ciberseguridad/control-de-datos/)
 * [https://www.acerodocs.com/es/blog/tecnologia-irm/](https://www.acerodocs.com/es/blog/tecnologia-irm/)
 * [https://en.wikipedia.org/wiki/Information_rights_management](https://en.wikipedia.org/wiki/Information_rights_management)
----
 
 # Concepto General de IRM
 Information Rights Management (IRM) es un conjunto de tecnologías orientadas al **control persistente** de la información digital, incluso cuando esta **sale del perímetro corporativo**.  
@@ -32,7 +30,6 @@ Sus objetivos principales son:
 - Revocar acceso **después** de haber compartido el documento.
 - Integrarse con políticas de DLP, clasificación, etiquetas de sensibilidad y flujos de aprobación.
 
----
 
 # Elementos Clave de IRM
 ## Control Persistente del Archivo  
@@ -64,7 +61,6 @@ El archivo contiene:
 - Registro de violaciones de política y bloqueos.  
 - Correlación con incidentes DLP y SIEM.
 
----
 
 # IRM dentro de un Sistema de Seguridad Integrado
 La tecnología IRM se considera parte del enfoque de **Data-Centric Security** y se integra con:
@@ -83,7 +79,6 @@ La tecnología IRM se considera parte del enfoque de **Data-Centric Security** y
 - IRM implementa el principio “**Nunca confíes en el archivo**”, incluso dentro de la red.  
 - Autorización por contexto: dispositivo, localización, riesgo del usuario, postura de seguridad.
 
----
 
 # Arquitectura IRM — Componentes y Flujo
 1. **Clasificación inicial**  
@@ -99,7 +94,6 @@ La tecnología IRM se considera parte del enfoque de **Data-Centric Security** y
 6. **Monitorización y revocación**  
 	- Auditoría, alertas y revocación remota.
 
----
 
 # Casos de Uso Avanzados
 ## Protección de Información Crítica
@@ -118,7 +112,6 @@ La tecnología IRM se considera parte del enfoque de **Data-Centric Security** y
 - Trazabilidad completa para ISO 27001, SOX, GDPR, ENS.  
 - Evidencias válidas para análisis de incidentes.
 
----
 
 # Modelos de Implementación  
 ## IRM Local / On-Prem
@@ -136,7 +129,6 @@ La tecnología IRM se considera parte del enfoque de **Data-Centric Security** y
 - Política centralizada.  
 - Aplicación distribuida en agentes (endpoint, cliente de correo, aplicaciones ofimáticas).
 
----
 
 # Integración con [hardening](/ciberseguridad/hardening/)
 IRM es una pieza esencial del hardening a nivel **documental**, complementando los enfoques tradicionales:
@@ -146,7 +138,6 @@ IRM es una pieza esencial del hardening a nivel **documental**, complementando l
 - **Hardening de aplicaciones:** Control dentro del propio visor, sandboxing y eliminación de APIs inseguras.  
 - **Hardening del flujo de información:** Cifrado end-to-end, clasificación y restricciones dinámicas.
 
----
 
 # Ventajas y Limitaciones
 ## Ventajas
@@ -161,7 +152,6 @@ IRM es una pieza esencial del hardening a nivel **documental**, complementando l
 - Requiere buena gestión de identidad, roles y clasificación.  
 - Puede afectar a la usabilidad si no se diseña bien.
 
----
 
 # Enfoque Práctico de Implementación
 1. **Definir el esquema corporativo de clasificación.**  
@@ -179,7 +169,6 @@ IRM es una pieza esencial del hardening a nivel **documental**, complementando l
 	- Fuga simulada  
 10. **Revisiones trimestrales y rotación de claves.**
 
----
 
 # Bloques de Código (Cada uno con Heading Propio)
 
@@ -223,4 +212,3 @@ def verify_access(user, document):
 ```
 {% endraw %}
 
----

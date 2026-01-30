@@ -1,13 +1,13 @@
----
-date: 2025-10-17 18:43
-title: Mocks MSW - patrones de diseño y arquitectura de mocks
+creation date: 2025-10-17 18:43
+tags:
 keywords:
 source:
 status: 📌
-Parent: "[[Area-Prog]]"
+Parent: "Area-Prog"
+cssclasses:
+  - hide-embedded-header1
+categories: "[Testing](/testing/testing/)"
 public_note: "true"
-category: Testing
----
 # Mocks MSW - patrones de diseño y arquitectura de mocks
 
 # Mocks MSW - patrones de diseño y arquitectura de mocks
@@ -18,14 +18,12 @@ category: Testing
 - [TDD - Test Driven Development](/testing/tdd---test-driven-development/)
 - [profiler](/testing/profiler/)
 
----
 
 ## 🧩 Objetivo
 
 Definir estrategias avanzadas para **estructurar, escalar y mantener mocks MSW** en proyectos grandes, garantizando modularidad, trazabilidad y fácil mantenimiento.  
 Estos patrones se aplican a entornos con múltiples endpoints, microservicios o flujos de testing complejos.
 
----
 
 ## 🧠 Conceptos Clave
 
@@ -36,7 +34,6 @@ Estos patrones se aplican a entornos con múltiples endpoints, microservicios o 
 - **Escalabilidad**: Facilitar crecimiento del proyecto sin romper la estructura existente.
 - **Sincronía con la API real**: Mantener paridad con esquemas y rutas reales del backend.
 
----
 
 ## 🏗️ Estructura Recomendada de Carpetas
 
@@ -63,7 +60,6 @@ src/
 
 💡 **Consejo**: Cada archivo en `handlers/` debe exponer un array de mocks agrupados por dominio.
 
----
 
 ## 🧩 Patrón 1 — Composición Modular de Handlers
 
@@ -90,7 +86,6 @@ export const handlers = [
 
 🧠 *Facilita mantener independencia de módulos y evita un único archivo monolítico.*
 
----
 
 ## 🧩 Patrón 2 — Mock Factories Reutilizables
 
@@ -117,7 +112,6 @@ export const createMockUser = (overrides = {}) => ({
 
 📦 *Ideal para mantener consistencia entre diferentes tests que requieren usuarios simulados.*
 
----
 
 ## 🧩 Patrón 3 — Handlers con Tipado Estricto
 
@@ -143,7 +137,6 @@ export const userHandlers = [
 
 🔒 *Evita mocks obsoletos o con propiedades incorrectas.*
 
----
 
 ## 🧩 Patrón 4 — Jerarquía de Handlers por Contexto
 
@@ -175,7 +168,6 @@ export const handlers = [
 
 ⚙️ *Permite cambiar comportamientos globales sin modificar código de producción.*
 
----
 
 ## 🧩 Patrón 5 — Reutilización con Utilidades Compartidas
 
@@ -203,7 +195,6 @@ return HttpResponse.json({ status: 'ok' });
 
 💡 Mejora legibilidad y uniformidad del tiempo de respuesta en todos los tests.
 
----
 
 ## 🧩 Patrón 6 — Configuración de Entornos Diferenciados
 
@@ -229,7 +220,6 @@ export const server = setupServer(
 
 🔧 *Facilita tener respuestas distintas sin duplicar lógica.*
 
----
 
 ## 🧩 Patrón 7 — Mock Layer Composition
 
@@ -251,7 +241,6 @@ http.get('/api/settings', async () => {
 
 🧬 *Útil para entornos híbridos donde parte de la API real está disponible.*
 
----
 
 ## 🧩 Patrón 8 — Documentación de Mocks
 
@@ -275,7 +264,6 @@ export const userHandlers = [
 
 📘 *Permite a nuevos desarrolladores entender fácilmente el alcance del mock.*
 
----
 
 ## 🧩 Patrón 9 — Convenciones de Nombres
 
@@ -288,7 +276,6 @@ export const userHandlers = [
 
 🪶 *Establece coherencia y facilita búsquedas en grandes repositorios.*
 
----
 
 ## 🧩 Patrón 10 — Testing de Mocks en Aislamiento
 
@@ -317,7 +304,6 @@ test('endpoint /api/users mockeado', async () => {
 
 ✅ *Permite garantizar calidad de los mocks como si fueran un microservicio.*
 
----
 
 ## 🔍 Diagnóstico Rápido
 
@@ -329,7 +315,6 @@ test('endpoint /api/users mockeado', async () => {
 | Mock no actualiza con cambios    | Cache del Service Worker       | Ejecutar `navigator.serviceWorker.getRegistrations()` |
 | Dificultad al escalar mocks      | Estructura monolítica          | Separar por dominio y entorno                |
 
----
 
 ## 🔗 Referencias
 

@@ -1,19 +1,18 @@
----
-date: 2024-11-19 01:48
-title: infraestructura IT
-keywords:
-source:
-status: 🚀
-Parent: "[[Area-Sistemas]]"
-public_note: "true"
-category: infraestructura IT
+creation date: 2024-11-19 01:48
 tags:
   - IT
   - ITIL
   - TI
   - ISO
   - estandares
----
+keywords:
+source:
+status: 🚀
+Parent: "Area-Sistemas"
+cssclasses:
+  - hide-embedded-header1
+categories: "[infraestructura IT](/uncategorized/infraestructura-it/)"
+public_note: "true"
 # Infraestructura IT
 ``
 

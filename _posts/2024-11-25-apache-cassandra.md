@@ -1,18 +1,20 @@
----
-date: 2024-11-25 17:49
-title: apache cassandra
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Sistemas]]"
-aliases:
-public_note: "true"
-category: cloud
+creation date: 2024-11-25 17:49
 tags:
   - apache
   - apache-cassandra
   - db
----
+keywords:
+source:
+status: 🌟
+Parent: "Area-Sistemas"
+cssclasses:
+  - hide-embedded-header1
+  - wide
+categories: "[cloud](/cloud/cloud/)"
+aliases:
+  - cassandra
+  - Cassandra
+public_note: "true"
 # apache cassandra
 
 - [Databases](/databases/databases/)
@@ -285,7 +287,6 @@ DROP ROLE usuario1;
 ```
 {% endraw %}`
 
----
 
 ## TCL (Transaction Control Language)
 
@@ -317,7 +318,6 @@ IF email = 'a@a.com';
 ```
 {% endraw %}
 
----
 
 ## DQL (Data Query Language)
 
@@ -334,7 +334,6 @@ WHERE id = 1;
 ```
 {% endraw %}
 
----
 
 ## Lenguajes y Categorías Adicionales en Cassandra
 
@@ -399,7 +398,6 @@ AS 'return Integer.valueOf(a + b);';
 ```
 {% endraw %}
 
----
 
 ## Resumen Ampliado
 

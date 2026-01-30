@@ -1,12 +1,4 @@
----
-date: 2024-04-10 21:05
-title: Data Science
-keywords:
-source:
-status: 🚀
-Parent: "[[Area-Prog]]"
-public_note: "true"
-category: Data Science
+creation date: 2024-04-10 21:05
 tags:
   - GCP
   - IA
@@ -16,7 +8,12 @@ tags:
   - deep-learning
   - machine-learning
   - Mates
----
+keywords:
+source:
+status: 🚀
+Parent: "Area-Prog"
+categories: "[Data Science](/uncategorized/data-science/)"
+public_note: "true"
 # Data Science
 
 - [Gestion de Negocio](/gestion%20de%20negocio/gestion-de-negocio/)
@@ -42,7 +39,6 @@ tags:
 -  📕
 - sistemas distribuidos
 	- [Scala](/data%20science/scala/) 
-	- 
 
 
 - [ ] modelo con ia, [TensorFlow](/data%20science/tensorflow/)
@@ -56,7 +52,6 @@ tags:
 	- **EDA**
 		- exploratory data analysis
 		- jupiter notebook
-		- 
 	- guia de preguntas
 	- tools
 		- [Databases](/databases/databases/)
@@ -68,7 +63,6 @@ tags:
 		- looker studio
 		- matploitlib
 		- seaborn
-		- 
 - Data Engineering
 	- ingenieria de datos
 	- Automatizacion
@@ -125,7 +119,6 @@ tags:
 	- scraping linkedin
 		- [GitHub - puigalex/Linkedin\_scraping](https://github.com/puigalex/Linkedin_scraping)
 		- [GitHub - lukebarousse/Job\_Analysis](https://github.com/lukebarousse/Job_Analysis) 
-	- 
 - **IA**
 	- [Machine Learning](/data%20science/machine-learning/)
 	- [Deep Learning](/data%20science/deep-learning/)
@@ -148,7 +141,6 @@ tags:
 	- crear colum asignar y operar 
 	- la diferencia. merge data values: lookup value, 
 	- index, read_csv(), merge() *data, dataframe, how=, on=*, head(). pivoting data: pivot_table(), *data=,index=,values=, aggfun="mean"*, describe() *include=["object"]*, info(),
-- 
 - cursos IA
 	- [Prompt Engineering](/data%20science/prompt-engineering/)
 	- [IA con Huawei](/data%20science/ia-con-huawei/) 

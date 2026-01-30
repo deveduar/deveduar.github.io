@@ -1,15 +1,14 @@
----
-date: 2023-04-01 18:49
-title: Computer science - curso de inicio CS50
-status: 📌
-Parent: "[[Area-Prog]]"
-keywords:
-source:
-public_note: "true"
-category: Computer Science
 tags:
   - CS
----
+status: 📌
+Parent: "Area-Prog"
+categories: "[Computer Science](/computer%20science/computer-science/)"
+creation date: 2023-04-01 18:49
+keywords:
+source:
+cssclasses:
+  - hide-embedded-header1
+public_note: "true"
 # Computer science - curso de inicio CS50
 
 ## Recursos
@@ -21,7 +20,6 @@ tags:
 
 
 - estabilidad de algoritmos de ordenamiento, complejidad espacial, análisis asintótico y heurísticas de búsqueda
-- 
 - 00-CS50 Labs
 - CS50 2020 - Lecture 0 - Scratch
 - CS50 2020 - Lecture 1 - C

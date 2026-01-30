@@ -1,15 +1,14 @@
----
-date: 2023-04-01 17:39
-title: Intro Algebra lineal y ML
-status: 🌟
-Parent: "[[Area-IA]]"
-keywords:
-source:
-public_note: "true"
-category: mates
 tags:
   - Mates
----
+status: 🌟
+Parent: "Area-IA"
+creation date: 2023-04-01 17:39
+keywords:
+source:
+cssclasses:
+  - hide-embedded-header1
+categories: "[mates](/uncategorized/mates/)"
+public_note: "true"
 # Intro Algebra lineal y ML
 
 - [mates](/uncategorized/mates/)
@@ -202,36 +201,29 @@ result = np.dot(A, B)
 
 ### Vectorización de código y programación de matrices
 - El precio de una casa depende del tamaño de esta:
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled.png)
 - Si conocemos el tamaño de cinco casas, podemos usar esa ecuación para calcular su precio de venta.
 
 #### Proceso manual
-![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%201.png)
 
 #### Creación de loop e iteraciones
 - Aplicación directa de álgebra lineal para calcular múltiples resultados:
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%202.png)
 
 #### Representación con matrices
 - Dos matrices:
 	- Matriz de 5x2: primera columna con 1 y segunda columna con los m².
 	- Matriz de 2x1: contiene los valores de nuestra ecuación.
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%203.png)
 
 #### Producto de matrices
 - Multiplicando las matrices obtenemos los precios de las casas:
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%204.png)
 - Conceptos clave:
 	- Matriz de entrada
 	- Coeficientes
 	- Matriz de salida
 - Incluso con 10.000 entradas, el proceso sigue siendo el mismo:
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%206.png)
 - Este enfoque se conoce como **vectorización de código**, optimizado en librerías como **NumPy** para mejorar la eficiencia computacional.
 
 ### Reconocimiento de imágenes
 - Redes neuronales convolucionales utilizan álgebra lineal para clasificar y procesar fotos:
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%207.png)
 - Procesamiento de imágenes:
 	- Foto de 400x400 píxeles
 	- Escala de grises: 256 tonos (0 = blanco, 255 = negro)
@@ -241,15 +233,9 @@ result = np.dot(A, B)
 
 ### Reducción de la dimensionalidad
 - Conjunto de datos con 3 ejes: x, y, z
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%208.png)
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%209.png)
 - Cada punto representado por un vector `[x, y, z]`
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2010.png)
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2011.png)
 - Aproximación a un plano bidimensional cercano a los datos:
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2012.png)
 - Transformación de la matriz de tres variables a dos variables para reducir ruido en modelos de ML:
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2013.png)
 - Permite reducir dimensiones de grandes conjuntos de variables (50 → 40, 20, 10), mejorando la eficiencia y desempeño del modelo.
 
 
@@ -258,65 +244,44 @@ result = np.dot(A, B)
 ### Distintas perspectivas
 - **Física:** Representados como flechas en el espacio con dirección y magnitud. Pueden existir en planos bidimensionales o en el espacio tridimensional.
 - **Ciencias de la computación:** Listas ordenadas de números.  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2014.png)  
 	- El orden de los elementos importa; cada lista representa un vector bidimensional.
 	- Un vector es una lista con dos dimensiones o más.
 - **Matemática:** Combina ambos puntos de vista; un vector es cualquier objeto donde se puedan definir operaciones de suma de vectores y multiplicación por un número.  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2015.png)
 
 - En álgebra lineal, los vectores casi siempre se representan comenzando en el **origen**.  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2016.png)  
 	- Se representan como flechas y como listas de números.  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2017.png)
 
 #### Coordenadas y dimensiones
 - **2 dimensiones:**  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2018.png)  
 	- El origen es el punto central del espacio.  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2019.png)  
 	- Cada par de números representa un vector único.  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2020.png)
 - **3 dimensiones:**  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2021.png)  
 	- El eje z es perpendicular a x e y.  
 	- Un vector está definido por un triple de números (x, y, z), cada número indica el desplazamiento a lo largo de cada eje.  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2022.png)  
 	- Cada vector en el espacio corresponde a un único triple de números.
 
 ### Suma de vectores
 - **Método geométrico (punta a cola):**  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2023.png)  
 	- Se mueve el segundo vector hasta la punta del primero.  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2024.png)  
 	- El vector resultante va desde la cola del primero hasta la punta del segundo.  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2025.png)  
 	- Representa un paso combinado en distancia y dirección.
 - **Método numérico:**  
 	- Suma elemento a elemento de los vectores:  
-		![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2031.png)  
 	- Ejemplo: 2+4 = 6  
-		![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2026.png)  
 	- Caminos alternativos producen el mismo vector resultante:  
-		![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2028.png)  
-		![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2030.png)
 
 ### Multiplicación escalar
 - Multiplicar un vector por un número (escalar) altera su longitud y/o dirección:
 	- Factor >1: estira el vector  
-		![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2032.png)  
 	- Factor <1: reduce el vector  
-		![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2033.png)  
 	- Factor negativo: invierte la dirección y escala la longitud  
-		![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2034.png)
 - Este proceso se llama **escalamiento**.  
 	- El número multiplicador se denomina **escalar**.  
 	- En álgebra lineal, multiplicar por un escalar significa multiplicar cada componente del vector por ese número.  
-		![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2035.png)
 
 ### Operaciones fundamentales del álgebra lineal
 - **Suma de vectores**
 - **Multiplicación por un escalar**  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2036.png)
 
 
 
@@ -324,115 +289,57 @@ result = np.dot(A, B)
 
 ### Combinación Lineal
 - La combinación lineal permite describir un vector usando escalares que multiplican vectores base y luego sumando los resultados.  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2037.png)
 - Cada coordenada del vector actúa como un escalar:  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2038.png)  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2039.png)
 - Escalamiento de vectores:  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2040.png)
 
 #### Vectores base en 2D
 - `i`: vector unitario en dirección x (longitud 1)  
 - `j`: vector unitario en dirección y (longitud 1)  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2041.png)
 - Coordenadas escalares aplicadas a vectores base:  
 	- x del vector escala `i`  
 	- y del vector escala `j`  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2042.png)
 - El vector resultante es la suma de los vectores escalados:  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2043.png)  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2044.png)
 - Los vectores `i` y `j` son **vectores base del sistema de coordenadas XY**:  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2045.png)  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2046.png)
 
 #### Sistemas de coordenadas alternativos
 - Es posible definir diferentes vectores base, creando nuevos sistemas de coordenadas:  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2047.png)  
 - Todos los vectores posibles se obtienen escalando los vectores base y sumando:  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2048.png)  
 - Con escalares libres, la mayoría de los pares de vectores pueden generar cualquier vector en el plano:  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2049.png)  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2050.png)
 - Cada elección de vectores base define cómo se representan los vectores numéricamente.
 - La combinación lineal de dos vectores se obtiene escalando y sumando:  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2051.png)
 - **Espacio generado (span):** conjunto de todos los vectores posibles a partir de combinaciones lineales:  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2052.png)  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2053.png)  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2054.png)  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2055.png)  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2056.png)
 - Diferencia entre vector y punto: cada vector se representa como un punto en el espacio, con cola en el origen:  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2057.png)  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2058.png)  
-	![todas](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2059.png)
 
 ### Transformación Lineal
 - Relación con matrices y multiplicación matriz-vector:  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2060.png)
 - Una transformación lineal es una función que mapea vectores de entrada a vectores de salida:  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2061.png)  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2062.png)  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2063.png)
 - Propiedades de las transformaciones lineales: mantienen líneas rectas y el origen fijo.  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2064.png)  
 - Ejemplos de transformaciones no lineales: líneas curvas o origen desplazado:  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2065.png)  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2066.png)
 - Transformaciones lineales conservan la cuadrícula: paralela y uniformemente espaciada:  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2067.png)
 - Descripción numérica: registrar la ubicación de los vectores base `i` y `j` después de la transformación:  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2068.png)  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2069.png)
 - Ejemplo con vector `v = 4i - 2j`:  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2070.png)  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2071.png)  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2072.png)
 - Resultado final: vector transformado = combinación lineal de los vectores base transformados:  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2073.png)  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2074.png)  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2075.png)
 - Determinación de vector resultado conociendo la transformación de `i` y `j`:  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2076.png)  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2077.png)  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2078.png)  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2079.png)
 - Transformación lineal bidimensional se describe con 4 números (coordenadas finales de `i` y `j`)  
 - Representación en matriz 2x2: columnas = vectores base transformados:  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2080.png)  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2081.png)  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2082.png)  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2083.png)
 - Fórmula general:  
 	- Matriz `[[a, b], [c, d]]`  
 	- Vector `(x, y)` → `(ax + by, cx + dy)`  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2084.png)  
-	![error en la matriz de salida es d no b al final](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2085.png)
 - Las matrices permiten describir transformaciones lineales de forma compacta:  
-	![opcion 2 y 3](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2086.png)
 
 ### Matrices
 - Colección de números ordenados en filas y columnas:  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2087.png)  
 - Dimensiones: `m x n` (m filas, n columnas)  
 - Contienen números, símbolos o expresiones:  
-	![simbolos](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2088.png)  
-	![expresiones](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2089.png)
 - Elementos de la matriz: `a_ij` = elemento en fila i, columna j  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2091.png)  
 	- Relleno: primera fila `a11 a12 ... a1n`  
 	- Primera columna: `a11 a21 ... am1`  
 	- Último elemento: `amn`
 - Índices en programación suelen comenzar desde 0 (Python):  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2093.png)
 
 #### Operaciones con matrices
 - **Suma:** mismas dimensiones  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2094.png)  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2095.png)
 - **Resta:** mismas dimensiones, incluye enteros y decimales  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2096.png)
 
 
 ## Vectores 3
@@ -440,21 +347,15 @@ result = np.dot(A, B)
 ### Transposición de matrices
 - Los vectores pueden ser de tipo fila o columna.  
 	- Ejemplo: `x` vector columna `[1, 2, 3]`  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2097.png)
 - Transposición: convertir un vector columna en fila y viceversa, denotado con `T`:  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2098.png)  
 	- Ejemplo: fila `[3,2,1]` → columna `[3,2,1]`  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%2099.png)
 - Propiedades de la transposición:
 	1. No se pierde información; solo cambia la posición.  
 	2. Transponer dos veces devuelve el vector original.  
 	3. Dimensiones: vector `3x1` → `1x3` al transponer.
 - Transposición de matrices: convierte filas en columnas y viceversa:  
-	![convierte todas sus filas en columnas y viceversa](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%20100.png)  
 	- Matriz `m x n` → `n x m` al transponer
 - Ejemplo de matriz transpuesta:  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%20101.png)  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%20102.png)
 
 ### Multiplicación de matrices
 - Tipos de multiplicación:
@@ -462,11 +363,8 @@ result = np.dot(A, B)
 	- Producto cruz (se verá en otro curso)
 - Producto punto:
 	- Multiplicar elementos correspondientes y sumar; resultado = escalar  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%20104.png)
 - Condición de compatibilidad:
 	- Matriz `m x n` * Matriz `n x k` → resultado `m x k`  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%20105.png)  
-	![Untitled](Data/Data-IA/Data-Algebra%20lineal%20ML%20Completado/Untitled%20106.png)
 - Producto punto entre vectores fila y columna determina las filas de la matriz resultado:  
 	![Untitled](Untitled%20112.png)  
 	![Untitled](Untitled%20113.png)  

@@ -1,16 +1,16 @@
----
-date: 2024-11-23 01:58
-title: sql server
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Sistemas]]"
-public_note: "true"
-category: devops
+creation date: 2024-11-23 01:58
 tags:
   - MySQL
   - sql-server
----
+keywords:
+source:
+status: 🌟
+Parent: "Area-Sistemas"
+cssclasses:
+  - hide-embedded-header1
+  - wide
+categories: "[devops](/devops/devops/)"
+public_note: "true"
 # SQL Server
 
 - [Docker](/software%20engineering/docker/)

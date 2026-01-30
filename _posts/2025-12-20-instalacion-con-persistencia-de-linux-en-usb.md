@@ -1,21 +1,19 @@
----
-date: 2025-12-20 18:35
-title: instalacion con persistencia de linux en usb
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Sistemas]]"
-public_note: "true"
-category: Linux
+creation date: 2025-12-20 18:35
 tags:
   - Linux
   - kali
----
+keywords:
+source:
+status: 🌟
+Parent: "Area-Sistemas"
+cssclasses:
+  - hide-embedded-header1
+categories: "[Linux](/sistemas/linux/)"
+public_note: "true"
 # Instalación con persistencia de Linux en USB
 
 - [Linux](/sistemas/linux/)
 - kali linux
-- 
 ## Fundamentos de USB booteable con persistencia
 - La **persistencia** permite conservar cambios (configuración, archivos, herramientas) entre reinicios al arrancar un sistema Live desde USB.
 - Útil para laboratorios, pentesting, recuperación de sistemas y entornos portables.

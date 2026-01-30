@@ -1,17 +1,17 @@
----
-date: 2025-04-14 03:22
-title: OpenShift
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Sistemas]]"
-public_note: "true"
-category: Virtualizacion
+creation date: 2025-04-14 03:22
 tags:
   - OpenShift
   - devops
   - virtualizacion
----
+keywords:
+source:
+status: 🌟
+Parent: "Area-Sistemas"
+cssclasses:
+  - hide-embedded-header1
+  - wide
+categories: "[Virtualizacion](/devops/virtualizacion/)"
+public_note: "true"
 # OpenShift
 
 - [CICD](/devops/cicd/)
@@ -35,7 +35,6 @@ Su objetivo principal es **simplificar el ciclo de vida completo de las aplicaci
 - [Cómo empezar a utilizar OpenShift - YouTube](https://youtu.be/HPEPPArfOfk)  
 - [Installation overview | OKD 4](https://docs.okd.io/latest/installing/overview/index.html)
 
----
 
 ## Comparativa: OpenShift vs Kubernetes vs Docker
 
@@ -50,7 +49,6 @@ Su objetivo principal es **simplificar el ciclo de vida completo de las aplicaci
 | Networking | Bridge/NAT | Pod network (CNI) | SDN + HAProxy + routing avanzado |
 | Plantillas | Dockerfiles | Helm Charts | Templates nativos y Operators |
 
----
 
 ## Arquitectura de OpenShift
 
@@ -69,7 +67,6 @@ Su objetivo principal es **simplificar el ciclo de vida completo de las aplicaci
 - **Build y Deployment Configurations**
 	- Permiten pipelines y despliegues automatizados.
 
----
 
 ## Seguridad y Control de Acceso
 
@@ -79,7 +76,6 @@ Su objetivo principal es **simplificar el ciclo de vida completo de las aplicaci
 - **SCC (Security Context Constraints)**: control de privilegios a nivel de contenedor.  
 - **HAProxy Router**: balanceo de carga y control del tráfico entrante.
 
----
 
 ## Despliegue y Gestión
 
@@ -94,7 +90,6 @@ OKD ofrece documentación oficial detallada:
 - **IPI (Installer-Provisioned Infrastructure):** instalación automatizada (AWS, GCP, Azure, Bare Metal).  
 - **UPI (User-Provisioned Infrastructure):** instalación manual con control total del entorno.
 
----
 
 ## Helm vs Templates de OpenShift
 
@@ -113,7 +108,6 @@ OKD ofrece documentación oficial detallada:
 #### Enlaces
 - [Helm | Quickstart Guide](https://helm.sh/docs/intro/quickstart/)
 
----
 
 ## API y Extensibilidad
 
@@ -121,7 +115,6 @@ OKD ofrece documentación oficial detallada:
 - Permite integración con sistemas de CI/CD, monitoreo y automatización (por ejemplo, [CICD](/devops/cicd/) pipelines con Jenkins, Tekton o ArgoCD).
 - Los **Operators** extienden la API para gestionar aplicaciones complejas mediante controladores personalizados.
 
----
 
 ## Integración con DevOps y CI/CD
 
@@ -130,7 +123,6 @@ OKD ofrece documentación oficial detallada:
 - Integración nativa con repositorios Git, Webhooks y control de versiones.
 - Control del flujo de despliegue, rollback, pruebas y versionado de contenedores.
 
----
 
 ## Conclusión
 
@@ -149,7 +141,6 @@ Su enfoque “*batteries included*” lo convierte en una de las plataformas má
 - edge computing
 - Seguridad en contenedores
 
----
 
 ## Infraestructura como Código y GitOps
 
@@ -169,7 +160,6 @@ Su enfoque “*batteries included*” lo convierte en una de las plataformas má
 - Tekton
 - Kustomize
 
----
 
 ## Observabilidad, Monitoreo y Logging
 
@@ -190,7 +180,6 @@ Su enfoque “*batteries included*” lo convierte en una de las plataformas má
 - Definir alertas orientadas a negocio y SLOs claros.
 - Mantener retención de logs ajustada a normativas y costes.
 
----
 
 ## Almacenamiento y Persistencia
 
@@ -206,7 +195,6 @@ Su enfoque “*batteries included*” lo convierte en una de las plataformas má
 - Herramientas como **Velero** o **OADP (OpenShift API for Data Protection)** permiten realizar backups del clúster y datos persistentes.
 - Las políticas de snapshot se gestionan a nivel de Storage Class.
 
----
 
 ## Redes, Service Mesh y Seguridad de Red
 
@@ -225,7 +213,6 @@ Su enfoque “*batteries included*” lo convierte en una de las plataformas má
 - Controlan la comunicación entre pods según namespaces o etiquetas.
 - Implementan aislamiento de red por defecto (Zero Trust a nivel de pod).
 
----
 
 ## Multi-Cloud, Edge y Modernización de Aplicaciones
 
@@ -241,7 +228,6 @@ Su enfoque “*batteries included*” lo convierte en una de las plataformas má
 - Migración de monolitos a microservicios con **Source-to-Image (S2I)** o **BuildConfig**.
 - Contenerización automatizada y pipelines para transformar aplicaciones legadas en cloud-native.
 
----
 
 ## Operaciones “Day 2”
 
@@ -251,7 +237,6 @@ Su enfoque “*batteries included*” lo convierte en una de las plataformas má
 - **Tolerancia a fallos** mediante réplicas y distribución por zonas (Availability Zones).
 - **Optimización de costes y recursos** con etiquetado (labels, annotations) y políticas de afinidad.
 
----
 
 ## Buenas Prácticas DevOps en OpenShift
 
@@ -262,7 +247,6 @@ Su enfoque “*batteries included*” lo convierte en una de las plataformas má
 - Automatizar despliegues mediante **Webhooks** y **Build Triggers**.
 - Supervisar métricas DORA: lead time, frecuencia de despliegue, tasa de fallos, MTTR.
 
----
 
 ## Recursos y documentación adicional
 
@@ -272,7 +256,6 @@ Su enfoque “*batteries included*” lo convierte en una de las plataformas má
 - [OKD Data Protection (OADP)](https://docs.openshift.com/container-platform/latest/backup_and_restore/oadp.html)
 - [Monitoring and Logging in OpenShift](https://docs.openshift.com/container-platform/latest/observability/observability.html)
 
----
 
 ## Conclusión
 
@@ -297,7 +280,6 @@ Con estos bloques, se completa una visión **end-to-end** de OpenShift como **pl
 - SecurityContextConstraints
 - Infraestructura como código
 
----
 
 ## 📦 Conceptos Clave
 
@@ -315,7 +297,6 @@ Con estos bloques, se completa una visión **end-to-end** de OpenShift como **pl
 | **Operator** | Extiende Kubernetes para gestionar apps complejas. |
 | **Tekton / Jenkins** | Sistemas CI/CD integrados en OpenShift. |
 
----
 
 ## 🧠 Comandos básicos (`oc` CLI)
 
@@ -372,7 +353,6 @@ oc get imagestreams
 ```
 {% endraw %}
 
----
 
 ## ⚙️ Administración y configuración
 
@@ -411,7 +391,6 @@ oc set volume dc/mi-app --add --name=vol1 --type=persistentVolumeClaim --claim-n
 ```
 {% endraw %}
 
----
 
 ## 🧰 Gestión avanzada
 
@@ -457,7 +436,6 @@ oc debug node/<nodo>
 ```
 {% endraw %}
 
----
 
 ## 🧩 Helm y Templates
 
@@ -481,7 +459,6 @@ oc process -f template.yaml -p NOMBRE=valor | oc apply -f -
 ```
 {% endraw %}
 
----
 
 ## 🔄 GitOps y CI/CD
 
@@ -514,7 +491,6 @@ oc logs dc/jenkins
 ```
 {% endraw %}
 
----
 
 ## 📈 Observabilidad y Monitoreo
 
@@ -532,7 +508,6 @@ oc get routes -n openshift-monitoring
 * **EFK Stack:** Elasticsearch + Fluentd + Kibana para logs.
 * **Jaeger / Kiali:** tracing y visualización de tráfico en Service Mesh.
 
----
 
 ## ☁️ Multi-Cloud y Edge
 
@@ -541,7 +516,6 @@ oc get routes -n openshift-monitoring
 * **OpenShift Edge:** despliegue en ubicaciones remotas, con recursos limitados.
 * **Cluster Federation:** gestión de múltiples clústeres con OpenShift Cluster Manager.
 
----
 
 ## 🧱 Infraestructura como Código
 
@@ -562,7 +536,6 @@ oc delete -f deployment.yaml
 * Declarar infra con [Terraform](/devops/terraform/), Ansible o Kustomize.
 * Control total del estado deseado de la plataforma y las apps.
 
----
 
 ## 🧩 Troubleshooting rápido
 
@@ -574,7 +547,6 @@ oc delete -f deployment.yaml
 | Nodo con problemas | `oc get nodes`, `oc describe node <nodo>` |
 | Resetear proyecto  | `oc delete all --all -n <namespace>`      |
 
----
 
 ## 📚 Recursos oficiales
 
@@ -584,7 +556,6 @@ oc delete -f deployment.yaml
 * [OpenShift GitOps](https://docs.openshift.com/container-platform/latest/cicd/gitops/understanding-openshift-gitops.html)
 * [Red Hat Service Mesh](https://docs.openshift.com/container-platform/latest/service_mesh/)
 
----
 
 ## 💡 Consejo final
 
@@ -607,7 +578,6 @@ oc delete -f deployment.yaml
 - Backup y recuperación
 - Cost Optimization
 
----
 
 ## 🔐 Seguridad avanzada y Zero Trust
 
@@ -637,7 +607,6 @@ spec:
 ```
 {% endraw %}`
 
----
 
 ## ⚡ Serverless y Escalado Dinámico
 
@@ -659,7 +628,6 @@ oc describe ksvc mi-funcion
 ```
 {% endraw %}
 
----
 
 ## 🧠 Operators y Extensibilidad
 
@@ -686,7 +654,6 @@ oc describe csv postgresql-operator.v5.3.0
 ```
 {% endraw %}
 
----
 
 ## 🛡️ Compliance y Auditoría
 
@@ -712,7 +679,6 @@ oc describe compliancesuite nist-suite
 * Puede integrarse con herramientas SIEM (Splunk, ELK) para correlación de incidentes.
 * Uso del comando `oc adm node-logs` para inspeccionar nodos.
 
----
 
 ## 🌍 API Management y Gateways
 
@@ -735,7 +701,6 @@ oc describe apiproduct mi-api
 ```
 {% endraw %}
 
----
 
 ## 💾 Backup, Restore y Disaster Recovery
 
@@ -767,7 +732,6 @@ oc create -f restore.yaml
 ```
 {% endraw %}
 
----
 
 ## 💰 Cost Optimization y Resource Management
 
@@ -791,7 +755,6 @@ oc adm top nodes
 * Usar nodos spot/preemptibles (en nubes públicas).
 * Adoptar containers livianos (Alpine, UBI minimal).
 
----
 
 ## 🚀 Integración con Red Hat Ecosystem
 
@@ -801,7 +764,6 @@ oc adm top nodes
 * **Red Hat Ansible Automation Platform:** automatiza despliegues, parches y operaciones Day 2.
 * **Red Hat OpenShift Data Foundation (ODF):** almacenamiento definido por software nativo para OpenShift.
 
----
 
 ## 🧩 Observabilidad extendida
 
@@ -822,7 +784,6 @@ oc logs elasticsearch-<id> -n openshift-logging
 
 * Integración con **CloudWatch**, **Stackdriver** o **Azure Monitor** para entornos híbridos.
 
----
 
 ## ⚙️ Performance y Tuning del Clúster
 
@@ -852,7 +813,6 @@ affinity:
 ```
 {% endraw %}
 
----
 
 ## 🧭 Roadmap Tecnológico (2025+)
 
@@ -862,7 +822,6 @@ affinity:
 * **Runtime Security:** detección de amenazas con Falco/Sysdig.
 * **Infraestructura multi-runtime:** soporte extendido para cri-o, Kata Containers, y WebAssembly (Wasm).
 
----
 
 ## 🧠 Recomendaciones finales
 
@@ -873,7 +832,6 @@ affinity:
 * Documentar flujos CI/CD, políticas y dependencias críticas.
 * Aprovechar Operators y Service Mesh para lograr autosuficiencia y resiliencia a gran escala.
 
----
 
 ## 📚 Recursos útiles (avanzados)
 
@@ -884,7 +842,6 @@ affinity:
 * [Node Tuning Operator](https://docs.openshift.com/container-platform/latest/scalability_and_performance/psap-node-tuning-operator.html)
 * [OpenShift API Management (3scale)](https://www.redhat.com/en/technologies/jboss-middleware/3scale)
 
----
 
 > 💬 *Esta nota cubre los aspectos avanzados y emergentes de OpenShift, esenciales para arquitectos, SREs y administradores que buscan optimizar, asegurar y escalar entornos híbridos y multinube.*
 

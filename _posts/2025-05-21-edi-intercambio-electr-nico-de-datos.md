@@ -1,16 +1,16 @@
----
-date: 2025-05-21 18:33
-title: EDI Intercambio Electrónico de datos
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Sistemas]]"
-public_note: "true"
-category: Gestion de Negocio
+creation date: 2025-05-21 18:33
 tags:
   - edi
   - IT
----
+keywords:
+source:
+status: 🌟
+Parent: "Area-Sistemas"
+cssclasses:
+  - hide-embedded-header1
+  - wide
+categories: "[Gestion de Negocio](/gestion%20de%20negocio/gestion-de-negocio/)"
+public_note: "true"
 # EDI Intercambio Electrónico de Datos
 
 ## Recursos y referencias
@@ -381,7 +381,6 @@ print("EDI procesado y convertido a JSON")
 ```dw
 %dw 2.0
 output application/json
----
 {
 	orderNumber: payload.BEG.BEG03,
 	orderDate: payload.BEG.BEG05,

@@ -1,15 +1,11 @@
----
-title: practicas y ejemplos codigo comunes de testing a 2025 extenso
-Parent: "[[Area-Prog]]"
+categories: "[Testing](/testing/testing/)"
+Parent: "Area-Prog"
 status: 📌
 public_note: "true"
-category: Testing
----
 # 🧪 Prácticas Modernas y Ejemplos de Testing (2025)
 
 > Este documento recopila las **mejores prácticas y ejemplos de testing actuales**, cubriendo estrategias, automatización, librerías y enfoques modernos para asegurar calidad, confiabilidad y mantenibilidad en proyectos de software.
 
----
 
 ## 🧩 1. Estructura General de Pruebas
 
@@ -40,7 +36,6 @@ describe('User login', () => {
 - Evitar dependencias externas innecesarias.
 - Limpiar el estado global entre tests (`afterEach`, `beforeEach`).
 
----
 
 ## ⚙️ 2. Unit Testing (Pruebas Unitarias)
 
@@ -74,7 +69,6 @@ describe('calculateDiscount', () => {
 - Usar nombres descriptivos en las pruebas.
 - Mantener la ejecución rápida (<1s por suite).
 
----
 
 ## 🔗 3. Integration Testing (Pruebas de Integración)
 
@@ -107,7 +101,6 @@ describe('POST /login', () => {
 - Limpiar los datos tras cada prueba (`truncate`, `rollback`).
 - Simular servicios externos con herramientas como `MSW`, `WireMock` o `nock`.
 
----
 
 ## 🌐 4. API Testing
 
@@ -145,7 +138,6 @@ public class LoginAPITest {
 - `k6` o `JMeter` (carga).
 - `Pact` (contract testing).
 
----
 
 ## 🧠 5. TDD (Test-Driven Development)
 
@@ -173,7 +165,6 @@ def sum_two_numbers(a, b):
 - Refactorizar con confianza.
 - Mantener las pruebas pequeñas y descriptivas.
 
----
 
 ## 🧩 6. BDD (Behavior-Driven Development)
 
@@ -195,7 +186,6 @@ Feature: Login de usuario
 - Behave (Python).
 - SpecFlow (.NET).
 
----
 
 ## 🧪 7. E2E Testing (End-to-End)
 
@@ -225,7 +215,6 @@ test('flujo completo de login', async ({ page }) => {
 - Evitar flakiness (esperas explícitas, timeouts).
 - Ejecutar en CI/CD (GitHub Actions, GitLab CI).
 
----
 
 ## ⚙️ 8. Mocking y Stubbing
 
@@ -253,7 +242,6 @@ it('debe retornar datos del usuario mockeados', async () => {
 - **Fake:** implementación simplificada.
 - **Spy:** verifica invocaciones.
 
----
 
 ## 📊 9. Medición de Cobertura
 
@@ -279,7 +267,6 @@ npx jest --coverage
 - Codecov
 - SonarQube
 
----
 
 ## 🚀 10. Testing en CI/CD (Integración Continua)
 
@@ -311,7 +298,6 @@ jobs:
 - Generar reportes y subir métricas.
 - Fasear: _lint → unit → integration → deploy preview_.
 
----
 
 ## 🔥 11. Performance y Load Testing
 
@@ -336,7 +322,6 @@ export default function () {
 - Medir latencia, throughput y errores.
 - Simular tráfico real (usuarios concurrentes).
 
----
 
 ## 🧭 12. Test de Seguridad y Accesibilidad
 
@@ -367,7 +352,6 @@ test('debe cumplir accesibilidad WCAG', async ({ page }) => {
 - OWASP ZAP, Burp Suite, snyk.
 - axe-core, pa11y, Lighthouse.
 
----
 
 ## 🧩 13. Test Data y Fixtures
 
@@ -389,7 +373,6 @@ print(fake.email())
 - Evitar datos reales.
 - Usar _fixtures_ reutilizables.
 
----
 
 ## 🧠 14. QA, Métricas y Reporting
 
@@ -409,7 +392,6 @@ npm run test && allure generate allure-results --clean -o allure-report
 - Pass rate por suite
 - MTTR (Mean Time to Recovery)
 
----
 
 ## 🧭 15. Testing Avanzado 2025
 
@@ -426,7 +408,6 @@ npm run test && allure generate allure-results --clean -o allure-report
 - Testim, Mabl, Cypress Cloud, Playwright AI, Tracetest.
 - PactFlow, Harness Continuous Quality, QA Wolf.
 
----
 
 > **Resumen Final:**  
 > Testing moderno no solo busca encontrar errores, sino **asegurar confianza, calidad y resiliencia continua** en entornos cambiantes.  
@@ -437,7 +418,6 @@ npm run test && allure generate allure-results --clean -o allure-report
 
 > Esta nota amplía el documento principal de prácticas y ejemplos de testing, incluyendo tendencias, metodologías emergentes, automatización inteligente y estrategias avanzadas de calidad continua.
 
----
 
 ## ⚡ 1. Testing Pirámide vs. Testing Trophy
 
@@ -455,7 +435,6 @@ Dos modelos modernos de priorización de pruebas:
 ✅ **Consejo**  
 Adapta el equilibrio según el contexto del proyecto (frontend vs backend, microservicios, API-heavy, etc).
 
----
 
 ## 🧱 2. Component Testing
 
@@ -485,7 +464,6 @@ test('marca una tarea como completada', async () => {
 - Cypress Component Testing
 - Storybook Interaction Tests
 
----
 
 ## 🤖 3. AI-Driven Testing
 
@@ -504,7 +482,6 @@ Uso de inteligencia artificial para generar, optimizar o mantener tests automát
 
 - Playwright AI, Testim, Mabl, QA Wolf AI, CodiumAI.
 
----
 
 ## 🧩 4. Contract Testing en Microservicios
 
@@ -542,7 +519,6 @@ describe('Contract Test', () => {
 ✅ **Ventaja**  
 Permite validar que las interfaces entre microservicios se mantengan coherentes sin necesidad de entornos completos.
 
----
 
 ## 🌪 5. Chaos & Resilience Testing
 
@@ -568,7 +544,6 @@ gremlin attack cpu --length 60 --percent 80
 ✅ **Objetivo**  
 Comprobar que los sistemas **se degradan de forma controlada** y se recuperan sin pérdida de datos.
 
----
 
 ## 🧠 6. Exploratory Testing Asistido
 
@@ -585,7 +560,6 @@ Combinación de exploración manual con herramientas de registro automático.
 ✅ **Beneficio**  
 Permite documentar, reproducir y aprender de sesiones manuales sin perder trazabilidad.
 
----
 
 ## 📡 7. Observabilidad + Testing
 
@@ -602,7 +576,6 @@ Integrar **logs, métricas y trazas** dentro del ciclo de testing para detectar 
 ✅ **Práctica moderna**  
 “**Test what you monitor, monitor what you test**”.
 
----
 
 ## 🧬 8. Mutation Testing
 
@@ -623,7 +596,6 @@ npx stryker run
 - **Mutation Score:** porcentaje de mutaciones detectadas por tus tests.
 - Refuerza la calidad de los unit tests más allá de la cobertura tradicional.
 
----
 
 ## 🧰 9. Snapshot & Visual Regression Testing
 
@@ -653,7 +625,6 @@ percy snapshot ./screenshots
 - Detección de cambios visuales o estructurales.
 - Revisiones automáticas en PRs.
 
----
 
 ## 🧱 10. Static & Contract Validation
 
@@ -677,7 +648,6 @@ test('el contrato de usuario es válido', () => {
 ✅ **Beneficio**  
 Evita fallos de tipado o contratos rotos antes incluso de ejecutar las pruebas principales.
 
----
 
 ## 🔁 11. Parallel & Distributed Testing
 
@@ -695,7 +665,6 @@ Ejecutar pruebas en paralelo o distribuidas entre varios contenedores o workers.
 ✅ **Objetivo**  
 Reducir tiempos de test en pipelines grandes y optimizar recursos en CI/CD.
 
----
 
 ## 🧩 12. Data-Driven & Parameterized Testing
 
@@ -714,7 +683,6 @@ def test_sum(a, b, result):
 ✅ **Beneficio**  
 Permite probar múltiples casos con una sola definición de test, aumentando la cobertura semántica sin duplicar código.
 
----
 
 ## 🚀 13. Testing en Edge, IoT y Serverless
 
@@ -732,7 +700,6 @@ Estrategias adaptadas a entornos descentralizados o con funciones efímeras.
 
 - LocalStack, Miniflare, MQTTX, Serverless Framework.
 
----
 
 ## 🧭 14. Calidad Continua y TestOps
 
@@ -746,20 +713,17 @@ Testing como parte del ciclo operativo continuo, con trazabilidad completa y fee
 - Orquestación de pipelines de test con Jenkins, GitHub Actions, Harness o ArgoCD.
 - “Shift-left” + “Shift-right”: pruebas desde el desarrollo hasta la observación en producción.
 
----
 
 > **Resumen Final Complementario:**  
 > El testing moderno en 2025 evoluciona hacia un enfoque **inteligente, resiliente y observable**.  
 > Combina prácticas tradicionales con IA, automatización adaptativa y validaciones distribuidas para garantizar software **robusto, accesible y mantenible** en entornos dinámicos.
 
----
 
 # 🧪 Testing 2025 — Glosario Avanzado Final
 
 > Nota complementaria con conceptos y prácticas especializadas no tratados en los documentos anteriores.  
 > Cubre testing en dominios emergentes (ML, datos, blockchain, UX, ética, DevSecOps) y nuevas disciplinas de calidad digital.
 
----
 
 ## 🧠 1. ML & Data Testing (Machine Learning / AI Models)
 
@@ -794,7 +758,6 @@ dataset.expect_column_values_to_be_between("age", 0, 100)
 - Evidently AI
 - TensorFlow Model Analysis
 
----
 
 ## 🔐 2. DevSecOps & Security Testing Automatizado
 
@@ -832,7 +795,6 @@ jobs:
 ✅ **Herramientas 2025**  
 CodeQL · Snyk · Trivy · SonarCloud · OWASP Dependency-Check
 
----
 
 ## 🧪 3. Continuous Fuzz Testing
 
@@ -856,7 +818,6 @@ func FuzzParse(f *testing.F) {
 ✅ **Beneficio**  
 Descubre fallos ocultos imposibles de detectar con tests deterministas.
 
----
 
 ## 🧩 4. UX & Usability Testing
 
@@ -888,7 +849,6 @@ test('flujo UX principal', async ({ page }) => {
 ✅ **Herramientas**  
 UXtweak · Maze · Playwright Trace Viewer · Chrome UX Report
 
----
 
 ## ⚙️ 5. Infraestructura como Código (IaC) Testing
 
@@ -916,7 +876,6 @@ func TestInfrastructure(t *testing.T) {
 - Evitar fugas de seguridad por mal despliegue.
 - Garantizar reproducibilidad y consistencia.
 
----
 
 ## 🌐 6. Web3 & Blockchain Testing
 
@@ -951,7 +910,6 @@ Hardhat · Foundry · Truffle · Ganache · Anvil
 - Detectar vulnerabilidades (reentrancy, overflow).
 - Simular red blockchain local.
 
----
 
 ## 🌍 7. Localization & Internationalization Testing (L10N / I18N)
 
@@ -977,7 +935,6 @@ cy.get('h1').should('contain', 'Welcome');
 - Formato de fechas, monedas y unidades.
 - Espaciado dinámico en traducciones.
 
----
 
 ## 🧭 8. Ethical & Responsible Testing
 
@@ -997,7 +954,6 @@ Pruebas orientadas a garantizar que el software respeta la **privacidad, equidad
 - **ISO/IEC 24028** (AI Trustworthiness)
 - **Ethical Testing Charter** (2024)
 
----
 
 ## 🧠 9. Cognitive & Accessibility Load Testing
 
@@ -1014,7 +970,6 @@ Evalúa **carga cognitiva** y **rendimiento perceptual** del usuario (UX + neuro
 ✅ **Herramientas**  
 NeuroUX · Tobii Pro · Adobe Accessibility Checker
 
----
 
 ## 🔄 10. Test Environment Management (TEM)
 
@@ -1031,7 +986,6 @@ Gestión avanzada de **entornos de prueba** automatizados y versionados.
 ✅ **Herramientas**  
 TestContainers · Docker Compose · Environment-as-a-Service (EaaS) · Kubernetes namespaces aislados.
 
----
 
 ## 🧩 11. Shadow & A/B Testing Automatizado
 
@@ -1057,7 +1011,6 @@ if (featureFlag('newCheckout')) {
 ✅ **Herramientas**  
 LaunchDarkly · Split.io · Optimizely · Google Optimize (sunset → GA4 Experiments)
 
----
 
 ## 🧩 12. Continuous Test Intelligence (CTI)
 
@@ -1075,11 +1028,8 @@ Uso de IA y métricas históricas para **priorizar y optimizar suites de test** 
 
 - Launchable · ReportPortal.io · TestSigma AI
 
----
 
 > **Resumen Final:**  
 > Con esta ampliación, el ecosistema de testing moderno 2025 queda **totalmente cubierto**:  
 > desde lo técnico (unit, integration, E2E) hasta lo organizativo (QAOps, DevSecOps), ético (bias testing) y humano (UX testing).  
 > El testing ya no es solo verificación: es **garantía integral de confianza y calidad digital.**
-
----

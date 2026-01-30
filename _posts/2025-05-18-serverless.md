@@ -1,18 +1,18 @@
----
-date: 2025-05-18 04:04
-title: serverless
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Prog]]"
-public_note: "true"
-category: Backend
+creation date: 2025-05-18 04:04
 tags:
   - backend
   - server_less
   - server
   - devops
----
+keywords:
+source:
+status: 🌟
+Parent: "Area-Prog"
+cssclasses:
+  - hide-embedded-header1
+  - wide
+categories: "[Backend](/backend/backend/)"
+public_note: "true"
 # Serverless
 ``
 

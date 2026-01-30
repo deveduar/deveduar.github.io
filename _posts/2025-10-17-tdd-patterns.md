@@ -1,13 +1,13 @@
----
-date: 2025-10-17 14:15
-title: TDD patterns
+creation date: 2025-10-17 14:15
+tags:
 keywords:
 source:
 status: 📌
-Parent: "[[Area-Prog]]"
+Parent: "Area-Prog"
+cssclasses:
+  - hide-embedded-header1
+categories: "[Testing](/testing/testing/)"
 public_note: "true"
-category: Testing
----
 
 # TDD patterns
 

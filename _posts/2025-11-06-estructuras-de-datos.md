@@ -1,16 +1,15 @@
----
-date: 2025-11-06 12:08
-title: estructuras de datos
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Prog]]"
-public_note: "true"
-category: Computer Science
+creation date: 2025-11-06 12:08
 tags:
   - computer_Science
   - CS
----
+keywords:
+source:
+status: 🌟
+Parent: "Area-Prog"
+cssclasses:
+  - hide-embedded-header1
+categories: "[Computer Science](/computer%20science/computer-science/)"
+public_note: "true"
 # Estructuras de Datos
 
 - [Computer Science](/computer%20science/computer-science/)
@@ -472,7 +471,6 @@ print(lst2)  # [1,2,3,4]
 
 # Glosario Completo de Estructuras de Datos v1
 
----
 
 ## 🧩 ESTRUCTURAS LINEALES
 
@@ -496,7 +494,6 @@ Versiones optimizadas para datos con muchos valores nulos.
 - Uso eficiente de memoria.  
 - Representación mediante listas o diccionarios de coordenadas.
 
----
 
 ## 🔗 LISTAS ENLAZADAS
 
@@ -519,7 +516,6 @@ Usa un solo puntero por nodo, guardando el XOR entre prev y next.
 Lista con múltiples niveles para acelerar búsqueda `O(log n)`.  
 - Uso en bases de datos y sistemas distribuidos.
 
----
 
 ## 🧮 ESTRUCTURAS DE ACCESO DIRECTO
 
@@ -538,7 +534,6 @@ Colección de elementos únicos.
 - Operaciones: unión, intersección, diferencia.  
 - Implementaciones: `HashSet`, `TreeSet`.
 
----
 
 ## 📚 ESTRUCTURAS NO LINEALES
 
@@ -584,7 +579,6 @@ Extensión del K-D Tree para dividir espacio 3D en ocho subregiones.
 Estructuras para manipulación eficiente de cadenas y subcadenas.  
 - Uso: búsqueda de patrones, compresión, bioinformática.
 
----
 
 ## 🔁 COLAS, PILAS Y DERIVADAS
 
@@ -606,7 +600,6 @@ Cola doble con inserción y eliminación en ambos extremos.
 Array que conecta el final con el inicio.  
 - Ideal para colas de tamaño fijo y streaming.
 
----
 
 ## 🌐 GRAFOS Y CONECTIVIDAD
 
@@ -629,7 +622,6 @@ Estructura para manejar conjuntos disjuntos.
 	- *Union by rank / size*.  
 - Uso: Kruskal, conectividad dinámica.
 
----
 
 ## 🧠 ESTRUCTURAS PROBABILÍSTICAS Y PERSISTENTES
 
@@ -645,7 +637,6 @@ Versión avanzada con contadores, permite eliminar elementos.
 Permite mantener versiones previas tras modificaciones.  
 - Uso: undo/redo, programación funcional, control de versiones.
 
----
 
 ## ⚙️ COMPLEMENTOS Y VARIANTES
 
@@ -663,7 +654,6 @@ Estrategias para minimizar colisiones y optimizar espacio:
 - Cuckoo hashing.
 - Double hashing.
 
----
 
 ## 🧾 RESUMEN CATEGÓRICO
 
@@ -680,7 +670,6 @@ Estrategias para minimizar colisiones y optimizar espacio:
 
 # Estructuras de Datos — Expansión y Conceptos Avanzados
 
----
 ## 🧠 CONCEPTOS AVANZADOS Y COMPLEMENTARIOS
 
 ### **Estructuras Persistentes vs Ephemerales**
@@ -690,7 +679,6 @@ Estrategias para minimizar colisiones y optimizar espacio:
 	- Técnicas: *copy-on-write*, *path copying*, *structural sharing*.  
 - Uso: sistemas de control de versiones, depuración histórica, algoritmos retroactivos.
 
----
 
 ### **Estructuras de Datos Inmutables**
 - No se modifican tras su creación.  
@@ -698,7 +686,6 @@ Estrategias para minimizar colisiones y optimizar espacio:
 - Implementadas mediante **estructuras persistentes** o **árboles compartidos**.  
 - Ejemplo: `ImmutableList` (Java), `frozenset` (Python), `persistent vector` (Clojure).
 
----
 
 ### **Estructuras de Datos Concurrentes**
 - Diseñadas para ejecución paralela sin conflictos.  
@@ -708,7 +695,6 @@ Estrategias para minimizar colisiones y optimizar espacio:
 	- **Concurrent queues**, **concurrent hash maps**.  
 - Uso: sistemas distribuidos, procesamiento de eventos, motores de bases de datos.
 
----
 
 ### **Estructuras Autoajustables (Self-adjusting)**
 - Modifican su forma según el patrón de acceso para optimizar el rendimiento futuro.  
@@ -716,14 +702,12 @@ Estrategias para minimizar colisiones y optimizar espacio:
 	- **Splay Tree:** mueve el nodo accedido a la raíz mediante rotaciones.
 	- **Self-organizing list:** reordena según frecuencia de acceso.
 
----
 
 ### **Estructuras de Datos Amortizadas**
 - Coste medio por operación se mantiene bajo aunque algunas sean costosas.  
 - Ejemplo clásico: **Array dinámico** → redimensionamiento ocasional pero inserción promedio `O(1)`.  
 - Otras: tablas hash con *rehashing*, *Fibonacci Heap* con consolidación diferida.
 
----
 
 ## 🌲 VARIANTES Y ESTRUCTURAS DERIVADAS DE ÁRBOLES
 
@@ -734,28 +718,24 @@ Estrategias para minimizar colisiones y optimizar espacio:
 - **B* Tree:** optimiza uso de espacio con redistribución entre nodos.  
 - Uso: sistemas de archivos, bases de datos, índices de almacenamiento.
 
----
 
 ### **Trie Comprimido (Radix Tree / Patricia Tree)**
 - Versión optimizada de Tries / Prefix Trees.  
 - Compacta nodos con una sola rama.  
 - Uso: tablas de enrutamiento, autocompletado, compresión de prefijos comunes.
 
----
 
 ### **Cartesian Tree**
 - Combina propiedades de heap y árbol de búsqueda.  
 - Cada nodo cumple: heap por clave y BST por índice.  
 - Uso: construcción de estructuras en `O(n)` para RMQ (Range Minimum Query).
 
----
 
 ### **Fibonacci Heap**
 - Heap con estructura en forma de lista de árboles.  
 - Inserción y unión `O(1)`, extracción del mínimo `O(log n)` amortizado.  
 - Uso: algoritmos de grafos como Dijkstra o Prim optimizados.
 
----
 
 ## 🔗 ESTRUCTURAS PARA GRAFOS Y REDES
 
@@ -779,7 +759,6 @@ Estrategias para minimizar colisiones y optimizar espacio:
 - Generalización del grafo: una arista puede conectar más de dos nodos.  
 - Uso: análisis de relaciones complejas, sistemas biológicos, bases de datos relacionales.
 
----
 
 ## ⚙️ ESTRUCTURAS FUNCIONALES Y GEOMÉTRICAS
 
@@ -795,7 +774,6 @@ Estrategias para minimizar colisiones y optimizar espacio:
 	- **K-D Tree / Octree:** optimizan búsquedas por proximidad.  
 - Uso: videojuegos, motores 3D, búsqueda de vecinos, GIS.
 
----
 
 ## 🔢 ESTRUCTURAS MATEMÁTICAS Y DE OPTIMIZACIÓN
 
@@ -811,7 +789,6 @@ Estrategias para minimizar colisiones y optimizar espacio:
 - Preprocesa datos para consultas inmutables en `O(1)` tras `O(n log n)` de preparación.  
 - Uso: RMQ, mínimos/máximos de subarreglos.
 
----
 
 ## 🔍 ESTRUCTURAS PARA CADENAS Y TEXTO
 
@@ -828,7 +805,6 @@ Estrategias para minimizar colisiones y optimizar espacio:
 - Tabla de prefijos usada para búsquedas lineales sin retrocesos.  
 - Base de algoritmos de coincidencia de cadenas.
 
----
 
 ## 🧬 ESTRUCTURAS PROBABILÍSTICAS Y APROXIMADAS
 
@@ -844,7 +820,6 @@ Estrategias para minimizar colisiones y optimizar espacio:
 ### **Skip Bloom Filter**
 - Extiende el Bloom Filter con saltos jerárquicos para búsquedas más eficientes.
 
----
 
 ## 🧩 ESTRUCTURAS PERSONALIZADAS Y COMBINADAS
 
@@ -858,7 +833,6 @@ Estrategias para minimizar colisiones y optimizar espacio:
 - Capas adicionales que extienden funcionalidad sin modificar la base.  
 - Ejemplo: *ObservableList*, *SynchronizedMap*.
 
----
 
 ## 🧾 RESUMEN DE CONCEPTOS NUEVOS
 
@@ -874,7 +848,6 @@ Estrategias para minimizar colisiones y optimizar espacio:
 | **Cadenas** | Aho-Corasick, Suffix Automaton |
 | **Combinadas** | Hash + Heap, Graph + Queue |
 
----
 
-🧠 Esta nota amplía el glosario de [estructuras de datos](/computer%20science/estructuras-de-datos/) incluyendo estructuras **modernas, concurrentes, funcionales y probabilísticas**, abarcando enfoques teóricos y prácticos de nivel avanzado.
+🧠 Esta nota amplía el glosario de [estructuras de datos](/uncategorized/estructuras-de-datos/) incluyendo estructuras **modernas, concurrentes, funcionales y probabilísticas**, abarcando enfoques teóricos y prácticos de nivel avanzado.
 

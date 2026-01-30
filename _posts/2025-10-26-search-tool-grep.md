@@ -1,18 +1,17 @@
----
-date: 2025-10-26 13:56
-title: search tool grep
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Sistemas]]"
-public_note: "true"
-category: Sistemas
+creation date: 2025-10-26 13:56
 tags:
   - sistemas
   - search
   - search_tool
   - Productividad
----
+keywords:
+source:
+status: 🌟
+Parent: "Area-Sistemas"
+cssclasses:
+  - hide-embedded-header1
+categories: "[Sistemas](/sistemas/sistemas/)"
+public_note: "true"
 # search tool grep
 
 ## Contexto y propósito

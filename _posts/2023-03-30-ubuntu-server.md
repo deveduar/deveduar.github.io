@@ -1,15 +1,14 @@
----
-date: 2023-03-31 01:05
-title: ubuntu server
-status: 🌟
-Parent: "[[Area-Sistemas]]"
-keywords:
-source:
-public_note: "true"
-category: Linux
 tags:
   - Linux
----
+status: 🌟
+Parent: "Area-Sistemas"
+creation date: 2023-03-31 01:05
+keywords:
+source:
+cssclasses:
+  - hide-embedded-header1
+categories: "[Linux](/sistemas/linux/)"
+public_note: "true"
 # ubuntu server
 
 # Ubuntu Server — Fundamentos y Arquitectura (2025)
@@ -662,7 +661,6 @@ password required pam_pwhistory.so remember=99 use_authok
 * `difok=3` — al menos 3 caracteres deben ser diferentes de la contraseña anterior para ser aceptada.
 * Previene contraseñas simples y aumenta la seguridad sin generar frustración en los usuarios.
 
-![Untitled](Data/Data-Sistemas/Data-Linux/Untitled%203.png)
 
 {% raw %}
 ```
@@ -735,7 +733,6 @@ ls -l
 ```
 {% endraw %}
 
-![Untitled](Data/Data-Sistemas/Data-Linux/Untitled%204.png)
 
 * Columnas importantes:
 

@@ -1,13 +1,13 @@
----
-date: 2025-10-17 00:25
-title: Mapa Conceptual Completo de Testing
+creation date: 2025-10-17 00:25
+tags:
 keywords:
 source:
 status: 📌
-Parent: "[[Area-Prog]]"
+Parent: "Area-Prog"
+cssclasses:
+  - hide-embedded-header1
+categories: "[Testing](/testing/testing/)"
 public_note: "true"
-category: Testing
----
 # Mapa Conceptual Completo de Testing
 
 # 🧠 Mapa Conceptual de Testing (modular)
@@ -37,7 +37,6 @@ mindmap
 ```
 {% endraw %}`
 
----
 
 ## 🧪 Estrategias y Metodologías
 
@@ -62,7 +61,6 @@ mindmap
 ```
 {% endraw %}
 
----
 
 ## 🧰 Herramientas y Ecosistema
 
@@ -94,7 +92,6 @@ mindmap
 ```
 {% endraw %}
 
----
 
 ## 🔄 Automatización y CI/CD
 
@@ -120,7 +117,6 @@ mindmap
 ```
 {% endraw %}
 
----
 
 ## 🌐 API, Frontend y Mobile Testing
 
@@ -146,7 +142,6 @@ mindmap
 ```
 {% endraw %}
 
----
 
 ## ⚙️ Simulación y Dobles de Test
 
@@ -168,7 +163,6 @@ mindmap
 ```
 {% endraw %}
 
----
 
 ## 📈 QA, Reporting y Métricas
 
@@ -194,7 +188,6 @@ mindmap
 ```
 {% endraw %}
 
----
 
 ## 🧭 Futuro del Testing
 
@@ -218,7 +211,6 @@ Perfecto 💪 Aquí tienes el **mapa conceptual completo y modular de Testing**,
 con **todos los módulos** (los originales + los nuevos complementarios)  
 en un **bloque de código Markdown listo para Obsidian**:
 
----
 
 
 # 🧠 Mapa Conceptual Completo de Testing 2
@@ -236,7 +228,6 @@ en un **bloque de código Markdown listo para Obsidian**:
 - [[#🧮 Calidad de Software y Gestión del Riesgo]]
 - [[#🧠 Cultura, Roles y Procesos en el Testing]]
 
----
 
 ## 🧩 Fundamentos y Tipos de Pruebas
 {% raw %}
@@ -263,7 +254,6 @@ mindmap
 ```
 {% endraw %}`
 
----
 
 ## 🧪 Estrategias y Metodologías
 
@@ -288,7 +278,6 @@ mindmap
 ```
 {% endraw %}
 
----
 
 ## 🧰 Herramientas y Ecosistema
 
@@ -320,7 +309,6 @@ mindmap
 ```
 {% endraw %}
 
----
 
 ## 🔄 Automatización y CI/CD
 
@@ -346,7 +334,6 @@ mindmap
 ```
 {% endraw %}
 
----
 
 ## 🌐 API, Frontend y Mobile Testing
 
@@ -372,7 +359,6 @@ mindmap
 ```
 {% endraw %}
 
----
 
 ## ⚙️ Simulación y Dobles de Test
 
@@ -394,7 +380,6 @@ mindmap
 ```
 {% endraw %}
 
----
 
 ## 📈 QA, Reporting y Métricas
 
@@ -420,7 +405,6 @@ mindmap
 ```
 {% endraw %}
 
----
 
 ## 🧭 Futuro del Testing
 
@@ -440,7 +424,6 @@ mindmap
 ```
 {% endraw %}
 
----
 
 ## 🧱 Arquitectura, Diseño y Entorno de Pruebas
 
@@ -469,7 +452,6 @@ mindmap
 ```
 {% endraw %}
 
----
 
 ## 🧮 Calidad de Software y Gestión del Riesgo
 
@@ -498,7 +480,6 @@ mindmap
 ```
 {% endraw %}
 
----
 
 ## 🧠 Cultura, Roles y Procesos en el Testing
 

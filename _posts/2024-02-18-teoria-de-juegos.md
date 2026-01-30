@@ -1,21 +1,19 @@
----
-date: 2024-02-18 16:14
-title: Teoria de juegos
 Hecho: false
+tags:
+  - Mates
+creation date: 2024-02-18 16:14
 keywords:
 source:
 status: 🌟
-Parent: "[[Area-IA]]"
+Parent: "Area-IA"
+cssclasses:
+  - hide-embedded-header1
+categories: "[mates](/uncategorized/mates/)"
 public_note: "true"
-category: mates
-tags:
-  - Mates
----
 # Teoria de juegos
 
 - [matematicas](/uncategorized/mates/)
 - economia
-- 
 La **teoría de juegos** es una rama de las [matemáticas](/uncategorized/mates/) aplicadas que analiza las **interacciones estratégicas** entre agentes racionales. Estudia cómo las decisiones de un individuo dependen de las decisiones de otros, buscando entender y predecir los resultados posibles en distintos contextos: economía, política, biología, algoritmos, etc.
 
 ## Recursos
@@ -24,7 +22,6 @@ La **teoría de juegos** es una rama de las [matemáticas](/uncategorized/mates/
 - [Teoría de los Juegos](https://www.youtube.com/watch?v=bGRAZyEZRoE)
 - [Teoría de Juegos, Economía Experimental y Equilibrio de Nash](https://www.youtube.com/watch?v=yEbCBeIOdS0)
 
----
 
 ## Fundamentos Matemáticos
 
@@ -37,7 +34,6 @@ La teoría de juegos se basa en estructuras matemáticas y modelos que permiten 
 
 - **Probabilidad**: usada para modelar juegos con información incompleta o incertidumbre sobre las acciones del rival.
 
----
 
 ## Conceptos Clave
 
@@ -63,7 +59,6 @@ Ejemplo: equilibrio entre **peso y velocidad** en diseño mecánico o entre **be
 
 La **frontera de Pareto** representa el conjunto de soluciones óptimas que logran el mejor equilibrio entre variables en conflicto.
 
----
 
 ## Tipos de Juegos
 
@@ -84,7 +79,6 @@ La **frontera de Pareto** representa el conjunto de soluciones óptimas que logr
 	Representa el contexto más amplio del juego: **tendencias, popularidad, normas o convenciones** que influyen en las estrategias reales.  
 	Ejemplo: en los videojuegos competitivos o los mercados financieros, el metajuego determina qué tácticas se consideran “óptimas”.
 
----
 
 ## Estrategias Avanzadas
 
@@ -97,7 +91,6 @@ La **frontera de Pareto** representa el conjunto de soluciones óptimas que logr
 - **Iteración de niveles**:  
 	Modelo cognitivo donde los jugadores piensan en niveles (“yo creo que él cree que yo haré…”), dando lugar a dinámicas complejas de anticipación.
 
----
 
 ## Aplicaciones
 
@@ -108,7 +101,6 @@ La **frontera de Pareto** representa el conjunto de soluciones óptimas que logr
 - **Diseño de sistemas multiagente**: en IA, robótica y redes.
 - **Econometría y experimentación**: se estudian mediante entornos controlados como los *ring games* o juegos de laboratorio (referencia a Kneeland).
 
----
 
 ## Figuras Relevantes
 
@@ -116,7 +108,6 @@ La **frontera de Pareto** representa el conjunto de soluciones óptimas que logr
 - **Richard Thaler**: pionero de la economía del comportamiento, estudia cómo la racionalidad limitada afecta los resultados de los juegos.  
 - **Kneeland**: investigó la interacción en entornos experimentales y los efectos de información parcial.
 
----
 
 ## Enlaces Relacionados
 
@@ -134,7 +125,6 @@ La **frontera de Pareto** representa el conjunto de soluciones óptimas que logr
 
 Esta nota amplía la teoría de juegos incorporando ejemplos prácticos en código y modelos computacionales. Permite explorar cómo se representan y resuelven distintos tipos de juegos, desde el dilema del prisionero hasta el cálculo del equilibrio de Nash mediante algoritmos.
 
----
 
 ## Representación de Juegos con Matrices
 
@@ -163,7 +153,6 @@ print(resultado('Cooperar', 'Traicionar'))  # (0, 5)
 
 Este tipo de representación es la base para modelar y simular estrategias iterativas o probabilísticas.
 
----
 
 ## Cálculo del Equilibrio de Nash
 
@@ -196,7 +185,6 @@ for eq in equilibrios:
 
 Este código utiliza la librería `nashpy` para buscar estrategias mixtas (probabilidades sobre acciones) que constituyen un equilibrio.
 
----
 
 ## Estrategias Óptimas y Juegos Repetidos
 
@@ -219,7 +207,6 @@ print(tit_for_tat(historial_B))  # Traicionar
 
 **Tit-for-Tat** coopera al inicio y luego imita la jugada del oponente, fomentando la reciprocidad. Es una estrategia que suele estabilizar el equilibrio cooperativo en juegos iterados.
 
----
 
 ## Modelos de Simulación y Metajuego
 
@@ -250,7 +237,6 @@ for ronda in range(5):
 
 Esto permite estudiar **tendencias de comportamiento**, **equilibrios emergentes** y **estabilidad evolutiva** dentro de un sistema dinámico.
 
----
 
 ## Eficiencia de Pareto y Frontera Óptima
 
@@ -282,7 +268,6 @@ plt.show()
 
 El gráfico muestra las combinaciones posibles de resultados y la **frontera de Pareto**, donde ambos obtienen resultados óptimos según sus intereses.
 
----
 
 ## Extensiones y Conceptos Avanzados
 
@@ -292,7 +277,6 @@ El gráfico muestra las combinaciones posibles de resultados y la **frontera de 
 * **Economía del comportamiento**: introduce la irracionalidad y sesgos cognitivos (ver Richard Thaler).
 * **Econometría experimental**: validación empírica mediante juegos de laboratorio (e.g., *ring games*, Kneeland).
 
----
 
 ## Enlaces Relacionados
 
@@ -310,7 +294,6 @@ El gráfico muestra las combinaciones posibles de resultados y la **frontera de 
 
 La **teoría de juegos** tiene aplicaciones prácticas en múltiples campos del conocimiento, desde la economía y la política hasta la inteligencia artificial, la programación y el diseño de sistemas distribuidos. Esta nota reúne ejemplos concretos, modelos computacionales y usos reales en los que los conceptos de estrategia, equilibrio y cooperación se aplican de manera directa.
 
----
 
 ## Economía y Mercados
 
@@ -337,7 +320,6 @@ print(f"Ganador: {ganador}, paga: {precio}")
 ```
 {% endraw %}`
 
----
 
 ## Política y Relaciones Internacionales
 
@@ -368,7 +350,6 @@ for i in range(5):
 ```
 {% endraw %}
 
----
 
 ## Inteligencia Artificial y Aprendizaje Automático
 
@@ -400,7 +381,6 @@ def elegir_accion():
 * Las **GANs** se basan directamente en la teoría de juegos: un **generador** y un **discriminador** compiten entre sí.
 * El equilibrio surge cuando el generador produce resultados indistinguibles del conjunto real.
 
----
 
 ## Ciberseguridad y Redes
 
@@ -422,7 +402,6 @@ print("Ataque exitoso:", defensor != atacante)
 ```
 {% endraw %}
 
----
 
 ## Economía del Comportamiento
 
@@ -430,7 +409,6 @@ print("Ataque exitoso:", defensor != atacante)
 * Modelos que explican comportamientos aparentemente “irracionales” como la cooperación o la aversión a la pérdida.
 * Aplicaciones: diseño de políticas públicas, incentivos fiscales y estrategias de *nudging*.
 
----
 
 ## Ciencias de la Computación y Programación
 
@@ -457,7 +435,6 @@ print(f"Validador elegido: {validador}")
 * En servicios y plataformas, la **interacción entre desarrolladores y usuarios** puede modelarse como un juego de incentivos.
 * Optimizar una API implica equilibrar coste, latencia y adopción (frontera de Pareto).
 
----
 
 ## Biología y Ecología
 
@@ -465,7 +442,6 @@ print(f"Validador elegido: {validador}")
 * Ejemplo: el **juego del halcón y la paloma**, donde las especies ajustan comportamientos según costos de conflicto.
 * La **estrategia evolutivamente estable (ESS)** se mantiene frente a mutaciones o desviaciones individuales.
 
----
 
 ## Videojuegos y Simulación de Estrategias
 
@@ -485,7 +461,6 @@ for p, winrate in personajes.items():
 ```
 {% endraw %}
 
----
 
 ## Resumen de Aplicaciones
 
@@ -499,7 +474,6 @@ for p, winrate in personajes.items():
 | Biología       | Juego del halcón y la paloma  | Estrategias evolutivas       |
 | Videojuegos    | Metajuego                     | Balance de mecánicas         |
 
----
 
 ## Enlaces Relacionados
 

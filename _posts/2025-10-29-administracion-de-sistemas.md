@@ -1,16 +1,15 @@
----
-date: 2025-10-29 19:55
-title: administracion de sistemas
-keywords:
-source:
-status: 📌
-Parent: "[[Area-Sistemas]]"
-public_note: "true"
-category: Sistemas
+creation date: 2025-10-29 19:55
 tags:
   - sistemas
   - administracion
----
+keywords:
+source:
+status: 📌
+Parent: "Area-Sistemas"
+cssclasses:
+  - hide-embedded-header1
+categories: "[Sistemas](/sistemas/sistemas/)"
+public_note: "true"
 # administracion de sistemas
 
 - [Sistemas](/sistemas/sistemas/)
@@ -29,17 +28,14 @@ tags:
 - [Active Directory](/sistemas/active-directory/)
 	- GPO objeto de directiva de grupo (GPO)
 		- Introducción a la directiva de grupo para Windows Server-group-policy-overview 
-	- 
 - WSUS
 	- actualizaciones en red
 	- Información general de Windows Server Update Services (WSUS)-windows-server-update-services-wsus 
 - [Virtualizacion](/devops/virtualizacion/)
 	- Hyper-V 
 		- Introducción a la tecnología de Hyper-V-hyper-v-overviewpivots=windows 
-		- 
 	- comutacion por error
 		- Clústeres de conmutación por error-failover-clustering-overview 
-	- 
 - [Redes](/redes/redes/)
 	- DNS
 	- dhcp

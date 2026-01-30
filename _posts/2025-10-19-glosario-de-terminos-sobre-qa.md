@@ -1,13 +1,13 @@
----
-date: 2025-10-19 13:44
-title: glosario de terminos sobre qa
+creation date: 2025-10-19 13:44
+tags:
 keywords:
 source:
 status: 📌
-Parent: "[[Area-Prog]]"
+Parent: "Area-Prog"
+cssclasses:
+  - hide-embedded-header1
+categories: "[Testing](/testing/testing/)"
 public_note: "true"
-category: Testing
----
 # glosario de terminos sobre qa
 ## Fundamentos y Definiciones Básicas
 - **Quality Assurance (QA)**: Sistema de gestión preventivo que establece procesos estandarizados para garantizar la calidad durante todo el ciclo de desarrollo

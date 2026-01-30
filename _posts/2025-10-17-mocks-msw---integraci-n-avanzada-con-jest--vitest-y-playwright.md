@@ -1,13 +1,13 @@
----
-date: 2025-10-17 18:23
-title: Mocks MSW - integración avanzada con Jest, Vitest y Playwright
+creation date: 2025-10-17 18:23
+tags:
 keywords:
 source:
 status: 📌
-Parent: "[[Area-Prog]]"
+Parent: "Area-Prog"
+cssclasses:
+  - hide-embedded-header1
+categories: "[Testing](/testing/testing/)"
 public_note: "true"
-category: Testing
----
 
 # Mocks MSW - integración avanzada con Jest, Vitest y Playwright
 
@@ -16,14 +16,12 @@ category: Testing
 - [MSW Mocks service worker](/testing/msw-mocks-service-worker/)
 - Integration tests
 
----
 
 ## 🎯 Propósito
 Guía práctica y completa para integrar **Mock Service Worker (MSW)** en entornos de testing modernos — **Jest**, **Vitest** y **Playwright** — cubriendo configuración, estrategias, hooks de ciclo de vida y patrones de validación.
 
 Incluye ejemplos funcionales y referencias cruzadas a [TDD patterns](/testing/tdd-patterns/).
 
----
 
 ## 🧩 Estructura de Mocks Base
 
@@ -62,7 +60,6 @@ export const handlers = [
 ```
 {% endraw %}`
 
----
 
 ## ⚙️ Integración con Jest (React, Node)
 
@@ -113,7 +110,6 @@ test('fetchUser devuelve datos simulados', async () => {
 🧠 _Consejo:_  
 Usa `server.use(...)` dentro del test para sobrescribir handlers en tiempo real → ver [Mocks MSW - patrones y casos reales > Patrón 4 — Fallback de Handlers](/testing/mocks-msw---patrones-y-casos-reales/#patrn-4--fallback-de-handlers).
 
----
 
 ## ⚡ Integración con Vitest (Vite, React, Svelte, etc.)
 
@@ -161,7 +157,6 @@ test('mock de login exitoso', async () => {
 
 💡 Usa `vi.spyOn(fetch, 'default')` o mocks de red nativos si necesitas verificar llamadas de red reales.
 
----
 
 ## 🧭 Integración con Playwright (E2E Testing)
 
@@ -225,7 +220,6 @@ test('renderiza datos mockeados', async ({ page }) => {
 
 🧭 _Opcional:_ Puedes cargar `mockServiceWorker.js` directamente en el contexto del navegador para una simulación total de red.
 
----
 
 ## 🔄 MSW + CI/CD Integration (GitHub Actions / Docker)
 
@@ -256,7 +250,6 @@ jobs:
 - Inicia los mocks con `server.listen()` solo si `NODE_ENV === 'test'`.
 - Usa `onUnhandledRequest: 'error'` para asegurar cobertura completa.
 
----
 
 ## 🧠 Estrategias de Testing con MSW
 
@@ -268,7 +261,6 @@ jobs:
 |**Mock Failover**|CI|Simular errores de red o auth|
 |**Mock Condicional**|Multi-env|Cambiar respuestas según headers o entorno|
 
----
 
 ## 🪶 Mejores Prácticas Globales
 
@@ -279,7 +271,6 @@ jobs:
 - Documenta tus mocks en la wiki o junto al [Glosario de TDD](/testing/glosario-de-tdd/).
 - Evita mezclar MSW con interceptores manuales (axios/fetch mocks) en el mismo entorno.
 
----
 
 ## 🔗 Referencias
 

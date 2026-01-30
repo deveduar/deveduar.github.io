@@ -1,12 +1,4 @@
----
-date: 2024-11-23 19:47
-title: Sequelize
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Prog]]"
-public_note: "true"
-category: Backend
+creation date: 2024-11-23 19:47
 tags:
   - sequelize
   - nodejs
@@ -14,7 +6,15 @@ tags:
   - api
   - db
   - ORM
----
+keywords:
+source:
+status: 🌟
+Parent: "Area-Prog"
+cssclasses:
+  - hide-embedded-header1
+  - wide
+categories: "[Backend](/backend/backend/)"
+public_note: "true"
 # Sequelize
 
 ## Enlaces Relacionados
@@ -92,7 +92,6 @@ Sequelize es un **ORM para Node.js** que facilita la interacción con **bases de
 - **Seeders:** poblar datos iniciales.  
 - **Consultas:** CRUD, agregaciones, joins y transacciones.
 
----
 
 ## Definición de Modelo (Ejemplo)
 {% raw %}
@@ -150,7 +149,6 @@ return user;
 ```
 {% endraw %}
 
----
 
 ## Buenas Prácticas
 

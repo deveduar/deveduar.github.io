@@ -1,18 +1,18 @@
----
-date: 2024-11-16 17:44
-title: web services
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Prog]]"
-public_note: "true"
-category: Backend
+creation date: 2024-11-16 17:44
 tags:
   - webservices
   - devops
   - backend
   - microservicios
----
+keywords:
+source:
+status: 🌟
+Parent: "Area-Prog"
+cssclasses:
+  - hide-embedded-header1
+  - wide
+categories: "[Backend](/backend/backend/)"
+public_note: "true"
 # Web Services
 
 ## Enlaces
@@ -38,7 +38,6 @@ Un web service actúa como un **proveedor** de funcionalidades accesibles por un
 ### Relación con plataformas en la nube
 - GCP, AWS, Azure, Supabase, Firebase, Cloudflare, Vercel → ofrecen APIs, gateways, funciones, colas, bases de datos y servicios integrados para crear, desplegar y consumir web services.
 
----
 
 ## Tipos de Web Services
 
@@ -60,7 +59,6 @@ Un web service actúa como un **proveedor** de funcionalidades accesibles por un
 - El cliente especifica qué datos necesita.
 - Minimiza el overfetching.
 
----
 
 ## WSDL (Web Services Description Language)
 
@@ -84,7 +82,6 @@ Un web service actúa como un **proveedor** de funcionalidades accesibles por un
 - UDDI → registro de servicios disponibles.
 - Conceptos clave: colecciones, métodos y parámetros, retorno, descriptor de servicio, cliente/consumer, servlet receptor.
 
----
 
 ## XML en Web Services
 [XML](/databases/xml/)
@@ -100,7 +97,6 @@ Un web service actúa como un **proveedor** de funcionalidades accesibles por un
 ### Recursos
 - [Python for Everybody - Web Services: XML Schema | Learn | freeCodeCamp.org](https://www.freecodecamp.org/learn/python-for-everybody/python-for-everybody/web-services-xml-schema)
 
----
 
 ## Arquitectura y Roles
 - **Provider** → expone el servicio.
@@ -108,7 +104,6 @@ Un web service actúa como un **proveedor** de funcionalidades accesibles por un
 - **Broker/UDDI** → catálogo (opcional).
 - Comunicación mediante protocolos estándar: HTTP/S, SOAP, REST, MIME.
 
----
 
 ## Errores y Excepciones
 - Errores HTTP (400, 401, 403, 404, 500…)
@@ -117,7 +112,6 @@ Un web service actúa como un **proveedor** de funcionalidades accesibles por un
 - Timeouts, throttling, rate limits
 - Errores de serialización o transformación de datos
 
----
 
 ## Métodos RESTful
 - GET → lectura
@@ -127,7 +121,6 @@ Un web service actúa como un **proveedor** de funcionalidades accesibles por un
 - DELETE → eliminación
 - OPTIONS → metadatos sobre el endpoint
 
----
 
 ## Casos de Uso y Ejemplos
 - API REST que devuelve JSON.
@@ -136,7 +129,6 @@ Un web service actúa como un **proveedor** de funcionalidades accesibles por un
 - Integración con servicios externos (marketing, pagos, CRMs).
 - Conexiones a bases de datos, sockets o sistemas legacy.
 
----
 
 ## Videos y Recursos
 
@@ -169,7 +161,6 @@ Un web service actúa como un **proveedor** de funcionalidades accesibles por un
 - **Node.js / Express**
 	- [Node Js Express | web services | Creación api rest](https://luisjordan.net/node-js/web-services-con-node-js-express-creacion-de-api-rest/)
 
----
 
 ## Código de Ejemplo: SOAP (Java – JAX-WS)
 
@@ -218,7 +209,6 @@ System.out.println(hola.saludar("Eduardo"));
 - Diseño → implementación → pruebas → despliegue → monitoreo → deprecación.
 - Documentación continua (OpenAPI, Postman Collections, WSDL autogenerado).
 
----
 
 ## Seguridad en Web Services
 ### Seguridad REST
@@ -237,7 +227,6 @@ System.out.println(hola.saludar("Eduardo"));
 - Política de mensajes (WS-Policy).
 - Integrity & confidentiality al nivel de mensaje, no solo del transporte.
 
----
 
 ## Estándares y Especificaciones Modernas
 ### OpenAPI / Swagger
@@ -254,7 +243,6 @@ System.out.println(hola.saludar("Eduardo"));
 ### WADL
 - Alternativa XML para describir servicios REST (menos usada hoy).
 
----
 
 ## Patrones de Integración entre Servicios
 ### Sincronía vs Asincronía
@@ -268,7 +256,6 @@ System.out.println(hola.saludar("Eduardo"));
 - Event-sourcing.
 - CQRS aplicado a APIs.
 
----
 
 ## Infraestructura y Deploy de Web Services
 ### API Gateways
@@ -288,7 +275,6 @@ System.out.println(hola.saludar("Eduardo"));
 	- Circuit-breakers.
 	- Seguridad mTLS entre servicios.
 
----
 
 ## Rendimiento y Optimización
 ### Compresión y Cache
@@ -302,7 +288,6 @@ System.out.println(hola.saludar("Eduardo"));
 - Filtros de consulta.
 - Formatos alternativos (Avro, Protobuf).
 
----
 
 ## Testing en Web Services
 ### Tipos de Pruebas
@@ -317,7 +302,6 @@ System.out.println(hola.saludar("Eduardo"));
 - SOAP: SoapUI.
 - Integración continua: GitHub Actions, GitLab CI, Jenkins.
 
----
 
 ## Observabilidad
 ### Logs
@@ -332,7 +316,6 @@ System.out.println(hola.saludar("Eduardo"));
 - Prometheus.
 - Grafana.
 
----
 
 ## Estilos de API Alternativos
 ### RPC (Remote Procedure Call)
@@ -343,7 +326,6 @@ System.out.println(hola.saludar("Eduardo"));
 - OData → consultas tipo SQL sobre HTTP.
 - Falcor (Netflix) → modelo unificado de datos.
 
----
 
 ## Comunicaciones en Tiempo Real
 ### WebSockets
@@ -354,7 +336,6 @@ System.out.println(hola.saludar("Eduardo"));
 - Comunicación unidireccional servidor → cliente.
 - Menos impacto que WebSockets en muchos casos.
 
----
 
 ## Buenas Prácticas de Diseño
 - Contratos claros y estables.
@@ -363,7 +344,6 @@ System.out.println(hola.saludar("Eduardo"));
 - Nombres estandarizados y semánticos.
 - Reglas de validación explícitas.
 
----
 
 ## Errores y Mecanismos de Resiliencia
 ### Resiliencia en APIs
@@ -378,14 +358,12 @@ System.out.println(hola.saludar("Eduardo"));
 - SOAP:
 	- Faults tipados.
 
----
 
 ## Herramientas de Monitoreo y Gestión
 - API Analytics.
 - Gateways con paneles integrados.
 - Health checks con `/health`, `/ready`, `/live`.
 
----
 
 ## Ejemplos Adicionales
 - Un servicio basado en colas (RabbitMQ/Kafka) que procesa pedidos asincrónicamente.

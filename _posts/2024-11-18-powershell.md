@@ -1,15 +1,15 @@
----
-date: 2024-11-18 22:45
-title: powershell
+creation date: 2024-11-18 22:45
+tags:
+  - powershell
 keywords:
 source:
 status: 🌟
-Parent: "[[Area-Sistemas]]"
+Parent: "Area-Sistemas"
+cssclasses:
+  - hide-embedded-header1
+  - wide
+categories: "[Sistemas](/sistemas/sistemas/)"
 public_note: "true"
-category: Sistemas
-tags:
-  - powershell
----
 # PowerShell
 
 ## Enlaces internos y contexto

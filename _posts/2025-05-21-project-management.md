@@ -1,21 +1,20 @@
----
-date: 2025-05-21 20:08
-title: Project Management
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Sistemas]]"
-public_note: "true"
-category: Management
+creation date: 2025-05-21 20:08
 tags:
   - Management
   - project_management
----
+keywords:
+source:
+status: 🌟
+Parent: "Area-Sistemas"
+cssclasses:
+  - hide-embedded-header1
+  - wide
+categories: "[Management](/management/management/)"
+public_note: "true"
 # Project Management
 
 Automatizacion · [monitoreo](/monitoreo/monitoreo/) · [Management](/management/management/) · [Jira](/management/jira/) · Confluence · Redmine · Slack · Google Workspace · PMO
 
----
 
 ## Fundamentos de Project Management
 El **Project Management** es la disciplina que permite planificar, ejecutar y controlar proyectos para cumplir objetivos dentro de un alcance, tiempo y coste definidos. Incluye metodologías, herramientas y prácticas que estructuran el trabajo y facilitan la coordinación entre equipos.
@@ -38,7 +37,6 @@ El **Project Management** es la disciplina que permite planificar, ejecutar y co
 - **Comunicación**  
 	Punto central para asegurar alineación, transparencia y toma de decisiones.
 
----
 
 ## Herramientas Principales
 
@@ -80,7 +78,6 @@ Slack es una plataforma de **comunicación** en tiempo real.
 Suite colaborativa que incluye Documentos, Drive, Hojas y Calendar.  
 Se integra con Jira, Slack y herramientas de automatización.
 
----
 
 ## PMO
 PMO (Project Management Office) es la entidad encargada de estandarizar procesos, gobernanza y métricas del portafolio de proyectos.
@@ -93,7 +90,6 @@ PMO (Project Management Office) es la entidad encargada de estandarizar procesos
 	- Qué es un PMO manager y cuáles son sus funciones principales-  
 	- ¿Qué es una Oficina de Gestión de Proyectos (PMO) 2025  Asana-pmo-project-management-office
 
----
 
 ## Procesos Esenciales de un Proyecto
 
@@ -124,7 +120,6 @@ PMO (Project Management Office) es la entidad encargada de estandarizar procesos
 - Retrospectivas (Scrum) o lecciones aprendidas.
 - Archivado de documentación.
 
----
 
 ## Metodologías de Trabajo
 
@@ -141,7 +136,6 @@ PMO (Project Management Office) es la entidad encargada de estandarizar procesos
 - Combina planificación inicial sólida + iteraciones ágiles.
 - Ideal para empresas en transición Agile.
 
----
 
 ## Integración de Herramientas en un Flujo de Trabajo
 
@@ -159,7 +153,6 @@ PMO (Project Management Office) es la entidad encargada de estandarizar procesos
 El equilibrio entre **alcance**, **tiempo** y **coste** determina la viabilidad del proyecto.  
 Cambiar uno implica ajustar los otros dos.
 
----
 
 ## WBS (Work Breakdown Structure)
 Estructura jerárquica que desglosa el proyecto en componentes manejables.
@@ -167,7 +160,6 @@ Estructura jerárquica que desglosa el proyecto en componentes manejables.
 - Sirve de base para el cronograma y asignación de recursos.
 - Reduce la ambigüedad del alcance.
 
----
 
 ## Matriz RACI
 Define roles y responsabilidades dentro del proyecto:
@@ -176,7 +168,6 @@ Define roles y responsabilidades dentro del proyecto:
 - **C**: Consulted – quien aporta información.
 - **I**: Informed – quien debe mantenerse al tanto.
 
----
 
 ## Gestión de Riesgos (Risk Management)
 Proceso estructurado para tratar incertidumbres.
@@ -186,7 +177,6 @@ Proceso estructurado para tratar incertidumbres.
 - Planes de contingencia.
 - Registro de riesgos (Risk Register).
 
----
 
 ## Técnicas de Estimación
 Aportes esenciales para planificar esfuerzo y tiempo.
@@ -197,7 +187,6 @@ Aportes esenciales para planificar esfuerzo y tiempo.
 - Estimación paramétrica.
 - Three-Point / PERT.
 
----
 
 ## KPIs y Métricas de Rendimiento
 Indicadores clave para medir la salud del proyecto.
@@ -207,7 +196,6 @@ Indicadores clave para medir la salud del proyecto.
 - Velocidad del equipo (Agile).
 - Lead Time / Cycle Time.
 
----
 
 ## Governance del Proyecto
 Estructuras de control y toma de decisiones.
@@ -216,7 +204,6 @@ Estructuras de control y toma de decisiones.
 - Informes ejecutivos.
 - Marco de accountability.
 
----
 
 ## Gestión del Cambio (Change Management)
 Control de modificaciones durante el proyecto.
@@ -225,7 +212,6 @@ Control de modificaciones durante el proyecto.
 - Aprobación bajo governance.
 - Comunicación de cambios a stakeholders.
 
----
 
 ## Stakeholder Management Avanzado
 Técnicas para mapear y gestionar interesados.
@@ -234,7 +220,6 @@ Técnicas para mapear y gestionar interesados.
 - Comunicación adaptada según stakeholder.
 - Expectation management continuo.
 
----
 
 ## Gestión de Configuración
 Mantiene control sobre artefactos y entregables.
@@ -243,7 +228,6 @@ Mantiene control sobre artefactos y entregables.
 - Registros de cambios.
 - Aprobación de entregables.
 
----
 
 ## Soft Skills del Project Manager
 Competencias que impactan directamente el éxito.
@@ -253,7 +237,6 @@ Competencias que impactan directamente el éxito.
 - Gestión de conflictos.
 - Comunicación ejecutiva.
 
----
 
 ## Metodologías Avanzadas
 Enfoques formales para diferentes tipos de proyectos.
@@ -262,7 +245,6 @@ Enfoques formales para diferentes tipos de proyectos.
 - **SAFe:** escalado Agile para organizaciones complejas.
 - **Lean Project Management:** eliminación de desperdicio y optimización del flujo.
 
----
 
 ## Ciclo de Vida Ampliado del Proyecto
 Fases más allá del tradicional inicio–cierre:
@@ -271,7 +253,6 @@ Fases más allá del tradicional inicio–cierre:
 - **Transición:** handover a operaciones.
 - **Post-Proyecto:** análisis de beneficios y seguimiento del valor generado.
 
----
 
 ## Project Charter
 Documento esencial en el inicio del proyecto.
@@ -282,7 +263,6 @@ Documento esencial en el inicio del proyecto.
 - Riesgos iniciales.
 - Criterios de éxito.
 
----
 
 ## Lecciones Aprendidas
 Proceso estructurado para capturar conocimiento.
@@ -291,7 +271,6 @@ Proceso estructurado para capturar conocimiento.
 - Revisión periódica.
 - Incorporación a metodologías futuras.
 
----
 
 ## Gestión de Proveedores (Vendor Management)
 Clave en proyectos con dependencias externas.
@@ -300,7 +279,6 @@ Clave en proyectos con dependencias externas.
 - SLAs y penalizaciones.
 - Control y aceptación de entregables externos.
 
----
 
 ## Project Budgeting
 Gestión avanzada de costes.
@@ -309,7 +287,6 @@ Gestión avanzada de costes.
 - Control de desviaciones.
 - Ajustes en base al desempeño.
 
----
 
 ## Gestión de Recursos
 Optimiza la capacidad del equipo y la planificación.
@@ -318,11 +295,9 @@ Optimiza la capacidad del equipo y la planificación.
 - Resolución de conflictos entre proyectos.
 - Modelos de matriz funcional.
 
----
 
 # Project Management — Conceptos Experto
 
----
 
 ## Program Management
 Gestión coordinada de múltiples proyectos relacionados para obtener beneficios estratégicos que no se lograrían de manera independiente.
@@ -331,7 +306,6 @@ Gestión coordinada de múltiples proyectos relacionados para obtener beneficios
 - Control consolidado de presupuesto, riesgos y recursos.
 - Priorización según impacto en el programa.
 
----
 
 ## Portfolio Management
 Nivel más alto de gobierno de proyectos, centrado en maximizar el valor total de la organización.
@@ -341,7 +315,6 @@ Nivel más alto de gobierno de proyectos, centrado en maximizar el valor total d
 - Alineación con objetivos corporativos.
 - Evaluación y cierre de inversiones.
 
----
 
 ## OKRs Aplicados a Proyectos
 Integración de los objetivos estratégicos con el trabajo del proyecto.
@@ -350,7 +323,6 @@ Integración de los objetivos estratégicos con el trabajo del proyecto.
 - Revisión trimestral.
 - Trazabilidad proyecto → resultado organizacional.
 
----
 
 ## Análisis de Viabilidad
 Validación previa al Project Charter.
@@ -359,7 +331,6 @@ Validación previa al Project Charter.
 - Análisis económico (NPV, ROI, Payback).
 - Consideraciones legales y de compliance.
 
----
 
 ## Workshops y Facilitación Avanzada
 Talleres colaborativos para alinear equipos y clarificar información.
@@ -369,7 +340,6 @@ Talleres colaborativos para alinear equipos y clarificar información.
 - Alignment Workshops.
 - Kick-off estructurado con agenda y outcomes.
 
----
 
 ## Value Delivery Management
 Enfoque centrado en maximizar el valor entregado.
@@ -378,7 +348,6 @@ Enfoque centrado en maximizar el valor entregado.
 - Eliminación de desperdicio (Lean).
 - Priorización basada en valor, no en esfuerzo.
 
----
 
 ## Modelos de Madurez Organizacional
 Estructuras para evaluar el nivel de project management de una empresa.
@@ -387,7 +356,6 @@ Estructuras para evaluar el nivel de project management de una empresa.
 - CMMI aplicado a gestión de proyectos.
 - Evaluación de procesos, personas y herramientas.
 
----
 
 ## Project Recovery Management
 Técnicas para recuperar proyectos en estado crítico.
@@ -397,7 +365,6 @@ Técnicas para recuperar proyectos en estado crítico.
 - Ajuste de stakeholders y gobernanza.
 - Control exhaustivo durante la recuperación.
 
----
 
 ## Expectation Management
 Gestión avanzada de expectativas para evitar conflictos.
@@ -406,7 +373,6 @@ Gestión avanzada de expectativas para evitar conflictos.
 - Comunicación preventiva.
 - Ajuste de expectativas durante el proyecto.
 
----
 
 ## Project Audits
 Revisiones independientes del estado del proyecto.
@@ -415,7 +381,6 @@ Revisiones independientes del estado del proyecto.
 - Auditorías financieras.
 - Auditorías de calidad y cumplimiento.
 
----
 
 ## Project Assurance
 Supervisión formal que garantiza que el proyecto cumple estándares.
@@ -424,7 +389,6 @@ Supervisión formal que garantiza que el proyecto cumple estándares.
 - Detección temprana de fallos estructurales.
 - Asegurar la trazabilidad del proyecto.
 
----
 
 ## Modelos de Decisión
 Frameworks para decisiones críticas dentro del proyecto.
@@ -433,7 +397,6 @@ Frameworks para decisiones críticas dentro del proyecto.
 - Decision Logs.
 - Modelos de criterios ponderados (Weighted Scoring).
 
----
 
 ## Cost Management Avanzado
 Técnicas financieras para control de costes.
@@ -443,7 +406,6 @@ Técnicas financieras para control de costes.
 - Reforecast financiero.
 - Control de variaciones (VAC).
 
----
 
 ## Quality Management
 Gestión avanzada de la calidad del proyecto.
@@ -452,7 +414,6 @@ Gestión avanzada de la calidad del proyecto.
 - Checklists de calidad.
 - Control estadístico del proceso (SPC).
 
----
 
 ## Critical Path y Critical Chain
 Métodos avanzados de planificación temporal.
@@ -461,7 +422,6 @@ Métodos avanzados de planificación temporal.
 - CCPM (Critical Chain Project Management).
 - Gestión de buffers.
 
----
 
 ## Comunicación Multinivel y Multicanal
 Gestión estructurada de comunicaciones.
@@ -470,7 +430,6 @@ Gestión estructurada de comunicaciones.
 - Comunicación con proveedores.
 - Plan de comunicación por audiencia.
 
----
 
 ## Project Constraints Ampliadas
 Restricciones más allá del triángulo clásico.
@@ -480,7 +439,6 @@ Restricciones más allá del triángulo clásico.
 - Satisfacción del cliente.
 - Valor entregado.
 
----
 
 ## Artefactos Avanzados de Proyecto
 Documentos esenciales para control y trazabilidad.
@@ -490,4 +448,3 @@ Documentos esenciales para control y trazabilidad.
 - Decision Log.
 - Registro de supuestos del proyecto.
 
----

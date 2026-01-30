@@ -1,17 +1,18 @@
----
-date: 2025-06-10 15:21
-title: Protocolos
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Sistemas]]"
-aliases:
-public_note: "true"
-category: Redes
+creation date: 2025-06-10 15:21
 tags:
   - protocolo
   - redes
----
+keywords:
+source:
+status: 🌟
+Parent: "Area-Sistemas"
+cssclasses:
+  - hide-embedded-header1
+categories: "[Redes](/redes/redes/)"
+aliases:
+  - protocols
+  - protocol
+public_note: "true"
 # Protocolos
 
 ## Clasificación General de Protocolos

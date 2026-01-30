@@ -1,16 +1,15 @@
----
-date: 2024-02-18 18:02
-title: Problema ExecutionPolicy en PowerShell
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Sistemas]]"
-public_note: "true"
-category: Sistemas
 tags:
   - Windows
   - powershell
----
+creation date: 2024-02-18 18:02
+keywords:
+source:
+status: 🌟
+Parent: "Area-Sistemas"
+cssclasses:
+  - hide-embedded-header1
+categories: "[Sistemas](/sistemas/sistemas/)"
+public_note: "true"
 # Problema ExecutionPolicy en PowerShell
 
 ## Descripción general

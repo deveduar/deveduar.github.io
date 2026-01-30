@@ -1,17 +1,17 @@
----
-date: 2025-04-14 19:57
-title: PKI infraestructura de clave pública
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Sistemas]]"
-public_note: "true"
-category: autenticacion
+creation date: 2025-04-14 19:57
 tags:
   - autenticacion
   - criptografia
   - pki
----
+keywords:
+source:
+status: 🌟
+Parent: "Area-Sistemas"
+cssclasses:
+  - hide-embedded-header1
+  - wide
+categories: "[autenticacion](/autenticacion/autenticacion/)"
+public_note: "true"
 # PKI infraestructura de clave pública
 
 - [criptografia](/autenticacion/criptografia/)  
@@ -22,7 +22,6 @@ tags:
 - [PKI - Glossary | CSRC](https://csrc.nist.gov/glossary/term/pki) 
 -  [IETF Datatracker](https://datatracker.ietf.org/) 
 - ¿Qué es una PKI (Infraestructura de clave pública)  Entrust-what-is-pkix
-- 
 ## Conceptos fundamentales de PKI
 - Infraestructura que gestiona claves, certificados y la confianza entre entidades.
 - Facilita [autenticacion](/autenticacion/autenticacion/), firma digital, control de acceso y cifrado seguro.
@@ -131,7 +130,7 @@ tags:
 # PKI avanzada: arquitecturas, automatización, post-quantum y operación
 
 - [criptografia](/autenticacion/criptografia/)
-- [PKI infraestructura de clave pública](/autenticacion/pki-infraestructura-de-clave-p-blica/)
+- [PKI infraestructura de clave pública](/uncategorized/pki-infraestructura-de-clave-p-blica/)
 - [autenticacion](/autenticacion/autenticacion/)
 - control de acceso
 - zero trust
@@ -236,7 +235,7 @@ tags:
 
 # PKI avanzada: frameworks, herramientas y casos de uso
 
-- [PKI infraestructura de clave pública](/autenticacion/pki-infraestructura-de-clave-p-blica/)
+- [PKI infraestructura de clave pública](/uncategorized/pki-infraestructura-de-clave-p-blica/)
 - zero trust
 - [criptografia](/autenticacion/criptografia/)
 - control de acceso

@@ -1,15 +1,14 @@
----
-date: 2025-04-15 17:00
-title: bug bounty
+creation date: 2025-04-15 17:00
+tags:
+  - vulnerabilidades
 keywords:
 source:
 status: 🌟
-Parent: "[[Area-Sistemas]]"
+Parent: "Area-Sistemas"
+cssclasses:
+  - hide-embedded-header1
+categories: "[ciberseguridad](/ciberseguridad/ciberseguridad/)"
 public_note: "true"
-category: ciberseguridad
-tags:
-  - vulnerabilidades
----
 # Bug Bounty
 ``
 

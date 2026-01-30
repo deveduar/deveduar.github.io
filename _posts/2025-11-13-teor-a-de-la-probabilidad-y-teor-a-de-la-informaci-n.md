@@ -1,13 +1,13 @@
----
-date: 2025-11-13 10:56
-title: Teoría de la probabilidad y teoría de la información
+creation date: 2025-11-13 10:56
+tags:
 keywords:
 source:
 status: 🌟
-Parent: "[[Area-IA]]"
+Parent: "Area-IA"
+cssclasses:
+  - hide-embedded-header1
+categories: "[mates](/uncategorized/mates/)"
 public_note: "true"
-category: mates
----
 # 🧮 Teoría de la probabilidad y teoría de la información
 
 - Teoría de la probabilidad y teoría de la información.
@@ -27,7 +27,6 @@ La **teoría de la probabilidad** proporciona un marco matemático para modelar 
 La **teoría de la información**, por otro lado, estudia la cuantificación, almacenamiento y transmisión de la información.  
 Ambas teorías se conectan profundamente en campos como el Aprendizaje automático, Estadística bayesiana o la Codificación de datos.
 
----
 
 ## 🎲 Variables aleatorias
 
@@ -42,7 +41,6 @@ $$X : \Omega \rightarrow \mathbb{R}$$
 
 donde $\Omega$ es el espacio muestral.
 
----
 
 ## 📊 Distribución de probabilidad
 
@@ -54,7 +52,6 @@ Describe cómo se distribuyen los valores posibles de una variable aleatoria.
 - Para una **variable continua**, se define mediante la **función de densidad de probabilidad (pdf)** $f(x)$:
   $$P(a \le X \le b) = \int_a^b f(x)\,dx, \quad \text{con} \quad \int_{-\infty}^{\infty} f(x)\,dx = 1$$
 
----
 
 ## 🧩 Probabilidad marginal
 
@@ -68,7 +65,6 @@ $$P(X) = \int P(X, Y)\,dY$$
 
 Se obtiene integrando o sumando sobre las demás variables.
 
----
 
 ## 🔗 Probabilidad condicional
 
@@ -78,7 +74,6 @@ $$P(A|B) = \frac{P(A \cap B)}{P(B)}, \quad P(B) > 0$$
 
 Permite actualizar el conocimiento ante nueva información.
 
----
 
 ## ⚖️ Independencia e independencia condicional
 
@@ -94,7 +89,6 @@ Permite actualizar el conocimiento ante nueva información.
 
 Este concepto es fundamental en los Modelos gráficos probabilísticos.
 
----
 
 ## 📈 Expectativa, varianza y covarianza
 
@@ -118,7 +112,6 @@ Este concepto es fundamental en los Modelos gráficos probabilísticos.
 
   Indica cómo varían conjuntamente dos variables.
 
----
 
 ## 📚 Distribuciones de probabilidad comunes
 
@@ -132,7 +125,6 @@ Algunas distribuciones fundamentales:
   $$f(x)=\frac{1}{\sqrt{2\pi\sigma^2&#125;&#125; e^{-\frac{(x-\mu)^2}{2\sigma^2&#125;&#125;$$
 - **Exponencial:** $f(x)=\lambda e^{-\lambda x}, \, x \ge 0$
 
----
 
 ## 🧮 Reglas bayesianas
 
@@ -147,7 +139,6 @@ Permite actualizar creencias ante nueva evidencia, base del Aprendizaje bayesian
 - **Evidencia:** $P(B) = \sum_A P(B|A)P(A)$
 - **Probabilidad a posteriori:** $P(A|B)$
 
----
 
 ## 🌈 Variable continua
 
@@ -164,7 +155,6 @@ La **función de distribución acumulada (CDF)**:
 
 $$F(x) = P(X \le x) = \int_{-\infty}^x f(t)\,dt$$
 
----
 
 ## 💡 Teoría de la información
 
@@ -187,7 +177,6 @@ Otras medidas derivadas:
   $$D_{KL}(P||Q) = \sum_x P(x)\log\frac{P(x)}{Q(x)}$$
   utilizada en Aprendizaje profundo para medir la diferencia entre distribuciones.
 
----
 
 ## 🧠 Modelo estadístico estructurado
 
@@ -204,9 +193,8 @@ Estos modelos permiten representar dependencias, inferir variables ocultas y rea
 
 # 🧠 Problemas y soluciones en teoría de la probabilidad e información
 
-Esta guía recopila **problemas frecuentes**, **métodos de resolución** y **estrategias prácticas** para aplicar los conceptos de [Teoría de la probabilidad y teoría de la información](/mates/teor-a-de-la-probabilidad-y-teor-a-de-la-informaci-n/).
+Esta guía recopila **problemas frecuentes**, **métodos de resolución** y **estrategias prácticas** para aplicar los conceptos de [Teoría de la probabilidad y teoría de la información](/uncategorized/teor-a-de-la-probabilidad-y-teor-a-de-la-informaci-n/).
 
----
 
 ## 🎯 Guía general de resolución
 
@@ -233,7 +221,6 @@ Esta guía recopila **problemas frecuentes**, **métodos de resolución** y **es
 	- Toda probabilidad debe estar entre 0 y 1.
 	- Las densidades pueden ser mayores que 1, pero integran a 1.
 
----
 
 ## 🧩 Problema 1: Probabilidad condicional
 
@@ -259,7 +246,6 @@ A pesar del test fiable, la baja prevalencia reduce drásticamente la probabilid
 **Conceptos usados:**  
 Probabilidad condicional, Teorema de Bayes, Reglas bayesianas
 
----
 
 ## 📊 Problema 2: Probabilidad marginal
 
@@ -279,7 +265,6 @@ La probabilidad total se obtiene combinando las contribuciones de cada fuente.
 **Conceptos usados:**  
 Probabilidad marginal, Regla de la probabilidad total
 
----
 
 ## 🧮 Problema 3: Esperanza y varianza
 
@@ -308,7 +293,6 @@ La varianza mide la dispersión respecto a la media esperada.
 **Conceptos usados:**  
 Expectativa, varianza y covarianza
 
----
 
 ## 🔗 Problema 4: Independencia condicional
 
@@ -335,7 +319,6 @@ El conocimiento del síntoma no cambia la probabilidad del test una vez conocida
 **Conceptos usados:**  
 Independencia e independencia condicional, Modelos gráficos probabilísticos
 
----
 
 ## 🧾 Problema 5: Entropía de Shannon
 
@@ -356,7 +339,6 @@ En promedio, cada símbolo transporta 1.5 bits de información.
 **Conceptos usados:**  
 Teoría de la información, Entropía de Shannon
 
----
 
 ## 📈 Problema 6: Información mutua
 
@@ -391,7 +373,6 @@ No hay relación entre $X$ y $Y$: conocer una no reduce la incertidumbre de la o
 **Conceptos usados:**  
 Información mutua, Independencia
 
----
 
 ## 🧠 Estrategias de estudio y aplicación
 
@@ -401,7 +382,6 @@ Información mutua, Independencia
 4. **Usa simulaciones:** genera datos con Python o R para comprobar resultados empíricos.
 5. **Conecta con la teoría de la información:** mide incertidumbre y dependencia entre variables.
 
----
 
 ## 💻 Ejemplo de código (Python)
 
@@ -427,11 +407,10 @@ $$
 \mathbb{E}[X] \approx np = 5, \quad \operatorname{Var}(X) \approx np(1-p) = 2.5  
 $$
 
----
 
 ## 📘 Enlaces relacionados
 
-- [Teoría de la probabilidad y teoría de la información](/mates/teor-a-de-la-probabilidad-y-teor-a-de-la-informaci-n/)
+- [Teoría de la probabilidad y teoría de la información](/uncategorized/teor-a-de-la-probabilidad-y-teor-a-de-la-informaci-n/)
 - Reglas bayesianas
 - Modelos gráficos probabilísticos
 - Expectativa, varianza y covarianza
@@ -446,7 +425,6 @@ $$
 El **lenguaje matemático** es esencial para expresar conceptos de probabilidad, estadísticas y teoría de la información de manera precisa.  
 A continuación se presentan los símbolos, notaciones y estructuras más importantes usados en este campo, con sintaxis compatible con **LaTeX para Obsidian**.
 
----
 
 ## 🎲 Variables aleatorias
 
@@ -472,7 +450,6 @@ $$
 F_X(x) = P(X \le x) = \int_{-\infty}^{x} f_X(t)\, dt
 $$
 
----
 
 ## 📊 Probabilidades
 
@@ -500,7 +477,6 @@ $$
 P(X) = \sum_Y P(X,Y) \quad \text{(discreta)}, \quad P(X) = \int P(X,Y)\, dY \quad \text{(continua)}
 $$
 
----
 
 ## ⚖️ Independencia
 
@@ -516,7 +492,6 @@ $$
 A \perp B \mid C \quad \Leftrightarrow \quad P(A \cap B \mid C) = P(A \mid C) P(B \mid C)
 $$
 
----
 
 ## 🧮 Estadísticos fundamentales
 
@@ -548,7 +523,6 @@ $$
 \rho_{X,Y} = \frac{\operatorname{Cov}(X,Y)}{\sqrt{\operatorname{Var}(X)\operatorname{Var}(Y)&#125;&#125;
 $$
 
----
 
 ## 📚 Distribuciones comunes
 
@@ -576,7 +550,6 @@ $$
 f_X(x) = \frac{1}{\sqrt{2 \pi \sigma^2&#125;&#125; \exp\Big(-\frac{(x-\mu)^2}{2\sigma^2}\Big)
 $$
 
----
 
 ## 💡 Teoría de la información
 
@@ -604,7 +577,6 @@ $$
 D_{KL}(P\|Q) = \sum_x P(x) \log_2 \frac{P(x)}{Q(x)}
 $$
 
----
 
 ## 🔗 Notación recomendada en LaTeX para Obsidian
 
@@ -613,7 +585,6 @@ $$
 - Funciones: `\mathbb{E}`, `\operatorname{Var}`, `\operatorname{Cov}`, `\log`, `\sum`, `\int`  
 - Relaciones: `\perp`, `\cap`, `\cup`, `\subset`, `\Rightarrow`, `\Leftrightarrow`  
 
----
 
 ## 📘 Enlaces relacionados
 

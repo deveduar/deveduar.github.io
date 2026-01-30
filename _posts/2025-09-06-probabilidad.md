@@ -1,16 +1,15 @@
----
-date: 2025-09-06 21:01
-title: probabilidad
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-IA]]"
-public_note: "true"
-category: mates
+creation date: 2025-09-06 21:01
 tags:
   - probabilidad
   - mates
----
+keywords:
+source:
+status: 🌟
+Parent: "Area-IA"
+cssclasses:
+  - hide-embedded-header1
+categories: "[mates](/uncategorized/mates/)"
+public_note: "true"
 # probabilidad
 
 - [mates](/uncategorized/mates/)

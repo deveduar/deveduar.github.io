@@ -1,13 +1,13 @@
----
-date: 2025-10-17 13:26
-title: ejemplos de TDD
+creation date: 2025-10-17 13:26
+tags:
 keywords:
 source:
 status: 📌
-Parent: "[[Area-Prog]]"
+Parent: "Area-Prog"
+cssclasses:
+  - hide-embedded-header1
+categories: "[Testing](/testing/testing/)"
 public_note: "true"
-category: Testing
----
 # ejemplos de TDD
 
 - [TDD - Test Driven Development](/testing/tdd---test-driven-development/)
@@ -21,7 +21,6 @@ category: Testing
 - unit y integration tests
 - coverage y pipelines
 
----
 
 ## 🧩 Ejemplo 1: Unit Test clásico (TypeScript)
 
@@ -57,7 +56,6 @@ describe('multiply', () => {
 ➡️ Luego se implementa la función mínima.  
 ➡️ Finalmente se refactoriza si es necesario, manteniendo los tests en verde.
 
----
 
 ## 🧠 Ejemplo 2: Mocking y Aislamiento (Jest)
 
@@ -81,7 +79,6 @@ test('debería retornar datos de usuario simulados', async () => {
 ✅ El mock elimina la dependencia real del servicio externo.  
 ✅ El test se enfoca en el comportamiento esperado, no en la red.
 
----
 
 ## 🧩 Ejemplo 3: Dependency Injection en TDD
 
@@ -132,7 +129,6 @@ test('debería enviar correo al registrar usuario', () => {
 
 ✅ DI facilita el TDD porque las dependencias son inyectadas y simulables.
 
----
 
 ## ⚙️ Ejemplo 4: Integración con CI/CD
 
@@ -164,7 +160,6 @@ Ejemplo de pipeline simplificado (GitHub Actions adaptado al formato Markdown):
 ✅ El pipeline ejecuta todas las pruebas en cada _push_.  
 ✅ Garantiza que ningún cambio rompa la funcionalidad.
 
----
 
 ## 🔁 Ejemplo 5: Refactor continuo y mantenimiento
 
@@ -190,7 +185,6 @@ test('valida número par', () => {
 ✅ Los tests sirven de escudo ante errores al refactorizar.  
 ✅ El código se simplifica progresivamente.
 
----
 
 ## 🧪 Ejemplo 6: Integration Tests guiados por TDD
 
@@ -215,7 +209,6 @@ test('POST /login retorna token', async () => {
 ➡️ Este tipo de prueba se construye tras definir un caso de uso funcional (p. ej., "un usuario puede autenticarse correctamente").  
 ➡️ Luego se implementa el endpoint y la lógica mínima para que el test pase.
 
----
 
 ## 📈 Ejemplo 7: Coverage y métricas
 
@@ -241,7 +234,6 @@ Lines        : 97%
 ✅ Cuanto mayor la cobertura, mayor la confianza en el código.  
 ✅ Las métricas ayudan a detectar módulos poco probados.
 
----
 
 ## 💡 Ejemplo 8: Flujo TDD aplicado a casos de uso reales
 
@@ -285,7 +277,6 @@ export class TodoList {
 ✅ Test primero, código después.  
 ✅ Refactor continuo y crecimiento incremental.
 
----
 
 ## 🧭 Conclusión
 
@@ -296,7 +287,6 @@ Combinado con [BDD](/testing/bdd/), CI/CD y herramientas de cobertura, forma la 
 {% raw %}
 ```
 
----
 
 ¿Quieres que te prepare ahora la versión complementaria `# TDD patterns`  
 con patrones de diseño y estrategias típicas de TDD (test doubles, naming, anti-patterns, asserts, parametrización, etc.)  

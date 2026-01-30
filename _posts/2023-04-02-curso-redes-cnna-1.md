@@ -1,16 +1,15 @@
----
-date: 2023-04-02 18:24
-title: curso-redes-CNNA-1
-status: 🌟
-Parent: "[[Area-Sistemas]]"
-keywords:
-source:
-public_note: "true"
-category: Redes
 tags:
   - Devops
   - redes
----
+status: 🌟
+Parent: "Area-Sistemas"
+creation date: 2023-04-02 18:24
+keywords:
+source:
+cssclasses:
+  - hide-embedded-header1
+categories: "[Redes](/redes/redes/)"
+public_note: "true"
 # curso-redes-CNNA-1
 
 
@@ -19,12 +18,9 @@ tags:
 ## Libros
 - Las redes en la actualidad tema 1
 - CIisco CNNA 1 Drive
-- 
 - Cisco Packet Tracer:
 - [Packet Tracer Official Tutorials](http://static-pt-assets.s3.amazonaws.com/tutorials72.htm)
-- 
 - Cisco cyberseguridad
-- 
 
 
 ## CNNA Calculadoras de redes

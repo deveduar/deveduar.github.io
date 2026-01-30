@@ -1,15 +1,14 @@
----
-date: 2023-03-31 01:29
-title: Linux Shell Scripting
-status: 🌟
-Parent: "[[Area-Sistemas]]"
-keywords:
-source:
-public_note: "true"
-category: Linux
 tags:
   - Linux
----
+status: 🌟
+Parent: "Area-Sistemas"
+creation date: 2023-03-31 01:29
+keywords:
+source:
+cssclasses:
+  - hide-embedded-header1
+categories: "[Linux](/sistemas/linux/)"
+public_note: "true"
 # Linux Shell Scripting
 
 - [Linux](/sistemas/linux/)
@@ -1496,7 +1495,6 @@ export PATH
 
 * **Note:** Changes are temporary and last only until you log out or reboot.
 
----
 
 ### Locating System Environment Variables
 
@@ -1527,7 +1525,6 @@ export PATH
 * **Ubuntu** uses `/etc/bash.bashrc` to store system-wide environment variables.
 * **CentOS** defines functions like `pathmunge()` to manage `$PATH` and executes scripts in `/etc/profile.d/`.
 
----
 
 ### Interactive Shell Process
 
@@ -1551,7 +1548,6 @@ fi
   * Custom shell functions
   * Private scripts
 
----
 
 ### Non-Interactive Shell Process
 
@@ -1560,7 +1556,6 @@ fi
 * Child shell inherits **exported parent variables**, but not local variables.
 * Local variables of the parent are **not inherited** unless exported.
 
----
 
 ### Making Environment Variables Persistent
 
@@ -1582,7 +1577,6 @@ alias ll='ls -alF'
 ```
 {% endraw %}
 
----
 
 ### Summary
 
@@ -1651,7 +1645,6 @@ unset mytest
 
 **Note:** Arrays in bash are **not portable** to all shells; use with caution in scripts that need cross-shell compatibility.
 
----
 
 ## Environment Variables — Summary
 
@@ -1755,7 +1748,6 @@ Fields in `/etc/passwd`:
 8. Date when account was disabled
 9. Reserved field
 
----
 
 ### Adding a New User
 
@@ -1806,14 +1798,12 @@ useradd -D -s /bin/tsch
 ```
 {% endraw %}
 
----
 
 ### Removing Users
 
 * `userdel username` — removes user info from `/etc/passwd`
 * `userdel -r username` — removes user and home directory
 
----
 
 ### Modifying Users
 
@@ -1853,7 +1843,6 @@ chpasswd < users.txt
   * `-W` warning days before expiration
 * Dates can be in `YYYY-MM-DD` format or as number of days since Jan 1, 1970.
 
----
 
 ### Summary
 
@@ -1898,7 +1887,6 @@ rich:x:500:
 * Group password allows temporary membership (rarely used).
 * Users should **not manually edit `/etc/group`**; use `usermod`.
 
----
 
 ### Creating Groups
 
@@ -1919,7 +1907,6 @@ usermod -G shared test
 * `groupmod -g newGID groupname` — change GID
 * Group name changes **do not affect GID or members**; permissions depend on GID.
 
----
 
 ### Decoding File Permissions
 
@@ -1959,7 +1946,6 @@ Example:
 * Group (`rich`): `rwx` — read, write, execute
 * Others: `r-x` — read, execute
 
----
 
 ### Default File Permissions: `umask`
 
@@ -2015,7 +2001,6 @@ r-- = 100 = 4
 
 * Example: `rw-r-----` = `640`
 
----
 
 ### Changing Permissions
 
@@ -2044,7 +2029,6 @@ chgrp sharing myprog
 ```
 {% endraw %}
 
----
 
 ### Summary
 
@@ -2095,7 +2079,6 @@ readlink -f /usr/bin/vi
 ```
 {% endraw %}
 
----
 
 ### Vim Basics
 
@@ -2133,7 +2116,6 @@ vim               # new buffer
    * `R` — overwrite until Escape
    * `Escape` — return to Normal mode
 
----
 
 ### Editing Commands (Normal Mode)
 
@@ -2156,7 +2138,6 @@ vim               # new buffer
 * Backspace may not work in Normal mode
 * Use command and insert modes carefully for editing large files
 
----
 
 ### Navigation and Editing Summary
 

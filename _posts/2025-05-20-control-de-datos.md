@@ -1,16 +1,14 @@
----
-date: 2025-05-20 18:10
-title: control de datos
-keywords:
-source:
-status: 🚀
-Parent: "[[Area-Sistemas]]"
-public_note: "true"
-category: ciberseguridad
+creation date: 2025-05-20 18:10
 tags:
   - ciberseguridad
   - db
----
+keywords:
+source:
+status: 🚀
+Parent: "Area-Sistemas"
+cssclasses:
+categories: "[ciberseguridad](/ciberseguridad/ciberseguridad/)"
+public_note: "true"
 # control de datos
 
 - [ciberseguridad](/ciberseguridad/ciberseguridad/)
@@ -55,7 +53,6 @@ El **control de datos** comprende el conjunto de prácticas, políticas, configu
 - Reducción de superficie de ataque mediante políticas de [hardening](/ciberseguridad/hardening/).
 - Aplicación de Zero Trust: verificar explícitamente, acceso mínimo, segmentación.
 
----
 
 ## Soluciones, Tecnologías y Conceptos Asociados
 
@@ -83,7 +80,6 @@ El **control de datos** comprende el conjunto de prácticas, políticas, configu
 - Políticas de auditoría y bloqueo.
 - Control de privilegios y reducción de superficies.
 
----
 
 ## Gestión Avanzada de la Información
 
@@ -115,7 +111,6 @@ El **control de datos** comprende el conjunto de prácticas, políticas, configu
 - Auditoría de accesos a nivel de documento.
 - Uso combinado con cifrado y DLP para protección persistente.
 
----
 
 ## Prácticas Avanzadas de Control de Datos
 
@@ -139,7 +134,6 @@ El **control de datos** comprende el conjunto de prácticas, políticas, configu
 - Restrictions de compartición externa.
 - Escaneo de datos en repositorios colaborativos.
 
----
 
 ## Código de Ejemplo: Etiquetado Automático en O365
 ### Ejemplo de regla JSON (clasificación)
@@ -169,7 +163,6 @@ El **control de datos** comprende el conjunto de prácticas, políticas, configu
 ```
 {% endraw %}
 
----
 
 # Control de Datos — Extensiones y Conceptos Avanzados
 
@@ -193,7 +186,6 @@ El **control de datos** comprende el conjunto de prácticas, políticas, configu
 - Monitoreo de pipelines ETL/ELT para prevenir corrupción de información.
 - Alertas por anomalías en volumen, distribución, esquema o frescura.
 
----
 
 ## Control de Datos en Infraestructura Moderna
 
@@ -215,7 +207,6 @@ El **control de datos** comprende el conjunto de prácticas, políticas, configu
 - Minimización de payloads y contratos de datos estables.
 - Telemetría orientada a consumo indebido.
 
----
 
 ## Técnicas Modernas de Protección y Minimización
 
@@ -234,7 +225,6 @@ El **control de datos** comprende el conjunto de prácticas, políticas, configu
 - Métodos diferenciales (Differential Privacy) para entornos de ML.
 - Aislamiento de atributos cuasi-identificadores.
 
----
 
 ## Control de Datos en IA y Machine Learning
 
@@ -254,7 +244,6 @@ El **control de datos** comprende el conjunto de prácticas, políticas, configu
 - Versionado de datasets para reproducibilidad.
 - Validaciones contra sesgos derivados de atributos confidenciales.
 
----
 
 ## Control de Datos en Plataformas Cloud
 
@@ -273,7 +262,6 @@ El **control de datos** comprende el conjunto de prácticas, políticas, configu
 - Descubrimiento automático de datos en SaaS externos.
 - Clasificación inmediata de ficheros subidos a servicios ajenos a TI.
 
----
 
 ## Gestión del Riesgo del Dato
 
@@ -287,7 +275,6 @@ El **control de datos** comprende el conjunto de prácticas, políticas, configu
 - Ataques por manipulación, corrupción, exfiltración o disponibilidad.
 - Mapas de flujo de datos → identificar caminos de fuga posibles.
 
----
 
 ## Nuevas Tecnologías Relacionadas
 
@@ -305,7 +292,6 @@ El **control de datos** comprende el conjunto de prácticas, políticas, configu
 - Varias entidades procesan una función sin revelar sus datos entre sí.
 - Útil para análisis conjuntos, benchmarking o verificación descentralizada.
 
----
 
 ## Núcleo Operacional del Control de Datos
 
@@ -324,7 +310,6 @@ El **control de datos** comprende el conjunto de prácticas, políticas, configu
 - Detección de privilegios heredados o excesivos.
 - Eliminación automatizada de acceso tras baja o cambio de rol.
 
----
 
 ## Complementos a Integrar en Notas Existentes
 - Políticas de retención y destrucción segura.
@@ -376,7 +361,6 @@ El **control de datos** comprende el conjunto de prácticas, políticas, configu
 - Dominios relevantes: EDM, APO, DSS.
 - Políticas de ciclo de vida, calidad, disponibilidad, riesgo y auditoría del dato.
 
----
 
 ## Normativas de Protección de Datos (Regulaciones)
 
@@ -414,7 +398,6 @@ El **control de datos** comprende el conjunto de prácticas, políticas, configu
 - Estándar para diseño orientado a seguridad y privacidad desde el inicio.
 - Minimización profunda → “data minimization as architecture”.
 
----
 
 ## Estándares Técnicos Específicos para Control de Datos
 
@@ -446,7 +429,6 @@ El **control de datos** comprende el conjunto de prácticas, políticas, configu
 - SCIM: gestión automática de identidades y aprovisionamiento.
 - XACML: control de acceso dinámico (ABAC).
 
----
 
 ## Estándares y Frameworks Específicos para Cloud y SaaS
 
@@ -465,7 +447,6 @@ El **control de datos** comprende el conjunto de prácticas, políticas, configu
 ### GDPR Code of Conduct para Servicios Cloud
 - Estándares voluntarios que complementan GDPR para proveedores.
 
----
 
 ## Frameworks de Riesgo y Privacidad Avanzados
 
@@ -481,7 +462,6 @@ El **control de datos** comprende el conjunto de prácticas, políticas, configu
 - Modelos europeos de resiliencia digital.
 - Recomendaciones para procesamiento, compartición y retención de datos.
 
----
 
 ## Complementos a Añadir a Otras Notas
 - Marcos de adopción de Zero Trust centrados en datos.
@@ -499,7 +479,6 @@ El **control de datos** comprende el conjunto de prácticas, políticas, configu
 - "Equiv." = control(s) ISO/ NIST que cubren la misma intención/objetivo.
 - "Nota" = aclaración sobre gaps, alcance o evidencia típica.
 
----
 
 ## 1) GDPR (UE) — Controles/obligaciones clave y equivalencias
 - Req.: Principio de **minimización de datos** (Art. 5).  
@@ -575,7 +554,6 @@ El **control de datos** comprende el conjunto de prácticas, políticas, configu
 - NIST: mappings SP800-53 ↔ ISO/IEC 27001; CPRT para crosswalks (HIPAA, CSF, 800-53). :contentReference[oaicite:13]{index=13}  
 - Documentos de terceros con tablas PCI↔ISO y GDPR↔ISO que facilitan plantillas prácticas. :contentReference[oaicite:14]{index=14}
 
----
 
 ## Enlaces internos relacionados
 - [ciberseguridad](/ciberseguridad/ciberseguridad/)  

@@ -1,19 +1,18 @@
----
-date: 2025-10-17 17:02
-title: Guía de Entrevista tdd
+creation date: 2025-10-17 17:02
+tags:
 keywords:
 source:
 status: 📌
-Parent: "[[Area-Prog]]"
+Parent: "Area-Prog"
+cssclasses:
+  - hide-embedded-header1
+categories: "[Testing](/testing/testing/)"
 public_note: "true"
-category: Testing
----
 
 # Guía de Entrevista: TDD
 
 > Esta guía recopila preguntas, respuestas y ejemplos prácticos sobre [TDD - Test Driven Development](/testing/tdd---test-driven-development/) para entrevistas técnicas, incluyendo cómo mostrar experiencia de uso real en proyectos.
 
----
 
 ## 1. Conceptos Fundamentales
 
@@ -25,7 +24,6 @@ category: Testing
 **Respuesta:** [BDD](/testing/bdd/) es una extensión de TDD que utiliza lenguaje natural y escenarios de negocio para definir pruebas, enfocándose en la **comunicación con stakeholders**.  
 **Ejemplo práctico:** Usamos Cucumber para definir escenarios de login y dashboard usando `Given-When-Then`, lo que permitió a QA y Product Owners validar requisitos.
 
----
 
 ## 2. Ciclo Red-Green-Refactor
 
@@ -63,7 +61,6 @@ function login(email: string, password: string) {
 
 **Experiencia de uso:** "Implementé este ciclo en un microservicio de autenticación, logrando tests unitarios confiables y cobertura completa antes de mergear."
 
----
 
 ## 3. Test Doubles y Mocks
 
@@ -81,7 +78,6 @@ axios.get.mockResolvedValue({ data: { name: 'Empresa ABC' } });
 
 **Experiencia de uso:** "Mockeamos APIs externas en integración de pagos para tests rápidos y consistentes."
 
----
 
 ## 4. Estrategias y Buenas Prácticas
 
@@ -108,7 +104,6 @@ describe('calculateDiscount', () => {
 ```
 {% endraw %}
 
----
 
 ## 5. Cobertura y Métricas
 
@@ -122,7 +117,6 @@ describe('calculateDiscount', () => {
 
 **Experiencia de uso:** "Usamos Codecov y SonarQube en pipelines CI/CD para asegurar cobertura ≥90% en módulos críticos."
 
----
 
 ## 6. Escenarios de Entrevista Comportamental
 
@@ -134,7 +128,6 @@ describe('calculateDiscount', () => {
 **Respuesta:**  
 "Primero se escriben tests unitarios (TDD) para la lógica crítica y luego escenarios de [BDD](/testing/bdd/) para flujos de negocio usando Cucumber. Esto permite comunicación clara con QA y Product Owners."
 
----
 
 ## 7. Preguntas Avanzadas
 
@@ -148,7 +141,6 @@ describe('calculateDiscount', () => {
 **Pregunta:** ¿Qué patrones de refactorización sigues con TDD?  
 **Respuesta:** Extract Function, Replace Conditional with Polymorphism, Introduce Parameter Object, siempre asegurando tests verdes antes de cualquier cambio.
 
----
 
 ## 8. Resumen de Herramientas
 
@@ -159,6 +151,5 @@ describe('calculateDiscount', () => {
 - Codecov / SonarQube: Cobertura y métricas
 - MSW / WireMock / Sinon: Mocks y test doubles
 
----
 
 > **Tip final para entrevistas:** Siempre vincula tu respuesta con **experiencia real**: muestra tests que escribiste, cómo aplicaste Red-Green-Refactor y cómo los resultados impactaron la calidad y confiabilidad del software.

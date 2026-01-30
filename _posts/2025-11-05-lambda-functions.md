@@ -1,17 +1,16 @@
----
-date: 2025-11-05 17:10
-title: Lambda Functions
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Prog]]"
-public_note: "true"
-category: Computer Science
+creation date: 2025-11-05 17:10
 tags:
   - CS
   - lambda
   - functions
----
+keywords:
+source:
+status: 🌟
+Parent: "Area-Prog"
+cssclasses:
+  - hide-embedded-header1
+categories: "[Computer Science](/computer%20science/computer-science/)"
+public_note: "true"
 # Lambda Functions
 
 - [PF Programación Funcional](/computer%20science/pf-programaci-n-funcional/)
@@ -181,7 +180,7 @@ Las **lambda functions** son una herramienta esencial para escribir código conc
 
 # Lambda Functions - Conceptos Avanzados y Expansión
 
-Esta nota amplía los conceptos fundamentales de [Lambda Functions](/computer%20science/lambda-functions/), abordando su integración con paradigmas modernos, usos avanzados, optimización y diferencias entre lenguajes.
+Esta nota amplía los conceptos fundamentales de [Lambda Functions](/uncategorized/lambda-functions/), abordando su integración con paradigmas modernos, usos avanzados, optimización y diferencias entre lenguajes.
 
 ## Lambdas en el Paradigma Funcional
 
@@ -376,7 +375,7 @@ Su uso adecuado mejora la expresividad y reduce el ruido sintáctico, pero requi
 
 # Lambdas y su relación con AWS
 
-Aunque las **[Lambda Functions](/computer%20science/lambda-functions/)** en programación se refieren a funciones anónimas, el término **AWS Lambda** hace referencia a un **servicio de computación sin servidor (serverless)** proporcionado por Amazon Web Services.  
+Aunque las **[Lambda Functions](/uncategorized/lambda-functions/)** en programación se refieren a funciones anónimas, el término **AWS Lambda** hace referencia a un **servicio de computación sin servidor (serverless)** proporcionado por Amazon Web Services.  
 A pesar de compartir nombre, su conexión conceptual radica en la **idea de ejecutar código de manera ligera, modular y bajo demanda**.
 
 ## Concepto de AWS Lambda
@@ -390,7 +389,7 @@ El desarrollador escribe funciones —en varios lenguajes soportados— y AWS se
 En este contexto, una *“lambda”* en AWS es una **unidad de ejecución** que sigue una filosofía muy similar a las **funciones lambda del código**:  
 realizar una tarea breve, específica y autónoma.
 
-## Analogía con las [Lambda Functions](/computer%20science/lambda-functions/) de programación
+## Analogía con las [Lambda Functions](/uncategorized/lambda-functions/) de programación
 
 | Concepto | Función Lambda (Python, etc.) | AWS Lambda |
 |-----------|------------------------------|-------------|
@@ -440,9 +439,8 @@ def lambda_handler(event, context):
 
 # Lambda Functions - Ecosistema, Extensión y Aplicaciones Modernas
 
-Esta nota amplía los temas ya tratados sobre [Lambda Functions](/computer%20science/lambda-functions/) y AWS Lambda, explorando su papel en ecosistemas modernos, arquitecturas híbridas, frameworks y paradigmas de desarrollo contemporáneos. También cubre su influencia en lenguajes, entornos de ejecución y patrones de diseño funcional.
+Esta nota amplía los temas ya tratados sobre [Lambda Functions](/uncategorized/lambda-functions/) y AWS Lambda, explorando su papel en ecosistemas modernos, arquitecturas híbridas, frameworks y paradigmas de desarrollo contemporáneos. También cubre su influencia en lenguajes, entornos de ejecución y patrones de diseño funcional.
 
----
 
 ## Lambdas en el Ecosistema Moderno
 
@@ -481,7 +479,6 @@ on_click = lambda event: print(f"Botón {event.id} presionado")
 
 En arquitecturas como las de AWS Lambda o Azure Functions, este patrón se amplía: cada evento del ecosistema (archivo subido, mensaje en cola, cambio en base de datos) dispara la ejecución de una función aislada.
 
----
 
 ## Lambdas en Frameworks y Librerías Modernas
 
@@ -525,7 +522,6 @@ Ambos lenguajes introdujeron lambdas para modernizar su sintaxis e integrar el p
 * **Java 8+**: soporte mediante interfaces funcionales (`Predicate`, `Function`, `Consumer`).
 * **C#**: lambdas integradas en LINQ y expresiones lambda.
 
----
 
 ## Lambdas en Infraestructura Serverless
 
@@ -541,7 +537,6 @@ Además de AWS Lambda, existen múltiples implementaciones equivalentes que adop
 
 Este ecosistema comparte la filosofía de **funciones efímeras y modulares**, aplicable tanto en backend como en edge computing.
 
----
 
 ## Lambdas en el Edge y la IA Distribuida
 
@@ -561,7 +556,6 @@ process_frame = lambda frame: detect_faces(frame)
 
 Cada frame procesado por un dispositivo IoT puede pasar por esta lambda antes de enviarse a la nube.
 
----
 
 ## Patrones Avanzados con Lambdas
 
@@ -599,7 +593,6 @@ print(pipeline(4))  # 18
 
 Estos patrones reflejan la adopción creciente del pensamiento funcional en entornos híbridos (serverless, IA, data pipelines).
 
----
 
 ## Lambdas y Seguridad
 
@@ -610,7 +603,6 @@ En entornos serverless y locales, las lambdas requieren consideraciones especial
 * Monitorear ejecuciones y logs mediante CloudWatch o [OpenTelemetry](/monitoreo/opentelemetry/).
 * En código local, evitar capturar variables sensibles dentro de closures.
 
----
 
 ## Lambdas y Sostenibilidad
 
@@ -620,7 +612,6 @@ La naturaleza efímera y bajo demanda de las lambdas promueve prácticas de **op
 * Escalado dinámico sin desperdicio de recursos.
 * Menor huella de infraestructura.
 
----
 
 ## Lambdas en la Orquestación y Automatización
 
@@ -630,7 +621,6 @@ Las lambdas se integran como componentes orquestados dentro de flujos más ampli
 * **Airflow / Prefect / Dagster**: integran lambdas como tareas discretas.
 * **GitHub Actions** y **CI/CD pipelines**: permiten definir acciones como funciones efímeras lambda-like.
 
----
 
 ## Futuro y Tendencias
 
@@ -639,7 +629,6 @@ Las lambdas se integran como componentes orquestados dentro de flujos más ampli
 * **Lambdas en WASM**: ejecución rápida y portable en WebAssembly (e.g., Cloudflare Workers, Fermyon Spin).
 * **Lambdas como bloques declarativos**: integración en infraestructuras IaC con [Terraform](/devops/terraform/) o Pulumi.
 
----
 
 ## Relación y Referencias Cruzadas
 
@@ -654,7 +643,6 @@ Las lambdas se integran como componentes orquestados dentro de flujos más ampli
 * Pipelines de datos
 * Programación reactiva
 
----
 
 ## Conclusión
 

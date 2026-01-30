@@ -1,16 +1,15 @@
----
-date: 2025-05-22 04:26
-title: Desarrollo multiplataforma
-keywords:
-source:
-status: 📌
-Parent: "[[Area-Prog]]"
-public_note: "true"
-category: Desarrollo multiplataforma
+creation date: 2025-05-22 04:26
 tags:
   - desarrollo
   - programming
----
+keywords:
+source:
+status: 📌
+Parent: "Area-Prog"
+cssclasses:
+  - hide-embedded-header1
+categories: "[Desarrollo multiplataforma](/uncategorized/desarrollo-multiplataforma/)"
+public_note: "true"
 # Desarrollo multiplataforma
 
 - [Software engineering](/software%20engineering/software-engineering/)
@@ -26,7 +25,6 @@ tags:
 	- [native script](/desarrollo%20multiplataforma/native-script/) 
 	- [capacitor](/desarrollo%20multiplataforma/capacitor/)
 	- [react native](/desarrollo%20multiplataforma/react-native/)
-	- 
 - [power apps](/desarrollo%20multiplataforma/power-apps/) lowcode
 - desktop apps
 	- [electron](/desarrollo%20multiplataforma/electron/) 
@@ -36,4 +34,3 @@ tags:
 	- [cpp](/software%20engineering/cpp/)
 - [simulaciones](/desarrollo%20multiplataforma/simulaciones/) 
 - GameDev
-- 

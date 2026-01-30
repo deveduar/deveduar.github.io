@@ -1,17 +1,20 @@
----
-date: 2025-02-18 15:57
-title: IInfraestructura como codigo
-keywords:
-source:
-status: 🚀
-Parent: "[[Area-Sistemas]]"
-aliases:
-public_note: "true"
-category: devops
+creation date: 2025-02-18 15:57
 tags:
   - IaC
   - devops
----
+keywords:
+source:
+status: 🚀
+Parent: "Area-Sistemas"
+cssclasses:
+  - hide-embedded-header1
+categories: "[devops](/devops/devops/)"
+aliases:
+  - Infraestructura como Código
+  - IaC
+  - IaC infraestructura como código
+  - infraestructura como código
+public_note: "true"
 # IaC infraestructura como código
 
 - [devops](/devops/devops/)  
@@ -19,7 +22,6 @@ tags:
 - [Automatizacion y Build](/automatizacion%20y%20build/automatizacion-y-build/)  
 - [SRE Site Reliability Engineering](/devops/sre-site-reliability-engineering/)  
 
----
 
 ## Concepto general
 
@@ -28,7 +30,6 @@ Su objetivo principal es garantizar **consistencia, escalabilidad, trazabilidad 
 
 La infraestructura —servidores, redes, balanceadores, bases de datos, etc.— se **describe mediante archivos declarativos o scripts** que pueden versionarse, revisarse y desplegarse de forma automatizada dentro de pipelines [CICD](/devops/cicd/).
 
----
 
 ## Fundamentos y beneficios
 
@@ -38,7 +39,6 @@ La infraestructura —servidores, redes, balanceadores, bases de datos, etc.— 
 - **Despliegues reproducibles y reversibles**, facilitando rollback o escalado rápido.  
 - **Integración con [devops](/devops/devops/) y [SRE Site Reliability Engineering](/devops/sre-site-reliability-engineering/)**, reforzando prácticas de entrega continua y resiliencia.
 
----
 
 ## Enfoques de IaC
 
@@ -48,7 +48,6 @@ La infraestructura —servidores, redes, balanceadores, bases de datos, etc.— 
 	- *Mutable*: se modifica la infraestructura existente (configuración incremental).  
 	- *Inmutable*: se reemplaza por completo en cada despliegue (entornos reproducibles y sin drift).
 
----
 
 ## Prácticas esenciales
 
@@ -59,7 +58,6 @@ La infraestructura —servidores, redes, balanceadores, bases de datos, etc.— 
 - Aplicar **control de estados y drift detection** para detectar divergencias entre el código y la infraestructura real.  
 - Adoptar **principios de seguridad desde el código** (IAM, políticas, secretos, compliance as code).
 
----
 
 ## Herramientas y plataformas
 
@@ -87,7 +85,6 @@ Define infraestructuras usando **lenguajes de programación reales** (Python, Ty
 Herramientas de configuración y orquestación basadas en modelos declarativos e imperativos.  
 Chef usa Ruby y Puppet su propio DSL, ambos con enfoque en consistencia y compliance.
 
----
 
 ## Integración con [CICD](/devops/cicd/) y Automatizacion
 
@@ -95,7 +92,6 @@ Chef usa Ruby y Puppet su propio DSL, ambos con enfoque en consistencia y compli
 - Permite ejecutar despliegues “infraestructura bajo demanda”, asegurando que los entornos sean efímeros y reproducibles.  
 - Facilita **testing automatizado** de infraestructura con herramientas como Terratest, KitchenCI o Molecule.
 
----
 
 ## Relación con [SRE Site Reliability Engineering](/devops/sre-site-reliability-engineering/)
 
@@ -105,7 +101,6 @@ El enfoque IaC es clave para SRE porque:
 - Reduce el *toil* (trabajo manual repetitivo).  
 - Facilita la creación de **entornos resilientes y autoescalables** bajo políticas codificadas.
 
----
 
 ## Buenas prácticas y gobierno
 
@@ -115,7 +110,6 @@ El enfoque IaC es clave para SRE porque:
 - Adoptar **GitOps** para sincronizar el estado deseado (repositorio) con el estado real del entorno.  
 - Centralizar **secretos y credenciales** usando herramientas seguras (Vault, AWS Secrets Manager).  
 
----
 
 ## Recursos recomendados
 
@@ -125,17 +119,15 @@ El enfoque IaC es clave para SRE porque:
 - Pulumi Learning Portal  
 - [Aws](/cloud/aws/) IaC Whitepapers  
 
----
 
 # IaC avanzada: prácticas, evolución y tendencias
 
-- [IInfraestructura como codigo](/devops/iinfraestructura-como-codigo/)
+- [IInfraestructura como codigo](/uncategorized/iinfraestructura-como-codigo/)
 - [devops](/devops/devops/)
 - [CICD](/devops/cicd/)
 - Automatizacion
 - [SRE Site Reliability Engineering](/devops/sre-site-reliability-engineering/)
 
----
 
 ## Evolución del concepto
 
@@ -154,7 +146,6 @@ Actualmente se distingue entre varias generaciones:
 4. **Policy as Code y FinOps (4ª generación)**  
 	Expande IaC hacia la **gobernanza automatizada, control de costes y cumplimiento** (ej. Open Policy Agent, HashiCorp Sentinel, Infracost).
 
----
 
 ## Nuevos conceptos relacionados
 
@@ -176,7 +167,6 @@ Automatiza el cumplimiento de normas y estándares (ISO, SOC2, GDPR, etc.) a tra
 Proceso de **detectar y corregir desviaciones** entre la infraestructura declarada (en código) y la desplegada.  
 Herramientas como Terraform plan/apply o Pulumi refresh ayudan a mantener sincronización.
 
----
 
 ## Testing y calidad en IaC
 
@@ -189,7 +179,6 @@ Implementar tests mejora la confiabilidad y evita errores en despliegues:
 
 Los tests deben integrarse en la fase de **build o pre-deploy** dentro de [CICD](/devops/cicd/).
 
----
 
 ## Observabilidad y trazabilidad en IaC
 
@@ -198,7 +187,6 @@ Los tests deben integrarse en la fase de **build o pre-deploy** dentro de [CICD]
 - **Integración con observabilidad SRE**: correlación entre infraestructura (IaC), servicios y métricas de fiabilidad.  
 - **Infraestructuras autodocumentadas**: generación de diagramas y documentación desde código (Terraform-docs, Diagrams, Infracost report).
 
----
 
 ## IaC + Seguridad ([DevSecOps](/devops/devsecops/))
 
@@ -211,7 +199,6 @@ La seguridad se integra desde la definición de infraestructura:
 
 Esta filosofía impulsa el **Shift Left Security**, adelantando la detección de problemas a fases tempranas.
 
----
 
 ## FinOps y optimización de costes
 
@@ -221,7 +208,6 @@ La IaC permite aplicar **optimización financiera como código**, automatizando 
 - Integración con Infracost o CloudHealth para análisis en pipelines.  
 - Reglas de escalado automático (autoscaling) definidas en código.
 
----
 
 ## Integración con contenedores y orquestadores
 
@@ -231,7 +217,6 @@ La IaC se extiende más allá de servidores, gestionando también:
 - Configuración de pipelines CI/CD como infraestructura (ej. Jenkins, GitLab runners).  
 - Descripción de entornos híbridos o multi-cloud coherentes.
 
----
 
 ## IaC modular y componible
 
@@ -241,7 +226,6 @@ Diseñar IaC como **bloques modulares reutilizables**:
 - **Plantillas parametrizables** para entornos efímeros (ephemeral environments).  
 - Promueve *DRY (Don’t Repeat Yourself)* y facilita mantenimiento a largo plazo.
 
----
 
 ## Futuro y tendencias
 
@@ -251,7 +235,6 @@ Diseñar IaC como **bloques modulares reutilizables**:
 - **IaC unificada multi-nube** con APIs estandarizadas y gestión de políticas globales.  
 - **Infraestructura auto-curada (self-healing)**: detecta, repara o recrea recursos automáticamente según estado deseado.
 
----
 
 ## Recursos adicionales
 
@@ -270,7 +253,6 @@ Diseñar IaC como **bloques modulares reutilizables**:
 - [CICD](/devops/cicd/)
 - [SRE Site Reliability Engineering](/devops/sre-site-reliability-engineering/)
 
----
 
 ## Ecosistema y capas de IaC
 
@@ -297,7 +279,6 @@ La IaC moderna se integra como una **capa base dentro de la arquitectura DevOps*
 5. **Automation Layer (Meta-IaC)**  
 	Automatiza IaC en sí misma: pipelines, triggers y validaciones automáticas (GitOps, CI/CD, ChatOps).
 
----
 
 ## ChatOps y Automatización Conversacional
 
@@ -313,7 +294,6 @@ Ejemplo de flujo:
 2. El bot lanza un pipeline que aplica el código Terraform/Ansible.  
 3. Devuelve resultado o rollback al mismo canal.
 
----
 
 ## Meta-IaC y Auto-provisionamiento
 
@@ -328,7 +308,6 @@ Integración típica:
 - Plantillas Terraform o Pulumi + scripts en Python/Golang que parametrizan módulos.  
 - Repositorios “plantilla” (blueprints) gestionados por GitOps.
 
----
 
 ## Gestión del estado y almacenamiento seguro
 
@@ -342,7 +321,6 @@ Buenas prácticas:
 - Realizar **versionado y backups automáticos** del estado.  
 - Validar antes de aplicar (`terraform plan`, `pulumi preview`).  
 
----
 
 ## Multi-cloud y abstracción de proveedor
 
@@ -359,7 +337,6 @@ Desafíos:
 - Costes de mantenimiento de módulos comunes.  
 - Riesgo de pérdida de funcionalidades específicas del proveedor.
 
----
 
 ## Gestión del ciclo de vida completo (Lifecycle Management)
 
@@ -374,7 +351,6 @@ El ciclo de vida de IaC abarca más que el despliegue:
 
 La automatización de todo este flujo se conoce como **Full Lifecycle IaC**.
 
----
 
 ## Gestión de entornos efímeros (Ephemeral Environments)
 
@@ -390,7 +366,6 @@ Implementación:
 - Integración con contenedores ([Docker](/software%20engineering/docker/), [Kubernetes](/virtualizacion/kubernetes/)).  
 - Destrucción automática tras las pruebas o merge.  
 
----
 
 ## IaC + Observabilidad avanzada
 
@@ -416,7 +391,6 @@ resource "aws_cloudwatch_metric_alarm" "cpu_high" {
 ```
 {% endraw %}`
 
----
 
 ## Plataformas de orquestación y gestión IaC (Control Plane)
 
@@ -427,7 +401,6 @@ Surgen soluciones que gestionan IaC a escala empresarial:
 * Integran aprobación manual, rollback, drift detection y reporting.
 * Se combinan con GitOps para sincronización continua de estados.
 
----
 
 ## Evolución hacia MLOps e Infraestructura de Datos
 
@@ -438,7 +411,6 @@ La filosofía IaC se extiende hacia **DataOps** y **MLOps**, donde la infraestru
 * Control de versiones de datasets, modelos y configuraciones (DVC, MLflow).
 * Integración IaC con infraestructura GPU, clusters y storage.
 
----
 
 ## Infraestructura como Plataforma (Platform Engineering)
 
@@ -454,7 +426,6 @@ Ejemplos:
 * Crossplane (Kubernetes-native IaC).
 * Port, Humanitec, Plural.
 
----
 
 ## Hacia el concepto de Infraestructura Autónoma
 
@@ -468,7 +439,6 @@ Basada en *feedback loops* automáticos y telemetría avanzada:
 
 Ejemplo: sistemas que recrean instancias corruptas o reasignan recursos sin intervención humana.
 
----
 
 ## Lecturas y recursos complementarios
 
@@ -478,7 +448,6 @@ Ejemplo: sistemas que recrean instancias corruptas o reasignan recursos sin inte
 * [Grafana as Code - Infrastructure Observability](https://grafana.com/docs/grafana/latest/developers/plugins/architecture/)
 * [Backstage Platform Engineering Portal](https://backstage.io/)
 
----
 
 # IaC avanzada III: escalabilidad organizacional, arquitectura y evolución del ecosistema  
 
@@ -488,7 +457,6 @@ Ejemplo: sistemas que recrean instancias corruptas o reasignan recursos sin inte
 - [CICD](/devops/cicd/)  
 - [SRE Site Reliability Engineering](/devops/sre-site-reliability-engineering/)
 
----
 
 ## Escalabilidad organizacional y gestión empresarial de IaC
 
@@ -518,7 +486,6 @@ Cuando la IaC escala más allá de equipos individuales, se requiere un marco de
 - Integración con sistemas de identidad y permisos centralizados (SSO, RBAC).  
 - Auditoría continua mediante pipelines y logs centralizados.  
 
----
 
 ## Arquitectura de IaC en entornos complejos
 
@@ -536,7 +503,6 @@ Se logra mediante herramientas como Terraform Workspaces, dependencias explícit
 Cada componente IaC se comporta como un *microservicio de infraestructura*:  
 intercambia parámetros, tiene versionado propio y puede desplegarse o destruirse de forma aislada.
 
----
 
 ## IaC y Arquitectura Inmutable
 
@@ -550,7 +516,6 @@ Herramientas y patrones:
 - Uso de pipelines para regenerar entornos completos en cada commit.  
 - Infraestructura desechable (cattle, not pets).
 
----
 
 ## Infraestructura como Producto
 
@@ -565,7 +530,6 @@ Características:
 
 El rol del **Platform Engineer** se centra en ofrecer una experiencia desarrollador coherente sobre esta “plataforma como producto”.
 
----
 
 ## IaC y documentación viva
 
@@ -578,7 +542,6 @@ Herramientas y prácticas:
 - Enlaces directos entre IaC y wiki/portales (ej. integración con Obsidian o Confluence).  
 - Documentación versionada junto al código.  
 
----
 
 ## Control de versiones y branching en IaC
 
@@ -591,7 +554,6 @@ El flujo Git más común para IaC difiere del desarrollo tradicional:
 
 GitOps lo lleva un paso más allá: el estado deseado se sincroniza con el entorno automáticamente, sin intervención manual.
 
----
 
 ## IaC en entornos Edge, IoT y on-premise
 
@@ -606,7 +568,6 @@ Se aplica también en escenarios **Edge Computing** o **on-premise**:
 
 Esto da origen a la **Hybrid IaC**, donde el código gestiona entornos híbridos o desconectados temporalmente.
 
----
 
 ## Integración con herramientas de entrega continua avanzada
 
@@ -639,7 +600,6 @@ deploy:
 ```
 {% endraw %}`
 
----
 
 ## IaC como base de la resiliencia operativa
 
@@ -653,7 +613,6 @@ En el contexto [SRE Site Reliability Engineering](/devops/sre-site-reliability-e
 
 Esto conecta IaC directamente con los principios de fiabilidad, observabilidad y respuesta a incidentes de SRE.
 
----
 
 ## Gobernanza multi-equipo y control de políticas
 
@@ -665,7 +624,6 @@ A medida que la IaC crece, se hace esencial el **control de acceso granular** y 
 * Plantillas “seguras por diseño” con políticas embebidas.
 * Escaneo continuo de configuraciones en pipelines.
 
----
 
 ## Ecosistema extendido y convergencia de disciplinas
 
@@ -680,7 +638,6 @@ La IaC actúa como punto de unión de varias tendencias tecnológicas:
 
 Esta convergencia está dando lugar a **InfraOps**, un modelo unificado de gestión integral de infraestructura como código, política y plataforma.
 
----
 
 ## Próximas direcciones de IaC
 
@@ -691,7 +648,6 @@ Esta convergencia está dando lugar a **InfraOps**, un modelo unificado de gesti
 * **Verificación formal de IaC** (pruebas matemáticas de consistencia y seguridad).
 * **Infraestructura auditable y explicable** (Explainable Infra).
 
----
 
 ## Referencias finales y recursos avanzados
 
@@ -702,7 +658,6 @@ Esta convergencia está dando lugar a **InfraOps**, un modelo unificado de gesti
 * [Chaos Engineering con IaC](https://principlesofchaos.org/)
 * [Platform Engineering Hub](https://platformengineering.org/)
 
----
 
 # IaC avanzada IV: patrones arquitectónicos, validación formal y evolución tecnológica  
 
@@ -712,7 +667,6 @@ Esta convergencia está dando lugar a **InfraOps**, un modelo unificado de gesti
 - Automatizacion  
 - [SRE Site Reliability Engineering](/devops/sre-site-reliability-engineering/)  
 
----
 
 ## Patrones arquitectónicos en IaC
 
@@ -741,7 +695,6 @@ El diseño de infraestructura como código no solo trata de aprovisionar recurso
 - **Drift-Controlled Pattern**  
 	El pipeline compara continuamente estado deseado vs. real, aplicando correcciones automáticas o alertas.
 
----
 
 ## Validación formal y verificación de IaC
 
@@ -774,7 +727,6 @@ deny[msg] {
 ```
 {% endraw %}`
 
----
 
 ## Infraestructura basada en eventos (Event-Driven IaC)
 
@@ -793,7 +745,6 @@ En la evolución más reciente, IaC deja de ser puramente declarativa y pasa a s
 * Destruir recursos automáticamente cuando expira una PR o sesión.
 * Ejecutar IaC correctiva tras detección de drift o incidente SRE.
 
----
 
 ## Declaración semántica y IaC híbrido
 
@@ -805,7 +756,6 @@ La tendencia actual es combinar **declaración semántica** (YAML, JSON, HCL) co
 
 Ejemplo: Pulumi y aws cdk adoptan esta fusión, permitiendo reglas condicionales, bucles y estructuras dinámicas sin perder trazabilidad declarativa.
 
----
 
 ## IaC y arquitectura orientada a políticas (Policy-Driven Infrastructure)
 
@@ -824,7 +774,6 @@ Ventajas:
 * Menos errores humanos.
 * Alineación directa con compliance y auditoría.
 
----
 
 ## IaC en entornos regulados o críticos
 
@@ -838,7 +787,6 @@ La adopción de IaC en industrias reguladas (finanzas, salud, energía) requiere
 
 Estas prácticas derivan en el concepto de **Compliance-Driven Infrastructure**.
 
----
 
 ## Inteligencia Artificial aplicada a IaC
 
@@ -850,7 +798,6 @@ La IA está redefiniendo el diseño, validación y operación de IaC:
 * **Auto-curación basada en ML**: IaC reacciona a patrones anómalos reconstruyendo componentes.
 * **Optimización automática**: recomendación de recursos más eficientes según telemetría histórica.
 
----
 
 ## Versionado de estado y replicación global
 
@@ -863,7 +810,6 @@ El *state management* avanza hacia sistemas distribuidos y replicados:
 
 Esto habilita IaC confiable en escenarios multi-región o disaster recovery global.
 
----
 
 ## IaC + Data Governance y Observabilidad de datos
 
@@ -877,7 +823,6 @@ La IaC converge con DataOps para definir también la infraestructura de datos co
 
 Esto da lugar al enfoque **Data Infrastructure as Code (DIaC)**.
 
----
 
 ## Auto-documentación y trazabilidad extendida
 
@@ -889,7 +834,6 @@ La documentación se convierte en parte del código ejecutable:
 * Enlace entre IaC y métricas de observabilidad (Grafana, Prometheus).
 * Generación de *Blueprints* visuales versionados junto al repositorio.
 
----
 
 ## Estándares emergentes y normalización
 
@@ -903,7 +847,6 @@ A medida que IaC madura, surgen estándares y frameworks de interoperabilidad:
 
 El objetivo: lograr **IaC interoperable, portable y auditable** a nivel global.
 
----
 
 ## Hacia IaC 2.0: Infraestructura Autónoma y Cognitiva
 
@@ -917,7 +860,6 @@ La evolución apunta hacia infraestructuras **autogestionadas, adaptativas y con
 
 El futuro de IaC no solo automatiza la infraestructura, sino que **automatiza la toma de decisiones sobre ella**.
 
----
 
 ## Lecturas y recursos complementarios
 
@@ -929,7 +871,6 @@ El futuro de IaC no solo automatiza la infraestructura, sino que **automatiza la
 * [Diagrams as Code Tools](https://diagrams.mingrammer.com/)
 * [Intent-Based Infrastructure - Research Overview](https://ieeexplore.ieee.org/document/9267999)
 
----
 
 
 

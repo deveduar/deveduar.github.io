@@ -1,13 +1,13 @@
----
-date: 2025-10-16 18:18
-title: glosario de terminos de testing de nota principal
+creation date: 2025-10-16 18:18
+tags:
 keywords:
 source:
 status: 📌
-Parent: "[[Area-Prog]]"
+Parent: "Area-Prog"
+cssclasses:
+  - hide-embedded-header1
+categories: "[Testing](/testing/testing/)"
 public_note: "true"
-category: Testing
----
 # glosario de terminos de testing principal
 
 # 🧠 Glosario de Términos de Testing
@@ -15,7 +15,6 @@ category: Testing
 > Compilación de definiciones, conceptos clave, metodologías y herramientas relacionadas con el testing de software, QA y CI/CD.  
 > Referencia cruzada con la nota principal `[Testing](/testing/testing/)`.
 
----
 
 ## ⚙️ Ecosistema y Entornos
 
@@ -50,7 +49,6 @@ Ejemplo: `ESLint`, `Prettier`.
 ### **Monitoring Feedback Loop**
 Ciclo continuo de mejora entre testing, despliegue y observación en producción. Permite ajustar el código en base a métricas reales.
 
----
 
 ## 🤖 Test Automation, CI/CD y DevOps
 
@@ -73,7 +71,6 @@ Mecanismo que habilita o deshabilita funcionalidades en tiempo real sin necesida
 ### **Canary Releases**
 Despliegues graduales a un subconjunto de usuarios o servidores antes de la publicación completa, para detectar errores en entornos reales.
 
----
 
 ## 💡 Metodologías, Estrategias y Prácticas
 
@@ -114,7 +111,6 @@ Validación superficial después de cambios menores, para confirmar que no se in
 ### **Agile Testing**
 Práctica de testing continua dentro de ciclos ágiles. Se enfoca en la colaboración y el feedback inmediato.
 
----
 
 ## 🧩 Tipos de Pruebas y Frameworks
 
@@ -148,7 +144,6 @@ Permite ejecutar múltiples servicios en conjunto para pruebas de integración l
 Validan endpoints y respuestas de APIs REST.  
 Herramientas: `Postman`, `Newman`, `REST Assured` (Java).
 
----
 
 ## 💻 Frontend y Visual Testing
 
@@ -177,7 +172,6 @@ Framework para testear endpoints HTTP en Node.js.
 ### **Nock**
 Permite hacer mocking de peticiones HTTP en tests de Node.
 
----
 
 ## 🧰 QA, Monitoreo y Cobertura
 
@@ -227,7 +221,6 @@ Miden la cobertura de código (porcentaje de líneas probadas por tests).
 Evalúa la calidad de los tests alterando el código (mutaciones) para comprobar si los tests detectan errores.  
 Ej: `StrykerJS`, `PIT`.
 
----
 
 ## 🔄 Patrones de Dependencias y Dobles de Test
 
@@ -246,7 +239,6 @@ Ejemplo: mock de envío de correo.
 Implementación funcional simplificada usada en lugar de una dependencia real (DB en memoria, servicio local, etc.).  
 Ejemplo: fake de inventario.
 
----
 
 ## 📊 Herramientas Complementarias
 
@@ -257,7 +249,6 @@ Ejemplo: fake de inventario.
 - **ESLint / Prettier:** linting y formateo.  
 - **Allure / Jest Docs:** generación de documentación automática de tests.
 
----
 
 ## 📘 Conceptos Clave
 
@@ -270,6 +261,5 @@ Ejemplo: fake de inventario.
 - **Repository Pattern:** patrón para desacoplar acceso a datos de la lógica del negocio.  
 - **Time-based Test:** prueba que depende del tiempo (ej. expiración de tokens).  
 
----
 
 > **Referencia cruzada:** [Testing](/testing/testing/), [CICD](/devops/cicd/), [QA](/testing/qa/), [devops](/devops/devops/), Automation, [BDD](/testing/bdd/), [TDD - Test Driven Development](/testing/tdd---test-driven-development/), [E2E - End to End Testing](/testing/e2e---end-to-end-testing/), SonarQube, Coveralls Docs-, [JMeter](/testing/jmeter/), Cypress, [Playwright](/testing/playwright/), Testing Library, [MSW Mocks service worker](/testing/msw-mocks-service-worker/), Testcontainers.

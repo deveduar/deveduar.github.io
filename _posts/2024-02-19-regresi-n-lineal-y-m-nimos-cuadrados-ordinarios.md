@@ -1,15 +1,14 @@
----
-date: 2024-02-19 13:01
-title: Regresión Lineal y Mínimos Cuadrados Ordinarios
-status: 🌟
-Parent: "[[Area-IA]]"
-keywords:
-source:
-public_note: "true"
-category: Data Science
 tags:
   - IA
----
+status: 🌟
+Parent: "Area-IA"
+creation date: 2024-02-19 13:01
+keywords:
+source:
+cssclasses:
+  - hide-embedded-header1
+categories: "[Data Science](/data%20science/data-science/)"
+public_note: "true"
 # Regresión Lineal y Mínimos Cuadrados Ordinarios
 
 [Regresión Lineal y Mínimos Cuadrados Ordinarios](https://www.youtube.com/watch?v=k964_uNn3l0&list=PL-Ogd76BhmcC_E2RjgIIJZd1DQdYHcVf0&index=5) video

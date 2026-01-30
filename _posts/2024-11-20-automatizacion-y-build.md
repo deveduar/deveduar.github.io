@@ -1,12 +1,4 @@
----
-date: 2024-11-20 17:53
-title: Automatizacion y Build
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Prog]]"
-public_note: "true"
-category: Automatizacion y Build
+creation date: 2024-11-20 17:53
 tags:
   - linters
   - runners
@@ -16,14 +8,20 @@ tags:
   - build
   - Scraping
   - devops
----
+keywords:
+source:
+status: 🌟
+Parent: "Area-Prog"
+cssclasses:
+  - hide-embedded-header1
+categories: "[Automatizacion y Build](/uncategorized/automatizacion-y-build/)"
+public_note: "true"
 # Automatización y Build
 
 > - Automatización de tareas (tanto dev como operativas)
 > - Proceso de build y empaquetado de código
 > - Integración con herramientas de desarrollo, sistemas y plataformas no-code
 > - Scaffolding y generación de proyectos
----
 
 - Testing y Calidad de Código
 	- [Testing](/testing/testing/) 
@@ -43,7 +41,6 @@ tags:
 	- [IInfraestructura como codigo](/devops/iinfraestructura-como-codigo/)
 	- [webhooks](/backend/webhooks/)
 	- [SDLC](/devops/sdlc/)
-	- 
 - task runner 
 	- [gulp](/automatizacion%20y%20build/gulp/)
 	- grunt
@@ -72,7 +69,6 @@ tags:
 	- esbuild 
 		- [esbuild - Getting Started](https://esbuild.github.io/getting-started/#simultaneous-platforms) 
 		- esbuild - Getting Started
-		- 
 - Optimización de builds
 	- [nx](/automatizacion%20y%20build/nx/)
 - Generación de proyectos y codigo

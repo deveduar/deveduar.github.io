@@ -1,16 +1,15 @@
----
-date: 2024-02-19 03:15
-title: GCP Big Data Developer y Apache Hadoop
-status: 🌟
-Parent: "[[Area-IA]]"
-keywords:
-source:
-public_note: "true"
-category: Data Science
 tags:
   - GCP
   - IA
----
+status: 🌟
+Parent: "Area-IA"
+creation date: 2024-02-19 03:15
+keywords:
+source:
+cssclasses:
+  - hide-embedded-header1
+categories: "[Data Science](/data%20science/data-science/)"
+public_note: "true"
 # GCP Big Data Developer y Apache Hadoop
 
 - [apache](/backend/apache/)

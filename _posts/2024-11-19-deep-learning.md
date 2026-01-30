@@ -1,17 +1,17 @@
----
-date: 2024-11-19 23:32
-title: Deep Learning
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Prog]]"
-public_note: "true"
-category: Data Science
+creation date: 2024-11-19 23:32
 tags:
   - IA
   - datascience
   - deep-learning
----
+keywords:
+source:
+status: 🌟
+Parent: "Area-Prog"
+cssclasses:
+  - hide-embedded-header1
+  - wide
+categories: "[Data Science](/data%20science/data-science/)"
+public_note: "true"
 # Deep Learning
 ``
 

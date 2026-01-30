@@ -1,17 +1,17 @@
----
-date: 2025-04-14 18:07
-title: Ciberdefensa
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Sistemas]]"
-public_note: "true"
-category: ciberseguridad
+creation date: 2025-04-14 18:07
 tags:
   - ciberdefensa
   - Hacking
   - ciberseguridad
----
+keywords:
+source:
+status: 🌟
+Parent: "Area-Sistemas"
+cssclasses:
+  - hide-embedded-header1
+  - wide
+categories: "[ciberseguridad](/ciberseguridad/ciberseguridad/)"
+public_note: "true"
 # Ciberdefensa
 
 - [ciberseguridad](/ciberseguridad/ciberseguridad/)

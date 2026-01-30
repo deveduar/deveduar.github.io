@@ -1,23 +1,22 @@
----
-date: 2025-05-20 17:26
-title: SRE Site Reliability Engineering
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Sistemas]]"
-public_note: "true"
-category: devops
+creation date: 2025-05-20 17:26
 tags:
   - sre
   - devops
   - IaC
----
+keywords:
+source:
+status: 🌟
+Parent: "Area-Sistemas"
+cssclasses:
+  - hide-embedded-header1
+  - wide
+categories: "[devops](/devops/devops/)"
+public_note: "true"
 # SRE (Site Reliability Engineering)
 ``
 
 [IInfraestructura como codigo](/devops/iinfraestructura-como-codigo/) | [Gestion de Negocio](/gestion%20de%20negocio/gestion-de-negocio/) | Automatizacion | [devops](/devops/devops/)
 
----
 
 ## Concepto General
 
@@ -25,7 +24,6 @@ tags:
 
 El SRE define la fiabilidad como un objetivo medible y gestionable, utilizando métricas cuantitativas para evaluar la salud del sistema y tomar decisiones basadas en datos. Además, impulsa la **automatización**, la **observabilidad**, la **reducción del toil** y la **cultura de colaboración**.
 
----
 
 ## Principios Fundamentales
 
@@ -46,7 +44,6 @@ Técnicas comunes:
 - Sustituir intervenciones manuales por **pipelines declarativos**.
 - Fomentar la **infraestructura inmutable** mediante [IInfraestructura como codigo](/devops/iinfraestructura-como-codigo/).
 
----
 
 ## Prácticas Clave
 
@@ -81,7 +78,6 @@ SRE promueve una **cultura de ingeniería compartida** entre desarrollo y operac
 Recursos sobre silos:
 - [How to identify and break down IT silos | ActiveBatch Blog](https://www.advsyscon.com/blog/break-down-silos-in-it/)
 
----
 
 ## Integración con el Negocio
 
@@ -92,7 +88,6 @@ La fiabilidad no es solo técnica, sino estratégica.
 
 Más en [Gestion de Negocio](/gestion%20de%20negocio/gestion-de-negocio/).
 
----
 
 ## Herramientas Comunes
 
@@ -102,7 +97,6 @@ Más en [Gestion de Negocio](/gestion%20de%20negocio/gestion-de-negocio/).
 - **Kubernetes:** orquestación y resiliencia.  
 - **Jenkins / GitHub Actions / ArgoCD:** automatización y despliegue continuo.
 
----
 
 ## Documentación y Recursos
 
@@ -111,7 +105,6 @@ Más en [Gestion de Negocio](/gestion%20de%20negocio/gestion-de-negocio/).
 - [SRE. Entendiendo qué es y cómo puede ayudar a tu negocio – Kiteris](https://www.kiteris.com/site-reliability-engineering-que-es/)  
 - [Books For Site Reliability Engineering – Google SRE](https://sre.google/books/)
 
----
 
 ## Ejemplo de Implementación de Error Budget (Código)
 
@@ -135,7 +128,6 @@ print(f"Error budget utilizado: {error_budget_used:.3f}%")
 ```
 {% endraw %}`
 
----
 
 ## Conclusión
 
@@ -145,9 +137,8 @@ Integra métricas cuantificables (SLO, SLI), procesos automatizados (Automatizac
 
 # SRE Avanzado: Prácticas, Cultura y Evolución
 
-[SRE Site Reliability Engineering](/devops/sre-site-reliability-engineering/) | [devops](/devops/devops/) | Automatizacion | [Gestion de Negocio](/gestion%20de%20negocio/gestion-de-negocio/)
+[SRE Site Reliability Engineering](/uncategorized/sre-site-reliability-engineering/) | [devops](/devops/devops/) | Automatizacion | [Gestion de Negocio](/gestion%20de%20negocio/gestion-de-negocio/)
 
----
 
 ## Evolución del Rol de SRE
 
@@ -158,7 +149,6 @@ El rol de **SRE** ha pasado de ser un enfoque puramente operativo a convertirse 
 
 El SRE moderno actúa como **“arquitecto de resiliencia”**, creando sistemas que se degradan con elegancia bajo fallo y pueden recuperarse automáticamente.
 
----
 
 ## Diseño de Fiabilidad (Reliability by Design)
 
@@ -170,7 +160,6 @@ Implementar la fiabilidad desde la arquitectura del sistema:
 - **Capacity Planning:** estimar demanda futura con métricas históricas y margen de seguridad.  
 - **Error Budgets en diseño:** decisiones de arquitectura se guían por los márgenes de fiabilidad permitidos.
 
----
 
 ## Observabilidad Avanzada
 
@@ -180,7 +169,6 @@ Más allá de logs y métricas, la observabilidad avanzada introduce:
 - **Análisis predictivo:** uso de machine learning para detectar anomalías y anticipar incidentes.  
 - **Data-driven Postmortems:** integración de datos reales para aprender patrones de fallo y mejorar procesos.
 
----
 
 ## Escalabilidad y Performance Engineering
 
@@ -190,7 +178,6 @@ El SRE participa activamente en la **optimización del rendimiento**:
 - Introduce **load testing continuo** (por ejemplo, k6, Gatling, Locust).  
 - Utiliza **SLI de rendimiento**, como latencia del p95 o p99, para capturar experiencias reales de usuarios.
 
----
 
 ## Gestión del Cambio y Despliegue Seguro
 
@@ -200,7 +187,6 @@ Un SRE debe garantizar que la velocidad de entrega no comprometa la fiabilidad:
 - **Automated Rollbacks:** detección automática de degradaciones basada en SLO.  
 - **Change Budget:** límite de cambios simultáneos o críticos dentro de un periodo determinado.
 
----
 
 ## Gestión del Riesgo y Fiabilidad Organizacional
 
@@ -210,7 +196,6 @@ El concepto de fiabilidad también se aplica al **nivel organizacional**:
 - Priorización de inversiones en fiabilidad basadas en ROI y coste de interrupción.  
 - **SRE Governance:** establecer políticas, estándares y auditorías de fiabilidad.
 
----
 
 ## Cultura y Madurez SRE
 
@@ -228,7 +213,6 @@ Una organización madura en SRE se caracteriza por:
 4. **Nivel 3:** automatización de despliegues y respuestas.  
 5. **Nivel 4:** observabilidad completa, fiabilidad gestionada por métricas de negocio.
 
----
 
 ## Economía de la Fiabilidad
 
@@ -238,7 +222,6 @@ Aplicar conceptos económicos para equilibrar fiabilidad y coste:
 - **Optimización de presupuesto:** destinar recursos de ingeniería donde el impacto en usuario sea mayor.  
 - **Trade-offs conscientes:** a veces mejorar el tiempo de recuperación (MTTR) es más rentable que aumentar la disponibilidad teórica (MTBF).
 
----
 
 ## Ecosistema de Herramientas SRE
 
@@ -251,7 +234,6 @@ Aplicar conceptos económicos para equilibrar fiabilidad y coste:
 | IaC & Configuración | Terraform, Ansible, Helm |
 | Postmortems & Documentación | Confluence, Notion, Obsidian (para runbooks y análisis) |
 
----
 
 ## Ejemplo de Alerting basado en SLO
 
@@ -273,7 +255,6 @@ groups:
 ```
 {% endraw %}`
 
----
 
 ## Tendencias y Futuro del SRE
 
@@ -283,7 +264,6 @@ groups:
 * **Compliance SRE:** integración de auditorías de fiabilidad con requisitos regulatorios.
 * **SLO-as-Code:** definición de SLOs declarativos versionados junto al código fuente.
 
----
 
 ## Recursos Recomendados
 
@@ -294,7 +274,6 @@ groups:
 * [Google SRE Books](https://sre.google/books/)
 * [SREcon Talks (US & EMEA)](https://www.usenix.org/conferences/srecon)
 
----
 
 ## Conclusión
 
@@ -305,9 +284,8 @@ Su objetivo final es **crear sistemas adaptativos, observables y sostenibles**, 
 # SRE: Extensión Avanzada de Conceptos y Prácticas Emergentes
 $= dv.current().file.tags.join(" ")
 
-[SRE Site Reliability Engineering](/devops/sre-site-reliability-engineering/) | [devops](/devops/devops/) | Automatizacion | [Gestion de Negocio](/gestion%20de%20negocio/gestion-de-negocio/) | [IInfraestructura como codigo](/devops/iinfraestructura-como-codigo/)
+[SRE Site Reliability Engineering](/uncategorized/sre-site-reliability-engineering/) | [devops](/devops/devops/) | Automatizacion | [Gestion de Negocio](/gestion%20de%20negocio/gestion-de-negocio/) | [IInfraestructura como codigo](/devops/iinfraestructura-como-codigo/)
 
----
 
 ## Fiabilidad Distribuida y Complejidad de Sistemas
 
@@ -319,7 +297,6 @@ Los sistemas modernos —microservicios, arquitecturas distribuidas, multi-cloud
 - **Gestión de topologías dinámicas:** el número de instancias, pods o nodos varía continuamente, lo que exige métricas adaptativas.  
 - **Chaos Mesh / Resilience Testing:** las pruebas deben ejecutarse en entornos reales para validar comportamiento bajo estrés.
 
----
 
 ## Seguridad Operacional en el Contexto SRE
 
@@ -331,7 +308,6 @@ La **intersección entre SRE y seguridad** da lugar al enfoque de *Resilience & 
 - **Infraestructura inmutable:** los cambios de estado solo deben ocurrir mediante despliegues controlados (modelo declarativo).  
 - **Zero Trust en operaciones:** autenticación y autorización verificadas en cada llamada o flujo operativo.
 
----
 
 ## Gobernanza y Métricas Organizacionales de Fiabilidad
 
@@ -343,7 +319,6 @@ Más allá del sistema técnico, la **fiabilidad organizacional** se mide con in
 - **Error Budget Burn Rate:** velocidad de consumo del presupuesto de error como indicador de estrés del sistema.  
 - **Fiabilidad percibida:** correlación entre métricas técnicas y satisfacción del cliente (CSAT, NPS, Apdex).
 
----
 
 ## Prácticas de Resiliencia Organizacional
 
@@ -355,7 +330,6 @@ El SRE influye también en la **resiliencia organizacional**, no solo técnica:
 - **Simulacros de desastre:** ejercicios periódicos de recuperación que validan tiempos de RTO/RPO reales.  
 - **Fiabilidad de la cadena de suministro:** evaluación de resiliencia en dependencias externas (SaaS, infraestructura de terceros).
 
----
 
 ## Ingeniería del Caos (Chaos Engineering)
 
@@ -370,7 +344,6 @@ El SRE utiliza la ingeniería del caos para **validar hipótesis de resiliencia*
 - **Herramientas:** Gremlin, Chaos Mesh, LitmusChaos, AWS Fault Injection Simulator.  
 - **Resultado esperado:** menor pánico operacional y recuperación automatizada.
 
----
 
 ## SLO-as-Code y Observabilidad Declarativa
 
@@ -405,7 +378,6 @@ spec:
 ```
 {% endraw %}`
 
----
 
 ## Estrategias de Autocuración (Self-Healing Systems)
 
@@ -417,7 +389,6 @@ Los sistemas autorreparables reducen intervención manual y aumentan fiabilidad:
 * **Predictive Healing:** aprendizaje automático para prevenir fallos basándose en métricas históricas.
 * **Closed-loop Feedback:** cada corrección automatizada genera datos que mejoran el sistema con el tiempo.
 
----
 
 ## Integración con FinOps y Sostenibilidad
 
@@ -428,7 +399,6 @@ SRE colabora con **FinOps** para optimizar costes operativos sin sacrificar fiab
 * **Green Reliability:** reducción del consumo energético mediante escalado eficiente y uso de energías limpias.
 * **Performance/Cost Trade-offs:** decisiones técnicas que maximizan eficiencia y sostenibilidad.
 
----
 
 ## Resiliencia en Entornos Multi-Cloud y Edge
 
@@ -440,7 +410,6 @@ La expansión hacia arquitecturas distribuidas redefine la fiabilidad:
 * **Edge Reliability:** gestión de fallos intermitentes y sincronización eventual en entornos desconectados.
 * **SLOs geográficos:** definir objetivos por región o clúster, no solo a nivel global.
 
----
 
 ## Ingeniería del Aprendizaje en SRE
 
@@ -452,7 +421,6 @@ El aprendizaje continuo se institucionaliza mediante:
 * **Gamificación:** simulaciones y retos internos de fiabilidad para entrenamiento operativo.
 * **Metrics Literacy:** formar a los equipos en interpretación y análisis de datos de fiabilidad.
 
----
 
 ## SRE y AI Ops
 
@@ -464,7 +432,6 @@ La integración de IA y SRE (AIOps) redefine la gestión proactiva:
 * **Intelligent Alerting:** reducción del ruido de alertas con aprendizaje adaptativo.
 * **Recomendaciones de acción:** sistemas que sugieren pasos correctivos basados en datos previos.
 
----
 
 ## Futuro del SRE
 
@@ -474,7 +441,6 @@ La integración de IA y SRE (AIOps) redefine la gestión proactiva:
 * **Ethical Reliability:** responsabilidad social en disponibilidad de servicios críticos (salud, transporte, finanzas).
 * **Adaptive Reliability Systems:** sistemas que se autorregulan según contexto, carga y prioridad de negocio.
 
----
 
 ## Conclusión
 
@@ -483,9 +449,8 @@ El objetivo ya no es solo evitar fallos, sino **crear sistemas resilientes, adap
 
 # SRE: Expansión Experta y Temas de Frontera
 
-[SRE Site Reliability Engineering](/devops/sre-site-reliability-engineering/) | [devops](/devops/devops/) | Automatizacion | [Gestion de Negocio](/gestion%20de%20negocio/gestion-de-negocio/) | [IInfraestructura como codigo](/devops/iinfraestructura-como-codigo/)
+[SRE Site Reliability Engineering](/uncategorized/sre-site-reliability-engineering/) | [devops](/devops/devops/) | Automatizacion | [Gestion de Negocio](/gestion%20de%20negocio/gestion-de-negocio/) | [IInfraestructura como codigo](/devops/iinfraestructura-como-codigo/)
 
----
 
 ## Ingeniería de Capacidad y Escalado Predictivo
 
@@ -497,7 +462,6 @@ El SRE avanzado aborda el escalado no solo como un proceso reactivo, sino como u
 - **Análisis de saturación:** correlación entre utilización de CPU, memoria, latencia y throughput para detectar cuellos de botella incipientes.  
 - **Balanceo proactivo:** redistribución de carga en tiempo real entre zonas o regiones.
 
----
 
 ## Gestión de Dependencias y Fiabilidad de Servicios Externos
 
@@ -509,7 +473,6 @@ Los sistemas modernos dependen de APIs, SaaS y terceros. El SRE gestiona su fiab
 - **External SLA Mapping:** correlación entre SLA del proveedor y SLO interno.  
 - **Auditorías de dependencia:** revisión periódica de contratos, latencias y disponibilidad histórica.
 
----
 
 ## Diseño de Sistemas Antifrágiles
 
@@ -521,7 +484,6 @@ El siguiente paso tras la resiliencia es la **antifragilidad**: sistemas que mej
 - **Componentes autoevolutivos:** pipelines que ajustan políticas de escalado o alertado sin intervención humana.  
 - **Antifragilidad cultural:** equipos que institucionalizan el aprendizaje colectivo tras cada crisis.
 
----
 
 ## Reliability Testing y Validación de SLOs
 
@@ -533,7 +495,6 @@ No basta con definir SLOs: deben validarse mediante pruebas diseñadas para romp
 - **SLO Regression Detection:** identificación automática de degradaciones entre releases.  
 - **Dynamic SLO Adjustment:** ajuste automático del objetivo según condiciones contextuales (pico, mantenimiento, carga global).
 
----
 
 ## Continuous Verification (CV) y Reliability Gates
 
@@ -545,7 +506,6 @@ El concepto de *Continuous Verification* amplía el ciclo CI/CD añadiendo valid
 - **Feature Maturity Levels:** promoción de features según cumplimiento progresivo de fiabilidad.  
 - **Integración con canarios automatizados:** medición del impacto real del cambio en métricas clave.
 
----
 
 ## Documentación Operacional Viva
 
@@ -557,7 +517,6 @@ La documentación en SRE debe ser **dinámica, versionada y accionable**:
 - **Observabilidad contextual:** dashboards enriquecidos con enlaces a documentación, runbooks y métricas de impacto.  
 - **Knowledge Graph de fiabilidad:** mapa de relaciones entre servicios, métricas, dependencias y propietarios.
 
----
 
 ## Diseño de Alertas Inteligentes y Fatiga Operacional
 
@@ -569,7 +528,6 @@ El exceso de alertas reduce efectividad. El SRE optimiza su diseño para precisi
 - **Human Load Budget:** límite de alertas asignadas por turno para evitar fatiga.  
 - **Silenciamiento inteligente:** supresión temporal de alertas redundantes durante incidentes mayores.
 
----
 
 ## Métricas Humanas en Fiabilidad
 
@@ -581,7 +539,6 @@ SRE también mide la fiabilidad humana, entendida como la capacidad del equipo p
 - **Error Budget Humano:** límite de tareas reactivas o intervenciones manuales permitido por periodo.  
 - **On-call Experience Score:** mide la salud cultural del proceso de guardias.
 
----
 
 ## Resiliencia en Sistemas Basados en Eventos
 
@@ -593,7 +550,6 @@ La fiabilidad en arquitecturas **event-driven** requiere nuevos enfoques:
 - **Reprocesamiento seguro:** mecanismos para reinyectar eventos sin duplicaciones.  
 - **SLI específicos:** tiempo medio entre publicación y consumo exitoso.
 
----
 
 ## Fiabilidad en Serverless y Funciones Efímeras
 
@@ -605,7 +561,6 @@ Los entornos **serverless** redefinen cómo se mide y gestiona la fiabilidad:
 - **Function-level SLOs:** métricas independientes por función desplegada.  
 - **Cost Reliability Trade-off:** relación entre fiabilidad, coste y tiempo de ejecución bajo demanda.
 
----
 
 ## Fiabilidad en Edge e IoT
 
@@ -617,7 +572,6 @@ La descentralización del cómputo introduce fiabilidad distribuida y autónoma:
 - **Local Observability:** métricas y logs almacenados en borde con reenvío asíncrono.  
 - **Cluster Health Consensus:** mecanismos de consenso entre nodos distribuidos para mantener coherencia.
 
----
 
 ## Fiabilidad en Procesos de Datos y ML Systems
 
@@ -629,7 +583,6 @@ El SRE extiende su práctica a la **fiabilidad del ciclo de datos y modelos** (M
 - **Reentrenamiento automatizado:** disparo de procesos de actualización ante desviaciones estadísticas.  
 - **Explainability Logs:** trazabilidad de decisiones automatizadas en producción.
 
----
 
 ## Fiabilidad Ética y Social
 
@@ -641,7 +594,6 @@ El SRE moderno asume responsabilidad social y ética sobre los servicios crític
 - **Transparencia operativa:** publicación de reportes de fiabilidad y postmortems abiertos.  
 - **Accountability extendido:** incorporar la responsabilidad ética al ciclo de incidentes.
 
----
 
 ## Conclusión
 

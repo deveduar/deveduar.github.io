@@ -1,18 +1,18 @@
----
-date: 2024-11-16 17:32
-title: microservicios
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Prog]]"
-public_note: "true"
-category: Backend
+creation date: 2024-11-16 17:32
 tags:
   - backend
   - devops
   - docker
   - microservicios
----
+keywords:
+source:
+status: 🌟
+Parent: "Area-Prog"
+cssclasses:
+  - hide-embedded-header1
+  - wide
+categories: "[Backend](/backend/backend/)"
+public_note: "true"
 # microservicios
 
 - [devops](/devops/devops/)
@@ -302,7 +302,7 @@ async def ping():
 
 # Preparación para entrevistas de microservicios
 
-- [microservicios](/backend/microservicios/)
+- [microservicios](/uncategorized/microservicios/)
 - [Backend](/backend/backend/)
 - [Computer Science](/computer%20science/computer-science/)
 - [api](/backend/api/)

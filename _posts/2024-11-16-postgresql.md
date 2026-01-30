@@ -1,16 +1,16 @@
----
-date: 2024-11-16 17:15
-title: postgreSQL
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Prog]]"
-public_note: "true"
-category: Databases
+creation date: 2024-11-16 17:15
 tags:
   - postgres
   - db
----
+keywords:
+source:
+status: 🌟
+Parent: "Area-Prog"
+cssclasses:
+  - hide-embedded-header1
+  - wide
+categories: "[Databases](/databases/databases/)"
+public_note: "true"
 # postgreSQL
 
 - [PostgreSQL: Documentation](https://www.postgresql.org/docs/)
@@ -176,7 +176,6 @@ Aquí tienes un **cheat sheet de PostgreSQL** claro, práctico y compacto, listo
 - Salir  
 	- `\q`
 
----
 
 ## CRUD Básico
 **SELECT**
@@ -213,7 +212,6 @@ DELETE FROM tabla WHERE id = 1;
 ```
 {% endraw %}
 
----
 
 ## Filtrado y Orden
 
@@ -226,7 +224,6 @@ LIMIT 10 OFFSET 20;
 ```
 {% endraw %}
 
----
 
 ## Joins
 
@@ -240,7 +237,6 @@ LEFT JOIN, RIGHT JOIN, FULL JOIN
 ```
 {% endraw %}
 
----
 
 ## Funciones de Agregado
 
@@ -253,7 +249,6 @@ HAVING SUM(col) > 100;
 ```
 {% endraw %}
 
----
 
 ## Transacciones
 
@@ -268,7 +263,6 @@ ROLLBACK;
 ```
 {% endraw %}
 
----
 
 ## Tipos Avanzados
 
@@ -307,7 +301,6 @@ CREATE TYPE human AS (name text, age int);
 ```
 {% endraw %}
 
----
 
 ## Crear y Modificar Tablas
 
@@ -325,7 +318,6 @@ ALTER TABLE personas DROP COLUMN edad;
 ```
 {% endraw %}
 
----
 
 ## Índices
 
@@ -339,7 +331,6 @@ CREATE INDEX idx_active ON tabla(col) WHERE activo = true;
 ```
 {% endraw %}
 
----
 
 ## Vistas y Materialized Views
 
@@ -355,7 +346,6 @@ REFRESH MATERIALIZED VIEW vista_mat;
 ```
 {% endraw %}
 
----
 
 ## Funciones y Procedimientos
 
@@ -371,7 +361,6 @@ SELECT sumar(3,5);
 ```
 {% endraw %}
 
----
 
 ## Esquemas
 
@@ -384,7 +373,6 @@ CREATE TABLE admin.users (...);
 ```
 {% endraw %}
 
----
 
 ## Copias y Restauración
 
@@ -395,7 +383,6 @@ pg_restore -d nuevaBD backup.dump
 ```
 {% endraw %}
 
----
 
 ## EXPLAIN
 
@@ -406,7 +393,6 @@ SELECT * FROM tabla WHERE col = 10;
 ```
 {% endraw %}
 
----
 
 ## Particionamiento
 

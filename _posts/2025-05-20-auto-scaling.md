@@ -1,17 +1,17 @@
----
-date: 2025-05-20 17:32
-title: Auto Scaling
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Sistemas]]"
-public_note: "true"
-category: cloud
+creation date: 2025-05-20 17:32
 tags:
   - cloud
   - backend
   - scaling
----
+keywords:
+source:
+status: 🌟
+Parent: "Area-Sistemas"
+cssclasses:
+  - hide-embedded-header1
+  - wide
+categories: "[cloud](/cloud/cloud/)"
+public_note: "true"
 # Auto Scaling
 ``
 

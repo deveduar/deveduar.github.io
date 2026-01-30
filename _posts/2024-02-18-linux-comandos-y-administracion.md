@@ -1,15 +1,14 @@
----
-date: 2024-02-18 17:32
-title: Linux comandos y administracion
+tags:
+  - Linux
+creation date: 2024-02-18 17:32
 keywords:
 source:
 status: 🌟
-Parent: "[[Area-Sistemas]]"
+Parent: "Area-Sistemas"
+cssclasses:
+  - hide-embedded-header1
+categories: "[Linux](/sistemas/linux/)"
 public_note: "true"
-category: Linux
-tags:
-  - Linux
----
 # Linux comandos
 # Comandos sysadmin
 

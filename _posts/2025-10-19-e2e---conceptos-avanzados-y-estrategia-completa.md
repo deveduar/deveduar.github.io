@@ -1,13 +1,13 @@
----
-date: 2025-10-19 14:54
-title: E2E - Conceptos Avanzados y Estrategia Completa
+creation date: 2025-10-19 14:54
+tags:
 keywords:
 source:
 status: 📌
-Parent: "[[Area-Prog]]"
+Parent: "Area-Prog"
+cssclasses:
+  - hide-embedded-header1
+categories: "[Testing](/testing/testing/)"
 public_note: "true"
-category: Testing
----
 # E2E - Conceptos Avanzados y Estrategia Completa
 
 ## 🧩 Arquitectura del Testing E2E

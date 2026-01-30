@@ -1,19 +1,18 @@
----
-date: 2023-09-01 15:50
-title: Patron Composite
 Hecho: false
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Prog]]"
-public_note: "true"
-category: Computer Science
 tags:
   - GameDev
   - CS
   - computer_Science
-  - patrones_diseo
----
+  - patrones_diseño
+creation date: 2023-09-01 15:50
+keywords:
+source:
+status: 🌟
+Parent: "Area-Prog"
+cssclasses:
+  - hide-embedded-header1
+categories: "[Computer Science](/computer%20science/computer-science/)"
+public_note: "true"
 # Patron Composite
 
 - [Computer Science](/computer%20science/computer-science/)

@@ -1,19 +1,18 @@
----
-date: 2024-03-01 16:40
-title: Expresiones regulares
+creation date: 2024-03-01 16:40
 modification date: Friday 1st March 2024 16:40:27
-keywords:
-aliases: []
-source:
-status: 🌟
-Parent: "[[Area-Prog]]"
-public_note: "true"
-category: Computer Science
 tags:
   - JS
   - CS
   - mates
----
+keywords:
+aliases: []
+source:
+status: 🌟
+Parent: "Area-Prog"
+cssclasses:
+  - hide-embedded-header1
+categories: "[Computer Science](/computer%20science/computer-science/)"
+public_note: "true"
 # Expresiones regulares
 
 - [Computer Science](/computer%20science/computer-science/)
@@ -23,7 +22,6 @@ Herramienta útil: [RegEx Tool](https://regexr.com/)
 
 Las **expresiones regulares (RegEx)** permiten buscar, validar, extraer o reemplazar patrones en cadenas de texto mediante reglas definidas. Son ampliamente usadas en validación de datos, limpieza de texto, análisis de logs y parsing de contenido.
 
----
 
 ## Validar una dirección de correo electrónico
 
@@ -51,7 +49,6 @@ console.log(isValidEmail); // true
 - `\.` → punto obligatorio (escapado)
 - `[^\s@]+` → dominio o subdominio final
 
----
 
 ## Reemplazar un patrón de texto en una cadena
 
@@ -79,7 +76,6 @@ console.log(replacedText); // "La CASA está en la CALLE principal"
 - `g` → bandera global: reemplaza todas las ocurrencias
 - La función recibe cada coincidencia (`match`) y la transforma en mayúsculas
 
----
 
 ## Extraer información de una cadena de texto
 
@@ -109,7 +105,6 @@ while (match != null) {
 - `(C?)` → grupo opcional para capturar "C" si está presente
 - `g` → bandera global para recorrer todas las coincidencias con `.exec()`
 
----
 
 ## Patrones y usos comunes
 
@@ -130,7 +125,6 @@ while (match != null) {
 - Palabras: `/\w+/g`
 - Fechas (dd/mm/yyyy): `/\b\d{2}\/\d{2}\/\d{4}\b/`
 
----
 
 ## Buenas prácticas con RegEx
 
@@ -139,7 +133,6 @@ while (match != null) {
 - **Divide y documenta** las RegEx complejas con comentarios y uso de la bandera `x` (si el lenguaje lo soporta).
 - **Evita sobreuso:** algunas tareas (como parsing de HTML o JSON) requieren soluciones estructurales, no RegEx.
 
----
 
 ## Referencias y notas relacionadas
 
@@ -152,7 +145,6 @@ while (match != null) {
 
 Complemento de la nota RegEx, centrado en aspectos avanzados, optimización, rendimiento y patrones complejos aplicados en entornos reales.
 
----
 
 ## Caracteres especiales y clases avanzadas
 
@@ -170,7 +162,6 @@ Permiten definir conjuntos de caracteres válidos:
 - `[A-Z]` → letras mayúsculas
 - `[^0-9]` → cualquier carácter que **no sea** un dígito
 
----
 
 ## Cuantificadores y control de repetición
 
@@ -193,7 +184,6 @@ console.log(text.match(/<p>.*?<\/p>/g)); // Lazy → captura cada par individual
 ```
 {% endraw %}`
 
----
 
 ## Grupos, referencias y lookarounds
 
@@ -222,7 +212,6 @@ console.log("100 USD, 50 EUR".match(regex)); // ["100"]
 ```
 {% endraw %}
 
----
 
 ## Uso en procesamiento de datos y logs
 
@@ -251,7 +240,6 @@ console.log(fechas);
 ```
 {% endraw %}
 
----
 
 ## Optimización y rendimiento
 
@@ -269,7 +257,6 @@ console.log(fechas);
 ```
 {% endraw %}
 
----
 
 ## Aplicaciones prácticas comunes
 
@@ -278,7 +265,6 @@ console.log(fechas);
 * **Testing automatizado:** validar formatos (emails, contraseñas, tokens).
 * **Sistemas ETL y scraping:** identificar patrones repetitivos en grandes volúmenes de datos.
 
----
 
 ## Herramientas y depuración
 
@@ -292,7 +278,6 @@ console.log(fechas);
   * *VSCode RegEx Previewer*
   * *Regex Visualizer (JetBrains)*
 
----
 
 ## Buenas prácticas adicionales
 
@@ -301,7 +286,6 @@ console.log(fechas);
 * Usa `x` (*extended mode*) si el motor lo soporta, para añadir espacios y comentarios dentro de la expresión.
 * Evita dependencias del lenguaje: algunas sintaxis varían (por ejemplo, lookbehinds no soportados en versiones antiguas de JavaScript).
 
----
 
 ## Notas relacionadas
 
@@ -315,7 +299,6 @@ console.log(fechas);
 
 Expansión de las notas sobre RegEx y RegEx Avanzado, centrada en **integración práctica**, **entornos de desarrollo**, **mantenimiento** y **casos de uso específicos en sistemas reales**.
 
----
 
 ## Integración en entornos y lenguajes
 
@@ -364,7 +347,6 @@ print(fechas)  # ['2025-11-12', '2024-10-10']
   * `grep -E "ERROR|WARN" log.txt` → muestra líneas que contengan ERROR o WARN
   * `sed -E 's/[0-9]+/###/g' archivo.txt` → reemplaza números por ###
 
----
 
 ## RegEx en bases de datos
 
@@ -388,7 +370,6 @@ SELECT regexp_replace(nombre, '\s+', ' ', 'g') FROM clientes;
 
 Permite limpieza y normalización de texto directamente en consultas.
 
----
 
 ## RegEx y seguridad
 
@@ -407,7 +388,6 @@ Las expresiones regulares pueden generar vulnerabilidades si no se controlan ade
 * Usa patrones no ambiguos (evita `(.*)` en entornos críticos).
 * Prueba RegEx en contextos controlados antes de producción.
 
----
 
 ## RegEx y rendimiento
 
@@ -431,7 +411,6 @@ console.timeEnd("regex");
 ```
 {% endraw %}
 
----
 
 ## RegEx y Machine Learning
 
@@ -441,7 +420,6 @@ Aunque las RegEx son estáticas, pueden combinarse con modelos de ML:
 * **Etiquetado de datos:** detección de patrones que sirven como *features* para entrenar modelos NLP.
 * **Validación híbrida:** aplicar RegEx tras un modelo para refinar resultados (por ejemplo, filtrar direcciones detectadas por un modelo OCR).
 
----
 
 ## RegEx y analítica de logs
 
@@ -469,7 +447,6 @@ while ((match = pattern.exec(log)) !== null) {
 * Agrupación por IP en logs de acceso.
 * Identificación de eventos en sistemas distribuidos.
 
----
 
 ## RegEx y desarrollo web
 
@@ -487,7 +464,6 @@ console.log(enlaces); // [["[OpenAI](https://openai.com)", "OpenAI", "https://op
 ```
 {% endraw %}
 
----
 
 ## RegEx visual y herramientas interactivas
 
@@ -500,7 +476,6 @@ Herramientas recomendadas:
 
 Estas plataformas ayudan a **entender, depurar y compartir** expresiones de forma visual y colaborativa.
 
----
 
 ## Extensiones y bibliotecas complementarias
 
@@ -509,7 +484,6 @@ Estas plataformas ayudan a **entender, depurar y compartir** expresiones de form
 * **PyParsing / Lark (Python):** alternativas para parsing estructurado más seguro
 * **PCRE2 (C/C++):** base de muchos motores modernos (Perl Compatible RegEx)
 
----
 
 ## Resumen conceptual
 
@@ -522,7 +496,6 @@ Estas plataformas ayudan a **entender, depurar y compartir** expresiones de form
 | Extracción      | Datos de texto           | `/\d+/g`                                             |            |
 | Sustitución     | Limpieza y normalización | `.replace(/\s+/g, ' ')`                              |            |
 
----
 
 ## Notas relacionadas
 
@@ -538,7 +511,6 @@ Estas plataformas ayudan a **entender, depurar y compartir** expresiones de form
 - [mates](/uncategorized/mates/)
 Esta nota amplía el estudio de RegEx desde una perspectiva **teórica y formal**, basada en los fundamentos de la **teoría de lenguajes formales y autómatas finitos**. Explica la base matemática que sustenta las expresiones regulares, sus propiedades, límites y equivalencias con otros modelos computacionales.
 
----
 
 ## 1. Origen teórico
 
@@ -546,7 +518,6 @@ Las expresiones regulares fueron introducidas formalmente por **Stephen Kleene (
 
 Su propósito era describir conjuntos de cadenas (lenguajes) de forma algebraica y precisa.
 
----
 
 ## 2. Lenguajes formales
 
@@ -558,7 +529,6 @@ Ejemplo:
 
 Una **expresión regular** describe un lenguaje regular, es decir, un conjunto de cadenas que pueden ser generadas o reconocidas por un **autómata finito determinista (DFA)** o **no determinista (NFA)**.
 
----
 
 ## 3. Álgebra regular (Álgebra de Kleene)
 
@@ -588,7 +558,6 @@ Si L = {ab}
 ```
 {% endraw %}
 
----
 
 ## 4. Definición formal de una expresión regular
 
@@ -607,7 +576,6 @@ Dada un alfabeto finito `Σ`, el conjunto de expresiones regulares sobre `Σ` se
 
 3. **Nada más es una RegEx** si no se obtiene aplicando las reglas anteriores.
 
----
 
 ## 5. Autómatas finitos
 
@@ -631,7 +599,6 @@ Expresión: (a|b)*abb
 
 Representa el conjunto de todas las cadenas sobre {a,b} que finalizan en "abb".
 
----
 
 ## 6. Propiedades de los lenguajes regulares
 
@@ -657,7 +624,6 @@ Representa el conjunto de todas las cadenas sobre {a,b} que finalizan en "abb".
 	- Palíndromos
 	- Estructuras anidadas (requieren memoria → autómatas con pila)
 
----
 
 ## 7. Expresiones regulares extendidas
 
@@ -670,7 +636,6 @@ En los lenguajes de programación modernos, se añaden operadores que **amplían
 
 Estas extensiones hacen que las RegEx modernas **superen** el poder expresivo de los lenguajes regulares puros, aunque algunas (como lookbehind) rompen propiedades de cierre y determinismo.
 
----
 
 ## 8. Correspondencias algebraicas útiles
 
@@ -682,7 +647,6 @@ Estas extensiones hacen que las RegEx modernas **superen** el poder expresivo de
 | Clausura positiva | A⁺ | A+ | Repetición 1+ |
 | Opcional | A ∪ ε | A? | 0 o 1 vez |
 
----
 
 ## 9. Teoremas fundamentales
 
@@ -701,7 +665,6 @@ Formalmente:
 > - `|y| ≥ 1`
 > - `∀i ≥ 0, xyⁱz ∈ L`
 
----
 
 ## 10. Complejidad y límites computacionales
 
@@ -709,7 +672,6 @@ Formalmente:
 - **RegEx lineales:** si se basan en DFA precompilados, su evaluación es O(n).
 - **Lenguajes no regulares:** requieren **autómatas con pila** o **gramáticas context-free** (p. ej., JSON, XML).
 
----
 
 ## 11. Aplicaciones teóricas
 
@@ -718,14 +680,12 @@ Formalmente:
 - **Modelos de concurrencia:** comparación de trazas regulares.
 - **Criptografía y protocolos:** definición formal de secuencias de bits válidas.
 
----
 
 ## 12. Conclusión
 
 Las expresiones regulares no son solo una herramienta práctica:  
 son una **representación algebraica del comportamiento de autómatas finitos**, con propiedades bien definidas, límites claros y extensiones modernas que las hacen más poderosas pero menos formales.
 
----
 
 ## Notas relacionadas
 - RegEx
@@ -741,7 +701,6 @@ Esta nota explora los **principales usos prácticos** de las expresiones regular
 
 La idea central: **las RegEx son potentes para patrones locales y deterministas, pero ineficientes o inadecuadas para estructuras con dependencias o jerarquías.**
 
----
 
 ## 1. Aplicaciones prácticas
 
@@ -762,7 +721,6 @@ Ejemplo:
 
 → extrae el nombre de usuario tras la cadena `"User: "` en un log.
 
----
 
 ### 1.2 Programación y scripting
 
@@ -782,7 +740,6 @@ grep -E "error|fail|critical" logs.txt
 
 → filtra solo las líneas relevantes en registros de errores.
 
----
 
 ### 1.3 Análisis de datos
 
@@ -792,7 +749,6 @@ grep -E "error|fail|critical" logs.txt
 
 Ejemplo: limpiar etiquetas HTML o caracteres especiales.
 
----
 
 ### 1.4 Seguridad y filtrado
 
@@ -802,7 +758,6 @@ Ejemplo: limpiar etiquetas HTML o caracteres especiales.
 
 > ⚠️ Sin embargo, el abuso de RegEx en seguridad puede generar **vulnerabilidades ReDoS** (Regular Expression Denial of Service), si las expresiones no son seguras o deterministas.
 
----
 
 ### 1.5 Compiladores y analizadores léxicos
 
@@ -820,7 +775,6 @@ NUMERO = [0-9]+(\.[0-9]+)?
 ```
 {% endraw %}
 
----
 
 ### 1.6 DevOps, logs y observabilidad
 
@@ -829,7 +783,6 @@ NUMERO = [0-9]+(\.[0-9]+)?
 * **Alertas automáticas** basadas en coincidencias.
 * **Expresiones RegEx en PromQL, ELK, Grafana** para consultas complejas.
 
----
 
 ### 1.7 Testing y validaciones
 
@@ -837,7 +790,6 @@ NUMERO = [0-9]+(\.[0-9]+)?
 * **Asserts RegEx** en pruebas unitarias.
 * Verificación de patrones esperados en la salida de comandos o APIs.
 
----
 
 ## 2. Limitaciones y malas prácticas
 
@@ -849,7 +801,6 @@ NUMERO = [0-9]+(\.[0-9]+)?
 
 > Ejemplo clásico: intentar validar HTML o XML con RegEx es **un error conceptual**, ya que se requiere un analizador sintáctico jerárquico.
 
----
 
 ## 3. Alternativas y herramientas complementarias
 
@@ -866,7 +817,6 @@ Cuando se necesita **comprensión de jerarquías o dependencias**, se usan herra
   * Más expresivas que las RegEx tradicionales.
   * Deterministas y sin backtracking ambiguo.
 
----
 
 ### 3.2 Lenguajes y formatos específicos
 
@@ -879,7 +829,6 @@ Cuando se necesita **comprensión de jerarquías o dependencias**, se usan herra
 
 > Las RegEx sirven para limpieza superficial, pero no para comprensión estructural.
 
----
 
 ### 3.3 Motores de búsqueda y coincidencia semántica
 
@@ -889,7 +838,6 @@ Para tareas más avanzadas de coincidencia o recuperación de información:
 * **Coincidencia difusa (fuzzy matching):** Levenshtein, Jaro-Winkler.
 * **NLP y embeddings:** similitud semántica con modelos vectoriales.
 
----
 
 ### 3.4 Librerías declarativas y visuales
 
@@ -910,7 +858,6 @@ number = Word(nums)
 
 → más legible que `\d+`
 
----
 
 ### 3.5 Machine learning y extracción inteligente
 
@@ -920,7 +867,6 @@ En contextos donde los patrones son ambiguos o dependen del significado:
 * **Modelos de clasificación de texto** para reconocer patrones contextuales.
 * **Regex híbridas + ML:** combinación práctica para reglas y aprendizaje.
 
----
 
 ## 4. Buenas prácticas
 
@@ -931,7 +877,6 @@ En contextos donde los patrones son ambiguos o dependen del significado:
 5. **Evitar RegEx para parsing de lenguajes formales** (HTML, XML, JSON).
 6. **Usar motores deterministas** (`re2`, DFA-based) cuando la seguridad sea crítica.
 
----
 
 ## 5. Conclusión
 
@@ -942,7 +887,6 @@ Las expresiones regulares son una herramienta **potente y fundamental** para el 
 
 Por ello, deben verse como **una parte del conjunto de herramientas** para el procesamiento de texto y datos, complementadas con parsers, analizadores o métodos semánticos más avanzados.
 
----
 
 ## Notas relacionadas
 

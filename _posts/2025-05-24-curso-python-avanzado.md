@@ -1,15 +1,14 @@
----
-date: 2025-05-24 04:06
-title: curso python avanzado
+creation date: 2025-05-24 04:06
+tags:
+  - python
 keywords:
 source:
 status: 📌
-Parent: "[[Area-Prog]]"
+cssclasses:
+  - hide-embedded-header1
+categories: "[python](/software%20engineering/python/)"
+Parent: "Area-Prog"
 public_note: "true"
-category: python
-tags:
-  - python
----
 # curso python avanzado
 - [python](/software%20engineering/python/)
 
@@ -35,7 +34,6 @@ tags:
 - **MongoDBCompass.exe**  
 	Herramienta visual para conectar, explorar y gestionar bases MongoDB.  
 
----
 
 ## 🧑‍🏫 Información del Curso / Entorno
 - **TR-7902 – Programación Avanzada en Python – PCAP y PCPP1**  
@@ -53,7 +51,6 @@ tags:
 - **M1 – IFCD093PO – MACHINE LEARNING APLICADO USANDO PYTHON 48.3**  
 	Módulo adicional orientado a ML aplicado: NumPy, Pandas, modelos básicos y flujo de trabajo de datos.
 
----
 
 # 📘 Contenidos del Curso
 
@@ -94,7 +91,6 @@ tags:
 - **Standard Library**  
 	Módulos útiles: `datetime`, `time`, `calendar`, entre otros.
 
----
 
 ## 🟩 PCPP1 – Programación Profesional y Avanzada
 - **POO avanzada**  
@@ -137,7 +133,6 @@ tags:
 - **Logging avanzado**  
 	Creación de loggers, niveles, handlers, formatters y configuración profesional.
 
----
 
 # ✔️ Tareas del Curso
 - [x] **Curso Python avanzado 📅**  
@@ -149,7 +144,6 @@ tags:
 		- Solo hacer Essentials PCAP 1 y 2 obligatoriamente  
 	- [x] Examen final 13:20
 
----
 
 ## 📚 Repasar
 - Decoradores  
@@ -160,7 +154,6 @@ tags:
 - Lambdas  
 - Sockets y comunicación en red
 
----
 
 ## 🔧 Mejoras y Organización Personal
 - Crear archivos desde terminal PowerShell  

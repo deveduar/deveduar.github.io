@@ -1,18 +1,17 @@
----
-date: 2025-06-10 22:34
-title: Active Directory
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Sistemas]]"
-public_note: "true"
-category: Sistemas
+creation date: 2025-06-10 22:34
 tags:
   - active_directory
   - Windows
   - roles
   - sistemas
----
+keywords:
+source:
+status: 🌟
+Parent: "Area-Sistemas"
+cssclasses:
+  - hide-embedded-header1
+categories: "[Sistemas](/sistemas/sistemas/)"
+public_note: "true"
 # Active Directory
 
 - [infraestructura IT](/infraestructura%20it/infraestructura-it/)

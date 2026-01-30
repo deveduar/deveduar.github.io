@@ -1,22 +1,19 @@
----
-date: 2024-03-13 15:51
-title: Software engineering
-keywords:
-source:
-status: 🚀
-Parent: "[[Area-Prog]]"
-public_note: "true"
-category: Software engineering
+creation date: 2024-03-13 15:51
 tags:
   - desarrollo
   - programming
----
+keywords:
+source:
+status: 🚀
+Parent: "Area-Prog"
+cssclasses:
+categories: "[Software engineering](/uncategorized/software-engineering/)"
+public_note: "true"
 # Software engineering
 
 - fundamentos técnicos
 	- [Computer Science](/computer%20science/computer-science/)
 	- [Virtualizacion](/devops/virtualizacion/)
-	- 
 	- [Backend](/backend/backend/) 
 	- [Frontend](/frontend/frontend/)
 	- [Databases](/databases/databases/)
@@ -36,7 +33,6 @@ tags:
 		- [Rust](/desarrollo%20multiplataforma/rust/) 
 		- perl
 		- [bash](/desarrollo%20multiplataforma/bash/)
-		- 
 	- [Data Science](/data%20science/data-science/)
 		- [Scala](/data%20science/scala/) 
 		- [Clojure](/data%20science/clojure/)
@@ -67,7 +63,6 @@ tags:
 	- [IInfraestructura como codigo](/devops/iinfraestructura-como-codigo/)
 		- [Terraform](/devops/terraform/) 
 	- [microservicios](/backend/microservicios/)
-	- 
 	- on premise
 		- [Windows Server](/devops/windows-server/) 
 	-  orquestacion

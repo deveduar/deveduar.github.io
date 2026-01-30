@@ -1,17 +1,16 @@
----
-date: 2025-12-31 15:49
-title: MITRE ATT&CK
-keywords:
-source:
-status: 🌟
-Parent: "[[Area-Sistemas]]"
-public_note: "true"
-category: ciberseguridad
+creation date: 2025-12-31 15:49
 tags:
   - ciberseguridad
   - Hacking
   - pentesting
----
+keywords:
+source:
+status: 🌟
+Parent: "Area-Sistemas"
+cssclasses:
+  - hide-embedded-header1
+categories: "[ciberseguridad](/ciberseguridad/ciberseguridad/)"
+public_note: "true"
 # MITRE ATT&CK
 
 ## Enlaces relacionados
