@@ -14,12 +14,40 @@ layout: default
 
     <h2 class="post-list-heading" id="recent-posts">{{ page.list_title | default: "Posts" }}</h2>
 
-    <div class="home-posts-list">
+    <!-- Table Header -->
+    <div class="posts-table-header">
+      <div class="header-date">Fecha</div>
+      <div class="header-content">Contenido</div>
+      <div class="header-categories">Categorías</div>
+    </div>
+
+    <div class="home-posts-list table-view">
       {%- for post in paginator.posts -%}
       <div class="home-post-item">
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <div class="post-meta">
+
+        <!-- Column 1: Date -->
+        <div class="post-col-date">
           <span class="post-date">{{ post.date | date: date_format }}</span>
+        </div>
+
+        <!-- Column 2: Content (Title + Tags) -->
+        <div class="post-col-content">
+          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+
+
+
+          {% if post.tags.size > 0 %}
+          <div class="post-tags compact-tags">
+            {% for tag in post.tags %}
+            <a class="related-tag" href="/archive?tag={{ tag | slugify }}" data-no-instant>#{{ tag }}</a>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+
+        <!-- Column 3: Categories -->
+        <div class="post-col-categories">
           {% if post.categories.size > 0 %}
           <div class="post-categories">
             {% for category in post.categories %}
@@ -29,18 +57,7 @@ layout: default
           </div>
           {% endif %}
         </div>
-        <div class="post-content-wrapper">
-          <a class="post-link" href="{{ post.url | relative_url }}"
-            data-description="{{ post.excerpt | strip_html | truncate: 150 }}">{{ post.title | escape }}</a>
 
-          {% if post.tags.size > 0 %}
-          <div class="post-tags">
-            {% for tag in post.tags %}
-            <a class="related-tag" href="/archive?tag={{ tag | slugify }}" data-no-instant>#{{ tag }}</a>
-            {% endfor %}
-          </div>
-          {% endif %}
-        </div>
       </div>
       {%- endfor -%}
     </div>

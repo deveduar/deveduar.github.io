@@ -1,91 +1,118 @@
+// Table Header
+.posts-table-header {
+  display: grid;
+  grid-template-columns: 120px 1fr 200px;
+  gap: 1rem;
+  padding: 0.5rem 0.8rem;
+  border-bottom: 2px solid rgba($grey-color, 0.2);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: $text-color;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+
+  @media screen and (max-width: $on-laptop) {
+    grid-template-columns: 100px 1fr 150px;
+  }
+}
+
 .home-posts-list {
   margin-bottom: 2rem;
   min-height: 22rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0; // Compact
 
   .home-post-item {
-    padding: 0.2rem 0.8rem;
-    display: flex;
-    align-items: flex-start;
-    min-height: 1.2rem;
+    display: grid;
+    grid-template-columns: 120px 1fr 200px;
+    gap: 1rem;
+    padding: 0.6rem 0.8rem;
+    align-items: center;
+    border-bottom: 1px solid rgba($grey-color, 0.1);
+    transition: background-color 0.2s ease;
 
     &:hover {
       background-color: rgba($brand-color, 0.05);
     }
+
+    @media screen and (max-width: $on-laptop) {
+      grid-template-columns: 100px 1fr 150px;
+    }
   }
 
-  .post-meta {
-    min-width: 140px;
-    margin-right: 0.8rem;
-    flex-shrink: 0;
+  // Column 1: Date
+  .post-col-date {
+    .post-date {
+      color: $grey-color;
+      font-size: 0.9rem;
+      font-family: monospace; // Monospace for alignment
+      white-space: nowrap;
+    }
+  }
+
+  // Column 2: Content
+  .post-col-content {
     display: flex;
     flex-direction: column;
-  }
+    justify-content: center;
+    min-width: 0; // Prevent flex item overflow
 
-  .post-date {
-    color: $grey-color;
-    font-size: 0.9rem;
-    margin-bottom: 0.2rem;
-  }
-
-  .post-categories {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.3rem;
-
-    .category-badge {
-      font-size: 0.7rem;
-      color: $background-color;
-      background-color: $brand-color;
-      padding: 0.1rem 0.3rem;
-      border-radius: 3px;
-      text-decoration: none;
-      transition: background-color 0.2s ease;
+    .post-link {
+      color: $text-color;
+      font-size: 1rem;
+      font-weight: 500;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
+      margin-bottom: 2px;
 
       &:hover {
-        background-color: darken($brand-color, 10%);
+        color: $brand-color;
+        text-decoration: none;
       }
     }
   }
 
-  .post-content-wrapper {
+  // Tags styling (compact)
+  .post-tags.compact-tags {
     display: flex;
     flex-wrap: wrap;
-    flex: 1;
-    min-width: 0;
-    align-items: baseline;
-    gap: 0.3rem 0.8rem;
-  }
+    gap: 0.3rem;
 
-  .post-link {
-    color: $text-color;
-    font-size: 1.1rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 100%;
-    flex-basis: 100%;
+    .related-tag {
+      font-size: 0.7rem;
+      color: lighten($grey-color, 10%);
 
-    &:hover {
-      color: $brand-color;
-      text-decoration: none;
+      &:hover {
+        color: $brand-color;
+      }
     }
   }
 
-  .post-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem;
-    margin-left: 0;
-    flex-basis: 100%;
-  }
+  // Column 3: Categories
+  .post-col-categories {
+    .post-categories {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+      justify-content: flex-end; // Align badges to right
 
-  .related-tag {
-    font-size: 0.75rem;
-    color: $grey-color;
-    transition: color 0.2s ease;
+      .category-badge {
+        font-size: 0.65rem;
+        color: $background-color;
+        background-color: lighten($grey-color, 20%); // Subtler color
+        padding: 0.1rem 0.4rem;
+        border-radius: 10px; // Pill shape
+        text-decoration: none;
+        transition: all 0.2s ease;
 
-    &:hover {
-      color: $brand-color;
-      text-decoration: none;
+        &:hover {
+          background-color: $brand-color;
+        }
+      }
     }
   }
 }
@@ -101,7 +128,7 @@
   padding: 1rem;
   width: 350px;
   max-width: 90vw;
-  pointer-events: none;
+  pointer-events: auto;
   opacity: 0;
   transform: translateY(5px);
   transition: opacity 0.2s ease, transform 0.2s ease;
@@ -112,41 +139,51 @@
     transform: translateY(0);
   }
 
-  .preview-title {
-    font-size: 1.1rem;
-    font-weight: 500;
-    margin-bottom: 0.5rem;
-    color: $brand-color;
-  }
-
-  .preview-date {
-    font-size: 0.8rem;
-    color: $grey-color;
-    margin-bottom: 0.5rem;
-  }
-
-  .preview-categories {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem;
-    margin-bottom: 0.8rem;
-
-    .preview-category {
-      font-size: 0.75rem;
-      color: $background-color;
-      background-color: $brand-color;
-      padding: 0.1rem 0.4rem;
-      border-radius: 3px;
-    }
-  }
-
   .preview-content {
     font-size: 0.9rem;
     line-height: 1.5;
     color: $text-color;
-    max-height: 150px;
+    max-height: 400px;
     overflow-y: auto;
     margin-bottom: 0.5rem;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0.5rem auto;
+      border-radius: 4px;
+    }
+
+    // Custom Scrollbar
+    scrollbar-width: thin;
+    scrollbar-color: rgba($grey-color-dark, 0.3) transparent;
+
+    &::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba($grey-color-dark, 0.3);
+      border-radius: 10px;
+      border: 2px solid $background-color;
+      background-clip: padding-box;
+      min-height: 40px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-corner {
+      background: transparent;
+    }
+
+    &:hover::-webkit-scrollbar-thumb {
+      background: $grey-color-dark;
+    }
   }
 
   .preview-tags {
