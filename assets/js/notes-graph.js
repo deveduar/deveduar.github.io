@@ -125,7 +125,7 @@
     const options = {
       nodes: { shape: 'dot', scaling: { min: 8, max: 30 }, font: { color: '#ffffff', size: 12, face: 'sans-serif' } },
       edges: { arrows: { to: { enabled: true, scaleFactor: 0.4 } }, color: { color: '#555', highlight: '#fff' }, smooth: { enabled: true, type: 'continuous' }, width: 0.5 },
-      interaction: { navigationButtons: false, hover: true, hideEdgesOnDrag: true, hideEdgesOnZoom: true },
+      interaction: { navigationButtons: false, hover: true, hideEdgesOnDrag: false, hideEdgesOnZoom: false },
       layout: { improvedLayout: false },
       physics: {
         enabled: true,
