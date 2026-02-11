@@ -37,6 +37,7 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-github-metadata
+  - jekyll-seo-tag
 # RSS feed settings
 feed:
   excerpt_only: true
