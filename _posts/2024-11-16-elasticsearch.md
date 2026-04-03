@@ -5,7 +5,7 @@ keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-public_note: "true"
+public_note: true
 category: monitoreo
 tags:
   - db
@@ -21,6 +21,7 @@ tags:
 - [Data Science](/data%20science/data-science/)
 - [kibana](/monitoreo/kibana/)
 - [logstash](/monitoreo/logstash/)
+- [Sonarqube](/devops/sonarqube/)
 
 ## Introducción a Elasticsearch
 

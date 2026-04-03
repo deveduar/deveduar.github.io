@@ -5,7 +5,7 @@ keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-public_note: "true"
+public_note: true
 category: Sistemas
 tags:
   - MDM

@@ -5,7 +5,7 @@ keywords:
 source:
 status: 📌
 Parent: "[[Area-Prog]]"
-public_note: "true"
+public_note: true
 category: Testing
 ---
 # Glosario de Conceptos Fundamentales de Testing

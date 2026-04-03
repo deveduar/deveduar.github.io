@@ -5,7 +5,7 @@ keywords:
 source:
 status: 📌
 Parent: "[[Area-Prog]]"
-public_note: "true"
+public_note: true
 category: python
 tags:
   - python
@@ -41,14 +41,11 @@ tags:
 - **TR-7902 – Programación Avanzada en Python – PCAP y PCPP1**  
 	Programa oficial que cubre desde fundamentos profesionales hasta programación avanzada, POO y metaprogramación.
 
-- **Contacto:** `ricardo.jaume@pue.es`  
-	Profesor o coordinador del curso.
-
 - **Plataformas del curso:**  
 	- https://lms.pue.es/login/index.php — Acceso al aula virtual.  
 	- https://edube.org/study — Plataforma oficial de Cisco/Edube para PCAP/PCPP.  
-	- https://lms.pue.es/mod/url/view.php?id=48507 — Acceso a conferencias.  
-	- https://vscode.dev/editor/liveshare/BEDE7EA48F30E632D764892744EF6E8EEFF8 — Sesiones colaborativas en VS Code LiveShare.
+	- https://lms.pue.es — Acceso a conferencias.  
+	- https://vscode.dev/editor/liveshare— Sesiones colaborativas en VS Code LiveShare.
 
 - **M1 – IFCD093PO – MACHINE LEARNING APLICADO USANDO PYTHON 48.3**  
 	Módulo adicional orientado a ML aplicado: NumPy, Pandas, modelos básicos y flujo de trabajo de datos.
@@ -143,8 +140,8 @@ tags:
 - [x] **Curso Python avanzado 📅**  
 	Plan general del curso completado.
 	- [x] **Lunes 11 de marzo – Examen intermedio**  
-	- [ ] Completar módulos  
-	- [ ] Completar ejercicios  
+	- [x] Completar módulos
+	- [x] Completar ejercicios
 	- [x] Exámenes de los módulos  
 		- Solo hacer Essentials PCAP 1 y 2 obligatoriamente  
 	- [x] Examen final 13:20

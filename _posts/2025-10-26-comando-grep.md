@@ -1,11 +1,11 @@
 ---
 date: 2025-10-26 13:56
-title: search tool grep
+title: comando grep
 keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-public_note: "true"
+public_note: true
 category: Sistemas
 tags:
   - sistemas
@@ -13,7 +13,10 @@ tags:
   - search_tool
   - Productividad
 ---
-# search tool grep
+# grep
+
+- [GitHub - BurntSushi/ripgrep: ripgrep recursively searches directories for a regex pattern while respecting your gitignore · GitHub](https://github.com/BurntSushi/ripgrep) 
+
 
 ## Contexto y propósito
 `grep` y herramientas modernas basadas en él permiten realizar búsquedas de texto rápidas, expresivas y escalables dentro de sistemas de archivos, repositorios de código y bases de conocimiento como [Sistemas](/sistemas/sistemas/). Son clave para:
@@ -333,3 +336,162 @@ rg "error"
 ```
 {% endraw %}
 
+
+# ejemplos de uso ripgrep
+## ejemplos basicos
+
+- **Búsqueda básica** (en el directorio actual y subdirectorios):  
+    `rg "formatTime"`
+- **Limitar a archivos JavaScript y TypeScript**:  
+    `rg -tjs -tts "formatTime"`
+- **Mostrar solo los nombres de los archivos que contienen la cadena**:  
+    `rg -l "formatTime"`
+- **Ignorar archivos que coincidan con un patrón** (por ejemplo, excluir archivos minificados):  
+    `rg -g '!*.min.js' "formatTime"`
+- **Búsqueda insensible a mayúsculas/minúsculas**:  
+    `rg -i "formatTime"`
+- **Incluir archivos ocultos** (como `.env` o `.gitignore`):  
+    `rg --hidden "formatTime"`
+- **Usar expresiones regulares** (por defecto ya las soporta):  
+    `rg "format(Time|Date)"`
+- **Buscar la palabra exacta** (evita coincidencias parciales como `formatTimeNow`):  
+    `rg -w "formatTime"`
+- **Mostrar contexto** (3 líneas antes y después de cada coincidencia):  
+    `rg -C 3 "formatTime"`
+- **Buscar en un directorio específico** (por ejemplo, dentro de `src`):  
+    `rg "formatTime" src/`
+- **Contar el número de coincidencias por archivo**:  
+    `rg -c "formatTime"`
+- **Búsqueda con límite de profundidad** (solo hasta 2 niveles de subdirectorios):  
+    `rg --max-depth 2 "formatTime"`
+- **Usar word boundaries con regex** para mayor precisión (similar a `-w`):  
+    `rg "\bformatTime\b"`
+- **Combinar opciones** (ej. insensible, solo archivos TypeScript, con contexto):  
+    `rg -i -tts -C 2 "formatTime"`
+
+## ejemplos para coders
+
+- **Refactorizar: buscar y reemplazar con `xargs` y `sed`**:  
+  `rg -l "formatTime" | xargs sed -i 's/formatTime/formatDate/g'`
+
+- **Filtrar por extensiones y excluir patrones en nombre**:  
+  `rg -g '*.{js,ts}' -g '!*test*' -g '!*spec*' "function\s+\w+"`
+
+- **Contar ocurrencias por tipo de archivo**:  
+  `rg -c "formatTime" -g '*.rs' -g '*.go' -g '*.py'`
+
+- **Reemplazo interactivo con `nvim`**:  
+  `rg -l "old_function" | xargs -o nvim +'bufdo %s/old_function/new_function/gc'`
+
+- **Estadísticas de la búsqueda**:  
+  `rg --stats "formatTime"`
+
+- **Búsqueda multilínea con `-U`**:  
+  `rg -U 'function\s+\w+\s*\([^)]*\)\s*\{[^}]*\}'`
+
+- **Navegación interactiva con `fzf` y `bat`**:  
+  `rg --line-number --column "formatTime" | fzf --delimiter=':' --preview='bat {1} --highlight-line {2}'`
+
+- **Vigilar cambios con `entr`**:  
+  `ls *.js | entr -c rg "console.log" /_`
+
+- **Buscar solo archivos versionados en git**:  
+  `git ls-files | xargs rg "pattern"`
+
+- **Primera coincidencia por archivo con número de línea**:  
+  `rg -m1 -n "pattern"`
+
+- **Contexto ampliado con formato legible**:  
+  `rg -C 5 --heading --line-number "TODO|FIXME"`
+
+- **Buscar usando un archivo de patrones**:  
+  `rg -f patrones.txt`
+
+- **Forzar color en pipes**:  
+  `rg --color=always "pattern" | less -R`
+
+- **Buscar TODOs con urgencia**:  
+  `rg -i 'TODO|FIXME|XXX|HACK' -C 2 --color=always | grep -E 'FIXME|XXX' --color=always`
+
+- **Buscar y exportar a CSV**:  
+  `rg --json "pattern" | jq -r 'select(.type=="match") | [.data.path.text, .data.line_number, .data.lines.text] | @csv' > resultados.csv`
+
+- **Filtrar por fecha con `find` y luego buscar**:  
+  `find . -name '*.py' -mtime -7 | xargs rg "TODO"`
+
+- **Comparar dos búsquedas**:  
+  `rg -c "pattern1" && rg -c "pattern2"`
+
+- **Mostrar solo el contexto con números de línea**:  
+  `rg -C 2 --no-heading --with-filename "pattern" | cut -d: -f2-`
+
+- **Usar lookarounds (PCRE) para excluir comentarios**:  
+  `rg -P '(?<!//\s*)formatTime'`
+
+- **Contar líneas totales coincidentes**:  
+  `rg "pattern" | wc -l`
+
+## ejemplos para hackers
+
+- **Buscar en archivos ignorados por `.gitignore`**:  
+  `rg --no-ignore --hidden -g '!node_modules' "password"`
+
+- **Salida en JSON para procesar con `jq`**:  
+  `rg --json "formatTime" | jq 'select(.type == "match") | .data.path.text'`
+
+- **Detectar cadenas base64 largas (posibles credenciales)**:  
+  `rg '[A-Za-z0-9+/]{40,}' --no-filename | head`
+
+- **Extraer direcciones IP únicas**:  
+  `rg -o '\b(?:[0-9]{1,3}\.){3}[0-9]{1,3}\b' --no-filename | sort -u`
+
+- **Ignorar binarios y listar solo archivos con coincidencias**:  
+  `rg -I -l "secret"`
+
+- **Profundidad limitada e incluir ocultos**:  
+  `rg --max-depth 3 --hidden "API_KEY"`
+
+- **Buscar posibles tokens JWT**:  
+  `rg 'eyJ[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+'`
+
+- **Buscar en logs grandes solo coincidencias**:  
+  `rg -No "error.*" /var/log/ --max-filesize=10M`
+
+- **Buscar dentro de archivos comprimidos**:  
+  `unzip -p archive.zip | rg "pattern"`
+
+- **Patrones de inclusión/exclusión complejos**:  
+  `rg -g '*.log' -g '!old/*' "error"`
+
+- **Buscar en historial de shell**:  
+  `rg "git" ~/.zsh_history`
+
+- **Detección de secretos (patrones combinados)**:  
+  `rg -i '(api[_-]?key|secret|token|password|credential|auth).{0,20}["'\''][A-Za-z0-9+/]{20,}'`
+
+- **Buscar en archivos con permisos específicos (pentesting)**:  
+  `find . -perm 755 -type f | xargs rg "#!/bin/bash"`
+
+- **Eliminar archivos que contengan una palabra (precaución)**:  
+  `rg -l "malware" | xargs rm -v`
+
+- **Buscar correos electrónicos**:  
+  `rg -o '\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b'`
+
+- **Buscar URLs**:  
+  `rg -o 'https?://[^\s<>"{}|\\^`\[\]]+'`
+
+- **Buscar números de tarjetas de crédito (simplificado)**:  
+  `rg '\b[0-9]{4}[- ]?[0-9]{4}[- ]?[0-9]{4}[- ]?[0-9]{4}\b'`
+
+- **Buscar llaves de API en código fuente**:  
+  `rg -i 'key["\s:=]+[A-Za-z0-9_\-]{20,}'`
+
+- **Buscar archivos con permisos SUID**:  
+  `find / -perm -4000 2>/dev/null | xargs rg -l "pattern" 2>/dev/null`
+
+- **Buscar contraseñas en archivos de configuración**:  
+  `rg -i --hidden 'password\s*[=:]\s*\S+' /etc/`
+
+- **Enumerar archivos con información sensible**:  
+  `rg --files-with-matches --hidden --no-ignore -g '*.{conf,config,env,yml,yaml,json,xml,ini}' "api_key|secret|token|password"`

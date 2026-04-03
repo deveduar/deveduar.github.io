@@ -5,7 +5,7 @@ keywords:
 source:
 status: 📌
 Parent: "[[Area-Prog]]"
-public_note: "true"
+public_note: true
 category: Testing
 ---
 # Guía Práctica de [E2E - End to End Testing](/testing/e2e---end-to-end-testing/)

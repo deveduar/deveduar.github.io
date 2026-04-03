@@ -5,7 +5,7 @@ keywords:
 source:
 status: 🚀
 Parent: "[[Area-Prog]]"
-public_note: "true"
+public_note: true
 category: Data Science
 tags:
   - GCP
@@ -42,14 +42,6 @@ tags:
 -  📕
 - sistemas distribuidos
 	- [Scala](/data%20science/scala/) 
-
-
-- [ ] modelo con ia, [TensorFlow](/data%20science/tensorflow/)
-- [ ] asistente personal
-- [ ] analisis de data meteorologica
-- [ ] portfolio proyectos data analyst
-- [ ] curriculum data analist
-- [ ] oferta  ANALISTA DE DATOS (HMD)-
 - data analyst
 	- limpieza, visualizacion y analisis
 	- **EDA**

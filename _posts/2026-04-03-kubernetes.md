@@ -2,7 +2,7 @@
 title: Kubernetes
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-public_note: "true"
+public_note: true
 category: Virtualizacion
 tags:
   - Devops

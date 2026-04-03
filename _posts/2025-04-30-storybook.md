@@ -5,7 +5,7 @@ keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-public_note: "true"
+public_note: true
 category: Frontend
 tags:
   - storybook
@@ -294,7 +294,7 @@ Beneficios:
 * **Revisión colaborativa** con comentarios en PRs.
 * **Historial de cambios visuales** versionado.
 
-### ⚙️ Ejecución en GitHub Actions
+### ⚙️ Ejecución en [GitHub Actions](/devops/github-actions/)
 
 {% raw %}
 ```yaml

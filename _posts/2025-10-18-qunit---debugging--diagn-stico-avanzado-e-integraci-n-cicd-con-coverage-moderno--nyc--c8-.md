@@ -5,7 +5,7 @@ keywords:
 source:
 status: 📌
 Parent: "[[Area-Prog]]"
-public_note: "true"
+public_note: true
 category: Testing
 ---
 
@@ -95,7 +95,7 @@ npm install --save-dev c8
 
 ## 🧩 Pipeline CI/CD con Coverage
 
-Ejemplo completo en GitHub Actions
+Ejemplo completo en [GitHub Actions](/devops/github-actions/)
 👉 Ver código en **[# Ejemplo: Pipeline GitHub Actions con Coverage](#ejemplo-pipeline-github-actions-con-coverage)**
 
 ### Ejemplo: Pipeline GitHub Actions con Coverage

@@ -5,7 +5,7 @@ keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-public_note: "true"
+public_note: true
 category: Sistemas
 tags:
   - powershell
@@ -14,20 +14,8 @@ tags:
 
 ## Enlaces internos y contexto
 - [Sistemas](/sistemas/sistemas/)
+- sistema windows 10 conf
 - Automatizacion
-- script de hardening powershell
-- script para comprobar puertos ocupados con powershell
-- [net](/software%20engineering/net/)
-
-## Estado y tareas
-- [x] Actualizar PowerShell a la versión 7
-- [x] Extensión Windows Terminal Integrator
-- [x] Crear script para parar servicios
-- [ ] Configurar Oh My Posh en PowerShell (sin WSL)
-- [ ] Zsh y Oh My Zsh en WSL info primeros pasos
-- [ ] Oh My Posh en Git Bash
-- [ ] Monitorizar red
-- [ ] Gestionar perfiles y extensiones según lenguaje
 
 ## PowerShell 7
 - PowerShell 7 (pwsh) está basado en .NET (Core), es multiplataforma y reemplaza progresivamente a Windows PowerShell 5.1
@@ -145,7 +133,7 @@ Set-PSReadLineOption -PredictionViewStyle ListView
 	- Compatibilidad parcial con algunos segmentos avanzados del prompt
 - Recomendado para usuarios que trabajan con Git y scripts Bash sin WSL
 
-## PowerShell y WSL
+## PowerShell y [WSL](/sistemas/wsl/)
 - PowerShell puede convivir con zsh dentro de WSL sin interferencias
 - Enfoque recomendado: separación clara de responsabilidades
 	- PowerShell:
@@ -583,15 +571,11 @@ $cred = Get-Credential
 ## PowerShell y CI/CD
 
 * Integración directa con pipelines
-
 * Uso frecuente en:
-
   * GitHub Actions
   * Azure DevOps
   * GitLab CI
-
 * Casos de uso:
-
   * Build
   * Test
   * Deploy
@@ -602,7 +586,6 @@ $cred = Get-Credential
 * Declarar el estado deseado de un sistema
 * Automatiza configuración y cumplimiento
 * Casos comunes:
-
   * Servicios
   * Features
   * Configuración de sistema
@@ -616,12 +599,10 @@ $cred = Get-Credential
 ## Logging avanzado
 
 * Separar niveles de log:
-
   * Info
   * Warning
   * Error
 * Escritura estructurada:
-
   * JSON
   * CSV
   * Event Viewer
@@ -636,7 +617,6 @@ Write-EventLog -LogName Application -Source PowerShell -EntryType Error -Message
 
 * Framework de testing para PowerShell
 * Permite:
-
   * Tests unitarios
   * Validación de scripts
   * Control de regresiones

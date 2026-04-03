@@ -2,7 +2,7 @@
 title: practicas y ejemplos codigo comunes de testing a 2025 extenso
 Parent: "[[Area-Prog]]"
 status: 📌
-public_note: "true"
+public_note: true
 category: Testing
 ---
 # 🧪 Prácticas Modernas y Ejemplos de Testing (2025)

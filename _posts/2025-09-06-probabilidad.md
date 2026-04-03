@@ -5,7 +5,7 @@ keywords:
 source:
 status: 🌟
 Parent: "[[Area-IA]]"
-public_note: "true"
+public_note: true
 category: mates
 tags:
   - probabilidad
@@ -90,12 +90,7 @@ La probabilidad aplicada permite resolver problemas complejos mediante inferenci
 	- Modelos de decisión bajo incertidumbre.
 	- Dinámica de sistemas y expectativas.
 
-## Tareas
-- [ ] Generar informes con ChatGPT
-- [ ] Crear cheatsheet de probabilidad aplicada
-- [ ] Elaborar guía básica estructurada
-- [ ] Construir PKM de conceptos en forma de lista
-- [ ] Explorar otros ámbitos de estudio relacionados (IA, física, economía, biología)
+
 # probabilidad — extensiones y conceptos no cubiertos
 
 ## Inferencia bayesiana

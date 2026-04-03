@@ -5,7 +5,7 @@ keywords:
 source:
 status: 📌
 Parent: "[[Area-Prog]]"
-public_note: "true"
+public_note: true
 category: Testing
 ---
 # Guías de aprendizaje y práctica avanzada con Jest
@@ -71,7 +71,7 @@ category: Testing
 	* Integración con jest-sonar - npm y SonarCloud.
 	* Análisis de métricas de calidad y líneas no cubiertas.
 - Automatización de tests con Jest en pipelines CI/CD
-	* Ejecución automatizada con github actions y otros servicios CI.
+	* Ejecución automatizada con [GitHub Actions](/devops/github-actions/) y otros servicios CI.
 	* Estrategias para entornos staging y preproducción.
 	* Envío de reportes y fallos a Slack o dashboards.
 - Comparativa Jest vs Vitest en proyectos modernos de 2025

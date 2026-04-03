@@ -2,7 +2,7 @@
 title: apache spark
 status: 🌟
 Parent: "[[Area-Prog]]"
-public_note: "true"
+public_note: true
 category: Data Science
 tags:
   - GCP

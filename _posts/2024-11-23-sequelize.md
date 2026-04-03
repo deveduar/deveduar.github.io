@@ -5,7 +5,7 @@ keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-public_note: "true"
+public_note: true
 category: Backend
 tags:
   - sequelize
@@ -159,13 +159,6 @@ return user;
 - Usar **TypeScript** para mayor seguridad y autocompletado.  
 - Centralizar la configuración del ORM (credenciales, logging, pool).  
 - Mantener relaciones bien definidas y documentadas.
-
-## Checklist Personal
-
-- [ ] Terminar de leer documentación oficial  
-- [ ] Probar integración en aplicación real  
-- [ ] Crear migraciones y modelos base  
-- [ ] Implementar transacciones críticas  
 
 # Migraciones en Sequelize con codigos
 

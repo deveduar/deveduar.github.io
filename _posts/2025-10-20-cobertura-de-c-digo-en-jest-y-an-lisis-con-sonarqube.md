@@ -5,7 +5,7 @@ keywords:
 source:
 status: 📌
 Parent: "[[Area-Prog]]"
-public_note: "true"
+public_note: true
 category: Testing
 ---
 # Cobertura de código en Jest y análisis con SonarQube
@@ -16,7 +16,7 @@ category: Testing
 - Code coverage
 - SonarQube
 - SonarCloud
-- github actions
+- [GitHub Actions](/devops/github-actions/)
 - jest-sonar - npm
 - [QA](/testing/qa/)
 
@@ -134,7 +134,7 @@ sonar.testExecutionReportPaths=coverage/sonar-report.xml
 ```
 {% endraw %}
 
-## 🔄 Integración con github actions
+## 🔄 Integración con [GitHub Actions](/devops/github-actions/)
 
 Ejemplo de pipeline que genera y sube cobertura a SonarCloud:
 
@@ -237,4 +237,4 @@ Generará reportes con información de líneas y ramas cubiertas, lo que permiti
 * [jest-sonar en npm](https://www.npmjs.com/package/jest-sonar)
 * [Integración con SonarQube](https://docs.sonarsource.com/sonarqube/latest/)
 * [GitHub Action oficial de SonarCloud](https://github.com/SonarSource/sonarcloud-github-action)
-* [CICD](/devops/cicd/) y control de calidad automatizado con github actions
+* [CICD](/devops/cicd/) y control de calidad automatizado con [GitHub Actions](/devops/github-actions/)

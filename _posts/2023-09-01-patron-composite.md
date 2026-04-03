@@ -6,7 +6,7 @@ keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-public_note: "true"
+public_note: true
 category: Computer Science
 tags:
   - GameDev

@@ -5,7 +5,7 @@ keywords:
 source:
 status: 📌
 Parent: "[[Area-Prog]]"
-public_note: "true"
+public_note: true
 category: Testing
 ---
 # E2E - Conceptos Avanzados y Estrategia Completa
@@ -69,7 +69,7 @@ class LoginPage {
 
   * Ejecuta los tests automáticamente en cada commit o PR.
   * Genera reportes visuales y artefactos (screenshots, vídeos, logs).
-  * Integraciones comunes: GitHub Actions, GitLab CI, Jenkins, CircleCI.
+  * Integraciones comunes: [GitHub Actions](/devops/github-actions/), GitLab CI, Jenkins, CircleCI.
 
 * **Reporte y Métricas**
 

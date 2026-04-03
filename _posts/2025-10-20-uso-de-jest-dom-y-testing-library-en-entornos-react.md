@@ -5,7 +5,7 @@ keywords:
 source:
 status: 📌
 Parent: "[[Area-Prog]]"
-public_note: "true"
+public_note: true
 category: Testing
 ---
 # Uso de jest-dom y Testing Library en entornos React
@@ -254,7 +254,7 @@ test('muestra "Listo ✅" después de 1s', async () => {
 * Configura `jest.setup.ts` para importar `@testing-library/jest-dom` globalmente.
 * Simula interacciones reales con `userEvent` en lugar de `fireEvent`.
 * Usa `waitFor` o `findBy...` para elementos renderizados de forma asíncrona.
-* Añade estos tests en pipelines [CICD](/devops/cicd/) y ejecuta con `--coverage` en github actions.
+* Añade estos tests en pipelines [CICD](/devops/cicd/) y ejecuta con `--coverage` en [GitHub Actions](/devops/github-actions/).
 
 ---
 

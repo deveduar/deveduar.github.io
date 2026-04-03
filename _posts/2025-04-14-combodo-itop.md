@@ -5,7 +5,7 @@ keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-public_note: "true"
+public_note: true
 category: infraestructura IT
 tags:
   - ITIL
@@ -70,10 +70,8 @@ tags:
 - Método recomendado para producción: instalación manual controlada o contenedores gestionados.
 
 ### Instalación en [Docker](/software%20engineering/docker/)
-- Pendiente de completar:
-	- [ ] instalar en docker
 - Documentación oficial de instalación y upgrade:
-	- [Install and Upgrade your iTop [iTop Documentation]](https://www.itophub.io/wiki/page?id=3_2_0:install:start)
+	- [Install and Upgrade your iTop](https://www.itophub.io/wiki/page?id=3_2_0:install:start)
 
 ## Integraciones comunes
 - Directorios corporativos (LDAP / AD).

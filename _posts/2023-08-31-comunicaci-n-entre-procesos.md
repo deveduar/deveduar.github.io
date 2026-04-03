@@ -6,7 +6,7 @@ Parent: "[[Area-Prog]]"
 keywords:
 aliases:
 source:
-public_note: "true"
+public_note: true
 category: Computer Science
 tags:
   - CS
@@ -15,7 +15,7 @@ tags:
 # Comunicación entre Procesos
 - [Computer Science](/computer%20science/computer-science/)
 - [Sockets](/backend/sockets/)
-- [search tool grep](/sistemas/search-tool-grep/)
+- [comando grep](/sistemas/comando-grep/)
 
 
 ## Conceptos Fundamentales

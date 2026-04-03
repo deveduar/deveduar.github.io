@@ -5,7 +5,7 @@ keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-public_note: "true"
+public_note: true
 category: Computer Science
 tags:
   - CS
@@ -628,7 +628,7 @@ Las lambdas se integran como componentes orquestados dentro de flujos más ampli
 
 * **Step Functions / Temporal.io**: definen flujos de trabajo compuestos por múltiples lambdas.
 * **Airflow / Prefect / Dagster**: integran lambdas como tareas discretas.
-* **GitHub Actions** y **CI/CD pipelines**: permiten definir acciones como funciones efímeras lambda-like.
+* **[GitHub Actions](/devops/github-actions/)** y **CI/CD pipelines**: permiten definir acciones como funciones efímeras lambda-like.
 
 ---
 

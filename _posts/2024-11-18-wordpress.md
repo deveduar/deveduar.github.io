@@ -5,7 +5,7 @@ keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-public_note: "true"
+public_note: true
 category: Desarrollo web
 tags:
   - wordpress
@@ -17,11 +17,6 @@ tags:
 ## Enlaces Base y Contexto
 - PHP-web-wp-webapps-book
 - [PHP](/backend/php/)
-
-## Tareas y Objetivos Iniciales
-- [ ] crear template para wp
-- [ ] [ecomerce](/desarrollo%20web/ecomerce/) con wp con local
-	- canvas-web-store.canvas
 
 ---
 
@@ -691,34 +686,6 @@ Gracias a:
 - Arquitectura para alta escalabilidad (cluster, CDN, Redis)
 - Arquitectura de seguridad avanzada (hardening)
 - Arquitectura para automatización CI/CD en WordPress
-
-{% raw %}
-```
-# omnivore Wordpress
-```
-{% endraw %}basej
-type: list
-name: "Notas con #wordpress en Omnivore"
-order:
-  - property: date_saved
-    direction: desc
-columns:
-  - file.name
-  - date_saved
-filters:
-  and:
-    - file.inFolder("Omnivore")
-    - file.hasTag("wp")
-views:
-  - type: table
-    name: Table
-    sort:
-      - property: file.mtime
-        direction: DESC
-
-```
-
-
 
 
 

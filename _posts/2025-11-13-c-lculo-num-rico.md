@@ -5,7 +5,7 @@ keywords:
 source:
 status: 🌟
 Parent: "[[Area-IA]]"
-public_note: "true"
+public_note: true
 category: mates
 ---
 # 🧮 Cálculo numérico

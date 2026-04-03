@@ -5,7 +5,7 @@ Parent: "[[Area-Sistemas]]"
 keywords:
 source:
 status: 🌟
-public_note: "true"
+public_note: true
 category: ciberseguridad
 tags:
   - Hacking
