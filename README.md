@@ -1,65 +1,620 @@
----
-title: "Jekyll Blog App"
-description: "A personal technical blog built with Jekyll and enriched with search functionality, Obsidian integration, and custom content creation tools."
-imageSrc: "https://i.postimg.cc/HLT5MH2H/artem-sapegin-b18-TRXc8-UPQ-unsplash.jpg"
-detailedDescription: "This project is a static site powered by Jekyll that serves as a personal blog and technical knowledge base. It integrates a custom Obsidian plugin for content creation. The architecture emphasizes performance and modern tooling with SSG and Turbo enhancements."
-technologies:
-  - "Jekyll"
-  - "Static Site Generator (SSG)"
-  - "Turbo"
-  - "Ruby"
-  - "GitHub Pages"
-  - "Vanilla JS"
-  - "SASS"
-  - "vis.js"
-links:
-  - href: "https://deveduar.github.io"
-    label: "Live Demo"
-  - href: "https://github.com/deveduar/deveduar.github.io"
-    label: "GitHub Repository"
-features:
-  - "Built with Jekyll for static site generation and fast performance."
-  - "Frontend built with Vanilla JS, SASS, and Turbo for dynamic UX."
-  - "Plans for an Obsidian plugin to streamline content creation."
-  - "Integrated with GitHub Pages for free hosting and version control."
-  - "Wiki-style content management using backlinks and preview features."
-  - "Custom SASS Styling Aesthetic, minimal, and responsive UI inspired by Obsidian."
----
+# Blog Index
 
-# Jekyll Blog App
+> Archivo generado automaticamente por `public-notes-sync`.
+> Este README esta pensado para vivir en la raiz del repo y enlazar a [`_posts/`](./_posts/).
 
-## Key Features
+Total de posts: 483
 
-- **Powered by Jekyll**: Static site generation for performance and simplicity
-- **Backlink Graph (vis.js)**: Navigate posts through a visual backlink graph like Obsidian.
-- **Obsidian integration**: Plans to build a custom plugin for seamless content creation
-- **Hosted on GitHub Pages**: Free, versioned, and easy to deploy
-- **Wiki-style navigation**: Backlinks, page previews.
-- **Frontend with Turbo & Vanilla JS:** Fast, responsive UX without heavy frameworks.
-- **Custom SASS Styling**: Aesthetic, minimal, and responsive UI inspired by Obsidian.
+## Categorias
 
-## Installation
+- [autenticacion](#autenticacion) (15)
+- [automatizacion y build](#automatizacion-y-build) (15)
+- [backend](#backend) (51)
+- [ciberseguridad](#ciberseguridad) (59)
+- [cloud](#cloud) (15)
+- [computer science](#computer-science) (19)
+- [data science](#data-science) (14)
+- [databases](#databases) (10)
+- [desarrollo multiplataforma](#desarrollo-multiplataforma) (15)
+- [desarrollo web](#desarrollo-web) (8)
+- [devops](#devops) (18)
+- [electronica](#electronica) (3)
+- [frontend](#frontend) (26)
+- [gamedev](#gamedev) (4)
+- [gestion de negocio](#gestion-de-negocio) (8)
+- [infraestructura it](#infraestructura-it) (29)
+- [linux](#linux) (11)
+- [management](#management) (8)
+- [mantenimiento](#mantenimiento) (1)
+- [mates](#mates) (12)
+- [monitoreo](#monitoreo) (11)
+- [motor de plantillas](#motor-de-plantillas) (4)
+- [powershell](#powershell) (2)
+- [python](#python) (1)
+- [redes](#redes) (7)
+- [sistemas](#sistemas) (20)
+- [software engineering](#software-engineering) (13)
+- [telefona y uc](#telefona-y-uc) (5)
+- [testing](#testing) (56)
+- [uncategorized](#uncategorized) (16)
+- [virtualizacion](#virtualizacion) (7)
 
-1. Clone the repository:
-```bash
-git clone https://github.com/deveduar/deveduar.github.io.git
-cd deveduar.github.io
-````
+## autenticacion
 
-2. Install dependencies (ensure Ruby and Bundler are installed):
+- 2025-11-14 17:41 - [Kerberos](./_posts/2025-11-14-kerberos.md)
+- 2025-10-10 11:20 - [better auth](./_posts/2025-10-10-better-auth.md)
+- 2025-04-15 19:15 - [autenticacion](./_posts/2025-04-15-autenticacion.md)
+- 2025-04-15 19:15 - [criptografia](./_posts/2025-04-15-criptografia.md)
+- 2025-04-14 19:57 - [PKI infraestructura de clave pública](./_posts/2025-04-14-pki-infraestructura-de-clave-p-blica.md)
+- 2025-04-14 19:45 - [JWT](./_posts/2025-04-14-jwt.md)
+- 2025-04-14 19:24 - [ABAC](./_posts/2025-04-14-abac.md)
+- 2025-04-14 19:23 - [RBAC](./_posts/2025-04-14-rbac.md)
+- 2025-04-14 19:20 - [IAM Gestión de Identidades y Acceso](./_posts/2025-04-14-iam-gesti-n-de-identidades-y-acceso.md)
+- 2025-04-14 19:11 - [LDAP](./_posts/2025-04-14-ldap.md)
+- 2025-04-14 19:00 - [SSO Single Sign-On](./_posts/2025-04-14-sso-single-sign-on.md)
+- 2025-04-14 18:50 - [SAML](./_posts/2025-04-14-saml.md)
+- 2025-04-14 18:48 - [TACACS](./_posts/2025-04-14-tacacs.md)
+- 2025-04-14 18:46 - [RADIUS](./_posts/2025-04-14-radius.md)
+- 2025-04-14 18:26 - [OAuth](./_posts/2025-04-14-oauth.md)
 
-```bash
-bundle install
-```
+## automatizacion y build
 
-3. Run the server locally:
+- 2025-10-13 15:24 - [git hooks](./_posts/2025-10-13-git-hooks.md)
+- 2025-10-13 15:20 - [autohotkey](./_posts/2025-10-13-autohotkey.md)
+- 2025-10-09 13:49 - [husky](./_posts/2025-10-09-husky.md)
+- 2025-06-09 14:47 - [Agentes IA](./_posts/2025-06-09-agentes-ia.md)
+- 2025-06-09 14:21 - [scraping](./_posts/2025-06-09-scraping.md)
+- 2025-05-12 22:51 - [nx](./_posts/2025-05-12-nx.md)
+- 2025-04-17 18:43 - [gulp](./_posts/2025-04-17-gulp.md)
+- 2025-02-19 17:14 - [yeoman](./_posts/2025-02-19-yeoman.md)
+- 2025-02-19 16:44 - [JHipster](./_posts/2025-02-19-jhipster.md)
+- 2025-01-29 01:58 - [webpack](./_posts/2025-01-29-webpack.md)
+- 2025-01-29 01:21 - [vite](./_posts/2025-01-29-vite.md)
+- 2024-12-17 16:43 - [Gradle](./_posts/2024-12-17-gradle.md)
+- 2024-11-23 02:21 - [Celery](./_posts/2024-11-23-celery.md)
+- 2024-11-22 21:17 - [maven](./_posts/2024-11-22-maven.md)
+- 2024-11-20 17:53 - [Automatizacion y Build](./_posts/2024-11-20-automatizacion-y-build.md)
 
-```bash
-bundle exec jekyll serve
-```
+## backend
 
-4. Open in browser:
+- 2026-02-14 15:17 - [tecnica de programacion polling](./_posts/2026-02-14-tecnica-de-programacion-polling.md)
+- 2026-02-11 00:33 - [Turborepo](./_posts/2026-02-10-turborepo.md)
+- 2026-01-17 14:09 - [gRPC](./_posts/2026-01-17-grpc.md)
+- 2026-01-10 22:53 - [ETL](./_posts/2026-01-10-etl.md)
+- 2025-12-07 20:10 - [tanstack](./_posts/2025-12-07-tanstack.md)
+- 2025-10-12 13:10 - [Sockets](./_posts/2025-10-12-sockets.md)
+- 2025-10-09 13:28 - [Appwrite](./_posts/2025-10-09-appwrite.md)
+- 2025-05-21 04:05 - [cron jobs](./_posts/2025-05-21-cron-jobs.md)
+- 2025-05-19 22:20 - [ASP NET](./_posts/2025-05-19-asp-net.md)
+- 2025-05-19 20:30 - [CORS](./_posts/2025-05-19-cors.md)
+- 2025-05-19 04:38 - [Stream Processing](./_posts/2025-05-19-stream-processing.md)
+- 2025-05-18 04:04 - [serverless](./_posts/2025-05-18-serverless.md)
+- 2025-05-18 04:01 - [server actions](./_posts/2025-05-18-server-actions.md)
+- 2025-05-18 03:59 - [Instance Scaling](./_posts/2025-05-18-instance-scaling.md)
+- 2025-05-17 19:07 - [Runtime Management](./_posts/2025-05-17-runtime-management.md)
+- 2025-05-17 19:05 - [gestor de colas](./_posts/2025-05-17-gestor-de-colas.md)
+- 2025-05-15 16:04 - [monorepo](./_posts/2025-05-15-monorepo.md)
+- 2025-04-17 22:25 - [apache flink](./_posts/2025-04-17-apache-flink.md)
+- 2025-01-29 19:28 - [Supervisor](./_posts/2025-01-29-supervisor.md)
+- 2025-01-29 19:26 - [PM2](./_posts/2025-01-29-pm2.md)
+- 2025-01-29 17:19 - [websockets](./_posts/2025-01-29-websockets.md)
+- 2025-01-29 14:39 - [ngrok](./_posts/2025-01-29-ngrok.md)
+- 2025-01-29 14:36 - [fastify](./_posts/2025-01-29-fastify.md)
+- 2025-01-29 14:08 - [OpenAPI](./_posts/2025-01-29-openapi.md)
+- 2025-01-29 14:04 - [swagger](./_posts/2025-01-29-swagger.md)
+- 2025-01-29 00:32 - [Apache Kafka](./_posts/2025-01-28-apache-kafka.md)
+- 2025-01-29 00:30 - [RabbitMQ](./_posts/2025-01-28-rabbitmq.md)
+- 2025-01-09 02:28 - [django](./_posts/2025-01-09-django.md)
+- 2024-12-11 16:35 - [proxy](./_posts/2024-12-11-proxy.md)
+- 2024-11-25 16:24 - [GraphQL](./_posts/2024-11-25-graphql.md)
+- 2024-11-24 17:25 - [axios](./_posts/2024-11-24-axios.md)
+- 2024-11-23 20:32 - [Firebase](./_posts/2024-11-23-firebase.md)
+- 2024-11-23 19:47 - [Sequelize](./_posts/2024-11-23-sequelize.md)
+- 2024-11-23 19:36 - [strapi](./_posts/2024-11-23-strapi.md)
+- 2024-11-23 19:31 - [poketbase](./_posts/2024-11-23-poketbase.md)
+- 2024-11-22 21:03 - [apache](./_posts/2024-11-22-apache.md)
+- 2024-11-22 21:02 - [composer](./_posts/2024-11-22-composer.md)
+- 2024-11-22 20:57 - [laravel](./_posts/2024-11-22-laravel.md)
+- 2024-11-22 20:48 - [JAX-WS](./_posts/2024-11-22-jax-ws.md)
+- 2024-11-22 17:31 - [java EE](./_posts/2024-11-22-java-ee.md)
+- 2024-11-21 01:17 - [Springboot](./_posts/2024-11-21-springboot.md)
+- 2024-11-18 21:27 - [api](./_posts/2024-11-18-api.md)
+- 2024-11-16 19:43 - [FastApi](./_posts/2024-11-16-fastapi.md)
+- 2024-11-16 17:54 - [webhooks](./_posts/2024-11-16-webhooks.md)
+- 2024-11-16 17:44 - [web services](./_posts/2024-11-16-web-services.md)
+- 2024-11-16 17:32 - [microservicios](./_posts/2024-11-16-microservicios.md)
+- 2024-11-16 17:03 - [nginx](./_posts/2024-11-16-nginx.md)
+- 2024-11-07 03:13 - [node.js](./_posts/2024-11-07-node-js.md)
+- 2024-11-07 03:11 - [nestjs](./_posts/2024-11-07-nestjs.md)
+- 2024-09-04T03:13:00 - [PHP](./_posts/2024-09-04-php.md)
+- 2024-09-04 19:26 - [Backend](./_posts/2024-09-04-backend.md)
 
-```
-http://localhost:4000
-```
+## ciberseguridad
+
+- 2026-04-03 - [amenazas](./_posts/2026-04-03-amenazas.md)
+- 2026-01-02 17:28 - [vulnerabilidades](./_posts/2026-01-02-vulnerabilidades.md)
+- 2025-12-31 15:49 - [MITRE ATT&CK](./_posts/2025-12-31-mitre-att-ck.md)
+- 2025-10-26 14:13 - [HashiCorp Vault](./_posts/2025-10-26-hashicorp-vault.md)
+- 2025-05-20 18:10 - [control de datos](./_posts/2025-05-20-control-de-datos.md)
+- 2025-04-15 18:42 - [manejo de vulnerabilidades](./_posts/2025-04-15-manejo-de-vulnerabilidades.md)
+- 2025-04-15 17:50 - [ciclo de vida de vulnerabilidades](./_posts/2025-04-15-ciclo-de-vida-de-vulnerabilidades.md)
+- 2025-04-15 17:39 - [ciberseguridad](./_posts/2025-04-15-ciberseguridad.md)
+- 2025-04-15 17:05 - [tecnicas de explotacion](./_posts/2025-04-15-tecnicas-de-explotacion.md)
+- 2025-04-15 17:00 - [bug bounty](./_posts/2025-04-15-bug-bounty.md)
+- 2025-04-15 16:49 - [malware](./_posts/2025-04-15-malware.md)
+- 2025-04-15 16:45 - [Antivirus](./_posts/2025-04-15-antivirus.md)
+- 2025-04-15 16:42 - [manejo de parches](./_posts/2025-04-15-manejo-de-parches.md)
+- 2025-04-15 16:40 - [ingenieria inversa](./_posts/2025-04-15-ingenieria-inversa.md)
+- 2025-04-15 03:34 - [caza de amenazas](./_posts/2025-04-15-caza-de-amenazas.md)
+- 2025-04-15 03:33 - [modelado de amenazas](./_posts/2025-04-15-modelado-de-amenazas.md)
+- 2025-04-15 03:30 - [firewall](./_posts/2025-04-15-firewall.md)
+- 2025-04-15 03:11 - [cloud segurity](./_posts/2025-04-15-cloud-segurity.md)
+- 2025-04-14 21:27 - [OSWP](./_posts/2025-04-14-oswp.md)
+- 2025-04-14 21:26 - [OSINT](./_posts/2025-04-14-osint.md)
+- 2025-04-14 20:55 - [Blue team](./_posts/2025-04-14-blue-team.md)
+- 2025-04-14 20:51 - [Red team](./_posts/2025-04-14-red-team.md)
+- 2025-04-14 20:43 - [Purple Team](./_posts/2025-04-14-purple-team.md)
+- 2025-04-14 18:18 - [DLP](./_posts/2025-04-14-dlp.md)
+- 2025-04-14 18:18 - [IRM manejo de derechos de la informacion](./_posts/2025-04-14-irm-manejo-de-derechos-de-la-informacion.md)
+- 2025-04-14 18:17 - [Gestión de Activos Digitales (DAM)](./_posts/2025-04-14-gesti-n-de-activos-digitales--dam-.md)
+- 2025-04-14 18:16 - [Email DLP Protección Correo](./_posts/2025-04-14-email-dlp-protecci-n-correo.md)
+- 2025-04-14 18:11 - [servicio XDR Detección y respuesta extendidas](./_posts/2025-04-14-servicio-xdr-detecci-n-y-respuesta-extendidas.md)
+- 2025-04-14 18:09 - [servicio MDR detección y respuesta administradas](./_posts/2025-04-14-servicio-mdr-detecci-n-y-respuesta-administradas.md)
+- 2025-04-14 18:07 - [Ciberdefensa](./_posts/2025-04-14-ciberdefensa.md)
+- 2025-04-14 18:06 - [Ciberinteligencia TIP](./_posts/2025-04-14-ciberinteligencia-tip.md)
+- 2025-04-14 18:02 - [Metasploit](./_posts/2025-04-14-metasploit.md)
+- 2025-04-14 17:53 - [Nessus](./_posts/2025-04-14-nessus.md)
+- 2025-04-14 17:50 - [Burp Suite](./_posts/2025-04-14-burp-suite.md)
+- 2025-04-14 04:28 - [DFIR forense](./_posts/2025-04-14-dfir-forense.md)
+- 2025-04-14 04:23 - [SOAR](./_posts/2025-04-14-soar.md)
+- 2025-04-14 04:22 - [WAF](./_posts/2025-04-14-waf.md)
+- 2025-04-14 04:20 - [OSEP](./_posts/2025-04-14-osep.md)
+- 2025-04-14 04:19 - [SIEM](./_posts/2025-04-14-siem.md)
+- 2025-04-14 04:17 - [EDR](./_posts/2025-04-14-edr.md)
+- 2025-04-14 04:16 - [CASB](./_posts/2025-04-14-casb.md)
+- 2025-04-14 04:12 - [Secure Service Edge](./_posts/2025-04-14-secure-service-edge.md)
+- 2025-04-14 04:09 - [SASE](./_posts/2025-04-14-sase.md)
+- 2025-04-14 04:06 - [ZTNA](./_posts/2025-04-14-ztna.md)
+- 2025-04-14 04:03 - [SOC](./_posts/2025-04-14-soc.md)
+- 2025-04-14 03:51 - [DDOS](./_posts/2025-04-14-ddos.md)
+- 2025-04-14 03:45 - [CRTO](./_posts/2025-04-14-crto.md)
+- 2025-04-14 03:44 - [OSCP](./_posts/2025-04-14-oscp.md)
+- 2025-04-14 03:43 - [CARTP](./_posts/2025-04-14-cartp.md)
+- 2025-04-14 03:41 - [eWPT](./_posts/2025-04-14-ewpt.md)
+- 2025-04-14 03:40 - [eCPPT](./_posts/2025-04-14-ecppt.md)
+- 2025-04-14 03:40 - [eJPT](./_posts/2025-04-14-ejpt.md)
+- 2025-04-14 03:35 - [ISAAF](./_posts/2025-04-14-isaaf.md)
+- 2025-04-14 03:34 - [OSSTMM](./_posts/2025-04-14-osstmm.md)
+- 2025-04-14 03:33 - [OWASP](./_posts/2025-04-14-owasp.md)
+- 2024-12-03 03:52 - [Pentesting](./_posts/2024-12-03-pentesting.md)
+- 2024-12-03 03:34 - [hardening](./_posts/2024-12-03-hardening.md)
+- 2024-02-18 17:50 - [Auditorias](./_posts/2024-02-18-auditorias.md)
+- 2024-02-18 17:50 - [SMBRELAY](./_posts/2024-02-18-smbrelay.md)
+
+## cloud
+
+- 2026-01-13 15:22 - [Cloud Computing](./_posts/2026-01-13-cloud-computing.md)
+- 2025-05-20 20:51 - [akamai](./_posts/2025-05-20-akamai.md)
+- 2025-05-20 17:32 - [Auto Scaling](./_posts/2025-05-20-auto-scaling.md)
+- 2025-04-10 22:02 - [Vercel](./_posts/2025-04-10-vercel.md)
+- 2025-01-30 03:06 - [oracle](./_posts/2025-01-30-oracle.md)
+- 2025-01-10 18:47 - [gitlab](./_posts/2025-01-10-gitlab.md)
+- 2024-11-25 17:49 - [apache cassandra](./_posts/2024-11-25-apache-cassandra.md)
+- 2024-11-23 20:22 - [netifly](./_posts/2024-11-23-netifly.md)
+- 2024-11-23 03:52 - [coolify](./_posts/2024-11-23-coolify.md)
+- 2024-11-23 03:51 - [dokku](./_posts/2024-11-23-dokku.md)
+- 2024-11-23 03:03 - [mulesoft](./_posts/2024-11-23-mulesoft.md)
+- 2024-11-19 01:10 - [cloud](./_posts/2024-11-19-cloud.md)
+- 2024-11-19 01:04 - [Aws](./_posts/2024-11-19-aws.md)
+- 2024-11-19 00:24 - [Azure](./_posts/2024-11-18-azure.md)
+- 2023-03-30 22:28 - [Azure Fundamentals AZ-900 devops](./_posts/2023-03-30-azure-fundamentals-az-900-devops.md)
+
+## computer science
+
+- 2025-11-18 14:21 - [DSL](./_posts/2025-11-18-dsl.md)
+- 2025-11-06 22:07 - [arquitecturas en computacion](./_posts/2025-11-06-arquitecturas-en-computacion.md)
+- 2025-11-06 19:04 - [algoritmos y tecnicas de computacion](./_posts/2025-11-06-algoritmos-y-tecnicas-de-computacion.md)
+- 2025-11-06 15:45 - [Patrones de diseño](./_posts/2025-11-06-patrones-de-dise-o.md)
+- 2025-11-06 15:14 - [Complejidad Logarítmica y Notación Big O](./_posts/2025-11-06-complejidad-logar-tmica-y-notaci-n-big-o.md)
+- 2025-11-06 12:08 - [estructuras de datos](./_posts/2025-11-06-estructuras-de-datos.md)
+- 2025-11-05 17:10 - [Lambda Functions](./_posts/2025-11-05-lambda-functions.md)
+- 2025-11-05 13:46 - [PF Programación Funcional](./_posts/2025-11-05-pf-programaci-n-funcional.md)
+- 2025-05-19 20:33 - [AOP Programación Orientada a Aspectos](./_posts/2025-05-19-aop-programaci-n-orientada-a-aspectos.md)
+- 2025-05-19 20:32 - [POO Programación Orientada a Objetos](./_posts/2025-05-19-poo-programaci-n-orientada-a-objetos.md)
+- 2025-05-19 01:12 - [DDD Domain-Driven Design](./_posts/2025-05-18-ddd-domain-driven-design.md)
+- 2025-05-19 01:10 - [CLEAN](./_posts/2025-05-18-clean.md)
+- 2025-01-03 00:49 - [SOLID](./_posts/2025-01-02-solid.md)
+- 2024-09-04 19:12 - [Computer Science](./_posts/2024-09-04-computer-science.md)
+- 2024-03-01 16:40 - [Expresiones regulares](./_posts/2024-03-01-expresiones-regulares.md)
+- 2023-09-01 15:50 - [Patron Composite](./_posts/2023-09-01-patron-composite.md)
+- 2023-08-31 16:47 - [Comunicación entre Procesos](./_posts/2023-08-31-comunicaci-n-entre-procesos.md)
+- 2023-08-31 16:47 - [Grafos](./_posts/2023-08-31-grafos.md)
+- 2023-04-01 18:49 - [Computer science - curso de inicio CS50](./_posts/2023-04-01-computer-science---curso-de-inicio-cs50.md)
+
+## data science
+
+- 2026-04-03 - [apache spark](./_posts/2026-04-03-apache-spark.md)
+- 2025-10-09 14:39 - [inngest](./_posts/2025-10-09-inngest.md)
+- 2025-08-09 13:48 - [LLM](./_posts/2025-08-09-llm.md)
+- 2025-01-29 17:59 - [Clojure](./_posts/2025-01-29-clojure.md)
+- 2024-11-19 23:34 - [Machine Learning](./_posts/2024-11-19-machine-learning.md)
+- 2024-11-19 23:32 - [Deep Learning](./_posts/2024-11-19-deep-learning.md)
+- 2024-11-18 19:35 - [TensorFlow](./_posts/2024-11-18-tensorflow.md)
+- 2024-11-18 19:15 - [Scala](./_posts/2024-11-18-scala.md)
+- 2024-04-10 21:05 - [Data Science](./_posts/2024-04-10-data-science.md)
+- 2024-02-19 13:01 - [Regresión Lineal y Mínimos Cuadrados Ordinarios](./_posts/2024-02-19-regresi-n-lineal-y-m-nimos-cuadrados-ordinarios.md)
+- 2024-02-19 03:15 - [GCP Big Data Developer y Apache Hadoop](./_posts/2024-02-19-gcp-big-data-developer-y-apache-hadoop.md)
+- 2023-05-02 15:47 - [Prompt Engineering](./_posts/2023-05-02-prompt-engineering.md)
+- 2023-04-30 22:16 - [IA con Huawei](./_posts/2023-04-30-ia-con-huawei.md)
+- 2023-04-30 22:03 - [GCP Google cloud](./_posts/2023-04-30-gcp-google-cloud.md)
+
+## databases
+
+- 2026-04-03 - [DBML](./_posts/2026-04-03-dbml.md)
+- 2026-04-03 - [JSON](./_posts/2026-04-03-json.md)
+- 2026-04-03 - [mongodb](./_posts/2026-04-03-mongodb.md)
+- 2025-12-10 13:46 - [PLSQL](./_posts/2025-12-10-plsql.md)
+- 2025-01-25 05:31 - [DynamoDB](./_posts/2025-01-25-dynamodb.md)
+- 2024-11-18 19:27 - [XML](./_posts/2024-11-18-xml.md)
+- 2024-11-16 17:15 - [postgreSQL](./_posts/2024-11-16-postgresql.md)
+- 2024-11-16 17:08 - [redis](./_posts/2024-11-16-redis.md)
+- 2024-11-06 23:27 - [Databases](./_posts/2024-11-06-databases.md)
+- 2024-02-15 16:37 - [DB-Fundamentos y documentos](./_posts/2024-02-15-db-fundamentos-y-documentos.md)
+
+## desarrollo multiplataforma
+
+- 2025-12-22 17:28 - [bash](./_posts/2025-12-22-bash.md)
+- 2025-10-13 14:45 - [capacitor](./_posts/2025-10-13-capacitor.md)
+- 2025-06-09 16:46 - [Rust](./_posts/2025-06-09-rust.md)
+- 2025-05-22 04:26 - [Desarrollo multiplataforma](./_posts/2025-05-22-desarrollo-multiplataforma.md)
+- 2025-05-19 22:28 - [MAUI NET](./_posts/2025-05-19-maui-net.md)
+- 2025-05-19 22:24 - [xamarin](./_posts/2025-05-19-xamarin.md)
+- 2024-11-22 17:57 - [Java ME](./_posts/2024-11-22-java-me.md)
+- 2024-11-21 19:34 - [electron](./_posts/2024-11-21-electron.md)
+- 2024-11-21 19:33 - [kotlin](./_posts/2024-11-21-kotlin.md)
+- 2024-11-21 19:32 - [flutter](./_posts/2024-11-21-flutter.md)
+- 2024-11-21 19:31 - [react native](./_posts/2024-11-21-react-native.md)
+- 2024-11-21 19:30 - [native script](./_posts/2024-11-21-native-script.md)
+- 2024-11-21 19:29 - [ionic](./_posts/2024-11-21-ionic.md)
+- 2024-11-16 20:54 - [power apps](./_posts/2024-11-16-power-apps.md)
+- 2024-11-16 20:26 - [simulaciones](./_posts/2024-11-16-simulaciones.md)
+
+## desarrollo web
+
+- 2025-12-07 20:22 - [LMS](./_posts/2025-12-07-lms.md)
+- 2025-05-22 17:22 - [Desarrollo web](./_posts/2025-05-22-desarrollo-web.md)
+- 2025-05-17 17:40 - [Motor de plantillas](./_posts/2025-05-17-motor-de-plantillas.md)
+- 2024-11-18 19:24 - [ecomerce](./_posts/2024-11-18-ecomerce.md)
+- 2024-11-18 17:54 - [CMS](./_posts/2024-11-18-cms.md)
+- 2024-11-18 17:46 - [Wordpress](./_posts/2024-11-18-wordpress.md)
+- 2024-11-16 20:30 - [Moodle](./_posts/2024-11-16-moodle.md)
+- 2024-09-04T03:13:00 - [javascript](./_posts/2024-09-04-javascript.md)
+
+## devops
+
+- 2026-02-04 14:05 - [GitHub Actions](./_posts/2026-02-04-github-actions.md)
+- 2025-10-09 13:24 - [dokploy](./_posts/2025-10-09-dokploy.md)
+- 2025-05-20 18:35 - [DevSecOps](./_posts/2025-05-20-devsecops.md)
+- 2025-05-20 17:26 - [SRE Site Reliability Engineering](./_posts/2025-05-20-sre-site-reliability-engineering.md)
+- 2025-02-18 15:57 - [IInfraestructura como codigo](./_posts/2025-02-18-iinfraestructura-como-codigo.md)
+- 2025-01-29 01:26 - [SDLC](./_posts/2025-01-29-sdlc.md)
+- 2024-12-10 02:53 - [Sonarqube](./_posts/2024-12-10-sonarqube.md)
+- 2024-12-10 02:50 - [ansible](./_posts/2024-12-10-ansible.md)
+- 2024-11-23 17:04 - [CICD](./_posts/2024-11-23-cicd.md)
+- 2024-11-23 03:43 - [Terraform](./_posts/2024-11-23-terraform.md)
+- 2024-11-23 02:15 - [bitbucket](./_posts/2024-11-23-bitbucket.md)
+- 2024-11-23 02:07 - [DDEV](./_posts/2024-11-23-ddev.md)
+- 2024-11-23 01:59 - [Windows Server](./_posts/2024-11-23-windows-server.md)
+- 2024-11-23 01:58 - [sql server](./_posts/2024-11-23-sql-server.md)
+- 2024-11-23 01:54 - [Virtualizacion](./_posts/2024-11-23-virtualizacion.md)
+- 2024-11-16 18:57 - [jenkins](./_posts/2024-11-16-jenkins.md)
+- 2024-04-10 20:14 - [devops](./_posts/2024-04-10-devops.md)
+- 2024-02-04 18:57 - [Seguridad Web y Certificados TLS](./_posts/2024-02-04-seguridad-web-y-certificados-tls.md)
+
+## electronica
+
+- 2024-11-19 01:12 - [Iot](./_posts/2024-11-19-iot.md)
+- 2024-11-18 02:50 - [electronica](./_posts/2024-11-18-electronica.md)
+- 2024-11-17 18:41 - [embedded](./_posts/2024-11-17-embedded.md)
+
+## frontend
+
+- 2026-04-03 - [UX-UI](./_posts/2026-04-03-ux-ui.md)
+- 2025-12-07 18:15 - [pwa](./_posts/2025-12-07-pwa.md)
+- 2025-12-07 13:48 - [lit](./_posts/2025-12-07-lit.md)
+- 2025-12-06 18:15 - [Web Components](./_posts/2025-12-06-web-components.md)
+- 2025-06-10 02:42 - [microfrontend](./_posts/2025-06-10-microfrontend.md)
+- 2025-05-17 19:14 - [Frontend](./_posts/2025-05-17-frontend.md)
+- 2025-05-17 16:14 - [turbo](./_posts/2025-05-17-turbo.md)
+- 2025-04-30 21:05 - [storybook](./_posts/2025-04-30-storybook.md)
+- 2025-04-18 03:23 - [guias de estilos](./_posts/2025-04-18-guias-de-estilos.md)
+- 2025-04-18 03:20 - [accesibilidad](./_posts/2025-04-18-accesibilidad.md)
+- 2025-04-10 20:34 - [favicon](./_posts/2025-04-10-favicon.md)
+- 2025-02-03 21:02 - [post css](./_posts/2025-02-03-post-css.md)
+- 2025-02-03 20:33 - [sass](./_posts/2025-02-03-sass.md)
+- 2025-02-03 20:12 - [tailwind](./_posts/2025-02-03-tailwind.md)
+- 2025-01-29 18:41 - [SEO](./_posts/2025-01-29-seo.md)
+- 2025-01-29 17:53 - [astro](./_posts/2025-01-29-astro.md)
+- 2025-01-29 17:45 - [qwick](./_posts/2025-01-29-qwick.md)
+- 2025-01-29 17:40 - [gatsby](./_posts/2025-01-29-gatsby.md)
+- 2025-01-29 17:36 - [sveltkit](./_posts/2025-01-29-sveltkit.md)
+- 2025-01-25 05:06 - [vuejs](./_posts/2025-01-25-vuejs.md)
+- 2024-11-16 22:26 - [solid.js](./_posts/2024-11-16-solid-js.md)
+- 2024-11-16 17:40 - [Redux](./_posts/2024-11-16-redux.md)
+- 2024-09-04T03:13:00 - [CSS](./_posts/2024-09-04-css.md)
+- 2024-09-04T03:12:00 - [react](./_posts/2024-09-04-react.md)
+- 2024-09-03 21:11 - [nextjs](./_posts/2024-09-03-nextjs.md)
+- 2024-09-03 20:59 - [angular](./_posts/2024-09-03-angular.md)
+
+## gamedev
+
+- 2024-11-28 02:26 - [shaders](./_posts/2024-11-28-shaders.md)
+- 2024-11-28 02:25 - [p5js](./_posts/2024-11-28-p5js.md)
+- 2024-11-18 20:30 - [unity](./_posts/2024-11-18-unity.md)
+- 2024-11-18 20:18 - [threejs](./_posts/2024-11-18-threejs.md)
+
+## gestion de negocio
+
+- 2026-04-03 - [business intelligence](./_posts/2026-04-03-business-intelligence.md)
+- 2025-05-21 18:41 - [AIOps](./_posts/2025-05-21-aiops.md)
+- 2025-05-21 18:34 - [DMS sistema de gestión de documentos](./_posts/2025-05-21-dms-sistema-de-gesti-n-de-documentos.md)
+- 2025-05-21 18:33 - [EDI Intercambio Electrónico de datos](./_posts/2025-05-21-edi-intercambio-electr-nico-de-datos.md)
+- 2025-05-21 18:31 - [b2b business-to-business](./_posts/2025-05-21-b2b-business-to-business.md)
+- 2025-05-21 18:19 - [SLA](./_posts/2025-05-21-sla.md)
+- 2025-05-21 18:17 - [KPI](./_posts/2025-05-21-kpi.md)
+- 2024-11-19 01:37 - [Gestion de Negocio](./_posts/2024-11-19-gestion-de-negocio.md)
+
+## infraestructura it
+
+- 2025-10-11 15:33 - [GLPI](./_posts/2025-10-11-glpi.md)
+- 2025-05-21 17:49 - [ISO 20000](./_posts/2025-05-21-iso-20000.md)
+- 2025-05-21 17:44 - [ENS Esquema Nacional de Seguridad](./_posts/2025-05-21-ens-esquema-nacional-de-seguridad.md)
+- 2025-05-21 17:40 - [PSD2](./_posts/2025-05-21-psd2.md)
+- 2025-05-21 17:39 - [PCI-DSS](./_posts/2025-05-21-pci-dss.md)
+- 2025-05-21 17:37 - [ISO 31010](./_posts/2025-05-21-iso-31010.md)
+- 2025-05-21 17:35 - [ISO 22301](./_posts/2025-05-21-iso-22301.md)
+- 2025-05-21 17:21 - [IEC 27002](./_posts/2025-05-21-iec-27002.md)
+- 2025-05-21 17:19 - [HIPAA](./_posts/2025-05-21-hipaa.md)
+- 2025-05-21 17:18 - [LOPD](./_posts/2025-05-21-lopd.md)
+- 2025-05-21 17:17 - [GDPR](./_posts/2025-05-21-gdpr.md)
+- 2025-05-21 17:14 - [GRC](./_posts/2025-05-21-grc.md)
+- 2025-05-21 17:04 - [IEC 27001](./_posts/2025-05-21-iec-27001.md)
+- 2025-05-21 17:01 - [ISMS](./_posts/2025-05-21-isms.md)
+- 2025-05-21 16:53 - [SI Sistema de Información](./_posts/2025-05-21-si-sistema-de-informaci-n.md)
+- 2025-05-21 15:40 - [IETF](./_posts/2025-05-21-ietf.md)
+- 2025-05-21 15:37 - [ITSM](./_posts/2025-05-21-itsm.md)
+- 2025-05-21 15:35 - [ITIL](./_posts/2025-05-21-itil.md)
+- 2025-05-21 15:31 - [iPaaS Integration Platform as a Service](./_posts/2025-05-21-ipaas-integration-platform-as-a-service.md)
+- 2025-05-21 15:13 - [CMDB](./_posts/2025-05-21-cmdb.md)
+- 2025-05-21 15:11 - [CORBA](./_posts/2025-05-21-corba.md)
+- 2025-05-21 01:17 - [FindOps](./_posts/2025-05-20-findops.md)
+- 2025-04-14 04:21 - [SOA](./_posts/2025-04-14-soa.md)
+- 2025-04-14 03:16 - [Control-M](./_posts/2025-04-14-control-m.md)
+- 2025-04-14 03:14 - [OTRS Znuny](./_posts/2025-04-14-otrs-znuny.md)
+- 2025-04-14 03:12 - [Combodo itop](./_posts/2025-04-14-combodo-itop.md)
+- 2024-11-19 02:46 - [soporte tecnico](./_posts/2024-11-19-soporte-tecnico.md)
+- 2024-11-19 01:48 - [infraestructura IT](./_posts/2024-11-19-infraestructura-it.md)
+- 2024-11-18 23:24 - [odoo](./_posts/2024-11-18-odoo.md)
+
+## linux
+
+- 2025-12-20 18:36 - [Linux personalizacion de entorno](./_posts/2025-12-20-linux-personalizacion-de-entorno.md)
+- 2025-12-20 18:35 - [instalacion con persistencia de linux en usb](./_posts/2025-12-20-instalacion-con-persistencia-de-linux-en-usb.md)
+- 2025-12-20 18:20 - [Linux CLI](./_posts/2025-12-20-linux-cli.md)
+- 2025-12-20 18:20 - [Linux Filesystem](./_posts/2025-12-20-linux-filesystem.md)
+- 2025-07-18 16:07 - [parrot os](./_posts/2025-07-18-parrot-os.md)
+- 2024-03-02 01:11 - [arch linux](./_posts/2024-03-02-arch-linux.md)
+- 2024-02-18 17:32 - [Linux comandos y administracion](./_posts/2024-02-18-linux-comandos-y-administracion.md)
+- 2024-02-04 19:06 - [Linux kernel](./_posts/2024-02-04-linux-kernel.md)
+- 2024-02-04 19:03 - [Linux entrevistas](./_posts/2024-02-04-linux-entrevistas.md)
+- 2023-03-31 01:29 - [Linux Shell Scripting](./_posts/2023-03-30-linux-shell-scripting.md)
+- 2023-03-31 01:05 - [ubuntu server](./_posts/2023-03-30-ubuntu-server.md)
+
+## management
+
+- 2025-05-21 20:08 - [Project Management](./_posts/2025-05-21-project-management.md)
+- 2025-05-21 20:07 - [Product Management](./_posts/2025-05-21-product-management.md)
+- 2025-05-21 19:54 - [ticketing](./_posts/2025-05-21-ticketing.md)
+- 2025-05-21 18:38 - [SAP](./_posts/2025-05-21-sap.md)
+- 2024-11-19 22:22 - [ERP](./_posts/2024-11-19-erp.md)
+- 2024-11-19 22:20 - [CRM](./_posts/2024-11-19-crm.md)
+- 2024-11-18 23:23 - [Jira](./_posts/2024-11-18-jira.md)
+- 2024-11-06 23:21 - [Management](./_posts/2024-11-06-management.md)
+
+## mantenimiento
+
+- 2024-11-19 01:25 - [mantenimiento](./_posts/2024-11-19-mantenimiento.md)
+
+## mates
+
+- 2026-02-05 23:54 - [problema de la moneda](./_posts/2026-02-05-problema-de-la-moneda.md)
+- 2025-11-13 10:56 - [Teoría de la probabilidad y teoría de la información](./_posts/2025-11-13-teor-a-de-la-probabilidad-y-teor-a-de-la-informaci-n.md)
+- 2025-11-13 10:54 - [Cálculo numérico](./_posts/2025-11-13-c-lculo-num-rico.md)
+- 2025-09-06 21:01 - [probabilidad](./_posts/2025-09-06-probabilidad.md)
+- 2025-08-13 22:51 - [godel](./_posts/2025-08-13-godel.md)
+- 2024-02-18 16:15 - [congetura de collatz](./_posts/2024-02-18-congetura-de-collatz.md)
+- 2024-02-18 16:14 - [algebra lineal](./_posts/2024-02-18-algebra-lineal.md)
+- 2024-02-18 16:14 - [Curso de Álgebra Lineal universidad madrid](./_posts/2024-02-18-curso-de--lgebra-lineal-universidad-madrid.md)
+- 2024-02-18 16:14 - [No se puede probar todo lo verdadero](./_posts/2024-02-18-no-se-puede-probar-todo-lo-verdadero.md)
+- 2024-02-18 16:14 - [Teoria de juegos](./_posts/2024-02-18-teoria-de-juegos.md)
+- 2023-04-01 18:06 - [Funciones](./_posts/2023-04-01-funciones.md)
+- 2023-04-01 17:39 - [Intro Algebra lineal y ML](./_posts/2023-04-01-intro-algebra-lineal-y-ml.md)
+
+## monitoreo
+
+- 2026-01-10 22:52 - [logstash](./_posts/2026-01-10-logstash.md)
+- 2026-01-10 22:50 - [kibana](./_posts/2026-01-10-kibana.md)
+- 2025-11-19 16:56 - [OpenTelemetry](./_posts/2025-11-19-opentelemetry.md)
+- 2025-04-14 18:01 - [Acunetix scanner](./_posts/2025-04-14-acunetix-scanner.md)
+- 2025-04-14 01:50 - [prometheus](./_posts/2025-04-13-prometheus.md)
+- 2025-04-14 01:48 - [nagios](./_posts/2025-04-13-nagios.md)
+- 2025-04-14 01:47 - [pandora](./_posts/2025-04-13-pandora.md)
+- 2025-04-14 01:46 - [Zabbix](./_posts/2025-04-13-zabbix.md)
+- 2024-11-30 18:46 - [grafana](./_posts/2024-11-30-grafana.md)
+- 2024-11-23 02:01 - [monitoreo](./_posts/2024-11-23-monitoreo.md)
+- 2024-11-16 17:21 - [Elasticsearch](./_posts/2024-11-16-elasticsearch.md)
+
+## motor de plantillas
+
+- 2025-02-19 17:54 - [thymeleaf](./_posts/2025-02-19-thymeleaf.md)
+- 2024-11-21 18:20 - [handlebars](./_posts/2024-11-21-handlebars.md)
+- 2024-11-21 18:20 - [pug](./_posts/2024-11-21-pug.md)
+- 2024-11-21 18:17 - [mustache](./_posts/2024-11-21-mustache.md)
+
+## powershell
+
+- 2024-02-18 18:02 - [Crear varias carpetas con powershell](./_posts/2024-02-18-crear-varias-carpetas-con-powershell.md)
+- 2024-02-18 18:02 - [eliminar archivo a traves del terminal](./_posts/2024-02-18-eliminar-archivo-a-traves-del-terminal.md)
+
+## python
+
+- 2025-05-24 04:06 - [curso python avanzado](./_posts/2025-05-24-curso-python-avanzado.md)
+
+## redes
+
+- 2025-06-10 15:24 - [VAN](./_posts/2025-06-10-van.md)
+- 2025-06-10 15:21 - [Protocolos](./_posts/2025-06-10-protocolos.md)
+- 2025-06-10 15:20 - [mascara de red](./_posts/2025-06-10-mascara-de-red.md)
+- 2025-06-10 13:39 - [subred](./_posts/2025-06-10-subred.md)
+- 2025-06-10 13:38 - [VLAN](./_posts/2025-06-10-vlan.md)
+- 2024-11-06 23:23 - [Redes](./_posts/2024-11-06-redes.md)
+- 2023-04-02 18:24 - [curso-redes-CNNA-1](./_posts/2023-04-02-curso-redes-cnna-1.md)
+
+## sistemas
+
+- 2026-03-08 17:30 - [WSL](./_posts/2026-03-08-wsl.md)
+- 2025-12-19 18:43 - [SAN](./_posts/2025-12-19-san.md)
+- 2025-10-29 19:55 - [administracion de sistemas](./_posts/2025-10-29-administracion-de-sistemas.md)
+- 2025-10-29 19:54 - [Soporte Microinformático](./_posts/2025-10-29-soporte-microinform-tico.md)
+- 2025-10-26 13:56 - [comando grep](./_posts/2025-10-26-comando-grep.md)
+- 2025-10-26 13:44 - [surfing keys vim in browser](./_posts/2025-10-26-surfing-keys-vim-in-browser.md)
+- 2025-10-11 15:16 - [pihole](./_posts/2025-10-11-pihole.md)
+- 2025-10-10 11:28 - [lite xl](./_posts/2025-10-10-lite-xl.md)
+- 2025-07-23 10:52 - [NAS](./_posts/2025-07-23-nas.md)
+- 2025-07-07 13:18 - [Gestión de Dispositivos Móviles MDM](./_posts/2025-07-07-gesti-n-de-dispositivos-m-viles-mdm.md)
+- 2025-06-10 22:34 - [Active Directory](./_posts/2025-06-10-active-directory.md)
+- 2025-06-10 17:25 - [Office 365](./_posts/2025-06-10-office-365.md)
+- 2024-11-18 22:45 - [powershell](./_posts/2024-11-18-powershell.md)
+- 2024-11-18 22:45 - [vscode](./_posts/2024-11-18-vscode.md)
+- 2024-11-18 22:44 - [Tmux](./_posts/2024-11-18-tmux.md)
+- 2024-11-18 22:44 - [VIM](./_posts/2024-11-18-vim.md)
+- 2024-11-18 22:43 - [Hyper](./_posts/2024-11-18-hyper.md)
+- 2024-04-10 20:20 - [Linux](./_posts/2024-04-10-linux.md)
+- 2024-03-17 21:17 - [Sistemas](./_posts/2024-03-17-sistemas.md)
+- 2024-02-18 18:02 - [Problema ExecutionPolicy en PowerShell](./_posts/2024-02-18-problema-executionpolicy-en-powershell.md)
+
+## software engineering
+
+- 2025-05-21 01:01 - [excel](./_posts/2025-05-20-excel.md)
+- 2025-01-29 01:31 - [ruby](./_posts/2025-01-29-ruby.md)
+- 2024-11-19 02:08 - [visual basic VBA](./_posts/2024-11-19-visual-basic-vba.md)
+- 2024-11-16 20:39 - [csharp](./_posts/2024-11-16-csharp.md)
+- 2024-11-16 17:59 - [net](./_posts/2024-11-16-net.md)
+- 2024-11-16 02:57 - [Docker](./_posts/2024-11-16-docker.md)
+- 2024-11-07 03:48 - [cpp](./_posts/2024-11-07-cpp.md)
+- 2024-09-04T03:13:00 - [git](./_posts/2024-09-04-git.md)
+- 2024-09-04T03:13:00 - [java](./_posts/2024-09-04-java.md)
+- 2024-09-04 19:15 - [typescript](./_posts/2024-09-04-typescript.md)
+- 2024-03-24 22:03 - [python](./_posts/2024-03-24-python.md)
+- 2024-03-13 15:51 - [Software engineering](./_posts/2024-03-13-software-engineering.md)
+- 2024-02-15 17:14 - [Visual Basic y C](./_posts/2024-02-15-visual-basic-y-c.md)
+
+## telefona y uc
+
+- 2025-05-24 19:00 - [Videoconferencia](./_posts/2025-05-24-videoconferencia.md)
+- 2025-05-24 18:59 - [3CX](./_posts/2025-05-24-3cx.md)
+- 2025-05-24 18:54 - [SIP](./_posts/2025-05-24-sip.md)
+- 2025-05-24 18:53 - [VoIP](./_posts/2025-05-24-voip.md)
+- 2025-05-24 18:50 - [QoS](./_posts/2025-05-24-qos.md)
+
+## testing
+
+- 2026-04-03 - [practicas y ejemplos codigo comunes de testing a 2025 extenso](./_posts/2026-04-03-practicas-y-ejemplos-codigo-comunes-de-testing-a-2025-extenso.md)
+- 2025-10-22 17:27 - [Arquitectura de Cucumber](./_posts/2025-10-22-arquitectura-de-cucumber.md)
+- 2025-10-20 20:03 - [Uso de jest-dom y Testing Library en entornos React](./_posts/2025-10-20-uso-de-jest-dom-y-testing-library-en-entornos-react.md)
+- 2025-10-20 18:43 - [Configuración de Jest en proyectos TypeScript](./_posts/2025-10-20-configuraci-n-de-jest-en-proyectos-typescript.md)
+- 2025-10-20 18:37 - [Cobertura de código en Jest y análisis con SonarQube](./_posts/2025-10-20-cobertura-de-c-digo-en-jest-y-an-lisis-con-sonarqube.md)
+- 2025-10-20 18:33 - [testing asíncrono en Jest con Promises y async await](./_posts/2025-10-20-testing-as-ncrono-en-jest-con-promises-y-async-await.md)
+- 2025-10-20 18:02 - [Guía avanzada de Jest con mocks y spies](./_posts/2025-10-20-gu-a-avanzada-de-jest-con-mocks-y-spies.md)
+- 2025-10-20 15:51 - [Guías de aprendizaje y práctica avanzada con Jest](./_posts/2025-10-20-gu-as-de-aprendizaje-y-pr-ctica-avanzada-con-jest.md)
+- 2025-10-19 21:46 - [Playwright - Temas Avanzados y Casos Especiales](./_posts/2025-10-19-playwright---temas-avanzados-y-casos-especiales.md)
+- 2025-10-19 16:57 - [Guía Actualizada 2025 de E2E End-to-End Testing](./_posts/2025-10-19-gu-a-actualizada-2025-de-e2e-end-to-end-testing.md)
+- 2025-10-19 16:49 - [E2E - Ejemplos Prácticos Avanzados](./_posts/2025-10-19-e2e---ejemplos-pr-cticos-avanzados.md)
+- 2025-10-19 15:42 - [Guía Práctica de E2E - End to End Testing](./_posts/2025-10-19-gu-a-pr-ctica-de-e2e---end-to-end-testing.md)
+- 2025-10-19 14:54 - [E2E - Conceptos Avanzados y Estrategia Completa](./_posts/2025-10-19-e2e---conceptos-avanzados-y-estrategia-completa.md)
+- 2025-10-19 13:44 - [glosario de terminos sobre qa](./_posts/2025-10-19-glosario-de-terminos-sobre-qa.md)
+- 2025-10-19 03:54 - [Quality Assurance Estrategia y Gobierno](./_posts/2025-10-19-quality-assurance-estrategia-y-gobierno.md)
+- 2025-10-18 16:31 - [glosario de QA Avanzado](./_posts/2025-10-18-glosario-de-qa-avanzado.md)
+- 2025-10-18 15:22 - [qunit guia para entrevistas](./_posts/2025-10-18-qunit-guia-para-entrevistas.md)
+- 2025-10-18 14:17 - [QUnit - Debugging,diagnóstico avanzado e integración CICD con coverage moderno (nyc,c8)](./_posts/2025-10-18-qunit---debugging--diagn-stico-avanzado-e-integraci-n-cicd-con-coverage-moderno--nyc--c8-.md)
+- 2025-10-18 14:15 - [QUnit - Arquitectura de testing modular](./_posts/2025-10-18-qunit---arquitectura-de-testing-modular.md)
+- 2025-10-17 18:43 - [Mocks MSW - patrones de diseño y arquitectura de mocks](./_posts/2025-10-17-mocks-msw---patrones-de-dise-o-y-arquitectura-de-mocks.md)
+- 2025-10-17 18:38 - [Mocks MSW - patrones de validación y depuración](./_posts/2025-10-17-mocks-msw---patrones-de-validaci-n-y-depuraci-n.md)
+- 2025-10-17 18:23 - [Mocks MSW - integración avanzada con Jest,Vitest y Playwright](./_posts/2025-10-17-mocks-msw---integraci-n-avanzada-con-jest--vitest-y-playwright.md)
+- 2025-10-17 18:19 - [Mocks MSW - patrones y casos reales](./_posts/2025-10-17-mocks-msw---patrones-y-casos-reales.md)
+- 2025-10-17 17:02 - [Guía de Entrevista tdd](./_posts/2025-10-17-gu-a-de-entrevista-tdd.md)
+- 2025-10-17 16:48 - [roadmap de TDD con ejemplo de uso en una empresa](./_posts/2025-10-17-roadmap-de-tdd-con-ejemplo-de-uso-en-una-empresa.md)
+- 2025-10-17 16:28 - [Glosario de TDD](./_posts/2025-10-17-glosario-de-tdd.md)
+- 2025-10-17 14:15 - [TDD patterns](./_posts/2025-10-17-tdd-patterns.md)
+- 2025-10-17 13:26 - [ejemplos de TDD](./_posts/2025-10-17-ejemplos-de-tdd.md)
+- 2025-10-17 01:10 - [Testing Avanzado 2025 Prácticas y Ejemplos](./_posts/2025-10-16-testing-avanzado-2025-pr-cticas-y-ejemplos.md)
+- 2025-10-17 01:08 - [Testing Fundamental Multilenguaje 2025 Prácticas y Ejemplos](./_posts/2025-10-16-testing-fundamental-multilenguaje-2025-pr-cticas-y-ejemplos.md)
+- 2025-10-17 01:05 - [Testing Fundamental Prácticas y Ejemplos de Código](./_posts/2025-10-16-testing-fundamental-pr-cticas-y-ejemplos-de-c-digo.md)
+- 2025-10-17 00:25 - [Mapa Conceptual Completo de Testing](./_posts/2025-10-16-mapa-conceptual-completo-de-testing.md)
+- 2025-10-16 18:28 - [Glosario de Conceptos Fundamentales de Testing](./_posts/2025-10-16-glosario-de-conceptos-fundamentales-de-testing.md)
+- 2025-10-16 18:25 - [Glosario Avanzado de Testing](./_posts/2025-10-16-glosario-avanzado-de-testing.md)
+- 2025-10-16 18:21 - [Glosario Complementario de Conceptos de Testing](./_posts/2025-10-16-glosario-complementario-de-conceptos-de-testing.md)
+- 2025-10-16 18:18 - [glosario de terminos de testing de nota principal](./_posts/2025-10-16-glosario-de-terminos-de-testing-de-nota-principal.md)
+- 2025-10-15 17:38 - [QUnit](./_posts/2025-10-15-qunit.md)
+- 2025-10-15 17:32 - [profiler](./_posts/2025-10-15-profiler.md)
+- 2025-10-15 12:14 - [MSW Mocks service worker](./_posts/2025-10-15-msw-mocks-service-worker.md)
+- 2025-10-15 11:53 - [BDD](./_posts/2025-10-15-bdd.md)
+- 2025-10-15 11:48 - [E2E - End to End Testing](./_posts/2025-10-15-e2e---end-to-end-testing.md)
+- 2025-09-06 21:23 - [debbuger](./_posts/2025-09-06-debbuger.md)
+- 2025-06-15 11:46 - [TDD - Test Driven Development](./_posts/2025-06-15-tdd---test-driven-development.md)
+- 2025-02-19 18:47 - [Cucumber](./_posts/2025-02-19-cucumber.md)
+- 2025-01-29 18:46 - [Playwright](./_posts/2025-01-29-playwright.md)
+- 2025-01-29 14:42 - [QA](./_posts/2025-01-29-qa.md)
+- 2024-11-26 01:06 - [PHPUnit](./_posts/2024-11-26-phpunit.md)
+- 2024-11-23 17:05 - [jest](./_posts/2024-11-23-jest.md)
+- 2024-11-23 16:58 - [karma](./_posts/2024-11-23-karma.md)
+- 2024-11-23 16:53 - [jasmine](./_posts/2024-11-23-jasmine.md)
+- 2024-11-23 16:52 - [cypress](./_posts/2024-11-23-cypress.md)
+- 2024-11-23 16:50 - [selenium](./_posts/2024-11-23-selenium.md)
+- 2024-11-22 21:11 - [JUnit](./_posts/2024-11-22-junit.md)
+- 2024-11-20 17:51 - [linters](./_posts/2024-11-20-linters.md)
+- 2024-11-16 20:49 - [JMeter](./_posts/2024-11-16-jmeter.md)
+- 2024-11-07 03:52 - [Testing](./_posts/2024-11-07-testing.md)
+
+## uncategorized
+
+- 2026-04-03 - [Celery Conceptos Avanzados y Configuración Profesional](./_posts/2026-04-03-celery-conceptos-avanzados-y-configuraci-n-profesional.md)
+- 2026-04-03 - [Celery Temas Avanzados Varios](./_posts/2026-04-03-celery-temas-avanzados-varios.md)
+- 2026-04-03 - [Guía Práctica Completa de Celery](./_posts/2026-04-03-gu-a-pr-ctica-completa-de-celery.md)
+- 2026-04-03 - [Sin título](./_posts/2026-04-03-sin-t-tulo.md)
+- 2025-10-22 12:19 - [Estrategias de mocking para APIs y servicios externos con Jest](./_posts/2025-10-22-estrategias-de-mocking-para-apis-y-servicios-externos-con-jest.md)
+- 2025-10-19 14:43 - [Guía Fundamental de E2E](./_posts/2025-10-19-gu-a-fundamental-de-e2e.md)
+- 2025-10-18 17:02 - [QA Procesos y Ciclo de Vida](./_posts/2025-10-18-qa-procesos-y-ciclo-de-vida.md)
+- 2025-10-18 16:58 - [QA Gestión Herramientas y Métricas](./_posts/2025-10-18-qa-gesti-n-herramientas-y-m-tricas.md)
+- 2025-05-24 18:48 - [Telefonía y UC](./_posts/2025-05-24-telefon-a-y-uc.md)
+- 2025-02-03 21:05 - [CSS 30 projects curso](./_posts/2025-02-03-css-30-projects-curso.md)
+- 2024-12-09 23:51 - [redes mobiles](./_posts/2024-12-09-redes-mobiles.md)
+- 2024-11-06 23:10 - [mates](./_posts/2024-11-06-mates.md)
+- 2024-02-15 16:32 - [CSS bootstrap](./_posts/2024-02-15-css-bootstrap.md)
+- 2024-02-15 16:30 - [CSS-basico](./_posts/2024-02-15-css-basico.md)
+- 2024-02-04 19:03 - [Linux en arch con virtualbox](./_posts/2024-02-04-linux-en-arch-con-virtualbox.md)
+- 2023-03-30 18:36 - [CSS-Guia completa](./_posts/2023-03-30-css-guia-completa.md)
+
+## virtualizacion
+
+- 2026-04-03 - [Kubernetes](./_posts/2026-04-03-kubernetes.md)
+- 2025-11-01 20:19 - [VDC Virtual Data Center](./_posts/2025-11-01-vdc-virtual-data-center.md)
+- 2025-10-30 16:37 - [devcontainers](./_posts/2025-10-30-devcontainers.md)
+- 2025-10-30 16:02 - [VDI Infraestructura de Escritorio Virtual](./_posts/2025-10-30-vdi-infraestructura-de-escritorio-virtual.md)
+- 2025-05-24 18:03 - [VMware](./_posts/2025-05-24-vmware.md)
+- 2025-04-14 03:22 - [OpenShift](./_posts/2025-04-14-openshift.md)
+- 2024-11-23 02:08 - [Lando](./_posts/2024-11-23-lando.md)
+
+## Navegacion
+
+- [`_posts/`](./_posts/)
