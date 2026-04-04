@@ -5,7 +5,6 @@ keywords:
 source:
 status: 📌
 Parent: "[[Area-Prog]]"
-public_note: true
 category: Testing
 ---
 # Guías de aprendizaje y práctica avanzada con Jest

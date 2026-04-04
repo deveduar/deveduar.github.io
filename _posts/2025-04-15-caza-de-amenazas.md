@@ -6,14 +6,13 @@ source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 aliases:
-public_note: true
 category: ciberseguridad
 tags:
   - Hacking
   - amenazas
 ---
 # Caza de amenazas
-``
+
 
 ## Definición y objetivos
 **Threat Hunting** es un enfoque **proactivo** de ciberseguridad centrado en buscar amenazas que han evadido controles preventivos y detecciones automáticas.

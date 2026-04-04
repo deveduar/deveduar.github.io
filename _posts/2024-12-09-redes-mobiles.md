@@ -1,11 +1,10 @@
 ---
 date: 2024-12-09 23:51
 title: redes mobiles
-keywords:
-source:
+keywords: 
+source: 
 status: 📌
 Parent: "[[Area-Sistemas]]"
-public_note: true
 category: uncategorized
 tags:
   - redes

@@ -5,7 +5,6 @@ keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-public_note: true
 category: Data Science
 tags:
   - IA
@@ -14,7 +13,7 @@ tags:
   - ML
 ---
 # Machine Learning
-``
+
 
 ## Recursos y Referencias
 - [mates](/uncategorized/mates/)

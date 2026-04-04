@@ -5,7 +5,6 @@ keywords:
 source:
 status: 📌
 Parent: "[[Area-Prog]]"
-public_note: true
 category: Testing
 ---
 # Guía Actualizada 2025 de E2E – “End-to-End Testing

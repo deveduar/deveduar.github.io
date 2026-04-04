@@ -5,7 +5,6 @@ keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-public_note: true
 category: ciberseguridad
 tags:
   - Hacking
@@ -14,7 +13,7 @@ tags:
   - tool
 ---
 # Burp Suite
-``
+
 
 ## Concepto y propósito
 Burp Suite es una plataforma integral para pruebas de seguridad en aplicaciones web, ampliamente utilizada en [Pentesting](/ciberseguridad/pentesting/) y análisis de [vulnerabilidades](/ciberseguridad/vulnerabilidades/). Actúa como un proxy de interceptación entre el navegador y la aplicación, permitiendo inspeccionar, modificar y analizar el tráfico HTTP/S en tiempo real. Es una herramienta clave tanto para auditorías manuales como para procesos automatizados de detección de fallos de seguridad.
@@ -180,7 +179,6 @@ Burp Suite es una plataforma integral para pruebas de seguridad en aplicaciones 
 -	Integración con enfoques DevSecOps.
 
 # Burp Suite – Recursos Actualizados a 2025
-$= dv.current().file.tags.join(" ")
 
 ## Versiones y lanzamientos oficiales
 -	**Burp Suite Professional / Community 2025.12**: última versión publicada en diciembre de 2025, con mejoras como soporte de OAuth2 Client Credentials para escaneo de APIs, mejoras en Comparer y atajos de extensiones.  

@@ -5,13 +5,12 @@ Parent: "[[Area-Sistemas]]"
 keywords:
 source:
 status: 🌟
-public_note: true
 category: ciberseguridad
 tags:
   - Hacking
 ---
 # Auditorías
-``
+
 
 - [ciberseguridad](/ciberseguridad/ciberseguridad/)
 ## Alcance de Auditorías de Seguridad

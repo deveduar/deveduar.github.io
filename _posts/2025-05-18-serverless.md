@@ -5,7 +5,6 @@ keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-public_note: true
 category: Backend
 tags:
   - backend
@@ -14,7 +13,7 @@ tags:
   - devops
 ---
 # Serverless
-``
+
 
 ## Conceptos Clave
 - [Backend](/backend/backend/)

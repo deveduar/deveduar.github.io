@@ -5,7 +5,6 @@ status: 🌟
 Parent: "[[Area-Prog]]"
 keywords:
 source:
-public_note: true
 category: Databases
 tags:
   - DB

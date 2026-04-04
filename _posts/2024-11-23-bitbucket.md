@@ -1,11 +1,10 @@
 ---
 date: 2024-11-23 02:15
 title: bitbucket
-keywords:
-source:
+keywords: 
+source: 
 status: 📌
 Parent: "[[Area-Sistemas]]"
-public_note: true
 category: devops
 tags:
   - devops

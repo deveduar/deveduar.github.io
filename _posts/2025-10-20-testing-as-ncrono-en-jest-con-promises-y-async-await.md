@@ -5,7 +5,6 @@ keywords:
 source:
 status: 📌
 Parent: "[[Area-Prog]]"
-public_note: true
 category: Testing
 ---
 # testing asíncrono en Jest con Promises y async await

@@ -5,7 +5,6 @@ keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-public_note: true
 category: ciberseguridad
 tags:
   - Hacking
@@ -13,7 +12,7 @@ tags:
   - malware
 ---
 # Antivirus
-``
+
 
 ## Concepto
 Un **antivirus** es un software de [ciberseguridad](/ciberseguridad/ciberseguridad/) diseñado para **prevenir, detectar, analizar y eliminar [malware](/ciberseguridad/malware/)** de un sistema informático. Su función principal es proteger la **confidencialidad, integridad y disponibilidad** de la información frente a amenazas conocidas y emergentes.

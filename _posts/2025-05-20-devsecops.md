@@ -5,14 +5,13 @@ keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-public_note: true
 category: devops
 tags:
   - devops
   - ciberseguridad
 ---
 # DevSecOps
-``
+
 
 - DevSecOps Avanzado Expansión de Conceptos y Prácticas Modernas
 - DevSecOps 2025 – Temas Emergentes y Complementarios

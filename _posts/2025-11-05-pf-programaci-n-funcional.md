@@ -6,7 +6,6 @@ source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 aliases:
-public_note: true
 category: Computer Science
 tags:
   - CS
@@ -14,7 +13,7 @@ tags:
   - programming
 ---
 # PF Programación Funcional
-``
+
 
 - [Computer Science](/computer%20science/computer-science/)
 

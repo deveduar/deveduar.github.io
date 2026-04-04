@@ -5,7 +5,6 @@ keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-public_note: true
 category: Data Science
 tags:
   - IA
@@ -13,7 +12,7 @@ tags:
   - deep-learning
 ---
 # Deep Learning
-``
+
 
 - [Data Science](/data%20science/data-science/)
 - [Machine Learning](/data%20science/machine-learning/)

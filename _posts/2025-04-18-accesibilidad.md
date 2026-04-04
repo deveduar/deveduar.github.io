@@ -5,14 +5,13 @@ keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-public_note: true
 category: Frontend
 tags:
   - frontend
   - accesibilidad
 ---
 # Accesibilidad
-``
+
 
 ## Conceptos Base
 - [Frontend](/frontend/frontend/)

@@ -5,7 +5,6 @@ keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-public_note: true
 category: Motor de plantillas
 tags:
   - PHP
@@ -13,7 +12,7 @@ tags:
   - template-engine
 ---
 # handlebars
-``
+
 
 ## Relación con otros lenguajes y tecnologías
 - [PHP](/backend/php/)  

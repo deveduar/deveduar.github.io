@@ -6,7 +6,6 @@ source:
 status: 🚀
 Parent: "[[Area-Prog]]"
 aliases:
-public_note: true
 category: Databases
 tags:
   - db
@@ -553,33 +552,3 @@ views:
 
 ```
 {% endraw %}
-# omnivore db
-{% raw %}
-```base
-type: list
-name: "Notas con #db en Omnivore"
-order:
-  - property: date_saved
-    direction: desc
-columns:
-  - file.name
-  - date_saved
-filters:
-  and:
-    - file.inFolder("Omnivore")
-    - file.hasTag("db")
-views:
-  - type: table
-    name: Table
-    sort:
-      - property: file.mtime
-        direction: DESC
-
-```
-{% endraw %}
-
-
-
-
-
-

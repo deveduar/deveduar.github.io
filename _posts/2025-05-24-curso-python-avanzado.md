@@ -5,7 +5,6 @@ keywords:
 source:
 status: 📌
 Parent: "[[Area-Prog]]"
-public_note: true
 category: python
 tags:
   - python
@@ -137,16 +136,6 @@ tags:
 ---
 
 # ✔️ Tareas del Curso
-- [x] **Curso Python avanzado 📅**  
-	Plan general del curso completado.
-	- [x] **Lunes 11 de marzo – Examen intermedio**  
-	- [x] Completar módulos
-	- [x] Completar ejercicios
-	- [x] Exámenes de los módulos  
-		- Solo hacer Essentials PCAP 1 y 2 obligatoriamente  
-	- [x] Examen final 13:20
-
----
 
 ## 📚 Repasar
 - Decoradores  

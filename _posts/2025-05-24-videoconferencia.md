@@ -1,11 +1,10 @@
 ---
 date: 2025-05-24 19:00
 title: Videoconferencia
-keywords:
-source:
+keywords: 
+source: 
 status: 📌
 Parent: "[[Area-Sistemas]]"
-public_note: true
 category: Telefona y UC
 tags:
   - redes

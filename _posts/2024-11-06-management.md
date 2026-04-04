@@ -5,7 +5,6 @@ keywords:
 source:
 status: 🚀
 Parent: "[[Area-Sistemas]]"
-public_note: true
 category: Management
 tags:
   - PM

@@ -5,7 +5,6 @@ keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-public_note: true
 category: Sistemas
 tags:
   - MDM
@@ -14,7 +13,7 @@ tags:
   - redes
 ---
 # Gestión de Dispositivos Móviles MDM
-``
+
 
 La gestión de dispositivos móviles (MDM, por sus siglas en inglés) permite a las organizaciones administrar y asegurar de manera remota dispositivos móviles y equipos de trabajo. Facilita la implementación de políticas de seguridad, configuración de dispositivos, instalación de aplicaciones y control de acceso, optimizando la productividad y reduciendo riesgos.
 

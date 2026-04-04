@@ -3,14 +3,14 @@
 > Archivo generado automaticamente por `public-notes-sync`.
 > Este README esta pensado para vivir en la raiz del repo y enlazar a [`_posts/`](./_posts/).
 
-Total de posts: 483
+Total de posts: 480
 
 ## Categorias
 
 - [autenticacion](#autenticacion) (15)
 - [automatizacion y build](#automatizacion-y-build) (15)
 - [backend](#backend) (51)
-- [ciberseguridad](#ciberseguridad) (59)
+- [ciberseguridad](#ciberseguridad) (58)
 - [cloud](#cloud) (15)
 - [computer science](#computer-science) (19)
 - [data science](#data-science) (14)
@@ -21,7 +21,7 @@ Total de posts: 483
 - [electronica](#electronica) (3)
 - [frontend](#frontend) (26)
 - [gamedev](#gamedev) (4)
-- [gestion de negocio](#gestion-de-negocio) (8)
+- [gestion de negocio](#gestion-de-negocio) (7)
 - [infraestructura it](#infraestructura-it) (29)
 - [linux](#linux) (11)
 - [management](#management) (8)
@@ -36,7 +36,7 @@ Total de posts: 483
 - [software engineering](#software-engineering) (13)
 - [telefona y uc](#telefona-y-uc) (5)
 - [testing](#testing) (56)
-- [uncategorized](#uncategorized) (16)
+- [uncategorized](#uncategorized) (15)
 - [virtualizacion](#virtualizacion) (7)
 
 ## autenticacion
@@ -131,7 +131,6 @@ Total de posts: 483
 
 ## ciberseguridad
 
-- 2026-04-03 - [amenazas](./_posts/2026-04-03-amenazas.md)
 - 2026-01-02 17:28 - [vulnerabilidades](./_posts/2026-01-02-vulnerabilidades.md)
 - 2025-12-31 15:49 - [MITRE ATT&CK](./_posts/2025-12-31-mitre-att-ck.md)
 - 2025-10-26 14:13 - [HashiCorp Vault](./_posts/2025-10-26-hashicorp-vault.md)
@@ -233,7 +232,7 @@ Total de posts: 483
 
 ## data science
 
-- 2026-04-03 - [apache spark](./_posts/2026-04-03-apache-spark.md)
+- 2026-04-04 - [apache spark](./_posts/2026-04-04-apache-spark.md)
 - 2025-10-09 14:39 - [inngest](./_posts/2025-10-09-inngest.md)
 - 2025-08-09 13:48 - [LLM](./_posts/2025-08-09-llm.md)
 - 2025-01-29 17:59 - [Clojure](./_posts/2025-01-29-clojure.md)
@@ -250,9 +249,9 @@ Total de posts: 483
 
 ## databases
 
-- 2026-04-03 - [DBML](./_posts/2026-04-03-dbml.md)
-- 2026-04-03 - [JSON](./_posts/2026-04-03-json.md)
-- 2026-04-03 - [mongodb](./_posts/2026-04-03-mongodb.md)
+- 2026-04-04 - [DBML](./_posts/2026-04-04-dbml.md)
+- 2026-04-04 - [JSON](./_posts/2026-04-04-json.md)
+- 2026-04-04 - [mongodb](./_posts/2026-04-04-mongodb.md)
 - 2025-12-10 13:46 - [PLSQL](./_posts/2025-12-10-plsql.md)
 - 2025-01-25 05:31 - [DynamoDB](./_posts/2025-01-25-dynamodb.md)
 - 2024-11-18 19:27 - [XML](./_posts/2024-11-18-xml.md)
@@ -319,7 +318,7 @@ Total de posts: 483
 
 ## frontend
 
-- 2026-04-03 - [UX-UI](./_posts/2026-04-03-ux-ui.md)
+- 2026-04-04 - [UX-UI](./_posts/2026-04-04-ux-ui.md)
 - 2025-12-07 18:15 - [pwa](./_posts/2025-12-07-pwa.md)
 - 2025-12-07 13:48 - [lit](./_posts/2025-12-07-lit.md)
 - 2025-12-06 18:15 - [Web Components](./_posts/2025-12-06-web-components.md)
@@ -355,7 +354,6 @@ Total de posts: 483
 
 ## gestion de negocio
 
-- 2026-04-03 - [business intelligence](./_posts/2026-04-03-business-intelligence.md)
 - 2025-05-21 18:41 - [AIOps](./_posts/2025-05-21-aiops.md)
 - 2025-05-21 18:34 - [DMS sistema de gestión de documentos](./_posts/2025-05-21-dms-sistema-de-gesti-n-de-documentos.md)
 - 2025-05-21 18:33 - [EDI Intercambio Electrónico de datos](./_posts/2025-05-21-edi-intercambio-electr-nico-de-datos.md)
@@ -529,7 +527,7 @@ Total de posts: 483
 
 ## testing
 
-- 2026-04-03 - [practicas y ejemplos codigo comunes de testing a 2025 extenso](./_posts/2026-04-03-practicas-y-ejemplos-codigo-comunes-de-testing-a-2025-extenso.md)
+- 2026-04-04 - [practicas y ejemplos codigo comunes de testing a 2025 extenso](./_posts/2026-04-04-practicas-y-ejemplos-codigo-comunes-de-testing-a-2025-extenso.md)
 - 2025-10-22 17:27 - [Arquitectura de Cucumber](./_posts/2025-10-22-arquitectura-de-cucumber.md)
 - 2025-10-20 20:03 - [Uso de jest-dom y Testing Library en entornos React](./_posts/2025-10-20-uso-de-jest-dom-y-testing-library-en-entornos-react.md)
 - 2025-10-20 18:43 - [Configuración de Jest en proyectos TypeScript](./_posts/2025-10-20-configuraci-n-de-jest-en-proyectos-typescript.md)
@@ -546,11 +544,11 @@ Total de posts: 483
 - 2025-10-19 03:54 - [Quality Assurance Estrategia y Gobierno](./_posts/2025-10-19-quality-assurance-estrategia-y-gobierno.md)
 - 2025-10-18 16:31 - [glosario de QA Avanzado](./_posts/2025-10-18-glosario-de-qa-avanzado.md)
 - 2025-10-18 15:22 - [qunit guia para entrevistas](./_posts/2025-10-18-qunit-guia-para-entrevistas.md)
-- 2025-10-18 14:17 - [QUnit - Debugging,diagnóstico avanzado e integración CICD con coverage moderno (nyc,c8)](./_posts/2025-10-18-qunit---debugging--diagn-stico-avanzado-e-integraci-n-cicd-con-coverage-moderno--nyc--c8-.md)
+- 2025-10-18 14:17 - [QUnit - Debugging, diagnóstico avanzado e integración CICD con coverage moderno (nyc, c8)](./_posts/2025-10-18-qunit---debugging--diagn-stico-avanzado-e-integraci-n-cicd-con-coverage-moderno--nyc--c8-.md)
 - 2025-10-18 14:15 - [QUnit - Arquitectura de testing modular](./_posts/2025-10-18-qunit---arquitectura-de-testing-modular.md)
 - 2025-10-17 18:43 - [Mocks MSW - patrones de diseño y arquitectura de mocks](./_posts/2025-10-17-mocks-msw---patrones-de-dise-o-y-arquitectura-de-mocks.md)
 - 2025-10-17 18:38 - [Mocks MSW - patrones de validación y depuración](./_posts/2025-10-17-mocks-msw---patrones-de-validaci-n-y-depuraci-n.md)
-- 2025-10-17 18:23 - [Mocks MSW - integración avanzada con Jest,Vitest y Playwright](./_posts/2025-10-17-mocks-msw---integraci-n-avanzada-con-jest--vitest-y-playwright.md)
+- 2025-10-17 18:23 - [Mocks MSW - integración avanzada con Jest, Vitest y Playwright](./_posts/2025-10-17-mocks-msw---integraci-n-avanzada-con-jest--vitest-y-playwright.md)
 - 2025-10-17 18:19 - [Mocks MSW - patrones y casos reales](./_posts/2025-10-17-mocks-msw---patrones-y-casos-reales.md)
 - 2025-10-17 17:02 - [Guía de Entrevista tdd](./_posts/2025-10-17-gu-a-de-entrevista-tdd.md)
 - 2025-10-17 16:48 - [roadmap de TDD con ejemplo de uso en una empresa](./_posts/2025-10-17-roadmap-de-tdd-con-ejemplo-de-uso-en-una-empresa.md)
@@ -588,10 +586,9 @@ Total de posts: 483
 
 ## uncategorized
 
-- 2026-04-03 - [Celery Conceptos Avanzados y Configuración Profesional](./_posts/2026-04-03-celery-conceptos-avanzados-y-configuraci-n-profesional.md)
-- 2026-04-03 - [Celery Temas Avanzados Varios](./_posts/2026-04-03-celery-temas-avanzados-varios.md)
-- 2026-04-03 - [Guía Práctica Completa de Celery](./_posts/2026-04-03-gu-a-pr-ctica-completa-de-celery.md)
-- 2026-04-03 - [Sin título](./_posts/2026-04-03-sin-t-tulo.md)
+- 2026-04-04 - [celery-conceptos-avanzados-y-configuraci-n-profesional](./_posts/2026-04-04-celery-conceptos-avanzados-y-configuraci-n-profesional.md)
+- 2026-04-04 - [celery-temas-avanzados-varios](./_posts/2026-04-04-celery-temas-avanzados-varios.md)
+- 2026-04-04 - [gu-a-pr-ctica-completa-de-celery](./_posts/2026-04-04-gu-a-pr-ctica-completa-de-celery.md)
 - 2025-10-22 12:19 - [Estrategias de mocking para APIs y servicios externos con Jest](./_posts/2025-10-22-estrategias-de-mocking-para-apis-y-servicios-externos-con-jest.md)
 - 2025-10-19 14:43 - [Guía Fundamental de E2E](./_posts/2025-10-19-gu-a-fundamental-de-e2e.md)
 - 2025-10-18 17:02 - [QA Procesos y Ciclo de Vida](./_posts/2025-10-18-qa-procesos-y-ciclo-de-vida.md)
@@ -607,7 +604,7 @@ Total de posts: 483
 
 ## virtualizacion
 
-- 2026-04-03 - [Kubernetes](./_posts/2026-04-03-kubernetes.md)
+- 2026-04-04 - [Kubernetes](./_posts/2026-04-04-kubernetes.md)
 - 2025-11-01 20:19 - [VDC Virtual Data Center](./_posts/2025-11-01-vdc-virtual-data-center.md)
 - 2025-10-30 16:37 - [devcontainers](./_posts/2025-10-30-devcontainers.md)
 - 2025-10-30 16:02 - [VDI Infraestructura de Escritorio Virtual](./_posts/2025-10-30-vdi-infraestructura-de-escritorio-virtual.md)

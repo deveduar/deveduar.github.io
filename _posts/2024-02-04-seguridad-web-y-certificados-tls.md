@@ -5,7 +5,6 @@ status: 🌟
 Parent: "[[Area-Sistemas]]"
 keywords:
 source:
-public_note: true
 category: devops
 tags:
   - Devops

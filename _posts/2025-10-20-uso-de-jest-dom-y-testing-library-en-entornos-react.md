@@ -5,7 +5,6 @@ keywords:
 source:
 status: 📌
 Parent: "[[Area-Prog]]"
-public_note: true
 category: Testing
 ---
 # Uso de jest-dom y Testing Library en entornos React

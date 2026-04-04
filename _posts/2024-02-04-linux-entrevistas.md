@@ -5,13 +5,12 @@ status: 🌟
 Parent: "[[Area-Sistemas]]"
 keywords:
 source:
-public_note: true
 category: Linux
 tags:
   - Linux
 ---
 # Linux entrevistas
-``
+
 
 ## Recursos y referencias
 - [Top 10 Linux Job Interview Questions](https://youtu.be/l0QGLMwR-lY)

@@ -5,7 +5,6 @@ keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-public_note: true
 category: cloud
 tags:
   - cloud
@@ -13,7 +12,7 @@ tags:
   - scaling
 ---
 # Auto Scaling
-``
+
 
 - [cloud](/cloud/cloud/)  
 - [Backend](/backend/backend/)  

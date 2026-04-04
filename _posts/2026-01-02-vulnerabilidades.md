@@ -6,14 +6,13 @@ source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 aliases:
-public_note: true
 category: ciberseguridad
 tags:
   - vulnerabilidades
   - owasp
 ---
 # vulnerabilidades
-``
+
 
 ## Enlaces y notas relacionadas
 - [OWASP](/ciberseguridad/owasp/)

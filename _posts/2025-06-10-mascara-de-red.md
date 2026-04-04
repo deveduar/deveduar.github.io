@@ -1,11 +1,10 @@
 ---
 date: 2025-06-10 15:20
 title: mascara de red
-keywords:
-source:
+keywords: 
+source: 
 status: 📌
 Parent: "[[Area-Sistemas]]"
-public_note: true
 category: Redes
 tags:
   - redes

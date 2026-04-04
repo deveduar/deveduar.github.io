@@ -5,13 +5,12 @@ keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-public_note: true
 category: ciberseguridad
 tags:
   - vulnerabilidades
 ---
 # Bug Bounty
-``
+
 
 ## Relación con otros dominios
 - [ciberseguridad](/ciberseguridad/ciberseguridad/)
@@ -443,7 +442,6 @@ Alta / Crítica
 - Menos automatización y más análisis manual suele dar mejores resultados
 
 # Bug Bounty – Tools y Casos de Uso
-$= dv.current().file.tags.join(" ")
 
 ## Reconocimiento y Enumeración
 ### Subfinder

@@ -6,7 +6,6 @@ keywords:
 source:
 status: 🌟
 Parent: "[[Area-IA]]"
-public_note: true
 category: mates
 tags:
   - Mates

@@ -5,13 +5,12 @@ keywords:
 source:
 status: 🚀
 Parent: "[[Area-Sistemas]]"
-public_note: true
 category: mantenimiento
 tags:
   - mantenimiento
 ---
 # mantenimiento
-``
+
 
 ## Conceptos Clave
 - [Management](/management/management/)
@@ -195,30 +194,3 @@ tags:
 	- [CMMS Adoption Challenges](https://blog.infraspeak.com/es/mantenimiento-estadisticas-desafios-tendencias)
 - Evolución del RCM hacia modelos inteligentes y autoajustables.
 	- [Future of RCM](https://www.mantenimientoelectrico.com/mantenimiento/estrategias-mantenimiento-basadas-confiabilidad-operacional-rcm-ia-hibrida-n8032)
-
-# omnivore mantenimiento
-{% raw %}
-```base
-type: list
-name: "Notas con #mantenimiento en Omnivore"
-order:
-  - property: date_saved
-    direction: desc
-columns:
-  - file.name
-  - date_saved
-filters:
-  and:
-    - file.inFolder("Omnivore")
-    - file.hasTag("mantenimiento", "Mantenimiento")
-views:
-  - type: table
-    name: Table
-    sort:
-      - property: file.mtime
-        direction: DESC
-```
-{% endraw %}
-
-
-

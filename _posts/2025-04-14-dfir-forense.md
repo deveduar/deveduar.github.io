@@ -6,14 +6,13 @@ source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 aliases:
-public_note: true
 category: ciberseguridad
 tags:
   - Hacking
   - monitoreo
 ---
 # DFIR forense
-``
+
 
 ## Concepto y alcance de DFIR
 - **Digital Forensics & Incident Response (DFIR)** integra el análisis forense digital con la respuesta a incidentes.

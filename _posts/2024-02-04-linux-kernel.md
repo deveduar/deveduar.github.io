@@ -5,7 +5,6 @@ status: 🌟
 Parent: "[[Area-Sistemas]]"
 keywords:
 source:
-public_note: true
 category: Linux
 tags:
   - Linux

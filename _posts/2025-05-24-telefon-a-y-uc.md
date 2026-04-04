@@ -1,11 +1,10 @@
 ---
 date: 2025-05-24 18:48
 title: Telefonía y UC
-keywords:
-source:
+keywords: 
+source: 
 status: 📌
 Parent: "[[Area-Sistemas]]"
-public_note: true
 category: uncategorized
 tags:
   - redes

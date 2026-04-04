@@ -6,14 +6,13 @@ source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 aliases:
-public_note: true
 category: ciberseguridad
 tags:
   - Hacking
   - ciberseguridad
 ---
 # Ingeniería inversa
-``
+
 
 ## Enlaces conceptuales
 - [vulnerabilidades](/ciberseguridad/vulnerabilidades/)

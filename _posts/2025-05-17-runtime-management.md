@@ -6,7 +6,6 @@ source:
 status: 🌟
 Parent: "[[Area-Prog]]"
 aliases:
-public_note: true
 category: Backend
 tags:
   - devops
@@ -14,7 +13,7 @@ tags:
   - procesos
 ---
 # Runtime Management
-``
+
 
 - [Backend](/backend/backend/)
 ## Conceptos Clave

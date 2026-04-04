@@ -5,7 +5,6 @@ keywords:
 source:
 status: 🚀
 Parent: "[[Area-Sistemas]]"
-public_note: true
 category: infraestructura IT
 tags:
   - IT
@@ -15,7 +14,7 @@ tags:
   - estandares
 ---
 # Infraestructura IT
-``
+
 
 ## Fundamentos TI
 - [Computer Science](/computer%20science/computer-science/) – Principios de computación, algoritmos, estructuras de datos y fundamentos de hardware y software.

@@ -3,7 +3,6 @@ date: 2024-09-04T03:13:00
 title: javascript
 status: 🌟
 Parent: "[[Area-Prog]]"
-public_note: true
 category: Desarrollo web
 tags:
   - JS

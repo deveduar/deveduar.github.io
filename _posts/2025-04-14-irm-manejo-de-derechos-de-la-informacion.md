@@ -5,14 +5,13 @@ keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-public_note: true
 category: ciberseguridad
 tags:
   - hardening
   - Hacking
 ---
 # IRM — Manejo de Derechos de la Información  
-``
+
 
 - [hardening](/ciberseguridad/hardening/) 
 - [control de datos](/ciberseguridad/control-de-datos/)

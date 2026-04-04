@@ -5,7 +5,6 @@ keywords:
 source:
 status: 📌
 Parent: "[[Area-Prog]]"
-public_note: true
 category: uncategorized
 ---
 # Estrategias de mocking para APIs y servicios externos con Jest

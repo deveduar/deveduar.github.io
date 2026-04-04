@@ -5,7 +5,6 @@ keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-public_note: true
 category: Desarrollo multiplataforma
 tags:
   - desktop-apps
@@ -14,7 +13,7 @@ tags:
   - native_runtime
 ---
 # Capacitor
-``
+
 ## Recursos y documentación
 - [Desarrollo multiplataforma](/desarrollo%20multiplataforma/desarrollo-multiplataforma/)
 - [angular](/frontend/angular/)
@@ -500,7 +499,6 @@ export const environment = {
 * Versionar cambios nativos junto al frontend.
 
 # Recursos de Capacitor (estado **2025**)
-$= dv.current().file.tags.join(" ")
 
 ## 📘 Documentación oficial 2025
 - **[Capacitor Docs v5 – Plugins y APIs](https://capacitorjs.com/docs/v5/plugins)**  

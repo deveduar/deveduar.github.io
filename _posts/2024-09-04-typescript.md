@@ -5,7 +5,6 @@ keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-public_note: true
 category: Software engineering
 tags:
   - JS
@@ -800,30 +799,4 @@ declare const myGlobalVar: string;
 - *LambdaNet: Probabilistic Type Inference using Graph Neural Networks*  
 	- Inferencia de tipos mediante redes neuronales  
 	- [arxiv.org](https://arxiv.org/abs/2005.02161?utm_source=chatgpt.com)
-{% raw %}
 ```
-
-# omnivore typescript
-```
-{% endraw %}base
-type: list
-name: "Notas con #typescript en Omnivore"
-order:
-  - property: date_saved
-    direction: desc
-columns:
-  - file.name
-  - date_saved
-filters:
-  and:
-    - file.inFolder("Omnivore")
-    - file.hasTag("typescript", "Typescript")
-views:
-  - type: table
-    name: Table
-    sort:
-      - property: file.mtime
-        direction: DESC
-
-```
-

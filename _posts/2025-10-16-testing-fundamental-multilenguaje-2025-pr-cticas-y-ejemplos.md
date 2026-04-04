@@ -5,7 +5,6 @@ keywords:
 source:
 status: 📌
 Parent: "[[Area-Prog]]"
-public_note: true
 category: Testing
 ---
 # Testing Fundamental Multilenguaje 2025 Prácticas y Ejemplos

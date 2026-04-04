@@ -1,11 +1,10 @@
 ---
 date: 2024-11-18 02:50
 title: electronica
-keywords:
-source:
+keywords: 
+source: 
 status: 📌
 Parent: "[[Area-Sistemas]]"
-public_note: true
 category: electronica
 tags:
   - electronica

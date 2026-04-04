@@ -5,7 +5,6 @@ keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-public_note: true
 category: infraestructura IT
 tags:
   - ITIL
@@ -13,7 +12,7 @@ tags:
   - infraestructura
 ---
 # SI Sistema de Información
-``
+
 
 ## Concepto General
 Un **Sistema de Información (SI)** es un conjunto organizado de recursos (humanos, tecnológicos, datos y procedimientos) que permite **recopilar, procesar, almacenar y distribuir información** para apoyar la toma de decisiones, la coordinación, el control y el análisis dentro de una organización.  

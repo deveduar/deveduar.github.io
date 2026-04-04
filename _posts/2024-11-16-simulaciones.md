@@ -5,7 +5,6 @@ keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-public_note: true
 category: Desarrollo multiplataforma
 tags:
   - simulaciones
@@ -13,7 +12,7 @@ tags:
   - cpp
 ---
 # simulaciones
-``
+
 
 ## Áreas relacionadas y fundamentos
 - [electronica](/electronica/electronica/)

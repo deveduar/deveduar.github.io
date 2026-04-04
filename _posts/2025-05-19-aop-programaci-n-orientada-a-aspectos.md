@@ -5,14 +5,13 @@ keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-public_note: true
 category: Computer Science
 tags:
   - AOP
   - CS
 ---
 # AOP (Programación Orientada a Aspectos)
-``
+
 
 La **Programación Orientada a Aspectos (AOP)** es un paradigma que complementa la [POO Programación Orientada a Objetos](/computer%20science/poo-programaci-n-orientada-a-objetos/) y otros enfoques al permitir la **separación de las preocupaciones transversales** (cross-cutting concerns), es decir, funcionalidades que afectan múltiples módulos o capas de una aplicación pero no pertenecen a una sola responsabilidad principal.
 
@@ -168,7 +167,7 @@ calcular(5, 7)
 
 # AOP Avanzado y Ecosistema Moderno
 
-``
+
 
 La Programación Orientada a Aspectos (AOP) ha evolucionado más allá de su origen en entornos como Java o .NET, integrándose en arquitecturas modernas y paradigmas complementarios como la Programación Reactiva, los Microservicios o la Programación Funcional.  
 Esta nota amplía los conceptos avanzados, patrones, limitaciones y usos contemporáneos del paradigma.

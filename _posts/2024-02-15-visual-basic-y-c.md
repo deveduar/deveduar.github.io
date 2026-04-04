@@ -5,7 +5,6 @@ status: 🌟
 Parent: "[[Area-Prog]]"
 keywords:
 source:
-public_note: true
 category: Software engineering
 tags:
   - CS

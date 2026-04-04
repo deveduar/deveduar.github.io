@@ -5,7 +5,6 @@ status: 🌟
 Parent: "[[Area-Sistemas]]"
 keywords:
 source:
-public_note: true
 category: Redes
 tags:
   - Devops
@@ -13,8 +12,7 @@ tags:
 ---
 # curso-redes-CNNA-1
 
-
-- [x] examen final, 25 al 31 de Marzo de 2024
+- [Redes](/redes/redes/)
 - https://lms.netacad.com/course/view.php?id=2218778
 ## Libros
 - Las redes en la actualidad tema 1

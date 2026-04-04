@@ -5,7 +5,6 @@ keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-public_note: true
 category: infraestructura IT
 tags:
   - Znuny
@@ -13,7 +12,7 @@ tags:
   - ITIL
 ---
 # OTRS Znuny
-``
+
 
 - [ticketing](/management/ticketing/)
 ## Descripción General

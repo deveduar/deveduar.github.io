@@ -5,7 +5,6 @@ keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-public_note: true
 category: Backend
 tags:
   - apache
@@ -13,7 +12,7 @@ tags:
   - kafka
 ---
 # apache flink
-``
+
 
 - [apache](/backend/apache/)
 - [Apache Kafka](/backend/apache-kafka/)

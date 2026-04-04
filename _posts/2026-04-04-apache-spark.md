@@ -2,14 +2,13 @@
 title: apache spark
 status: 🌟
 Parent: "[[Area-Prog]]"
-public_note: true
 category: Data Science
 tags:
   - GCP
   - IA
 ---
 # APACHE SPARK
-``
+
 
 - hadoop
 - [apache](/backend/apache/)

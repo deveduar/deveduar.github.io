@@ -6,7 +6,6 @@ source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 aliases:
-public_note: true
 category: ciberseguridad
 tags:
   - Hacking
@@ -15,7 +14,7 @@ tags:
   - servicio
 ---
 # Ciberinteligencia TIP
-``
+
 
 ## Definición y propósito
 La **Ciberinteligencia TIP (Threat Intelligence Platform)** es el conjunto de procesos, capacidades y herramientas orientadas a **recopilar, analizar, correlacionar y explotar información** relacionada con amenazas digitales, con el objetivo de **anticiparse**, **prevenir** y **responder** de forma informada a incidentes de ciberseguridad.

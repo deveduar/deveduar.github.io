@@ -5,7 +5,6 @@ keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-public_note: true
 category: Backend
 tags:
   - backend
@@ -13,7 +12,7 @@ tags:
   - scaling
 ---
 # Instance Scaling
-``
+
 
 ## Conceptos Clave
 - [Backend](/backend/backend/)

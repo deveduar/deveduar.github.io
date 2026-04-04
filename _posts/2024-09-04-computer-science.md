@@ -5,7 +5,6 @@ keywords:
 source:
 status: 🚀
 Parent: "[[Area-Prog]]"
-public_note: true
 category: Computer Science
 tags:
   - CS
@@ -122,28 +121,3 @@ Expansiones hacia áreas relacionadas y multidisciplinarias.
   Infraestructura escalable, servicios distribuidos y gestión de recursos virtualizados.
 
 ---
-
-# Omnivore CS
-{% raw %}
-```base
-type: list
-name: "Notas con #CS en Omnivore"
-order:
-  - property: date_saved
-    direction: desc
-columns:
-  - file.name
-  - date_saved
-filters:
-  and:
-    - file.inFolder("Omnivore")
-    - file.hasTag("CS", "computer_science")
-views:
-  - type: table
-    name: Table
-    sort:
-      - property: file.mtime
-        direction: DESC
-```
-{% endraw %}`
-

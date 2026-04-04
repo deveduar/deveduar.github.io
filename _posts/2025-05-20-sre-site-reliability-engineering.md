@@ -5,7 +5,6 @@ keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-public_note: true
 category: devops
 tags:
   - sre
@@ -13,7 +12,7 @@ tags:
   - IaC
 ---
 # SRE (Site Reliability Engineering)
-``
+
 
 [IInfraestructura como codigo](/devops/iinfraestructura-como-codigo/) | [Gestion de Negocio](/gestion%20de%20negocio/gestion-de-negocio/) | Automatizacion | [devops](/devops/devops/)
 
@@ -303,7 +302,6 @@ Su objetivo final es **crear sistemas adaptativos, observables y sostenibles**, 
 
 
 # SRE: Extensión Avanzada de Conceptos y Prácticas Emergentes
-$= dv.current().file.tags.join(" ")
 
 [SRE Site Reliability Engineering](/devops/sre-site-reliability-engineering/) | [devops](/devops/devops/) | Automatizacion | [Gestion de Negocio](/gestion%20de%20negocio/gestion-de-negocio/) | [IInfraestructura como codigo](/devops/iinfraestructura-como-codigo/)
 

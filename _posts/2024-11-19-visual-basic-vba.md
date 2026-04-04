@@ -5,7 +5,6 @@ keywords:
 source:
 status: 🌟
 Parent: "[[Area-Prog]]"
-public_note: true
 category: Software engineering
 tags:
   - excel
@@ -13,7 +12,7 @@ tags:
   - vba
 ---
 # Visual Basic VBA
-``
+
 
 - [cpp](/software%20engineering/cpp/)
 - [cloud](/cloud/cloud/)

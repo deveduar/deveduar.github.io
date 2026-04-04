@@ -5,7 +5,6 @@ keywords:
 source:
 status: 🌟
 Parent: "[[Area-IA]]"
-public_note: true
 category: mates
 ---
 # 🧮 Teoría de la probabilidad y teoría de la información

@@ -5,7 +5,6 @@ keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-public_note: true
 category: ciberseguridad
 tags:
   - Hacking
@@ -13,7 +12,7 @@ tags:
   - hardening
 ---
 # Email DLP — Protección de Correo
-``
+
 
 - [control de datos](/ciberseguridad/control-de-datos/)
 - [hardening](/ciberseguridad/hardening/)

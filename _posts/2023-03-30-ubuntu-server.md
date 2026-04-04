@@ -5,7 +5,6 @@ status: 🌟
 Parent: "[[Area-Sistemas]]"
 keywords:
 source:
-public_note: true
 category: Linux
 tags:
   - Linux
@@ -119,7 +118,7 @@ Ubuntu Server es una versión **especializada de Ubuntu diseñada para funcionar
 ### Configuración y usuarios
 - Usuario de desarrollo: `dev1 desarrollador1 - key`
 - Estado de instalación de servicios:
-	- [x] Instalado OpenSSH Server
+	- Instalado OpenSSH Server
 	- Servidor LAMP (Linux, Apache, MySQL, PHP)
 	- Servidor Tomcat para aplicaciones Java
 
@@ -981,10 +980,6 @@ sudo apt-add-repository ppa:username/myawesomesoftware-1.0
 * Automatiza la adición del archivo de repositorio y su clave; eliminar archivo desinstala el PPA.
 * Información adicional: [Launchpad PPAs](https://launchpad.net/ubuntu/+ppas)
 
-{% raw %}
-```
-```
-{% endraw %}
 
 ### Adding Personal Package Archives (PPAs)
 - PPAs: pequeños repositorios que usualmente contienen una sola aplicación.  

@@ -6,14 +6,13 @@ source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 aliases:
-public_note: true
 category: ciberseguridad
 tags:
   - vulnerabilidades
   - Hacking
 ---
 # Manejo de Vulnerabilidades
-``
+
 
 ## Conceptos Clave y Definición
 - [vulnerabilidades](/ciberseguridad/vulnerabilidades/)

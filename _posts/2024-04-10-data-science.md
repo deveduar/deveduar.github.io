@@ -5,7 +5,6 @@ keywords:
 source:
 status: 🚀
 Parent: "[[Area-Prog]]"
-public_note: true
 category: Data Science
 tags:
   - GCP
@@ -162,61 +161,5 @@ tags:
 		- Simulator
 		- Content generator
 		- Transformer
-
-
-
-# omnivore IA
-{% raw %}
-```base
-type: list
-name: "Notas con #powershell en Omnivore"
-order:
-  - property: date_saved
-    direction: desc
-columns:
-  - file.name
-  - date_saved
-filters:
-  and:
-    - file.inFolder("Omnivore")
-    - file.hasTag("ia", "IA")
-views:
-  - type: table
-    name: Table
-    sort:
-      - property: file.mtime
-        direction: DESC
-
-```
-{% endraw %}
-
-# omnivore data-science
-{% raw %}
-```base
-type: list
-name: "Notas con #powershell en Omnivore"
-order:
-  - property: date_saved
-    direction: desc
-columns:
-  - file.name
-  - date_saved
-filters:
-  and:
-    - file.inFolder("Omnivore")
-    - file.hasTag("data-science", "DataScience", "Data_Science")
-views:
-  - type: table
-    name: Table
-    sort:
-      - property: file.mtime
-        direction: DESC
-
-```
-{% endraw %}
-
-
-
-
 
 

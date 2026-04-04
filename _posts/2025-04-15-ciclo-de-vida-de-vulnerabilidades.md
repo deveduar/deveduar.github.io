@@ -6,14 +6,13 @@ source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 aliases:
-public_note: true
 category: ciberseguridad
 tags:
   - Hacking
   - vulnerabilidades
 ---
 # Ciclo de vida de vulnerabilidades
-``
+
 
 ## Conceptos relacionados
 -	[vulnerabilidades](/ciberseguridad/vulnerabilidades/)

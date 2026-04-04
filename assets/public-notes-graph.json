@@ -11,6 +11,16 @@
       "url": "/testing/uso-de-jest-dom-y-testing-library-en-entornos-react"
     },
     {
+      "id": "qunit-guia-para-entrevistas",
+      "title": "qunit guia para entrevistas",
+      "slug": "qunit-guia-para-entrevistas",
+      "date": "2025-10-18 15:22",
+      "categories": [
+        "Testing"
+      ],
+      "url": "/testing/qunit-guia-para-entrevistas"
+    },
+    {
       "id": "testing-fundamental-pr-cticas-y-ejemplos-de-c-digo",
       "title": "Testing Fundamental Prácticas y Ejemplos de Código",
       "slug": "testing-fundamental-pr-cticas-y-ejemplos-de-c-digo",
@@ -19,6 +29,16 @@
         "Testing"
       ],
       "url": "/testing/testing-fundamental-pr-cticas-y-ejemplos-de-c-digo"
+    },
+    {
+      "id": "tdd-patterns",
+      "title": "TDD patterns",
+      "slug": "tdd-patterns",
+      "date": "2025-10-17 14:15",
+      "categories": [
+        "Testing"
+      ],
+      "url": "/testing/tdd-patterns"
     },
     {
       "id": "testing-fundamental-multilenguaje-2025-pr-cticas-y-ejemplos",
@@ -51,16 +71,6 @@
       "url": "/testing/testing-as-ncrono-en-jest-con-promises-y-async-await"
     },
     {
-      "id": "tdd-patterns",
-      "title": "TDD patterns",
-      "slug": "tdd-patterns",
-      "date": "2025-10-17 14:15",
-      "categories": [
-        "Testing"
-      ],
-      "url": "/testing/tdd-patterns"
-    },
-    {
       "id": "tdd---test-driven-development",
       "title": "TDD - Test Driven Development",
       "slug": "tdd---test-driven-development",
@@ -69,16 +79,6 @@
         "Testing"
       ],
       "url": "/testing/tdd---test-driven-development"
-    },
-    {
-      "id": "selenium",
-      "title": "selenium",
-      "slug": "selenium",
-      "date": "2024-11-23 16:50",
-      "categories": [
-        "Testing"
-      ],
-      "url": "/testing/selenium"
     },
     {
       "id": "roadmap-de-tdd-con-ejemplo-de-uso-en-una-empresa",
@@ -91,6 +91,16 @@
       "url": "/testing/roadmap-de-tdd-con-ejemplo-de-uso-en-una-empresa"
     },
     {
+      "id": "selenium",
+      "title": "selenium",
+      "slug": "selenium",
+      "date": "2024-11-23 16:50",
+      "categories": [
+        "Testing"
+      ],
+      "url": "/testing/selenium"
+    },
+    {
       "id": "qunit",
       "title": "QUnit",
       "slug": "qunit",
@@ -99,16 +109,6 @@
         "Testing"
       ],
       "url": "/testing/qunit"
-    },
-    {
-      "id": "qunit-guia-para-entrevistas",
-      "title": "qunit guia para entrevistas",
-      "slug": "qunit-guia-para-entrevistas",
-      "date": "2025-10-18 15:22",
-      "categories": [
-        "Testing"
-      ],
-      "url": "/testing/qunit-guia-para-entrevistas"
     },
     {
       "id": "qunit---debugging--diagn-stico-avanzado-e-integraci-n-cicd-con-coverage-moderno--nyc--c8-",
@@ -175,16 +175,6 @@
       "url": "/uncategorized/qa-gesti-n-herramientas-y-m-tricas"
     },
     {
-      "id": "profiler",
-      "title": "profiler",
-      "slug": "profiler",
-      "date": "2025-10-15 17:32",
-      "categories": [
-        "Testing"
-      ],
-      "url": "/testing/profiler"
-    },
-    {
       "id": "practicas-y-ejemplos-codigo-comunes-de-testing-a-2025-extenso",
       "title": "practicas y ejemplos codigo comunes de testing a 2025 extenso",
       "slug": "practicas-y-ejemplos-codigo-comunes-de-testing-a-2025-extenso",
@@ -193,6 +183,16 @@
         "Testing"
       ],
       "url": "/testing/practicas-y-ejemplos-codigo-comunes-de-testing-a-2025-extenso"
+    },
+    {
+      "id": "profiler",
+      "title": "profiler",
+      "slug": "profiler",
+      "date": "2025-10-15 17:32",
+      "categories": [
+        "Testing"
+      ],
+      "url": "/testing/profiler"
     },
     {
       "id": "playwright",
@@ -215,6 +215,16 @@
       "url": "/testing/playwright---temas-avanzados-y-casos-especiales"
     },
     {
+      "id": "mocks-msw---patrones-de-validaci-n-y-depuraci-n",
+      "title": "Mocks MSW - patrones de validación y depuración",
+      "slug": "mocks-msw---patrones-de-validaci-n-y-depuraci-n",
+      "date": "2025-10-17 18:38",
+      "categories": [
+        "Testing"
+      ],
+      "url": "/testing/mocks-msw---patrones-de-validaci-n-y-depuraci-n"
+    },
+    {
       "id": "phpunit",
       "title": "PHPUnit",
       "slug": "phpunit",
@@ -223,16 +233,6 @@
         "Testing"
       ],
       "url": "/testing/phpunit"
-    },
-    {
-      "id": "msw-mocks-service-worker",
-      "title": "MSW Mocks service worker",
-      "slug": "msw-mocks-service-worker",
-      "date": "2025-10-15 12:14",
-      "categories": [
-        "Testing"
-      ],
-      "url": "/testing/msw-mocks-service-worker"
     },
     {
       "id": "mocks-msw---patrones-y-casos-reales",
@@ -245,14 +245,14 @@
       "url": "/testing/mocks-msw---patrones-y-casos-reales"
     },
     {
-      "id": "mocks-msw---patrones-de-validaci-n-y-depuraci-n",
-      "title": "Mocks MSW - patrones de validación y depuración",
-      "slug": "mocks-msw---patrones-de-validaci-n-y-depuraci-n",
-      "date": "2025-10-17 18:38",
+      "id": "msw-mocks-service-worker",
+      "title": "MSW Mocks service worker",
+      "slug": "msw-mocks-service-worker",
+      "date": "2025-10-15 12:14",
       "categories": [
         "Testing"
       ],
-      "url": "/testing/mocks-msw---patrones-de-validaci-n-y-depuraci-n"
+      "url": "/testing/msw-mocks-service-worker"
     },
     {
       "id": "mocks-msw---patrones-de-dise-o-y-arquitectura-de-mocks",
@@ -263,6 +263,16 @@
         "Testing"
       ],
       "url": "/testing/mocks-msw---patrones-de-dise-o-y-arquitectura-de-mocks"
+    },
+    {
+      "id": "mapa-conceptual-completo-de-testing",
+      "title": "Mapa Conceptual Completo de Testing",
+      "slug": "mapa-conceptual-completo-de-testing",
+      "date": "2025-10-17 00:25",
+      "categories": [
+        "Testing"
+      ],
+      "url": "/testing/mapa-conceptual-completo-de-testing"
     },
     {
       "id": "mocks-msw---integraci-n-avanzada-con-jest--vitest-y-playwright",
@@ -276,16 +286,6 @@
         "Testing"
       ],
       "url": "/testing/mocks-msw---integraci-n-avanzada-con-jest--vitest-y-playwright"
-    },
-    {
-      "id": "mapa-conceptual-completo-de-testing",
-      "title": "Mapa Conceptual Completo de Testing",
-      "slug": "mapa-conceptual-completo-de-testing",
-      "date": "2025-10-17 00:25",
-      "categories": [
-        "Testing"
-      ],
-      "url": "/testing/mapa-conceptual-completo-de-testing"
     },
     {
       "id": "linters",
@@ -316,6 +316,16 @@
         "Testing"
       ],
       "url": "/testing/junit"
+    },
+    {
+      "id": "configuraci-n-de-jest-en-proyectos-typescript",
+      "title": "Configuración de Jest en proyectos TypeScript",
+      "slug": "configuraci-n-de-jest-en-proyectos-typescript",
+      "date": "2025-10-20 18:43",
+      "categories": [
+        "Testing"
+      ],
+      "url": "/testing/configuraci-n-de-jest-en-proyectos-typescript"
     },
     {
       "id": "jmeter",
@@ -368,16 +378,6 @@
       "url": "/testing/gu-a-pr-ctica-de-e2e---end-to-end-testing"
     },
     {
-      "id": "gu-a-fundamental-de-e2e",
-      "title": "Guía Fundamental de E2E",
-      "slug": "gu-a-fundamental-de-e2e",
-      "date": "2025-10-19 14:43",
-      "categories": [
-        "uncategorized"
-      ],
-      "url": "/uncategorized/gu-a-fundamental-de-e2e"
-    },
-    {
       "id": "gu-a-de-entrevista-tdd",
       "title": "Guía de Entrevista tdd",
       "slug": "gu-a-de-entrevista-tdd",
@@ -386,6 +386,16 @@
         "Testing"
       ],
       "url": "/testing/gu-a-de-entrevista-tdd"
+    },
+    {
+      "id": "gu-a-fundamental-de-e2e",
+      "title": "Guía Fundamental de E2E",
+      "slug": "gu-a-fundamental-de-e2e",
+      "date": "2025-10-19 14:43",
+      "categories": [
+        "uncategorized"
+      ],
+      "url": "/uncategorized/gu-a-fundamental-de-e2e"
     },
     {
       "id": "gu-a-avanzada-de-jest-con-mocks-y-spies",
@@ -418,16 +428,6 @@
       "url": "/testing/glosario-de-terminos-sobre-qa"
     },
     {
-      "id": "glosario-de-tdd",
-      "title": "Glosario de TDD",
-      "slug": "glosario-de-tdd",
-      "date": "2025-10-17 16:28",
-      "categories": [
-        "Testing"
-      ],
-      "url": "/testing/glosario-de-tdd"
-    },
-    {
       "id": "glosario-de-terminos-de-testing-de-nota-principal",
       "title": "glosario de terminos de testing de nota principal",
       "slug": "glosario-de-terminos-de-testing-de-nota-principal",
@@ -436,6 +436,16 @@
         "Testing"
       ],
       "url": "/testing/glosario-de-terminos-de-testing-de-nota-principal"
+    },
+    {
+      "id": "glosario-de-tdd",
+      "title": "Glosario de TDD",
+      "slug": "glosario-de-tdd",
+      "date": "2025-10-17 16:28",
+      "categories": [
+        "Testing"
+      ],
+      "url": "/testing/glosario-de-tdd"
     },
     {
       "id": "glosario-de-qa-avanzado",
@@ -448,16 +458,6 @@
       "url": "/testing/glosario-de-qa-avanzado"
     },
     {
-      "id": "glosario-de-conceptos-fundamentales-de-testing",
-      "title": "Glosario de Conceptos Fundamentales de Testing",
-      "slug": "glosario-de-conceptos-fundamentales-de-testing",
-      "date": "2025-10-16 18:28",
-      "categories": [
-        "Testing"
-      ],
-      "url": "/testing/glosario-de-conceptos-fundamentales-de-testing"
-    },
-    {
       "id": "glosario-complementario-de-conceptos-de-testing",
       "title": "Glosario Complementario de Conceptos de Testing",
       "slug": "glosario-complementario-de-conceptos-de-testing",
@@ -466,6 +466,16 @@
         "Testing"
       ],
       "url": "/testing/glosario-complementario-de-conceptos-de-testing"
+    },
+    {
+      "id": "glosario-de-conceptos-fundamentales-de-testing",
+      "title": "Glosario de Conceptos Fundamentales de Testing",
+      "slug": "glosario-de-conceptos-fundamentales-de-testing",
+      "date": "2025-10-16 18:28",
+      "categories": [
+        "Testing"
+      ],
+      "url": "/testing/glosario-de-conceptos-fundamentales-de-testing"
     },
     {
       "id": "glosario-avanzado-de-testing",
@@ -498,16 +508,6 @@
       "url": "/testing/ejemplos-de-tdd"
     },
     {
-      "id": "e2e---ejemplos-pr-cticos-avanzados",
-      "title": "E2E - Ejemplos Prácticos Avanzados",
-      "slug": "e2e---ejemplos-pr-cticos-avanzados",
-      "date": "2025-10-19 16:49",
-      "categories": [
-        "Testing"
-      ],
-      "url": "/testing/e2e---ejemplos-pr-cticos-avanzados"
-    },
-    {
       "id": "e2e---end-to-end-testing",
       "title": "E2E - End to End Testing",
       "slug": "e2e---end-to-end-testing",
@@ -526,6 +526,16 @@
         "Testing"
       ],
       "url": "/testing/e2e---conceptos-avanzados-y-estrategia-completa"
+    },
+    {
+      "id": "e2e---ejemplos-pr-cticos-avanzados",
+      "title": "E2E - Ejemplos Prácticos Avanzados",
+      "slug": "e2e---ejemplos-pr-cticos-avanzados",
+      "date": "2025-10-19 16:49",
+      "categories": [
+        "Testing"
+      ],
+      "url": "/testing/e2e---ejemplos-pr-cticos-avanzados"
     },
     {
       "id": "debbuger",
@@ -566,16 +576,6 @@
         "Testing"
       ],
       "url": "/testing/cobertura-de-c-digo-en-jest-y-an-lisis-con-sonarqube"
-    },
-    {
-      "id": "configuraci-n-de-jest-en-proyectos-typescript",
-      "title": "Configuración de Jest en proyectos TypeScript",
-      "slug": "configuraci-n-de-jest-en-proyectos-typescript",
-      "date": "2025-10-20 18:43",
-      "categories": [
-        "Testing"
-      ],
-      "url": "/testing/configuraci-n-de-jest-en-proyectos-typescript"
     },
     {
       "id": "bdd",
@@ -648,16 +648,6 @@
       "url": "/linux/ubuntu-server"
     },
     {
-      "id": "surfing-keys-vim-in-browser",
-      "title": "surfing keys vim in browser",
-      "slug": "surfing-keys-vim-in-browser",
-      "date": "2025-10-26 13:44",
-      "categories": [
-        "Sistemas"
-      ],
-      "url": "/sistemas/surfing-keys-vim-in-browser"
-    },
-    {
       "id": "tmux",
       "title": "Tmux",
       "slug": "tmux",
@@ -666,6 +656,16 @@
         "Sistemas"
       ],
       "url": "/sistemas/tmux"
+    },
+    {
+      "id": "surfing-keys-vim-in-browser",
+      "title": "surfing keys vim in browser",
+      "slug": "surfing-keys-vim-in-browser",
+      "date": "2025-10-26 13:44",
+      "categories": [
+        "Sistemas"
+      ],
+      "url": "/sistemas/surfing-keys-vim-in-browser"
     },
     {
       "id": "san",
@@ -688,16 +688,6 @@
       "url": "/sistemas/problema-executionpolicy-en-powershell"
     },
     {
-      "id": "pihole",
-      "title": "pihole",
-      "slug": "pihole",
-      "date": "2025-10-11 15:16",
-      "categories": [
-        "Sistemas"
-      ],
-      "url": "/sistemas/pihole"
-    },
-    {
       "id": "powershell",
       "title": "powershell",
       "slug": "powershell",
@@ -706,6 +696,16 @@
         "Sistemas"
       ],
       "url": "/sistemas/powershell"
+    },
+    {
+      "id": "pihole",
+      "title": "pihole",
+      "slug": "pihole",
+      "date": "2025-10-11 15:16",
+      "categories": [
+        "Sistemas"
+      ],
+      "url": "/sistemas/pihole"
     },
     {
       "id": "parrot-os",
@@ -718,26 +718,6 @@
       "url": "/linux/parrot-os"
     },
     {
-      "id": "office-365",
-      "title": "Office 365",
-      "slug": "office-365",
-      "date": "2025-06-10 17:25",
-      "categories": [
-        "Sistemas"
-      ],
-      "url": "/sistemas/office-365"
-    },
-    {
-      "id": "lite-xl",
-      "title": "lite xl",
-      "slug": "lite-xl",
-      "date": "2025-10-10 11:28",
-      "categories": [
-        "Sistemas"
-      ],
-      "url": "/sistemas/lite-xl"
-    },
-    {
       "id": "nas",
       "title": "NAS",
       "slug": "nas",
@@ -748,6 +728,16 @@
       "url": "/sistemas/nas"
     },
     {
+      "id": "office-365",
+      "title": "Office 365",
+      "slug": "office-365",
+      "date": "2025-06-10 17:25",
+      "categories": [
+        "Sistemas"
+      ],
+      "url": "/sistemas/office-365"
+    },
+    {
       "id": "linux",
       "title": "Linux",
       "slug": "linux",
@@ -756,6 +746,16 @@
         "Sistemas"
       ],
       "url": "/sistemas/linux"
+    },
+    {
+      "id": "lite-xl",
+      "title": "lite xl",
+      "slug": "lite-xl",
+      "date": "2025-10-10 11:28",
+      "categories": [
+        "Sistemas"
+      ],
+      "url": "/sistemas/lite-xl"
     },
     {
       "id": "linux-shell-scripting",
@@ -878,16 +878,6 @@
       "url": "/powershell/eliminar-archivo-a-traves-del-terminal"
     },
     {
-      "id": "comando-grep",
-      "title": "comando grep",
-      "slug": "comando-grep",
-      "date": "2025-10-26 13:56",
-      "categories": [
-        "Sistemas"
-      ],
-      "url": "/sistemas/comando-grep"
-    },
-    {
       "id": "devcontainers",
       "title": "devcontainers",
       "slug": "devcontainers",
@@ -908,14 +898,14 @@
       "url": "/powershell/crear-varias-carpetas-con-powershell"
     },
     {
-      "id": "active-directory",
-      "title": "Active Directory",
-      "slug": "active-directory",
-      "date": "2025-06-10 22:34",
+      "id": "comando-grep",
+      "title": "comando grep",
+      "slug": "comando-grep",
+      "date": "2025-10-26 13:56",
       "categories": [
         "Sistemas"
       ],
-      "url": "/sistemas/active-directory"
+      "url": "/sistemas/comando-grep"
     },
     {
       "id": "autohotkey",
@@ -938,6 +928,26 @@
       "url": "/linux/arch-linux"
     },
     {
+      "id": "active-directory",
+      "title": "Active Directory",
+      "slug": "active-directory",
+      "date": "2025-06-10 22:34",
+      "categories": [
+        "Sistemas"
+      ],
+      "url": "/sistemas/active-directory"
+    },
+    {
+      "id": "mascara-de-red",
+      "title": "mascara de red",
+      "slug": "mascara-de-red",
+      "date": "2025-06-10 15:20",
+      "categories": [
+        "Redes"
+      ],
+      "url": "/redes/mascara-de-red"
+    },
+    {
       "id": "voip",
       "title": "VoIP",
       "slug": "voip",
@@ -946,16 +956,6 @@
         "Telefona y UC"
       ],
       "url": "/telefona%20y%20uc/voip"
-    },
-    {
-      "id": "vlan",
-      "title": "VLAN",
-      "slug": "vlan",
-      "date": "2025-06-10 13:38",
-      "categories": [
-        "Redes"
-      ],
-      "url": "/redes/vlan"
     },
     {
       "id": "videoconferencia",
@@ -968,14 +968,14 @@
       "url": "/telefona%20y%20uc/videoconferencia"
     },
     {
-      "id": "telefon-a-y-uc",
-      "title": "Telefonía y UC",
-      "slug": "telefon-a-y-uc",
-      "date": "2025-05-24 18:48",
+      "id": "vlan",
+      "title": "VLAN",
+      "slug": "vlan",
+      "date": "2025-06-10 13:38",
       "categories": [
-        "uncategorized"
+        "Redes"
       ],
-      "url": "/uncategorized/telefon-a-y-uc"
+      "url": "/redes/vlan"
     },
     {
       "id": "van",
@@ -988,6 +988,16 @@
       "url": "/redes/van"
     },
     {
+      "id": "telefon-a-y-uc",
+      "title": "Telefonía y UC",
+      "slug": "telefon-a-y-uc",
+      "date": "2025-05-24 18:48",
+      "categories": [
+        "uncategorized"
+      ],
+      "url": "/uncategorized/telefon-a-y-uc"
+    },
+    {
       "id": "subred",
       "title": "subred",
       "slug": "subred",
@@ -996,6 +1006,16 @@
         "Redes"
       ],
       "url": "/redes/subred"
+    },
+    {
+      "id": "qos",
+      "title": "QoS",
+      "slug": "qos",
+      "date": "2025-05-24 18:50",
+      "categories": [
+        "Telefona y UC"
+      ],
+      "url": "/telefona%20y%20uc/qos"
     },
     {
       "id": "sip",
@@ -1018,36 +1038,6 @@
       "url": "/uncategorized/redes-mobiles"
     },
     {
-      "id": "protocolos",
-      "title": "Protocolos",
-      "slug": "protocolos",
-      "date": "2025-06-10 15:21",
-      "categories": [
-        "Redes"
-      ],
-      "url": "/redes/protocolos"
-    },
-    {
-      "id": "qos",
-      "title": "QoS",
-      "slug": "qos",
-      "date": "2025-05-24 18:50",
-      "categories": [
-        "Telefona y UC"
-      ],
-      "url": "/telefona%20y%20uc/qos"
-    },
-    {
-      "id": "mascara-de-red",
-      "title": "mascara de red",
-      "slug": "mascara-de-red",
-      "date": "2025-06-10 15:20",
-      "categories": [
-        "Redes"
-      ],
-      "url": "/redes/mascara-de-red"
-    },
-    {
       "id": "curso-redes-cnna-1",
       "title": "curso-redes-CNNA-1",
       "slug": "curso-redes-cnna-1",
@@ -1056,6 +1046,16 @@
         "Redes"
       ],
       "url": "/redes/curso-redes-cnna-1"
+    },
+    {
+      "id": "protocolos",
+      "title": "Protocolos",
+      "slug": "protocolos",
+      "date": "2025-06-10 15:21",
+      "categories": [
+        "Redes"
+      ],
+      "url": "/redes/protocolos"
     },
     {
       "id": "3cx",
@@ -1068,16 +1068,6 @@
       "url": "/telefona%20y%20uc/3cx"
     },
     {
-      "id": "pug",
-      "title": "pug",
-      "slug": "pug",
-      "date": "2024-11-21 18:20",
-      "categories": [
-        "Motor de plantillas"
-      ],
-      "url": "/motor%20de%20plantillas/pug"
-    },
-    {
       "id": "thymeleaf",
       "title": "thymeleaf",
       "slug": "thymeleaf",
@@ -1088,16 +1078,6 @@
       "url": "/motor%20de%20plantillas/thymeleaf"
     },
     {
-      "id": "handlebars",
-      "title": "handlebars",
-      "slug": "handlebars",
-      "date": "2024-11-21 18:20",
-      "categories": [
-        "Motor de plantillas"
-      ],
-      "url": "/motor%20de%20plantillas/handlebars"
-    },
-    {
       "id": "mustache",
       "title": "mustache",
       "slug": "mustache",
@@ -1106,6 +1086,26 @@
         "Motor de plantillas"
       ],
       "url": "/motor%20de%20plantillas/mustache"
+    },
+    {
+      "id": "pug",
+      "title": "pug",
+      "slug": "pug",
+      "date": "2024-11-21 18:20",
+      "categories": [
+        "Motor de plantillas"
+      ],
+      "url": "/motor%20de%20plantillas/pug"
+    },
+    {
+      "id": "handlebars",
+      "title": "handlebars",
+      "slug": "handlebars",
+      "date": "2024-11-21 18:20",
+      "categories": [
+        "Motor de plantillas"
+      ],
+      "url": "/motor%20de%20plantillas/handlebars"
     },
     {
       "id": "zabbix",
@@ -1148,16 +1148,6 @@
       "url": "/monitoreo/opentelemetry"
     },
     {
-      "id": "kibana",
-      "title": "kibana",
-      "slug": "kibana",
-      "date": "2026-01-10 22:50",
-      "categories": [
-        "monitoreo"
-      ],
-      "url": "/monitoreo/kibana"
-    },
-    {
       "id": "nagios",
       "title": "nagios",
       "slug": "nagios",
@@ -1178,6 +1168,16 @@
       "url": "/monitoreo/logstash"
     },
     {
+      "id": "kibana",
+      "title": "kibana",
+      "slug": "kibana",
+      "date": "2026-01-10 22:50",
+      "categories": [
+        "monitoreo"
+      ],
+      "url": "/monitoreo/kibana"
+    },
+    {
       "id": "grafana",
       "title": "grafana",
       "slug": "grafana",
@@ -1188,16 +1188,6 @@
       "url": "/monitoreo/grafana"
     },
     {
-      "id": "acunetix-scanner",
-      "title": "Acunetix scanner",
-      "slug": "acunetix-scanner",
-      "date": "2025-04-14 18:01",
-      "categories": [
-        "monitoreo"
-      ],
-      "url": "/monitoreo/acunetix-scanner"
-    },
-    {
       "id": "elasticsearch",
       "title": "Elasticsearch",
       "slug": "elasticsearch",
@@ -1206,6 +1196,16 @@
         "monitoreo"
       ],
       "url": "/monitoreo/elasticsearch"
+    },
+    {
+      "id": "acunetix-scanner",
+      "title": "Acunetix scanner",
+      "slug": "acunetix-scanner",
+      "date": "2025-04-14 18:01",
+      "categories": [
+        "monitoreo"
+      ],
+      "url": "/monitoreo/acunetix-scanner"
     },
     {
       "id": "teor-a-de-la-probabilidad-y-teor-a-de-la-informaci-n",
@@ -1308,16 +1308,6 @@
       "url": "/mates/curso-de--lgebra-lineal-universidad-madrid"
     },
     {
-      "id": "algebra-lineal",
-      "title": "algebra lineal",
-      "slug": "algebra-lineal",
-      "date": "2024-02-18 16:14",
-      "categories": [
-        "mates"
-      ],
-      "url": "/mates/algebra-lineal"
-    },
-    {
       "id": "congetura-de-collatz",
       "title": "congetura de collatz",
       "slug": "congetura-de-collatz",
@@ -1326,6 +1316,16 @@
         "mates"
       ],
       "url": "/mates/congetura-de-collatz"
+    },
+    {
+      "id": "algebra-lineal",
+      "title": "algebra lineal",
+      "slug": "algebra-lineal",
+      "date": "2024-02-18 16:14",
+      "categories": [
+        "mates"
+      ],
+      "url": "/mates/algebra-lineal"
     },
     {
       "id": "ticketing",
@@ -1358,16 +1358,6 @@
       "url": "/management/project-management"
     },
     {
-      "id": "product-management",
-      "title": "Product Management",
-      "slug": "product-management",
-      "date": "2025-05-21 20:07",
-      "categories": [
-        "Management"
-      ],
-      "url": "/management/product-management"
-    },
-    {
       "id": "jira",
       "title": "Jira",
       "slug": "jira",
@@ -1376,6 +1366,16 @@
         "Management"
       ],
       "url": "/management/jira"
+    },
+    {
+      "id": "product-management",
+      "title": "Product Management",
+      "slug": "product-management",
+      "date": "2025-05-21 20:07",
+      "categories": [
+        "Management"
+      ],
+      "url": "/management/product-management"
     },
     {
       "id": "erp",
@@ -1398,16 +1398,6 @@
       "url": "/management/crm"
     },
     {
-      "id": "visual-basic-y-c",
-      "title": "Visual Basic y C",
-      "slug": "visual-basic-y-c",
-      "date": "2024-02-15 17:14",
-      "categories": [
-        "Software engineering"
-      ],
-      "url": "/software%20engineering/visual-basic-y-c"
-    },
-    {
       "id": "visual-basic-vba",
       "title": "visual basic VBA",
       "slug": "visual-basic-vba",
@@ -1416,6 +1406,16 @@
         "Software engineering"
       ],
       "url": "/software%20engineering/visual-basic-vba"
+    },
+    {
+      "id": "visual-basic-y-c",
+      "title": "Visual Basic y C",
+      "slug": "visual-basic-y-c",
+      "date": "2024-02-15 17:14",
+      "categories": [
+        "Software engineering"
+      ],
+      "url": "/software%20engineering/visual-basic-y-c"
     },
     {
       "id": "typescript",
@@ -1468,16 +1468,6 @@
       "url": "/software%20engineering/net"
     },
     {
-      "id": "javascript",
-      "title": "javascript",
-      "slug": "javascript",
-      "date": "2024-09-04T03:13:00",
-      "categories": [
-        "Desarrollo web"
-      ],
-      "url": "/desarrollo%20web/javascript"
-    },
-    {
       "id": "java",
       "title": "java",
       "slug": "java",
@@ -1486,6 +1476,16 @@
         "Software engineering"
       ],
       "url": "/software%20engineering/java"
+    },
+    {
+      "id": "javascript",
+      "title": "javascript",
+      "slug": "javascript",
+      "date": "2024-09-04T03:13:00",
+      "categories": [
+        "Desarrollo web"
+      ],
+      "url": "/desarrollo%20web/javascript"
     },
     {
       "id": "git",
@@ -1508,16 +1508,6 @@
       "url": "/software%20engineering/excel"
     },
     {
-      "id": "docker",
-      "title": "Docker",
-      "slug": "docker",
-      "date": "2024-11-16 02:57",
-      "categories": [
-        "Software engineering"
-      ],
-      "url": "/software%20engineering/docker"
-    },
-    {
       "id": "curso-python-avanzado",
       "title": "curso python avanzado",
       "slug": "curso-python-avanzado",
@@ -1536,6 +1526,16 @@
         "Software engineering"
       ],
       "url": "/software%20engineering/csharp"
+    },
+    {
+      "id": "docker",
+      "title": "Docker",
+      "slug": "docker",
+      "date": "2024-11-16 02:57",
+      "categories": [
+        "Software engineering"
+      ],
+      "url": "/software%20engineering/docker"
     },
     {
       "id": "cpp",
@@ -1678,16 +1678,6 @@
       "url": "/infraestructura%20it/iso-20000"
     },
     {
-      "id": "isms",
-      "title": "ISMS",
-      "slug": "isms",
-      "date": "2025-05-21 17:01",
-      "categories": [
-        "infraestructura IT"
-      ],
-      "url": "/infraestructura%20it/isms"
-    },
-    {
       "id": "ipaas-integration-platform-as-a-service",
       "title": "iPaaS Integration Platform as a Service",
       "slug": "ipaas-integration-platform-as-a-service",
@@ -1696,6 +1686,16 @@
         "infraestructura IT"
       ],
       "url": "/infraestructura%20it/ipaas-integration-platform-as-a-service"
+    },
+    {
+      "id": "isms",
+      "title": "ISMS",
+      "slug": "isms",
+      "date": "2025-05-21 17:01",
+      "categories": [
+        "infraestructura IT"
+      ],
+      "url": "/infraestructura%20it/isms"
     },
     {
       "id": "ietf",
@@ -1778,16 +1778,6 @@
       "url": "/infraestructura%20it/findops"
     },
     {
-      "id": "ens-esquema-nacional-de-seguridad",
-      "title": "ENS Esquema Nacional de Seguridad",
-      "slug": "ens-esquema-nacional-de-seguridad",
-      "date": "2025-05-21 17:44",
-      "categories": [
-        "infraestructura IT"
-      ],
-      "url": "/infraestructura%20it/ens-esquema-nacional-de-seguridad"
-    },
-    {
       "id": "corba",
       "title": "CORBA",
       "slug": "corba",
@@ -1796,6 +1786,16 @@
         "infraestructura IT"
       ],
       "url": "/infraestructura%20it/corba"
+    },
+    {
+      "id": "ens-esquema-nacional-de-seguridad",
+      "title": "ENS Esquema Nacional de Seguridad",
+      "slug": "ens-esquema-nacional-de-seguridad",
+      "date": "2025-05-21 17:44",
+      "categories": [
+        "infraestructura IT"
+      ],
+      "url": "/infraestructura%20it/ens-esquema-nacional-de-seguridad"
     },
     {
       "id": "control-m",
@@ -1896,16 +1896,6 @@
         "Gestion de Negocio"
       ],
       "url": "/gestion%20de%20negocio/dms-sistema-de-gesti-n-de-documentos"
-    },
-    {
-      "id": "business-intelligence",
-      "title": "business intelligence",
-      "slug": "business-intelligence",
-      "date": "",
-      "categories": [
-        "Gestion de Negocio"
-      ],
-      "url": "/gestion%20de%20negocio/business-intelligence"
     },
     {
       "id": "b2b-business-to-business",
@@ -2058,6 +2048,16 @@
       "url": "/frontend/seo"
     },
     {
+      "id": "react",
+      "title": "react",
+      "slug": "react",
+      "date": "2024-09-04T03:12:00",
+      "categories": [
+        "Frontend"
+      ],
+      "url": "/frontend/react"
+    },
+    {
       "id": "sass",
       "title": "sass",
       "slug": "sass",
@@ -2078,16 +2078,6 @@
       "url": "/frontend/redux"
     },
     {
-      "id": "react",
-      "title": "react",
-      "slug": "react",
-      "date": "2024-09-04T03:12:00",
-      "categories": [
-        "Frontend"
-      ],
-      "url": "/frontend/react"
-    },
-    {
       "id": "qwick",
       "title": "qwick",
       "slug": "qwick",
@@ -2106,6 +2096,16 @@
         "Frontend"
       ],
       "url": "/frontend/pwa"
+    },
+    {
+      "id": "gatsby",
+      "title": "gatsby",
+      "slug": "gatsby",
+      "date": "2025-01-29 17:40",
+      "categories": [
+        "Frontend"
+      ],
+      "url": "/frontend/gatsby"
     },
     {
       "id": "post-css",
@@ -2158,16 +2158,6 @@
       "url": "/frontend/guias-de-estilos"
     },
     {
-      "id": "gatsby",
-      "title": "gatsby",
-      "slug": "gatsby",
-      "date": "2025-01-29 17:40",
-      "categories": [
-        "Frontend"
-      ],
-      "url": "/frontend/gatsby"
-    },
-    {
       "id": "favicon",
       "title": "favicon",
       "slug": "favicon",
@@ -2208,16 +2198,6 @@
       "url": "/uncategorized/css-basico"
     },
     {
-      "id": "css-30-projects-curso",
-      "title": "CSS 30 projects curso",
-      "slug": "css-30-projects-curso",
-      "date": "2025-02-03 21:05",
-      "categories": [
-        "uncategorized"
-      ],
-      "url": "/uncategorized/css-30-projects-curso"
-    },
-    {
       "id": "css-bootstrap",
       "title": "CSS bootstrap",
       "slug": "css-bootstrap",
@@ -2236,6 +2216,16 @@
         "Frontend"
       ],
       "url": "/frontend/astro"
+    },
+    {
+      "id": "css-30-projects-curso",
+      "title": "CSS 30 projects curso",
+      "slug": "css-30-projects-curso",
+      "date": "2025-02-03 21:05",
+      "categories": [
+        "uncategorized"
+      ],
+      "url": "/uncategorized/css-30-projects-curso"
     },
     {
       "id": "angular",
@@ -2288,16 +2278,6 @@
       "url": "/devops/terraform"
     },
     {
-      "id": "sre-site-reliability-engineering",
-      "title": "SRE Site Reliability Engineering",
-      "slug": "sre-site-reliability-engineering",
-      "date": "2025-05-20 17:26",
-      "categories": [
-        "devops"
-      ],
-      "url": "/devops/sre-site-reliability-engineering"
-    },
-    {
       "id": "sql-server",
       "title": "sql server",
       "slug": "sql-server",
@@ -2308,6 +2288,16 @@
       "url": "/devops/sql-server"
     },
     {
+      "id": "sre-site-reliability-engineering",
+      "title": "SRE Site Reliability Engineering",
+      "slug": "sre-site-reliability-engineering",
+      "date": "2025-05-20 17:26",
+      "categories": [
+        "devops"
+      ],
+      "url": "/devops/sre-site-reliability-engineering"
+    },
+    {
       "id": "sonarqube",
       "title": "Sonarqube",
       "slug": "sonarqube",
@@ -2316,6 +2306,16 @@
         "devops"
       ],
       "url": "/devops/sonarqube"
+    },
+    {
+      "id": "openshift",
+      "title": "OpenShift",
+      "slug": "openshift",
+      "date": "2025-04-14 03:22",
+      "categories": [
+        "Virtualizacion"
+      ],
+      "url": "/virtualizacion/openshift"
     },
     {
       "id": "sdlc",
@@ -2338,16 +2338,6 @@
       "url": "/backend/proxy"
     },
     {
-      "id": "openshift",
-      "title": "OpenShift",
-      "slug": "openshift",
-      "date": "2025-04-14 03:22",
-      "categories": [
-        "Virtualizacion"
-      ],
-      "url": "/virtualizacion/openshift"
-    },
-    {
       "id": "lando",
       "title": "Lando",
       "slug": "lando",
@@ -2368,16 +2358,6 @@
       "url": "/virtualizacion/kubernetes"
     },
     {
-      "id": "devsecops",
-      "title": "DevSecOps",
-      "slug": "devsecops",
-      "date": "2025-05-20 18:35",
-      "categories": [
-        "devops"
-      ],
-      "url": "/devops/devsecops"
-    },
-    {
       "id": "jenkins",
       "title": "jenkins",
       "slug": "jenkins",
@@ -2386,6 +2366,16 @@
         "devops"
       ],
       "url": "/devops/jenkins"
+    },
+    {
+      "id": "devsecops",
+      "title": "DevSecOps",
+      "slug": "devsecops",
+      "date": "2025-05-20 18:35",
+      "categories": [
+        "devops"
+      ],
+      "url": "/devops/devsecops"
     },
     {
       "id": "dokploy",
@@ -2408,16 +2398,6 @@
       "url": "/devops/ddev"
     },
     {
-      "id": "ansible",
-      "title": "ansible",
-      "slug": "ansible",
-      "date": "2024-12-10 02:50",
-      "categories": [
-        "devops"
-      ],
-      "url": "/devops/ansible"
-    },
-    {
       "id": "bitbucket",
       "title": "bitbucket",
       "slug": "bitbucket",
@@ -2428,14 +2408,14 @@
       "url": "/devops/bitbucket"
     },
     {
-      "id": "wordpress",
-      "title": "Wordpress",
-      "slug": "wordpress",
-      "date": "2024-11-18 17:46",
+      "id": "ansible",
+      "title": "ansible",
+      "slug": "ansible",
+      "date": "2024-12-10 02:50",
       "categories": [
-        "Desarrollo web"
+        "devops"
       ],
-      "url": "/desarrollo%20web/wordpress"
+      "url": "/devops/ansible"
     },
     {
       "id": "motor-de-plantillas",
@@ -2448,14 +2428,14 @@
       "url": "/desarrollo%20web/motor-de-plantillas"
     },
     {
-      "id": "moodle",
-      "title": "Moodle",
-      "slug": "moodle",
-      "date": "2024-11-16 20:30",
+      "id": "wordpress",
+      "title": "Wordpress",
+      "slug": "wordpress",
+      "date": "2024-11-18 17:46",
       "categories": [
         "Desarrollo web"
       ],
-      "url": "/desarrollo%20web/moodle"
+      "url": "/desarrollo%20web/wordpress"
     },
     {
       "id": "lms",
@@ -2466,6 +2446,16 @@
         "Desarrollo web"
       ],
       "url": "/desarrollo%20web/lms"
+    },
+    {
+      "id": "moodle",
+      "title": "Moodle",
+      "slug": "moodle",
+      "date": "2024-11-16 20:30",
+      "categories": [
+        "Desarrollo web"
+      ],
+      "url": "/desarrollo%20web/moodle"
     },
     {
       "id": "ecomerce",
@@ -2538,16 +2528,6 @@
       "url": "/desarrollo%20multiplataforma/native-script"
     },
     {
-      "id": "maui-net",
-      "title": "MAUI NET",
-      "slug": "maui-net",
-      "date": "2025-05-19 22:28",
-      "categories": [
-        "Desarrollo multiplataforma"
-      ],
-      "url": "/desarrollo%20multiplataforma/maui-net"
-    },
-    {
       "id": "kotlin",
       "title": "kotlin",
       "slug": "kotlin",
@@ -2558,14 +2538,14 @@
       "url": "/desarrollo%20multiplataforma/kotlin"
     },
     {
-      "id": "flutter",
-      "title": "flutter",
-      "slug": "flutter",
-      "date": "2024-11-21 19:32",
+      "id": "maui-net",
+      "title": "MAUI NET",
+      "slug": "maui-net",
+      "date": "2025-05-19 22:28",
       "categories": [
         "Desarrollo multiplataforma"
       ],
-      "url": "/desarrollo%20multiplataforma/flutter"
+      "url": "/desarrollo%20multiplataforma/maui-net"
     },
     {
       "id": "java-me",
@@ -2588,14 +2568,14 @@
       "url": "/desarrollo%20multiplataforma/ionic"
     },
     {
-      "id": "electron",
-      "title": "electron",
-      "slug": "electron",
-      "date": "2024-11-21 19:34",
+      "id": "flutter",
+      "title": "flutter",
+      "slug": "flutter",
+      "date": "2024-11-21 19:32",
       "categories": [
         "Desarrollo multiplataforma"
       ],
-      "url": "/desarrollo%20multiplataforma/electron"
+      "url": "/desarrollo%20multiplataforma/flutter"
     },
     {
       "id": "capacitor",
@@ -2606,6 +2586,16 @@
         "Desarrollo multiplataforma"
       ],
       "url": "/desarrollo%20multiplataforma/capacitor"
+    },
+    {
+      "id": "electron",
+      "title": "electron",
+      "slug": "electron",
+      "date": "2024-11-21 19:34",
+      "categories": [
+        "Desarrollo multiplataforma"
+      ],
+      "url": "/desarrollo%20multiplataforma/electron"
     },
     {
       "id": "bash",
@@ -2688,16 +2678,6 @@
       "url": "/databases/dynamodb"
     },
     {
-      "id": "dbml",
-      "title": "DBML",
-      "slug": "dbml",
-      "date": "",
-      "categories": [
-        "Databases"
-      ],
-      "url": "/databases/dbml"
-    },
-    {
       "id": "db-fundamentos-y-documentos",
       "title": "DB-Fundamentos y documentos",
       "slug": "db-fundamentos-y-documentos",
@@ -2706,6 +2686,16 @@
         "Databases"
       ],
       "url": "/databases/db-fundamentos-y-documentos"
+    },
+    {
+      "id": "dbml",
+      "title": "DBML",
+      "slug": "dbml",
+      "date": "",
+      "categories": [
+        "Databases"
+      ],
+      "url": "/databases/dbml"
     },
     {
       "id": "tensorflow",
@@ -2718,16 +2708,6 @@
       "url": "/data%20science/tensorflow"
     },
     {
-      "id": "scala",
-      "title": "Scala",
-      "slug": "scala",
-      "date": "2024-11-18 19:15",
-      "categories": [
-        "Data Science"
-      ],
-      "url": "/data%20science/scala"
-    },
-    {
       "id": "regresi-n-lineal-y-m-nimos-cuadrados-ordinarios",
       "title": "Regresión Lineal y Mínimos Cuadrados Ordinarios",
       "slug": "regresi-n-lineal-y-m-nimos-cuadrados-ordinarios",
@@ -2736,6 +2716,16 @@
         "Data Science"
       ],
       "url": "/data%20science/regresi-n-lineal-y-m-nimos-cuadrados-ordinarios"
+    },
+    {
+      "id": "scala",
+      "title": "Scala",
+      "slug": "scala",
+      "date": "2024-11-18 19:15",
+      "categories": [
+        "Data Science"
+      ],
+      "url": "/data%20science/scala"
     },
     {
       "id": "prompt-engineering",
@@ -2798,6 +2788,16 @@
       "url": "/data%20science/ia-con-huawei"
     },
     {
+      "id": "clojure",
+      "title": "Clojure",
+      "slug": "clojure",
+      "date": "2025-01-29 17:59",
+      "categories": [
+        "Data Science"
+      ],
+      "url": "/data%20science/clojure"
+    },
+    {
       "id": "deep-learning",
       "title": "Deep Learning",
       "slug": "deep-learning",
@@ -2818,16 +2818,6 @@
       "url": "/data%20science/apache-spark"
     },
     {
-      "id": "clojure",
-      "title": "Clojure",
-      "slug": "clojure",
-      "date": "2025-01-29 17:59",
-      "categories": [
-        "Data Science"
-      ],
-      "url": "/data%20science/clojure"
-    },
-    {
       "id": "agentes-ia",
       "title": "Agentes IA",
       "slug": "agentes-ia",
@@ -2836,6 +2826,16 @@
         "Automatizacion y Build"
       ],
       "url": "/automatizacion%20y%20build/agentes-ia"
+    },
+    {
+      "id": "aop-programaci-n-orientada-a-aspectos",
+      "title": "AOP Programación Orientada a Aspectos",
+      "slug": "aop-programaci-n-orientada-a-aspectos",
+      "date": "2025-05-19 20:33",
+      "categories": [
+        "Computer Science"
+      ],
+      "url": "/computer%20science/aop-programaci-n-orientada-a-aspectos"
     },
     {
       "id": "solid",
@@ -2908,16 +2908,6 @@
       "url": "/computer%20science/grafos"
     },
     {
-      "id": "expresiones-regulares",
-      "title": "Expresiones regulares",
-      "slug": "expresiones-regulares",
-      "date": "2024-03-01 16:40",
-      "categories": [
-        "Computer Science"
-      ],
-      "url": "/computer%20science/expresiones-regulares"
-    },
-    {
       "id": "estructuras-de-datos",
       "title": "estructuras de datos",
       "slug": "estructuras-de-datos",
@@ -2928,6 +2918,16 @@
       "url": "/computer%20science/estructuras-de-datos"
     },
     {
+      "id": "expresiones-regulares",
+      "title": "Expresiones regulares",
+      "slug": "expresiones-regulares",
+      "date": "2024-03-01 16:40",
+      "categories": [
+        "Computer Science"
+      ],
+      "url": "/computer%20science/expresiones-regulares"
+    },
+    {
       "id": "dsl",
       "title": "DSL",
       "slug": "dsl",
@@ -2936,6 +2936,16 @@
         "Computer Science"
       ],
       "url": "/computer%20science/dsl"
+    },
+    {
+      "id": "clean",
+      "title": "CLEAN",
+      "slug": "clean",
+      "date": "2025-05-19 01:10",
+      "categories": [
+        "Computer Science"
+      ],
+      "url": "/computer%20science/clean"
     },
     {
       "id": "ddd-domain-driven-design",
@@ -2978,16 +2988,6 @@
       "url": "/computer%20science/complejidad-logar-tmica-y-notaci-n-big-o"
     },
     {
-      "id": "clean",
-      "title": "CLEAN",
-      "slug": "clean",
-      "date": "2025-05-19 01:10",
-      "categories": [
-        "Computer Science"
-      ],
-      "url": "/computer%20science/clean"
-    },
-    {
       "id": "arquitecturas-en-computacion",
       "title": "arquitecturas en computacion",
       "slug": "arquitecturas-en-computacion",
@@ -2996,16 +2996,6 @@
         "Computer Science"
       ],
       "url": "/computer%20science/arquitecturas-en-computacion"
-    },
-    {
-      "id": "aop-programaci-n-orientada-a-aspectos",
-      "title": "AOP Programación Orientada a Aspectos",
-      "slug": "aop-programaci-n-orientada-a-aspectos",
-      "date": "2025-05-19 20:33",
-      "categories": [
-        "Computer Science"
-      ],
-      "url": "/computer%20science/aop-programaci-n-orientada-a-aspectos"
     },
     {
       "id": "algoritmos-y-tecnicas-de-computacion",
@@ -3018,16 +3008,6 @@
       "url": "/computer%20science/algoritmos-y-tecnicas-de-computacion"
     },
     {
-      "id": "vercel",
-      "title": "Vercel",
-      "slug": "vercel",
-      "date": "2025-04-10 22:02",
-      "categories": [
-        "cloud"
-      ],
-      "url": "/cloud/vercel"
-    },
-    {
       "id": "oracle",
       "title": "oracle",
       "slug": "oracle",
@@ -3036,6 +3016,16 @@
         "cloud"
       ],
       "url": "/cloud/oracle"
+    },
+    {
+      "id": "vercel",
+      "title": "Vercel",
+      "slug": "vercel",
+      "date": "2025-04-10 22:02",
+      "categories": [
+        "cloud"
+      ],
+      "url": "/cloud/vercel"
     },
     {
       "id": "netifly",
@@ -3058,14 +3048,14 @@
       "url": "/cloud/mulesoft"
     },
     {
-      "id": "gitlab",
-      "title": "gitlab",
-      "slug": "gitlab",
-      "date": "2025-01-10 18:47",
+      "id": "akamai",
+      "title": "akamai",
+      "slug": "akamai",
+      "date": "2025-05-20 20:51",
       "categories": [
         "cloud"
       ],
-      "url": "/cloud/gitlab"
+      "url": "/cloud/akamai"
     },
     {
       "id": "gcp-google-cloud",
@@ -3076,6 +3066,16 @@
         "Data Science"
       ],
       "url": "/data%20science/gcp-google-cloud"
+    },
+    {
+      "id": "gitlab",
+      "title": "gitlab",
+      "slug": "gitlab",
+      "date": "2025-01-10 18:47",
+      "categories": [
+        "cloud"
+      ],
+      "url": "/cloud/gitlab"
     },
     {
       "id": "gcp-big-data-developer-y-apache-hadoop",
@@ -3118,16 +3118,6 @@
       "url": "/cloud/cloud-computing"
     },
     {
-      "id": "azure-fundamentals-az-900-devops",
-      "title": "Azure Fundamentals AZ-900 devops",
-      "slug": "azure-fundamentals-az-900-devops",
-      "date": "2023-03-30 22:28",
-      "categories": [
-        "cloud"
-      ],
-      "url": "/cloud/azure-fundamentals-az-900-devops"
-    },
-    {
       "id": "azure",
       "title": "Azure",
       "slug": "azure",
@@ -3136,6 +3126,16 @@
         "cloud"
       ],
       "url": "/cloud/azure"
+    },
+    {
+      "id": "azure-fundamentals-az-900-devops",
+      "title": "Azure Fundamentals AZ-900 devops",
+      "slug": "azure-fundamentals-az-900-devops",
+      "date": "2023-03-30 22:28",
+      "categories": [
+        "cloud"
+      ],
+      "url": "/cloud/azure-fundamentals-az-900-devops"
     },
     {
       "id": "aws",
@@ -3158,16 +3158,6 @@
       "url": "/cloud/auto-scaling"
     },
     {
-      "id": "akamai",
-      "title": "akamai",
-      "slug": "akamai",
-      "date": "2025-05-20 20:51",
-      "categories": [
-        "cloud"
-      ],
-      "url": "/cloud/akamai"
-    },
-    {
       "id": "apache-cassandra",
       "title": "apache cassandra",
       "slug": "apache-cassandra",
@@ -3186,16 +3176,6 @@
         "ciberseguridad"
       ],
       "url": "/ciberseguridad/ztna"
-    },
-    {
-      "id": "soc",
-      "title": "SOC",
-      "slug": "soc",
-      "date": "2025-04-14 04:03",
-      "categories": [
-        "ciberseguridad"
-      ],
-      "url": "/ciberseguridad/soc"
     },
     {
       "id": "waf",
@@ -3228,14 +3208,14 @@
       "url": "/ciberseguridad/tecnicas-de-explotacion"
     },
     {
-      "id": "sase",
-      "title": "SASE",
-      "slug": "sase",
-      "date": "2025-04-14 04:09",
+      "id": "soc",
+      "title": "SOC",
+      "slug": "soc",
+      "date": "2025-04-14 04:03",
       "categories": [
         "ciberseguridad"
       ],
-      "url": "/ciberseguridad/sase"
+      "url": "/ciberseguridad/soc"
     },
     {
       "id": "soar",
@@ -3278,6 +3258,16 @@
       "url": "/ciberseguridad/servicio-xdr-detecci-n-y-respuesta-extendidas"
     },
     {
+      "id": "sase",
+      "title": "SASE",
+      "slug": "sase",
+      "date": "2025-04-14 04:09",
+      "categories": [
+        "ciberseguridad"
+      ],
+      "url": "/ciberseguridad/sase"
+    },
+    {
       "id": "servicio-mdr-detecci-n-y-respuesta-administradas",
       "title": "servicio MDR detección y respuesta administradas",
       "slug": "servicio-mdr-detecci-n-y-respuesta-administradas",
@@ -3298,14 +3288,14 @@
       "url": "/ciberseguridad/secure-service-edge"
     },
     {
-      "id": "osint",
-      "title": "OSINT",
-      "slug": "osint",
-      "date": "2025-04-14 21:26",
+      "id": "pentesting",
+      "title": "Pentesting",
+      "slug": "pentesting",
+      "date": "2024-12-03 03:52",
       "categories": [
         "ciberseguridad"
       ],
-      "url": "/ciberseguridad/osint"
+      "url": "/ciberseguridad/pentesting"
     },
     {
       "id": "red-team",
@@ -3316,16 +3306,6 @@
         "ciberseguridad"
       ],
       "url": "/ciberseguridad/red-team"
-    },
-    {
-      "id": "pentesting",
-      "title": "Pentesting",
-      "slug": "pentesting",
-      "date": "2024-12-03 03:52",
-      "categories": [
-        "ciberseguridad"
-      ],
-      "url": "/ciberseguridad/pentesting"
     },
     {
       "id": "purple-team",
@@ -3358,6 +3338,16 @@
       "url": "/ciberseguridad/oswp"
     },
     {
+      "id": "osep",
+      "title": "OSEP",
+      "slug": "osep",
+      "date": "2025-04-14 04:20",
+      "categories": [
+        "ciberseguridad"
+      ],
+      "url": "/ciberseguridad/osep"
+    },
+    {
       "id": "osstmm",
       "title": "OSSTMM",
       "slug": "osstmm",
@@ -3368,14 +3358,14 @@
       "url": "/ciberseguridad/osstmm"
     },
     {
-      "id": "osep",
-      "title": "OSEP",
-      "slug": "osep",
-      "date": "2025-04-14 04:20",
+      "id": "osint",
+      "title": "OSINT",
+      "slug": "osint",
+      "date": "2025-04-14 21:26",
       "categories": [
         "ciberseguridad"
       ],
-      "url": "/ciberseguridad/osep"
+      "url": "/ciberseguridad/osint"
     },
     {
       "id": "oscp",
@@ -3518,6 +3508,16 @@
       "url": "/ciberseguridad/firewall"
     },
     {
+      "id": "ejpt",
+      "title": "eJPT",
+      "slug": "ejpt",
+      "date": "2025-04-14 03:40",
+      "categories": [
+        "ciberseguridad"
+      ],
+      "url": "/ciberseguridad/ejpt"
+    },
+    {
       "id": "ewpt",
       "title": "eWPT",
       "slug": "ewpt",
@@ -3546,16 +3546,6 @@
         "ciberseguridad"
       ],
       "url": "/ciberseguridad/edr"
-    },
-    {
-      "id": "ejpt",
-      "title": "eJPT",
-      "slug": "ejpt",
-      "date": "2025-04-14 03:40",
-      "categories": [
-        "ciberseguridad"
-      ],
-      "url": "/ciberseguridad/ejpt"
     },
     {
       "id": "ecppt",
@@ -3608,16 +3598,6 @@
       "url": "/ciberseguridad/crto"
     },
     {
-      "id": "cloud-segurity",
-      "title": "cloud segurity",
-      "slug": "cloud-segurity",
-      "date": "2025-04-15 03:11",
-      "categories": [
-        "ciberseguridad"
-      ],
-      "url": "/ciberseguridad/cloud-segurity"
-    },
-    {
       "id": "control-de-datos",
       "title": "control de datos",
       "slug": "control-de-datos",
@@ -3636,6 +3616,16 @@
         "ciberseguridad"
       ],
       "url": "/ciberseguridad/ciclo-de-vida-de-vulnerabilidades"
+    },
+    {
+      "id": "cloud-segurity",
+      "title": "cloud segurity",
+      "slug": "cloud-segurity",
+      "date": "2025-04-15 03:11",
+      "categories": [
+        "ciberseguridad"
+      ],
+      "url": "/ciberseguridad/cloud-segurity"
     },
     {
       "id": "ciberinteligencia-tip",
@@ -3678,16 +3668,6 @@
       "url": "/ciberseguridad/casb"
     },
     {
-      "id": "burp-suite",
-      "title": "Burp Suite",
-      "slug": "burp-suite",
-      "date": "2025-04-14 17:50",
-      "categories": [
-        "ciberseguridad"
-      ],
-      "url": "/ciberseguridad/burp-suite"
-    },
-    {
       "id": "cartp",
       "title": "CARTP",
       "slug": "cartp",
@@ -3696,6 +3676,16 @@
         "ciberseguridad"
       ],
       "url": "/ciberseguridad/cartp"
+    },
+    {
+      "id": "burp-suite",
+      "title": "Burp Suite",
+      "slug": "burp-suite",
+      "date": "2025-04-14 17:50",
+      "categories": [
+        "ciberseguridad"
+      ],
+      "url": "/ciberseguridad/burp-suite"
     },
     {
       "id": "bug-bounty",
@@ -3738,14 +3728,14 @@
       "url": "/ciberseguridad/antivirus"
     },
     {
-      "id": "amenazas",
-      "title": "amenazas",
-      "slug": "amenazas",
-      "date": "",
+      "id": "openapi",
+      "title": "OpenAPI",
+      "slug": "openapi",
+      "date": "2025-01-29 14:08",
       "categories": [
-        "ciberseguridad"
+        "Backend"
       ],
-      "url": "/ciberseguridad/amenazas"
+      "url": "/backend/openapi"
     },
     {
       "id": "websockets",
@@ -3776,6 +3766,16 @@
         "Backend"
       ],
       "url": "/backend/web-services"
+    },
+    {
+      "id": "api",
+      "title": "api",
+      "slug": "api",
+      "date": "2024-11-18 21:27",
+      "categories": [
+        "Backend"
+      ],
+      "url": "/backend/api"
     },
     {
       "id": "turborepo",
@@ -3908,16 +3908,6 @@
       "url": "/backend/runtime-management"
     },
     {
-      "id": "poketbase",
-      "title": "poketbase",
-      "slug": "poketbase",
-      "date": "2024-11-23 19:31",
-      "categories": [
-        "Backend"
-      ],
-      "url": "/backend/poketbase"
-    },
-    {
       "id": "rabbitmq",
       "title": "RabbitMQ",
       "slug": "rabbitmq",
@@ -3926,6 +3916,16 @@
         "Backend"
       ],
       "url": "/backend/rabbitmq"
+    },
+    {
+      "id": "poketbase",
+      "title": "poketbase",
+      "slug": "poketbase",
+      "date": "2024-11-23 19:31",
+      "categories": [
+        "Backend"
+      ],
+      "url": "/backend/poketbase"
     },
     {
       "id": "pm2",
@@ -3948,16 +3948,6 @@
       "url": "/backend/php"
     },
     {
-      "id": "openapi",
-      "title": "OpenAPI",
-      "slug": "openapi",
-      "date": "2025-01-29 14:08",
-      "categories": [
-        "Backend"
-      ],
-      "url": "/backend/openapi"
-    },
-    {
       "id": "node-js",
       "title": "node.js",
       "slug": "node-js",
@@ -3976,6 +3966,16 @@
         "Backend"
       ],
       "url": "/backend/ngrok"
+    },
+    {
+      "id": "jax-ws",
+      "title": "JAX-WS",
+      "slug": "jax-ws",
+      "date": "2024-11-22 20:48",
+      "categories": [
+        "Backend"
+      ],
+      "url": "/backend/jax-ws"
     },
     {
       "id": "nginx",
@@ -4018,16 +4018,6 @@
       "url": "/backend/microservicios"
     },
     {
-      "id": "jax-ws",
-      "title": "JAX-WS",
-      "slug": "jax-ws",
-      "date": "2024-11-22 20:48",
-      "categories": [
-        "Backend"
-      ],
-      "url": "/backend/jax-ws"
-    },
-    {
       "id": "laravel",
       "title": "laravel",
       "slug": "laravel",
@@ -4058,16 +4048,6 @@
       "url": "/backend/instance-scaling"
     },
     {
-      "id": "graphql",
-      "title": "GraphQL",
-      "slug": "graphql",
-      "date": "2024-11-25 16:24",
-      "categories": [
-        "Backend"
-      ],
-      "url": "/backend/graphql"
-    },
-    {
       "id": "grpc",
       "title": "gRPC",
       "slug": "grpc",
@@ -4076,6 +4056,16 @@
         "Backend"
       ],
       "url": "/backend/grpc"
+    },
+    {
+      "id": "graphql",
+      "title": "GraphQL",
+      "slug": "graphql",
+      "date": "2024-11-25 16:24",
+      "categories": [
+        "Backend"
+      ],
+      "url": "/backend/graphql"
     },
     {
       "id": "gestor-de-colas",
@@ -4088,6 +4078,16 @@
       "url": "/backend/gestor-de-colas"
     },
     {
+      "id": "apache",
+      "title": "apache",
+      "slug": "apache",
+      "date": "2024-11-22 21:03",
+      "categories": [
+        "Backend"
+      ],
+      "url": "/backend/apache"
+    },
+    {
       "id": "firebase",
       "title": "Firebase",
       "slug": "firebase",
@@ -4098,16 +4098,6 @@
       "url": "/backend/firebase"
     },
     {
-      "id": "fastapi",
-      "title": "FastApi",
-      "slug": "fastapi",
-      "date": "2024-11-16 19:43",
-      "categories": [
-        "Backend"
-      ],
-      "url": "/backend/fastapi"
-    },
-    {
       "id": "fastify",
       "title": "fastify",
       "slug": "fastify",
@@ -4116,6 +4106,16 @@
         "Backend"
       ],
       "url": "/backend/fastify"
+    },
+    {
+      "id": "fastapi",
+      "title": "FastApi",
+      "slug": "fastapi",
+      "date": "2024-11-16 19:43",
+      "categories": [
+        "Backend"
+      ],
+      "url": "/backend/fastapi"
     },
     {
       "id": "django",
@@ -4178,16 +4178,6 @@
       "url": "/backend/asp-net"
     },
     {
-      "id": "api",
-      "title": "api",
-      "slug": "api",
-      "date": "2024-11-18 21:27",
-      "categories": [
-        "Backend"
-      ],
-      "url": "/backend/api"
-    },
-    {
       "id": "appwrite",
       "title": "Appwrite",
       "slug": "appwrite",
@@ -4196,16 +4186,6 @@
         "Backend"
       ],
       "url": "/backend/appwrite"
-    },
-    {
-      "id": "apache",
-      "title": "apache",
-      "slug": "apache",
-      "date": "2024-11-22 21:03",
-      "categories": [
-        "Backend"
-      ],
-      "url": "/backend/apache"
     },
     {
       "id": "apache-kafka",
@@ -4288,16 +4268,6 @@
       "url": "/automatizacion%20y%20build/maven"
     },
     {
-      "id": "jhipster",
-      "title": "JHipster",
-      "slug": "jhipster",
-      "date": "2025-02-19 16:44",
-      "categories": [
-        "Automatizacion y Build"
-      ],
-      "url": "/automatizacion%20y%20build/jhipster"
-    },
-    {
       "id": "husky",
       "title": "husky",
       "slug": "husky",
@@ -4308,13 +4278,21 @@
       "url": "/automatizacion%20y%20build/husky"
     },
     {
+      "id": "jhipster",
+      "title": "JHipster",
+      "slug": "jhipster",
+      "date": "2025-02-19 16:44",
+      "categories": [
+        "Automatizacion y Build"
+      ],
+      "url": "/automatizacion%20y%20build/jhipster"
+    },
+    {
       "id": "gu-a-pr-ctica-completa-de-celery",
-      "title": "Guía Práctica Completa de Celery",
+      "title": "gu-a-pr-ctica-completa-de-celery",
       "slug": "gu-a-pr-ctica-completa-de-celery",
       "date": "",
-      "categories": [
-        "uncategorized"
-      ],
+      "categories": [],
       "url": "/uncategorized/gu-a-pr-ctica-completa-de-celery"
     },
     {
@@ -4328,16 +4306,6 @@
       "url": "/automatizacion%20y%20build/gulp"
     },
     {
-      "id": "git-hooks",
-      "title": "git hooks",
-      "slug": "git-hooks",
-      "date": "2025-10-13 15:24",
-      "categories": [
-        "Automatizacion y Build"
-      ],
-      "url": "/automatizacion%20y%20build/git-hooks"
-    },
-    {
       "id": "gradle",
       "title": "Gradle",
       "slug": "gradle",
@@ -4346,6 +4314,16 @@
         "Automatizacion y Build"
       ],
       "url": "/automatizacion%20y%20build/gradle"
+    },
+    {
+      "id": "git-hooks",
+      "title": "git hooks",
+      "slug": "git-hooks",
+      "date": "2025-10-13 15:24",
+      "categories": [
+        "Automatizacion y Build"
+      ],
+      "url": "/automatizacion%20y%20build/git-hooks"
     },
     {
       "id": "celery",
@@ -4359,22 +4337,18 @@
     },
     {
       "id": "celery-temas-avanzados-varios",
-      "title": "Celery Temas Avanzados Varios",
+      "title": "celery-temas-avanzados-varios",
       "slug": "celery-temas-avanzados-varios",
       "date": "",
-      "categories": [
-        "uncategorized"
-      ],
+      "categories": [],
       "url": "/uncategorized/celery-temas-avanzados-varios"
     },
     {
       "id": "celery-conceptos-avanzados-y-configuraci-n-profesional",
-      "title": "Celery Conceptos Avanzados y Configuración Profesional",
+      "title": "celery-conceptos-avanzados-y-configuraci-n-profesional",
       "slug": "celery-conceptos-avanzados-y-configuraci-n-profesional",
       "date": "",
-      "categories": [
-        "uncategorized"
-      ],
+      "categories": [],
       "url": "/uncategorized/celery-conceptos-avanzados-y-configuraci-n-profesional"
     },
     {
@@ -4408,16 +4382,6 @@
       "url": "/autenticacion/saml"
     },
     {
-      "id": "rbac",
-      "title": "RBAC",
-      "slug": "rbac",
-      "date": "2025-04-14 19:23",
-      "categories": [
-        "autenticacion"
-      ],
-      "url": "/autenticacion/rbac"
-    },
-    {
       "id": "radius",
       "title": "RADIUS",
       "slug": "radius",
@@ -4426,6 +4390,16 @@
         "autenticacion"
       ],
       "url": "/autenticacion/radius"
+    },
+    {
+      "id": "rbac",
+      "title": "RBAC",
+      "slug": "rbac",
+      "date": "2025-04-14 19:23",
+      "categories": [
+        "autenticacion"
+      ],
+      "url": "/autenticacion/rbac"
     },
     {
       "id": "pki-infraestructura-de-clave-p-blica",
@@ -4448,6 +4422,16 @@
       "url": "/autenticacion/oauth"
     },
     {
+      "id": "iam-gesti-n-de-identidades-y-acceso",
+      "title": "IAM Gestión de Identidades y Acceso",
+      "slug": "iam-gesti-n-de-identidades-y-acceso",
+      "date": "2025-04-14 19:20",
+      "categories": [
+        "autenticacion"
+      ],
+      "url": "/autenticacion/iam-gesti-n-de-identidades-y-acceso"
+    },
+    {
       "id": "ldap",
       "title": "LDAP",
       "slug": "ldap",
@@ -4456,16 +4440,6 @@
         "autenticacion"
       ],
       "url": "/autenticacion/ldap"
-    },
-    {
-      "id": "kerberos",
-      "title": "Kerberos",
-      "slug": "kerberos",
-      "date": "2025-11-14 17:41",
-      "categories": [
-        "autenticacion"
-      ],
-      "url": "/autenticacion/kerberos"
     },
     {
       "id": "jwt",
@@ -4478,6 +4452,16 @@
       "url": "/autenticacion/jwt"
     },
     {
+      "id": "kerberos",
+      "title": "Kerberos",
+      "slug": "kerberos",
+      "date": "2025-11-14 17:41",
+      "categories": [
+        "autenticacion"
+      ],
+      "url": "/autenticacion/kerberos"
+    },
+    {
       "id": "criptografia",
       "title": "criptografia",
       "slug": "criptografia",
@@ -4486,16 +4470,6 @@
         "autenticacion"
       ],
       "url": "/autenticacion/criptografia"
-    },
-    {
-      "id": "iam-gesti-n-de-identidades-y-acceso",
-      "title": "IAM Gestión de Identidades y Acceso",
-      "slug": "iam-gesti-n-de-identidades-y-acceso",
-      "date": "2025-04-14 19:20",
-      "categories": [
-        "autenticacion"
-      ],
-      "url": "/autenticacion/iam-gesti-n-de-identidades-y-acceso"
     },
     {
       "id": "better-auth",
@@ -4576,16 +4550,6 @@
         "Sistemas"
       ],
       "url": "/sistemas/sistemas"
-    },
-    {
-      "id": "sin-t-tulo",
-      "title": "Sin título",
-      "slug": "sin-t-tulo",
-      "date": "",
-      "categories": [
-        "uncategorized"
-      ],
-      "url": "/uncategorized/sin-t-tulo"
     },
     {
       "id": "seguridad-web-y-certificados-tls",
@@ -4808,16 +4772,6 @@
       "url": "/backend/backend"
     },
     {
-      "id": "autenticacion",
-      "title": "autenticacion",
-      "slug": "autenticacion",
-      "date": "2025-04-15 19:15",
-      "categories": [
-        "autenticacion"
-      ],
-      "url": "/autenticacion/autenticacion"
-    },
-    {
       "id": "automatizacion-y-build",
       "title": "Automatizacion y Build",
       "slug": "automatizacion-y-build",
@@ -4826,6 +4780,16 @@
         "Automatizacion y Build"
       ],
       "url": "/automatizacion%20y%20build/automatizacion-y-build"
+    },
+    {
+      "id": "autenticacion",
+      "title": "autenticacion",
+      "slug": "autenticacion",
+      "date": "2025-04-15 19:15",
+      "categories": [
+        "autenticacion"
+      ],
+      "url": "/autenticacion/autenticacion"
     },
     {
       "id": "administracion-de-sistemas",
@@ -4876,6 +4840,78 @@
       "target": "/testing/gu-a-avanzada-de-jest-con-mocks-y-spies/"
     },
     {
+      "source": "/testing/qunit-guia-para-entrevistas",
+      "target": "/testing/qunit/"
+    },
+    {
+      "source": "/testing/qunit-guia-para-entrevistas",
+      "target": "/testing/testing/"
+    },
+    {
+      "source": "/testing/qunit-guia-para-entrevistas",
+      "target": "/testing/tdd---test-driven-development/"
+    },
+    {
+      "source": "/testing/qunit-guia-para-entrevistas",
+      "target": "/desarrollo%20web/javascript/"
+    },
+    {
+      "source": "/testing/qunit-guia-para-entrevistas",
+      "target": "/backend/node-js/"
+    },
+    {
+      "source": "/testing/qunit-guia-para-entrevistas",
+      "target": "/testing/msw-mocks-service-worker/"
+    },
+    {
+      "source": "/testing/qunit-guia-para-entrevistas",
+      "target": "/desarrollo%20web/javascript/"
+    },
+    {
+      "source": "/testing/qunit-guia-para-entrevistas",
+      "target": "/backend/node-js/"
+    },
+    {
+      "source": "/testing/qunit-guia-para-entrevistas",
+      "target": "/testing/msw-mocks-service-worker/"
+    },
+    {
+      "source": "/testing/qunit-guia-para-entrevistas",
+      "target": "/testing/msw-mocks-service-worker/"
+    },
+    {
+      "source": "/testing/qunit-guia-para-entrevistas",
+      "target": "/desarrollo%20web/javascript/"
+    },
+    {
+      "source": "/testing/qunit-guia-para-entrevistas",
+      "target": "/backend/node-js/"
+    },
+    {
+      "source": "/testing/qunit-guia-para-entrevistas",
+      "target": "/testing/msw-mocks-service-worker/"
+    },
+    {
+      "source": "/testing/tdd-patterns",
+      "target": "/testing/tdd---test-driven-development/"
+    },
+    {
+      "source": "/testing/tdd-patterns",
+      "target": "/testing/testing/"
+    },
+    {
+      "source": "/testing/tdd-patterns",
+      "target": "/testing/tdd---test-driven-development/"
+    },
+    {
+      "source": "/testing/tdd-patterns",
+      "target": "/testing/tdd---test-driven-development/"
+    },
+    {
+      "source": "/testing/tdd-patterns",
+      "target": "/testing/tdd---test-driven-development/"
+    },
+    {
       "source": "/testing/testing-as-ncrono-en-jest-con-promises-y-async-await",
       "target": "/desarrollo%20web/javascript/"
     },
@@ -4894,26 +4930,6 @@
     {
       "source": "/testing/testing-as-ncrono-en-jest-con-promises-y-async-await",
       "target": "/testing/cobertura-de-c-digo-en-jest-y-an-lisis-con-sonarqube/"
-    },
-    {
-      "source": "/testing/tdd-patterns",
-      "target": "/testing/tdd---test-driven-development/"
-    },
-    {
-      "source": "/testing/tdd-patterns",
-      "target": "/testing/testing/"
-    },
-    {
-      "source": "/testing/tdd-patterns",
-      "target": "/testing/tdd---test-driven-development/"
-    },
-    {
-      "source": "/testing/tdd-patterns",
-      "target": "/testing/tdd---test-driven-development/"
-    },
-    {
-      "source": "/testing/tdd-patterns",
-      "target": "/testing/tdd---test-driven-development/"
     },
     {
       "source": "/testing/tdd---test-driven-development",
@@ -4976,6 +4992,30 @@
       "target": "/testing/phpunit/"
     },
     {
+      "source": "/testing/roadmap-de-tdd-con-ejemplo-de-uso-en-una-empresa",
+      "target": "/testing/tdd---test-driven-development/"
+    },
+    {
+      "source": "/testing/roadmap-de-tdd-con-ejemplo-de-uso-en-una-empresa",
+      "target": "/testing/bdd/"
+    },
+    {
+      "source": "/testing/roadmap-de-tdd-con-ejemplo-de-uso-en-una-empresa",
+      "target": "/testing/bdd/"
+    },
+    {
+      "source": "/testing/roadmap-de-tdd-con-ejemplo-de-uso-en-una-empresa",
+      "target": "/testing/bdd/"
+    },
+    {
+      "source": "/testing/roadmap-de-tdd-con-ejemplo-de-uso-en-una-empresa",
+      "target": "/testing/tdd---test-driven-development/"
+    },
+    {
+      "source": "/testing/roadmap-de-tdd-con-ejemplo-de-uso-en-una-empresa",
+      "target": "/testing/bdd/"
+    },
+    {
       "source": "/testing/selenium",
       "target": "/testing/testing/"
     },
@@ -5026,30 +5066,6 @@
     {
       "source": "/testing/selenium",
       "target": "/testing/playwright/"
-    },
-    {
-      "source": "/testing/roadmap-de-tdd-con-ejemplo-de-uso-en-una-empresa",
-      "target": "/testing/tdd---test-driven-development/"
-    },
-    {
-      "source": "/testing/roadmap-de-tdd-con-ejemplo-de-uso-en-una-empresa",
-      "target": "/testing/bdd/"
-    },
-    {
-      "source": "/testing/roadmap-de-tdd-con-ejemplo-de-uso-en-una-empresa",
-      "target": "/testing/bdd/"
-    },
-    {
-      "source": "/testing/roadmap-de-tdd-con-ejemplo-de-uso-en-una-empresa",
-      "target": "/testing/bdd/"
-    },
-    {
-      "source": "/testing/roadmap-de-tdd-con-ejemplo-de-uso-en-una-empresa",
-      "target": "/testing/tdd---test-driven-development/"
-    },
-    {
-      "source": "/testing/roadmap-de-tdd-con-ejemplo-de-uso-en-una-empresa",
-      "target": "/testing/bdd/"
     },
     {
       "source": "/testing/qunit",
@@ -5122,58 +5138,6 @@
     {
       "source": "/testing/qunit",
       "target": "/backend/node-js/"
-    },
-    {
-      "source": "/testing/qunit-guia-para-entrevistas",
-      "target": "/testing/qunit/"
-    },
-    {
-      "source": "/testing/qunit-guia-para-entrevistas",
-      "target": "/testing/testing/"
-    },
-    {
-      "source": "/testing/qunit-guia-para-entrevistas",
-      "target": "/testing/tdd---test-driven-development/"
-    },
-    {
-      "source": "/testing/qunit-guia-para-entrevistas",
-      "target": "/desarrollo%20web/javascript/"
-    },
-    {
-      "source": "/testing/qunit-guia-para-entrevistas",
-      "target": "/backend/node-js/"
-    },
-    {
-      "source": "/testing/qunit-guia-para-entrevistas",
-      "target": "/testing/msw-mocks-service-worker/"
-    },
-    {
-      "source": "/testing/qunit-guia-para-entrevistas",
-      "target": "/desarrollo%20web/javascript/"
-    },
-    {
-      "source": "/testing/qunit-guia-para-entrevistas",
-      "target": "/backend/node-js/"
-    },
-    {
-      "source": "/testing/qunit-guia-para-entrevistas",
-      "target": "/testing/msw-mocks-service-worker/"
-    },
-    {
-      "source": "/testing/qunit-guia-para-entrevistas",
-      "target": "/testing/msw-mocks-service-worker/"
-    },
-    {
-      "source": "/testing/qunit-guia-para-entrevistas",
-      "target": "/desarrollo%20web/javascript/"
-    },
-    {
-      "source": "/testing/qunit-guia-para-entrevistas",
-      "target": "/backend/node-js/"
-    },
-    {
-      "source": "/testing/qunit-guia-para-entrevistas",
-      "target": "/testing/msw-mocks-service-worker/"
     },
     {
       "source": "/testing/qunit---debugging--diagn-stico-avanzado-e-integraci-n-cicd-con-coverage-moderno--nyc--c8-",
@@ -5352,6 +5316,34 @@
       "target": "/testing/e2e---end-to-end-testing/"
     },
     {
+      "source": "/testing/mocks-msw---patrones-de-validaci-n-y-depuraci-n",
+      "target": "/testing/testing/"
+    },
+    {
+      "source": "/testing/mocks-msw---patrones-de-validaci-n-y-depuraci-n",
+      "target": "/testing/tdd---test-driven-development/"
+    },
+    {
+      "source": "/testing/mocks-msw---patrones-de-validaci-n-y-depuraci-n",
+      "target": "/testing/profiler/"
+    },
+    {
+      "source": "/testing/mocks-msw---patrones-de-validaci-n-y-depuraci-n",
+      "target": "/testing/profiler/"
+    },
+    {
+      "source": "/testing/mocks-msw---patrones-de-validaci-n-y-depuraci-n",
+      "target": "/testing/mocks-msw---integraci-n-avanzada-con-jest--vitest-y-playwright/"
+    },
+    {
+      "source": "/testing/mocks-msw---patrones-de-validaci-n-y-depuraci-n",
+      "target": "/testing/tdd-patterns/"
+    },
+    {
+      "source": "/testing/mocks-msw---patrones-de-validaci-n-y-depuraci-n",
+      "target": "/testing/profiler/"
+    },
+    {
       "source": "/testing/phpunit",
       "target": "/testing/testing/"
     },
@@ -5382,6 +5374,22 @@
     {
       "source": "/testing/phpunit",
       "target": "/backend/php/"
+    },
+    {
+      "source": "/testing/mocks-msw---patrones-y-casos-reales",
+      "target": "/testing/testing/"
+    },
+    {
+      "source": "/testing/mocks-msw---patrones-y-casos-reales",
+      "target": "/testing/tdd---test-driven-development/"
+    },
+    {
+      "source": "/testing/mocks-msw---patrones-y-casos-reales",
+      "target": "/testing/msw-mocks-service-worker/"
+    },
+    {
+      "source": "/testing/mocks-msw---patrones-y-casos-reales",
+      "target": "/testing/tdd-patterns/"
     },
     {
       "source": "/testing/msw-mocks-service-worker",
@@ -5422,50 +5430,6 @@
     {
       "source": "/testing/msw-mocks-service-worker",
       "target": "/testing/e2e---end-to-end-testing/"
-    },
-    {
-      "source": "/testing/mocks-msw---patrones-y-casos-reales",
-      "target": "/testing/testing/"
-    },
-    {
-      "source": "/testing/mocks-msw---patrones-y-casos-reales",
-      "target": "/testing/tdd---test-driven-development/"
-    },
-    {
-      "source": "/testing/mocks-msw---patrones-y-casos-reales",
-      "target": "/testing/msw-mocks-service-worker/"
-    },
-    {
-      "source": "/testing/mocks-msw---patrones-y-casos-reales",
-      "target": "/testing/tdd-patterns/"
-    },
-    {
-      "source": "/testing/mocks-msw---patrones-de-validaci-n-y-depuraci-n",
-      "target": "/testing/testing/"
-    },
-    {
-      "source": "/testing/mocks-msw---patrones-de-validaci-n-y-depuraci-n",
-      "target": "/testing/tdd---test-driven-development/"
-    },
-    {
-      "source": "/testing/mocks-msw---patrones-de-validaci-n-y-depuraci-n",
-      "target": "/testing/profiler/"
-    },
-    {
-      "source": "/testing/mocks-msw---patrones-de-validaci-n-y-depuraci-n",
-      "target": "/testing/profiler/"
-    },
-    {
-      "source": "/testing/mocks-msw---patrones-de-validaci-n-y-depuraci-n",
-      "target": "/testing/mocks-msw---integraci-n-avanzada-con-jest--vitest-y-playwright/"
-    },
-    {
-      "source": "/testing/mocks-msw---patrones-de-validaci-n-y-depuraci-n",
-      "target": "/testing/tdd-patterns/"
-    },
-    {
-      "source": "/testing/mocks-msw---patrones-de-validaci-n-y-depuraci-n",
-      "target": "/testing/profiler/"
     },
     {
       "source": "/testing/mocks-msw---patrones-de-dise-o-y-arquitectura-de-mocks",
@@ -5710,6 +5674,38 @@
     {
       "source": "/testing/junit",
       "target": "/devops/github-actions/"
+    },
+    {
+      "source": "/testing/configuraci-n-de-jest-en-proyectos-typescript",
+      "target": "/testing/testing/"
+    },
+    {
+      "source": "/testing/configuraci-n-de-jest-en-proyectos-typescript",
+      "target": "/testing/jest/"
+    },
+    {
+      "source": "/testing/configuraci-n-de-jest-en-proyectos-typescript",
+      "target": "/software%20engineering/typescript/"
+    },
+    {
+      "source": "/testing/configuraci-n-de-jest-en-proyectos-typescript",
+      "target": "/backend/node-js/"
+    },
+    {
+      "source": "/testing/configuraci-n-de-jest-en-proyectos-typescript",
+      "target": "/devops/cicd/"
+    },
+    {
+      "source": "/testing/configuraci-n-de-jest-en-proyectos-typescript",
+      "target": "/testing/qa/"
+    },
+    {
+      "source": "/testing/configuraci-n-de-jest-en-proyectos-typescript",
+      "target": "/devops/cicd/"
+    },
+    {
+      "source": "/testing/configuraci-n-de-jest-en-proyectos-typescript",
+      "target": "/testing/cobertura-de-c-digo-en-jest-y-an-lisis-con-sonarqube/"
     },
     {
       "source": "/testing/jmeter",
@@ -6032,14 +6028,6 @@
       "target": "/testing/playwright/"
     },
     {
-      "source": "/uncategorized/gu-a-fundamental-de-e2e",
-      "target": "/testing/e2e---end-to-end-testing/"
-    },
-    {
-      "source": "/uncategorized/gu-a-fundamental-de-e2e",
-      "target": "/testing/playwright/"
-    },
-    {
       "source": "/testing/gu-a-de-entrevista-tdd",
       "target": "/testing/tdd---test-driven-development/"
     },
@@ -6080,6 +6068,14 @@
       "target": "/testing/bdd/"
     },
     {
+      "source": "/uncategorized/gu-a-fundamental-de-e2e",
+      "target": "/testing/e2e---end-to-end-testing/"
+    },
+    {
+      "source": "/uncategorized/gu-a-fundamental-de-e2e",
+      "target": "/testing/playwright/"
+    },
+    {
       "source": "/testing/gu-a-avanzada-de-jest-con-mocks-y-spies",
       "target": "/desarrollo%20web/javascript/"
     },
@@ -6110,46 +6106,6 @@
     {
       "source": "/testing/gu-a-avanzada-de-jest-con-mocks-y-spies",
       "target": "/testing/msw-mocks-service-worker/"
-    },
-    {
-      "source": "/testing/glosario-de-tdd",
-      "target": "/testing/tdd---test-driven-development/"
-    },
-    {
-      "source": "/testing/glosario-de-tdd",
-      "target": "/testing/bdd/"
-    },
-    {
-      "source": "/testing/glosario-de-tdd",
-      "target": "/testing/tdd---test-driven-development/"
-    },
-    {
-      "source": "/testing/glosario-de-tdd",
-      "target": "/testing/tdd---test-driven-development/"
-    },
-    {
-      "source": "/testing/glosario-de-tdd",
-      "target": "/testing/bdd/"
-    },
-    {
-      "source": "/testing/glosario-de-tdd",
-      "target": "/testing/tdd---test-driven-development/"
-    },
-    {
-      "source": "/testing/glosario-de-tdd",
-      "target": "/testing/bdd/"
-    },
-    {
-      "source": "/testing/glosario-de-tdd",
-      "target": "/testing/bdd/"
-    },
-    {
-      "source": "/testing/glosario-de-tdd",
-      "target": "/testing/tdd---test-driven-development/"
-    },
-    {
-      "source": "/testing/glosario-de-tdd",
-      "target": "/testing/tdd---test-driven-development/"
     },
     {
       "source": "/testing/glosario-de-terminos-de-testing-de-nota-principal",
@@ -6194,6 +6150,46 @@
     {
       "source": "/testing/glosario-de-terminos-de-testing-de-nota-principal",
       "target": "/testing/msw-mocks-service-worker/"
+    },
+    {
+      "source": "/testing/glosario-de-tdd",
+      "target": "/testing/tdd---test-driven-development/"
+    },
+    {
+      "source": "/testing/glosario-de-tdd",
+      "target": "/testing/bdd/"
+    },
+    {
+      "source": "/testing/glosario-de-tdd",
+      "target": "/testing/tdd---test-driven-development/"
+    },
+    {
+      "source": "/testing/glosario-de-tdd",
+      "target": "/testing/tdd---test-driven-development/"
+    },
+    {
+      "source": "/testing/glosario-de-tdd",
+      "target": "/testing/bdd/"
+    },
+    {
+      "source": "/testing/glosario-de-tdd",
+      "target": "/testing/tdd---test-driven-development/"
+    },
+    {
+      "source": "/testing/glosario-de-tdd",
+      "target": "/testing/bdd/"
+    },
+    {
+      "source": "/testing/glosario-de-tdd",
+      "target": "/testing/bdd/"
+    },
+    {
+      "source": "/testing/glosario-de-tdd",
+      "target": "/testing/tdd---test-driven-development/"
+    },
+    {
+      "source": "/testing/glosario-de-tdd",
+      "target": "/testing/tdd---test-driven-development/"
     },
     {
       "source": "/testing/glosario-complementario-de-conceptos-de-testing",
@@ -6276,14 +6272,6 @@
       "target": "/testing/bdd/"
     },
     {
-      "source": "/testing/e2e---ejemplos-pr-cticos-avanzados",
-      "target": "/testing/e2e---end-to-end-testing/"
-    },
-    {
-      "source": "/testing/e2e---ejemplos-pr-cticos-avanzados",
-      "target": "/testing/playwright/"
-    },
-    {
       "source": "/testing/e2e---end-to-end-testing",
       "target": "/uncategorized/gu-a-fundamental-de-e2e/"
     },
@@ -6325,6 +6313,14 @@
     },
     {
       "source": "/testing/e2e---conceptos-avanzados-y-estrategia-completa",
+      "target": "/testing/playwright/"
+    },
+    {
+      "source": "/testing/e2e---ejemplos-pr-cticos-avanzados",
+      "target": "/testing/e2e---end-to-end-testing/"
+    },
+    {
+      "source": "/testing/e2e---ejemplos-pr-cticos-avanzados",
       "target": "/testing/playwright/"
     },
     {
@@ -6466,38 +6462,6 @@
     {
       "source": "/testing/cobertura-de-c-digo-en-jest-y-an-lisis-con-sonarqube",
       "target": "/devops/github-actions/"
-    },
-    {
-      "source": "/testing/configuraci-n-de-jest-en-proyectos-typescript",
-      "target": "/testing/testing/"
-    },
-    {
-      "source": "/testing/configuraci-n-de-jest-en-proyectos-typescript",
-      "target": "/testing/jest/"
-    },
-    {
-      "source": "/testing/configuraci-n-de-jest-en-proyectos-typescript",
-      "target": "/software%20engineering/typescript/"
-    },
-    {
-      "source": "/testing/configuraci-n-de-jest-en-proyectos-typescript",
-      "target": "/backend/node-js/"
-    },
-    {
-      "source": "/testing/configuraci-n-de-jest-en-proyectos-typescript",
-      "target": "/devops/cicd/"
-    },
-    {
-      "source": "/testing/configuraci-n-de-jest-en-proyectos-typescript",
-      "target": "/testing/qa/"
-    },
-    {
-      "source": "/testing/configuraci-n-de-jest-en-proyectos-typescript",
-      "target": "/devops/cicd/"
-    },
-    {
-      "source": "/testing/configuraci-n-de-jest-en-proyectos-typescript",
-      "target": "/testing/cobertura-de-c-digo-en-jest-y-an-lisis-con-sonarqube/"
     },
     {
       "source": "/testing/bdd",
@@ -6684,6 +6648,14 @@
       "target": "/sistemas/powershell/"
     },
     {
+      "source": "/sistemas/powershell",
+      "target": "/sistemas/sistemas/"
+    },
+    {
+      "source": "/sistemas/powershell",
+      "target": "/sistemas/wsl/"
+    },
+    {
       "source": "/sistemas/pihole",
       "target": "/sistemas/sistemas/"
     },
@@ -6704,48 +6676,12 @@
       "target": "/sistemas/sistemas/"
     },
     {
-      "source": "/sistemas/powershell",
-      "target": "/sistemas/sistemas/"
-    },
-    {
-      "source": "/sistemas/powershell",
-      "target": "/sistemas/wsl/"
-    },
-    {
       "source": "/linux/parrot-os",
       "target": "/linux/instalacion-con-persistencia-de-linux-en-usb/"
     },
     {
       "source": "/linux/parrot-os",
       "target": "/linux/linux-personalizacion-de-entorno/"
-    },
-    {
-      "source": "/sistemas/office-365",
-      "target": "/management/management/"
-    },
-    {
-      "source": "/sistemas/office-365",
-      "target": "/software%20engineering/excel/"
-    },
-    {
-      "source": "/sistemas/office-365",
-      "target": "/cloud/azure/"
-    },
-    {
-      "source": "/sistemas/office-365",
-      "target": "/sistemas/active-directory/"
-    },
-    {
-      "source": "/sistemas/office-365",
-      "target": "/autenticacion/sso-single-sign-on/"
-    },
-    {
-      "source": "/sistemas/office-365",
-      "target": "/cloud/azure/"
-    },
-    {
-      "source": "/sistemas/office-365",
-      "target": "/cloud/azure/"
     },
     {
       "source": "/sistemas/nas",
@@ -6786,6 +6722,34 @@
     {
       "source": "/sistemas/nas",
       "target": "/virtualizacion/vdi-infraestructura-de-escritorio-virtual/"
+    },
+    {
+      "source": "/sistemas/office-365",
+      "target": "/management/management/"
+    },
+    {
+      "source": "/sistemas/office-365",
+      "target": "/software%20engineering/excel/"
+    },
+    {
+      "source": "/sistemas/office-365",
+      "target": "/cloud/azure/"
+    },
+    {
+      "source": "/sistemas/office-365",
+      "target": "/sistemas/active-directory/"
+    },
+    {
+      "source": "/sistemas/office-365",
+      "target": "/autenticacion/sso-single-sign-on/"
+    },
+    {
+      "source": "/sistemas/office-365",
+      "target": "/cloud/azure/"
+    },
+    {
+      "source": "/sistemas/office-365",
+      "target": "/cloud/azure/"
     },
     {
       "source": "/sistemas/linux",
@@ -6916,22 +6880,6 @@
       "target": "/sistemas/powershell/"
     },
     {
-      "source": "/sistemas/comando-grep",
-      "target": "/sistemas/sistemas/"
-    },
-    {
-      "source": "/sistemas/comando-grep",
-      "target": "/sistemas/sistemas/"
-    },
-    {
-      "source": "/sistemas/comando-grep",
-      "target": "/sistemas/sistemas/"
-    },
-    {
-      "source": "/sistemas/comando-grep",
-      "target": "/sistemas/sistemas/"
-    },
-    {
       "source": "/virtualizacion/devcontainers",
       "target": "/software%20engineering/docker/"
     },
@@ -6948,12 +6896,20 @@
       "target": "/sistemas/powershell/"
     },
     {
-      "source": "/sistemas/active-directory",
-      "target": "/infraestructura%20it/infraestructura-it/"
+      "source": "/sistemas/comando-grep",
+      "target": "/sistemas/sistemas/"
     },
     {
-      "source": "/sistemas/active-directory",
-      "target": "/autenticacion/kerberos/"
+      "source": "/sistemas/comando-grep",
+      "target": "/sistemas/sistemas/"
+    },
+    {
+      "source": "/sistemas/comando-grep",
+      "target": "/sistemas/sistemas/"
+    },
+    {
+      "source": "/sistemas/comando-grep",
+      "target": "/sistemas/sistemas/"
     },
     {
       "source": "/automatizacion%20y%20build/autohotkey",
@@ -6992,6 +6948,18 @@
       "target": "/sistemas/vim/"
     },
     {
+      "source": "/sistemas/active-directory",
+      "target": "/infraestructura%20it/infraestructura-it/"
+    },
+    {
+      "source": "/sistemas/active-directory",
+      "target": "/autenticacion/kerberos/"
+    },
+    {
+      "source": "/redes/mascara-de-red",
+      "target": "/redes/subred/"
+    },
+    {
       "source": "/telefona%20y%20uc/voip",
       "target": "/telefonía%20y%20uc/sip/"
     },
@@ -7008,6 +6976,14 @@
       "target": "/management/crm/"
     },
     {
+      "source": "/telefona%20y%20uc/videoconferencia",
+      "target": "/telefonía%20y%20uc/voip/"
+    },
+    {
+      "source": "/telefona%20y%20uc/videoconferencia",
+      "target": "/sistemas/office-365/"
+    },
+    {
       "source": "/redes/vlan",
       "target": "/redes/subred/"
     },
@@ -7016,12 +6992,16 @@
       "target": "/devops/virtualizacion/"
     },
     {
-      "source": "/telefona%20y%20uc/videoconferencia",
-      "target": "/telefonía%20y%20uc/voip/"
+      "source": "/redes/van",
+      "target": "/gestion%20de%20negocio/gestion-de-negocio/"
     },
     {
-      "source": "/telefona%20y%20uc/videoconferencia",
-      "target": "/sistemas/office-365/"
+      "source": "/redes/van",
+      "target": "/gestion%20de%20negocio/edi-intercambio-electr-nico-de-datos/"
+    },
+    {
+      "source": "/redes/van",
+      "target": "/infraestructura%20it/gdpr/"
     },
     {
       "source": "/uncategorized/telefon-a-y-uc",
@@ -7048,18 +7028,6 @@
       "target": "/telefonía%20y%20uc/sip/"
     },
     {
-      "source": "/redes/van",
-      "target": "/gestion%20de%20negocio/gestion-de-negocio/"
-    },
-    {
-      "source": "/redes/van",
-      "target": "/gestion%20de%20negocio/edi-intercambio-electr-nico-de-datos/"
-    },
-    {
-      "source": "/redes/van",
-      "target": "/infraestructura%20it/gdpr/"
-    },
-    {
       "source": "/telefona%20y%20uc/sip",
       "target": "/autenticacion/autenticacion/"
     },
@@ -7070,6 +7038,10 @@
     {
       "source": "/telefona%20y%20uc/sip",
       "target": "/telefonía%20y%20uc/3cx/"
+    },
+    {
+      "source": "/redes/curso-redes-cnna-1",
+      "target": "/redes/redes/"
     },
     {
       "source": "/redes/protocolos",
@@ -7084,24 +7056,8 @@
       "target": "/autenticacion/oauth/"
     },
     {
-      "source": "/redes/mascara-de-red",
-      "target": "/redes/subred/"
-    },
-    {
       "source": "/telefona%20y%20uc/3cx",
       "target": "/telefonía%20y%20uc/sip/"
-    },
-    {
-      "source": "/motor%20de%20plantillas/pug",
-      "target": "/backend/node-js/"
-    },
-    {
-      "source": "/motor%20de%20plantillas/pug",
-      "target": "/backend/node-js/"
-    },
-    {
-      "source": "/motor%20de%20plantillas/pug",
-      "target": "/backend/node-js/"
     },
     {
       "source": "/motor%20de%20plantillas/thymeleaf",
@@ -7116,48 +7072,60 @@
       "target": "/databases/xml/"
     },
     {
+      "source": "/motor%20de%20plantillas/mustache",
+      "target": "/backend/php/"
+    },
+    {
+      "source": "/motor%20de%20plantillas/mustache",
+      "target": "/software%20engineering/java/"
+    },
+    {
+      "source": "/motor%20de%20plantillas/mustache",
+      "target": "/desarrollo%20web/moodle/"
+    },
+    {
+      "source": "/motor%20de%20plantillas/mustache",
+      "target": "/backend/springboot/"
+    },
+    {
+      "source": "/motor%20de%20plantillas/mustache",
+      "target": "/backend/springboot/"
+    },
+    {
+      "source": "/motor%20de%20plantillas/mustache",
+      "target": "/software%20engineering/java/"
+    },
+    {
+      "source": "/motor%20de%20plantillas/mustache",
+      "target": "/backend/php/"
+    },
+    {
+      "source": "/motor%20de%20plantillas/mustache",
+      "target": "/backend/php/"
+    },
+    {
+      "source": "/motor%20de%20plantillas/mustache",
+      "target": "/backend/springboot/"
+    },
+    {
+      "source": "/motor%20de%20plantillas/mustache",
+      "target": "/desarrollo%20web/moodle/"
+    },
+    {
+      "source": "/motor%20de%20plantillas/pug",
+      "target": "/backend/node-js/"
+    },
+    {
+      "source": "/motor%20de%20plantillas/pug",
+      "target": "/backend/node-js/"
+    },
+    {
+      "source": "/motor%20de%20plantillas/pug",
+      "target": "/backend/node-js/"
+    },
+    {
       "source": "/motor%20de%20plantillas/handlebars",
       "target": "/backend/php/"
-    },
-    {
-      "source": "/motor%20de%20plantillas/mustache",
-      "target": "/backend/php/"
-    },
-    {
-      "source": "/motor%20de%20plantillas/mustache",
-      "target": "/software%20engineering/java/"
-    },
-    {
-      "source": "/motor%20de%20plantillas/mustache",
-      "target": "/desarrollo%20web/moodle/"
-    },
-    {
-      "source": "/motor%20de%20plantillas/mustache",
-      "target": "/backend/springboot/"
-    },
-    {
-      "source": "/motor%20de%20plantillas/mustache",
-      "target": "/backend/springboot/"
-    },
-    {
-      "source": "/motor%20de%20plantillas/mustache",
-      "target": "/software%20engineering/java/"
-    },
-    {
-      "source": "/motor%20de%20plantillas/mustache",
-      "target": "/backend/php/"
-    },
-    {
-      "source": "/motor%20de%20plantillas/mustache",
-      "target": "/backend/php/"
-    },
-    {
-      "source": "/motor%20de%20plantillas/mustache",
-      "target": "/backend/springboot/"
-    },
-    {
-      "source": "/motor%20de%20plantillas/mustache",
-      "target": "/desarrollo%20web/moodle/"
     },
     {
       "source": "/monitoreo/zabbix",
@@ -7224,26 +7192,6 @@
       "target": "/software%20engineering/docker/"
     },
     {
-      "source": "/monitoreo/kibana",
-      "target": "/monitoreo/elasticsearch/"
-    },
-    {
-      "source": "/monitoreo/kibana",
-      "target": "/monitoreo/elasticsearch/"
-    },
-    {
-      "source": "/monitoreo/kibana",
-      "target": "/monitoreo/elasticsearch/"
-    },
-    {
-      "source": "/monitoreo/kibana",
-      "target": "/monitoreo/elasticsearch/"
-    },
-    {
-      "source": "/monitoreo/kibana",
-      "target": "/monitoreo/elasticsearch/"
-    },
-    {
       "source": "/monitoreo/nagios",
       "target": "/monitoreo/monitoreo/"
     },
@@ -7284,6 +7232,26 @@
       "target": "/monitoreo/kibana/"
     },
     {
+      "source": "/monitoreo/kibana",
+      "target": "/monitoreo/elasticsearch/"
+    },
+    {
+      "source": "/monitoreo/kibana",
+      "target": "/monitoreo/elasticsearch/"
+    },
+    {
+      "source": "/monitoreo/kibana",
+      "target": "/monitoreo/elasticsearch/"
+    },
+    {
+      "source": "/monitoreo/kibana",
+      "target": "/monitoreo/elasticsearch/"
+    },
+    {
+      "source": "/monitoreo/kibana",
+      "target": "/monitoreo/elasticsearch/"
+    },
+    {
       "source": "/monitoreo/grafana",
       "target": "/devops/devops/"
     },
@@ -7306,6 +7274,46 @@
     {
       "source": "/monitoreo/grafana",
       "target": "/virtualizacion/kubernetes/"
+    },
+    {
+      "source": "/monitoreo/elasticsearch",
+      "target": "/databases/databases/"
+    },
+    {
+      "source": "/monitoreo/elasticsearch",
+      "target": "/ciberseguridad/ciberseguridad/"
+    },
+    {
+      "source": "/monitoreo/elasticsearch",
+      "target": "/data%20science/data-science/"
+    },
+    {
+      "source": "/monitoreo/elasticsearch",
+      "target": "/monitoreo/kibana/"
+    },
+    {
+      "source": "/monitoreo/elasticsearch",
+      "target": "/monitoreo/logstash/"
+    },
+    {
+      "source": "/monitoreo/elasticsearch",
+      "target": "/devops/sonarqube/"
+    },
+    {
+      "source": "/monitoreo/elasticsearch",
+      "target": "/monitoreo/kibana/"
+    },
+    {
+      "source": "/monitoreo/elasticsearch",
+      "target": "/software%20engineering/docker/"
+    },
+    {
+      "source": "/monitoreo/elasticsearch",
+      "target": "/monitoreo/kibana/"
+    },
+    {
+      "source": "/monitoreo/elasticsearch",
+      "target": "/monitoreo/logstash/"
     },
     {
       "source": "/monitoreo/acunetix-scanner",
@@ -7382,46 +7390,6 @@
     {
       "source": "/monitoreo/acunetix-scanner",
       "target": "/monitoreo/monitoreo/"
-    },
-    {
-      "source": "/monitoreo/elasticsearch",
-      "target": "/databases/databases/"
-    },
-    {
-      "source": "/monitoreo/elasticsearch",
-      "target": "/ciberseguridad/ciberseguridad/"
-    },
-    {
-      "source": "/monitoreo/elasticsearch",
-      "target": "/data%20science/data-science/"
-    },
-    {
-      "source": "/monitoreo/elasticsearch",
-      "target": "/monitoreo/kibana/"
-    },
-    {
-      "source": "/monitoreo/elasticsearch",
-      "target": "/monitoreo/logstash/"
-    },
-    {
-      "source": "/monitoreo/elasticsearch",
-      "target": "/devops/sonarqube/"
-    },
-    {
-      "source": "/monitoreo/elasticsearch",
-      "target": "/monitoreo/kibana/"
-    },
-    {
-      "source": "/monitoreo/elasticsearch",
-      "target": "/software%20engineering/docker/"
-    },
-    {
-      "source": "/monitoreo/elasticsearch",
-      "target": "/monitoreo/kibana/"
-    },
-    {
-      "source": "/monitoreo/elasticsearch",
-      "target": "/monitoreo/logstash/"
     },
     {
       "source": "/mates/teor-a-de-la-probabilidad-y-teor-a-de-la-informaci-n",
@@ -7840,68 +7808,60 @@
       "target": "/monitoreo/monitoreo/"
     },
     {
-      "source": "/management/product-management",
-      "target": "/gestion%20de%20negocio/gestion-de-negocio/"
-    },
-    {
-      "source": "/management/product-management",
-      "target": "/management/sap/"
-    },
-    {
-      "source": "/management/product-management",
-      "target": "/management/crm/"
-    },
-    {
-      "source": "/management/product-management",
-      "target": "/management/erp/"
-    },
-    {
-      "source": "/management/product-management",
-      "target": "/management/sap/"
-    },
-    {
-      "source": "/management/product-management",
-      "target": "/gestion%20de%20negocio/business-intelligence/"
-    },
-    {
-      "source": "/management/product-management",
-      "target": "/gestion%20de%20negocio/business-intelligence/"
-    },
-    {
-      "source": "/management/product-management",
-      "target": "/management/sap/"
-    },
-    {
-      "source": "/management/product-management",
-      "target": "/management/crm/"
-    },
-    {
-      "source": "/management/product-management",
-      "target": "/management/erp/"
-    },
-    {
-      "source": "/management/product-management",
-      "target": "/gestion%20de%20negocio/gestion-de-negocio/"
-    },
-    {
-      "source": "/management/product-management",
-      "target": "/management/sap/"
-    },
-    {
-      "source": "/management/product-management",
-      "target": "/management/crm/"
-    },
-    {
-      "source": "/management/product-management",
-      "target": "/management/erp/"
-    },
-    {
       "source": "/management/jira",
       "target": "/management/management/"
     },
     {
       "source": "/management/jira",
       "target": "/devops/devops/"
+    },
+    {
+      "source": "/management/product-management",
+      "target": "/gestion%20de%20negocio/gestion-de-negocio/"
+    },
+    {
+      "source": "/management/product-management",
+      "target": "/management/sap/"
+    },
+    {
+      "source": "/management/product-management",
+      "target": "/management/crm/"
+    },
+    {
+      "source": "/management/product-management",
+      "target": "/management/erp/"
+    },
+    {
+      "source": "/management/product-management",
+      "target": "/management/sap/"
+    },
+    {
+      "source": "/management/product-management",
+      "target": "/management/sap/"
+    },
+    {
+      "source": "/management/product-management",
+      "target": "/management/crm/"
+    },
+    {
+      "source": "/management/product-management",
+      "target": "/management/erp/"
+    },
+    {
+      "source": "/management/product-management",
+      "target": "/gestion%20de%20negocio/gestion-de-negocio/"
+    },
+    {
+      "source": "/management/product-management",
+      "target": "/management/sap/"
+    },
+    {
+      "source": "/management/product-management",
+      "target": "/management/crm/"
+    },
+    {
+      "source": "/management/product-management",
+      "target": "/management/erp/"
     },
     {
       "source": "/management/erp",
@@ -7988,22 +7948,6 @@
       "target": "/management/ticketing/"
     },
     {
-      "source": "/software%20engineering/visual-basic-y-c",
-      "target": "/software%20engineering/visual-basic-vba/"
-    },
-    {
-      "source": "/software%20engineering/visual-basic-y-c",
-      "target": "/software%20engineering/cpp/"
-    },
-    {
-      "source": "/software%20engineering/visual-basic-y-c",
-      "target": "/software%20engineering/net/"
-    },
-    {
-      "source": "/software%20engineering/visual-basic-y-c",
-      "target": "/software%20engineering/excel/"
-    },
-    {
       "source": "/software%20engineering/visual-basic-vba",
       "target": "/software%20engineering/cpp/"
     },
@@ -8033,6 +7977,22 @@
     },
     {
       "source": "/software%20engineering/visual-basic-vba",
+      "target": "/software%20engineering/excel/"
+    },
+    {
+      "source": "/software%20engineering/visual-basic-y-c",
+      "target": "/software%20engineering/visual-basic-vba/"
+    },
+    {
+      "source": "/software%20engineering/visual-basic-y-c",
+      "target": "/software%20engineering/cpp/"
+    },
+    {
+      "source": "/software%20engineering/visual-basic-y-c",
+      "target": "/software%20engineering/net/"
+    },
+    {
+      "source": "/software%20engineering/visual-basic-y-c",
       "target": "/software%20engineering/excel/"
     },
     {
@@ -8308,22 +8268,6 @@
       "target": "/software%20engineering/cpp/"
     },
     {
-      "source": "/desarrollo%20web/javascript",
-      "target": "/desarrollo%20web/desarrollo-web/"
-    },
-    {
-      "source": "/desarrollo%20web/javascript",
-      "target": "/software%20engineering/typescript/"
-    },
-    {
-      "source": "/desarrollo%20web/javascript",
-      "target": "/computer%20science/expresiones-regulares/"
-    },
-    {
-      "source": "/desarrollo%20web/javascript",
-      "target": "/frontend/web-components/"
-    },
-    {
       "source": "/software%20engineering/java",
       "target": "/computer%20science/computer-science/"
     },
@@ -8572,6 +8516,22 @@
       "target": "/backend/springboot/"
     },
     {
+      "source": "/desarrollo%20web/javascript",
+      "target": "/desarrollo%20web/desarrollo-web/"
+    },
+    {
+      "source": "/desarrollo%20web/javascript",
+      "target": "/software%20engineering/typescript/"
+    },
+    {
+      "source": "/desarrollo%20web/javascript",
+      "target": "/computer%20science/expresiones-regulares/"
+    },
+    {
+      "source": "/desarrollo%20web/javascript",
+      "target": "/frontend/web-components/"
+    },
+    {
       "source": "/software%20engineering/git",
       "target": "/software%20engineering/software-engineering/"
     },
@@ -8618,6 +8578,26 @@
     {
       "source": "/software%20engineering/excel",
       "target": "/software%20engineering/visual-basic-vba/"
+    },
+    {
+      "source": "/python/curso-python-avanzado",
+      "target": "/software%20engineering/python/"
+    },
+    {
+      "source": "/python/curso-python-avanzado",
+      "target": "/powershell/eliminar-archivo-a-traves-del-terminal/"
+    },
+    {
+      "source": "/software%20engineering/csharp",
+      "target": "/software%20engineering/net/"
+    },
+    {
+      "source": "/software%20engineering/csharp",
+      "target": "/software%20engineering/cpp/"
+    },
+    {
+      "source": "/software%20engineering/csharp",
+      "target": "/backend/backend/"
     },
     {
       "source": "/software%20engineering/docker",
@@ -8714,34 +8694,6 @@
     {
       "source": "/software%20engineering/docker",
       "target": "/devops/devops/"
-    },
-    {
-      "source": "/software%20engineering/docker",
-      "target": "/software%20engineering/docker/"
-    },
-    {
-      "source": "/software%20engineering/docker",
-      "target": "/devops/jenkins/"
-    },
-    {
-      "source": "/python/curso-python-avanzado",
-      "target": "/software%20engineering/python/"
-    },
-    {
-      "source": "/python/curso-python-avanzado",
-      "target": "/powershell/eliminar-archivo-a-traves-del-terminal/"
-    },
-    {
-      "source": "/software%20engineering/csharp",
-      "target": "/software%20engineering/net/"
-    },
-    {
-      "source": "/software%20engineering/csharp",
-      "target": "/software%20engineering/cpp/"
-    },
-    {
-      "source": "/software%20engineering/csharp",
-      "target": "/backend/backend/"
     },
     {
       "source": "/software%20engineering/cpp",
@@ -8992,30 +8944,6 @@
       "target": "/infraestructura%20it/iso-31010/"
     },
     {
-      "source": "/infraestructura%20it/isms",
-      "target": "/infraestructura%20it/gdpr/"
-    },
-    {
-      "source": "/infraestructura%20it/isms",
-      "target": "/infraestructura%20it/hipaa/"
-    },
-    {
-      "source": "/infraestructura%20it/isms",
-      "target": "/infraestructura%20it/itil/"
-    },
-    {
-      "source": "/infraestructura%20it/isms",
-      "target": "/devops/devsecops/"
-    },
-    {
-      "source": "/infraestructura%20it/isms",
-      "target": "/infraestructura%20it/grc/"
-    },
-    {
-      "source": "/infraestructura%20it/isms",
-      "target": "/ciberseguridad/siem/"
-    },
-    {
       "source": "/infraestructura%20it/ipaas-integration-platform-as-a-service",
       "target": "/infraestructura%20it/infraestructura-it/"
     },
@@ -9070,6 +8998,30 @@
     {
       "source": "/infraestructura%20it/ipaas-integration-platform-as-a-service",
       "target": "/data%20science/gcp-google-cloud/"
+    },
+    {
+      "source": "/infraestructura%20it/isms",
+      "target": "/infraestructura%20it/gdpr/"
+    },
+    {
+      "source": "/infraestructura%20it/isms",
+      "target": "/infraestructura%20it/hipaa/"
+    },
+    {
+      "source": "/infraestructura%20it/isms",
+      "target": "/infraestructura%20it/itil/"
+    },
+    {
+      "source": "/infraestructura%20it/isms",
+      "target": "/devops/devsecops/"
+    },
+    {
+      "source": "/infraestructura%20it/isms",
+      "target": "/infraestructura%20it/grc/"
+    },
+    {
+      "source": "/infraestructura%20it/isms",
+      "target": "/ciberseguridad/siem/"
     },
     {
       "source": "/infraestructura%20it/ietf",
@@ -9736,34 +9688,6 @@
       "target": "/gestion%20de%20negocio/gestion-de-negocio/"
     },
     {
-      "source": "/frontend/sass",
-      "target": "/frontend/css/"
-    },
-    {
-      "source": "/frontend/sass",
-      "target": "/uncategorized/css-guia-completa/#18-sass-syntactically-awesome-style-sheets"
-    },
-    {
-      "source": "/frontend/sass",
-      "target": "/frontend/css/"
-    },
-    {
-      "source": "/frontend/sass",
-      "target": "/frontend/css/"
-    },
-    {
-      "source": "/frontend/redux",
-      "target": "/frontend/frontend/"
-    },
-    {
-      "source": "/frontend/redux",
-      "target": "/frontend/react/"
-    },
-    {
-      "source": "/frontend/redux",
-      "target": "/frontend/nextjs/"
-    },
-    {
       "source": "/frontend/react",
       "target": "/software%20engineering/software-engineering/"
     },
@@ -9820,12 +9744,88 @@
       "target": "/testing/linters/"
     },
     {
+      "source": "/frontend/sass",
+      "target": "/frontend/css/"
+    },
+    {
+      "source": "/frontend/sass",
+      "target": "/uncategorized/css-guia-completa/#18-sass-syntactically-awesome-style-sheets"
+    },
+    {
+      "source": "/frontend/sass",
+      "target": "/frontend/css/"
+    },
+    {
+      "source": "/frontend/sass",
+      "target": "/frontend/css/"
+    },
+    {
+      "source": "/frontend/redux",
+      "target": "/frontend/frontend/"
+    },
+    {
+      "source": "/frontend/redux",
+      "target": "/frontend/react/"
+    },
+    {
+      "source": "/frontend/redux",
+      "target": "/frontend/nextjs/"
+    },
+    {
       "source": "/frontend/qwick",
       "target": "/frontend/frontend/"
     },
     {
       "source": "/frontend/qwick",
       "target": "/backend/backend/"
+    },
+    {
+      "source": "/frontend/gatsby",
+      "target": "/frontend/react/"
+    },
+    {
+      "source": "/frontend/gatsby",
+      "target": "/backend/graphql/"
+    },
+    {
+      "source": "/frontend/gatsby",
+      "target": "/desarrollo%20web/cms/"
+    },
+    {
+      "source": "/frontend/gatsby",
+      "target": "/cloud/netifly/"
+    },
+    {
+      "source": "/frontend/gatsby",
+      "target": "/backend/graphql/"
+    },
+    {
+      "source": "/frontend/gatsby",
+      "target": "/desarrollo%20web/motor-de-plantillas/"
+    },
+    {
+      "source": "/frontend/gatsby",
+      "target": "/desarrollo%20web/cms/"
+    },
+    {
+      "source": "/frontend/gatsby",
+      "target": "/desarrollo%20web/cms/"
+    },
+    {
+      "source": "/frontend/gatsby",
+      "target": "/backend/graphql/"
+    },
+    {
+      "source": "/frontend/gatsby",
+      "target": "/frontend/react/"
+    },
+    {
+      "source": "/frontend/gatsby",
+      "target": "/frontend/react/"
+    },
+    {
+      "source": "/frontend/gatsby",
+      "target": "/cloud/netifly/"
     },
     {
       "source": "/frontend/post-css",
@@ -9928,54 +9928,6 @@
       "target": "/frontend/css/"
     },
     {
-      "source": "/frontend/gatsby",
-      "target": "/frontend/react/"
-    },
-    {
-      "source": "/frontend/gatsby",
-      "target": "/backend/graphql/"
-    },
-    {
-      "source": "/frontend/gatsby",
-      "target": "/desarrollo%20web/cms/"
-    },
-    {
-      "source": "/frontend/gatsby",
-      "target": "/cloud/netifly/"
-    },
-    {
-      "source": "/frontend/gatsby",
-      "target": "/backend/graphql/"
-    },
-    {
-      "source": "/frontend/gatsby",
-      "target": "/desarrollo%20web/motor-de-plantillas/"
-    },
-    {
-      "source": "/frontend/gatsby",
-      "target": "/desarrollo%20web/cms/"
-    },
-    {
-      "source": "/frontend/gatsby",
-      "target": "/desarrollo%20web/cms/"
-    },
-    {
-      "source": "/frontend/gatsby",
-      "target": "/backend/graphql/"
-    },
-    {
-      "source": "/frontend/gatsby",
-      "target": "/frontend/react/"
-    },
-    {
-      "source": "/frontend/gatsby",
-      "target": "/frontend/react/"
-    },
-    {
-      "source": "/frontend/gatsby",
-      "target": "/cloud/netifly/"
-    },
-    {
       "source": "/frontend/favicon",
       "target": "/frontend/frontend/"
     },
@@ -10028,10 +9980,6 @@
       "target": "/uncategorized/css-30-projects-curso/"
     },
     {
-      "source": "/uncategorized/css-30-projects-curso",
-      "target": "/frontend/css/"
-    },
-    {
       "source": "/uncategorized/css-bootstrap",
       "target": "/frontend/css/"
     },
@@ -10078,6 +10026,10 @@
     {
       "source": "/frontend/astro",
       "target": "/frontend/solid-js/"
+    },
+    {
+      "source": "/uncategorized/css-30-projects-curso",
+      "target": "/frontend/css/"
     },
     {
       "source": "/frontend/angular",
@@ -10408,90 +10360,6 @@
       "target": "/devops/cicd/"
     },
     {
-      "source": "/devops/sre-site-reliability-engineering",
-      "target": "/devops/iinfraestructura-como-codigo/"
-    },
-    {
-      "source": "/devops/sre-site-reliability-engineering",
-      "target": "/gestion%20de%20negocio/gestion-de-negocio/"
-    },
-    {
-      "source": "/devops/sre-site-reliability-engineering",
-      "target": "/devops/devops/"
-    },
-    {
-      "source": "/devops/sre-site-reliability-engineering",
-      "target": "/devops/iinfraestructura-como-codigo/"
-    },
-    {
-      "source": "/devops/sre-site-reliability-engineering",
-      "target": "/devops/devops/"
-    },
-    {
-      "source": "/devops/sre-site-reliability-engineering",
-      "target": "/gestion%20de%20negocio/gestion-de-negocio/"
-    },
-    {
-      "source": "/devops/sre-site-reliability-engineering",
-      "target": "/devops/iinfraestructura-como-codigo/"
-    },
-    {
-      "source": "/devops/sre-site-reliability-engineering",
-      "target": "/devops/devops/"
-    },
-    {
-      "source": "/devops/sre-site-reliability-engineering",
-      "target": "/gestion%20de%20negocio/gestion-de-negocio/"
-    },
-    {
-      "source": "/devops/sre-site-reliability-engineering",
-      "target": "/devops/sre-site-reliability-engineering/"
-    },
-    {
-      "source": "/devops/sre-site-reliability-engineering",
-      "target": "/devops/devops/"
-    },
-    {
-      "source": "/devops/sre-site-reliability-engineering",
-      "target": "/gestion%20de%20negocio/gestion-de-negocio/"
-    },
-    {
-      "source": "/devops/sre-site-reliability-engineering",
-      "target": "/gestion%20de%20negocio/gestion-de-negocio/"
-    },
-    {
-      "source": "/devops/sre-site-reliability-engineering",
-      "target": "/devops/sre-site-reliability-engineering/"
-    },
-    {
-      "source": "/devops/sre-site-reliability-engineering",
-      "target": "/devops/devops/"
-    },
-    {
-      "source": "/devops/sre-site-reliability-engineering",
-      "target": "/gestion%20de%20negocio/gestion-de-negocio/"
-    },
-    {
-      "source": "/devops/sre-site-reliability-engineering",
-      "target": "/devops/iinfraestructura-como-codigo/"
-    },
-    {
-      "source": "/devops/sre-site-reliability-engineering",
-      "target": "/devops/sre-site-reliability-engineering/"
-    },
-    {
-      "source": "/devops/sre-site-reliability-engineering",
-      "target": "/devops/devops/"
-    },
-    {
-      "source": "/devops/sre-site-reliability-engineering",
-      "target": "/gestion%20de%20negocio/gestion-de-negocio/"
-    },
-    {
-      "source": "/devops/sre-site-reliability-engineering",
-      "target": "/devops/iinfraestructura-como-codigo/"
-    },
-    {
       "source": "/devops/sql-server",
       "target": "/software%20engineering/docker/"
     },
@@ -10540,6 +10408,90 @@
       "target": "/software%20engineering/docker/"
     },
     {
+      "source": "/devops/sre-site-reliability-engineering",
+      "target": "/devops/iinfraestructura-como-codigo/"
+    },
+    {
+      "source": "/devops/sre-site-reliability-engineering",
+      "target": "/gestion%20de%20negocio/gestion-de-negocio/"
+    },
+    {
+      "source": "/devops/sre-site-reliability-engineering",
+      "target": "/devops/devops/"
+    },
+    {
+      "source": "/devops/sre-site-reliability-engineering",
+      "target": "/devops/iinfraestructura-como-codigo/"
+    },
+    {
+      "source": "/devops/sre-site-reliability-engineering",
+      "target": "/devops/devops/"
+    },
+    {
+      "source": "/devops/sre-site-reliability-engineering",
+      "target": "/gestion%20de%20negocio/gestion-de-negocio/"
+    },
+    {
+      "source": "/devops/sre-site-reliability-engineering",
+      "target": "/devops/iinfraestructura-como-codigo/"
+    },
+    {
+      "source": "/devops/sre-site-reliability-engineering",
+      "target": "/devops/devops/"
+    },
+    {
+      "source": "/devops/sre-site-reliability-engineering",
+      "target": "/gestion%20de%20negocio/gestion-de-negocio/"
+    },
+    {
+      "source": "/devops/sre-site-reliability-engineering",
+      "target": "/devops/sre-site-reliability-engineering/"
+    },
+    {
+      "source": "/devops/sre-site-reliability-engineering",
+      "target": "/devops/devops/"
+    },
+    {
+      "source": "/devops/sre-site-reliability-engineering",
+      "target": "/gestion%20de%20negocio/gestion-de-negocio/"
+    },
+    {
+      "source": "/devops/sre-site-reliability-engineering",
+      "target": "/gestion%20de%20negocio/gestion-de-negocio/"
+    },
+    {
+      "source": "/devops/sre-site-reliability-engineering",
+      "target": "/devops/sre-site-reliability-engineering/"
+    },
+    {
+      "source": "/devops/sre-site-reliability-engineering",
+      "target": "/devops/devops/"
+    },
+    {
+      "source": "/devops/sre-site-reliability-engineering",
+      "target": "/gestion%20de%20negocio/gestion-de-negocio/"
+    },
+    {
+      "source": "/devops/sre-site-reliability-engineering",
+      "target": "/devops/iinfraestructura-como-codigo/"
+    },
+    {
+      "source": "/devops/sre-site-reliability-engineering",
+      "target": "/devops/sre-site-reliability-engineering/"
+    },
+    {
+      "source": "/devops/sre-site-reliability-engineering",
+      "target": "/devops/devops/"
+    },
+    {
+      "source": "/devops/sre-site-reliability-engineering",
+      "target": "/gestion%20de%20negocio/gestion-de-negocio/"
+    },
+    {
+      "source": "/devops/sre-site-reliability-engineering",
+      "target": "/devops/iinfraestructura-como-codigo/"
+    },
+    {
       "source": "/devops/sonarqube",
       "target": "/devops/devops/"
     },
@@ -10578,6 +10530,70 @@
     {
       "source": "/devops/sonarqube",
       "target": "/software%20engineering/docker/"
+    },
+    {
+      "source": "/virtualizacion/openshift",
+      "target": "/devops/cicd/"
+    },
+    {
+      "source": "/virtualizacion/openshift",
+      "target": "/devops/virtualizacion/"
+    },
+    {
+      "source": "/virtualizacion/openshift",
+      "target": "/backend/microservicios/"
+    },
+    {
+      "source": "/virtualizacion/openshift",
+      "target": "/cloud/cloud/"
+    },
+    {
+      "source": "/virtualizacion/openshift",
+      "target": "/virtualizacion/kubernetes/"
+    },
+    {
+      "source": "/virtualizacion/openshift",
+      "target": "/virtualizacion/kubernetes/"
+    },
+    {
+      "source": "/virtualizacion/openshift",
+      "target": "/autenticacion/rbac/"
+    },
+    {
+      "source": "/virtualizacion/openshift",
+      "target": "/autenticacion/rbac/"
+    },
+    {
+      "source": "/virtualizacion/openshift",
+      "target": "/virtualizacion/kubernetes/"
+    },
+    {
+      "source": "/virtualizacion/openshift",
+      "target": "/devops/cicd/"
+    },
+    {
+      "source": "/virtualizacion/openshift",
+      "target": "/devops/cicd/"
+    },
+    {
+      "source": "/virtualizacion/openshift",
+      "target": "/virtualizacion/kubernetes/"
+    },
+    {
+      "source": "/virtualizacion/openshift",
+      "target": "/devops/cicd/"
+    },
+    {
+      "source": "/virtualizacion/openshift",
+      "target": "/autenticacion/rbac/"
+    },
+    {
+      "source": "/virtualizacion/openshift",
+      "target": "/devops/terraform/"
+    },
+    {
+      "source": "/virtualizacion/openshift",
+      "target": "/virtualizacion/kubernetes/"
     },
     {
       "source": "/devops/sdlc",
@@ -10658,70 +10674,6 @@
     {
       "source": "/backend/proxy",
       "target": "/redes/redes/"
-    },
-    {
-      "source": "/virtualizacion/openshift",
-      "target": "/devops/cicd/"
-    },
-    {
-      "source": "/virtualizacion/openshift",
-      "target": "/devops/virtualizacion/"
-    },
-    {
-      "source": "/virtualizacion/openshift",
-      "target": "/backend/microservicios/"
-    },
-    {
-      "source": "/virtualizacion/openshift",
-      "target": "/cloud/cloud/"
-    },
-    {
-      "source": "/virtualizacion/openshift",
-      "target": "/virtualizacion/kubernetes/"
-    },
-    {
-      "source": "/virtualizacion/openshift",
-      "target": "/virtualizacion/kubernetes/"
-    },
-    {
-      "source": "/virtualizacion/openshift",
-      "target": "/autenticacion/rbac/"
-    },
-    {
-      "source": "/virtualizacion/openshift",
-      "target": "/autenticacion/rbac/"
-    },
-    {
-      "source": "/virtualizacion/openshift",
-      "target": "/virtualizacion/kubernetes/"
-    },
-    {
-      "source": "/virtualizacion/openshift",
-      "target": "/devops/cicd/"
-    },
-    {
-      "source": "/virtualizacion/openshift",
-      "target": "/devops/cicd/"
-    },
-    {
-      "source": "/virtualizacion/openshift",
-      "target": "/virtualizacion/kubernetes/"
-    },
-    {
-      "source": "/virtualizacion/openshift",
-      "target": "/devops/cicd/"
-    },
-    {
-      "source": "/virtualizacion/openshift",
-      "target": "/autenticacion/rbac/"
-    },
-    {
-      "source": "/virtualizacion/openshift",
-      "target": "/devops/terraform/"
-    },
-    {
-      "source": "/virtualizacion/openshift",
-      "target": "/virtualizacion/kubernetes/"
     },
     {
       "source": "/virtualizacion/lando",
@@ -10924,6 +10876,34 @@
       "target": "/infraestructura%20it/infraestructura-it/"
     },
     {
+      "source": "/devops/jenkins",
+      "target": "/devops/devops/"
+    },
+    {
+      "source": "/devops/jenkins",
+      "target": "/software%20engineering/java/"
+    },
+    {
+      "source": "/devops/jenkins",
+      "target": "/devops/cicd/"
+    },
+    {
+      "source": "/devops/jenkins",
+      "target": "/testing/testing/"
+    },
+    {
+      "source": "/devops/jenkins",
+      "target": "/backend/monorepo/"
+    },
+    {
+      "source": "/devops/jenkins",
+      "target": "/software%20engineering/docker/"
+    },
+    {
+      "source": "/devops/jenkins",
+      "target": "/software%20engineering/docker/"
+    },
+    {
       "source": "/devops/devsecops",
       "target": "/devops/devops/"
     },
@@ -11002,38 +10982,6 @@
     {
       "source": "/devops/devsecops",
       "target": "/monitoreo/elasticsearch/"
-    },
-    {
-      "source": "/devops/jenkins",
-      "target": "/devops/devops/"
-    },
-    {
-      "source": "/devops/jenkins",
-      "target": "/software%20engineering/java/"
-    },
-    {
-      "source": "/devops/jenkins",
-      "target": "/devops/cicd/"
-    },
-    {
-      "source": "/devops/jenkins",
-      "target": "/testing/testing/"
-    },
-    {
-      "source": "/devops/jenkins",
-      "target": "/backend/monorepo/"
-    },
-    {
-      "source": "/devops/jenkins",
-      "target": "/software%20engineering/docker/"
-    },
-    {
-      "source": "/devops/jenkins",
-      "target": "/software%20engineering/docker/"
-    },
-    {
-      "source": "/devops/jenkins",
-      "target": "/devops/jenkins/"
     },
     {
       "source": "/devops/dokploy",
@@ -11200,26 +11148,6 @@
       "target": "/virtualizacion/lando/"
     },
     {
-      "source": "/devops/ansible",
-      "target": "/automatizacion%20y%20build/automatizacion-y-build/"
-    },
-    {
-      "source": "/devops/ansible",
-      "target": "/devops/iinfraestructura-como-codigo/"
-    },
-    {
-      "source": "/devops/ansible",
-      "target": "/devops/devops/"
-    },
-    {
-      "source": "/devops/ansible",
-      "target": "/cloud/gitlab/"
-    },
-    {
-      "source": "/devops/ansible",
-      "target": "/devops/iinfraestructura-como-codigo/"
-    },
-    {
       "source": "/devops/bitbucket",
       "target": "/devops/cicd/"
     },
@@ -11240,12 +11168,24 @@
       "target": "/software%20engineering/git/"
     },
     {
-      "source": "/desarrollo%20web/wordpress",
-      "target": "/backend/php/"
+      "source": "/devops/ansible",
+      "target": "/automatizacion%20y%20build/automatizacion-y-build/"
     },
     {
-      "source": "/desarrollo%20web/wordpress",
-      "target": "/desarrollo%20web/ecomerce/"
+      "source": "/devops/ansible",
+      "target": "/devops/iinfraestructura-como-codigo/"
+    },
+    {
+      "source": "/devops/ansible",
+      "target": "/devops/devops/"
+    },
+    {
+      "source": "/devops/ansible",
+      "target": "/cloud/gitlab/"
+    },
+    {
+      "source": "/devops/ansible",
+      "target": "/devops/iinfraestructura-como-codigo/"
     },
     {
       "source": "/desarrollo%20web/motor-de-plantillas",
@@ -11278,6 +11218,34 @@
     {
       "source": "/desarrollo%20web/motor-de-plantillas",
       "target": "/virtualizacion/kubernetes/"
+    },
+    {
+      "source": "/desarrollo%20web/wordpress",
+      "target": "/backend/php/"
+    },
+    {
+      "source": "/desarrollo%20web/wordpress",
+      "target": "/desarrollo%20web/ecomerce/"
+    },
+    {
+      "source": "/desarrollo%20web/lms",
+      "target": "/desarrollo%20web/desarrollo-web/"
+    },
+    {
+      "source": "/desarrollo%20web/lms",
+      "target": "/desarrollo%20web/cms/"
+    },
+    {
+      "source": "/desarrollo%20web/lms",
+      "target": "/desarrollo%20web/moodle/"
+    },
+    {
+      "source": "/desarrollo%20web/lms",
+      "target": "/desarrollo%20web/moodle/"
+    },
+    {
+      "source": "/desarrollo%20web/lms",
+      "target": "/desarrollo%20web/moodle/"
     },
     {
       "source": "/desarrollo%20web/moodle",
@@ -11358,26 +11326,6 @@
     {
       "source": "/desarrollo%20web/moodle",
       "target": "/motor%20de%20plantillas/mustache/"
-    },
-    {
-      "source": "/desarrollo%20web/lms",
-      "target": "/desarrollo%20web/desarrollo-web/"
-    },
-    {
-      "source": "/desarrollo%20web/lms",
-      "target": "/desarrollo%20web/cms/"
-    },
-    {
-      "source": "/desarrollo%20web/lms",
-      "target": "/desarrollo%20web/moodle/"
-    },
-    {
-      "source": "/desarrollo%20web/lms",
-      "target": "/desarrollo%20web/moodle/"
-    },
-    {
-      "source": "/desarrollo%20web/lms",
-      "target": "/desarrollo%20web/moodle/"
     },
     {
       "source": "/desarrollo%20web/ecomerce",
@@ -11604,6 +11552,14 @@
       "target": "/software%20engineering/software-engineering/"
     },
     {
+      "source": "/desarrollo%20multiplataforma/kotlin",
+      "target": "/software%20engineering/java/"
+    },
+    {
+      "source": "/desarrollo%20multiplataforma/kotlin",
+      "target": "/backend/springboot/"
+    },
+    {
       "source": "/desarrollo%20multiplataforma/maui-net",
       "target": "/desarrollo%20multiplataforma/xamarin/"
     },
@@ -11726,14 +11682,6 @@
     {
       "source": "/desarrollo%20multiplataforma/maui-net",
       "target": "/testing/testing/"
-    },
-    {
-      "source": "/desarrollo%20multiplataforma/kotlin",
-      "target": "/software%20engineering/java/"
-    },
-    {
-      "source": "/desarrollo%20multiplataforma/kotlin",
-      "target": "/backend/springboot/"
     },
     {
       "source": "/desarrollo%20multiplataforma/java-me",
@@ -11860,11 +11808,11 @@
       "target": "/backend/api/"
     },
     {
-      "source": "/databases/dbml",
+      "source": "/databases/db-fundamentos-y-documentos",
       "target": "/databases/databases/"
     },
     {
-      "source": "/databases/db-fundamentos-y-documentos",
+      "source": "/databases/dbml",
       "target": "/databases/databases/"
     },
     {
@@ -11882,6 +11830,18 @@
     {
       "source": "/data%20science/tensorflow",
       "target": "/software%20engineering/python/"
+    },
+    {
+      "source": "/data%20science/regresi-n-lineal-y-m-nimos-cuadrados-ordinarios",
+      "target": "/uncategorized/mates/"
+    },
+    {
+      "source": "/data%20science/regresi-n-lineal-y-m-nimos-cuadrados-ordinarios",
+      "target": "/data%20science/data-science/"
+    },
+    {
+      "source": "/data%20science/regresi-n-lineal-y-m-nimos-cuadrados-ordinarios",
+      "target": "/data%20science/deep-learning/"
     },
     {
       "source": "/data%20science/scala",
@@ -11930,18 +11890,6 @@
     {
       "source": "/data%20science/scala",
       "target": "/computer%20science/dsl/"
-    },
-    {
-      "source": "/data%20science/regresi-n-lineal-y-m-nimos-cuadrados-ordinarios",
-      "target": "/uncategorized/mates/"
-    },
-    {
-      "source": "/data%20science/regresi-n-lineal-y-m-nimos-cuadrados-ordinarios",
-      "target": "/data%20science/data-science/"
-    },
-    {
-      "source": "/data%20science/regresi-n-lineal-y-m-nimos-cuadrados-ordinarios",
-      "target": "/data%20science/deep-learning/"
     },
     {
       "source": "/data%20science/machine-learning",
@@ -12068,6 +12016,34 @@
       "target": "/data%20science/data-science/"
     },
     {
+      "source": "/data%20science/clojure",
+      "target": "/computer%20science/pf-programaci-n-funcional/"
+    },
+    {
+      "source": "/data%20science/clojure",
+      "target": "/software%20engineering/java/"
+    },
+    {
+      "source": "/data%20science/clojure",
+      "target": "/data%20science/data-science/"
+    },
+    {
+      "source": "/data%20science/clojure",
+      "target": "/data%20science/apache-spark/"
+    },
+    {
+      "source": "/data%20science/clojure",
+      "target": "/backend/backend/"
+    },
+    {
+      "source": "/data%20science/clojure",
+      "target": "/frontend/frontend/"
+    },
+    {
+      "source": "/data%20science/clojure",
+      "target": "/backend/apache-kafka/"
+    },
+    {
       "source": "/data%20science/deep-learning",
       "target": "/data%20science/data-science/"
     },
@@ -12120,32 +12096,92 @@
       "target": "/cloud/cloud/"
     },
     {
-      "source": "/data%20science/clojure",
-      "target": "/computer%20science/pf-programaci-n-funcional/"
+      "source": "/computer%20science/aop-programaci-n-orientada-a-aspectos",
+      "target": "/computer%20science/poo-programaci-n-orientada-a-objetos/"
     },
     {
-      "source": "/data%20science/clojure",
-      "target": "/software%20engineering/java/"
+      "source": "/computer%20science/aop-programaci-n-orientada-a-aspectos",
+      "target": "/computer%20science/poo-programaci-n-orientada-a-objetos/"
     },
     {
-      "source": "/data%20science/clojure",
-      "target": "/data%20science/data-science/"
+      "source": "/computer%20science/aop-programaci-n-orientada-a-aspectos",
+      "target": "/testing/testing/"
     },
     {
-      "source": "/data%20science/clojure",
-      "target": "/data%20science/apache-spark/"
+      "source": "/computer%20science/aop-programaci-n-orientada-a-aspectos",
+      "target": "/monitoreo/opentelemetry/"
     },
     {
-      "source": "/data%20science/clojure",
-      "target": "/backend/backend/"
+      "source": "/computer%20science/aop-programaci-n-orientada-a-aspectos",
+      "target": "/computer%20science/solid/"
     },
     {
-      "source": "/data%20science/clojure",
-      "target": "/frontend/frontend/"
+      "source": "/computer%20science/aop-programaci-n-orientada-a-aspectos",
+      "target": "/monitoreo/opentelemetry/"
     },
     {
-      "source": "/data%20science/clojure",
-      "target": "/backend/apache-kafka/"
+      "source": "/computer%20science/aop-programaci-n-orientada-a-aspectos",
+      "target": "/autenticacion/jwt/"
+    },
+    {
+      "source": "/computer%20science/aop-programaci-n-orientada-a-aspectos",
+      "target": "/infraestructura%20it/gdpr/"
+    },
+    {
+      "source": "/computer%20science/aop-programaci-n-orientada-a-aspectos",
+      "target": "/infraestructura%20it/hipaa/"
+    },
+    {
+      "source": "/computer%20science/aop-programaci-n-orientada-a-aspectos",
+      "target": "/ciberseguridad/siem/"
+    },
+    {
+      "source": "/computer%20science/aop-programaci-n-orientada-a-aspectos",
+      "target": "/data%20science/machine-learning/"
+    },
+    {
+      "source": "/computer%20science/aop-programaci-n-orientada-a-aspectos",
+      "target": "/computer%20science/dsl/"
+    },
+    {
+      "source": "/computer%20science/aop-programaci-n-orientada-a-aspectos",
+      "target": "/computer%20science/poo-programaci-n-orientada-a-objetos/"
+    },
+    {
+      "source": "/computer%20science/aop-programaci-n-orientada-a-aspectos",
+      "target": "/computer%20science/aop-programaci-n-orientada-a-aspectos/"
+    },
+    {
+      "source": "/computer%20science/aop-programaci-n-orientada-a-aspectos",
+      "target": "/monitoreo/opentelemetry/"
+    },
+    {
+      "source": "/computer%20science/aop-programaci-n-orientada-a-aspectos",
+      "target": "/testing/testing/"
+    },
+    {
+      "source": "/computer%20science/aop-programaci-n-orientada-a-aspectos",
+      "target": "/computer%20science/aop-programaci-n-orientada-a-aspectos/"
+    },
+    {
+      "source": "/computer%20science/aop-programaci-n-orientada-a-aspectos",
+      "target": "/monitoreo/opentelemetry/"
+    },
+    {
+      "source": "/computer%20science/aop-programaci-n-orientada-a-aspectos",
+      "target": "/computer%20science/aop-programaci-n-orientada-a-aspectos/"
+    },
+    {
+      "source": "/computer%20science/aop-programaci-n-orientada-a-aspectos",
+      "target": "/monitoreo/opentelemetry/"
+    },
+    {
+      "source": "/computer%20science/aop-programaci-n-orientada-a-aspectos",
+      "target": "/computer%20science/aop-programaci-n-orientada-a-aspectos/"
+    },
+    {
+      "source": "/computer%20science/aop-programaci-n-orientada-a-aspectos",
+      "target": "/computer%20science/poo-programaci-n-orientada-a-objetos/"
     },
     {
       "source": "/computer%20science/solid",
@@ -12464,18 +12500,6 @@
       "target": "/computer%20science/computer-science/"
     },
     {
-      "source": "/computer%20science/expresiones-regulares",
-      "target": "/computer%20science/computer-science/"
-    },
-    {
-      "source": "/computer%20science/expresiones-regulares",
-      "target": "/uncategorized/mates/"
-    },
-    {
-      "source": "/computer%20science/expresiones-regulares",
-      "target": "/uncategorized/mates/"
-    },
-    {
       "source": "/computer%20science/estructuras-de-datos",
       "target": "/computer%20science/computer-science/"
     },
@@ -12486,6 +12510,18 @@
     {
       "source": "/computer%20science/estructuras-de-datos",
       "target": "/computer%20science/estructuras-de-datos/"
+    },
+    {
+      "source": "/computer%20science/expresiones-regulares",
+      "target": "/computer%20science/computer-science/"
+    },
+    {
+      "source": "/computer%20science/expresiones-regulares",
+      "target": "/uncategorized/mates/"
+    },
+    {
+      "source": "/computer%20science/expresiones-regulares",
+      "target": "/uncategorized/mates/"
     },
     {
       "source": "/computer%20science/dsl",
@@ -12506,6 +12542,26 @@
     {
       "source": "/computer%20science/dsl",
       "target": "/data%20science/scala/"
+    },
+    {
+      "source": "/computer%20science/clean",
+      "target": "/computer%20science/computer-science/"
+    },
+    {
+      "source": "/computer%20science/clean",
+      "target": "/computer%20science/solid/"
+    },
+    {
+      "source": "/computer%20science/clean",
+      "target": "/computer%20science/solid/"
+    },
+    {
+      "source": "/computer%20science/clean",
+      "target": "/computer%20science/ddd-domain-driven-design/"
+    },
+    {
+      "source": "/computer%20science/clean",
+      "target": "/computer%20science/ddd-domain-driven-design/"
     },
     {
       "source": "/computer%20science/ddd-domain-driven-design",
@@ -12544,26 +12600,6 @@
       "target": "/uncategorized/mates/"
     },
     {
-      "source": "/computer%20science/clean",
-      "target": "/computer%20science/computer-science/"
-    },
-    {
-      "source": "/computer%20science/clean",
-      "target": "/computer%20science/solid/"
-    },
-    {
-      "source": "/computer%20science/clean",
-      "target": "/computer%20science/solid/"
-    },
-    {
-      "source": "/computer%20science/clean",
-      "target": "/computer%20science/ddd-domain-driven-design/"
-    },
-    {
-      "source": "/computer%20science/clean",
-      "target": "/computer%20science/ddd-domain-driven-design/"
-    },
-    {
       "source": "/computer%20science/arquitecturas-en-computacion",
       "target": "/computer%20science/computer-science/"
     },
@@ -12596,94 +12632,6 @@
       "target": "/backend/microservicios/"
     },
     {
-      "source": "/computer%20science/aop-programaci-n-orientada-a-aspectos",
-      "target": "/computer%20science/poo-programaci-n-orientada-a-objetos/"
-    },
-    {
-      "source": "/computer%20science/aop-programaci-n-orientada-a-aspectos",
-      "target": "/computer%20science/poo-programaci-n-orientada-a-objetos/"
-    },
-    {
-      "source": "/computer%20science/aop-programaci-n-orientada-a-aspectos",
-      "target": "/testing/testing/"
-    },
-    {
-      "source": "/computer%20science/aop-programaci-n-orientada-a-aspectos",
-      "target": "/monitoreo/opentelemetry/"
-    },
-    {
-      "source": "/computer%20science/aop-programaci-n-orientada-a-aspectos",
-      "target": "/computer%20science/solid/"
-    },
-    {
-      "source": "/computer%20science/aop-programaci-n-orientada-a-aspectos",
-      "target": "/monitoreo/opentelemetry/"
-    },
-    {
-      "source": "/computer%20science/aop-programaci-n-orientada-a-aspectos",
-      "target": "/autenticacion/jwt/"
-    },
-    {
-      "source": "/computer%20science/aop-programaci-n-orientada-a-aspectos",
-      "target": "/infraestructura%20it/gdpr/"
-    },
-    {
-      "source": "/computer%20science/aop-programaci-n-orientada-a-aspectos",
-      "target": "/infraestructura%20it/hipaa/"
-    },
-    {
-      "source": "/computer%20science/aop-programaci-n-orientada-a-aspectos",
-      "target": "/ciberseguridad/siem/"
-    },
-    {
-      "source": "/computer%20science/aop-programaci-n-orientada-a-aspectos",
-      "target": "/data%20science/machine-learning/"
-    },
-    {
-      "source": "/computer%20science/aop-programaci-n-orientada-a-aspectos",
-      "target": "/computer%20science/dsl/"
-    },
-    {
-      "source": "/computer%20science/aop-programaci-n-orientada-a-aspectos",
-      "target": "/computer%20science/poo-programaci-n-orientada-a-objetos/"
-    },
-    {
-      "source": "/computer%20science/aop-programaci-n-orientada-a-aspectos",
-      "target": "/computer%20science/aop-programaci-n-orientada-a-aspectos/"
-    },
-    {
-      "source": "/computer%20science/aop-programaci-n-orientada-a-aspectos",
-      "target": "/monitoreo/opentelemetry/"
-    },
-    {
-      "source": "/computer%20science/aop-programaci-n-orientada-a-aspectos",
-      "target": "/testing/testing/"
-    },
-    {
-      "source": "/computer%20science/aop-programaci-n-orientada-a-aspectos",
-      "target": "/computer%20science/aop-programaci-n-orientada-a-aspectos/"
-    },
-    {
-      "source": "/computer%20science/aop-programaci-n-orientada-a-aspectos",
-      "target": "/monitoreo/opentelemetry/"
-    },
-    {
-      "source": "/computer%20science/aop-programaci-n-orientada-a-aspectos",
-      "target": "/computer%20science/aop-programaci-n-orientada-a-aspectos/"
-    },
-    {
-      "source": "/computer%20science/aop-programaci-n-orientada-a-aspectos",
-      "target": "/monitoreo/opentelemetry/"
-    },
-    {
-      "source": "/computer%20science/aop-programaci-n-orientada-a-aspectos",
-      "target": "/computer%20science/aop-programaci-n-orientada-a-aspectos/"
-    },
-    {
-      "source": "/computer%20science/aop-programaci-n-orientada-a-aspectos",
-      "target": "/computer%20science/poo-programaci-n-orientada-a-objetos/"
-    },
-    {
       "source": "/computer%20science/algoritmos-y-tecnicas-de-computacion",
       "target": "/computer%20science/computer-science/"
     },
@@ -12708,6 +12656,14 @@
       "target": "/computer%20science/expresiones-regulares/"
     },
     {
+      "source": "/cloud/oracle",
+      "target": "/cloud/cloud/"
+    },
+    {
+      "source": "/cloud/oracle",
+      "target": "/databases/databases/"
+    },
+    {
       "source": "/cloud/vercel",
       "target": "/devops/devops/"
     },
@@ -12718,14 +12674,6 @@
     {
       "source": "/cloud/vercel",
       "target": "/frontend/seo/"
-    },
-    {
-      "source": "/cloud/oracle",
-      "target": "/cloud/cloud/"
-    },
-    {
-      "source": "/cloud/oracle",
-      "target": "/databases/databases/"
     },
     {
       "source": "/cloud/netifly",
@@ -12876,6 +12824,38 @@
       "target": "/data%20science/data-science/"
     },
     {
+      "source": "/cloud/akamai",
+      "target": "/ciberseguridad/ciberseguridad/"
+    },
+    {
+      "source": "/cloud/akamai",
+      "target": "/cloud/cloud/"
+    },
+    {
+      "source": "/cloud/akamai",
+      "target": "/cloud/cloud-computing/"
+    },
+    {
+      "source": "/cloud/akamai",
+      "target": "/virtualizacion/openshift/"
+    },
+    {
+      "source": "/data%20science/gcp-google-cloud",
+      "target": "/cloud/cloud/"
+    },
+    {
+      "source": "/data%20science/gcp-google-cloud",
+      "target": "/devops/devops/"
+    },
+    {
+      "source": "/data%20science/gcp-google-cloud",
+      "target": "/data%20science/data-science/"
+    },
+    {
+      "source": "/data%20science/gcp-google-cloud",
+      "target": "/data%20science/gcp-big-data-developer-y-apache-hadoop/"
+    },
+    {
       "source": "/cloud/gitlab",
       "target": "/devops/devops/"
     },
@@ -12926,22 +12906,6 @@
     {
       "source": "/cloud/gitlab",
       "target": "/devops/terraform/"
-    },
-    {
-      "source": "/data%20science/gcp-google-cloud",
-      "target": "/cloud/cloud/"
-    },
-    {
-      "source": "/data%20science/gcp-google-cloud",
-      "target": "/devops/devops/"
-    },
-    {
-      "source": "/data%20science/gcp-google-cloud",
-      "target": "/data%20science/data-science/"
-    },
-    {
-      "source": "/data%20science/gcp-google-cloud",
-      "target": "/data%20science/gcp-big-data-developer-y-apache-hadoop/"
     },
     {
       "source": "/data%20science/gcp-big-data-developer-y-apache-hadoop",
@@ -12996,18 +12960,6 @@
       "target": "/cloud/azure/"
     },
     {
-      "source": "/cloud/azure-fundamentals-az-900-devops",
-      "target": "/cloud/cloud/"
-    },
-    {
-      "source": "/cloud/azure-fundamentals-az-900-devops",
-      "target": "/cloud/azure/"
-    },
-    {
-      "source": "/cloud/azure-fundamentals-az-900-devops",
-      "target": "/cloud/cloud-computing/"
-    },
-    {
       "source": "/cloud/azure",
       "target": "/cloud/cloud/"
     },
@@ -13018,6 +12970,18 @@
     {
       "source": "/cloud/azure",
       "target": "/sistemas/active-directory/"
+    },
+    {
+      "source": "/cloud/azure-fundamentals-az-900-devops",
+      "target": "/cloud/cloud/"
+    },
+    {
+      "source": "/cloud/azure-fundamentals-az-900-devops",
+      "target": "/cloud/azure/"
+    },
+    {
+      "source": "/cloud/azure-fundamentals-az-900-devops",
+      "target": "/cloud/cloud-computing/"
     },
     {
       "source": "/cloud/aws",
@@ -13124,22 +13088,6 @@
       "target": "/virtualizacion/kubernetes/"
     },
     {
-      "source": "/cloud/akamai",
-      "target": "/ciberseguridad/ciberseguridad/"
-    },
-    {
-      "source": "/cloud/akamai",
-      "target": "/cloud/cloud/"
-    },
-    {
-      "source": "/cloud/akamai",
-      "target": "/cloud/cloud-computing/"
-    },
-    {
-      "source": "/cloud/akamai",
-      "target": "/virtualizacion/openshift/"
-    },
-    {
       "source": "/cloud/apache-cassandra",
       "target": "/databases/databases/"
     },
@@ -13182,14 +13130,6 @@
     {
       "source": "/ciberseguridad/ztna",
       "target": "/ciberseguridad/sase/"
-    },
-    {
-      "source": "/ciberseguridad/soc",
-      "target": "/infraestructura%20it/infraestructura-it/"
-    },
-    {
-      "source": "/ciberseguridad/soc",
-      "target": "/cloud/akamai/"
     },
     {
       "source": "/ciberseguridad/waf",
@@ -13372,24 +13312,12 @@
       "target": "/ciberseguridad/metasploit/"
     },
     {
-      "source": "/ciberseguridad/sase",
-      "target": "/ciberseguridad/ciberseguridad/"
+      "source": "/ciberseguridad/soc",
+      "target": "/infraestructura%20it/infraestructura-it/"
     },
     {
-      "source": "/ciberseguridad/sase",
-      "target": "/redes/redes/"
-    },
-    {
-      "source": "/ciberseguridad/sase",
-      "target": "/autenticacion/iam-gesti-n-de-identidades-y-acceso/"
-    },
-    {
-      "source": "/ciberseguridad/sase",
-      "target": "/ciberseguridad/secure-service-edge/"
-    },
-    {
-      "source": "/ciberseguridad/sase",
-      "target": "/ciberseguridad/secure-service-edge/"
+      "source": "/ciberseguridad/soc",
+      "target": "/cloud/akamai/"
     },
     {
       "source": "/ciberseguridad/soar",
@@ -13604,6 +13532,26 @@
       "target": "/ciberseguridad/mitre-att-ck/"
     },
     {
+      "source": "/ciberseguridad/sase",
+      "target": "/ciberseguridad/ciberseguridad/"
+    },
+    {
+      "source": "/ciberseguridad/sase",
+      "target": "/redes/redes/"
+    },
+    {
+      "source": "/ciberseguridad/sase",
+      "target": "/autenticacion/iam-gesti-n-de-identidades-y-acceso/"
+    },
+    {
+      "source": "/ciberseguridad/sase",
+      "target": "/ciberseguridad/secure-service-edge/"
+    },
+    {
+      "source": "/ciberseguridad/sase",
+      "target": "/ciberseguridad/secure-service-edge/"
+    },
+    {
       "source": "/ciberseguridad/servicio-mdr-detecci-n-y-respuesta-administradas",
       "target": "/ciberseguridad/soc/"
     },
@@ -13710,78 +13658,6 @@
     {
       "source": "/ciberseguridad/secure-service-edge",
       "target": "/ciberseguridad/ztna/"
-    },
-    {
-      "source": "/ciberseguridad/osint",
-      "target": "/ciberseguridad/pentesting/"
-    },
-    {
-      "source": "/ciberseguridad/osint",
-      "target": "/ciberseguridad/ciberinteligencia-tip/"
-    },
-    {
-      "source": "/ciberseguridad/red-team",
-      "target": "/ciberseguridad/pentesting/"
-    },
-    {
-      "source": "/ciberseguridad/red-team",
-      "target": "/software%20engineering/software-engineering/"
-    },
-    {
-      "source": "/ciberseguridad/red-team",
-      "target": "/backend/backend/"
-    },
-    {
-      "source": "/ciberseguridad/red-team",
-      "target": "/software%20engineering/python/"
-    },
-    {
-      "source": "/ciberseguridad/red-team",
-      "target": "/frontend/vuejs/"
-    },
-    {
-      "source": "/ciberseguridad/red-team",
-      "target": "/ciberseguridad/cartp/"
-    },
-    {
-      "source": "/ciberseguridad/red-team",
-      "target": "/ciberseguridad/oscp/"
-    },
-    {
-      "source": "/ciberseguridad/red-team",
-      "target": "/ciberseguridad/crto/"
-    },
-    {
-      "source": "/ciberseguridad/red-team",
-      "target": "/ciberseguridad/mitre-att-ck/"
-    },
-    {
-      "source": "/ciberseguridad/red-team",
-      "target": "/devops/windows-server/"
-    },
-    {
-      "source": "/ciberseguridad/red-team",
-      "target": "/sistemas/active-directory/"
-    },
-    {
-      "source": "/ciberseguridad/red-team",
-      "target": "/autenticacion/kerberos/"
-    },
-    {
-      "source": "/ciberseguridad/red-team",
-      "target": "/ciberseguridad/malware/"
-    },
-    {
-      "source": "/ciberseguridad/red-team",
-      "target": "/ciberseguridad/purple-team/"
-    },
-    {
-      "source": "/ciberseguridad/red-team",
-      "target": "/ciberseguridad/osint/"
-    },
-    {
-      "source": "/ciberseguridad/red-team",
-      "target": "/sistemas/active-directory/"
     },
     {
       "source": "/ciberseguridad/pentesting",
@@ -13892,6 +13768,70 @@
       "target": "/ciberseguridad/soc/"
     },
     {
+      "source": "/ciberseguridad/red-team",
+      "target": "/ciberseguridad/pentesting/"
+    },
+    {
+      "source": "/ciberseguridad/red-team",
+      "target": "/software%20engineering/software-engineering/"
+    },
+    {
+      "source": "/ciberseguridad/red-team",
+      "target": "/backend/backend/"
+    },
+    {
+      "source": "/ciberseguridad/red-team",
+      "target": "/software%20engineering/python/"
+    },
+    {
+      "source": "/ciberseguridad/red-team",
+      "target": "/frontend/vuejs/"
+    },
+    {
+      "source": "/ciberseguridad/red-team",
+      "target": "/ciberseguridad/cartp/"
+    },
+    {
+      "source": "/ciberseguridad/red-team",
+      "target": "/ciberseguridad/oscp/"
+    },
+    {
+      "source": "/ciberseguridad/red-team",
+      "target": "/ciberseguridad/crto/"
+    },
+    {
+      "source": "/ciberseguridad/red-team",
+      "target": "/ciberseguridad/mitre-att-ck/"
+    },
+    {
+      "source": "/ciberseguridad/red-team",
+      "target": "/devops/windows-server/"
+    },
+    {
+      "source": "/ciberseguridad/red-team",
+      "target": "/sistemas/active-directory/"
+    },
+    {
+      "source": "/ciberseguridad/red-team",
+      "target": "/autenticacion/kerberos/"
+    },
+    {
+      "source": "/ciberseguridad/red-team",
+      "target": "/ciberseguridad/malware/"
+    },
+    {
+      "source": "/ciberseguridad/red-team",
+      "target": "/ciberseguridad/purple-team/"
+    },
+    {
+      "source": "/ciberseguridad/red-team",
+      "target": "/ciberseguridad/osint/"
+    },
+    {
+      "source": "/ciberseguridad/red-team",
+      "target": "/sistemas/active-directory/"
+    },
+    {
       "source": "/ciberseguridad/purple-team",
       "target": "/ciberseguridad/siem/"
     },
@@ -13972,6 +13912,18 @@
       "target": "/ciberseguridad/pentesting/"
     },
     {
+      "source": "/ciberseguridad/osep",
+      "target": "/ciberseguridad/pentesting/"
+    },
+    {
+      "source": "/ciberseguridad/osep",
+      "target": "/sistemas/active-directory/"
+    },
+    {
+      "source": "/ciberseguridad/osep",
+      "target": "/sistemas/active-directory/"
+    },
+    {
       "source": "/ciberseguridad/osstmm",
       "target": "/ciberseguridad/pentesting/"
     },
@@ -13996,16 +13948,12 @@
       "target": "/ciberseguridad/owasp/"
     },
     {
-      "source": "/ciberseguridad/osep",
+      "source": "/ciberseguridad/osint",
       "target": "/ciberseguridad/pentesting/"
     },
     {
-      "source": "/ciberseguridad/osep",
-      "target": "/sistemas/active-directory/"
-    },
-    {
-      "source": "/ciberseguridad/osep",
-      "target": "/sistemas/active-directory/"
+      "source": "/ciberseguridad/osint",
+      "target": "/ciberseguridad/ciberinteligencia-tip/"
     },
     {
       "source": "/ciberseguridad/oscp",
@@ -14468,6 +14416,50 @@
       "target": "/ciberseguridad/waf/"
     },
     {
+      "source": "/ciberseguridad/ejpt",
+      "target": "/ciberseguridad/pentesting/"
+    },
+    {
+      "source": "/ciberseguridad/ejpt",
+      "target": "/ciberseguridad/soc/"
+    },
+    {
+      "source": "/ciberseguridad/ejpt",
+      "target": "/ciberseguridad/ecppt/"
+    },
+    {
+      "source": "/ciberseguridad/ejpt",
+      "target": "/ciberseguridad/oscp/"
+    },
+    {
+      "source": "/ciberseguridad/ejpt",
+      "target": "/redes/redes/"
+    },
+    {
+      "source": "/ciberseguridad/ejpt",
+      "target": "/ciberseguridad/burp-suite/"
+    },
+    {
+      "source": "/ciberseguridad/ejpt",
+      "target": "/ciberseguridad/ecppt/"
+    },
+    {
+      "source": "/ciberseguridad/ejpt",
+      "target": "/ciberseguridad/oscp/"
+    },
+    {
+      "source": "/ciberseguridad/ejpt",
+      "target": "/sistemas/active-directory/"
+    },
+    {
+      "source": "/ciberseguridad/ejpt",
+      "target": "/ciberseguridad/mitre-att-ck/"
+    },
+    {
+      "source": "/ciberseguridad/ejpt",
+      "target": "/ciberseguridad/ecppt/"
+    },
+    {
       "source": "/ciberseguridad/ewpt",
       "target": "/ciberseguridad/pentesting/"
     },
@@ -14518,50 +14510,6 @@
     {
       "source": "/ciberseguridad/edr",
       "target": "/ciberseguridad/soar/"
-    },
-    {
-      "source": "/ciberseguridad/ejpt",
-      "target": "/ciberseguridad/pentesting/"
-    },
-    {
-      "source": "/ciberseguridad/ejpt",
-      "target": "/ciberseguridad/soc/"
-    },
-    {
-      "source": "/ciberseguridad/ejpt",
-      "target": "/ciberseguridad/ecppt/"
-    },
-    {
-      "source": "/ciberseguridad/ejpt",
-      "target": "/ciberseguridad/oscp/"
-    },
-    {
-      "source": "/ciberseguridad/ejpt",
-      "target": "/redes/redes/"
-    },
-    {
-      "source": "/ciberseguridad/ejpt",
-      "target": "/ciberseguridad/burp-suite/"
-    },
-    {
-      "source": "/ciberseguridad/ejpt",
-      "target": "/ciberseguridad/ecppt/"
-    },
-    {
-      "source": "/ciberseguridad/ejpt",
-      "target": "/ciberseguridad/oscp/"
-    },
-    {
-      "source": "/ciberseguridad/ejpt",
-      "target": "/sistemas/active-directory/"
-    },
-    {
-      "source": "/ciberseguridad/ejpt",
-      "target": "/ciberseguridad/mitre-att-ck/"
-    },
-    {
-      "source": "/ciberseguridad/ejpt",
-      "target": "/ciberseguridad/ecppt/"
     },
     {
       "source": "/ciberseguridad/ecppt",
@@ -14768,54 +14716,6 @@
       "target": "/ciberseguridad/pentesting/"
     },
     {
-      "source": "/ciberseguridad/cloud-segurity",
-      "target": "/ciberseguridad/hardening/"
-    },
-    {
-      "source": "/ciberseguridad/cloud-segurity",
-      "target": "/devops/devops/"
-    },
-    {
-      "source": "/ciberseguridad/cloud-segurity",
-      "target": "/devops/devsecops/"
-    },
-    {
-      "source": "/ciberseguridad/cloud-segurity",
-      "target": "/cloud/cloud/"
-    },
-    {
-      "source": "/ciberseguridad/cloud-segurity",
-      "target": "/infraestructura%20it/infraestructura-it/"
-    },
-    {
-      "source": "/ciberseguridad/cloud-segurity",
-      "target": "/databases/databases/"
-    },
-    {
-      "source": "/ciberseguridad/cloud-segurity",
-      "target": "/cloud/aws/"
-    },
-    {
-      "source": "/ciberseguridad/cloud-segurity",
-      "target": "/ciberseguridad/hardening/"
-    },
-    {
-      "source": "/ciberseguridad/cloud-segurity",
-      "target": "/ciberseguridad/hashicorp-vault/"
-    },
-    {
-      "source": "/ciberseguridad/cloud-segurity",
-      "target": "/ciberseguridad/siem/"
-    },
-    {
-      "source": "/ciberseguridad/cloud-segurity",
-      "target": "/infraestructura%20it/gdpr/"
-    },
-    {
-      "source": "/ciberseguridad/cloud-segurity",
-      "target": "/infraestructura%20it/hipaa/"
-    },
-    {
       "source": "/ciberseguridad/control-de-datos",
       "target": "/ciberseguridad/ciberseguridad/"
     },
@@ -14940,6 +14840,54 @@
       "target": "/ciberseguridad/vulnerabilidades/"
     },
     {
+      "source": "/ciberseguridad/cloud-segurity",
+      "target": "/ciberseguridad/hardening/"
+    },
+    {
+      "source": "/ciberseguridad/cloud-segurity",
+      "target": "/devops/devops/"
+    },
+    {
+      "source": "/ciberseguridad/cloud-segurity",
+      "target": "/devops/devsecops/"
+    },
+    {
+      "source": "/ciberseguridad/cloud-segurity",
+      "target": "/cloud/cloud/"
+    },
+    {
+      "source": "/ciberseguridad/cloud-segurity",
+      "target": "/infraestructura%20it/infraestructura-it/"
+    },
+    {
+      "source": "/ciberseguridad/cloud-segurity",
+      "target": "/databases/databases/"
+    },
+    {
+      "source": "/ciberseguridad/cloud-segurity",
+      "target": "/cloud/aws/"
+    },
+    {
+      "source": "/ciberseguridad/cloud-segurity",
+      "target": "/ciberseguridad/hardening/"
+    },
+    {
+      "source": "/ciberseguridad/cloud-segurity",
+      "target": "/ciberseguridad/hashicorp-vault/"
+    },
+    {
+      "source": "/ciberseguridad/cloud-segurity",
+      "target": "/ciberseguridad/siem/"
+    },
+    {
+      "source": "/ciberseguridad/cloud-segurity",
+      "target": "/infraestructura%20it/gdpr/"
+    },
+    {
+      "source": "/ciberseguridad/cloud-segurity",
+      "target": "/infraestructura%20it/hipaa/"
+    },
+    {
       "source": "/ciberseguridad/ciberinteligencia-tip",
       "target": "/ciberseguridad/ciberseguridad/"
     },
@@ -14973,10 +14921,6 @@
     },
     {
       "source": "/ciberseguridad/caza-de-amenazas",
-      "target": "/ciberseguridad/amenazas/"
-    },
-    {
-      "source": "/ciberseguridad/caza-de-amenazas",
       "target": "/monitoreo/monitoreo/"
     },
     {
@@ -14997,15 +14941,7 @@
     },
     {
       "source": "/ciberseguridad/caza-de-amenazas",
-      "target": "/ciberseguridad/amenazas/"
-    },
-    {
-      "source": "/ciberseguridad/caza-de-amenazas",
       "target": "/monitoreo/kibana/"
-    },
-    {
-      "source": "/ciberseguridad/caza-de-amenazas",
-      "target": "/ciberseguridad/amenazas/"
     },
     {
       "source": "/ciberseguridad/caza-de-amenazas",
@@ -15068,6 +15004,34 @@
       "target": "/ciberseguridad/soc/"
     },
     {
+      "source": "/ciberseguridad/cartp",
+      "target": "/ciberseguridad/pentesting/"
+    },
+    {
+      "source": "/ciberseguridad/cartp",
+      "target": "/ciberseguridad/red-team/"
+    },
+    {
+      "source": "/ciberseguridad/cartp",
+      "target": "/cloud/azure/"
+    },
+    {
+      "source": "/ciberseguridad/cartp",
+      "target": "/ciberseguridad/red-team/"
+    },
+    {
+      "source": "/ciberseguridad/cartp",
+      "target": "/ciberseguridad/pentesting/"
+    },
+    {
+      "source": "/ciberseguridad/cartp",
+      "target": "/cloud/azure/"
+    },
+    {
+      "source": "/ciberseguridad/cartp",
+      "target": "/ciberseguridad/pentesting/"
+    },
+    {
       "source": "/ciberseguridad/burp-suite",
       "target": "/ciberseguridad/pentesting/"
     },
@@ -15089,34 +15053,6 @@
     },
     {
       "source": "/ciberseguridad/burp-suite",
-      "target": "/ciberseguridad/pentesting/"
-    },
-    {
-      "source": "/ciberseguridad/cartp",
-      "target": "/ciberseguridad/pentesting/"
-    },
-    {
-      "source": "/ciberseguridad/cartp",
-      "target": "/ciberseguridad/red-team/"
-    },
-    {
-      "source": "/ciberseguridad/cartp",
-      "target": "/cloud/azure/"
-    },
-    {
-      "source": "/ciberseguridad/cartp",
-      "target": "/ciberseguridad/red-team/"
-    },
-    {
-      "source": "/ciberseguridad/cartp",
-      "target": "/ciberseguridad/pentesting/"
-    },
-    {
-      "source": "/ciberseguridad/cartp",
-      "target": "/cloud/azure/"
-    },
-    {
-      "source": "/ciberseguridad/cartp",
       "target": "/ciberseguridad/pentesting/"
     },
     {
@@ -15244,6 +15180,26 @@
       "target": "/ciberseguridad/edr/"
     },
     {
+      "source": "/backend/openapi",
+      "target": "/backend/api/"
+    },
+    {
+      "source": "/backend/openapi",
+      "target": "/backend/swagger/"
+    },
+    {
+      "source": "/backend/openapi",
+      "target": "/redes/protocolos/"
+    },
+    {
+      "source": "/backend/openapi",
+      "target": "/backend/openapi/"
+    },
+    {
+      "source": "/backend/openapi",
+      "target": "/backend/swagger/"
+    },
+    {
       "source": "/backend/websockets",
       "target": "/backend/backend/"
     },
@@ -15318,6 +15274,130 @@
     {
       "source": "/backend/web-services",
       "target": "/databases/xml/"
+    },
+    {
+      "source": "/backend/api",
+      "target": "/backend/backend/"
+    },
+    {
+      "source": "/backend/api",
+      "target": "/backend/fastapi/"
+    },
+    {
+      "source": "/backend/api",
+      "target": "/backend/openapi/"
+    },
+    {
+      "source": "/backend/api",
+      "target": "/backend/web-services/"
+    },
+    {
+      "source": "/backend/api",
+      "target": "/backend/webhooks/"
+    },
+    {
+      "source": "/backend/api",
+      "target": "/backend/microservicios/"
+    },
+    {
+      "source": "/backend/api",
+      "target": "/backend/graphql/"
+    },
+    {
+      "source": "/backend/api",
+      "target": "/databases/xml/"
+    },
+    {
+      "source": "/backend/api",
+      "target": "/testing/jmeter/"
+    },
+    {
+      "source": "/backend/api",
+      "target": "/backend/axios/"
+    },
+    {
+      "source": "/backend/api",
+      "target": "/backend/ngrok/"
+    },
+    {
+      "source": "/backend/api",
+      "target": "/backend/graphql/"
+    },
+    {
+      "source": "/backend/api",
+      "target": "/backend/fastapi/"
+    },
+    {
+      "source": "/backend/api",
+      "target": "/backend/openapi/"
+    },
+    {
+      "source": "/backend/api",
+      "target": "/backend/swagger/"
+    },
+    {
+      "source": "/backend/api",
+      "target": "/backend/openapi/"
+    },
+    {
+      "source": "/backend/api",
+      "target": "/backend/swagger/"
+    },
+    {
+      "source": "/backend/api",
+      "target": "/testing/jmeter/"
+    },
+    {
+      "source": "/backend/api",
+      "target": "/backend/axios/"
+    },
+    {
+      "source": "/backend/api",
+      "target": "/backend/ngrok/"
+    },
+    {
+      "source": "/backend/api",
+      "target": "/backend/microservicios/"
+    },
+    {
+      "source": "/backend/api",
+      "target": "/backend/web-services/"
+    },
+    {
+      "source": "/backend/api",
+      "target": "/autenticacion/jwt/"
+    },
+    {
+      "source": "/backend/api",
+      "target": "/backend/backend/"
+    },
+    {
+      "source": "/backend/api",
+      "target": "/backend/microservicios/"
+    },
+    {
+      "source": "/backend/api",
+      "target": "/backend/web-services/"
+    },
+    {
+      "source": "/backend/api",
+      "target": "/backend/openapi/"
+    },
+    {
+      "source": "/backend/api",
+      "target": "/backend/graphql/"
+    },
+    {
+      "source": "/backend/api",
+      "target": "/backend/grpc/"
+    },
+    {
+      "source": "/backend/api",
+      "target": "/backend/graphql/"
+    },
+    {
+      "source": "/backend/api",
+      "target": "/backend/grpc/"
     },
     {
       "source": "/backend/turborepo",
@@ -15856,26 +15936,6 @@
       "target": "/backend/pm2/"
     },
     {
-      "source": "/backend/poketbase",
-      "target": "/databases/databases/"
-    },
-    {
-      "source": "/backend/poketbase",
-      "target": "/databases/databases/"
-    },
-    {
-      "source": "/backend/poketbase",
-      "target": "/backend/backend/"
-    },
-    {
-      "source": "/backend/poketbase",
-      "target": "/databases/databases/"
-    },
-    {
-      "source": "/backend/poketbase",
-      "target": "/backend/backend/"
-    },
-    {
       "source": "/backend/rabbitmq",
       "target": "/backend/backend/"
     },
@@ -15914,6 +15974,26 @@
     {
       "source": "/backend/rabbitmq",
       "target": "/backend/apache-kafka/"
+    },
+    {
+      "source": "/backend/poketbase",
+      "target": "/databases/databases/"
+    },
+    {
+      "source": "/backend/poketbase",
+      "target": "/databases/databases/"
+    },
+    {
+      "source": "/backend/poketbase",
+      "target": "/backend/backend/"
+    },
+    {
+      "source": "/backend/poketbase",
+      "target": "/databases/databases/"
+    },
+    {
+      "source": "/backend/poketbase",
+      "target": "/backend/backend/"
     },
     {
       "source": "/backend/pm2",
@@ -16108,26 +16188,6 @@
       "target": "/backend/laravel/"
     },
     {
-      "source": "/backend/openapi",
-      "target": "/backend/api/"
-    },
-    {
-      "source": "/backend/openapi",
-      "target": "/backend/swagger/"
-    },
-    {
-      "source": "/backend/openapi",
-      "target": "/redes/protocolos/"
-    },
-    {
-      "source": "/backend/openapi",
-      "target": "/backend/openapi/"
-    },
-    {
-      "source": "/backend/openapi",
-      "target": "/backend/swagger/"
-    },
-    {
       "source": "/backend/node-js",
       "target": "/backend/backend/"
     },
@@ -16230,6 +16290,30 @@
     {
       "source": "/backend/ngrok",
       "target": "/backend/webhooks/"
+    },
+    {
+      "source": "/backend/jax-ws",
+      "target": "/backend/web-services/"
+    },
+    {
+      "source": "/backend/jax-ws",
+      "target": "/backend/api/"
+    },
+    {
+      "source": "/backend/jax-ws",
+      "target": "/databases/xml/"
+    },
+    {
+      "source": "/backend/jax-ws",
+      "target": "/software%20engineering/java/"
+    },
+    {
+      "source": "/backend/jax-ws",
+      "target": "/backend/java-ee/"
+    },
+    {
+      "source": "/backend/jax-ws",
+      "target": "/backend/jax-ws/"
     },
     {
       "source": "/backend/nginx",
@@ -16632,30 +16716,6 @@
       "target": "/devops/devops/"
     },
     {
-      "source": "/backend/jax-ws",
-      "target": "/backend/web-services/"
-    },
-    {
-      "source": "/backend/jax-ws",
-      "target": "/backend/api/"
-    },
-    {
-      "source": "/backend/jax-ws",
-      "target": "/databases/xml/"
-    },
-    {
-      "source": "/backend/jax-ws",
-      "target": "/software%20engineering/java/"
-    },
-    {
-      "source": "/backend/jax-ws",
-      "target": "/backend/java-ee/"
-    },
-    {
-      "source": "/backend/jax-ws",
-      "target": "/backend/jax-ws/"
-    },
-    {
       "source": "/backend/laravel",
       "target": "/backend/php/"
     },
@@ -16840,42 +16900,6 @@
       "target": "/backend/pm2/"
     },
     {
-      "source": "/backend/graphql",
-      "target": "/backend/backend/"
-    },
-    {
-      "source": "/backend/graphql",
-      "target": "/backend/api/"
-    },
-    {
-      "source": "/backend/graphql",
-      "target": "/databases/json/"
-    },
-    {
-      "source": "/backend/graphql",
-      "target": "/backend/websockets/"
-    },
-    {
-      "source": "/backend/graphql",
-      "target": "/backend/web-services/"
-    },
-    {
-      "source": "/backend/graphql",
-      "target": "/backend/node-js/"
-    },
-    {
-      "source": "/backend/graphql",
-      "target": "/backend/websockets/"
-    },
-    {
-      "source": "/backend/graphql",
-      "target": "/backend/websockets/"
-    },
-    {
-      "source": "/backend/graphql",
-      "target": "/backend/node-js/"
-    },
-    {
       "source": "/backend/grpc",
       "target": "/backend/backend/"
     },
@@ -16960,6 +16984,42 @@
       "target": "/computer%20science/patrones-de-dise-o/"
     },
     {
+      "source": "/backend/graphql",
+      "target": "/backend/backend/"
+    },
+    {
+      "source": "/backend/graphql",
+      "target": "/backend/api/"
+    },
+    {
+      "source": "/backend/graphql",
+      "target": "/databases/json/"
+    },
+    {
+      "source": "/backend/graphql",
+      "target": "/backend/websockets/"
+    },
+    {
+      "source": "/backend/graphql",
+      "target": "/backend/web-services/"
+    },
+    {
+      "source": "/backend/graphql",
+      "target": "/backend/node-js/"
+    },
+    {
+      "source": "/backend/graphql",
+      "target": "/backend/websockets/"
+    },
+    {
+      "source": "/backend/graphql",
+      "target": "/backend/websockets/"
+    },
+    {
+      "source": "/backend/graphql",
+      "target": "/backend/node-js/"
+    },
+    {
       "source": "/backend/gestor-de-colas",
       "target": "/backend/backend/"
     },
@@ -16982,6 +17042,54 @@
     {
       "source": "/backend/gestor-de-colas",
       "target": "/backend/stream-processing/"
+    },
+    {
+      "source": "/backend/apache",
+      "target": "/backend/backend/"
+    },
+    {
+      "source": "/backend/apache",
+      "target": "/backend/php/"
+    },
+    {
+      "source": "/backend/apache",
+      "target": "/backend/apache-kafka/"
+    },
+    {
+      "source": "/backend/apache",
+      "target": "/backend/apache-kafka/"
+    },
+    {
+      "source": "/backend/apache",
+      "target": "/backend/apache-kafka/"
+    },
+    {
+      "source": "/backend/apache",
+      "target": "/testing/jmeter/"
+    },
+    {
+      "source": "/backend/apache",
+      "target": "/monitoreo/opentelemetry/"
+    },
+    {
+      "source": "/backend/apache",
+      "target": "/backend/apache-kafka/"
+    },
+    {
+      "source": "/backend/apache",
+      "target": "/testing/jmeter/"
+    },
+    {
+      "source": "/backend/apache",
+      "target": "/backend/apache-kafka/"
+    },
+    {
+      "source": "/backend/apache",
+      "target": "/monitoreo/opentelemetry/"
+    },
+    {
+      "source": "/backend/apache",
+      "target": "/backend/apache-kafka/"
     },
     {
       "source": "/backend/firebase",
@@ -17054,30 +17162,6 @@
     {
       "source": "/backend/firebase",
       "target": "/cloud/cloud/"
-    },
-    {
-      "source": "/backend/fastapi",
-      "target": "/software%20engineering/python/"
-    },
-    {
-      "source": "/backend/fastapi",
-      "target": "/backend/backend/"
-    },
-    {
-      "source": "/backend/fastapi",
-      "target": "/virtualizacion/kubernetes/"
-    },
-    {
-      "source": "/backend/fastapi",
-      "target": "/cloud/azure/"
-    },
-    {
-      "source": "/backend/fastapi",
-      "target": "/backend/backend/"
-    },
-    {
-      "source": "/backend/fastapi",
-      "target": "/backend/backend/"
     },
     {
       "source": "/backend/fastify",
@@ -17158,6 +17242,30 @@
     {
       "source": "/backend/fastify",
       "target": "/backend/rabbitmq/"
+    },
+    {
+      "source": "/backend/fastapi",
+      "target": "/software%20engineering/python/"
+    },
+    {
+      "source": "/backend/fastapi",
+      "target": "/backend/backend/"
+    },
+    {
+      "source": "/backend/fastapi",
+      "target": "/virtualizacion/kubernetes/"
+    },
+    {
+      "source": "/backend/fastapi",
+      "target": "/cloud/azure/"
+    },
+    {
+      "source": "/backend/fastapi",
+      "target": "/backend/backend/"
+    },
+    {
+      "source": "/backend/fastapi",
+      "target": "/backend/backend/"
     },
     {
       "source": "/backend/django",
@@ -17444,130 +17552,6 @@
       "target": "/devops/github-actions/"
     },
     {
-      "source": "/backend/api",
-      "target": "/backend/backend/"
-    },
-    {
-      "source": "/backend/api",
-      "target": "/backend/fastapi/"
-    },
-    {
-      "source": "/backend/api",
-      "target": "/backend/openapi/"
-    },
-    {
-      "source": "/backend/api",
-      "target": "/backend/web-services/"
-    },
-    {
-      "source": "/backend/api",
-      "target": "/backend/webhooks/"
-    },
-    {
-      "source": "/backend/api",
-      "target": "/backend/microservicios/"
-    },
-    {
-      "source": "/backend/api",
-      "target": "/backend/graphql/"
-    },
-    {
-      "source": "/backend/api",
-      "target": "/databases/xml/"
-    },
-    {
-      "source": "/backend/api",
-      "target": "/testing/jmeter/"
-    },
-    {
-      "source": "/backend/api",
-      "target": "/backend/axios/"
-    },
-    {
-      "source": "/backend/api",
-      "target": "/backend/ngrok/"
-    },
-    {
-      "source": "/backend/api",
-      "target": "/backend/graphql/"
-    },
-    {
-      "source": "/backend/api",
-      "target": "/backend/fastapi/"
-    },
-    {
-      "source": "/backend/api",
-      "target": "/backend/openapi/"
-    },
-    {
-      "source": "/backend/api",
-      "target": "/backend/swagger/"
-    },
-    {
-      "source": "/backend/api",
-      "target": "/backend/openapi/"
-    },
-    {
-      "source": "/backend/api",
-      "target": "/backend/swagger/"
-    },
-    {
-      "source": "/backend/api",
-      "target": "/testing/jmeter/"
-    },
-    {
-      "source": "/backend/api",
-      "target": "/backend/axios/"
-    },
-    {
-      "source": "/backend/api",
-      "target": "/backend/ngrok/"
-    },
-    {
-      "source": "/backend/api",
-      "target": "/backend/microservicios/"
-    },
-    {
-      "source": "/backend/api",
-      "target": "/backend/web-services/"
-    },
-    {
-      "source": "/backend/api",
-      "target": "/autenticacion/jwt/"
-    },
-    {
-      "source": "/backend/api",
-      "target": "/backend/backend/"
-    },
-    {
-      "source": "/backend/api",
-      "target": "/backend/microservicios/"
-    },
-    {
-      "source": "/backend/api",
-      "target": "/backend/web-services/"
-    },
-    {
-      "source": "/backend/api",
-      "target": "/backend/openapi/"
-    },
-    {
-      "source": "/backend/api",
-      "target": "/backend/graphql/"
-    },
-    {
-      "source": "/backend/api",
-      "target": "/backend/grpc/"
-    },
-    {
-      "source": "/backend/api",
-      "target": "/backend/graphql/"
-    },
-    {
-      "source": "/backend/api",
-      "target": "/backend/grpc/"
-    },
-    {
       "source": "/backend/appwrite",
       "target": "/backend/backend/"
     },
@@ -17598,54 +17582,6 @@
     {
       "source": "/backend/appwrite",
       "target": "/backend/firebase/"
-    },
-    {
-      "source": "/backend/apache",
-      "target": "/backend/backend/"
-    },
-    {
-      "source": "/backend/apache",
-      "target": "/backend/php/"
-    },
-    {
-      "source": "/backend/apache",
-      "target": "/backend/apache-kafka/"
-    },
-    {
-      "source": "/backend/apache",
-      "target": "/backend/apache-kafka/"
-    },
-    {
-      "source": "/backend/apache",
-      "target": "/backend/apache-kafka/"
-    },
-    {
-      "source": "/backend/apache",
-      "target": "/testing/jmeter/"
-    },
-    {
-      "source": "/backend/apache",
-      "target": "/monitoreo/opentelemetry/"
-    },
-    {
-      "source": "/backend/apache",
-      "target": "/backend/apache-kafka/"
-    },
-    {
-      "source": "/backend/apache",
-      "target": "/testing/jmeter/"
-    },
-    {
-      "source": "/backend/apache",
-      "target": "/backend/apache-kafka/"
-    },
-    {
-      "source": "/backend/apache",
-      "target": "/monitoreo/opentelemetry/"
-    },
-    {
-      "source": "/backend/apache",
-      "target": "/backend/apache-kafka/"
     },
     {
       "source": "/backend/apache-kafka",
@@ -17976,6 +17912,42 @@
       "target": "/sistemas/sistemas/"
     },
     {
+      "source": "/automatizacion%20y%20build/husky",
+      "target": "/backend/monorepo/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/husky",
+      "target": "/automatizacion%20y%20build/automatizacion-y-build/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/husky",
+      "target": "/software%20engineering/git/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/husky",
+      "target": "/software%20engineering/git/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/husky",
+      "target": "/automatizacion%20y%20build/automatizacion-y-build/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/husky",
+      "target": "/automatizacion%20y%20build/automatizacion-y-build/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/husky",
+      "target": "/software%20engineering/git/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/husky",
+      "target": "/software%20engineering/git/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/husky",
+      "target": "/automatizacion%20y%20build/automatizacion-y-build/"
+    },
+    {
       "source": "/automatizacion%20y%20build/jhipster",
       "target": "/software%20engineering/java/"
     },
@@ -18032,42 +18004,6 @@
       "target": "/software%20engineering/docker/"
     },
     {
-      "source": "/automatizacion%20y%20build/husky",
-      "target": "/backend/monorepo/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/husky",
-      "target": "/automatizacion%20y%20build/automatizacion-y-build/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/husky",
-      "target": "/software%20engineering/git/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/husky",
-      "target": "/software%20engineering/git/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/husky",
-      "target": "/automatizacion%20y%20build/automatizacion-y-build/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/husky",
-      "target": "/automatizacion%20y%20build/automatizacion-y-build/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/husky",
-      "target": "/software%20engineering/git/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/husky",
-      "target": "/software%20engineering/git/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/husky",
-      "target": "/automatizacion%20y%20build/automatizacion-y-build/"
-    },
-    {
       "source": "/automatizacion%20y%20build/gulp",
       "target": "/automatizacion%20y%20build/automatizacion-y-build/"
     },
@@ -18086,22 +18022,6 @@
     {
       "source": "/automatizacion%20y%20build/gulp",
       "target": "/automatizacion%20y%20build/automatizacion-y-build/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/git-hooks",
-      "target": "/software%20engineering/software-engineering/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/git-hooks",
-      "target": "/automatizacion%20y%20build/automatizacion-y-build/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/git-hooks",
-      "target": "/software%20engineering/git/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/git-hooks",
-      "target": "/automatizacion%20y%20build/husky/"
     },
     {
       "source": "/automatizacion%20y%20build/gradle",
@@ -18134,6 +18054,22 @@
     {
       "source": "/automatizacion%20y%20build/gradle",
       "target": "/devops/cicd/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/git-hooks",
+      "target": "/software%20engineering/software-engineering/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/git-hooks",
+      "target": "/automatizacion%20y%20build/automatizacion-y-build/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/git-hooks",
+      "target": "/software%20engineering/git/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/git-hooks",
+      "target": "/automatizacion%20y%20build/husky/"
     },
     {
       "source": "/automatizacion%20y%20build/celery",
@@ -18260,6 +18196,14 @@
       "target": "/autenticacion/ldap/"
     },
     {
+      "source": "/autenticacion/radius",
+      "target": "/redes/redes/"
+    },
+    {
+      "source": "/autenticacion/radius",
+      "target": "/ciberseguridad/ciberseguridad/"
+    },
+    {
       "source": "/autenticacion/rbac",
       "target": "/autenticacion/autenticacion/"
     },
@@ -18274,14 +18218,6 @@
     {
       "source": "/autenticacion/rbac",
       "target": "/autenticacion/sso-single-sign-on/"
-    },
-    {
-      "source": "/autenticacion/radius",
-      "target": "/redes/redes/"
-    },
-    {
-      "source": "/autenticacion/radius",
-      "target": "/ciberseguridad/ciberseguridad/"
     },
     {
       "source": "/autenticacion/pki-infraestructura-de-clave-p-blica",
@@ -18352,6 +18288,30 @@
       "target": "/autenticacion/oauth/"
     },
     {
+      "source": "/autenticacion/iam-gesti-n-de-identidades-y-acceso",
+      "target": "/autenticacion/autenticacion/"
+    },
+    {
+      "source": "/autenticacion/iam-gesti-n-de-identidades-y-acceso",
+      "target": "/ciberseguridad/ciberseguridad/"
+    },
+    {
+      "source": "/autenticacion/iam-gesti-n-de-identidades-y-acceso",
+      "target": "/autenticacion/ldap/"
+    },
+    {
+      "source": "/autenticacion/iam-gesti-n-de-identidades-y-acceso",
+      "target": "/autenticacion/abac/"
+    },
+    {
+      "source": "/autenticacion/iam-gesti-n-de-identidades-y-acceso",
+      "target": "/autenticacion/rbac/"
+    },
+    {
+      "source": "/autenticacion/iam-gesti-n-de-identidades-y-acceso",
+      "target": "/autenticacion/sso-single-sign-on/"
+    },
+    {
       "source": "/autenticacion/ldap",
       "target": "/autenticacion/autenticacion/"
     },
@@ -18412,6 +18372,14 @@
       "target": "/devops/windows-server/"
     },
     {
+      "source": "/autenticacion/jwt",
+      "target": "/autenticacion/autenticacion/"
+    },
+    {
+      "source": "/autenticacion/jwt",
+      "target": "/autenticacion/criptografia/"
+    },
+    {
       "source": "/autenticacion/kerberos",
       "target": "/autenticacion/sso-single-sign-on/"
     },
@@ -18430,14 +18398,6 @@
     {
       "source": "/autenticacion/kerberos",
       "target": "/redes/protocolos/"
-    },
-    {
-      "source": "/autenticacion/jwt",
-      "target": "/autenticacion/autenticacion/"
-    },
-    {
-      "source": "/autenticacion/jwt",
-      "target": "/autenticacion/criptografia/"
     },
     {
       "source": "/autenticacion/criptografia",
@@ -18494,30 +18454,6 @@
     {
       "source": "/autenticacion/criptografia",
       "target": "/backend/cors/"
-    },
-    {
-      "source": "/autenticacion/iam-gesti-n-de-identidades-y-acceso",
-      "target": "/autenticacion/autenticacion/"
-    },
-    {
-      "source": "/autenticacion/iam-gesti-n-de-identidades-y-acceso",
-      "target": "/ciberseguridad/ciberseguridad/"
-    },
-    {
-      "source": "/autenticacion/iam-gesti-n-de-identidades-y-acceso",
-      "target": "/autenticacion/ldap/"
-    },
-    {
-      "source": "/autenticacion/iam-gesti-n-de-identidades-y-acceso",
-      "target": "/autenticacion/abac/"
-    },
-    {
-      "source": "/autenticacion/iam-gesti-n-de-identidades-y-acceso",
-      "target": "/autenticacion/rbac/"
-    },
-    {
-      "source": "/autenticacion/iam-gesti-n-de-identidades-y-acceso",
-      "target": "/autenticacion/sso-single-sign-on/"
     },
     {
       "source": "/autenticacion/better-auth",
@@ -21109,10 +21045,6 @@
     },
     {
       "source": "/ciberseguridad/ciberseguridad",
-      "target": "/ciberseguridad/amenazas/"
-    },
-    {
-      "source": "/ciberseguridad/ciberseguridad",
       "target": "/ciberseguridad/antivirus/"
     },
     {
@@ -21440,6 +21372,106 @@
       "target": "/virtualizacion/kubernetes/"
     },
     {
+      "source": "/automatizacion%20y%20build/automatizacion-y-build",
+      "target": "/testing/testing/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/automatizacion-y-build",
+      "target": "/testing/linters/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/automatizacion-y-build",
+      "target": "/desarrollo%20multiplataforma/power-apps/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/automatizacion-y-build",
+      "target": "/devops/devops/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/automatizacion-y-build",
+      "target": "/cloud/cloud/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/automatizacion-y-build",
+      "target": "/backend/cron-jobs/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/automatizacion-y-build",
+      "target": "/devops/cicd/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/automatizacion-y-build",
+      "target": "/devops/iinfraestructura-como-codigo/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/automatizacion-y-build",
+      "target": "/backend/webhooks/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/automatizacion-y-build",
+      "target": "/devops/sdlc/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/automatizacion-y-build",
+      "target": "/automatizacion%20y%20build/gulp/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/automatizacion-y-build",
+      "target": "/backend/node-js/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/automatizacion-y-build",
+      "target": "/automatizacion%20y%20build/celery/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/automatizacion-y-build",
+      "target": "/automatizacion%20y%20build/gradle/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/automatizacion-y-build",
+      "target": "/automatizacion%20y%20build/maven/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/automatizacion-y-build",
+      "target": "/automatizacion%20y%20build/webpack/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/automatizacion-y-build",
+      "target": "/automatizacion%20y%20build/vite/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/automatizacion-y-build",
+      "target": "/automatizacion%20y%20build/nx/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/automatizacion-y-build",
+      "target": "/automatizacion%20y%20build/yeoman/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/automatizacion-y-build",
+      "target": "/automatizacion%20y%20build/nx/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/automatizacion-y-build",
+      "target": "/automatizacion%20y%20build/jhipster/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/automatizacion-y-build",
+      "target": "/software%20engineering/docker/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/automatizacion-y-build",
+      "target": "/backend/cron-jobs/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/automatizacion-y-build",
+      "target": "/automatizacion%20y%20build/agentes-ia/"
+    },
+    {
+      "source": "/automatizacion%20y%20build/automatizacion-y-build",
+      "target": "/automatizacion%20y%20build/scraping/"
+    },
+    {
       "source": "/autenticacion/autenticacion",
       "target": "/autenticacion/criptografia/"
     },
@@ -21666,106 +21698,6 @@
     {
       "source": "/autenticacion/autenticacion",
       "target": "/backend/firebase/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/automatizacion-y-build",
-      "target": "/testing/testing/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/automatizacion-y-build",
-      "target": "/testing/linters/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/automatizacion-y-build",
-      "target": "/desarrollo%20multiplataforma/power-apps/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/automatizacion-y-build",
-      "target": "/devops/devops/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/automatizacion-y-build",
-      "target": "/cloud/cloud/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/automatizacion-y-build",
-      "target": "/backend/cron-jobs/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/automatizacion-y-build",
-      "target": "/devops/cicd/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/automatizacion-y-build",
-      "target": "/devops/iinfraestructura-como-codigo/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/automatizacion-y-build",
-      "target": "/backend/webhooks/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/automatizacion-y-build",
-      "target": "/devops/sdlc/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/automatizacion-y-build",
-      "target": "/automatizacion%20y%20build/gulp/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/automatizacion-y-build",
-      "target": "/backend/node-js/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/automatizacion-y-build",
-      "target": "/automatizacion%20y%20build/celery/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/automatizacion-y-build",
-      "target": "/automatizacion%20y%20build/gradle/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/automatizacion-y-build",
-      "target": "/automatizacion%20y%20build/maven/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/automatizacion-y-build",
-      "target": "/automatizacion%20y%20build/webpack/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/automatizacion-y-build",
-      "target": "/automatizacion%20y%20build/vite/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/automatizacion-y-build",
-      "target": "/automatizacion%20y%20build/nx/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/automatizacion-y-build",
-      "target": "/automatizacion%20y%20build/yeoman/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/automatizacion-y-build",
-      "target": "/automatizacion%20y%20build/nx/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/automatizacion-y-build",
-      "target": "/automatizacion%20y%20build/jhipster/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/automatizacion-y-build",
-      "target": "/software%20engineering/docker/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/automatizacion-y-build",
-      "target": "/backend/cron-jobs/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/automatizacion-y-build",
-      "target": "/automatizacion%20y%20build/agentes-ia/"
-    },
-    {
-      "source": "/automatizacion%20y%20build/automatizacion-y-build",
-      "target": "/automatizacion%20y%20build/scraping/"
     },
     {
       "source": "/sistemas/administracion-de-sistemas",

@@ -5,7 +5,6 @@ keywords:
 source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
-public_note: true
 category: ciberseguridad
 tags:
   - cloud
@@ -13,7 +12,7 @@ tags:
   - Hacking
 ---
 # Cloud Security
-``
+
 
 ## Conceptos Clave
 

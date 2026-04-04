@@ -5,14 +5,13 @@ keywords:
 source:
 status: 🚀
 Parent: "[[Area-Prog]]"
-public_note: true
 category: Desarrollo web
 tags:
   - desarrollo
   - programming
 ---
 # Desarrollo web
-``
+
 
 ## Áreas y disciplinas
 - [Software engineering](/software%20engineering/software-engineering/)

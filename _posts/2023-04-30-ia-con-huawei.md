@@ -5,14 +5,13 @@ status: 🌟
 Parent: "[[Area-IA]]"
 keywords:
 source:
-public_note: true
 category: Data Science
 tags:
   - IA
   - Huawei
 ---
 # IA con Huawei
-``
+
 
 - [Data Science](/data%20science/data-science/)
 - IA

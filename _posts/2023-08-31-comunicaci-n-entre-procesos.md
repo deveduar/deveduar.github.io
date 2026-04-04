@@ -6,7 +6,6 @@ Parent: "[[Area-Prog]]"
 keywords:
 aliases:
 source:
-public_note: true
 category: Computer Science
 tags:
   - CS

@@ -6,14 +6,13 @@ source:
 status: 🌟
 Parent: "[[Area-Sistemas]]"
 aliases:
-public_note: true
 category: Gestion de Negocio
 tags:
   - IT
   - dms
 ---
 # DMS Sistema de Gestión de Documentos
-``
+
 
 - [infraestructura IT](/infraestructura%20it/infraestructura-it/)
 - Zotero
